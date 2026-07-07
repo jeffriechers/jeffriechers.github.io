@@ -1,0 +1,29 @@
+# Remove old QMId from registry and set SysPrep flag for MSMQ
+
+Remove-Itemproperty -Path >HKLM:Software\Microsoft\MSMQ\Parameters\MachineCache -Name QMId -Force
+
+Set-ItemProperty -Path HKLM:Software\Microsoft\MSMQ\Parameters -Name >"SysPrep" -Type DWord -Value 1
+
+# Get dependent services
+
+$depServices = Get-Service -name MSMQ -dependentservices | Select -Property Name
+
+# Restart MSMQ to get a new QMId
+
+Restart-Service -force MSMQ
+
+# Start dependent services
+
+if ($depServices -ne $null) {
+
+    foreach ($depService in $depServices) {
+
+        $startMode = Get-WmiObject win32_service -filter "NAME = '$($depService.Name)'" | Select -Property StartMode
+
+        if ($startMode.StartMode -eq "Auto") {
+
+            Start-Service $depService.Name
+        }
+}
+
+}

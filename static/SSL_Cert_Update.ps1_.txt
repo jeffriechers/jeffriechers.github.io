@@ -1,0 +1,56 @@
+# SSL Certificates installed on NetScaler under Traffic Management>SSL>SSL Certificate>Server Certificates	
+
+$NSCert1 = "VPN_Wildcard"
+$NSCert2 = "Domain_Wildcard"
+#$NSCert3 = "SomeOtherDomain"
+
+
+# Specify the user you will login to the NetScaler as.
+$User = "nsroot"
+# Specify the path to the password file that you generated earlier.  Make sure to generate this password file on the machine that will be running the automation, while you are logged in to Windows with that same account.
+$passwdpath = "C:\CertUpdates\password.txt"
+$Password = Get-Content $passwdpath | ConvertTo-SecureString 
+# Create a login credential token for the duration of this script
+$Credential = New-Object System.Management.Automation.PSCredential ($User, $Password)
+# Enter the IP Address of the NetScaler you will be logging into
+$NetScalerIP = '10.0.0.x'
+#Set File Paths to the Certificates that are updated as part of your renewal script
+$FilePath1 = 'C:\Users\YourUserAccount\AppData\Local\Posh-ACME\acme-v02.api.letsencrypt.org\YourID\!.your.domain\'
+$FilePath2 = 'C:\Users\YourUserAccount\AppData\Local\Posh-ACME\acme-v02.api.letsencrypt.org\YourID\!.your.domain\'
+#$FilePath3 = 'C:\Users\YourUserAccount\AppData\Local\Posh-ACME\acme-v02.api.letsencrypt.org\YourID\!.your.domain\'
+
+# Cleanup previous update's certificates.  Change these filenames if you modify them in the next section for your environment.
+Remove-Item $FilePath1\Cert1.cer
+Remove-Item $FilePath1\Cert1.key
+Remove-Item $FilePath2\Cert2.cer
+Remove-Item $FilePath2\Cert2.key
+#Remove-Item $FilePath3\Cert3.cer
+#Remove-Item $FilePath3\Cert3.key
+# Copy the new certificates to filenames that will be uploaded to NetScaler
+
+Copy $FilePath1\Cert.cer $FilePath1\Cert1.cer
+Copy $FilePath1\Cert.key $FilePath1\Cert1.key
+Copy $FilePath2\Cert.cer $FilePath2\Cert2.cer
+Copy $FilePath2\Cert.key $FilePath2\Cert2.key
+#Copy $FilePath3\Cert.cer $FilePath3\Cert3.cer
+#Copy $FilePath3\Cert.key $FilePath3\Cert3.key
+
+# Connect to NetScaler and upload new Certificates and Keys.  Change the source file names if you modify them to meet your environment.
+$SFTPSession = New-SFTPSession -ComputerName $NetScalerIP -Credential $Credential -AcceptKey -Force
+Set-SFTPItem -SFTPSession $SFTPSession -Path $FilePath1\Cert1.cer -Destination "/nsconfig/ssl" -Force
+Set-SFTPItem -SFTPSession $SFTPSession -Path $FilePath1\Cert1.key -Destination "/nsconfig/ssl" -Force
+Set-SFTPItem -SFTPSession $SFTPSession -Path $FilePath2\Cert2.cer -Destination "/nsconfig/ssl" -Force
+Set-SFTPItem -SFTPSession $SFTPSession -Path $FilePath2\Cert2.key -Destination "/nsconfig/ssl" -Force
+#Set-SFTPItem -SFTPSession $SFTPSession -Path $FilePath3\Cert3.cer -Destination "/nsconfig/ssl" -Force
+#Set-SFTPItem -SFTPSession $SFTPSession -Path $FilePath3\Cert3.key -Destination "/nsconfig/ssl" -Force
+#Disconnect SFTP Session after uploading
+Get-SFTPSession | % { Remove-SFTPSession -SessionID ($_.SessionID) }
+
+#Establish SSH Session to update your installed certificates with the new certs and keys, save the config, and then exit the SSH session.
+New-SSHSession -ComputerName $NetScalerIP -Credential $Credential -Force
+Invoke-SSHCommand -Index 0 -Command "update ssl certkey $NSCert1 -cert Cert1.cer -key Cert1.key"
+Invoke-SSHCommand -Index 0 -Command "update ssl certkey $NSCert2 -cert Cert2.cer -key Cert2.key"
+#Invoke-SSHCommand -Index 0 -Command "update ssl certkey $NSCert3 -cert Cert3.cer -key Cert3.key"
+Invoke-SSHCommand -Index 0 -Command "save config"
+Invoke-SSHCommand -Index 0 -Command "exit"
+Get-SSHSession | Remove-SSHSession | Out-Null

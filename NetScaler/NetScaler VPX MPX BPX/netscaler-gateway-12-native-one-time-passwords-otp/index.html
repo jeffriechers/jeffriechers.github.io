@@ -1,0 +1,5853 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../netscaler-gateway-11-virtual-server/">
+      
+      
+        <link rel="next" href="../netscaler-gateway-12-pcoip-proxy/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap-policiesactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LDAP Policies/Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Schemas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-policylabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication PolicyLabel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aaa-vserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AAA vServer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traffic-policy-for-single-sign-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traffic Policy for Single Sign-on
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netscaler-gateway-and-authentication-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetScaler Gateway and Authentication Profile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-content-switching-expression-for-unified-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Content Switching Expression for Unified Gateway
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manageotp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manageotp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap-policiesactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LDAP Policies/Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Schemas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-policylabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication PolicyLabel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aaa-vserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AAA vServer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traffic-policy-for-single-sign-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traffic Policy for Single Sign-on
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netscaler-gateway-and-authentication-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetScaler Gateway and Authentication Profile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-content-switching-expression-for-unified-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Content Switching Expression for Unified Gateway
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manageotp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manageotp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1</h1>
+
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#ldappolicies">LDAP Policies/Actions</a></li>
+<li><a href="#loginschemas">Login Schemas</a></li>
+<li><a href="#authpollabel">Authentication PolicyLabel</a></li>
+<li><a href="#aaavs">AAA vServer</a></li>
+<li><a href="#trafficpol">Traffic Policy for Single Sign-on</a></li>
+<li><a href="#gateway">NetScaler Gateway and Authentication Profile</a></li>
+<li><a href="#unifiedgateway">Update Content Switching Expression for Unified Gateway</a></li>
+<li><a href="#manageotp">Manageotp</a></li>
+<li><a href="#cli">CLI Commands</a></li>
+</ul>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2019 Feb 4 - <a href="#loginschemas">Login Schemas</a> - added link to Morten Kallesoee <a href="https://netscalerrocks.com/netscaler/n-factor-restrictions-on-native-otp-management/">n-Factor – restrictions on native OTP management</a></li>
+<li>
+<p>2018 Oct 6 - <a href="#overview">Overview</a> - Workspace app 1809 and newer with Citrix Gateway (NetScaler) 12.1 build 49 and newer support nFactor (and OTP) authentication.</p>
+<ul>
+<li>Updated screenshots for Citrix ADC 12.1</li>
+<li>2018 June 15 - <a href="#loginschemas">Login Schemas</a> - added link to Stan Demburg <a href="https://www.irangers.com/netscaler-native-otp-limit-enrollment-one-device/">NetScaler Native OTP – Prevent Enrollment Of Additional Devices Externally</a></li>
+<li>2018 Mar 18 - in the <a href="#trafficpol">Traffic Policy</a> section, added info from Julien Mooren <a href="https://citrixguyblog.com/2018/03/16/netscaler-otp-is-breaking-ssl-vpn/">NetScaler – Native OTP is breaking SSL VPN</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="overview">Overview</h3>
+<p>NetScaler Native OTP lets you enable two-factor authentication without purchasing any other authentication product. A typical configuration uses Google Authenticator to generate Passcodes. See the following for an overview:</p>
+<ul>
+<li>Citrix Blog Post <a href="https://www.citrix.com/blogs/2017/07/28/netscaler-unified-gateway-provides-one-time-password-otp-natively/">NetScaler Unified Gateway Provides One Time Password (OTP), Natively</a></li>
+<li>Citrix Docs <a href="https://docs.netscaler.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/native-otp-authentication.html">Native OTP support for authentication</a></li>
+</ul>
+<p>Here are some notes:</p>
+<ul>
+<li>NetScaler Native OTP is part of <a href="../nfactor-authentication-for-netscaler-gateway-11-1/"><strong>nFactor</strong></a>, and thus requires Citrix ADC Advanced Edition (aka NetScaler Enterprise Edition) or Citrix ADC Premium Edition (aka NetScaler Platinum Edition) licensing. NetScaler ADC Standard Edition licensing is not sufficient.</li>
+<li>Workspace app 1809 and newer with Citrix Gateway (NetScaler) 12.1 build 49 and newer support nFactor authentication. Older Receivers and older NetScalers don't support it, so you'll instead have to use a web browser.  :idea:<br />
+<img alt="" src="../../../img/img_5bb8f36c61b15.png" /></li>
+<li>Citrix Gateway VPN Plug-in 12.1 build 49 and later support nFactor when authenticating using the VPN Plug-in.  :idea:<br />
+<img alt="" src="../../../img/img_5bb8ef1bedc51.png" /></li>
+<li>nFactor requires a AAA vServer, which can be non-addressable - you don't need any additional public IPs.</li>
+<li>
+<p>OTP stores device enrollment secrets in an Active Directory attribute that accepts Strings. Citrix's documentation uses the <strong>userParameters</strong> Active Directory attribute.</p>
+<ul>
+<li>The LDAP bind account must have permission to modify this attribute on every user.</li>
+<li>Users can enroll multiple devices. There's no way to prevent this.</li>
+<li>The <a href="#manageotp"><strong>manageotp</strong></a> website is usually only protected by single factor authentication. Since users can add multiple devices, the <strong>manageotp</strong> website must be protected from external access.</li>
+<li>Christian in the <a href="../netscaler-gateway-12-native-one-time-passwords-otp/comment-page-1/#comment-7009">comments</a> indicated that Microsoft Authenticator also works. Click on plus sign -&gt; other (Google,…).</li>
+</ul>
+</li>
+</ul>
+<p>Here are the OTP configuration objects:</p>
+<ul>
+<li>Make sure <a href="../netscaler-12-system-configuration/#ntp">NTP</a> is configured on the NetScaler. Accurate time is required.</li>
+<li>
+<p>An <strong>LDAP Policy/Server</strong> with authentication disabled and <strong>OTP Secret</strong> configured. This one OTP-specific LDAP Policy/Server can be used for two scenarios:</p>
+<ul>
+<li><strong>manageotp</strong> device enrollment</li>
+<li>Two-factor authentication to NetScaler Gateway after a device has been enrolled. This LDAP Policy/Server verifies the entered passcode.</li>
+<li>
+<p>An <strong>LDAP Policy/Server</strong> with authentication enabled. This one policy is used for two scenarios:</p>
+</li>
+<li>
+<p>Single-factor authentication to the <strong>manageotp</strong> authenticator/device enrollment website.</p>
+</li>
+<li>Two-factor authentication to NetScaler Gateway after a device has been enrolled.</li>
+<li>
+<p>A single non-addressable <strong>AAA vServer</strong> with two Login Schemas for the following scenarios:</p>
+</li>
+<li>
+<p>A single-factor Login Schema for <strong>manageotp</strong>.</p>
+</li>
+<li>A dual-factor Login Schema for NetScaler Gateway authentication.</li>
+<li>An <strong>Authentication Profile</strong> to link the AAA vServer to the NetScaler Gateway vServer.</li>
+</ul>
+</li>
+</ul>
+<h3 id="ldap-policiesactions">LDAP Policies/Actions</h3>
+<ol>
+<li>Go to <strong>Security &gt; AAA - Application Traffic &gt; Polices &gt; Authentication &gt; Advanced Policies &gt; Actions &gt; LDAP</strong>.</li>
+<li>On the right, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5bb8d8ba5379c.png" /><ol>
+<li>Create a normal <a href="../netscaler-gateway-11-1-ldap-authentication/">LDAP Server</a> if you don't have one already. This one has Authentication enabled. This LDAP Policy/Server will be used for single-factor authentication to the <strong>manageotp</strong> website, and for first factor of dual-factor authentication to NetScaler Gateway (second factor is OTP). There are no special instructions for this LDAP Server.<br />
+<img alt="" src="../../../img/img_597a276a22b97.png" /></li>
+</ol>
+</li>
+<li>Create another LDAP Action.<br />
+<img alt="" src="../../../img/img_5bb8d8d4bd651.png" /><ol>
+<li>This one is used by the manageotp site to <strong>set</strong> the OTP authenticator in Active Directory, so name it accordingly.</li>
+<li>On the right, uncheck the box next to <strong>Authentication</strong>. If you don't uncheck it, you will see an error message after configuring the OTP Secret.<br />
+<img alt="" src="../../../img/img_5bb8d94217c21.png" /></li>
+<li>Make sure the <strong>Administrator Bind DN</strong> has permissions to modify the OTP Secret Active Directory attribute for all users.</li>
+<li>If you cloned an existing LDAP Server, then make sure you re-enter the Administrator Password or the new one won't work. Then click <strong>Test LDAP Reachability</strong>.<br />
+<img alt="" src="../../../img/img_5bb8d98d1e78a.png" /></li>
+<li>Configure the <strong>Server Logon Name Attribute</strong> to match the one you configured in the normal authentication LDAP Server.<br />
+<img alt="" src="../../../img/img_597a27b00292c.png" /></li>
+<li>In the <strong>Other Settings</strong> section, on the bottom right, find the <strong>OTP Secret</strong> field. Enter the name of the Active Directory attribute where NetScaler will store the user's OTP secret. You can use the <strong>userParameters</strong> attribute if that attribute isn't being used for anything else.</li>
+<li>Thomas Rolfs in the <a href="../netscaler-gateway-12-native-one-time-passwords-otp/comment-page-1/#comment-7890">comments</a> advises not to enable <strong>Nested Group Extraction</strong> in this LDAP Action.</li>
+<li>Click <strong>Create</strong> when done.<br />
+<img alt="" src="../../../img/img_5bb8d9c58b71b.png" /></li>
+</ol>
+</li>
+<li>
+<p>Create another LDAP Action.</p>
+<ol>
+<li>This one will verify the OTP code entered by the user, so name it accordingly. The only difference from the prior one is the addition of an LDAP Search Filter.</li>
+<li>On the right, uncheck the box next to <strong>Authentication</strong>. If you don't uncheck it, you will see an error message after configuring the OTP Secret.<br />
+<img alt="" src="../../../img/img_5bb8e4902618b.png" /></li>
+<li>Make sure the <strong>Administrator Bind DN</strong> has permissions to read the OTP Secret Active Directory attribute.</li>
+<li>If you cloned an existing LDAP Server, then make sure you re-enter the Administrator Password or the new one won't work.<br />
+<img alt="" src="../../../img/img_5bb8e4b1372b5.png" /></li>
+<li>In the <strong>Other Settings</strong> section, configure the <strong>Server Logon Name Attribute</strong> to match the one you configured in the normal authentication LDAP Server.</li>
+<li>In the <strong>Search Filter</strong> field, enter the text <strong>userParameters&gt;=#@</strong>. This syntax ensures that only users with enrolled authenticators can login. See George Spiers <a href="http://www.jgspiers.com/netscaler-native-otp/">NetScaler native OTP</a> for more info.<br />
+<img alt="" src="../../../img/img_5bb8e4d30959d.png" /></li>
+<li>In the <strong>Other Settings</strong> section, on the bottom right, find the <strong>OTP Secret</strong> field. Enter the name of the Active Directory attribute containing the user's OTP secret.</li>
+<li>Click <strong>Create</strong> when done.<img alt="" src="../../../img/img_5bb8e4e66838c.png" /></li>
+<li>Go to <strong>Security &gt; AAA - Application Traffic &gt; Policies &gt; Authentication &gt; Advanced Policies &gt; Policy</strong>.</li>
+<li>On the right, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e5041b463.png" /></li>
+<li>You probably don't already have an Advanced Authentication Policy for your normal LDAP server.</li>
+<li>Change the <strong>Action Type</strong> to <strong>LDAP</strong>.</li>
+<li>Select your normal LDAP server, which is the one that has Authentication <strong>enabled</strong>.</li>
+<li>Enter <strong>true</strong> as the expression. This uses Default Syntax instead of Classic Syntax.</li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_597a29866be0b.png" /></li>
+<li>Create another Authentication Policy.<br />
+<img alt="" src="../../../img/img_5bb8e5263b84d.png" /></li>
+<li>This policy is for OTP management so name it accordingly.</li>
+<li>Change the <strong>Action Type</strong> to <strong>LDAP</strong>.</li>
+<li>Select the Set OTP LDAP Server that has Authentication <strong>disabled</strong> and <strong>OTP Secret</strong> configured. This LDAP Action should not have the Search Filter configured.</li>
+<li>Enter <strong>HTTP.REQ.COOKIE.VALUE("NSC_TASS").EQ("manageotp")</strong> in the Expression box, and click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e56f49b9b.png" /></li>
+<li>Create another Authentication Policy.<br />
+<img alt="" src="../../../img/img_597a3315ad9fe.png" /></li>
+<li>This policy is for OTP verification so name it accordingly.</li>
+<li>Change the <strong>Action Type</strong> to <strong>LDAP</strong>.</li>
+<li>Select the OTP Verification LDAP Server that has Authentication <strong>disabled</strong> and <strong>OTP Secret</strong> configured. This LDAP Action should have the Search Filter configured to prevent unenrolled users from authenticating.</li>
+<li>Enter <strong>true</strong> in the Expression box, and click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e5d9a0f50.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="login-schemas">Login Schemas</h3>
+<ol>
+<li>Go to <strong>Security &gt; AAA - Application Traffic &gt; Login Schema</strong>.</li>
+<li>On the right, switch to the <strong>Profiles</strong> tab, and click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e5fdd5728.png" /><ol>
+<li>This is the single factor Login Schema for <strong>manageotp</strong> so name the Schema accordingly.</li>
+<li>Click the <strong>Edit</strong> icon.<br />
+<img alt="" src="../../../img/img_5bb8e61d127fe.png" /></li>
+<li>On the left, click the <strong>LoginSchema</strong> folder to open it.<br />
+<img alt="" src="../../../img/img_597a33ab6865b.png" /></li>
+<li>Scroll down, and click <strong>SingleAuthManageOTP.xml</strong> to highlight it.<br />
+<img alt="" src="../../../img/img_597a33bb9092d.png" /></li>
+<li>On the top right, click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_597a33c4c459e.png" /></li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e63d90744.png" /></li>
+</ol>
+</li>
+<li>Add another <strong>Login Schema</strong> profile.<br />
+<img alt="" src="../../../img/img_5bb8e653540d1.png" /><ol>
+<li>This Login Schema is for two-factor authentication to NetScaler Gateway so name it accordingly.</li>
+<li>Click the edit icon. Follow the same procedure as above, but this time select <strong>/LoginSchema/DualAuth.xml</strong>.<br />
+<img alt="" src="../../../img/img_597a2a0ceed22.png" /></li>
+<li>Click <strong>More</strong> to reveal more options.<br />
+<img alt="" src="../../../img/img_597a34b3191a2.png" /></li>
+<li>Scroll down. In the <strong>Password Credential Index</strong> field, enter <strong>1</strong>. This causes nFactor to save the user's password into AAA Attribute #1, which we'll use later in a Traffic Policy to Single Sign-on to StoreFront. If you don't do this, then NetScaler Gateway will try to use the Passcode to authenticate to StoreFront, which obviously won't work.</li>
+<li>Check the box next to <strong>Enable Single Sign On Credentials</strong>. <a href="../netscaler-gateway-12-native-one-time-passwords-otp/comment-page-1/#comment-7245">Mark in the comments</a> indicates that this checkbox is needed to Single Sign On to RDP Hosts.</li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e691ce8ac.png" /></li>
+</ol>
+</li>
+<li>On the right, switch to the <strong>Policies</strong> tab.<br />
+<img alt="" src="../../../img/img_5bb8e6aa1a099.png" /></li>
+<li>
+<p>Click <strong>Add</strong> to add a Login Schema policy.</p>
+<ol>
+<li>In the <strong>Profile</strong> field, select the Single Factor Manage OTP Login Schema Profile.</li>
+<li>Name the Login Schema Policy for OTP management.</li>
+<li>
+<p>In the <strong>Rule</strong> field, enter the following. This ensures that this single factor Login Schema is only used if the user enters <strong>/manageotp</strong>, and if the user is on the internal network. You don't want <strong>manageotp</strong> to be accessible externally, because it's only protected by single factor authentication, and it's too easy to add multiple devices.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http.req.cookie.value(&quot;NSC_TASS&quot;).eq(&quot;manageotp&quot;) &amp;&amp; client.IP.SRC.IN_SUBNET(10.2.0.0/16)
+</span></code></pre></div>
+<ul>
+<li>Stan Demburg at <a href="https://www.irangers.com/netscaler-native-otp-limit-enrollment-one-device/">NetScaler Native OTP – Prevent Enrollment Of Additional Devices Externally</a> at iRangers has a method of preventing external access to <strong>manageotp</strong> if the user already has a device enrolled.</li>
+<li>Morten Kallesoee at <a href="https://netscalerrocks.com/netscaler/n-factor-restrictions-on-native-otp-management/">n-Factor – restrictions on native OTP management</a> restricts <strong>manageotp</strong> if the user already has a device enrolled.<ol>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_597a409e99f24.png" /></li>
+</ol>
+</li>
+<li>Create another <strong>Login Schema</strong> Policy.<br />
+<img alt="" src="../../../img/img_597a359537dc8.png" /><ol>
+<li>In the <strong>Profile</strong> field, select the dual factor Login Schema.</li>
+<li>Name the Login Schema to indicate dual factor authentication.</li>
+<li>In the <strong>Rule</strong> box, enter <strong>true</strong>.</li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_597a2a40f0ac2.png" /></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="authentication-policylabel">Authentication PolicyLabel</h3>
+<ol>
+<li>Go to <strong>Security &gt; AAA - Application Traffic &gt; Policies &gt; Authentication &gt; Advanced Policies &gt; PolicyLabel</strong>.</li>
+<li>On the right, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e6e165e83.png" /></li>
+<li>This PolicyLabel is for OTP management, and OTP verification, so name it accordingly.</li>
+<li>In the <strong>Login Schema</strong> field, select <strong>LSCHEMA_INT</strong>, which means <strong>noschema</strong>.</li>
+<li>Click <strong>Continue</strong>.<br />
+<img alt="" src="../../../img/img_597a2b942e7f0.png" /></li>
+<li>In the <strong>Policy Binding</strong> section, <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_597a2bbe69e33.png" /></li>
+<li>Click the radio button button next to the Manage OTP LDAP Policy that has authentication disabled, and OTP Secret configured. This one should have a policy expression that limits it to <strong>manageotp</strong> only. Click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_598279a62d8e2.png" /></li>
+<li>Click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_597a2bd901c3a.png" /></li>
+<li>Click <strong>Add Binding</strong> to add another one.<br />
+<img alt="" src="../../../img/img_5bb8e72530848.png" /></li>
+<li><strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_598279d4c1765.png" /></li>
+<li>Click the radio button next to the LDAP Policy that verifies OTP. Click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e74d131bd.png" /></li>
+<li>Click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_5a38f8a71de55.png" /></li>
+<li>Make sure the <strong>manageotp</strong> policy is higher in the list than the OTP Verification policy. To adjust priorities, right-click on the policies, and click <strong>Edit Binding</strong>. Click <strong>Done</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e77356f4f.png" /></li>
+</ol>
+<h3 id="aaa-vserver">AAA vServer</h3>
+<ol>
+<li>
+<p>Go to <strong>Security &gt; AAA - Application Traffic</strong>.</p>
+<ol>
+<li>If the AAA feature is not enabled, then right-click the <strong>AAA</strong> node, and click <strong>Enable Feature</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e79a8cab7.png" /></li>
+<li>Go to <strong>Security &gt; AAA - Application Traffic &gt; Virtual Servers</strong>.</li>
+<li>On the right, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e7b3c48c4.png" /></li>
+<li>This AAA vServer is for OTP so name it accordingly.</li>
+<li>Change the <strong>IP Address Type</strong> to <strong>Non Addressable</strong>.</li>
+<li>Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e7e691af6.png" /></li>
+<li>Click where it says <strong>No Server Certificate</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e7f186250.png" /></li>
+<li>In the <strong>Server Certificate Binding</strong> section, click <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e7fd96820.png" /></li>
+<li>Click the radio button next to a certificate, and click <strong>Select</strong>. You can use the same certificate as NetScaler Gateway.<br />
+<img alt="" src="../../../img/img_5bb8e81ce59ce.png" /></li>
+<li>Click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e82a535bc.png" /></li>
+<li>Click <strong>Continue</strong> to close the <strong>Certificate</strong> section.<br />
+<img alt="" src="../../../img/img_5bb8e83618b28.png" /></li>
+<li>In the <strong>Advanced Authentication Policies</strong> section, click where it says <strong>No Authentication Policy</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8470b651.png" /></li>
+<li>Click where it says <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8553d803.png" /></li>
+<li>Click the radio button next to the normal LDAP Policy that has authentication enabled. Then click the blue <strong>Select</strong> button.<br />
+<img alt="" src="../../../img/img_5bb8e8658db04.png" /></li>
+<li>In the <strong>Select Next Factor</strong> field, click where it says <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e882634a2.png" /></li>
+<li>Click the radio button next to the OTP PolicyLabel, and click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8901a436.png" /></li>
+<li>Click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e89e8ec3c.png" /></li>
+<li>In the <strong>Advanced Authentication Policies</strong> section, click <strong>Continue</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8ac53224.png" /></li>
+<li>On the right, in the <strong>Advanced Settings</strong> column, click <strong>Login Schemas</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8c25dd2d.png" /></li>
+<li>On the left, scroll down, and click where it says <strong>No Login Schema</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8d32fc61.png" /></li>
+<li>Click where it says <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8e033eff.png" /></li>
+<li>Click the radio button next to the Manage OTP Login Schema, and click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e8fa17e16.png" /></li>
+<li>Click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e90b6180c.png" /></li>
+<li>Click where it says <strong>1 Login Schema</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e919eb1fe.png" /></li>
+<li>Click <strong>Add Binding</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e9292e4eb.png" /></li>
+<li>Click where it says <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e94a3072e.png" /></li>
+<li>Click the radio button next to the dual factor Login Schema, and click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e95a2470d.png" /></li>
+<li>Click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e9685be8e.png" /></li>
+<li>Make sure the single factor Manage OTP Login Schema is higher in the list (lower priority number) than the dual factor Login Schema. Click <strong>Close</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e97c54b75.png" /></li>
+<li>On the right, in the <strong>Advanced Settings</strong> column, click <strong>Portal Themes</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e992927de.png" /></li>
+<li>On the left, scroll down, select <strong>RfWebUI</strong> as the Portal Theme, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e9a6b0837.png" /></li>
+<li>Click <strong>Done</strong>.<br />
+<img alt="" src="../../../img/img_5bb8e9b84d97f.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="traffic-policy-for-single-sign-on">Traffic Policy for Single Sign-on</h3>
+<ol>
+<li>On the left, go to <strong>NetScaler Gateway &gt; Policies &gt; Traffic</strong>.</li>
+<li>On the right, switch to the <strong>Traffic Profiles</strong> tab, and click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5bb8ea1523689.png" /></li>
+<li>This Traffic Profile is for OTP and/or nFactor. Name it accordingly.</li>
+<li>Scroll down.<br />
+<img alt="" src="../../../img/img_5bb8ea2f922f7.png" /></li>
+<li>
+<p>In the <strong>SSO Password Expression</strong> box, enter the following. This is where we use the Login Schema Password Attribute specified earlier.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>http.REQ.USER.ATTRIBUTE(1)
+</span></code></pre></div>
+</li>
+<li>
+<p>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5bb8ea40bd5f6.png" /></p>
+</li>
+<li>On the right, switch to the <strong>Traffic Policies</strong> tab, and click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5bb8ea5799614.png" /></li>
+<li>In the <strong>Request Profile</strong> field, select the Traffic Profile you just created.</li>
+<li>Name the Traffic Policy.</li>
+<li>
+<p>In the <strong>Expression</strong> box, enter <strong>true</strong> (Default Syntax).</p>
+<ul>
+<li>
+<p>If your NetScaler Gateway Virtual Server allows full VPN, change the expression to the following. Source = Julien Mooren at <a href="https://citrixguyblog.com/2018/03/16/netscaler-otp-is-breaking-ssl-vpn/">NetScaler – Native OTP is breaking SSL VPN</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>http.req.method.eq(post)||http.req.method.eq(get) &amp;&amp; false
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5bb8ead46b5a4.png" /></p>
+</li>
+</ol>
+<h3 id="netscaler-gateway-and-authentication-profile">NetScaler Gateway and Authentication Profile</h3>
+<ol>
+<li>Go to <strong>NetScaler Gateway &gt; Virtual Servers</strong>.</li>
+<li>Edit an existing Gateway vServer. If you don't have one, see the other <a href="../netscaler-12/">NetScaler Gateway topics</a> on this site.<br />
+<img alt="" src="../../../img/img_5bb8eafe32252.png" /></li>
+<li>Scroll down to the <strong>Policies</strong> section, and click the plus icon.<br />
+<img alt="" src="../../../img/img_5bb8eb22d5d69.png" /></li>
+<li>Change the <strong>Choose Policy</strong> drop-down to <strong>Traffic</strong>, and click <strong>Continue</strong>.<br />
+<img alt="" src="../../../img/img_5bb8eb34e913a.png" /></li>
+<li><strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8eb4610440.png" /></li>
+<li>Click the radio button next to the Traffic Policy you created earlier, and click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8eb57e71c6.png" /></li>
+<li>Click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_5bb8eb70c9470.png" /></li>
+<li>On the right, in the <strong>Advanced Settings</strong> column, click <strong>Authentication Profile</strong>.<br />
+<img alt="" src="../../../img/img_5bb8eb878ee9b.png" /></li>
+<li>On the left, scroll down to the <strong>Authentication Profile</strong> section.</li>
+<li>Click <strong>Add</strong> to create one.<br />
+<img alt="" src="../../../img/img_5bb8eb98390d5.png" /></li>
+<li>Authentication Profile links the NetScaler Gateway vServer with the OTP AAA vServer, so name it accordingly.</li>
+<li>In the <strong>Authentication Virtual Server</strong> section, <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_597a2e54d8389.png" /></li>
+<li>Click the radio button next to the OTP AAA vServer, and click <strong>Select</strong>.<br />
+<img alt="" src="../../../img/img_5bb8ebc5ccf27.png" /></li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5bb8ebd708734.png" /></li>
+<li>Scroll down again to the <strong>Authentication Profile</strong> section, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5bb8ebe443a68.png" /></li>
+<li>The Portal Theme bound to the Gateway vServer should be <strong>RfWebUI</strong>, or a derivative.<br />
+<img alt="" src="../../../img/img_5bb8ebfb6537f.png" /></li>
+<li>Go to <strong>System &gt; Profiles</strong>.</li>
+<li>On the right, switch to the <strong>SSL Profile</strong> tab.</li>
+<li>Edit the <strong>ns_default_ssl_profile_frontend</strong> profile.<br />
+<img alt="" src="../../../img/img_597a3b71a0c1b.png" /></li>
+<li>Make sure <strong>HSTS</strong> is not enabled in the profile, or RfWebUI, and manageotp won't work correctly. This is probably a bug. Note: the Rewrite method of enabling HSTS should work.<br />
+<img alt="" src="../../../img/img_597a3b8042f51.png" /></li>
+</ol>
+<h3 id="update-content-switching-expression-for-unified-gateway">Update Content Switching Expression for Unified Gateway</h3>
+<p>If your NetScaler Gateway Virtual Server is behind a Unified Gateway (Content Switching Virtual Server), then you must update the Content Switching Expression to include the <strong>manageotp</strong> paths.</p>
+<ol>
+<li>In the NetScaler GUI, navigate to <strong>Configuration</strong>&gt; <strong>Traffic Management &gt; Content Switching &gt; Policies</strong>.</li>
+<li>On the right, select the Unified Gateway Content Switching Policy, and then click <strong>Edit</strong>.</li>
+<li>
+<p>Append the following expression under the <strong>Expression</strong> area, and then click <strong>OK</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>|| HTTP.REQ.URL.CONTAINS(&quot;/manageotp&quot;)
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="manageotp">Manageotp</h3>
+<ol>
+<li>Point your browser to <strong>https://mygateway.corp.com/manageotp</strong> or similar. Simply add <strong>/manageotp</strong> to the end of your Gateway URL.<br />
+<img alt="" src="../../../img/img_597a2ec79f5ba.png" /></li>
+<li>Notice it's only single-factor authentication. Login using normal LDAP credentials.<br />
+<img alt="" src="../../../img/img_597a2ed75df10.png" /></li>
+<li>Click <strong>Add Device</strong>.<br />
+<img alt="" src="../../../img/img_597a2f021433c.png" /></li>
+<li>Enter a device name, and click <strong>Go</strong>.<br />
+<img alt="" src="../../../img/img_597a2f0cef278.png" /></li>
+<li>Launch the Google Authenticator application on your phone. Click the plus icon in Google Authenticator, and scan the QRCode that is shown on the screen.</li>
+<li>Christian in the <a href="../netscaler-gateway-12-native-one-time-passwords-otp/comment-page-1/#comment-7009">comments</a> indicated that Microsoft Authenticator also works. Click on plus sign -&gt; other (Google,…).<br />
+<img alt="" src="../../../img/img_597a2f1d88540.png" /></li>
+<li>Click <strong>Test</strong>.<br />
+<img alt="" src="../../../img/img_597a2f3491591.png" /></li>
+<li>Enter the passcode shown in your Authenticator, and click <strong>Go</strong>.<br />
+<img alt="" src="../../../img/img_597a2f427bb74.png" /><img alt="" src="../../../img/img_597a2f4d36616.png" /></li>
+<li>If you logoff of <strong>manageotp</strong>, and access your Gateway URL normally, you'll be prompted for two-factor authentication. Use the passcodes shown in your Google Authenticator application.<br />
+<img alt="" src="../../../img/img_597a2f64d0d9e.png" /></li>
+<li>It should Single Sign-on into StoreFront.<br />
+<img alt="" src="../../../img/img_597a2f7c0dbfc.png" /></li>
+</ol>
+<h3 id="cli-commands">CLI Commands</h3>
+<p>Here's a complete CLI configuration.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>add ssl certKey WildcardCorpCom -cert WildcardCorpCom.pfx -key WildcardCorpCom.pfx -inform PFX -passcrypt &quot;abc&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>add authentication ldapAction LDAP-Corp -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn ctxsvc@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -groupAttrName memberOf -subAttributeName cn -secType SSL -passwdChange ENABLED -Attribute2 userParameters
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>add authentication ldapAction LDAP_OTP_set_no_auth -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn admin@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED -OTPSecret UserParameters
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>add authentication ldapAction LDAP_OTP_verify_no_auth -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn admin@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -searchFilter &quot;userParameters&gt;=#@&quot; -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED -OTPSecret UserParameters
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>add authentication Policy Corp-Adv -rule true -action LDAP-Corp
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>add authentication Policy LDAP_Manage_OTP-pol -rule &quot;HTTP.REQ.COOKIE.VALUE(\&quot;NSC_TASS\&quot;).EQ(\&quot;manageotp\&quot;)&quot; -action LDAP_OTP_set_no_auth
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>add authentication Policy LDAP_Confirm_OTP-pol -rule true -action LDAP_OTP_verify_no_auth
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>add authentication loginSchema Dual_OTP-lschema -authenticationSchema &quot;/nsconfig/loginschema/LoginSchema/DualAuth.xml&quot; -passwordCredentialIndex 1
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>add authentication loginSchema Single_Manage_OTP-lschema -authenticationSchema &quot;/nsconfig/loginschema/LoginSchema/SingleAuthManageOTP.xml&quot;
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>add authentication loginSchemaPolicy Single_Manage_OTP-lschemapol -rule &quot;http.req.cookie.value(\&quot;NSC_TASS\&quot;).eq(\&quot;manageotp\&quot;) &amp;&amp; client.IP.SRC.IN_SUBNET(10.3.0.0/16)&quot; -action Single_Manage_OTP-lschema
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>add authentication loginSchemaPolicy Dual_OTP-lschemapol -rule true -action Dual_OTP-lschema
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>add authentication policylabel OTP_pollabel -loginSchema LSCHEMA_INT
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>bind authentication policylabel OTP_pollabel -policyName LDAP_Manage_OTP-pol -priority 100 -gotoPriorityExpression NEXT
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>bind authentication policylabel OTP_pollabel -policyName LDAP_Confirm_OTP-pol -priority 110 -gotoPriorityExpression NEXT 
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>add authentication vserver OTP-AAA SSL 0.0.0.0
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>bind ssl vserver OTP-AAA -certkeyName WildcardCorpCom
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>bind authentication vserver OTP-AAA -portaltheme RfWebUI
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>bind authentication vserver OTP-AAA -policy Single_Manage_OTP-lschemapol -priority 100 -gotoPriorityExpression END
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>bind authentication vserver OTP-AAA -policy Dual_OTP-lschemapol -priority 110 -gotoPriorityExpression END
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>bind authentication vserver OTP-AAA -policy Corp-Adv -priority 100 -nextFactor OTP_pollabel -gotoPriorityExpression NEXT
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>add vpn trafficAction OTP-trafficprofile http -passwdExpression &quot;http.REQ.USER.ATTRIBUTE(1)&quot;
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>add vpn trafficPolicy OTP-trafficpol true OTP-trafficprofile
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>add authentication authnProfile OTP-authnprofile -authnVsName OTP-AAA
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>add vpn vserver Gateway.corp.com SSL 10.2.5.220 443 -downStateFlush DISABLED -Listenpolicy NONE -authnProfile OTP-authnprofile
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>set ssl vserver Gateway.corp.com -sslProfile ns_default_ssl_profile_frontend
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>add vpn sessionAction &quot;Receiver For Web&quot; -transparentInterception OFF -defaultAuthorizationAction ALLOW -SSO ON -icaProxy ON -wihome &quot;https://storefront2.corp.com/Citrix/StoreWeb&quot; -ntDomain corp.local -clientlessVpnMode OFF -storefronturl &quot;https://storefront2.corp.com&quot;
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>add vpn sessionPolicy &quot;Receiver For Web&quot; &quot;HTTP.REQ.HEADER(\&quot;User-Agent\&quot;).CONTAINS(\&quot;CitrixReceiver\&quot;).NOT&quot; &quot;Receiver For Web&quot;
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>bind vpn vserver Gateway.corp.com -portaltheme RfWebUI
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>bind vpn vserver Gateway.corp.com -policy &quot;Receiver For Web&quot; -priority 100 -gotoPriorityExpression NEXT -type REQUEST
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>bind vpn vserver Gateway.corp.com -policy OTP-trafficpol -priority 100 -gotoPriorityExpression END -type REQUEST
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>bind ssl vserver Gateway.corp.com -certkeyName WildcardCorpCom
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

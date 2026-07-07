@@ -1,0 +1,6078 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../vmware-horizon-8-rds-farms-pools/">
+      
+      
+        <link rel="next" href="../vmware-horizon-master-virtual-desktop/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Omnissa Horizon 8: Virtual Desktop Pools - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Omnissa Horizon 8: Virtual Desktop Pools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-persistent-instant-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Persistent - Instant Clones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infrastructure Prep
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure Prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disk space
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-persistent-floating-automatic-instant-clone-desktop-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Persistent, Floating, Automatic, Instant Clone Desktop Pool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Persistent, Floating, Automatic, Instant Clone Desktop Pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-image-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master Image Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entitle-virtual-desktops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entitle Virtual Desktops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-machine-to-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Machine to Pool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update a Pool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update a Pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-image-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master Image Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-maintenance-instant-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Host Maintenance - Instant Clones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-full-clones-automated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistent Full Clones - Automated
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Persistent Full Clones - Automated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customization-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customization Specification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gold-image-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gold Image Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-full-clone-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Full Clone Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Machine Administration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-persistent-instant-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Persistent - Instant Clones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infrastructure Prep
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure Prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disk space
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-persistent-floating-automatic-instant-clone-desktop-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-Persistent, Floating, Automatic, Instant Clone Desktop Pool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Persistent, Floating, Automatic, Instant Clone Desktop Pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-image-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master Image Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entitle-virtual-desktops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entitle Virtual Desktops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-machine-to-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Machine to Pool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update a Pool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update a Pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-image-preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master Image Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-maintenance-instant-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Host Maintenance - Instant Clones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-full-clones-automated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistent Full Clones - Automated
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Persistent Full Clones - Automated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customization-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customization Specification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gold-image-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gold Image Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-full-clone-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Full Clone Pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Machine Administration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Omnissa Horizon 8: Virtual Desktop Pools</h1>
+
+<p>This article details Horizon pool configuration for Virtual Desktops. RDS Farms and pools are detailed in a separate article at <a href="../vmware-horizon-8-rds-farms-pools/">../vmware-horizon-8-rds-farms-pools/</a>.</p>
+<h3 id="navigation">Navigation</h3>
+<p>This post applies to all Horizon versions 2006 (8.0) and newer.</p>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#nonpersistent">Non-Persistent - Instant Clones</a><ul>
+<li><a href="#prep">Infrastructure Prep</a></li>
+<li><a href="#floatingpool">Floating (Non-Persistent) Desktop Pool</a></li>
+<li><a href="#entitle">Entitle Virtual Desktops</a></li>
+<li><a href="#addmachine">Add Machine to Pool</a></li>
+<li><a href="#updatepool">Update a Non-Persistent Pool</a></li>
+<li><a href="#maintenance">Host Maintenance</a> - Instant Clones</li>
+</ul>
+</li>
+<li><a href="#persistentfullclones">Persistent Full Clones - Automated</a><ul>
+<li><a href="#customizationspecification">Customization Specification</a></li>
+<li><a href="#goldimagetemplate">Gold Image Template</a></li>
+<li><a href="#automatedfullclonepool">Automated Full Clone Pool</a></li>
+<li><a href="#fullclonemachineadmin">Full Clone Machine Administration</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2023 Jan 13 - <a href="#automatedfullclonepool">Automated Full Clone Pool</a> - Horizon 2212 lets you specify the OU.</li>
+<li>2021 Mar 28 - new section for <a href="#persistentfullclones">Automated Persistent Full Clones</a>.</li>
+<li>2021 Jan 10 - <a href="#maintenance">Instant Clones ESXi Maintenance</a> - new <strong>Disable ParentVMs</strong> feature for VUM</li>
+<li>2021 Jan 9 - updated screenshots for Horizon 2012 (8.1)</li>
+<li>2020 Aug 14 - updated entire article for Horizon 2006 (8.0)</li>
+</ul>
+<h2 id="non-persistent-instant-clones">Non-Persistent - Instant Clones</h2>
+<p>All editions of Horizon 2006 and newer include Instant Clones so there is no need to use Composer. Composer is deprecated in Horizon 2006. Composer was removed from Horizon 2012 (8.1) and newer.</p>
+<p><strong>Notes</strong> on Instant Clones:</p>
+<ul>
+<li>The master VM snapshot is copied to every LUN containing instant clones. Composer does the same.</li>
+<li>
+<p>If you deploy 12+ VMs per host of the same pool, then "Parent" machines are created on each ESXi host for each datastore. These "parent" machines are powered on and consume CPU/Memory/Disk resources. If you have six hosts and three datastores containing instant clones, then Horizon creates 18 parent virtual machines. Composer does not need parent virtual machines.</p>
+<ul>
+<li>For lower density, Horizon 2006 and newer support Smart Provisioning, which eliminates the need for "Parent" machines. See the <a href="https://www.youtube.com/watch?v=6S2AMIzWOqY">Smart Provisioning YouTube video</a> for an overview.</li>
+<li>Horizon 2306 (8.10) and newer now default to no longer creating parent virtual machines.</li>
+<li>Horizon 2306 (8.10) and newer support Persistent Disks with dedicated Instant Clones. See Omnissa 93091 <a href="https://kb.omnissa.com/s/article/93091">Guidelines for Persistent Disk Migration from Horizon 7 Environments to Horizon 8</a>.  </li>
+<li>An alternative is Microsoft FSLogix, or App Volumes Writable Volumes</li>
+<li>See <a href="https://docs.omnissa.com/bundle/Desktops-and-Applications-in-HorizonV2406/page/InstantCloneDesktopPools.html">Instant-Clone Desktop Pools</a> at Omnissa Docs.</li>
+</ul>
+</li>
+</ul>
+<h2 id="infrastructure-prep">Infrastructure Prep</h2>
+<ul>
+<li>Instant Clones in Horizon 2303 and newer require vSphere 7 or newer. vSphere 6.7 and older will not work.</li>
+<li>
+<p>Each desktop pool points to one <strong>vSphere cluster</strong>.</p>
+<ul>
+<li>See 2150348 <a href="https://kb.omnissa.com/s/article/2150348">Horizon 7 sizing limits and recommendations</a> for maximum cluster size and maximum number of virtual machines per cluster.</li>
+<li>
+<p>Ensure <strong>vSwitch</strong> has sufficient ports for the new virtual desktops.</p>
+</li>
+<li>
+<p>Instant Clones in Horizon 8.1 and newer support all port bindings, including ephemeral. Older versions of Horizon, including Horizon 7.x, require static port binding.</p>
+</li>
+<li>
+<p>Ensure the <strong>VLAN</strong> has enough <strong>DHCP</strong> addresses for the desktop pool.</p>
+</li>
+<li>
+<p>Lower the DHCP lease time too.</p>
+</li>
+<li>DHCP should be highly available (e.g. Windows DHCP Failover)</li>
+<li>Enable <strong>DNS</strong> Scavenging.</li>
+<li>See 2005210 <a href="https://kb.vmware.com/s/article/2005210">Unable to connect to linked clone pools after recomposing when using secure only dynamic updates with DNS</a> to change permissions on DNS Zone so the virtual desktops can update their DNS records after a Push Image.</li>
+<li><strong>KMS Licensing</strong> is required, preferably using <a href="https://learn.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client">Active Directory-based activation</a> - <a href="https://docs.omnissa.com/bundle/Desktops-and-Applications-in-HorizonV2406/page/ActivatingWindowsonInstantClones.html">MAK licensing (Omnissa Docs)</a> is not supported until Horizon 2212 and newer.</li>
+<li>The virtual desktop pools will use the same <strong>hardware specs</strong> (e.g., vCPUs, memory size, network label, GPU) specified on the master virtual desktop. Adjust accordingly.</li>
+<li>The <strong>master image</strong> should be in the same vSphere cluster where the instant clone virtual desktops will be created.</li>
+<li><strong>ESXi must be version 6 update 1</strong> or newer</li>
+<li>Master VM must be version <strong>hardware version 11</strong> or newer</li>
+<li>In Horizon Console, add <a href="../vmware-horizon-8-configuration/#instantclonedomainadmin">Instant Clone Domain Accounts</a></li>
+<li>In Horizon Console, enable <a href="../vmware-horizon-8-configuration/#vcenter">View Storage Accelerator</a> on your vCenter connection.</li>
+<li>If you upgrade vCenter from version 6.5 or older to version 6.7 or later, then you must upgrade your ESXi hosts to version 6.7 or later at the same time. Afterwards, take a new snapshot of the master image and perform a push operation.</li>
+<li><strong>Windows 11</strong> - Omnissa says don’t add vTPM to the gold image. Instead add the vTPM when creating the Instant Clone pool or Full Clone pool. There are various methods of installing Windows 11 without a vTPM. See Omnissa KB article 85960 <a href="https://kb.omnissa.com/s/article/85960">Horizon and Horizon Cloud readiness for Microsoft Windows 11</a>.<br />
+<img alt="" src="../../../img/img_62d9b35918fa3.png" /></li>
+<li>
+<p>vTPM requires a Key Provider. vSphere 7 has a Native Key Provider that does not need any additional servers or licenses.</p>
+</li>
+<li>
+<p>In vSphere Client, in <strong>Inventory</strong>, click the vCenter object. On the right, on the <strong>Configure</strong> tab, scroll down to <strong>Key Providers</strong> and add a <strong>Native Key Provider</strong>.<br />
+<img alt="" src="../../../img/img_618917c0006ec.png" /></p>
+</li>
+<li>After it’s added, select it and then click <strong>Back-up</strong> to activate it.<br />
+<img alt="" src="../../../img/img_618917fe152b8.png" /><br />
+<img alt="" src="../../../img/img_6189181eceefd.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="disk-space">Disk space</h4>
+<ul>
+<li>
+<p>One or more <strong>LUNs</strong> (datastores) for storage of the virtual desktops.</p>
+<ul>
+<li>See <a href="https://configmax.esp.vmware.com/guest?vmwareproduct=Horizon&amp;release=Horizon%202312&amp;categories=46-51,46-52,47-53,47-54,47-55,48-0,49-0,50-0,2-0,51-0">Horizon Configuration Maximums</a> for maximum virtual machines per datastore.</li>
+<li>
+<p>By default, <strong>Replicas</strong> are copied to each LUN that contains virtual desktops.</p>
+</li>
+<li>
+<p>It’s possible to place the Replica and the instant clones on separate LUNs. If you use a dedicated Replica LUN, then there is only one copy of the Replica no matter how many LUNs are used for storing virtual desktops.</p>
+</li>
+<li>Note: NFS VAAI requires the Replica to be copied to each virtual desktop LUN.</li>
+<li>
+<p><strong>.vswp files</strong> - Plan for disk space for memory swap and graphics memory overhead. If the master virtual desktop has 4 GB of RAM configured and if none of its memory is reserved then each linked clone will have a 4 GB .vswp file.</p>
+</li>
+<li>
+<p>To reduce the size of the .vswp files, edit each virtual desktop and reserve its memory. Whatever memory is reserved will be subtracted from the .vswp file size.</p>
+</li>
+<li><strong>Instant Clone Delta disks</strong> - Delta disks start small whenever the virtual desktop boots and grow until the user logs off of the virtual desktop and it reboots.</li>
+</ul>
+</li>
+</ul>
+<h2 id="non-persistent-floating-automatic-instant-clone-desktop-pool">Non-Persistent, Floating, Automatic, Instant Clone Desktop Pool</h2>
+<h3 id="master-image-preparation">Master Image Preparation</h3>
+<p>Do the following on the master image that the virtual desktops will link to:</p>
+<ol>
+<li><strong>Video Memory</strong> - shut down the master, <strong>Edit Settings</strong> (hardware) in vSphere client, expand <strong>Video card</strong>, and set video memory. More video memory means more client monitors. The maximum number of displays and maximum resolution of client monitors depends on the ESXi version, the Horizon version, and the Windows version with newest versions providing the greatest number of client monitors.<br />
+<img alt="" src="../../../img/img_5d20c907057e4.png" /></li>
+<li><strong>DHCP</strong> - Make sure the master VM is configured for DHCP.<br />
+<img alt="" src="../../../img/097f061d0b97a069399bc12bba83add9.png" /></li>
+<li><strong>Join domain</strong> - Join the master VM to the domain.</li>
+<li><strong>Computer Group Policy</strong> - Make sure the Master VM is in the same OU as the Instant Clones so the Master VM will get the computer-level GPO settings. Run <strong>gpupdate</strong> on the master after moving the VM to the correct OU. New Instant Clones do not immediately refresh group policy so the group policy settings must already be applied to the master VM. See Omnissa 2150495 <a href="https://kb.omnissa.com/s/article/2150495">Computer-based Global Policy Objects (GPOs) that require a reboot to take effect are not applied on instant clones</a>.<br />
+<img alt="" src="../../../img/img_594fa8e1098c4.png" /></li>
+<li><strong>KMS Licensing</strong> or <strong>Active Directory-Based Activation</strong> (recommended) is required.</li>
+<li><strong>Snapshot</strong> - Shut down the master image and take a new snapshot.<br />
+<img alt="" src="../../../img/img_5d20c1a56650d.png" /></li>
+</ol>
+<h3 id="floating-pool">Floating Pool</h3>
+<p>Use Horizon Console to create an Instant Clone pool:</p>
+<ol>
+<li>Login to Horizon Console.</li>
+<li>On the left, under <strong>Inventory</strong>, click <strong>Desktops</strong>.<br />
+<img alt="" src="../../../img/img_5ff8d555a04c7.png" /></li>
+<li>On the right, if you select an existing pool, you can click <strong>Duplicate</strong> to copy the settings to a new pool.<br />
+<img alt="" src="../../../img/img_5f366f99c697f.png" /></li>
+<li>On the right, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5d20c2c130a26.png" /></li>
+<li>In the <em>Type</em> page, select <strong>Automated desktop pool</strong>.<br />
+<img alt="" src="../../../img/img_5ff8d571aa7db.png" /></li>
+<li>In the <em>vCenter Server</em> page, select <strong>Instant Clone</strong>, select a vCenter server, and click <strong>Next</strong>. Notice that Composer is no longer an option.<br />
+<img alt="" src="../../../img/img_5ff8d587d5a49.png" /></li>
+<li>In the <em>User Assignment</em> page, select <strong>Floating</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5ff8d59f50842.png" /></li>
+<li>In the <em>Storage Optimization</em> page, if you want to use storage tiering, check the box for <strong>Select separate datastores for replica and OS disk</strong>. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5ff8d5b1da2eb.png" /></li>
+<li>
+<p>In the <strong>Desktop Pool Identification</strong> page, do the following:</p>
+<ol>
+<li>Give the pool a unique ID, which is not shown to the users. Horizon creates a vCenter <strong>VM folder</strong> with the same name as the <strong>Pool ID</strong>.</li>
+<li>Enter a <strong>Display name</strong>, which is shown to the users.</li>
+<li>If you intend to use Omnissa Access, then leave <strong>Access group</strong> set to <strong>/</strong>. Otherwise, if you intend to delegate administration of this pool, then select an Access group that the delegated administrators have been assigned to.</li>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5ff8d5d065d65.png" /></li>
+<li>
+<p>In the <em>Provisioning Settings</em> page, do the following:</p>
+</li>
+<li>
+<p>In <strong>Virtual Machine Naming</strong>, enter a <strong>Naming Pattern</strong>. You can use <strong>{n:fixed=3}</strong> to specify the location for incremented numerals in the machine names. Make sure the naming pattern does not conflict with any existing machines. Remember, the maximum computer name length is 15 characters.</p>
+<ul>
+<li>Horizon 2103 (8.2) and newer let you <strong>Specify Names Manually</strong> instead of using a naming pattern.<ul>
+<li>In <strong>Desktop Pool Sizing</strong>, enter the maximum number of desktops to create. Ensure that the DHCP scope has enough addresses for the Max number of desktops specified here. If your desktop pool size exceeds a single VLAN, then you can create multiple pools and combine them into a Cloud Pod Global Entitlement.</li>
+<li>Select <strong>Provision all machines up-front</strong> to create all of the machines now.</li>
+<li>Or select <strong>Provision machines on demand</strong>, which tells Horizon to create the machines (up to the maximum) as users connect.</li>
+<li>If you're not creating all machines up-front, then specify the <strong>Number of spare (powered on) machines</strong>. As users connect, Horizon creates more machines to try to keep this number of spare machines running and waiting for a new connection.<br />
+<img alt="" src="../../../img/img_605c868c1278c.png" /></li>
+</ul>
+</li>
+<li>If Windows 11, consider checking the box to <strong>Add vTPM Device to VMs</strong>.<br />
+<img alt="" src="../../../img/img_62d9b5d3af56e.png" /></li>
+<li>Click <strong>Next</strong>.</li>
+<li>In the <em>vCenter Settings</em> page, most of these are self-explanatory. Click <strong>Browse</strong> next to each option and make your selection.<br />
+<img alt="" src="../../../img/img_5ff8e501e35cd.png" /><ul>
+<li>If the Golden Image VM (aka Parent VM or Master VM) is not showing up in the list, then check the box next to <strong>Show all parent VMs</strong> and click the <strong>…</strong> next to the VM to see the issue.<br />
+<img alt="" src="../../../img/img_5b152ac48fd2a.png" /></li>
+<li><strong>Instant Clones monitors/resolution</strong> – the number of monitors configured on the Master Image (snapshot) is displayed. If not correct, delete the snapshot, edit the master VM’s Hardware Settings, expand <strong>video card</strong>, make your desired changes, and take another snapshot.<br />
+<img alt="" src="../../../img/img_5d20c93cb7b7c.png" /></li>
+<li>Scroll down for more settings.<br />
+<img alt="" src="../../../img/img_5ff8e54a1616e.png" /></li>
+<li><strong>VM Folder Location</strong> - Horizon will create a folder under the location (e.g., datacenter) you choose. Make sure the folder names don't have any spaces in them.</li>
+<li><strong>Datastores</strong> – select one or more datastores on which the virtual desktops will be placed.</li>
+<li>If you selected to put Replica on a different datastore, then you'll have another Browse button for <strong>Replica disk datastores</strong>.<br />
+<img alt="" src="../../../img/img_5b192537bdd8a.png" /></li>
+<li>When selecting <strong>Networks</strong>, you can use the Network from the parent image, or uncheck the box and select a different network.<br />
+<img alt="" src="../../../img/img_5b152b35a92f4.png" /></li>
+</ul>
+</li>
+<li>In Horizon 2206 and newer, in the <strong>VM Compute Profile Settings</strong> section, you can change the CPU, RAM, and Cores per socket assigned to each new virtual desktop.<br />
+<img alt="" src="../../../img/img_62d9b66f537bb.png" /></li>
+<li>Click <strong>Next</strong> when done.</li>
+<li>In the <em>Desktop Pool Settings</em> page:</li>
+</ul>
+</li>
+<li>
+<p>You can select a <strong>Category Folder</strong> where the published icon will be placed on the client’s Start Menu and/or Desktop.<br />
+<img alt="" src="../../../img/img_5ff8e571050ee.png" /></p>
+<ol>
+<li>Change the selection to <strong>Select a category folder from the folder list</strong>.</li>
+<li>You can type in a new category, or select an existing one.</li>
+<li>Then click <strong>Submit</strong>.<br />
+<img alt="" src="../../../img/img_5d20cb2e811ac.png" /></li>
+</ol>
+</li>
+<li>In the <em>Desktop Pool Settings</em> page, Horizon Enterprise Edition lets you select a <strong>Session Type</strong>, which means you can optionally publish applications from virtual desktops.<br />
+<img alt="" src="../../../img/img_5d20cb168a981.png" /></li>
+<li>Change the selection for <strong>Logoff after disconnect</strong> to <strong>After</strong>, and specify a disconnect timer.<br />
+<img alt="" src="../../../img/img_5f3670cfa1a0b.png" /><ul>
+<li>You can also use Group Policy to configure this. The GPO overrides the pool setting. Install the <a href="../horizon-group-policy-and-profiles/#viewtemplates">Horizon GPO Templates</a> if you haven't already. Edit a GPO that applies to the Horizon Agents. Find the <strong>Disconnect Session Time Limit (VDI)</strong> setting at <strong>VMware View Agent Configuration</strong> &gt; <strong>Agent Configuration</strong>.<br />
+<img alt="" src="../../../img/img_5d8a0cd15ba68.png" /></li>
+<li>Horizon also has an <strong>Idle Time Until Disconnect (VDI)</strong> for virtual desktops. Note: RDSH idle timer is configured using Microsoft RDSH GPO settings, not Horizon GPO settings.<br />
+<img alt="" src="../../../img/img_5d8a10d02e5be.png" /></li>
+</ul>
+</li>
+<li>You can allow users to restart their machines.<br />
+<img alt="" src="../../../img/img_5f36711586157.png" /></li>
+<li>If you choose Dedicated assignment instead of Floating assignment, there's an option for <strong>Refresh OS disk after logoff</strong>. Leaving it set to <strong>Always</strong> is strongly recommended. The other options cause the delta disk to grow, and will cause data loss surprise for the users when you later push a new image. Instant Clones floating assignment pools always refresh on logoff.<br />
+<img alt="" src="../../../img/img_5d21cfcddc59c.png" /></li>
+<li><strong>Reclaim VM disk space</strong> is also an option for Dedicated assignment pools. Floating assignment pools always refresh on logoff so there's no need to reclaim disk space.<br />
+<img alt="" src="../../../img/img_5d21d0ada9b6d.png" /></li>
+<li>Click <strong>Next</strong>.</li>
+<li>
+<p>In the <em>Remote Display Settings</em> page:</p>
+</li>
+<li>
+<p>In <strong>3D Renderer</strong>, there's an option for NVIDIA GRID VGPU if you have GPUs installed.</p>
+</li>
+<li>There's an <strong>Allow Session Collaboration</strong> checkbox, which adds a <strong>VMware Horizon Collaboration</strong> icon in the system tray of the remote desktop, which lets you invite users to collaborate.  See <a href="../horizon-clients/#sessioncollaboration">Session Collaboration</a> for details.<br />
+<img alt="" src="../../../img/img_5f36715e9c3f1.png" /></li>
+<li>Click <strong>Next</strong>.</li>
+<li>
+<p>In the <em>Guest Customization</em> page,</p>
+</li>
+<li>
+<p>Next to <strong>AD container</strong>, click <strong>Browse</strong>, and select the OU where virtual desktop computer objects will be placed. You can type (paste) into the <strong>AD container</strong> field.<br />
+<img alt="" src="../../../img/img_60f30bb9b7ca0.png" /></p>
+</li>
+<li>Consider checking the box next to <strong>Allow reuse of pre-existing computer accounts</strong>.<br />
+<img alt="" src="../../../img/img_60f30bcc18fa2.png" /></li>
+<li>Click <strong>Next</strong>.</li>
+<li>In the <em>Ready to Complete</em> page, you may entitle users now, or leave it unchecked and do it later. Click <strong>Submit</strong>.<br />
+<img alt="" src="../../../img/img_5ff8e5e9df5b7.png" /></li>
+</ol>
+</li>
+</ol>
+<p>If you opted to add entitlements now:</p>
+<ol>
+<li>In the <em>Add Entitlements</em> window, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5b152c2861d79.png" /></li>
+<li>Find a group that will have permission to log into these desktops, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5b152c3af35a5.png" /></li>
+<li>Then click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5b152c459310a.png" /></li>
+</ol>
+<p>To check the status of the virtual desktops:</p>
+<ol>
+<li>Go to <strong>Inventory &gt; Desktops</strong>.</li>
+<li>You might have to click the refresh icon on the top right to see the new pool.<br />
+<img alt="" src="../../../img/img_5ff8e61abfde4.png" /></li>
+<li>Click the link for the pool name.<br />
+<img alt="" src="../../../img/img_5f3671eaa8d89.png" /></li>
+<li>On the <strong>Summary</strong> page, if you scroll down, the <strong>vCenter Server</strong> section has a <strong>State</strong> field where you can see the status of the pool creation process.  It takes several minutes to publish the master image snapshot. After the snapshot is copied to the Replica, vSphere creates a digest file for View Storage Accelerator, which takes a few more minutes.</li>
+<li>Horizon Console has a <strong>Pending Image</strong> progress bar that doesn't update automatically. To refresh it, scroll up and click the refresh icon.<br />
+<img alt="" src="../../../img/img_5df6a2b6d9aa2.png" /><br />
+<img alt="" src="../../../img/img_5d20ccbf95a30.png" /></li>
+<li>You can watch the progress in vSphere Client's <strong>Recent Tasks</strong> list. In high-density pools, Instant Clones are <strong>forked</strong> from the <strong>cp-parent</strong> machine. In low-density pools, Instant Clones are <strong>cloned</strong> from the <strong>cp-replica</strong>.<br />
+<img alt="" src="../../../img/img_5d20cd1040ba9.png" /><br />
+<img alt="" src="../../../img/img_5d20cde62a7ce.png" /><br />
+<img alt="" src="../../../img/img_5d20ce845f017.png" /></li>
+<li>Eventually the pool's tabs named <strong>Machines</strong> and <strong>Machines (InstantClone Details</strong>) will show the new machines.<br />
+<img alt="" src="../../../img/img_5f367f96214b9.png" /></li>
+<li><strong>iccleanup.cmd</strong> can show you (list) the structure of the Instant Clones. For higher-density pools, there is a <strong>cp-parent</strong> at the bottom of the hierarchy. For Smart Provisioning of lower-density pools, there is no <strong>cp-parent</strong>.<br />
+<img alt="" src="../../../img/img_5f367efd4fffd.png" /></li>
+</ol>
+<p>If you wish to automate the creation of the pool, Aresh Sarkari at <a href="https://askaresh.com/2018/01/17/automating-desktop-pool-creation-using-powercli-vmware-horizon-7-x/">Automating Desktop Pool creation using PowerCLI – VMware Horizon 7.x</a> explains <code>New-HVPool -spec 'C:\temp\DesktopPool\LinkedClone.json'</code> and the contents of the JSON file.</p>
+<h2 id="entitle-virtual-desktops">Entitle Virtual Desktops</h2>
+<p>To make a pool accessible by a user, it must be entitled.</p>
+<ol>
+<li>In Horizon Console, go to <strong>Inventory</strong> &gt; <strong>Desktops</strong>.</li>
+<li>Click the link for a pool name.<br />
+<img alt="" src="../../../img/img_5ff8e654e0e7b.png" /></li>
+<li>Switch to the <strong>Entitlements</strong> tab to see the existing entitlements.</li>
+<li>Click <strong>Add entitlements</strong>.<br />
+<img alt="" src="../../../img/img_5f36801129b46.png" /></li>
+<li>In the <em>Add Entitlements</em> window, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5b152c2861d79.png" /></li>
+<li>Find a group that will have permission to log into these desktops, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5b152c3af35a5.png" /></li>
+<li>Then click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5b152c459310a.png" /></li>
+</ol>
+<h2 id="add-machine-to-pool">Add Machine to Pool</h2>
+<ol>
+<li>In Horizon Console, on the left, expand <strong>Inventory</strong>, and click <strong>Desktops</strong>.</li>
+<li>On the right, click the link for an existing Desktop Pool.<br />
+<img alt="" src="../../../img/img_5f367fd0e7ffa.png" /></li>
+<li>At the top, click <strong>Edit</strong>.<br />
+<img alt="" src="../../../img/img_5f368048032bf.png" /></li>
+<li>Switch to the <strong>Provisioning Settings</strong> tab, scroll down, and change the <strong>Max number of machines</strong>. Then click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5d20cfb9f28c6.png" /></li>
+<li>With <strong>Instant Clones</strong>, this won't take very long. In high-density pools, the new machine is <strong>forked</strong> from the <strong>cp-parent</strong>. In low-density pools, the new machine is <strong>cloned</strong> from the <strong>cp-replica</strong>.<br />
+<img alt="" src="../../../img/img_5b1933d7e59a8.png" /><br />
+<img alt="" src="../../../img/img_5f3680f4d397c.png" /></li>
+<li>If you open the pool, the tabs named <strong>Machines</strong> and <strong>Machines (InstantClone Details)</strong> show the new machines.<br />
+<img alt="" src="../../../img/img_5f36811c6fd1b.png" /></li>
+</ol>
+<h2 id="update-a-pool">Update a Pool</h2>
+<h3 id="master-image-preparation_1">Master Image Preparation</h3>
+<ol>
+<li>Power on the master/parent virtual desktop.<br />
+<img alt="" src="../../../img/img_5d20d03c643f0.png" /></li>
+<li>After making your changes, shut down the master virtual desktop.<br />
+<img alt="" src="../../../img/6bc5d1e4076b2b2b3bbb4e616eb8c537.png" /></li>
+<li>Right-click the virtual machine and take snapshot. You must create a new snapshot.<br />
+<img alt="" src="../../../img/img_5d20d051831f1.png" /></li>
+<li>You’ll need to periodically delete the older snapshots. Right-click the master VM, and click <strong>Manage Snapshots</strong>.<br />
+<img alt="" src="../../../img/img_5d20d071642ec.png" /></li>
+<li>Delete one or more of the snapshots.<br />
+<img alt="" src="../../../img/img_5d20d0878123b.png" /></li>
+<li>In Horizon Console, go to <strong>Inventory &gt; Desktops</strong>.</li>
+<li>Click the link for a pool name.<br />
+<img alt="" src="../../../img/img_5ff8e65f415eb.png" /></li>
+<li>On the <strong>Summary</strong> tab, click <strong>Maintain</strong>, and then click <strong>Schedule</strong>.<br />
+<img alt="" src="../../../img/img_5f36726ccb698.png" /></li>
+<li>In the <em>Image</em> page, select the new snapshot. Notice the snapshot's monitor/resolution settings. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5f367a4050572.png" /></li>
+<li>In the <em>Scheduling</em> page, decide when to apply this new image. If you select <strong>Force users to log off</strong>, notice you can customize the logoff message in <strong>Global Settings</strong>. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b192d319a14a.png" /></li>
+<li>In the <em>Ready to Complete</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/img_5f367a6961bc6.png" /></li>
+<li>The pool's <strong>Summary</strong> tab, near the bottom, indicates that the image is being pushed.<br />
+<img alt="" src="../../../img/img_5b192e1998cda.png" /><br />
+<img alt="" src="../../../img/img_5f367a9103e07.png" /></li>
+<li>You can click the tab named <strong>Machines (InstantClone Details)</strong> to check on the status of the push task. Notice the <strong>Pending Image</strong>.<br />
+<img alt="" src="../../../img/img_5f367ab873759.png" /></li>
+<li>The snapshot is copied to each datastore.<br />
+<img alt="" src="../../../img/img_5b192e4124bb5.png" /></li>
+<li>The snapshot is attached to a Replica, powered on, then powered off. Digest is then computed.<br />
+<img alt="" src="../../../img/img_5b19304b8b3e9.png" /></li>
+<li>Then the Replica is attached to a parent, and the parent is powered on. This all takes a bit of time. But the existing Instant Clones remain accessible until the Replica preparation is complete.</li>
+<li>Once Replicas are prepared, each machine is rebooted once.</li>
+<li>Eventually the <strong>Pending Image</strong> field will be cleared and the desktops are available again.<br />
+<img alt="" src="../../../img/img_5f367fa06eee7.png" /></li>
+</ol>
+<h3 id="host-maintenance-instant-clones">Host Maintenance - Instant Clones</h3>
+<p>Horizon 2012 (8.1) and newer have an option to <strong>Disable ParentVMs</strong> so vSphere Update Manager can put the hosts into maintenance mode. This uses the parentless Smart Provisioning technology. Find the option at Settings &gt; Servers, select a vCenter server, click the More menu, and select Disable ParentVMs.<br />
+<img alt="" src="../../../img/img_5ffb55d6d0c8b.png" /><br />
+<img alt="" src="../../../img/img_5ffb55fd9b826.png" /></p>
+<p>ESXi hosts running Instant Clones can be placed into maintenance mode without any special instructions.</p>
+<p><img alt="" src="../../../img/img_5f367afc13b91.png" /></p>
+<p><a href="https://docs.omnissa.com/bundle/LinuxDesktops-and-Applications-in-HorizonV2303/page/Instant-CloneMaintenanceUtilities.html">Instant-Clone Maintenance Utilities</a> at Omnissa Docs:</p>
+<ul>
+<li><strong>IcCleanup.cmd</strong> - use this utility to unprotect and delete some or all of the internal VMs created by instant clones. This is the easiest method of cleaning up Instant Clone internal machines.</li>
+<li><strong>IcUnprotect.cmd</strong> - use this utility to unprotect folders and VMs, delete VMs, and detect VMs whose master image or snapshot is deleted.</li>
+<li><strong>IcMaint.cmd</strong> - This command deletes the master images, which are the parent VMs in vCenter Server, from the ESXi host, so that the host can be put into maintenance mode. This utility generally isn't needed. Also see Omnissa 2144808 <a href="https://kb.omnissa.com/s/article/2144808">Entering and exiting maintenance mode for an ESXi host that has Horizon instant clones</a>.</li>
+</ul>
+<h3 id="persistent-full-clones-automated">Persistent Full Clones - Automated</h3>
+<p>Horizon can clone your Template machine to a specified number of Full Clones. Once Full Clones are created, you'll need a Software Deployment tool, like Microsoft SCCM, to manage the Full Clones.</p>
+<h4 id="customization-specification">Customization Specification</h4>
+<p>Horizon uses a Customization Specification to specialize each machine cloned from the template:</p>
+<ol>
+<li>In vSphere Client, open the <strong>Menu</strong> and click <strong>Policies and Profiles</strong>.<br />
+<img alt="" src="../../../img/img_60609b3b82fa3.png" /></li>
+<li>Make sure you have a Customization Specification with the settings detailed in the next few steps. You can create a new Customization Specification.<br />
+<img alt="" src="../../../img/img_60609b509acc5.png" /></li>
+<li>In the <strong>Computer name</strong> page, set it to <strong>Use the virtual machine name</strong>.<br />
+<img alt="" src="../../../img/img_60609b5ee8c3d.png" /></li>
+<li>In the <strong>Windows license</strong> page, you can optionally set it to <strong>Include server license information</strong> but change it to <strong>Per seat</strong>.<br />
+<img alt="" src="../../../img/img_60609b6c86afe.png" /></li>
+<li>In the <strong>Network</strong> page, make sure the networks are set to DHCP. Once the machines are created you can manually set them to Static or configure DHCP reservations.<br />
+<img alt="" src="../../../img/img_60609b86ae406.png" /></li>
+<li>In the <strong>Workgroup or domain</strong> page, enter credentials to join the new Full Clones to the domain.<br />
+<img alt="" src="../../../img/img_60609b92cfbec.png" /></li>
+</ol>
+<h4 id="gold-image-template">Gold Image Template</h4>
+<ol>
+<li>On the gold image machine, in <strong>sysdm.cpl</strong> &gt; <strong>Advanced</strong> &gt; <strong>User Profiles</strong> &gt; <strong>Settings</strong>, make sure there are no local profiles other than your administrator profile and the Default Profile. Delete all others. Sysprep frequently fails if there is more than one profile on the template.<br />
+<img alt="" src="../../../img/img_6060a6afbdc0e.png" /></li>
+<li>If you have SCCM Client installed on your Gold Image, then see <a href="https://docs.microsoft.com/en-us/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#prepare-the-client-computer-for-imaging">Prepare the client computer for imaging</a>.</li>
+<li>Shut down the Gold Image.</li>
+<li>Right-click the gold image, expand <strong>Template</strong>, and then click <strong>Convert to Template</strong>.<br />
+<img alt="" src="../../../img/img_6060a73f0655f.png" /></li>
+<li>
+<p>Before creating a pool, test deploying a new machine from the template to make sure SysPrep is successful.</p>
+<ol>
+<li>Right-click the Template and click <strong>New VM from This Template</strong>.<br />
+<img alt="" src="../../../img/img_6060a771e0258.png" /></li>
+<li>In the <strong>Select clone options</strong> page, check the boxes next to <strong>Customize the operating system</strong> and <strong>Power on virtual machine after creation</strong>.<br />
+<img alt="" src="../../../img/img_6060a79026dee.png" /></li>
+<li>In the <strong>Customize guest OS page</strong>, select the Customization Specification you created earlier.<br />
+<img alt="" src="../../../img/img_6060a7a1c466a.png" /></li>
+<li>If cloning fails, then see Broadcom 2001932 <a href="https://knowledge.broadcom.com/external/article?legacyId=2001932">Locations of sysprep log files</a>. Store apps (aka UWP apps) are a frequent cause of SysPrep failures. You can convert your Template back to a Virtual Machine, power it on, fix the problem, power it off, and then convert it to a Template again.</li>
+</ol>
+</li>
+</ol>
+<h4 id="automated-full-clone-pool">Automated Full Clone Pool</h4>
+<ol>
+<li>In <strong>Horizon Console</strong>, in the left menu, expand <strong>Inventory</strong> and then click <strong>Desktops</strong>.</li>
+<li>On the right, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_6060a7f0c22d6.png" /></li>
+<li>In the <strong>Type</strong> page, select <strong>Automated Desktop Pool</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a7ff22231.png" /></li>
+<li>In the <strong>vCenter Server</strong> page, select <strong>Full Virtual Machines</strong>. Select your vCenter Server and then click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a80e9cef5.png" /></li>
+<li>In the <strong>User Assignment</strong> page, you usually want <strong>Dedicated assignment</strong>.</li>
+<li><strong>Automatic Assignment</strong> is an optional feature that avoids you having to manually assign users to each full clone desktop. But manual assignments give you more control over capacity planning. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a82374250.png" /></li>
+<li>In the <strong>Storage Optimization</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a832a92e0.png" /></li>
+<li>In the <strong>Desktop Pool Identification</strong> page, give the pool an <strong>ID</strong> (no spaces) and a <strong>Display Name</strong> that is shown to users. Horizon creates a vCenter virtual machine folder with the same name as the <strong>ID</strong>. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a84a2043d.png" /></li>
+<li>In the <strong>Provisioning Settings</strong> page, specify a <strong>Naming Pattern</strong>. You can hover your mouse over the information icon to see the syntax. Then scroll down.<br />
+<img alt="" src="../../../img/img_6060a8d004ab5.png" /></li>
+<li>After scrolling down, specify the number of machines to create. If you specify <strong>All Machines Up-Front</strong>, then Horizon will create the <strong>Maximum Machines</strong>. If you specify <strong>Spare (Powered On) Machines</strong>, then Horizon will try to preserve this specified number of unassigned machines. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a8e8ee2d2.png" /></li>
+<li>In the <strong>vCenter Settings</strong> page, click <strong>Browse</strong> next to <strong>Template</strong> and select the template you created earlier.</li>
+<li>Click <strong>Browse</strong> next to the other fields and specify where you want the new machines to be created. Make sure <strong>VM Folder Location</strong> doesn't have any spaces in it. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a925234d8.png" /></li>
+<li>In the <strong>Desktop Pool Settings</strong> page, these settings are the same as Instant Clones, but <strong>Remote Machine Power Policy</strong> might be different. Scroll down.<br />
+<img alt="" src="../../../img/img_6060a94f4cda4.png" /></li>
+<li>After scrolling down, notice the option for <strong>Show Assigned Machine Name</strong> instead of the pool name. Hover your mouse over the information icons. Click <strong>Next</strong> when done.<br />
+<img alt="" src="../../../img/img_6060a973c635c.png" /></li>
+<li>In the <strong>Remote Display Settings</strong> page, specify video settings and then click <strong>Next</strong>. Horizon 2106 (8.3) and newer let you choose 5K and 8K monitors for Blast only.<br />
+<img alt="" src="../../../img/img_60f2ff529c563.png" /></li>
+<li>In the <strong>Advanced Storage Options</strong> page, note that <strong>View Storage Accelerator</strong> is just a read cache (no write caching). If your storage can handle the reads then enabling this feature probably isn't necessary. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_6060a9c1962a8.png" /></li>
+<li>In the <strong>Guest Customization</strong> page, select the <strong>Customization Specification</strong> that you created earlier. Consider checking the box next to <strong>Allow Reuse of Existing Computer Accounts</strong>.</li>
+<li>Horizon 2212 (8.8) and newer let you specify the OU for the new machines. Otherwise, they are created in the <strong>Computers</strong> container unless you pre-create the computer accounts in your desired OU. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/Pasted-19.png" /><br />
+<img alt="" src="../../../img/img_6060a9dacd482.png" /></li>
+<li>In the <strong>Ready to Complete</strong> page, you can optionally <strong>Entitle users After Adding Pool.</strong> Click <strong>Submit</strong>. Note: users must both be entitled to the pool and assigned to an individual machine.<br />
+<img alt="" src="../../../img/img_6060a9edc0e5e.png" /></li>
+</ol>
+<h4 id="machine-administration">Machine Administration</h4>
+<ol>
+<li><strong>Cloning progress</strong> - Use vSphere Client <strong>Recent Tasks</strong> to watch the progress of the cloning. It will take time for the cloning to complete plus time for SysPrep to complete.<br />
+<img alt="" src="../../../img/img_6060aa2d36e50.png" /></li>
+<li>If you click the Pool name link and then switch to the <strong>Machines</strong> tab, you should eventually see the new machines.<br />
+<img alt="" src="../../../img/img_6060ade89ed91.png" /></li>
+<li><strong>Assign User to Machine</strong> - You can select a machine, click the drop-down for <strong>More Commands</strong>, and then <strong>Assign User</strong>.<br />
+<img alt="" src="../../../img/img_6060ae00a94b9.png" /></li>
+<li>
+<p><strong>Machine alias</strong> - By default, the pool's <strong>Display name</strong> is displayed to each user. You can instead change it to the individual Machine Name, or to an administrator-specified machine alias.</p>
+<ol>
+<li>Go to the pool's <strong>Summary</strong> tab and click <strong>Edit</strong>.</li>
+<li>Switch to the tab named <strong>Desktop Pool Settings</strong>.<br />
+<img alt="" src="../../../img/img_6060ae78c1d20.png" /></li>
+<li>Scroll down and find the checkboxes for <strong>Show Assigned Machine Name</strong> and <strong>Show Machine Alias Name</strong>. If you select Alias Name, then an additional command appears on the <strong>Machines</strong> page.<br />
+<img alt="" src="../../../img/img_6060ae6abb07f.png" /></li>
+<li>After editing the pool and enabling <strong>Show Machine Alias Name</strong>, On the <strong>Machines</strong> tab, select a machine, and then click the drop-down for <strong>Update Machine Aliases.</strong> The Alias is shown to the user instead of the pool's Display Name or the actual machine name.<br />
+<img alt="" src="../../../img/img_6060ae8cd7d80.png" /></li>
+<li>
+<p><strong>Add Machines</strong> - To create more Full Clone machines from the same template:</p>
+</li>
+<li>
+<p>Click the name (link) of the pool.</p>
+</li>
+<li>On the <strong>Summary</strong> tab, click <strong>Edit</strong>.<br />
+<img alt="" src="../../../img/img_6060b3734fe78.png" /></li>
+<li>On the <strong>Provisioning Settings</strong> tab, scroll down and enter a larger <strong>Maximum Machines</strong>.<br />
+<img alt="" src="../../../img/img_6060b38b2f07e.png" /><br />
+<img alt="" src="../../../img/img_6060b3d808589.png" /></li>
+<li><strong>Update Template</strong> - If you plan to create more Full Clone machines in the next few months, then you should update your Template by converting it to a virtual machine, update the virtual machine, and then convert it back to a Template. Note that the updated Template only applies to new Full Clones and has no effect on existing Full Clones. To update existing Full Clones, use a Software Deployment tool like Microsoft SCCM.</li>
+</ol>
+</li>
+</ol>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li>Back to <a href="../vmware-horizon-8/">Omnissa Horizon 8</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

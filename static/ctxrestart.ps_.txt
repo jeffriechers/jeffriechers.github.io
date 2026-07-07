@@ -1,0 +1,75 @@
+Add-PSSnapin citrix*
+$tag = $args[0]
+$ServerList = Get-BrokerMachine -MaxRecordCount 1500 | where {($_.Tags -contains $tag)}
+
+Start-Transcript -Path (Join-Path "<Path to log files>\"$tag".txt") -Force
+Write-Output "Starting Reboot script for $tag"
+
+if ($ServerList){
+$ServerList | ForEach-Object {
+Write-Output "Putting $($_.MachineName) into maintenance mode."
+# Set the target machines to maintenance mode to drain sessions
+Set-BrokerMachine -Machinename $_.MachineName -InMaintenanceMode 1
+}
+
+# Wait 1 hour before starting to reboot any machines
+Write-Output "Waiting for 1 hour to allow users to logoff of sessions.  Users will be notified every 15 minutes until restarted."
+
+# User Notification
+# 1 Hour Notification
+$ServerList | ForEach-Object {
+$sessions = Get-BrokerSession -UserName *
+Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 60 minutes.  Please save your work and logoff.  You can then immediately log back in."
+}
+Write-Output "Sending 60 minute reboot notice"
+start-sleep 900
+
+# 45 minute Notification
+$ServerList | ForEach-Object {
+$sessions = Get-BrokerSession -UserName *
+Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 45 minutes.  Please save your work and logoff.  You can then immediately log back in."
+}
+Write-Output "Sending 45 minute reboot notice"
+start-sleep 900
+
+# 30 minute Notification
+$ServerList | ForEach-Object {
+$sessions = Get-BrokerSession -UserName *
+Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 30 minutes.  Please save your work and logoff.  You can then immediately log back in."
+}
+Write-Output "Sending 30 minute reboot notice"
+start-sleep 900
+
+# 15 minute Notification
+$ServerList | ForEach-Object {
+$sessions = Get-BrokerSession -UserName *
+Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 15 minutes.  Please save your work and logoff.  You can then immediately log back in."
+}
+Write-Output "Sending 15 minute reboot notice"
+start-sleep 900
+
+#Reboot the machine
+$ServerList | ForEach-Object {#new-brokerhostingpoweraction -Action Restart -MachineName $_.MachineName
+Write-Output "Setting Restart flag on $($_.MachineName)"
+}
+Write-Output "Waiting for 1 hour to allow machines to cycle through reboots."
+start-sleep 3600
+
+$ServerList | ForEach-Object {
+Write-Output "Taking $($_.MachineName) out of maintenance mode."
+#Remove maintenance mode
+Set-BrokerMachine -MachineName $_.MachineName -InMaintenanceMode 0
+
+#End Powershell Session
+}
+$today = Get-Date
+Write-Output ""
+Write-Output ""
+Write-Output "All machines have left maintenance mode."
+Write-Output "======================================================================"
+Write-Output ""
+Write-Output "Reboot schedule has completed at`t$today"
+return
+}
+Write-Output "There are no machines with that tag."
+Write-Output "Please doublecheck the spelling of your tag and try again."

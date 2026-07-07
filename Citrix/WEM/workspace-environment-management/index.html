@@ -1,0 +1,6914 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../wemchanging-actions-not-caching/">
+      
+      
+        <link rel="next" href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Workspace Environment Management (WEM) 2411 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#change-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Workspace Environment Management (WEM) 2411
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-wem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade WEM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-server-infrastructure-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Server (Infrastructure Service)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-wem-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade WEM Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-wem-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create WEM Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-infrastructure-services-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Infrastructure Services Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Console
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-web-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Web Console
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-console-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Console Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-configuration-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Configuration Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-recommended-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Recommended Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Administrators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-agent-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WEM Agent Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policies-and-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Policies and Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripted-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripted Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-agent-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install/Upgrade WEM Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wem-agent-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wem-agent-on-citrix-provisioning-target-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent on Citrix Provisioning Target Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-actions-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Actions Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WEM Actions Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-conditions-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Conditions and Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ad-groups-to-wem-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add AD Groups to WEM Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-actions-to-user-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assign Actions to User Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modeling Wizard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-side-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Side Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformer
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-wem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade WEM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-server-infrastructure-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Server (Infrastructure Service)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-wem-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade WEM Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-wem-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create WEM Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-infrastructure-services-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Infrastructure Services Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Console
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-web-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Web Console
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-console-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Console Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-configuration-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Configuration Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-recommended-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Recommended Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Administrators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-agent-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WEM Agent Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policies-and-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Policies and Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripted-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripted Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-agent-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-wem-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade WEM Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install/Upgrade WEM Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wem-agent-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wem-agent-on-citrix-provisioning-target-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Agent on Citrix Provisioning Target Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wem-actions-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WEM Actions Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WEM Actions Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-conditions-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Conditions and Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ad-groups-to-wem-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add AD Groups to WEM Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-actions-to-user-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assign Actions to User Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modeling Wizard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-side-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Side Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformer
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Workspace Environment Management (WEM) 2411</h1>
+
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2024 Dec 4 - <a href="#createactions">Group Policy Migration Tool</a></li>
+<li>2024 Dec 4 - Updated <a href="#installwemserver">Install</a> sections for <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/components/workspace-environment-management-2411.html">version 2411</a></li>
+<li>2023 Sept 16 - updated entire article for <a href="#installwemwebconsole">WEM Web Console</a><ul>
+<li>2308 <a href="#transformer">Transformer</a> can detect Workspace app</li>
+</ul>
+</li>
+<li>2023 June 2 - <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/infrastructure-services.html#group-managed-service-account">Group Managed Service Account</a> at Citrix Docs</li>
+<li>2023 May 30 - added link to CTP James Kindon <a href="https://blogs.mycugc.org/2023/05/30/wem-advanced-guidance-2023/">WEM Advanced Guidance – 2023</a> at CUGC</li>
+</ul>
+<h3 id="overview">Overview</h3>
+<p><a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/components/workspace-environment-management-47.html">Workspace Environment Management</a> (WEM) is Citrix's Performance Management and UEM (User Environment Management) tool for all XenApp/XenDesktop Enterprise or Platinum Customers with active Software Maintenance (Subscription Advantage is not sufficient). The WEM Agent is supported on XenApp 6.5, and XenApp/XenDesktop 7.x. Videos:</p>
+<ul>
+<li>Hal Lange demonstrates <a href="https://www.youtube.com/watch?v=54Y7gdhc0mU">Citrix WEM Performance Optimizations</a> in a YouTube video</li>
+<li>YouTube video <a href="https://www.youtube.com/watch?v=D6_xbRYSq3I">XenTegra Citrix Workspace Environment Management (WEM) Webinar</a></li>
+<li>CUGC <a href="https://www.youtube.com/watch?v=gBaGUBtqwl0">Welcome to Citrix Workspace Environment Management (WEM)</a> - Hal Lange, CTP Steve Greenberg, CTP Carl Webster</li>
+</ul>
+<p>Note: WEM does not replace <a href="../citrix-profile-management/">Citrix Profile Management</a>. You usually implement both.</p>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2017/04/11/user-experience-on-steroids-citrix-workspace-environment-management/">User Experience on Steroids: Citrix Workspace Environment Management</a> has a list of Frequently Asked Questions about WEM, including a drawing of the architecture.<br />
+<img alt="" src="../../../img/img_58f27ab8b62d3.png" /></p>
+<p>From Hal Lange at <a href="https://discussions.citrix.com/topic/388247-database-sizing/#entry1976445">Database sizing</a> at Citrix Discussions: SQL Always On is fully supported.  In WEM 1909 and older, the ONE caveat is to remove from the Always On Availability Group before upgrading.</p>
+<p>Here are the official calculations from the Norskale days on space needed on the SQL Server:</p>
+<ul>
+<li>Reserve 1GB of RAM per 1,000 users deployed</li>
+<li>RAM=1.5GB system + (1.5GB SQL + 1 GB per 1,000 users) for that SQL instance</li>
+<li>Disk = 1GB per 10,000 users per year + 10 MB per WEM site configured</li>
+</ul>
+<h3 id="upgrade-wem">Upgrade WEM</h3>
+<p>There is no LTSR version of Citrix Workspace Environment Management (WEM), so you should always upgrade to the latest version of WEM.</p>
+<p>From <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/upgrade.html">Upgrade a deployment</a> at Citrix Docs: In-place upgrades from versions earlier than Workspace Environment Management 4.7 to version 1808 or later are not supported. To upgrade from any of those earlier versions, you need to upgrade to version 4.7 first and then upgrade to the target version.</p>
+<p>If you want to upgrade a WEM deployment earlier than 2006 to 2209 or later: To avoid database upgrade failures, upgrade to 2103 first and then to 2209 or later.</p>
+<p>CTA Marco Hofmann at CUGC: <a href="https://www.mycugc.org/blogs/cugc-blogs/2018/07/20/how-to-update-citrix-workspace-environment-managem">How-To: Update Citrix Workspace Environment Management (WEM) from 4.x to 4.7 (v4.07.00.00)</a></p>
+<p>To upgrade Citrix WEM:</p>
+<ol>
+<li>
+<p>In-place upgrade the <a href="../delivery-controller-cr-and-licensing/#licensingupgrade">Citrix Licensing Server</a>. No special instructions.</p>
+<ul>
+<li>Ensure the installed licenses a non-expired Subscription Advantage date.</li>
+<li>Before you upgrade, run <strong>WEM Infrastructure Service Configuration Utility</strong> and record all settings.<br />
+<img alt="" src="../../../img/img_599b6d06c95e3.png" /></li>
+<li>In-place upgrade the <a href="#installwemserver">WEM Server</a>. No special instructions.</li>
+<li>
+<p>Use the Database Maintenance tool to <a href="#upgradedatabase">upgrade the WEM database</a>.</p>
+</li>
+<li>
+<p>In WEM 1909 and older, before upgrading the database that's in a SQL Server Always On availability group, you must remove it from the availability group. This is no longer required in WEM 1912 and newer.</p>
+</li>
+<li>You might have to run the <a href="#wembrokerconfiguration">WEM Infrastructure Service Configuration Utility</a> on each WEM Server to point to the upgraded database. If the settings are still there, then just click <strong>Save Configuration</strong>.</li>
+<li>In-place upgrade the <a href="#installwemconsole">WEM Console</a>. No special instructions.</li>
+<li>
+<p>In-place upgrade the <a href="#installwemagent">WEM Agents</a>.</p>
+</li>
+<li>
+<p>Srinivasan Shanmugam at <a href="https://www.mycugc.org/blogs/cugc-blogs/2018/02/02/wem-agent-v45-upgrade-issues">WEM Agent v4.5 Upgrade Issues</a> at CUGC mentioned that you might have to delete Agent's local database.<br />
+<img alt="" src="../../../img/img_5a75cef40739f.png" /></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="installupgrade-wem-server-infrastructure-service">Install/Upgrade WEM Server (Infrastructure Service)</h3>
+<p>There is no LTSR version of Citrix Workspace Environment Management (WEM), so you should always upgrade to the latest version of WEM.</p>
+<p>The WEM Infrastructure Service can be installed on one or more servers, but Citrix <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/quick-start-guide.html#installation-and-configuration">says</a> don't install it on Delivery Controllers. The WEM Agent cannot be installed on the Infrastructure Service server.</p>
+<ul>
+<li>Another option: CTP James Kindon explains how to <a href="https://jkindon.com/2017/12/28/citrix-wem-on-windows-server-core/">install WEM Server on Windows Server Core</a><br />
+<img alt="" src="../../../img/img_5a5a561123044.png" /></li>
+</ul>
+<p>A WEM Server with 4 vCPU and 8 GB RAM can support up to 3,000 users.</p>
+<ol>
+<li>
+<p><strong>Port 8288</strong> - WEM 1912 and newer have a new port 8288 for WEM Agent Cache Synchronization. You'll need to add this port to your load balancer and open it in your firewall.</p>
+<ul>
+<li>Port 8285 is still available for WEM Agents 2012 and older connecting to newer WEM Servers.<br />
+<img alt="" src="../../../img/img_5f4fea5495043.png" /></li>
+<li><strong>Old port removed</strong> - The Cache synchronization port (8285) was removed from WEM Server 2103 and newer, so make sure your existing agents are a version that supports the newer Cached data synchronization port. WEM Agent 1912 and newer should be sufficient.</li>
+<li>If your existing WEM Agents don't support the new port number, then upgrade your WEM Server to version 2012 (or version 1912), upgrade your WEM Agents to the corresponding version, and then upgrade the WEM Server to a newer version.</li>
+<li>Download <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/components/workspace-environment-management-2411.html">Workspace Environment Management 2411</a> and extract it.<br />
+<img alt="" src="../../../img/image-61.png" /></li>
+<li>If you are upgrading, run <strong>WEM Infrastructure Service Configuration Utility</strong> and record all settings. These settings might be wiped out during the upgrade.<br />
+<img alt="" src="../../../img/img_599b6d06c95e3.png" /></li>
+<li><strong>Licenses</strong> - make sure your installed CVAD licenses have a CSS date that is later than the date required by your WEM version. The required CSS date is shown at the top of the WEM download page.<br />
+<img alt="" src="../../../img/image-62.png" /></li>
+<li>Run the downloaded <strong>Citrix Workspace Environment Management Infrastructure Services Setup.exe</strong> from the 2411-01-100-01 folder.<br />
+<img alt="" src="../../../img/image-63.png" /></li>
+<li>Check the box next to <strong>I agree to the license terms</strong> and click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-64.png" /></li>
+<li>In the <em>Welcome to the Citrix Workspace Environment Management Infrastructure Services Setup Wizard</em> page, click <strong>Next</strong>.  <br />
+<img alt="" src="../../../img/Pasted-25.png" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/Pasted-26.png" /></li>
+<li>In the <em>Ready to install Citrix Workspace Environment Management Infrastructure Services</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/Pasted-27.png" /></li>
+<li>In the <em>Completed the Citrix Workspace Environment Management Infrastructure Services Setup Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/Pasted-28.png" /></li>
+<li>Click <strong>Launch Database Management Utility</strong>.<br />
+<img alt="" src="../../../img/Pasted-29.png" /></li>
+<li><strong>Antivirus</strong> - <strong>C:\Program Files (x86)\Citrix\Workspace Environment Management Infrastructure Services</strong> and <strong>C:\Program Files (x86)\Norskale\Norskale Infrastructure Services</strong> must be excluded from Antivirus scanning. Or exclude: Norskale Broker Service.exe; Norskale Broker Service Configuration Utility.exe; Norskale Database Management Utility.exe.<br />
+<img alt="" src="../../../img/80787310f27c12bc472c607e1206d401.png" /></li>
+<li>If you are upgrading, then make sure your WEM Service Account has Full control permissions on the <strong>DBSync</strong> folder at <strong>C:\Program Files (x86)\Norskale\Norskale Infrastructure Services\DBSync</strong>. For new installs, WEM should set this permission correctly once the Infrastructure Services are configured. Note: this folder seems to be missing in newer versions of WEM.<br />
+<img alt="" src="../../../img/img_5e0773f105571.png" /></li>
+<li>
+<p><strong>Firewall</strong> - Ensure firewall allows the following ports to/from the WEM Infrastructure Service servers. See Citrix Tech Zone <a href="https://community.citrix.com/tech-zone/build/tech-papers/citrix-communication-ports#WorkspaceEnvironmentManagement">Communication Ports Used by Citrix Technologies</a>.</p>
+</li>
+<li>
+<p>Agent Port - defaults to TCP 8286 - from WEM Agent to WEM Infrastructure Service</p>
+</li>
+<li>AgentSyncPort - defaults to TCP 8285 - from WEM Agent to WEM Infrastructure Service</li>
+<li>Cached data synchronization port - defaults to TCP 8288 - from WEM Agent 1912 and newer to WEM Infrastructure Service</li>
+<li>AdminPort - defaults to TCP 8284 - from WEM Admin Console to WEM Infrastructure Service</li>
+<li>Monitoring Port - defaults to TCP 8287 - from Director to WEM Infrastructure Service</li>
+<li>AgentPort - defaults to TCP 49752 - from WEM Infrastructure Service to WEM Agent</li>
+</ul>
+</li>
+</ol>
+<h3 id="upgrade-wem-database">Upgrade WEM Database</h3>
+<p>Workspace Environment Management has PowerShell commands. For details, see <a href="https://developer-docs.citrix.com/en-us/workspace-environment-management-sdk/current-release/wem-posh-modules/configuration-database">Citrix Workspace Environment Management SDK</a> at Citrix Developer docs.<br />
+<img alt="" src="../../../img/img_6053ad06eb787.png" /></p>
+<p>To upgrade the Workspace Environment Management database using the GUI tool:</p>
+<ol>
+<li>If this is a new install, skip to <a href="#createwemdatabase">Create WEM Database</a>.</li>
+<li>The person running <strong>Database Management</strong> must be a <strong>sysadmin</strong> on the SQL Server. Or you can enter a SQL login.</li>
+<li>On the WEM server, run <strong>Database Management</strong> from the Start Menu.<br />
+<img alt="" src="../../../img/f3e1de0086305508aa7f808f61e81c45.png" /></li>
+<li>If upgrading, in the ribbon, click <strong>Upgrade Database</strong>.<br />
+<img alt="" src="../../../img/img_6053ad282299a.png" /></li>
+<li>
+<p>In WEM 1906 and newer, the fields might already be filled in. Otherwise:</p>
+<ol>
+<li>Enter the SQL Server Name.</li>
+<li>Enter the existing WEM Database Name.</li>
+<li>Configure the credentials for the WEM service account.</li>
+<li>If your account is not a <strong>sysadmin</strong> on SQL, then enter a SQL account in the <strong>Database Credentials</strong> fields.</li>
+<li>Click <strong>Upgrade</strong>.<br />
+<img alt="" src="../../../img/18136c74256a5000ebace54869b3ae06.png" /></li>
+<li>Click <strong>Yes</strong> when asked to proceed.<br />
+<img alt="" src="../../../img/img_5dff5b5679a3f.png" /></li>
+<li>Click <strong>OK</strong> when prompted that database upgraded successfully.<br />
+<img alt="" src="../../../img/img_5d8667ce28c8c.png" /></li>
+<li>Click <strong>Finish</strong> to close the <strong>Database Upgrade Wizard</strong>.<br />
+<img alt="" src="../../../img/img_599b6cb276319.png" /></li>
+<li>Close the <strong>WEM Database Management Utility</strong>.<br />
+<img alt="" src="../../../img/img_599b6cd369874.png" /></li>
+<li>Open <strong>services.msc</strong> and restart the <strong>Citrix WEM Infrastructure Service</strong> or restart <strong>Norskale Infrastructure Service</strong>.<br />
+<img alt="" src="../../../img/Pasted-132.png" /><br />
+<img alt="" src="../../../img/img_5d866808c4cc4.png" /></li>
+</ol>
+</li>
+</ol>
+<p>After the database is upgraded, run the <strong>WEM Infrastructure Service Configuration Utility</strong>.<br />
+<img alt="" src="../../../img/img_599b6d06c95e3.png" /></p>
+<ol>
+<li>If the upgrade preserved the settings, then simply click <strong>Save Configuration</strong>. The service won't start unless you do this.<br />
+<img alt="" src="../../../img/img_5ff374d3ec5fc.png" /></li>
+<li>
+<p>In WEM older than version 1906, you might have to re-configure the settings.</p>
+<ol>
+<li>On the <strong>Licensing</strong> tab, configure the licensing server.<br />
+<img alt="" src="../../../img/img_599b6d51eb40d.png" /></li>
+<li>On the <strong>Database Maintenance</strong> tab, consider checking <strong>Enable Scheduled Database Maintenance</strong>.<br />
+<img alt="" src="../../../img/img_599b8e1c9700d.png" /></li>
+<li>
+<p>On the <strong>Advanced Settings</strong> tab:</p>
+<ol>
+<li>Enter the Infrastructure service account credentials.</li>
+<li>Enter the <strong>vuemUser</strong> SQL user account password.</li>
+<li>In WEM 1909 and newer, check the box next to <strong>Enable performance tuning</strong> and set both of the <strong>Minimum threads</strong> boxes to the number of concurrent WEM Agents that will be connected to this one WEM server. Maximum value is 3000.</li>
+<li>Make a choice regarding <strong>Google Analytics</strong>.<ol>
+<li>The <strong>Advanced Settings</strong> tab will look something like this.<br />
+<img alt="" src="../../../img/img_5dff5c7a37a92.png" /></li>
+<li>On the <strong>Database Settings</strong> tab, enter the database server name and database name.<br />
+<img alt="" src="../../../img/img_599b6d92d16a6.png" /></li>
+<li>In the ribbon, click <strong>Save Configuration</strong>.<br />
+<img alt="" src="../../../img/img_599b6dac92302.png" /></li>
+</ol>
+</li>
+<li>Click <strong>Yes</strong> to restart the Broker Service.<br />
+<img alt="" src="../../../img/img_5a2ac02d2a878.png" /></li>
+<li>Skip ahead to <a href="#installwemconsole">upgrade the WEM Administration Console</a>.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="create-wem-database">Create WEM Database</h3>
+<p>Workspace Environment Management has PowerShell commands. For details, see <a href="https://developer-docs.citrix.com/en-us/workspace-environment-management-sdk/current-release/wem-posh-modules/configuration-database">Citrix Workspace Environment Management SDK</a> at Citrix Developer docs.<br />
+<img alt="" src="../../../img/img_60cb9da105cba.png" /></p>
+<p>To create the database using the GUI tool:</p>
+<ol>
+<li>The person running <strong>Database Management</strong> must be a <strong>sysadmin</strong> on the SQL Server. Or you can enter a SQL login.</li>
+<li>Make sure SQL Server authentication (mixed mode) is enabled on the SQL server &gt; Properties &gt; Security. Even though the WEM Infrastructure Service server runs as an AD account that is used login to SQL, WEM Infrastructure Service also uses a SQL account named <strong>vuemUser</strong>, which means mixed mode must be enabled. Source = John Long at <a href="https://discussions.citrix.com/topic/389676-wem-new-install-cannot-connect-to-infrastructure-server/#entry1982473">WEM new install, cannot connect to infrastructure server</a> at Citrix Discussions.<br />
+<img alt="" src="../../../img/img_59bd6857640da.png" /><br />
+<img alt="" src="../../../img/img_59bd68e1e5788.png" /></li>
+<li>On the WEM server, run <strong>WEM Database Management Utility</strong> from the Start Menu.<br />
+<img alt="" src="../../../img/img_599b6e4472d81.png" /></li>
+<li>If a new install, in the ribbon, click <strong>Create Database</strong>.<br />
+<img alt="" src="../../../img/img_6053adde0c91b.png" /></li>
+<li>In the <em>Create database Wizard</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_599b8c2af05b4.png" /></li>
+<li>
+<p>In the <em>Database Information</em> page, enter the SQL server name, and enter a new Database Name.</p>
+<ol>
+<li>Only enter an instance name if you have a named SQL instance.</li>
+<li>Only enter a port number if your SQL instance is listening on a static port number other than 1433.</li>
+<li>From Måns Hurtigh at <a href="https://discussions.citrix.com/topic/388013-problem-creating-wem-43-database-on-sql-server-2012/#entry1974453">Problem creating WEM 4.3 Database on SQL Server 2012</a> at Citrix Discussions: The database name cannot contain a dash.</li>
+<li>The paths might not be correct so double check them. Then click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_599b8c8dc5488.png" /></li>
+<li>In the <em>Database Server Credentials</em> page, if your account has <strong>sysadmin</strong> permissions, then leave the box checked. Otherwise, uncheck the box, and enter a SQL login that has <strong>sysadmin</strong> permissions. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_599b8c9edae1b.png" /></li>
+<li>In the <em>VUEM Administrators</em> section, click <strong>Browse</strong>, and select your Citrix Admins group.</li>
+<li>
+<p>In the <em>Database Security</em> page, if you intend to load balance multiple WEM servers, then specify a Windows service account for database access. The WEM  Infrastructure Service will run as this account. See the load balancing topic at <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/infrastructure-services.html#configure-load-balancing">Install the Citrix Workspace Environment Management Infrastructure Services</a> at Citrix Docs.</p>
+</li>
+<li>
+<p>WEM 2305 and newer support <strong>group Managed Service Account (gMSA)</strong>. See <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/infrastructure-services.html#group-managed-service-account">Group Managed Service Account</a> at Citrix Docs.</p>
+</li>
+<li>
+<p>The Database Creation Wizard also creates a SQL account called <strong>vuemUser</strong> with an 8 character alphanumeric password. If you want it more complex, check the box and specify the password.</p>
+</li>
+<li>
+<p>Note: if you intend to implement AlwaysOn Availability Group, then you must specify this password, since you'll be asked for it again when adding the database to the Availability Group. Also see <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/system-requirements.html#par_anchortitle_ad43_cop">SQL Server Always On</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/img_599b8cc00bdb2.png" /><br />
+<img alt="" src="../../../img/e241eea0422051b128a53c991e2ac76e.png" /></p>
+</li>
+<li>Click <strong>Next</strong>.</li>
+<li>In the <em>Database Information Summary</em> page, click <strong>Create Database</strong>.<br />
+<img alt="" src="../../../img/img_599b8cd4a6f33.png" /></li>
+<li>Click <strong>OK</strong> when prompted that the database was created successfully.<br />
+<img alt="" src="../../../img/4071ad66c0c3f4effc909ffaaf8af7b9.png" /></li>
+<li>Click <strong>Finish</strong> to close the <strong>Database Creation Wizard</strong>.<br />
+<img alt="" src="../../../img/60c92a542e6f6d26b98395b2827dea80.png" /></li>
+<li>Close the <strong>WEM Database Management Utility</strong>.<br />
+<img alt="" src="../../../img/img_599b8d62055be.png" /></li>
+<li>There is a log file at "C:\Program Files (x86)\Citrix\Workspace Environment Management Infrastructure Services\Citrix WEM Database Management Utility Debug Log.log" or at "C:\Program Files (x86)\Norskale\Norskale Infrastructure Services\Citrix WEM Database Management Utility Debug Log.log"<br />
+<img alt="" src="../../../img/Pasted-133.png" /><br />
+<img alt="" src="../../../img/1455b2fe59e378994a520dc2f7171f11.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="wem-infrastructure-services-configuration">WEM Infrastructure Services Configuration</h3>
+<ol>
+<li>On the WEM Server, run <strong>WEM Infrastructure Service Configuration Utility</strong> from the Start Menu.<br />
+<img alt="" src="../../../img/img_599b8d8c7d22c.png" /></li>
+<li>On the <strong>Database Settings</strong> tab, enter the SQL Server name and database name.</li>
+<li>Switch to the <strong>Advanced Settings</strong> tab.<br />
+<img alt="" src="../../../img/img_599b8dd3bbcb7.png" /></li>
+<li>If you intend to load balance WEM Servers, then <strong>Browse</strong> to a service account. This service account must have access to the database.<br />
+<img alt="" src="../../../img/img_5d0f8d8923e13.png" /><ul>
+<li>The service account must be in the local <strong>Administrators</strong> group on the WEM servers.<br />
+<img alt="" src="../../../img/7ada1e3b008636c86f6e9a9dc1afdfe7.png" /></li>
+</ul>
+</li>
+<li>Enter the <strong>vuemUser</strong> SQL user account password.</li>
+<li>In WEM 1909 and newer, check the box next to <strong>Enable performance tuning</strong> and set both of the <strong>Minimum threads</strong> boxes to the number of concurrent WEM Agents that will be connected to this one WEM server. Maximum value is 3000.</li>
+<li>Make a choice regarding <strong>Google Analytics</strong>.</li>
+<li>The <strong>Advanced Settings</strong> tab will look something like this.<br />
+<img alt="" src="../../../img/img_5dff5d3ec8a4d.png" /></li>
+<li>On the <strong>Database Maintenance</strong> tab, consider checking <strong>Enable Scheduled Database Maintenance</strong>.<br />
+<img alt="" src="../../../img/img_599b8e1c9700d.png" /></li>
+<li>On the <strong>Licensing</strong> tab, you can enter a Citrix License Server 11.14.0.1 or newer that has valid licenses. Or you can enter the license server later in the admin console.<br />
+<img alt="" src="../../../img/img_599b8e29a6c80.png" /></li>
+<li>Click <strong>Save Configuration</strong> in the ribbon.<br />
+<img alt="" src="../../../img/img_599b8e3967225.png" /></li>
+<li>Click <strong>Yes</strong> when asked to restart the Broker Service.<br />
+<img alt="" src="../../../img/a5ed590389b7aa81048a71a3b4f96722.png" /></li>
+<li>Close the <strong>WEM Infrastructure Service Configuration</strong> utility.<br />
+<img alt="" src="../../../img/img_599b8f34bf9fc.png" /></li>
+<li>If you are load balancing WEM servers, then you must also create a Kerberos SPN, where <code>[accountname]</code> is the service account you are using for the Norskale service. If you have multiple WEM deployments in a single forest, then WEM 2411 and newer let you specify an alternative SPN as detailed at <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/infrastructure-services#create-a-service-principal-name">Citrix Docs</a>.<br />
+<code>setspn -U -S Norskale/BrokerService [accountname]</code></li>
+</ol>
+<h3 id="installupgrade-wem-console">Install/Upgrade WEM Console</h3>
+<ol>
+<li>Run <strong>Citrix Workspace Environment Management Console Setup.exe</strong> from the downloaded WEM 2411 (aka 2411-01-100-01) installation files.<br />
+<img alt="" src="../../../img/image-65.png" /></li>
+<li>Check the box next to <strong>I agree to the license terms</strong> and click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-66.png" /></li>
+<li>In the <em>Welcome to the Citrix Workspace Environment Management Console Setup Wizard</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/Pasted-32.png" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/Pasted-33.png" /></li>
+<li>In the <em>Ready to install Citrix Workspace Environment Management Console</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/Pasted-34.png" /></li>
+<li>In the <em>Completed the Citrix Workspace Environment Management Console Setup Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/Pasted-35.png" /></li>
+<li>Click <strong>Close</strong>.<br />
+<img alt="" src="../../../img/Pasted-36.png" /></li>
+</ol>
+<h3 id="installupgrade-wem-web-console">Install/Upgrade WEM Web Console</h3>
+<p>Install or upgrade the WEM Web Console on the WEM Server. The WEM Web Console can use port 443 if nothing else is using that port.</p>
+<ol>
+<li>In the extracted WEM 2411 folder, right-click <strong>Citrix Workspace Environment Management Web Console.exe</strong> and click <strong>Run as administrator</strong>.<br />
+<img alt="" src="../../../img/image-67.png" /></li>
+<li>Check the box next to <strong>I agree to the license terms</strong> and click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-68.png" /></li>
+<li>In the <em>Welcome to the Citrix Workspace Environment Management Web Console Setup Wizard</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/Pasted-42.png" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/Pasted-43.png" /></li>
+<li>In the <em>Ready to install the Citrix Workspace Environment Management Web Console Setup Wizard</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/Pasted-44.png" /></li>
+<li>In the <em>Completed the Citrix Workspace Environment Management Web Console Setup Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/Pasted-45.png" /></li>
+<li>Click <strong>Launch Web Console Configuration</strong>. This might not work if you didn't run the installer elevated.<br />
+<img alt="" src="../../../img/Pasted-46.png" /></li>
+</ol>
+<h3 id="web-console-configuration">Web Console Configuration</h3>
+<ol>
+<li>Create a file share for WEM and grant <strong>Modify</strong> permission to a service account.<br />
+<img alt="" src="../../../img/Pasted-61.png" /></li>
+<li>Create a service account and add it to WEM Console &gt; <strong>Administration</strong> &gt; <strong>Administrators</strong> as <strong>Global Admin</strong> with <strong>Full Access</strong> and not <strong>Disabled</strong>.<br />
+<img alt="" src="../../../img/Pasted-56.png" /></li>
+<li>Install a certificate in the Local Computer store (<strong>certlm.msc</strong>).<br />
+<img alt="" src="../../../img/Pasted-57.png" /></li>
+<li>From the Start Menu, right-click <strong>WEM Web Console Configuration</strong>, expand <strong>More</strong>, and click <strong>Run as administrator</strong>.<br />
+<img alt="" src="../../../img/Pasted-48.png" /></li>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/Pasted-49.png" /></li>
+<li>The <strong>Port</strong> number cannot conflict with other services already using the port, including IIS.</li>
+<li>The <strong>Infrastructure server name</strong> can be <strong>localhost</strong> if you installed the Web Console on the WEM Infrastructure Server.</li>
+<li><strong>User name</strong> must be Global Admin inside WEM.</li>
+<li>Click <strong>Start service</strong>.<br />
+<img alt="" src="../../../img/Pasted-50.png" /></li>
+<li>Click <strong>Configure certificate</strong>.<br />
+<img alt="" src="../../../img/Pasted-59.png" /><img alt="" src="../../../img/Pasted-58.png" /></li>
+<li>Browse to the local cert and then click <strong>Set up certificate</strong>.<br />
+<img alt="" src="../../../img/Pasted-52.png" /><br />
+<img alt="" src="../../../img/Pasted-53.png" /></li>
+<li>Click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/Pasted-54.png" /><br />
+<img alt="" src="../../../img/Pasted-55.png" /></li>
+<li>Launch the Web Console and login. </li>
+<li>Click your name on the top-right and click <strong>Storage folder</strong>.<br />
+<img alt="" src="../../../img/Pasted-60.png" /></li>
+<li>Enter the UNC path to the file share for WEM.</li>
+<li>Check the box next to <strong>Require credentials</strong> and enter the service account. Click <strong>Done</strong>.<br />
+<img alt="" src="../../../img/Pasted-62.png" /></li>
+</ol>
+<h3 id="wem-configuration-sets">WEM Configuration Sets</h3>
+<p>Each WEM Agent belongs to one Configuration Set. Most actions in a Configuration Set can be filtered, but some settings are global to the Set. To handle global settings, you can create multiple Configuration Sets that apply to different WEM Agents.</p>
+<p>In WEM Web Console (2308 and newer):</p>
+<ol>
+<li>On the left, click <strong>Configuration Sets</strong>.<br />
+<img alt="" src="../../../img/Pasted-63.png" /></li>
+<li>On the right, click <strong>Add configuration set</strong>.<br />
+<img alt="" src="../../../img/Pasted-64.png" /></li>
+<li>Give the set a name and click <strong>Save</strong>.<br />
+<img alt="" src="../../../img/Pasted-65.png" /><br />
+<img alt="" src="../../../img/Pasted-66.png" /></li>
+<li>Click a Configuration Set to create Actions and configure other settings.<br />
+<img alt="" src="../../../img/Pasted-67.png" /></li>
+<li>Use the drop-down menu on the top-left to switch to a different Configuration Set.<br />
+<img alt="" src="../../../img/Pasted-68.png" /></li>
+<li><strong>Directory Objects</strong> lets you add individual computers or computer Organizational Units (OUs) and assign them to Configuration Sets.<br />
+<img alt="" src="../../../img/Pasted-74.png" /><br />
+<img alt="" src="../../../img/Pasted-75.png" /></li>
+<li>Back in the list of <strong>Configuration Sets</strong>, on the right, you can click <strong>Backup and Restore</strong>.<br />
+<img alt="" src="../../../img/Pasted-69.png" /></li>
+<li>Click <strong>Backup</strong> to perform a manual backup. Or click <strong>Manage automatic backup</strong>. The backups are stored in the SMB file share. In WEM 2407 and newer, automatic backups can keep up to 25 backups.<br />
+<img alt="" src="../../../img/Pasted-70.png" /><br />
+<img alt="" src="../../../img/image-53.png" /></li>
+<li>Notice the <strong>Directory objects</strong> are not included in the backups.<br />
+<img alt="" src="../../../img/Pasted-72.png" /></li>
+<li>After you have a backup, you can Restore it to any Configuration Set. This is an easy way of copying one Set to another.<br />
+<img alt="" src="../../../img/Pasted-71.png" /><br />
+<img alt="" src="../../../img/Pasted-73.png" /></li>
+</ol>
+<p>In WEM Classic Console:</p>
+<ol>
+<li>From the Start Menu, run <strong>WEM Administration Console</strong>.<br />
+<img alt="" src="../../../img/img_599b8fd53be52.png" /></li>
+<li>In the ribbon, click <strong>Connect</strong>.<br />
+<img alt="" src="../../../img/a4a8c0df1cc66e8f39d20f471e202565.png" /></li>
+<li>In the <em>Infrastructure Server Connection</em> window, enter the WEM Server name, and click <strong>Connect</strong>.<br />
+<img alt="" src="../../../img/img_592a011dc1c71.png" /></li>
+<li>Some WEM Console settings are global (every agent gets the same setting). So if you want different global settings for different agents, then you create multiple WEM Configuration sets. At the top of the window, in the ribbon, you can create a new WEM Configuration set. <img alt="" src="../../../img/img_592a01ac14825.png" /></li>
+<li>WEM 1912 and newer can Backup and Restore entire Configuration Sets, which makes it easy to duplicate a Configuration Set.<br />
+<img alt="" src="../../../img/img_5dff5f8ca368b.png" /><br />
+<img alt="" src="../../../img/img_5dff5fb1b8de4.png" /><ul>
+<li>When Restoring a Configuration Set, there's no need to create a new empty Set. Just run the Restore wizard and WEM will try to use the original Configuration Set name. If the original Configuration Set already exists, then WEM will append <strong>_1</strong> to the name, which you can then rename.<br />
+<img alt="" src="../../../img/img_5dff6107449fc.png" /></li>
+</ul>
+</li>
+<li>Once you have multiple Configuration sets, you can use the drop-down to switch between them.<br />
+<img alt="" src="../../../img/img_5d0f8e7396638.png" /></li>
+<li>A WEM Agent can only belong to one WEM Configuration set. Different Agents can belong to different WEM Configuration sets.</li>
+<li>In WEM 4.3 and newer, you add agents to the Configuration set at <strong>Active Directory Objects</strong> (workspace on bottom left) &gt; <strong>Machines</strong> (node on top left). You can add OUs or individual objects (computers or computer groups).<br />
+<img alt="" src="../../../img/img_5abf9c7af126a.png" /></li>
+</ol>
+<h3 id="import-recommended-settings">Import Recommended Settings</h3>
+<p>If you have multiple WEM configuration sets, this process should be repeated for each new, empty WEM configuration set. This process is only available in the classic WEM Console.</p>
+<ol>
+<li>On the right side of the ribbon, click <strong>Restore</strong>.<br />
+<img alt="" src="../../../img/img_5d87a96aa55cf.png" /></li>
+<li>Select <strong>Settings</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5dff5ef3a2c87.png" /></li>
+<li>In the <em>Settings Restore wizard</em>, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_599b90bfe08a9.png" /></li>
+<li>In the <em>Restore from folder</em> section, click <strong>Browse</strong>, and browse to the <strong>\Workspace-Environment-Management-v-2411-01-100-01\Configuration Templates\Default Recommended Settings</strong> folder that was included in the WEM download.<br />
+<img alt="" src="../../../img/img_5dff5f461aa32.png" /></li>
+<li>In the <em>Settings Type Selection</em> section, check all available boxes, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5abf83d4afc56.png" /></li>
+<li>In the <em>Restore settings processing</em> window, click <strong>Restore Settings</strong>.<br />
+<img alt="" src="../../../img/img_599b9163a80d6.png" /></li>
+<li>Click <strong>Yes</strong> when prompted to replace.<br />
+<img alt="" src="../../../img/img_599b9182aaf51.png" /></li>
+<li>Click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/img_599b919884888.png" /></li>
+</ol>
+<p>CTP James Kindon at <a href="https://jkindon.com/2017/10/07/wem-hydration-kit/">WEM Hydration Kit</a> has a collection of Applications, File System and Registry Actions that can be imported to WEM. CTP James Kindon recently added <a href="https://jkindon.com/2019/01/02/wem-hydration-kit-module-environmental-settings-to-registry-actions/">Environmental Settings</a> to the Hydration Kit.<br />
+<img alt="" src="../../../img/img_59d8dc1b949ec.png" /></p>
+<p>WEM 1909 and newer can <strong>Migrate</strong> your Group Policies to WEM. CTP James Kindon at <a href="https://jkindon.com/2019/08/04/migrating-gpo-settings-to-wem/">Migrating GPO settings to WEM</a> explains this feature in detail.<br />
+<img alt="" src="../../../img/img_5d87aa9e2461c.png" /></p>
+<h3 id="wem-administrators">WEM Administrators</h3>
+<p>This is only configurable in the Classic WEM Console.</p>
+<ol>
+<li>In the Administration Console, go to <strong>Administration</strong> (workspace on bottom left) &gt; <strong>Administrators</strong> (node on top left).<br />
+<img alt="" src="../../../img/img_599b91b5a7648.png" /></li>
+<li>In the right pane, click <strong>Add</strong>, and specify an Active Directory group that can administer WEM.<br />
+<img alt="" src="../../../img/img_599b91ca410a4.png" /></li>
+<li>After adding a group or user, right-click the new administrator, and click <strong>Edit</strong>.<br />
+<img alt="" src="../../../img/img_592ad61ba172c.png" /></li>
+<li>Use the <strong>Permissions</strong> drop-down to select a role. The roles are detailed at <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/user-interface-description/administration.html#administrators">Administrators</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/img_592ad63c575db.png" /></li>
+<li>Then use the <strong>State</strong> drop-down to select <strong>Enabled</strong>. New administrators are initially disabled. Click <strong>OK</strong> to close the window.<br />
+<img alt="" src="../../../img/img_592ad6477e47d.png" /></li>
+</ol>
+<h3 id="wem-agent-configuration">WEM Agent Configuration</h3>
+<p>For configuration guidance, see CTP James Kindon <a href="https://blogs.mycugc.org/2023/05/30/wem-advanced-guidance-2023/">WEM Advanced Guidance – 2023</a> at CUGC.</p>
+<p>Most of these settings are available in the WEM Web Console.</p>
+<ol>
+<li>In the WEM Web Console, click a Configuration Set, expand <strong>Advanced Settings</strong> and click <strong>Agent Settings</strong>.<br />
+<img alt="" src="../../../img/Pasted-76.png" /></li>
+<li>Click <strong>Agent options</strong>.<br />
+<img alt="" src="../../../img/Pasted-77.png" /><ul>
+<li>When making changes, make sure you click <strong>Apply changes</strong> periodically.<br />
+<img alt="" src="../../../img/Pasted-79.png" /></li>
+</ul>
+</li>
+<li>Setting on these tabs are mostly self-explanatory. Feel free to change any as desired. If you imported a default configuration, then many of these might already be enabled. If not, then configure them manually.</li>
+<li>Check the <strong>Launch agent</strong> options. and <strong>Enable desktop compatibility mode</strong>. Web Console lets you configure launch exclusions.<br />
+<img alt="" src="../../../img/Pasted-78.png" /></li>
+<li><strong>Enable automatic refresh</strong>.</li>
+<li><strong>Enable Offline Mode</strong> and <strong>Use cache to accelerate actions processing</strong>. More info at Citrix Blog Post <a href="https://www.citrix.com/blogs/2020/03/23/workspace-environment-management-agent-caching-explained/">Workspace Environment Management agent caching explained</a>.<br />
+<img alt="" src="../../../img/Pasted-80.png" /></li>
+<li>The <strong>Action processing</strong> section lets you select which modules should be refreshed on reconnect.<br />
+<img alt="" src="../../../img/Pasted-82.png" /></li>
+<li>Scroll down and there are options to process printers and drives asynchronously.<br />
+<img alt="" src="../../../img/Pasted-83.png" /></li>
+<li><strong>Agent service options</strong> section has a setting for <strong>Bypass ie4uinit Check</strong>. Enabling this might eliminate a 2-minute delay before WEM Agent starts.<br />
+<img alt="" src="../../../img/Pasted-81.png" /></li>
+<li>On the left is <strong>UI Agent Personalization</strong>. On the right is <strong>Appearance and interaction</strong>. You can change the <strong>UI agent theme</strong>. Other settings on this page let you hide the splash screen.<br />
+<img alt="" src="../../../img/Pasted-84.png" /></li>
+<li>The <strong>Helpdesk Options</strong> section lets you enable <strong>Screen Capture</strong> from the WEM Agent.<br />
+<img alt="" src="../../../img/Pasted-85.png" /><br />
+<img alt="" src="../../../img/f074c02c626a47f640e61c08730a5caf.png" /></li>
+<li>At <strong>Advanced Settings</strong> &gt; <strong>Monitoring Preferences</strong>, in WEM 2407 and newer, expand <strong>Profile container insights</strong> and you can <strong>Enable large file scanning</strong>.<br />
+<img alt="" src="../../../img/image-58.png" /><ul>
+<li>Then you can run the report at <strong>Monitoring</strong> &gt; <strong>Profile Container Insights</strong>.<br />
+<img alt="" src="../../../img/image-59.png" /></li>
+</ul>
+</li>
+</ol>
+<h4 id="system-optimization">System Optimization</h4>
+<ol>
+<li>The <strong>System Optimization</strong> node lets you configure the various optimizations.<br />
+<img alt="" src="../../../img/Pasted-87.png" /><ol>
+<li>WEM Classic Console has a <strong>System Optimization</strong> workspace (bottom left).<br />
+<img alt="" src="../../../img/img_61c0731e5497d.png" /></li>
+</ol>
+</li>
+<li>On the top left, click the <strong>CPU Management</strong> node/section.</li>
+<li>
+<p><strong>CPU Spikes Protection</strong> gives processes equal access to the CPU.</p>
+<ul>
+<li>There's an option for <strong>Auto Prevent CPU Spikes</strong>.</li>
+<li>From Hal Lange: "<strong>CPU Usage Limit</strong> should never be set to higher a percentage than one CPU. This will keep a single threaded application from thrashing a CPU.  Example: if 2 CPU's are available, the CPU setting should not be set above 49%, if 4 CPU's are available, the CPU setting should not be set above 24%"</li>
+<li>Hal Lange demonstrates <a href="https://www.youtube.com/watch?v=54Y7gdhc0mU">Citrix WEM Performance Optimizations</a> in a YouTube video.<br />
+<img alt="" src="../../../img/Pasted-88.png" /><br />
+<img alt="" src="../../../img/Pasted-89.png" /></li>
+<li>Other tabs/sections let you manually specify CPU priority and/or clamping.<br />
+<img alt="" src="../../../img/Pasted-90.png" />  </li>
+<li>CTX230843 <a href="https://support.citrix.com/article/CTX230843">WEM protection and Skype for Business + Real Time Optimization Pack</a> has a list of processes that should be excluded from WEM CPU Spikes protection.<br />
+<img alt="" src="../../../img/img_5a33bc1662f70.png" /></li>
+<li>Web Console &gt; <strong>Monitoring</strong> &gt; <strong>Insights</strong> &gt; <strong>Optimization Insights</strong> has a report showing CPU optimization.<br />
+<img alt="" src="../../../img/Pasted-91.png" /></li>
+<li>From CTA Chris Schrameyer <a href="https://schrameyersite.wordpress.com/2017/10/11/wem-cpu-management-logging/">WEM – CPU LOGGING</a>: WEM does not provide any built-in logs to determine when a CPU Spikes Protection action is taken. It would be nice to know what processes are often limited, so we can then add them to a CPU Clamping policy or identify why they are using so much CPU.<br />
+<img alt="" src="../../../img/img_59e228f9ab02f.png" /></li>
+<li><strong>Memory Management</strong> node, you can enable <strong>Optimize Memory Usage for Idle Processes</strong> to periodically reclaim memory from running processes. This feature tells processes to flush their memory to disk. In other words, you're trading memory for disk.<br />
+<img alt="" src="../../../img/Pasted-92.png" />  </li>
+<li>WEM 2206 adds an option for <strong>Optimize only if total available memory is less than (MB)</strong> or <strong>Do Not Optimize When Total Available Memory Exceeds (MB)</strong>. In other words, WEM does not optimize memory until available memory drops below this value.</li>
+<li>WEM 2206 adds a <strong>Memory Usage Limit for Specific Processes</strong>. Dynamic means the process memory is not limited until available memory is low.<br />
+<img alt="" src="../../../img/Pasted-94.png" /></li>
+<li>In the <strong>I/O Management</strong> node, on the right, you can prioritize process IO. Use the slider on the far right to enable the feature.<br />
+<img alt="" src="../../../img/Pasted-95.png" /></li>
+<li>In the <strong>Fast Logoff</strong> node, in the right pane, enabling <strong>Fast Logoff</strong> disconnects a session immediately, and runs logoff processes in the background.<br />
+<img alt="" src="../../../img/Pasted-96.png" /></li>
+<li>WEM 2003 and newer have a <strong>Citrix Optimizer</strong> feature. If you enable it, then the WEM Agents will disable services and scheduled tasks according to the settings in the template. WEM comes with built-in templates, or you can add your own. Newer versions of WEM have newer templates. WEM 2311 and newer support Windows 11 and Windows Server 2022. 
+<img alt="" src="../../../img/Pasted-97.png" /></li>
+<li>WEM 2012 and newer have an option to <strong>Automatically select Templates to Use</strong>.<br />
+<img alt="" src="../../../img/Pasted-98.png" /></li>
+<li>The <strong>Monitoring</strong> &gt; <strong>Administration</strong> &gt; <strong>Agents</strong> section adds a <strong>Process Citrix Optimizer</strong> action to each agent.<br />
+<img alt="" src="../../../img/Pasted-99.png" /></li>
+<li>WEM 2112 and newer have a <strong>Multi-session Optimization</strong> feature that lowers the priority of processes running in disconnected sessions.<br />
+<img alt="" src="../../../img/Pasted-100.png" /></li>
+</ul>
+</li>
+</ol>
+<h4 id="security">Security</h4>
+<p>This section is only available in the WEM Classic Console.</p>
+<ol>
+<li>Click the <strong>Security</strong> workspace. On the top left, click the <strong>Process Management</strong> node. In the right pane, in the <strong>Processes Management</strong> tab, enable <strong>Process Management</strong>. The other tabs are grayed out until you check this box.<br />
+<img alt="" src="../../../img/img_61c0708792078.png" /><br />
+<img alt="" src="../../../img/img_592ad9487eadc.png" /><ul>
+<li>You can <strong>BlackList</strong> processes. There's also a <strong>WhiteList</strong>, but once something is added to the <strong>WhiteList</strong>, then all other processes are blocked.<br />
+<img alt="" src="../../../img/img_62418bfbb33a5.png" /></li>
+</ul>
+</li>
+<li>
+<p>On the top left, click <strong>Application Security</strong>.</p>
+<ul>
+<li>
+<p>WEM database query from CTX233578 <a href="https://support.citrix.com/article/CTX233578">Application Security rules might not be enforced properly when multiple users simultaneously log on to the same server OS machine</a>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>UPDATE VUEMSystemUtilities SET Value=&#39;0&#39; WHERE
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Name=&#39;AppLockerControllerReplaceModeOn&#39; AND idSite=[idSite];
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>You can use the top-left sub-nodes to configure AppLocker. See <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/user-interface-description/security.html">Application Security</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/img_61c070b35fef9.png" /></p>
+<ol>
+<li>If you click the <strong>Executable Rules</strong> sub-node, on the bottom right is a button to <strong>Add Default Rules</strong>.<br />
+<img alt="" src="../../../img/img_62418c2a63786.png" /></li>
+<li>If you edit a rule...<br />
+<img alt="" src="../../../img/img_62418c432a149.png" /></li>
+<li>You can assign the rule to a user group.<br />
+<img alt="" src="../../../img/img_5a2ad66c93dde.png" /></li>
+<li>The list of user groups comes from <strong>Active Directory Objects</strong> (workspace on bottom left) &gt; <strong>Users</strong>.<br />
+<img alt="" src="../../../img/img_5abf9c9859a3e.png" /></li>
+<li>On top of the right pane, set <strong>Rule enforcement</strong> to <strong>On</strong> or <strong>Audit</strong>.<br />
+<img alt="" src="../../../img/img_62418c7bbaf09.png" /></li>
+<li>In the ribbon is a button to <strong>Import AppLocker Rules</strong> that were exported from a group policy.<br />
+<img alt="" src="../../../img/img_62418c8e2042c.png" /></li>
+<li>The other sub-nodes follow the same configuration pattern.<br />
+<img alt="" src="../../../img/img_62418ca327af6.png" /></li>
+</ol>
+</li>
+<li>WEM 2112 and newer have a <strong>Privilege Elevation</strong> feature under the <strong>Security</strong> workspace. You might have to scroll down to find it. On the right, check the box for <strong>Process Privilege Elevation Settings</strong>. Notice the setting for <strong>Do Not Apply to Windows Server OSs</strong>.<br />
+<img alt="" src="../../../img/img_62418cd151866.png" /><ol>
+<li>On the left, click <strong>Executable Rules</strong> under <strong>Privilege Elevation</strong>. Then on the bottom right click <strong>Add Rule</strong>.<br />
+<img alt="" src="../../../img/img_62418ce399d2a.png" /></li>
+<li>Give the rule a name and select an assignment.</li>
+<li>There are options to restrict the elevation to specific parameters. For example, you can restrict <strong>cmd.exe</strong> so it can only elevate specific scripts. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_61c06be07e09d.png" /></li>
+<li>Browse to the executable file and click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_61c06bf95e170.png" /></li>
+<li><a href="https://www.davidwilkinson.co.uk/2021/01/07/citrix-wem-privileged-elevation/">CTP David Wilkinson</a> has more details on this feature.</li>
+</ol>
+</li>
+<li>WEM 2203 adds a <strong>Self-elevation</strong> feature that lets users manually run processes elevated. See <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/user-interface-description/security.html#self-elevation">Citrix Docs</a> for details.<br />
+<img alt="" src="../../../img/img_62418d1627230.png" /><br />
+<img alt="" src="../../../img/img_62418d60b2780.png" /></li>
+<li>WEM 2006 adds <strong>Process Hierarchy Control</strong>, which lets you restrict or allow a parent process from launching specific child processes. See <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/user-interface-description/security.html#process-hierarchy-control">Citrix Docs</a> for configuration details.<br />
+<img alt="" src="../../../img/img_62bd7bbe8a3ce.png" /><ol>
+<li>On the agent side, you must enable <strong>Process Hierarchy Control</strong> by running elevated <strong>AppInfoViewer.exe</strong> from <strong>C:\Program Files (x86)\Citrix\Workspace Environment</strong> <strong>Management</strong>.<br />
+<img alt="" src="../../../img/img_62bd7ef24cd76.png" /></li>
+<li>Click <strong>Enable Process Hierarchy Control</strong>.<br />
+<img alt="" src="../../../img/img_62bd7eccb4a7b.png" /></li>
+<li>Acknowledge that a restart is required.<br />
+<img alt="" src="../../../img/img_62bd7eddac926.png" /></li>
+</ol>
+</li>
+<li>WEM has an audit log of the security features at <strong>Administration</strong> workspace &gt; <strong>Logging</strong> node &gt; <strong>Agent</strong> tab.<br />
+<img alt="" src="../../../img/img_62bd8a7ab5013.png" /></li>
+</ol>
+<h4 id="policies-and-profiles">Policies and Profiles</h4>
+<ol>
+<li>WEM Web Console &gt; <strong>Profiles</strong> &gt; <strong>Profile Management Settings</strong> lets you push Citrix Profile Management settings to WEM Agents<br />
+<img alt="" src="../../../img/Pasted-101.png" /></li>
+<li>On the top right you can click <strong>Quick setup</strong> to <strong>Start with template</strong>. Choose either <strong>File-based</strong> or <strong>Container-based</strong>.<br />
+<img alt="" src="../../../img/image-22.png" /><img alt="" src="../../../img/image-23.png" /></li>
+<li>There's an option to configure <strong>user-level settings</strong> instead of computer-level.<br />
+<img alt="" src="../../../img/image-24.png" /></li>
+<li>See the <a href="../citrix-profile-management/">Citrix Profile Management</a> post for details on a recommended Profile Management configuration. Some of the newer settings might be missing from WEM.<br />
+<img alt="" src="../../../img/Pasted-104.png" /></li>
+<li>If you use WEM to configure UPM settings, but the settings are not applying to the WEM Agent, then see Citrix CTX219086 <a href="https://support.citrix.com/article/CTX219086">Some UPM or WEM Agent parameters may not be applied by the agent after switching from GPO settings to Workspace Environment Management settings.</a></li>
+<li>In the WEM Classic Console, at <strong>Policies and Profiles &gt; Citrix Profile Management Settings</strong>, in the right pane, the <strong>File System</strong> tab has a useful <strong>Profile Cleansing</strong> button to remove excluded folders from an existing UPM profile share. This function might not be necessary if you enable <strong>Logon Exclusion Check</strong>.<br />
+<img alt="" src="../../../img/img_599b940ceb77a.png" /><ul>
+<li>Adjust the <strong>Profiles Root Folder</strong>, click <strong>Scan Profiles Folder</strong>, and then click <strong>Cleanse Profile(s)</strong>.<br />
+<img alt="" src="../../../img/img_592adbd43f7e8.png" /></li>
+</ul>
+</li>
+<li>
+<p>To configure folder redirection in the WEM Classic Console, on the top left, click <strong>Microsoft USV Settings</strong>.</p>
+<ol>
+<li>On the right, on the <strong>Roaming Profiles Configuration</strong> tab, check the box to <strong>Process User State Virtualization Configuration</strong>.<br />
+<img alt="" src="../../../img/img_5a2ace612e0c1.png" /></li>
+<li>Then switch to the <strong>Folder Redirection</strong> tabs, and configure them as desired.<br />
+<img alt="" src="../../../img/img_5a2ace7ad5ac2.png" /></li>
+<li>For <strong>Environmental Settings</strong>, WEM Classic Console has the <strong>Policies and Profiles</strong> workspace (bottom left) with three nodes on the top left.<br />
+<img alt="" src="../../../img/Pasted-102.png" /></li>
+<li>In the <strong>Environmental Settings</strong> node (top left), in the right pane, you can enable <strong>Environmental Settings</strong>, and configure restrictions that are usually configured in group policy. Peruse the various tabs on the right. Administrators can be excluded from these restrictions. These settings are only in the WEM Classic Console. In WEM Web Console they are replaced by group policies.</li>
+<li>The <strong>Environmental Settings</strong> within the WEM Administration Console are per-machine, not per-user. This means that, by default, all the settings configured inside of a <a href="#wemsites">Configuration Set</a> apply to every non-admin user that logs into that particular Agent machine. In order to have different <strong>Environmental Settings</strong> apply to different users/user groups, they would need to be applied to a separate WEM Agent machine, and all the settings would need to be configured inside a separate <strong>Configuration Set</strong> to which the WEM Agent Machine is bound. Source = CTX226487 <a href="https://support.citrix.com/article/CTX226487">Guidance on configuring WEM settings per user/user groups</a>.<br />
+<img alt="" src="../../../img/Pasted-103.png" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="scripted-tasks">Scripted Tasks</h4>
+<p>Web Console lets you configure Scripted Tasks that run at the agent (computer) level.</p>
+<ol>
+<li>First, add the task/script to Scripted Tasks at the global le<br />
+<img alt="" src="../../../img/Pasted-150.png" /><ol>
+<li>Scripted tasks are PowerShell scripts.<br />
+<img alt="" src="../../../img/Pasted-151.png" /></li>
+</ol>
+</li>
+<li>Then go to a Configuration Set and click <strong>Scripted Task Settings</strong>.<br />
+<img alt="" src="../../../img/Pasted-152.png" /></li>
+<li>On the far right, click the ... next to a scripted task and then click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/Pasted-153.png" /></li>
+<li>Enable the task and choose a <strong>Filter</strong>.<br />
+<img alt="" src="../../../img/Pasted-154.png" /></li>
+<li>The Triggers page lets you choose when the script should run. You can <strong>Create new trigger</strong>.<br />
+<img alt="" src="../../../img/Pasted-155.png" /></li>
+<li>One of the options is <strong>Scheduled</strong>.<br />
+<img alt="" src="../../../img/image-60.png" /></li>
+</ol>
+<h3 id="wem-agent-group-policy">WEM Agent Group Policy</h3>
+<ol>
+<li>In the WEM Download, go to the <strong>\Workspace-Environment-Management-v-2411-01-100-01\Agent Group Policies\ADMX</strong> folder.</li>
+<li>Copy the <strong>.admx</strong> file, and the <strong>en-US</strong> folder to the clipboard.<br />
+<img alt="" src="../../../img/image-69.png" /></li>
+<li>Go <strong>\\MyADDomain.com\sysvol\MyADDomain.com\Policies</strong>.</li>
+<li>If you have a <strong>PolicyDefinitions</strong> folder here, then paste the .admx file and folder.<br />
+<img alt="" src="../../../img/b9501c1834c88f372ec375920460fa62.png" /><ul>
+<li>If you don't have <strong>PolicyDefinitions</strong> in Sysvol, then instead go to <strong>C:\Windows\PolicyDefinitions</strong>, and paste the .admx file and folder there.<br />
+<img alt="" src="../../../img/b7a2494df95b8c123d7212fd0492e28b.png" /></li>
+</ul>
+</li>
+<li>Look for older versions of the WEM .admx and .adml files (in the <strong>en-us</strong> subfolder) and delete them. Remove any WEM .admx and .adml files that have a version number.<br />
+<img alt="" src="../../../img/img_5abf84707ea26.png" /><br />
+<img alt="" src="../../../img/img_5abf84bc54705.png" /></li>
+<li>Edit a GPO that applies to the VDAs that will run the WEM Agent.<br />
+<img alt="" src="../../../img/e5adeefcc4dcfd0d40e2927bddff3d94.png" /></li>
+<li>In WEM 1906 and newer, go to <strong>Computer Configuration</strong> | Policies | Administrative Templates | <strong>Citrix Components | Workspace Environment Management | Agent Host Configuration</strong>.</li>
+<li>On the right, double-click <strong>Infrastructure server</strong>.<br />
+<img alt="" src="../../../img/img_5d866a1d1c19b.png" /></li>
+<li>Enable the setting, enter the FQDN of the WEM server (or load balanced name), and click <strong>OK</strong>. Note: It must be FQDN.<br />
+<img alt="" src="../../../img/img_5929fe2c3ad50.png" /></li>
+<li>
+<p>Assign Agents to a Configuration Set.</p>
+<ol>
+<li>In the WEM Web Console, go to <strong>Directory Objects</strong> and click <strong>Add object</strong>.<br />
+<img alt="" src="../../../img/Pasted-105.png" /></li>
+<li>In the WEM Classic Administration Console, choose a Configuration Set and then go to <strong>Active Directory Objects</strong> workspace (bottom left) &gt; <strong>Machines</strong> node (top left), and in the right pane, add an OU or individual machines.<br />
+<img alt="" src="../../../img/img_5abf9c7af126a.png" /></li>
+<li>It's possible that an Agent might register with multiple Configuration sets. You can review the registrations in Web Console at <strong>Monitoring</strong> &gt; <strong>Administration</strong> &gt; <strong>Agents</strong>.<br />
+<img alt="" src="../../../img/Pasted-106.png" /></li>
+<li><strong>Registrations</strong> tab (right pane) might show you Agents not registered with any Configuration Set. Add the Agent to <strong>Active Directory Objects &gt; Machines</strong>.<br />
+<img alt="" src="../../../img/Pasted-125.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="installupgrade-wem-agent">Install/Upgrade WEM Agent</h3>
+<p>For command line unattended installation of WEM Agent, see <a href="https://discussions.citrix.com/topic/382993-wem-unattended-installation-for-workspace-environment-agent/#comment-2052568">Alain Assaf</a> at Citrix Discussions.</p>
+<ol>
+<li><strong>WEM agent upgrade task</strong> - WEM 2311 and newer can push Agent upgrades to existing agents. In a Configuration Set, configure a file share under <strong>App Package Delivery</strong>. Then import the WEM Agent to the share. Then create a <strong>Delivery task</strong>. More details at <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/user-interface-description/app-package-delivery">App Package Delivery</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/image-12.png" /><br />
+<img alt="" src="../../../img/image-11.png" /></li>
+<li>
+<p>If <strong>App Layering</strong>, Citrix <a href="https://support.citrix.com/article/CTX225997">recommends</a> installing the WEM Agent in the <strong>Platform Layer</strong>.</p>
+<ul>
+<li>If you are installing the WEM Agent in a <strong>App Layer</strong>, see <a href="http://www.jgspiers.com/citrix-workspace-environment-manager/#Install-WEM-Agent">George Spiers</a> to workaround an issue with the Netlogon service in a <strong>Platform Layer</strong> that has the <strong>Provisioning Services Target Device software</strong> installed.<br />
+<img alt="" src="../../../img/img_5960cc433dc2c.png" /></li>
+<li>Use registry editor to confirm that the WEM GPO has applied to the Agent machine. Look for HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Norskale\Agent Host\<strong>BrokerSvcName</strong>.<br />
+<img alt="" src="../../../img/img_5a4e4e049d7f1.png" /></li>
+<li><strong>VDA installer</strong> - In VDA 2012 and newer, the WEM Agent is included with the VDA installer; however, this install method has been <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/whats-new/removed-features.html">deprecated</a>. You can instead install it separately as detailed in the next step.<br />
+<img alt="" src="../../../img/img_5fd8b9abcf081.png" /><br />
+<img alt="" src="../../../img/img_5fd8b9c21c5b9.png" /></li>
+<li><strong>Manual install</strong> - On a VDA Master machine, run <strong>Citrix Workspace Environment Management Agent.exe</strong> from the downloaded WEM 2411 (aka 2411-01-100-01) installation files.<br />
+<img alt="" src="../../../img/image-70.png" /></li>
+<li>In the <strong>Citrix Workspace Environment Management Agent</strong> window, check the box next to <strong>I agree to the license terms</strong> and click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-71.png" /></li>
+<li>In the <strong>Welcome to the Citrix Workspace Environment Management Agent Setup Wizard</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5f7481c3a49e3.png" /></li>
+<li>In the <strong>Destination Folder</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5d866c8f76867.png" /></li>
+<li>In the <strong>Deployment Type</strong> page, select <strong>On-premises Deployment</strong> and click <strong>Next</strong>. <strong>Basic Deployment</strong> in WEM 2407 and newer does not need any infrastructure. See <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/manage-basic-deployment-agents">Citrix Docs</a>.<br />
+<img alt="" src="../../../img/image-52.png" /></li>
+<li>In the <strong>Infrastructure Service Configuration</strong> page, change the selection to <strong>Skip Configuration</strong> since you've already configured the group policy. Click <strong>Next</strong>. Note: In WEM 1912 and newer, the cache synchronization port changes from 8285 to 8288. 
+<img alt="" src="../../../img/img_5dffa459e3f7e.png" /></li>
+<li>In the <strong>Advanced Settings</strong> page, if this machine will be used with Citrix Provisioning and has a Provisioning cache disk, then you can optionally move the WEM Cache to the Provisioning cache disk. Click <strong>Next</strong>. WEM Agent 2012 and newer have some enhancements for non-persistent machines. See <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/agent-host.html#prerequisites-and-recommendations">Prerequisites and recommendations</a> and <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/agent-host.html#agent-startup-behaviors">Agent startup behaviors</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/img_5d866de92014d.png" /></li>
+<li>In the <strong>Ready to install Citrix Workspace Environment Management Agent</strong> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/img_5d866df4d304f.png" /></li>
+<li>In the <strong>Completed the Citrix Workspace Environment Management Agent Setup Wizard</strong> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/img_5f74821c8a53a.png" /></li>
+<li>In the <strong>Installation Successfully Completed</strong> window, click <strong>Close</strong>.<br />
+<img alt="" src="../../../img/img_5d866e8a3127e.png" /></li>
+</ul>
+</li>
+</ol>
+<h4 id="wem-agent-cache">WEM Agent Cache</h4>
+<ol>
+<li>After installation, check the registry under <strong>HKLM\System\CurrentControlSet\Control\Norskale\Agent Host</strong> to verify your command line switches applied correctly.<br />
+<img alt="" src="../../../img/img_5d867014e543b.png" /><br />
+<img alt="" src="../../../img/img_5d867088636f0.png" /></li>
+<li>WEM Agent 2012 and newer have some enhancements for non-persistent machines. See <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/agent-host.html#prerequisites-and-recommendations">Prerequisites and recommendations</a> and <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/install-and-configure/agent-host.html#agent-startup-behaviors">Agent startup behaviors</a> at Citrix Docs.</li>
+<li>In WEM Agent 1909 and newer, the WEM Agent installation path is now <strong>C:\Program Files (x86)\Citrix\Workspace Environment Management Agent</strong> instead of <strong>C:\Program Files (x86)\Norskale\Norskale Agent Host</strong> and you might have to modify your WEM Agent Cache Refresh scripts with the new path. See CTP James Kindon <a href="https://jkindon.com/2019/09/11/citrix-wem-updated-start-up-scripts/">Citrix WEM Updated Start-Up Scripts</a> for more details.</li>
+<li>Optionally, you can pre-build the Agent Cache by running <strong>AgentCacheUtility.exe</strong>, which is located in <strong>C:\Program Files (x86)\Citrix\Workspace Environment Management Agent</strong> (fresh WEM Agent 1909 and newer) or in <strong>C:\Program Files (x86)\Norskale\Norskale Agent Host</strong>.<br />
+<img alt="" src="../../../img/img_5d867105d9b22.png" /><br />
+<img alt="" src="../../../img/2b35509a06017bd1e61969a668f4aba0.png" /></li>
+<li>It needs the following switches:<br />
+<code>-refreshcache -brokername:MyWEMServer</code></li>
+<li>From Hal Lange: "AgentCacheUtility does except short values (Eg <strong>AgentCacheUtility -r -b:</strong>) the broker name should always be in FQDN since this does use Kerberos for the authentication."<br />
+<img alt="" src="../../../img/img_5dffa503ce6f5.png" /><br />
+<img alt="" src="../../../img/3322ed6f0ef2c8ce4dfa9bac6b13b5f3.png" /></li>
+<li>You can also use the Web Console at <strong>Monitoring</strong> &gt; <strong>Administration</strong> &gt; <strong>Agents</strong> to refresh an agent's cache and perform other actions. The <strong>Synchronization</strong> column indicates if the cache is up to date or not. It takes a few minutes to update.<img alt="" src="../../../img/Pasted-107.png" /><ul>
+<li>It's also in WEM Classic Administration Console at <strong>Administration</strong> workspace (bottom left), <strong>Agents</strong> node (top left)<br />
+<img alt="" src="../../../img/img_5dff633c13a91.png" /></li>
+</ul>
+</li>
+<li>
+<p>From Hal Lange: "Need to optimize the client by running ngen for .NET optimizations in the x64 and x86 directories. These commands will help optimize ANY .NET application installed on the system</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>C:\Windows\Microsoft.NET\Framework\v4.0.30319
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>ngen.exe update
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ngen.exe eqi 1
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ngen.exe eqi 3
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Antivirus</strong> - <strong>C:\Program Files (x86)\Citrix\Workspace Environment Management Agent</strong> or <strong>C:\Program Files (x86)\Norskale\Norskale Agent Host</strong> must be excluded from Antivirus scanning. Or exclude Citrix.Wem.Agent.Service.exe; Norskale Agent Host Service.exe; VUEMUIAgent.exe; Agent Log Parser.exe; AgentCacheUtility.exe; AppsMgmtUtil.exe; PrnsMgmtUtil.exe; VUEMAppCmd.exe; VUEMAppCmdDbg.exe; VUEMAppHide.exe; VUEMCmdAgent.exe; VUEMMaintMsg.exe; VUEMRSAV.exe.<br />
+<img alt="" src="../../../img/c2c746bf216d673d2b0dbf7aeb2ed599.png" /></p>
+</li>
+<li>
+<p>If you use WEM to push UPM settings, but the settings are not applying to the WEM Agent, then see Citrix CTX219086 <a href="https://support.citrix.com/article/CTX219086">Some UPM or WEM Agent parameters may not be applied by the agent after switching from GPO settings to Workspace Environment Management settings.</a>  Delete the machine cache, which is at the following registry location:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Norskale\Agent Host\UsvMachineConfigurationSettings
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Norskale\Agent Host\UpmConfigurationSettings
+</span></code></pre></div>
+<p>This will force WEM to re-apply the per-machine settings (Microsoft USV or Citrix UPM settings, respectively).</p>
+</li>
+<li>
+<p>WEM Cache tends to break often. See CTP James Kindon <a href="https://jkindon.com/2020/09/07/citrix-wem-cache-problems-again/">Citrix WEM Cache Problems…. Again</a> for a script to reset the cache periodically.</p>
+</li>
+<li>CTP James Kindon describes the <a href="https://jkindon.com/2017/11/16/wem-client-side-tools/">WEM Client Side Tools</a> including: Log Parser, Resultant Actions Viewer, VUEMAppCMD, Manage Printers, Manage Applications, and Help Desk Tools.</li>
+<li>WEM Agent 2308 and newer have improved Event Viewer logging.<br />
+<img alt="" src="../../../img/Pasted-149.png" /></li>
+</ol>
+<h4 id="wem-agent-on-citrix-provisioning-target-device">WEM Agent on Citrix Provisioning Target Device</h4>
+<p>From <a href="https://discussions.citrix.com/topic/402115-wem-sync-task-at-boot-completes-with-errors/?source=email#comment-2047849">Citrix Discussions</a>: create a computer startup script that deletes the WEM cache and refreshes it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>net stop &quot;Citrix WEM Agent Host Service&quot; /y
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>net stop &quot;Norskale Agent Host Service&quot; /y
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>del D:\WEMCache\ /S /F /q
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>net start &quot;Citrix WEM Agent Host Service&quot;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>net start &quot;Norskale Agent Host Service&quot;
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>net start &quot;Netlogon&quot;
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>timeout /T 45 /nobreak
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&quot;C:\Program Files (x86)\Citrix\Workspace Environment Management Agent\AgentCacheUtility.exe&quot; -refreshcache -brokername:XXXX
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;C:\Program Files (x86)\Norskale\Norskale Agent Host\AgentCacheUtility.exe&quot; -refreshCache -brokerName:XXXX
+</span></code></pre></div>
+<p>From Julian Mooren <a href="https://citrixguyblog.com/2017/05/04/citrix-workspace-environment-management-with-pvs-lesson-learned/">Citrix Workspace Environment Management with PVS – Synchronization State “Unknown”</a>: For Citrix Provisioning, schedule a task to run the following commands at Target Device boot (Trigger = <strong>At Startup</strong>).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&quot;C:\Program Files (x86)\Citrix\Workspace Environment Management Agent\AgentCacheUtility.exe&quot; -refreshcache
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;C:\Program Files (x86)\Norskale\Norskale Agent Host\AgentCacheUtility.exe&quot; -refreshcache
+</span></code></pre></div>
+<p>From CTA David Ott at <a href="http://www.citrixirc.com/?p=789">Using Citrix Workspace Environment Management to Redirect Folders via Symbolic Links – Speed Up Logon</a>: before shutting down your maintenance/private mode vdisk to re-seal, kill the <strong>Citrix WEM Agent Host Service</strong> or <strong>Norskale Agent Host Service</strong>. For whatever reason if you don’t do this it can cause your vms in standard mode to take an obscenely long time to shutdown.</p>
+<p><a href="https://eucweb.com/download-bis-f">Base Image Script Framework (BIS-F)</a> automates many image sealing tasks, including tasks for Workspace Environment Management. The script is configurable using Group Policy.<br />
+<img alt="" src="../../../img/img_593316b719c4a.png" /><br />
+<img alt="" src="../../../img/img_5933173c3029d.png" /></p>
+<h3 id="monitoring">Monitoring</h3>
+<ol>
+<li>WEM Web Console &gt; <strong>Monitoring</strong> &gt; <strong>Insights</strong> has some reporting, including a report showing disk space consumed by profile containers.<br />
+<img alt="" src="../../../img/Pasted-108.png" /></li>
+<li>In the WEM Classic Administration Console, the <strong>Monitoring</strong> workspace (bottom left) lets you see <strong>Logon Time</strong> and <strong>Boot Time</strong> reports.<br />
+<img alt="" src="../../../img/img_62418e9ae735e.png" /></li>
+<li>Double-click a category to see more info.<br />
+<img alt="" src="../../../img/0e7682e14c52a156b45b601df56640c8.png" /><br />
+<img alt="" src="../../../img/img_592adf17ebf8f.png" /></li>
+<li><strong>Configuration</strong> node (top left) lets you configure <strong>Work Days Filtering</strong> for Login/Boot Time Reports.<br />
+<img alt="" src="../../../img/img_62418f3262a58.png" /></li>
+<li>WEM 2203 adds a <strong>Profile Container Insights</strong> report for both FSLogix and UPM Profile Containers.<br />
+<img alt="" src="../../../img/img_62418f1685c51.png" /></li>
+<li>When you make changes in the console, if agents are already installed, you can right-click the agent icon (by the clock), and <strong>Refresh</strong>.<br />
+<img alt="" src="../../../img/img_592adf6475e89.png" /></li>
+<li>You can also go to the <strong>Administration</strong> workspace (bottom left) &gt; <strong>Agents</strong> node (top left). In the right pane, right-click one or more Agents, and click the <strong>Refresh</strong> options.<br />
+<img alt="" src="../../../img/img_5dff63dd24d53.png" /></li>
+<li>WEM 1811 and newer periodically run UPMConfigCheck every day, or whenever the Norskale Agent Service restarts. The <strong>Administration</strong> &gt; <strong>Agents</strong> node in the WEM Console has a visual indicator of the UPMConfigCheck results. For status details, check the file <strong>C:\Windows\Temp\UPMConfigCheckOutput.xml</strong> on each WEM Agent Machine.<br />
+<img alt="" src="../../../img/img_5c2ea320ad399.png" /></li>
+</ol>
+<h3 id="wem-actions-configuration">WEM Actions Configuration</h3>
+<p>WEM Actions are similar to Group Policy Preferences.</p>
+<p>The general process is as follows:</p>
+<ul>
+<li>Create the Actions</li>
+<li>Optionally create Action Groups</li>
+<li>Add AD user groups to the WEM Console.</li>
+<li>Assign Actions or Action Groups to user groups. Use Conditions and Rules to perform the Action (or Action Group) for only a subset of machines or users in the user group.</li>
+</ul>
+<h4 id="create-actions">Create Actions</h4>
+<ol>
+<li>
+<p><strong>WEM Tool Hub 2411</strong> has a new tool for <strong>Group Policy Migration</strong>. More details at <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/reference/wem-tool-hub#group-policy-migration-tool">Citrix Docs</a>.<br />
+<img alt="" src="../../../img/image-72.png" /><br />
+<img alt="" src="../../../img/image-73.png" /><br />
+<img alt="" src="../../../img/image-74.png" />  </p>
+</li>
+<li>
+<p>In the WEM Console, use the <strong>Actions</strong> workspace to map drives, map printers, create shortcuts (Applications), set registry keys, etc. Each Action type is a separate node. New features (e.g., group policy templates, JSON Files, INI files, Ports, User DSNs) are only available in the Web Console. <br />
+<img alt="" src="../../../img/image-36.png" /></p>
+</li>
+<li>
+<p>WEM 1909 and newer can <strong>Migrate</strong> or <strong>Import</strong> your Group Policies to WEM. CTP James Kindon at <a href="https://jkindon.com/2019/08/04/migrating-gpo-settings-to-wem/">Migrating GPO settings to WEM</a> explains this feature in detail.</p>
+<ol>
+<li>In Group Policy Management Console, back up the GPOs that you want to import to WEM.<br />
+<img alt="" src="../../../img/img_5fd8bec60c679.png" /></li>
+<li>Go to the GPO Backup folder and zip everything.<br />
+<img alt="" src="../../../img/img_5fd8beb45904d.png" /></li>
+<li>In WEM Console, go to <strong>Actions</strong> &gt; <strong>Group Policy Settings</strong> and click <strong>Import</strong>.<br />
+<img alt="" src="../../../img/image-37.png" /></li>
+<li>WEM 2209 and newer let you <strong>Import Registry File</strong>.<br />
+<img alt="" src="../../../img/Pasted-111.png" /></li>
+<li>WEM 2012 and newer let you edit the imported group policies.<br />
+<img alt="" src="../../../img/Pasted-112.png" /></li>
+<li>It seems to be a registry editor that doesn't use ADMX templates.<br />
+<img alt="" src="../../../img/Pasted-113.png" /></li>
+<li>WEM Web Console lets you configure GPOs using traditional ADMX templates. Switch to the <strong>Template-based</strong> tab. Standard Windows templates are already built into the Web Console, but you can upload more templates. <br />
+<img alt="" src="../../../img/Pasted-114.png" /><br />
+<img alt="" src="../../../img/Pasted-115.png" /></li>
+<li>In WEM Classic Console, some Actions, on the <strong>Options</strong> tab, have a <strong>Self-Healing</strong> option. To optimize performance, WEM only applies an action once. The Self-Healing option causes it to reapply at every logon.<br />
+<img alt="" src="../../../img/d99e549af06fb3eb2658b5c21de7e1b7.png" /></li>
+<li><strong>Network Drives</strong> have no field for selecting a drive letter. Instead, you configure the drive letter later when <a href="#assignaction">assigning</a> the action as detailed below.<br />
+<img alt="" src="../../../img/Pasted-116.png" /></li>
+<li><strong>External Tasks</strong> are scripts that are triggered at user logon, reconnect or other triggers. WEM 2203 adds triggers for <strong>Process start</strong> and <strong>Process end</strong>. WEM 2009 adds triggers for <strong>Disconnect</strong>, <strong>Lock</strong>, and <strong>Unlock</strong>.<br />
+<img alt="" src="../../../img/Pasted-117.png" /></li>
+<li>
+<p><strong>Applications</strong> (shortcuts)</p>
+</li>
+<li>
+<p>In the <strong>Actions</strong> pane, <strong>Applications</strong> have no option for placing a shortcut on the Desktop. Instead, you configure shortcut placement later when <a href="#assignaction">assigning</a> the action as detailed below.</p>
+</li>
+<li>You can pull icons from a <strong>StoreFront store</strong>.<br />
+<img alt="" src="../../../img/Pasted-118.png" />  <ul>
+<li>In Web Console, you'll need to add the StoreFront URL by clicking the <strong>Settings</strong> button on the top right, or in Classic Console go to <strong>Advanced Settings</strong> (workspace) &gt; <strong>Configuration</strong> (node) &gt; <strong>StoreFront</strong> (tab).<br />
+<img alt="" src="../../../img/Pasted-124.png" /><br />
+<img alt="" src="../../../img/Pasted-123.png" /></li>
+<li>Get published app resource info by downloading the WEM Tool Hub and using it to copy the resource info. Or Classic Console lets you <strong>Browse</strong> when creating an <strong>Actions</strong> &gt; <strong>Application</strong> and selecting a <strong>Store URL</strong>.<br />
+<img alt="" src="../../../img/Pasted-119.png" /></li>
+<li>
+<p>Links:</p>
+<ul>
+<li>CTX233638 <a href="https://support.citrix.com/article/CTX233638">How to configure, deploy, and troubleshoot StoreFront-based assigned application actions in Workspace Environment Management (WEM)</a></li>
+<li>CTP James Kindon <a href="https://jkindon.com/2018/03/28/storefront-resource-integration-with-wem-4-6/">Storefront Resource Integration with WEM 4.6</a> - explains how to change the icon<ol>
+<li>Arjan Mensch at <a href="https://msfreaks.wordpress.com/2018/01/08/powershell-module-for-citrix-wem-part-3-environmentalsettings-and-microsoftusvsettings-from-gpo-and-much-much-more/">Powershell Module for Citrix WEM – Part 3 – EnvironmentalSettings and MicrosoftUsvSettings from GPO and much, much more</a> provides a PowerShell Module that can do several things to help setup WEM, including reading a bunch of shortcuts (e.g. from Start Menu), and converting them to an .xml file that can be imported into WEM. This simplifies <strong>Applications</strong> configuration.<br />
+<img alt="" src="../../../img/img_5a540ccee446c.png" /><img alt="" src="../../../img/img_5a410a3b2944f.png" /></li>
+<li>To prevent applications (shortcuts) from being created if the application isn't installed, go to <strong>Advanced Settings</strong> &gt; <strong>Agent Settings</strong> &gt; <strong>Miscellaneous</strong> (or <strong>Advanced Settings &gt; Configuration &gt; Agent Options</strong>), and check the box next to <strong>Check Application Existence</strong> in the <strong>Extra Features</strong> section.<br />
+<img alt="" src="../../../img/Pasted-120.png" /></li>
+<li>To clean up extra shortcuts, go to <strong>Advanced Settings</strong> &gt; <strong>Action Settings</strong> &gt; <strong>Action cleanup</strong> (or <strong>Advanced Settings &gt; Configuration &gt; Cleanup Actions</strong>), and check the boxes in the <strong>Shortcuts deletion at startup</strong> section. Also see CTP James Kindon <a href="https://jkindon.com/2017/10/13/citrix-wem-modern-start-menus-and-tiles/">Citrix WEM, Modern Start Menus and Tiles</a>.<br />
+<img alt="" src="../../../img/Pasted-121.png" /></li>
+<li>After you create <strong>Applications</strong> (Shortcuts), and assign them, on the agent, there's a <strong>Manage Applications</strong> tool that lets users control where shortcuts are created, including pinning to Taskbar and Start Menu.<br />
+<img alt="" src="../../../img/ca84bcc149052e1d5309b505f54d7419.png" /><br />
+<img alt="" src="../../../img/b9fc080d4bdcf06dba4cd0ac4d879cad.png" /></li>
+<li>Applications can be placed in <strong>Maintenance Mode</strong>. Edit an application, and find the <strong>Maintenance Mode</strong> setting on the <strong>Options</strong> tab.<br />
+<img alt="" src="../../../img/Pasted-122.png" /></li>
+<li>This causes the icon to change, and a maintenance message to be displayed to the user.<br />
+<img alt="" src="../../../img/cecff23b06a4832b8e09db3b8a2abb9b.png" /><br />
+<img alt="" src="../../../img/3a24d355d11bd365d37ff4b75fb1f252.png" /></li>
+<li>The <strong>Applications</strong> node has a <strong>Start Menu View</strong> tab on the top right.<br />
+<img alt="" src="../../../img/Pasted-126.png" /><br />
+<img alt="" src="../../../img/Pasted-127.png" /></li>
+</ol>
+</li>
+<li>For the <strong>Printers</strong> Action, there's a <strong>Add from print server</strong> button or in the ribbon there's a <strong>Import Network Print Server</strong> button.<br />
+<img alt="" src="../../../img/Pasted-128.png" /><ol>
+<li>Web Console uses the WEM Tool Hub to browse the print server.<br />
+<img alt="" src="../../../img/Pasted-129.png" /><br />
+<img alt="" src="../../../img/Pasted-130.png" /><br />
+<img alt="" src="../../../img/Pasted-131.png" /></li>
+</ol>
+</li>
+<li><strong>JSON Files</strong> are Web Console only. This Action lets you configure Microsoft Teams settings and Windows 11 Start Menu.<br />
+<img alt="" src="../../../img/Pasted-146.png" />  <ol>
+<li>WEM Tool Hub in WEM 2407 and newer has a <strong>Start Menu Configurator for Windows 11</strong>.<br />
+<img alt="" src="../../../img/image-75.png" /><br />
+<img alt="" src="../../../img/image-55.png" /></li>
+<li>For Teams, click <strong>Add JSON object</strong> and select <strong>Standard</strong>.<br />
+<img alt="" src="../../../img/image-56.png" /></li>
+<li>Click the <strong>Generate with template</strong> button.<br />
+<img alt="" src="../../../img/Pasted-147.png" /></li>
+<li>Choose your desired Microsoft Teams configurations.<br />
+<img alt="" src="../../../img/Pasted-148.png" /></li>
+</ol>
+</li>
+<li>WEM 2311 and newer support <strong>Registry Entries</strong> in the Web Console. There's an <strong>Import</strong> button that can import .reg files.<br />
+<img alt="" src="../../../img/image-13.png" />  <ul>
+<li>On the top right is a <strong>Settings</strong> button. <br />
+<img alt="" src="../../../img/image-14.png" /><br />
+<img alt="" src="../../../img/image-15.png" /></li>
+<li>If Registry Actions are not applying, delete <strong>HKEY_CURRENT_USER\Software\VirtuAll Solutions\VirtuAll User Environment Manager\Agent\</strong>. (Source = <a href="https://discussions.citrix.com/topic/392864-registry-entries-not-applied-to-users/">Registry Entries not applied to users</a> at Citrix Discussions)</li>
+</ul>
+</li>
+<li>WEM 2311 and newer have <strong>File System Operations</strong> in the Web Console. There are several <strong>Action types</strong>.<br />
+<img alt="" src="../../../img/image-16.png" />  <ol>
+<li>There's a <strong>Settings</strong> button on the top right.<br />
+<img alt="" src="../../../img/image-17.png" /><br />
+<img alt="" src="../../../img/image-18.png" /></li>
+</ol>
+</li>
+<li>WEM 2311 and newer have <strong>File Associations</strong> are available in the Web Console. It uses <strong>WEM Tool Hub</strong> to configure the FTAs.<br />
+<img alt="" src="../../../img/image-19.png" /><br />
+<img alt="" src="../../../img/image-21.png" /></li>
+<li>WEM 2402 and newer have <strong>INI Files</strong>, <strong>Ports</strong>, and <strong>User DSNs</strong>.<br />
+<img alt="" src="../../../img/image-39.png" /></li>
+<li>CTP James Kindon at <a href="https://jkindon.com/2018/01/02/file-type-association-with-wem-and-setuserfta/">File Type Association with WEM and SetUserFTA</a> explains how to use WEM to run Christoph Kolbicz's <a href="http://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/">SetUserFTA</a> utility to reliably set file type associations on Windows 2012 and newer.<br />
+<img alt="" src="../../../img/img_5a4c299612245.png" /></li>
+<li>For variables that can be used in the Actions configurations, see CTP James Kindon <a href="https://jkindon.com/2019/03/08/wem-variables-dynamic-tokens-hashtags-and-strings/">WEM Variables, Dynamic Tokens, Hashtags and Strings</a>.<br />
+<img alt="" src="../../../img/img_5d0f9a20524ba.png" /></li>
+<li><strong>Action Groups</strong> are not yet available in Web Console. You can combine multiple Actions into an <strong>Action Group</strong>. Then you can later assign the entire Action Group to a user.<br />
+<img alt="" src="../../../img/img_5eeb9a4acd0e2.png" /><ol>
+<li>Create an Action Group and name it.</li>
+<li>Double-click the Action Group to show the actions on the bottom.</li>
+<li>On the bottom, move Actions from the <strong>Available</strong> box to the <strong>Configured</strong> box.</li>
+<li>For more info, see <a href="https://docs.citrix.com/en-us/workspace-environment-management/current-release/user-interface-description/actions/action-groups.html">Action Groups</a> at Citrix Docs.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="create-conditions-and-rules">Create Conditions and Rules</h4>
+<p>Once the <strong>Actions</strong> and <strong>Action Groups</strong> are created, you then need to decide under what conditions the Actions are performed. One or more Conditions are later combined into a <strong>Filter</strong> (or Rule). The <strong>Filters</strong> (or Rules) are used later when <a href="#assignaction">assigning</a> an Action to a user group.</p>
+<ol>
+<li>In Web Console, go to <strong>Assignments</strong> &gt; <strong>Filters</strong> and click the <strong>Manage Conditions</strong> button and then click <strong>Create condition</strong>. Select one of the many condition types. <br />
+<img alt="" src="../../../img/Pasted-134.png" /><br />
+<img alt="" src="../../../img/Pasted-136.png" />  <ul>
+<li>Or in Classic Console, go to the <strong>Filters</strong> workspace (bottom left). On the top left, switch to the <strong>Conditions</strong> node. In the right pane, create <strong>Conditions</strong>.</li>
+</ul>
+</li>
+<li>One of the interesting Conditions is <strong>User SBC Resource Type</strong>, which lets you run Actions for either Published Desktop or Published Application.<br />
+<img alt="" src="../../../img/Pasted-135.png" /></li>
+<li>CTP James Kindon at <a href="https://discussions.citrix.com/topic/392462-wem-filter-conditions-on-ou-and-ip-address/#comment-1996651">WEM filter conditions on OU and IP Address</a> at Citrix Discussions says that the <strong>Active Directory Path Match</strong> condition requires a <code>*****</code> at the end of the path.<br />
+<img alt="" src="../../../img/img_5a6495ed31809.png" /></li>
+<li>Then go back to <strong>Filters</strong> and click <strong>Create filter</strong>.<br />
+<img alt="" src="../../../img/Pasted-137.png" /><ol>
+<li>Or in Classic Console, switch to the <strong>Rules</strong> node (top left) and create Rules in the right pane.</li>
+</ol>
+</li>
+<li>If you add (by clicking the right arrow) multiple Conditions to a Rule, all (AND) Conditions must match. Web Console lets you click the circle icon to make it an OR operator, but this isn't an option in the Classic Console. <br />
+<img alt="" src="../../../img/Pasted-138.png" /></li>
+</ol>
+<h4 id="add-ad-groups-to-wem-console">Add AD Groups to WEM Console</h4>
+<ol>
+<li>In WEM Web Console, go to <strong>Assignments</strong> &gt; <strong>Assignment Targets</strong> and click <strong>Add assignment target</strong>.<br />
+<img alt="" src="../../../img/Pasted-139.png" /><ul>
+<li>Or in Classic Console, go to the <strong>Active Directory Objects</strong> workspace (bottom left). With the <strong>Users</strong> node selected on the top left, in the right pane, add groups and/or users that will receive the Action assignments.</li>
+</ul>
+</li>
+<li>Web Console also lets you add new targets when managing assignments for each action.<br />
+<img alt="" src="../../../img/Pasted-140.png" /></li>
+</ol>
+<h4 id="assign-actions-to-user-groups">Assign Actions to User Groups</h4>
+<ol>
+<li>You can assign multiple actions from one place by clicking an assignment target and then clicking the <strong>Manage assignments</strong> button.<br />
+<img alt="" src="../../../img/Pasted-141.png" /><ul>
+<li>In Classic Console, go to the <strong>Assignments</strong> workspace (bottom left) &gt; <strong>Action Assignment</strong> node (top left). In the right pane, initially the bottom half is empty. Double-click a group to show the Actions that are available for assignment. </li>
+</ul>
+</li>
+<li>When you assign an action, you can choose a <strong>Filter</strong>.<br />
+<img alt="" src="../../../img/Pasted-142.png" />  <ol>
+<li>In Classic Console, move an available Action or Action Group from the left to the right. This assigns the Action (or Action Group) to the user group.<br />
+<img alt="" src="../../../img/img_5d0f9bd9c0a67.png" /></li>
+<li>You will be prompted to select a Filter, which contains one or more Conditions.<br />
+<img alt="" src="../../../img/acbc0dc078df794ae95e1215e62451f0.png" /></li>
+</ol>
+</li>
+<li>When you select a Network Drive (or move a Network Drive to the right), you're prompted to select a drive letter.<br />
+<img alt="" src="../../../img/Pasted-143.png" />  <ul>
+<li>The list of drive letters is restricted based on the configuration at <strong>Advanced Settings</strong> workspace (bottom left) &gt; <strong>Configuration</strong> node (top left) &gt; <strong>Console Settings</strong> tab (right pane).<br />
+<img alt="" src="../../../img/img_592ae46477aba.png" /></li>
+</ul>
+</li>
+<li><strong>Application</strong> assignment lets you choose where to create the icon.<br />
+<img alt="" src="../../../img/Pasted-144.png" /><ul>
+<li>In Classic Console, some Actions have additional options that you can right-click. For example, you can create shortcuts on the desktop.<br />
+<img alt="" src="../../../img/d94778eca0f2f0cfc75a6962c50256fc.png" /></li>
+</ul>
+</li>
+<li>Web Console also lets you <strong>Manage assignments</strong> directly from each Action.<br />
+<img alt="" src="../../../img/Pasted-145.png" /></li>
+</ol>
+<h4 id="actions-troubleshooting">Actions Troubleshooting</h4>
+<p>WEM caches Actions executions under <strong>HKEY_CURRENT_USER\SOFTWARE\VirtuAll Solutions\VirtuAll User Environment Manager\Agent\Tasks Exec Cache</strong>. Sometimes clearing these keys and values will fix Actions not applying.<br />
+<img alt="" src="../../../img/img_5c03218501d54.png" /></p>
+<p>CTP James Kindon at <a href="https://jkindon.com/2018/11/28/selective-deletion-of-the-wem-actions-tracking-cache/">Selective Deletion of the WEM Actions Tracking Cache</a> wrote a PowerShell script to selectively clear these registry keys and values.<br />
+<img alt="" src="../../../img/img_5c0321cb1c1b4.png" /></p>
+<h4 id="modeling-wizard">Modeling Wizard</h4>
+<ol>
+<li>In the Classic Console, in the <strong>Assignments</strong> workspace, you can use the <strong>Modeling Wizard</strong> node (top left) to see what Actions apply to a particular user.<br />
+<img alt="" src="../../../img/9cc06fe9d13e4b2fa482f8e720379d19.png" /><br />
+<img alt="" src="../../../img/5013f94e6e76171dc6df4f4d41dbeffc.png" /></li>
+</ol>
+<h4 id="client-side-tools">Client Side Tools</h4>
+<p>CTP James Kindon describes the <a href="https://jkindon.com/2017/11/16/wem-client-side-tools/">WEM Client Side Tools</a> including: Log Parser, Resultant Actions Viewer, VUEMAppCMD, Manage Printers, Manage Applications, and Help Desk Tools.<br />
+<img alt="" src="../../../img/img_5a0ded83356c7.png" /></p>
+<h3 id="transformer">Transformer</h3>
+<p>You can enable Transformer, which puts the WEM Agent in Kiosk mode. Users can only launch icons (e.g., Citrix icons). Everything else is hidden. This is an alternative to Workspace app Desktop Lock. The Transformer interface is customizable.</p>
+<p>WEM 2308 and newer use Edge instead of Internet Explorer. Edge enables StoreFront to detect Workspace app and auto-launch desktops.<br />
+<img alt="" src="../../../img/34c9d5caa89f9d7893f03317cd0a9790.png" /></p>
+<ol>
+<li>In the WEM Classic Console, there's a <strong>Transformer Settings</strong> workspace (bottom left) with two nodes on the top left: <strong>General</strong> and <strong>Advanced</strong>.<br />
+<img alt="" src="../../../img/img_592ae4cb02279.png" /></li>
+<li>Enable Transformer, and point it to your StoreFront URL. Note, this applies to all users and all agents in this <a href="#wemsites">WEM configuration set</a>. You should probably have a new Configuration Set just for Kiosk devices.<br />
+<img alt="" src="../../../img/1c30c6144775a48bb9613b6ef9e21551.png" /></li>
+<li>Other settings on the <strong>General Settings</strong> tab let you customize the appearance, and specify an <strong>unlock</strong> password. You probably want to disable the <strong>Clock</strong>. The <strong>Navigation Buttons</strong> are browser navigation.<br />
+<img alt="" src="../../../img/f7df2d73aa12b28afcc7beb9837e364f.png" /></li>
+<li>Transformer can be unlocked by pressing Ctrl+Alt+U and entering the unlock password.<br />
+<img alt="" src="../../../img/2e44e89001c553ca1b3aeb659c3037c7.png" /></li>
+<li>On the <strong>Site Settings</strong> tab, you can add website URLs that can be launched from within Transformer.<br />
+<img alt="" src="../../../img/6d3bb5fa22284e5944997c4a1555d930.png" /></li>
+<li>At the top of the Transformer window is a <strong>Sites</strong> icon that lets you go to the sites listed in the WEM Console.<br />
+<img alt="" src="../../../img/a46dca5dd46dee0723733eb81d0c4b19.png" /></li>
+<li>The <strong>Advanced</strong> node lets you configure Transformer to launch a process other than a browser.<br />
+<img alt="" src="../../../img/a64841c008a650d36a01950be4ed1719.png" /></li>
+<li>The <strong>Advanced &amp; Administration Settings</strong> tab lets you hide features from Transformer.</li>
+<li>To prevent users from accessing the local system, consider checking <strong>Hide Taskbar &amp; Start Button</strong>.</li>
+<li>You probably want <strong>Log Off Screen Redirection</strong> to redirect users to the logon page when StoreFront logs off.<br />
+<img alt="" src="../../../img/20adbd3755232e25cdbb5a559989ddb3.png" /></li>
+<li>The <strong>Logon/Logoff &amp; Power Settings</strong> tab lets you configure the WEM Agent to autologon as a specific account. Transformer then displays the StoreFront webpage where the user enters his or her credentials.<br />
+<img alt="" src="../../../img/17f50c5b3081453cb7193fa47870c6ef.png" /></li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

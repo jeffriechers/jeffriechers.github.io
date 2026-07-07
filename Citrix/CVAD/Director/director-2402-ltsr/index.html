@@ -1,0 +1,6245 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Delivery%20Controllers/delivery-controller-cr-and-licensing/">
+      
+      
+        <link rel="next" href="../director-cr/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Director 2402 LTSR CU2 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../../base.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Director 2402 LTSR CU2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-licensing-premium-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Licensing - Premium Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-director-2402-ltsr-cu2-on-standalone-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade Director 2402 LTSR CU2 on Standalone Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-default-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Default Web Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-domain-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Domain Field
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-tweaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Tweaks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Director Tweaks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssl-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-activity-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Activity Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-active-directory-multiple-forests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Large Active Directory / Multiple Forests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Site Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-saved-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - Saved Filters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-and-hdx-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director and HDX Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-grooming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Grooming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-single-sign-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Single Sign-on
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-multiple-citrix-virtual-apps-and-desktops-cvad-sitesfarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - Multiple Citrix Virtual Apps and Desktops (CVAD) Sites/Farms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-process-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Process Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-alerts-and-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Alerts and Notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-storefront-probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - StoreFront Probes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Director - StoreFront Probes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-studio-role-for-probe-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Studio Role for Probe Administrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storefront-http-basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront HTTP Basic Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-probe-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Probe Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-probe-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Probe Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-custom-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - Custom Reports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-director" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Director
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Director">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#director-2402-new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director 2402 new features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-licensing-premium-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Licensing - Premium Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-director-2402-ltsr-cu2-on-standalone-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade Director 2402 LTSR CU2 on Standalone Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-default-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Default Web Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-domain-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Domain Field
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-tweaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Tweaks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Director Tweaks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssl-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-activity-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Activity Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-active-directory-multiple-forests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Large Active Directory / Multiple Forests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Site Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-saved-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - Saved Filters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-and-hdx-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director and HDX Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-grooming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Grooming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-single-sign-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Single Sign-on
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-multiple-citrix-virtual-apps-and-desktops-cvad-sitesfarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - Multiple Citrix Virtual Apps and Desktops (CVAD) Sites/Farms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-process-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Process Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-alerts-and-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Alerts and Notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-storefront-probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - StoreFront Probes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Director - StoreFront Probes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-studio-role-for-probe-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Studio Role for Probe Administrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storefront-http-basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront HTTP Basic Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-probe-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Probe Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-probe-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Probe Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-custom-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director - Custom Reports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-director" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Director
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Director">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#director-2402-new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director 2402 new features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Director 2402 LTSR CU2</h1>
+
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#platinumfeatures">Director Licensing - Premium Edition</a></li>
+<li><a href="#directorstandalone">Install/Upgrade Director 2402 LTSR CU2 on Standalone Server</a></li>
+<li><a href="#defaultpage">Director Default Webpage</a></li>
+<li><a href="#directordomain">Domain Field on Director Logon Page</a></li>
+<li><a href="#directortweaks">Director Tweaks</a></li>
+<li><a href="#savedfilters">Director - Saved Filters</a></li>
+<li><a href="#insight">Director and HDX Insight</a></li>
+<li><a href="#grooming">Monitoring Database Grooming</a></li>
+<li><a href="#directorsson">Director Single Sign On</a></li>
+<li><a href="#multiplesites">Director - Multiple Citrix Virtual Apps and Desktops Sites/Farms</a></li>
+<li><a href="#processmonitoring">Director Process Monitoring</a></li>
+<li><a href="#directoralerts">Director Alerts and Notifications</a></li>
+<li><a href="#storefrontprobes">Director - StoreFront Probes</a></li>
+<li><a href="#reports">Director - Custom Reports</a></li>
+<li><a href="#usedirector">Use Director 2402</a></li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2025 Feb 8 - updated article for version <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2402ltsr-cu2-all-editions.html">2402 LTSR CU2</a></li>
+<li>2024 April 17 - Updated <a href="#install">Install</a> section for <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-alleditions-2402.html">version 2402</a><ul>
+<li>Replaced screenshots with new theme</li>
+</ul>
+</li>
+</ul>
+<h3 id="director-licensing-premium-edition">Director Licensing - Premium Edition</h3>
+<p>Here's a list of Director features that require CVAD Premium Edition licensing.</p>
+<ul>
+<li>
+<p>Up to a year’s worth of performance data</p>
+<ul>
+<li>Other editions keep up to 30 days of performance data</li>
+<li>Probes</li>
+<li>Alerts</li>
+<li>OS usage reporting</li>
+<li>Create customized reports</li>
+<li>Reboot warnings</li>
+<li>NetScaler Console integration - HDX Insight</li>
+</ul>
+</li>
+</ul>
+<p>See Citrix Docs <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/version-matrix.html">Feature compatibility matrix</a> for a list of which Director feature came with each version, and the licensing Edition needed for each feature.<br />
+<img alt="" src="../../../../img/image-135.png" /></p>
+<h3 id="installupgrade-director-2402-ltsr-cu2-on-standalone-server">Install/Upgrade Director 2402 LTSR CU2 on Standalone Server</h3>
+<p><strong>Current Release vs LTSR</strong> – Director version 2402 is a Long Term Support Release, which is supported for 5 years from its February 2024 release date. Citrix Support might require you to install the latest Cumulative Update for 2402.</p>
+<p><strong>Install on Delivery Controller?</strong> - The Citrix Virtual Apps and Desktops (CVAD) Delivery Controller metainstaller has an option to install Director on the Delivery Controller machine. Or you can install Director on separate, dedicated machines.</p>
+<ul>
+<li>If Director will connect to multiple sites/farms, then install Director on its own servers.</li>
+<li>For small environments, it might be OK to install Director on the Delivery Controller machines. Otherwise, Director is usually installed on separate machines.</li>
+<li>Director is an IIS website. If you install Director, then IIS is also installed.</li>
+</ul>
+<p><strong>Scripted install</strong> - To install and configure Director using a script, see Dennis Span <a href="http://dennisspan.com/citrix-director-unattended-installation/">Citrix Director unattended installation with PowerShell</a>.<br />
+<img alt="" src="../../../../img/img_594fcbb63c08e.png" /></p>
+<p><strong>Manual installation</strong> - To install Director manually:</p>
+<ol>
+<li>Run <strong>AutoSelect.exe</strong> from the <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2402ltsr-cu2-all-editions.html">Citrix Virtual Apps and Desktops 2402 LTSR CU2 ISO</a>.<br />
+<img alt="" src="../../../img/AUuKmbb5jc0pAAAAAElFTkSuQmCC" /></li>
+<li>In the <strong>Extend Deployment</strong> section, on the bottom left, click <strong>Citrix Director</strong>.<br />
+<img alt="" src="../../../../img/image-137.png" /></li>
+<li>In the <em>Licensing Agreement</em> page, select <strong>I have read, understand, and accept the terms</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-138.png" /></li>
+<li>In the <em>Core Components</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-139.png" /></li>
+<li>
+<p>In the <em>Delivery Controller</em> page, it will ask you for the location of one Delivery Controller in each farm. Only enter one Delivery Controller per farm. If you have multiple Director servers, each Director server can point to a different Delivery Controller in each farm.</p>
+<ul>
+<li>From <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/install-and-configure.html">Citrix Docs</a>: Director automatically discovers all other Delivery Controllers in the same Site and falls back to those other Delivery Controllers if the Controller you specified fails. Click <strong>Test Connection</strong>, and then click <strong>Add</strong>.</li>
+<li>You can optionally force SSL/TLS for the Monitoring service by following the instructions at <a href="https://developer-docs.citrix.com/projects/monitor-service-odata-api/en/latest/#data-access-security">Data Access Security</a> at Citrix Developer Documentation. Also see CTX224433 <a href="https://support.citrix.com/article/CTX224433">Error: “Cannot Retrieve Data” on Citrix Director Dashboard After Securing OData Interface Through TLS</a>.<br />
+<img alt="" src="../../../../img/image-140.png" /></li>
+<li>In the <em>Features</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-141.png" /></li>
+<li>In the <em>Firewall</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-142.png" /></li>
+<li>In the <em>Summary</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../../img/image-143.png" /></li>
+<li>In the <em>Finish</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../../img/image-144.png" /></li>
+<li>
+<p>In IIS Manager, go to Default Web Site &gt; <strong>Director</strong> &gt; <strong>Application Settings</strong>, find <strong>Service.AutoDiscoveryAddresses</strong> and make sure it points to one Delivery Controller in the farm and not to <strong>localhost</strong>. From <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/install-and-configure.html">Citrix Docs</a>: Director automatically discovers all other Delivery Controllers in the same Site and falls back to those other Delivery Controllers if the Delivery Controller you specified fails.</p>
+</li>
+<li>
+<p>You can optionally force SSL/TLS for the Monitoring service by following the instructions at <a href="https://developer-docs.citrix.com/projects/monitor-service-odata-api/en/latest/#data-access-security">Data Access Security</a> at Citrix Developer Documentation. Also see CTX224433 <a href="https://support.citrix.com/article/CTX224433">Error: “Cannot Retrieve Data” on Citrix Director Dashboard After Securing OData Interface Through TLS</a>.<br />
+<img alt="" src="../../../../img/0d140f60e2b1fce9f27afd3c876d596a.png" /><br />
+<img alt="" src="../../../../img/256fcd68f9dae09618bb5065940c5be1.png" /></p>
+</li>
+<li>If you built multiple Director servers, use NetScaler to <a href="../citrix-director-load-balancing-netscaler-12/">load balance</a> them.</li>
+<li>Reconfigure the <a href="#directordomain">default domain</a> in <strong>LogOn.aspx</strong> since upgrading overwrote your domain name configuration.<br />
+<img alt="" src="../../../../img/image-145.png" /></li>
+<li>For info on the new monitoring features in Director, see <a href="#usedirector">Use Director</a> below.</li>
+</ul>
+</li>
+</ol>
+<h3 id="director-default-web-page">Director Default Web Page</h3>
+<p>From Carl Webster <a href="https://www.carlwebster.com/make-dirtector-default-page-within-iis/">How to Make Director the Default Page within IIS</a>: If Director is installed on a standalone server, do the following to set <strong>/Director</strong> as the default path. If Director and StoreFront are on the same server, then you'll probably want StoreFront Receiver for Web as the default web page instead of Director.</p>
+<ol>
+<li>
+<p>Open Notepad elevated (as administrator) and paste the following text:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;script type=&quot;text/javascript&quot;&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;!--
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>window.location=&quot;https://director.corp.com/Director&quot;;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>// --&gt;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&lt;/script&gt;
+</span></code></pre></div>
+</li>
+<li>
+<p>Adjust the <strong>window.location</strong> line to match your FQDN.</p>
+</li>
+<li>Select <strong>File</strong> &gt; <strong>Save</strong> <strong>As</strong> and browse to the IIS folder, by default <strong>C:\inetpub\wwwroot</strong> is the IIS folder.</li>
+<li>Select the Save as type to <strong>All</strong> <strong>types</strong>.</li>
+<li>Type a file name with an html extension and select <strong>Save</strong>.<br />
+<img alt="" src="../../../../img/img_5929b86f58608.png" /></li>
+<li>Open IIS Manager.</li>
+<li>Select the SERVERNAME node (top-level), and double-click <strong>Default Document</strong>, as shown in the following screen shot:<br />
+<img alt="" src="../../../../img/img_5929b8e827fa6.png" /></li>
+<li>On the right, click <strong>Add…</strong>,<br />
+<img alt="" src="../../../../img/img_5929b903ef815.png" /></li>
+<li>Enter the file name of the .html file provided in Step 5. 
+    <img alt="" src="../../../../img/img_5929b9215b230.png" /></li>
+<li>Ensure the .html file is located at the top of the list, as shown in the following screen shot:<br />
+<img alt="" src="../../../../img/img_5929b930d3cc8.png" /></li>
+</ol>
+<h3 id="director-domain-field">Director Domain Field</h3>
+<p>On the Director servers, locate and edit the ‘LogOn.aspx’ file. By default, you can find it at <strong>C:\inetpub\wwwroot\Director\Logon.aspx</strong></p>
+<p>In line 472 you will have the following. To find the line, search for <strong>ID="Domain"</strong>.</p>
+<p><code>&lt;asp:TextBox ID="Domain" runat="server" CssClass="text-box" onfocus="showIndicator(this);" onblur="hideIndicator(this);"&gt;&lt;/asp:TextBox&gt;</code></p>
+<p>In the <strong>ID="Domain"</strong> element, insert a <strong>Text</strong> attribute and set it to your domain name inside quotes. Don't change or add any other attributes. Save the file.</p>
+<p><code>&lt;asp:TextBox ID="Domain" runat="server" **Text="Corp.local"** CssClass="text-box" onfocus="showIndicator(this);" onblur="hideIndicator(this);"&gt;&lt;/asp:TextBox&gt;</code></p>
+<p>This configuration prepopulates the domain field text box with your domain name and still allow the user to change it, if that should be required. Note: this only seems to work if Single Sign-on is disabled.</p>
+<p><img alt="" src="../../../../img/image-147.png" /><img alt="" src="../../../../img/image-148.png" /></p>
+<h3 id="director-tweaks">Director Tweaks</h3>
+<h4 id="session-timeout">Session timeout</h4>
+<p>By default, the idle time session limit of the Director is 65 min. If you wish to change the timeout, here is how to do it:</p>
+<ol>
+<li>Log on to the Director Server as an administrator.</li>
+<li>Open the ‘IIS Manager’</li>
+<li>Browse to ‘Sites &gt; Default Web Site &gt; Director’ in the left-hand pane.</li>
+<li>Open ‘Session State’ in the right-hand pane.<br />
+<img alt="" src="../../../../img/img_5dfe7c5697b06.png" /></li>
+<li>Change the ‘Time-out (in minutes)’ value under ‘Cookie Settings’<br />
+<img alt="" src="../../../../img/img_5dfe7c6adf1a2.png" /></li>
+<li>Click ‘Apply’ in the Actions list</li>
+</ol>
+<h4 id="ssl-check">SSL Check</h4>
+<p>If you are not securing Director with an SSL certificate you will get this error at the logon screen.</p>
+<p><img alt="" src="../../../../img/image-149.png" /></p>
+<p>To stop this:</p>
+<ol>
+<li>Log on to the Director Server as an administrator</li>
+<li>Open the ‘IIS Manager’</li>
+<li>Browse to ‘Sites &gt; Default Web Site &gt; Director’ in the left-hand pane.</li>
+<li>Open ‘Application Settings’ in the right-hand pane.<br />
+<img alt="" src="../../../../img/img_5dfe7ca231ed9.png" /></li>
+<li>Set <strong>UI.EnableSslCheck</strong> to false.<br />
+<img alt="" src="../../../../img/74e2cba172ebc4a927b21021baea4393.png" /></li>
+</ol>
+<h4 id="disable-activity-manager">Disable Activity Manager</h4>
+<p>From <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/install-and-configure/advanced-configuration.html#disable-the-visibility-of-running-applications-in-the-activity-manager">Disable the visibility of running applications in the Activity Manager</a> in <strong>Advanced Configuration</strong> at Citrix Docs: By default, the Activity Manager in Director displays a list of all the running applications and the Windows description in the title bars of any open applications for the user's session. This information can be viewed by all administrators that have access to the Activity Manager feature in Director. For Delegated Administrator roles, this includes Full administrator, Delivery Group administrator, and Help Desk Administrator.</p>
+<p>To protect the privacy of users and the applications they are running, you can disable the Applications tab from listing running applications.</p>
+<ul>
+<li>On the VDA, modify the registry key located at <strong>HKLM\Software\Citrix\Director\TaskManagerDataDisplayed</strong>. By default, the key is set to 1. Change the value to 0, which means the information will not be displayed in the Activity Manager.</li>
+<li>
+<p>On the server with Director installed, modify the setting that controls the visibility of running applications. By default, the value is true, which allows visibility of running applications in the <strong>Applications</strong> tab. Change the value to false, which disables visibility. This option affects only the Activity Manager in Director, not the VDA. Modify the value of the following setting:  </p>
+<p><code>UI.TaskManager.EnableApplications = _false_</code></p>
+<p><img alt="" src="../../../../img/img_5dfe7d5003821.png" /></p>
+</li>
+</ul>
+<h4 id="large-active-directory-multiple-forests">Large Active Directory / Multiple Forests</h4>
+<p>From CTX133013 <a href="https://support.citrix.com/article/CTX133013">Desktop Director User Account Search Process is Slow or Fails</a>: By default, all the Global Catalogs for the Active Directory Forest are searched using Lightweight Directory Access Protocol (LDAP). In a large Active Directory environment, this query can take some time or even time out.</p>
+<p>If multiple forests, see Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/09/12/using-citrix-director-in-a-multiforest-environment/">Using Citrix Director in a MultiForest Environment</a>.</p>
+<ol>
+<li>In Information Server (IIS) Management, under the Desktop Director site, select <strong>Application Settings</strong> and add a new value called <strong>Connector.ActiveDirectory.ForestSearch</strong>. Set it to <strong>False</strong>. This disables searching any domain except the user’s domain and the server’s domain.</li>
+<li>To search more domains, add the searchable domain or domains in the <strong>Connector.ActiveDirectory.Domains</strong> field.<br />
+<img alt="" src="../../../../img/9b2f1e80966e16e4a47d9166928a163b.png" /></li>
+</ol>
+<h4 id="site-groups">Site Groups</h4>
+<p>From Citrix Blog Post <a href="https://www.citrix.com/blogs/2014/10/28/citrix-director-7-6-deep-dive-part-4-troubleshooting-machines/">Citrix Director 7.6 Deep-Dive Part 4: Troubleshooting Machines</a>:</p>
+<p>If there are a large number of machines, the Director administrator can now configure site groups to perform machine search so that they can narrow down searching for the machine inside a site group. The site groups can be created on the Director server by running the configuration tool via command line by running the command:</p>
+<p><code>C:\inetpub\wwwroot\Director\tools\DirectorConfig.exe /createsitegroups</code></p>
+<p>Then provide a site group name and IP address of the delivery controller of the site to create the site group.</p>
+<h3 id="director-saved-filters">Director - Saved Filters</h3>
+<p>In Director, you can create a filter and save it.</p>
+<p><img alt="" src="../../../../img/image-150.png" /></p>
+<p><img alt="" src="../../../../img/image-151.png" /></p>
+<p>The saved filter is then accessible from the right side of the <strong>Filters</strong> node by clicking the <strong>Saved Filters</strong> tab.</p>
+<p><img alt="" src="../../../../img/image-152.png" /></p>
+<p>The saved filters are stored on each Director server at <strong>C:\Inetpub\wwwroot\Director\UserData</strong>. Each user has their own saved filters. The saved filters are not replicated across Director servers.<br />
+<img alt="" src="../../../../img/img_58b1f35b0b99e.png" /></p>
+<p>You can instead configure multiple Director servers to store the filters on a shared UNC path:</p>
+<ol>
+<li>Create and share a folder (e.g. DirectorData).<br />
+<img alt="" src="../../../../img/23f50bfe902e4f5dceae0b04e84f9726.png" /></li>
+<li>The Director server <em>computer</em> accounts need <strong>Modify</strong> permission to the share.<br />
+<img alt="" src="../../../../img/c57516c68ef0e51eeb1f1326dc858131.png" /></li>
+<li>On each Director server, run IIS Manager.</li>
+<li>Go to <strong>Sites &gt; Default Web Site &gt; Director</strong>. In the middle, double-click <strong>Application Settings</strong>.<br />
+<img alt="" src="../../../../img/2cab1969f9ceb04d6d9824e40d483029.png" /></li>
+<li>Change the <strong>Service.UserSettingsPath</strong> setting to the UNC path of the new share.<br />
+<img alt="" src="../../../../img/f51465fa507d796cd5ca77c23ad69693.png" /></li>
+<li>Repeat this on other load balanced Director servers.</li>
+</ol>
+<h3 id="director-and-hdx-insight">Director and HDX Insight</h3>
+<p>You can connect Director to <a href="../citrix-application-delivery-management-adm-13-1/#director">NetScaler Console (formerly ADM)</a> to add <strong>Network</strong> tabs to Director's <strong>Trends</strong> and <strong>Machine Details</strong> views. Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/10/12/configure-director-with-netscaler-management-analytics-system-mas/">Configure Director with NetScaler Management &amp; Analytics System (MAS)</a>.<br />
+<img alt="" src="../../../../img/image-153.png" /></p>
+<ol>
+<li>Run "C:\inetpub\wwwroot\Director\tools\DirectorConfig.exe" /confignetscaler</li>
+<li>Select <strong>NetScaler Management and Analytics System</strong></li>
+</ol>
+<h3 id="director-grooming">Director Grooming</h3>
+<p>If Citrix Virtual Apps and Desktops (CVAD) is not Premium Edition, then all historical Director data is groomed at 30 days.</p>
+<p>For Citrix Virtual Apps and Desktops (CVAD) Premium Edition, by default, most of the historical Director data is groomed at 90 days. This can be adjusted up to 367 days by running a PowerShell cmdlet.</p>
+<ol>
+<li>On a Delivery Controller, run <strong>Get-MonitorConfiguration</strong> to see the current grooming settings.<br />
+<img alt="" src="../../../../img/img_591760ff08bd6.png" /></li>
+<li>Run <strong>Set-MonitorConfiguration</strong> to change the grooming settings.<br />
+<img alt="" src="../../../../img/img_5917611397f51.png" /></li>
+</ol>
+<p>More details on Monitor Service data aggregation and retention can be found at <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/data-retention.html">Data granularity and retention</a> at Citrix Docs.</p>
+<h3 id="director-single-sign-on">Director Single Sign-on</h3>
+<p>You can configure Director to support Integrated Windows Authentication (Single Sign-on). Note: there seem to be issues when not connecting from the local machine or when connecting through a load balancer.</p>
+<ol>
+<li>Run <strong>IIS Manager</strong>. You can launch it from Server Manager (Tools menu), or from the Start Menu, or by running <strong>inetmgr</strong>.<br />
+<img alt="" src="../../../../img/6fbdee942e36c84fce95befccda4535d.png" /></li>
+<li>On the left, expand <strong>Sites</strong>, expand <strong>Default Web Site</strong>, and click <strong>Director</strong>.<br />
+<img alt="" src="../../../../img/img_58b1e540c9cc6.png" /></li>
+<li>In the middle, double-click <strong>Authentication</strong> in the <strong>IIS</strong> section.<br />
+<img alt="" src="../../../../img/b033d6cbf76a24044cfc88aafd46311a.png" /></li>
+<li>Right-click <strong>Windows Authentication</strong> and <strong>Enable</strong> it.<br />
+<img alt="" src="../../../../img/920b921a2c22c53f429e14262c0e2e93.png" /></li>
+<li>Right-click <strong>Anonymous Authentication</strong> and <strong>Disable</strong> it.<br />
+<img alt="" src="../../../../img/234f20a61e392241e82fa4b85671d894.png" /></li>
+<li>Pass-through auth won't work from another computer until you set the http SPN for the Director server. See <a href="https://discussions.citrix.com/topic/374072-director-77-windows-authentication-not-working-with-ns-lb/#entry1910368">Director 7.7 Windows Authentication not working with NS LB</a> at Citrix Discussions.<br />
+<img alt="" src="../../../../img/0263a25e47068106013cc345b9dcd219.png" /></li>
+<li>If Director is not installed on a Controller, then you'll need to configure Kerberos delegation.<br />
+<img alt="" src="../../../../img/bfc4b5851050517e0cd2cdd3e1d4f2ce.png" /></li>
+<li>
+<p>If you are load balancing Director then additional config is required. See <a href="https://discussions.citrix.com/topic/374072-director-77-windows-authentication-not-working-with-ns-lb/#entry1910368">Director 7.7 Windows Authentication not working with NS LB</a> at Citrix Discussions for more info.</p>
+<ol>
+<li>The FQDN for Director load balancing should be different than the FQDN for StoreFront load balancing.</li>
+<li>Create an AD service account that will be used as the Director's ApplicationPoolIdentity.</li>
+<li>
+<p>Create SPN and link it to the service account.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>setspn -S http/loadbalanced_URL domain\user
+</span></code></pre></div>
+</li>
+<li>
+<p>Trust the user account for delegation to any service (Kerberos only) (<em>trust the Director servers for delegation is not necessary in this case</em>). You have to create the SPN before you can do this step.<br />
+<img alt="" src="../../../../img/855aaeae26e6668b644fc43703624ee4.png" /></p>
+</li>
+<li>In IIS manager, on the Application Pools (Director), specify the Identity as user we have created earlier.<br />
+<img alt="" src="../../../../img/fcd272caf057112188bbc7a516dab9e1.png" /></li>
+<li>In IIS manager, expand <strong>Default Web Site</strong>, select <strong>Director</strong>, and open the <strong>Configuration Editor</strong> (bottom of the middle pane).<br />
+<img alt="" src="../../../../img/img_59d0d9d660ba4.png" /></li>
+<li>Use the drop-down to navigate to the following section: <code>system.webServer/security/authentication/windowsAuthentication</code><br />
+<img alt="" src="../../../../img/img_59d0da1fe9a97.png" /></li>
+<li>Set <strong>useAppPoolCredentials = True</strong>, and <strong>useKernelMode = False</strong>. Click <strong>Apply</strong> on the top right.<br />
+<img alt="" src="../../../../img/1d27fc24b54bb8bde61f44e89813a564.png" /><br />
+<img alt="" src="../../../../img/9e68963ca0ed174ae6138757b1fc47a5.png" /></li>
+<li>When you connect to Director you will be automatically logged in. You can change the login account by first logging off.<br />
+<img alt="" src="../../../../img/image-156.png" /></li>
+<li>Then change the drop-down to <strong>User credentials</strong>.<br />
+<img alt="" src="../../../../img/image-155.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="director-multiple-citrix-virtual-apps-and-desktops-cvad-sitesfarms">Director - Multiple Citrix Virtual Apps and Desktops (CVAD) Sites/Farms</h3>
+<ol>
+<li>Run <strong>IIS Manager</strong>. You can launch it from Server Manager (Tools menu) or from the Start Menu, or by running <strong>inetmgr</strong>.<br />
+<img alt="" src="../../../../img/306d4bbe5170313245f2563a55716a28.png" /></li>
+<li>On the left, expand <strong>Sites</strong>, expand <strong>Default Web Site</strong>, and click <strong>Director</strong>.<br />
+<img alt="" src="../../../../img/0211b603dd87e9b78533c76ee0a43878.png" /></li>
+<li>In the middle pane, double-click <strong>Application Settings</strong>.<br />
+<img alt="" src="../../../../img/2cb2b615d88c9d3c767b1ca291cb0a88.png" /></li>
+<li>Find the entry for <strong>Service.</strong><strong>AutoDiscoveryAddresses</strong>, and double-click it.<br />
+<img alt="" src="../../../../img/a5d76b249239b51413eeb067e84a588a.png" /></li>
+<li>If Director is installed on a Controller, <strong>localhost</strong> should already be entered.</li>
+<li>
+<p>Add a comma, and the NetBIOS name of one of the controllers in the 2nd Citrix Virtual Apps and Desktops Site (farm). Only enter one Delivery Controller name. If you have multiple Director servers, you can point each Director server to a different Delivery in the 2nd Citrix Virtual Apps and Desktops Site (farm).</p>
+<ol>
+<li>From <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/install-and-configure.html">Citrix Docs</a>: Director automatically discovers all other Delivery Controllers in the same Site and falls back to those other Delivery Controllers if the Delivery Controller you specified fails.</li>
+<li>You can optionally force SSL/TLS for the Monitoring service by following the instructions at <a href="https://developer-docs.citrix.com/projects/monitor-service-odata-api/en/latest/#data-access-security">Data Access Security</a> at Citrix Developer Documentation.</li>
+</ol>
+</li>
+</ol>
+<h3 id="director-process-monitoring">Director Process Monitoring</h3>
+<p>Director has Process Monitoring, which is detailed in Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/06/13/citrix-director-cpu-memory-usage-and-process-information/">Citrix Director: CPU, Memory Usage and Process Information</a>.<br />
+<img alt="" src="../../../../img/75998afadcc84c97a2fa8017c278c903.png" /></p>
+<p>Process Monitoring is disabled by default. To enable it, configure the <strong>Enable process monitoring</strong> setting in a Citrix Policy. For Citrix Policies in a GPO, find this setting in the computer half of the GPO. Note: this setting could significantly increase the size of the Monitoring database.<br />
+<img alt="" src="../../../../img/a6565cf379b0f80bc674ac35169d5431.png" /></p>
+<h3 id="director-alerts-and-notifications">Director Alerts and Notifications</h3>
+<p>Director supports alert conditions and email notifications. This feature requires Citrix Virtual Apps and Desktops (CVAD) to be licensed with Premium Edition. See Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/01/13/configuring-managing-alerts-and-notifications-using-director/">Configuring &amp; Managing Alerts and Notifications Using Director</a> for more information.</p>
+<p>For CPU, Memory, and ICT RTT alerts, see Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/07/25/7-new-categories-in-director-for-proactive-notifications-alerts/">7 New Categories in Director for Proactive Notifications &amp; Alerts</a></p>
+<p>Director supports Hypervisor Alerts from vSphere and Citrix Hypervisor. The alerts are configured in the hypervisor (e.g., vCenter). When triggered, the hypervisor alerts can be viewed in Director. Director can send email notifications when hypervisor alerts are triggered.<br />
+<img alt="" src="../../../../img/image-157.png" /></p>
+<ul>
+<li>Hypervisors can generate many alerts, but Director does not have a bulk method of clearing those alerts. Citrix wrote a PowerShell script named <a href="https://support.citrix.com/article/CTX269617">DismissAlerts.ps1</a> that runs a SQL query to clear the Hypervisor alerts.</li>
+</ul>
+<p>To configure alerts in Director:</p>
+<ol>
+<li>While logged into Director, click the <strong>Alerts</strong> node.<br />
+<img alt="" src="../../../../img/image-158.png" /></li>
+<li>On the right, switch to the <strong>Email Server</strong> <strong>Configuration</strong> tab.<br />
+<img alt="" src="../../../../img/image-159.png" /></li>
+<li>Enter your SMTP information and click <strong>Send Test Message</strong>. Then click <strong>Save</strong>.<br />
+<img alt="" src="../../../../img/image-160.png" /><br />
+<img alt="" src="../../../../img/image-161.png" /><br />
+<img alt="" src="../../../../img/img_5b16db65cbf8d.png" /></li>
+<li>Switch to the <strong>Citrix Alerts</strong> <strong>Policies</strong> tab.<br />
+<img alt="" src="../../../../img/image-162.png" /></li>
+<li>There are four high-level categories of alerts: <strong>Site Policy</strong>, <strong>Delivery Group Policy</strong>, <strong>Multi-session OS Policy</strong> (aka <strong>Server OS Policy</strong>), and <strong>User Policy</strong>. Click whichever one you want to configure.<br />
+<img alt="" src="../../../../img/image-163.png" /></li>
+<li>Director has built-in alert policies. All you need to do is add notification email addresses to the built-in policies.</li>
+<li>In Director 1811 and newer, in the <strong>Site Policy</strong> tab, click <strong>Edit</strong> for the built-in <strong>Hypervisor Health</strong> policy.<br />
+<img alt="" src="../../../../img/image-164.png" />  <ul>
+<li>In the <strong>Send mails</strong> field, enter a destination email address and click <strong>Add</strong>. Click <strong>Save</strong> when done.<br />
+<img alt="" src="../../../../img/image-165.png" /></li>
+</ul>
+</li>
+<li>On the <strong>Delivery Group Policies</strong> tab, find the built-in Smart Alert, and then click <strong>Edit</strong>. Note: this Smart Alert might not appear until you create a Delivery Group in Citrix Studio.<br />
+<img alt="" src="../../../../img/image-166.png" />  <ol>
+<li>Notice the Conditions that are already enabled. You can change them or add more.<br />
+<img alt="" src="../../../../img/image-167.png" /></li>
+<li>At the bottom of the page, you can enter a destination email address and click <strong>Add</strong>. Then click <strong>Save</strong>.<br />
+<img alt="" src="../../../../img/image-168.png" /></li>
+</ol>
+</li>
+<li>You can create custom Alert Policies by clicking the <strong>Create</strong> button on any of these tabs.<br />
+<img alt="" src="../../../../img/image-169.png" /></li>
+<li>For <strong>Multi-session OS Policy</strong> (aka <strong>Server OS Policy</strong>) and <strong>User Policy</strong>, there are <strong>ICA RTT</strong> alerts.<br />
+<img alt="" src="../../../../img/image-170.png" /></li>
+<li>Citrix has an experimental Desktop Notification Tool. See Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/01/19/desktop-notification-tool-for-citrix-xendesktop/">Desktop Notification Tool For Citrix XenDesktop</a>.<br />
+<img alt="" src="../../../../img/img_59e733f4ec87e.png" /><br />
+<img alt="" src="../../../../img/img_59e734056d89f.png" /></li>
+</ol>
+<h3 id="director-storefront-probes">Director - StoreFront Probes</h3>
+<p>If you are licensed for Premium Edition, then you can install probe agents on remote machines and the probe agents can periodically check if an application can be launched through StoreFront.</p>
+<h4 id="custom-studio-role-for-probe-administrator">Custom Studio Role for Probe Administrator</h4>
+<ol>
+<li>Create a new user account just for probe administration (e.g CORP\ProbeAdmin).</li>
+<li>In Citrix Web Studio, at <strong>Administrators</strong>, on the <strong>Roles</strong> tab, create a new Role with the permissions shown below.<br />
+<img alt="" src="../../../../img/image-171.png" />  <ul>
+<li>Delivery Groups &gt; Read-only<br />
+<img alt="" src="../../../../img/image-172.png" /></li>
+<li>Director &gt; Create\Edit\Remove Alert Email Server Configuration</li>
+<li>Director &gt; Create\Edit\Remove Probe Configurations</li>
+<li>Director &gt; View Applications page</li>
+<li>Director &gt; View Configurations page</li>
+<li>Director &gt; View Trends page</li>
+</ul>
+</li>
+<li>On the <strong>Administrators</strong> tab, add an administrator, select your ProbeAdmin account, and assign it the custom Probe Administrator role that you just created.<br />
+<img alt="" src="../../../../img/image-173.png" /></li>
+</ol>
+<h4 id="storefront-http-basic-authentication">StoreFront HTTP Basic Authentication</h4>
+<ol>
+<li>In StoreFront Console, right-click your Store, and click <strong>Manage Authentication Methods</strong>.<br />
+<img alt="" src="../../../../img/img_5b16ecf4cfb5f.png" /></li>
+<li>Check the box next to <strong>HTTP Basic</strong>, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../../img/img_5b16ed73459b6.png" /></li>
+</ol>
+<h4 id="install-probe-agent">Install Probe Agent</h4>
+<p>To automate the installation and configuration of the Probe Agent, see CTX493268 <a href="https://support.citrix.com/article/CTX493268/automating-citrix-probe-agent-installation-and-configuration">Automating Citrix Probe Agent Installation and Configuration</a>, or see CTA Dennis Span <a href="http://dennisspan.com/citrix-application-probe-agent-unattended-installation/">Citrix Application Probe Agent unattended installation</a>.<br />
+<img alt="" src="../../../../img/img_5b48ca2e6e1a4.png" /></p>
+<p>On one or more remote machines, download and install the Probe Agent.</p>
+<ol>
+<li>Download the <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2402ltsr-cu2-all-editions.html">Citrix Application Probe Agent 2402 LTSR CU2</a>. To see it, expand <strong>Edition specific components</strong> and then click <strong>Premium Edition components</strong>.<br />
+<img alt="" src="../../../../img/image-212.png" /><br />
+<img alt="" src="../../../img/+P3H8NehZ7DlpZe5b1lPSxAWJMYEQRBlAIkxQRBEGUBiTBAEUQaQGBMEQZQBJMYEQRBlAIkxQRBEGUBiTBAEUQaQGBMEQZQBJMYEQRBlAIkxQRBEGUBiTBAEUQb8f9dNKbjIJHg+AAAAAElFTkSuQmCC" /></li>
+<li>On a physical machine in a remote office, install Workspace app 1903 or newer if it isn't installed already.<br />
+<img alt="" src="../../../../img/img_62bcd6ae31374.png" /></li>
+<li>Run the downloaded <strong>CitrixProbeAgent2402.msi</strong>.<br />
+<img alt="" src="../../../../img/image-175.png" /></li>
+<li>In the <em>Welcome to the Citrix Probe Agent Setup Wizard</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/img_5b16ebbebdf31.png" /></li>
+<li>In the <em>End-User License Agreement</em> page, check the box next to <strong>I accept the terms</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/img_5d863165c0f09.png" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/img_5b16ebd791e5a.png" /></li>
+<li>In the <em>Ready to install Citrix Probe Agent</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../../img/img_5b16ebe4c50b3.png" /></li>
+<li>In the <em>Completed the Citrix Probe Agent Setup Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../../img/img_5b16ebf759ca1.png" /></li>
+</ol>
+<h4 id="configure-probe-agent">Configure Probe Agent</h4>
+<ol>
+<li>Every Probe Agent machine should have unique StoreFront test user credentials. Create unique accounts for each machine.</li>
+<li>From the Start Menu of the remote machine, launch <strong>Citrix Probe Agent</strong>.<br />
+<img alt="" src="../../../../img/image-177.png" /></li>
+<li>Click <strong>Start</strong>.<br />
+<img alt="" src="../../../../img/image-176.png" /></li>
+<li>
+<p>In the <em>Configure Workspace Credentials</em> page, enter the StoreFront Receiver for Web URL, or enter a Citrix Gateway URL.</p>
+<ul>
+<li>For Citrix Gateway, the Citrix Gateway Virtual Server must be configured with RfWebUI theme. Other themes, like X1 theme, do not work.</li>
+<li>Probe Agent 2308 and newer support Citrix Gateway authentication with Native OTP.</li>
+<li>Enter the username and password for the probe user for this machine.</li>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-178.png" /></li>
+<li>In the <em>Configure to Display Probe Result</em> page, enter the URL to Director. Make sure you include <strong>/Director</strong> at the end of the URL.</li>
+<li>Enter the Probe Admin credentials and click <strong>Validate</strong>.</li>
+<li>Select a Site (farm) if there's more than one.</li>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-179.png" /></li>
+<li>In the <em>View Summary</em> page, you may close the window.<br />
+<img alt="" src="../../../../img/image-180.png" /></li>
+<li>Login to Director as the Probe Admin account.</li>
+<li>On the left, click <strong>Probes</strong>. On the right, click the <strong>Configuration</strong> tab.<br />
+<img alt="" src="../../../../img/image-182.png" /></li>
+<li>At the top of the page, select either <strong>Application Probe</strong>, or <strong>Desktop Probe</strong>.</li>
+<li>Click <strong>Create Probe</strong>.<br />
+<img alt="" src="../../../../img/image-183.png" /></li>
+<li>
+<p>In the <em>Create Probe</em> page:</p>
+</li>
+<li>
+<p>Give the probe configuration a name.</p>
+</li>
+<li>Select one or more <strong>Applications</strong> or <strong>Desktops</strong> to test.</li>
+<li>Select the registered Probe Agent machine(s) to run the probe from.</li>
+<li>Enter an email address for probe result notifications.</li>
+<li>Select one time per day to run the probe. You can create multiple probe configurations to run the probe multiple times per day.</li>
+<li>Click <strong>Save</strong>.<br />
+<img alt="" src="../../../../img/image-184.png" /></li>
+<li>The probe configurations are stored in the Monitoring database so there shouldn't be any concerns with load balancing of Director.<br />
+<img alt="" src="../../../../img/img_5b16f7a1f09e3.png" /></li>
+<li>To view the probe results, switch to the <strong>Probe Runs</strong> tab.<br />
+<img alt="" src="../../../../img/image-185.png" /></li>
+</ul>
+</li>
+</ol>
+<h3 id="director-custom-reports">Director - Custom Reports</h3>
+<p>In Director, in the <strong>Trends</strong> view, there's a <strong>Custom Reports</strong> tab that guides you through creating a custom OData Query. This tab only appears if you have Citrix Virtual Apps and Desktops (CVAD) Premium Edition.<br />
+<img alt="" src="../../../../img/image-186.png" /></p>
+<p>The Monitoring database contains more data than is exposed in Director. To view this data, the Monitoring service has an OData Data Feed that can be queried.</p>
+<ul>
+<li>
+<p>You can use Excel to pull data from the OData Data feed. See Citrix Blog Post - <a href="https://www.citrix.com/blogs/2015/02/12/citrix-director-analyzing-the-monitoring-data-by-means-of-custom-reports/">Citrix Director – Analyzing the Monitoring Data by Means of Custom Reports</a>. This particular blog post shows how to use an Excel PivotChart to display the connected Receiver versions.</p>
+<ul>
+<li>Also see Alexander Ollischer <a href="http://blog.ollischer.com/citrix-xendesktop-7-x-query-citrix-receiver-versions-connecting-to-your-environment-xls-report">Citrix XenDesktop 7.x – Query Citrix Receiver Versions connecting to your environment – XLS Report</a></li>
+<li>Citrix CTX211428 <a href="https://support.citrix.com/article/CTX211428">Using Excel to Report on Desktop Director Data</a> uses Power Pivot.</li>
+<li>Or for Linqpad, see Citrix Blog Post - <a href="https://www.citrix.com/blogs/2014/01/14/creating-director-custom-reports-for-monitoring-xendesktop/">Creating Director Custom reports for Monitoring XenDesktop using Linqpad</a></li>
+<li>CTA David Ott <a href="http://www.citrixirc.com/?p=614">XenDesktop Usage Report</a> shows that querying OData can be slow and it's sometimes faster to query the actual Monitoring database. <a href="http://www.citrixirc.com/?p=617">Updated Report</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="use-director">Use Director</h3>
+<p>The newer Director features usually require Delivery Controllers and VDAs to be at the same version or newer than Director. Director depends on the Monitoring Service that is built into the Delivery Controller. The Monitoring Service gathers data from the VDAs.</p>
+<p>See <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/site-analytics.html">Site Analytics</a> at Citrix Docs.<br />
+<img alt="" src="../../../../img/Pasted-141.png" /></p>
+<p>See the various <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/troubleshoot-deployments/user-issues.html">Troubleshoot topics</a> at Citrix Docs.<br />
+<img alt="" src="../../../../img/Pasted-136.png" /></p>
+<h4 id="director-2402-new-features">Director 2402 new features</h4>
+<p>Director 2402 has a new theme. Tabs are now shown on the left.<br />
+<img alt="" src="../../../../img/image-70.png" /></p>
+<p>When you <strong>Search</strong> for a user and select a session you see the <strong>Activity Manager</strong> page. It has a new theme.<br />
+<img alt="" src="../../../../img/image-188.png" /></p>
+<p>The <strong>User Details</strong> page also has a new theme. Search for the user and then click <strong>View Details</strong>.<br />
+<img alt="" src="../../../../img/image-189.png" /></p>
+<p>The <strong>Session Performance</strong> tab shows you trends of some network metrics. See <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director/troubleshoot-deployments/user-issues/session-performance#session-topology">Diagnose Session Performance issues</a>.<br />
+<img alt="" src="../../../../img/image-190.png" /></p>
+<p><strong>Session Details</strong> shows if Teams is optimized or not. Teams 2.1 is supported in Director 2402 with VDA 2402. 
+<img alt="" src="../../../../img/image-72.png" /></p>
+<p>Session Details has an option to enable <strong>Session Recording</strong> for the session. <strong>Dynamic Session Recording</strong> requires the Session Recording cloud service. <strong>Policy based Session Recording</strong> requires running <strong>C:\inetpub\wwwroot\Director\tools\DirectorConfig.exe /configsessionrecording</strong> on the Director server.<br />
+<img alt="" src="../../../../img/image-74.png" /> </p>
+<p>The Session Selector button lets you play recordings.<br />
+<img alt="" src="../../../../img/image-75.png" /><br />
+<img alt="" src="../../../../img/image-76.png" /></p>
+<p><strong>Session Logon</strong> tab in the <strong>User Details</strong> page has an enhanced visualization of the logon duration phases. The new representation shows the overlapping of the individual logon phases.<br />
+<img alt="" src="../../../../img/image-191.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

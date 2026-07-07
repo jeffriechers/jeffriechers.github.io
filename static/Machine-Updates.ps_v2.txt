@@ -1,0 +1,238 @@
+# Script created by Jeff Riechers
+# Downloaded from www.jeffriechers.com
+# Contact me with questions or recommendations at jeffriechers@gmail.com
+
+# Self-elevate the script if required
+if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
+ if ([int](Get-CimInstance -Class Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber) -ge 6000) {
+  $CommandLine = "-File `"" + $MyInvocation.MyCommand.Path + "`" " + $MyInvocation.UnboundArguments
+  Start-Process -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine
+  Exit
+ }
+}
+#Common Code
+$Options = [System.Management.Automation.Host.ChoiceDescription[]] @("&Yes", "&No")
+[int]$defaultchoice = 0
+
+Start-Transcript -Path (Join-Path $env:TEMP "Updates.log") -Append -Force
+#Start Stopped Services
+Write-Output "Starting stopped services"
+Set-Service BITS -StartupType auto
+Start-Service BITS
+
+Set-Service wuauserv -StartupType auto
+Start-Service wuauserv
+
+#Windows Updates
+Write-Output "Starting scan for Windows Updates"
+$WindowsUpdateproc = Start-Process -Filepath "c:\windows\system32\usoclient.exe" -ArgumentList "scaninstallwait" -Passthru
+$WindowsUpdateproc.WaitforExit()
+			
+#Teams 2.x Install
+Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Teams" -Name "disableAutoUpdate"
+$Teams2InstallPath = "C:\Program Files\WindowsApps\MSTeams_*"
+If(!(test-path -PathType container $Teams2InstallPath)) {
+
+$winver = Get-ComputerInfo | select -ExpandProperty WindowsProductName
+#2019 Check
+If($winver -like "Windows Server 2019*") {
+Write-output "Teams 2.x not installed, downloading the latest MSIX package."
+    New-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\Appx" -Name "AllowAllTrustedApps" -Value "00000001" -PropertyType DWORD -Force
+	$Teams2DownloadURI = "https://go.microsoft.com/fwlink/?linkid=2196106"
+	$Teams2Path = Join-Path "$($env:TEMP)" "MSTeams-x64.msix"
+	Write-Output "Downloading Now"
+	(New-Object System.Net.WebClient).DownloadFile($Teams2DownloadURI, $Teams2Path)
+    $DISM = "c:\windows\system32\Dism.exe"
+    $Switches = " /Online /Add-ProvisionedAppxPackage /PackagePath:$Teams2Path /SkipLicense"
+    Write-output "Installing Teams 2 for Windows Server 2019"
+    $Team2Installproc = Start-Process -FilePath $DISM -ArgumentList $Switches  -PassThru
+	$Team2Installproc.WaitForExit()}
+else{
+
+#2022/2025 Install
+Write-output "Teams 2.x not installed, downloading the latest bootstrapper.exe"
+	$Teams2DownloadURI = "https://go.microsoft.com/fwlink/?linkid=2243204&clcid=0x409"
+	$Teams2Path = Join-Path "$($env:TEMP)" "teamsbootstrapper.exe"
+	Write-Output "Downloading Now"
+	(New-Object System.Net.WebClient).DownloadFile($Teams2DownloadURI, $Teams2Path)
+	$Execute2Setup = " -p"
+    Write-output "Installing Teams 2 for Windows Server 2022/2025"
+	$Team2Installproc = Start-Process -FilePath $Teams2Path -ArgumentList $Execute2Setup -PassThru
+	$Team2Installproc.WaitForExit()
+	Start-Sleep -Seconds 60
+}}
+else {
+Write-Output "Teams already installed proceeding to check for updates."
+}
+
+$CurrentTeamsDirectoryCount = ((Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname).Count
+$CurrentTeams = (Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname | sort name | select -First 1
+Write-Output "Setting Execute permissions on existing WindowsApps MSTeams Foler"
+#Add Execute permissions for users to Teams WindowsApps Location  
+   $identity = 'Users'  
+   $rights = 'Execute'  
+   $type = 'Allow'  
+   $inheritance = 'ContainerInherit, ObjectInherit'  
+   $propagate = 'None'  
+   $ace = New-Object System.Security.AccessControl.FileSystemAccessRule($identity, $rights, $inheritance, $propagate, $type)  
+   $acl = Get-Acl -Path $CurrentTeams  
+   $acl.AddAccessRule($ace)  
+   Set-Acl -Path $CurrentTeams -AclObject $acl  
+Write-Output "Launching Teams to search for updates"
+$updateprocess = Start-Process -FilePath $CurrentTeams"\ms-teams.exe" -PassThru
+Start-Sleep -Seconds 60
+$stopteams = Stop-Process -name "ms-teams"
+$UpdatedTeamsDirectoryCount = ((Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname).Count
+if ($UpdatedTeamsDirectoryCount -gt $CurrentTeamsDirectoryCount) {
+Write-Output "Setting Execute permissions on existing WindowsApps MSTeams Foler"
+	Write-Output "There is an updated version of teams, launching it to configure it as the new version."
+	Start-Sleep -Seconds 60
+	$updateprocess = Start-Process -FilePath $CurrentTeams"\ms-teams.exe" -WindowStyle Minimized -PassThru
+	Start-Sleep -Seconds 60
+	$stopteams = Stop-Process -name "ms-teams"
+	$UpdatedTeams = (Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname | sort name | select -First 1
+#Add Execute permissions for users to Updated Teams WindowsApps Location  
+   $identity = 'Users'  
+   $rights = 'Execute'  
+   $type = 'Allow'  
+   $inheritance = 'ContainerInherit, ObjectInherit'  
+   $propagate = 'None'  
+   $ace = New-Object System.Security.AccessControl.FileSystemAccessRule($identity, $rights, $inheritance, $propagate, $type)  
+   $acl = Get-Acl -Path $UpdatedTeams 
+   $acl.AddAccessRule($ace)  
+   Set-Acl -Path $UpdatedTeams -AclObject $acl 
+}
+else {
+Write-Output "There are no new Teams 2.x updates available."
+}
+
+# Teams Outlook Meeting Add-in Install and Update
+# Remove current Teams add-in
+Uninstall-Package -Name "Microsoft Teams Meeting Add-in for Microsoft Office" -Force
+Start-Sleep -Seconds 15
+
+# Install latest Teams Meeting Add-in
+$UpdatedTeams = (Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname | sort name | select -First 1
+$installableversion = Get-AppLockerFileInformation -Path $UpdatedTeams"\MICROSOFTTEAMSMEETINGADDININSTALLER.MSI" | Select -ExpandProperty Publisher | select BinaryVersion
+$getversionnumber = $installableversion.BinaryVersion.toString()
+$TeamsAddinInstall = start-process -filepath "C:\Windows\System32\msiexec.exe"-argumentList '/i MicrosoftTeamsMeetingAddinInstaller.msi /qn ALLUSERS=1 /norestart TARGETDIR="C:\Program Files (x86)\Microsoft\TeamsMeetingAddin\',$getversionnumber,'"' -WorkingDirectory $UpdatedTeams -Passthru
+$TeamsAddinInstall.WaitForExit()
+	
+
+
+#Office 365 Updates
+Write-Output "Checking for installed Office"
+$OfficeInstall = 'C:\Program Files (x86)\Common Files\microsoft shared\ClickToRun\Officec2rclient.exe'
+if (-not(Test-Path -Path $OfficeInstall)) {
+	Write-Output "Office 32 bit not installed, skipping updates"
+}
+else {
+	$Officeinstallproc = Start-Process -Filepath "C:\Program Files (x86)\Common Files\microsoft shared\ClickToRun\Officec2rclient.exe" -ArgumentList "/update user" -Passthru
+	$Officeinstallproc.WaitforExit()
+	Write-Output "Office 32 bit Updated"
+}
+
+$Office64Install = 'C:\Program Files\Common Files\microsoft shared\ClickToRun\Officec2rclient.exe'
+if (-not(Test-Path -Path $Office64Install)) {
+	Write-Output "Office not installed, skipping updates"
+}
+else {
+	$Office64installproc = Start-Process -Filepath "C:\Program Files\Common Files\microsoft shared\ClickToRun\Officec2rclient.exe" -ArgumentList "/update user" -Passthru
+	$Office64installproc.WaitforExit()
+	Write-Output "Office Updated"
+}
+
+
+#OneDrive install and Update
+$OneDriveDownloadURI = "https://go.microsoft.com/fwlink/p/?LinkID=2182910"
+$OneDrivePath = Join-Path "$($env:TEMP)" "OneDriveSetup.exe"
+$OnedriveInstalledVersion = "000"
+
+#Start download 
+Write-Output "Starting download latest OneDrive client"
+#(Replaced with faster New-Object download)Invoke-WebRequest -Uri $OneDriveDownloadURI -OutFile (Join-Path "$($env:TEMP)" "OneDriveSetup.exe")
+(New-Object System.Net.WebClient).DownloadFile($OneDriveDownloadURI, $OneDrivePath)
+
+#Check if downloaded version is newer than installed
+$OnedriveDLVersion = Get-Item $OneDrivePath |Select-Object -ExpandProperty VersionInfo | Select-Object -Property ProductVersion | format-table -hidetableheaders | Out-String
+$OnedriveInstalledVersion = get-package -Name "Microsoft Onedrive" | Select-Object -Property Version | format-table -hidetableheaders | Out-String
+
+Write-Output "Downloaded Version"
+Write-Output $OnedriveDLVersion.Trim()
+Write-Output "Installed Version"
+Write-Output $OnedriveInstalledVersion.Trim()
+
+if ($OnedriveDLVersion.Trim() -gt $OnedriveInstalledVersion.Trim()) {
+	
+	#Onedrive Install or Update
+	$OnedriveTitle = "Onedrive is out of date"
+	$OnedriveInfo = "Do you want to update Onedrive?"
+
+	$OnedriveOptions = $host.UI.PromptForChoice($OnedriveTitle , $OnedriveInfo , $Options,$defaultchoice)
+	switch($OnedriveOptions)
+		{
+			0 {	
+
+				Write-Output "Initialize OneDriveSetup with allusers argument..."
+				$OneDriveSetup = (Join-Path "$($env:TEMP)" "OneDriveSetup.exe")
+				Write-Output "Now time to install OneDrive in program folder $($OneDriveSetup) /allusers"
+				$OneDriveproc = Start-Process -FilePath $OneDriveSetup -ArgumentList "/allusers" -WindowStyle Hidden -PassThru
+				$OneDriveproc.WaitForExit()
+				Write-Output "OneDriveSetup exit code: $($OneDriveproc.ExitCode)"
+			}
+
+			1 {
+				Write-Output "Skipping Upgrade as requested."
+			}
+		}
+	
+
+	}
+	else {
+		Write-Output "Installed version is newer than or equal to download, skipping install."
+		}
+
+#Software Updates either by choco or by application update process
+$ChocoInstall = 'C:\ProgramData\chocolatey\choco.exe'
+if (-not(Test-Path -Path $ChocoInstall)) {
+	Write-Output "Chocolatey not installed, manually updating."
+	$FirefoxInstall = 'C:\Program Files\Mozilla Firefox\updater.exe'
+	if (-not(Test-Path -Path $FirefoxInstall)) {
+		Write-Output "Firefox not installed, skipping updates"
+	}
+	else {
+		$firefoxinstallproc = Start-Process -Filepath "C:\Program Files\Mozilla Firefox\updater.exe" -Passthru
+		$firefoxinstallproc.WaitforExit()
+		Write-Output "Firefox Updated"
+	}
+	$Chrome64Install = 'C:\Program Files\Google\Update\GoogleUpdate.exe'
+	if (-not(Test-Path -Path $Chrome64Install)) {
+		Write-Output "Chrome 64 bit not installed, skipping updates"
+	}
+	else {
+		$Chrome64Installproc = Start-Process -Filepath "C:\Program Files\Google\Update\GoogleUpdate.exe" -ArgumentList "/ua /installsource scheduler" -Passthru
+		$Chrome64Installproc.WaitforExit()
+		Write-Output "Chrome 64 bit Updated"
+	}
+	$ChromeInstall = 'C:\Program Files (x86)\Google\Update\GoogleUpdate.exe'
+	if (-not(Test-Path -Path $ChromeInstall)) {
+		Write-Output "Chrome 32 bit not installed, skipping updates"
+	}
+	else {
+		$ChromeInstallproc = Start-Process -Filepath "C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" -ArgumentList "/ua /installsource scheduler" -Passthru
+		$ChromeInstallproc.WaitforExit()
+		Write-Output "Chrome 32 bit Updated"
+	}
+	
+	
+}
+else {
+	$Chocoproc = Start-Process -FilePath "choco" -ArgumentList "upgrade all --ignore-checksums -y" -Passthru
+	$Chocoproc.WaitForExit()
+	Write-Output "Chocolatey Update process complete."
+}
+
+#Update Group Policy
+	Invoke-Command -ComputerName localhost -ScriptBlock {echo nn | gpupdate.exe /force} 	
+	Write-Host "Group Policy Update process complete."
+Stop-Transcript

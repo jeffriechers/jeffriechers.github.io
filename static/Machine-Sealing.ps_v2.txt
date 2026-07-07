@@ -1,0 +1,83 @@
+# Script created by Jeff Riechers
+# Downloaded from www.jeffriechers.com
+# Contact me with questions or recommendations at jeffriechers@gmail.com
+
+# Self-elevate the script if required
+if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
+ if ([int](Get-CimInstance -Class Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber) -ge 6000) {
+  $CommandLine = "-File `"" + $MyInvocation.MyCommand.Path + "`" " + $MyInvocation.UnboundArguments
+  Start-Process -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine
+  Exit
+ }
+}
+
+#Remove FSLogix profile paths from registry, will be updated by next GPUpdate
+Remove-ItemProperty -Path "HKLM:\SOFTWARE\FSLogix\Profiles" -Name "CCDLocations"
+Remove-ItemProperty -Path "HKLM:\SOFTWARE\FSLogix\Profiles" -Name "VHDLocations"
+
+#Update Group Policy
+	Invoke-Command -ComputerName localhost -ScriptBlock {echo nn | gpupdate.exe /force} 	
+	Write-Host "Group Policy Update process complete."
+
+#Repair Registry entry for screensaver timeouts
+New-ItemProperty -Path "HKLM:\SOFTWARE\Citrix\Graphics" -Name "SetDisplayRequiredMode" -Value "00000000" -PropertyType DWORD -Force
+
+#Install Teams 2.1 Registry entries
+New-Item -Path "HKLM:\SOFTWARE\WOW6432Node\Citrix" -Name WebSocketService
+New-Item -Path "HKLM:\SOFTWARE\Microsoft" -Name Teams
+New-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Citrix\WebSocketService" -Name "ProcessWhitelist" -Value "msedgewebview2.exe " -PropertyType MultiString -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Teams" -Name "disableAutoUpdate" -Value "00000001" -PropertyType DWORD -Force
+
+#Stop Running Services
+Stop-Service wuauserv
+Set-Service wuauserv -StartupType disabled
+
+Stop-Service BITS
+Set-Service BITS -StartupType disabled
+
+#Run Windows Defender update and quickscan
+$WindowsDefenderproc = Start-Process -FilePath "C:\Program Files\Microsoft Security Client\mpcmdrun.exe" -ArgumentList "-SignatureUpdateAndQuickScan" -Passthru
+$WindowsDefenderproc.WaitForExit()
+
+# WEM Cache Update if installed
+$OldWemInstall = 'C:\Program Files (x86)\Norskale\Norskale Agent Host\AgentCacheUtility.exe'
+if (-not(Test-Path -Path $OldWemInstall)) {
+	Write-Host "This version of WEM is not installed."
+}
+else {
+	$OldWemInstallproc = Start-Process -Filepath "C:\Program Files (x86)\Norskale\Norskale Agent Host\AgentCacheUtility.exe" -ArgumentList "-refreshcache" -Passthru
+	$OldWemInstallproc.WaitforExit()
+	Write-Host "WEM Cache Updated"
+}
+$WemInstall = 'C:\Program Files (x86)\Citrix\Workspace Environment Management Agent\AgentCacheUtility.exe'
+if (-not(Test-Path -Path $WemInstall)) {
+	Write-Host "This version of WEM is not installed."
+}
+else {
+	$WemInstallproc = Start-Process -Filepath "C:\Program Files (x86)\Citrix\Workspace Environment Management Agent\AgentCacheUtility.exe" -ArgumentList "-refreshcache" -Passthru
+	$WemInstallproc.WaitforExit()
+	Write-Host "WEM Cache Updated"
+}
+
+#Disable Scheduled Tasks
+Get-ScheduledTask -TaskPath "\" | Disable-ScheduledTask
+
+#Cleanup Temp files
+Get-ChildItem -Path c:\windows\temp -include * -Recurse | foreach { $_.Delete()}
+Get-ChildItem -Path c:\temp -include * -Recurse | foreach { $_.Delete()}
+Get-ChildItem -Path C:\Users\Public\Desktop -include * -Recurse | foreach { $_.Delete()}
+Get-ChildItem -Path C:\ProgramData\FSLogix\Logs -include * -Recurse | foreach { $_.Delete()}
+
+
+#Remove Azure Arc Setup Systray
+if (Test-Path -Path "C:\Windows\AzureArcSetup")  {Remove-WindowsFeature AzureArcSetup }
+if (Test-Path -Path "C:\Windows\AzureArcSetup")  {DISM /online /Remove-Capability /CapabilityName:AzureArcSetup~~~~}
+
+#Remove Zero Machine from Hybrid Azure-AD
+
+$LeaveAzureADproc = Start-Process -Filepath "c:\windows\system32\dsregcmd.exe" -ArgumentList "/leave" -Passthru
+$LeaveAzureADproc.WaitforExit()
+Write-Host "Machine has left Azure AD"
+
+#Shutdown Computer for capture
+Stop-Computer -ComputerName localhost -Force

@@ -1,0 +1,15 @@
+# Certificate update process
+# Created by Jeff Riechers
+# Downloaded from https://www.jeffriechers.com
+# For additional steps needed to prep the environment visit my site for more.
+# Save this file as a ps1.  I recommend C:\CertificateUpdate\ on a secure datacenter server
+
+# Enter the arguements for your DNS host, my example here is for GoDaddy
+# Let's Encrypt works with various DNS vendors, so check this site for more info for your vendor.
+# https://poshac.me/docs/v4/Plugins/
+# 
+# The allaccounts option will process all certificates generated for this user on this machine. 
+# This makes creating a single machine managing all your certificates useful if you have multiple domains.
+
+$pArgs = @{GDKey='<your GoDaddy Key>';GDSecret='<your GoDaddy Secret'}
+submit-renewal -allaccounts -PluginArgs $pArgs -force

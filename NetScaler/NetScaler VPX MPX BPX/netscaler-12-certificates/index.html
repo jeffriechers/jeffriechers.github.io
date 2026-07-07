@@ -1,0 +1,6031 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../netscaler-11-system-configuration/">
+      
+      
+        <link rel="next" href="../netscaler-12-system-configuration/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Certificates - NetScaler 12 / Citrix ADC 12.1 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Certificates - NetScaler 12 / Citrix ADC 12.1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-pfx-certificate-to-pem-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convert .PFX Certificate to PEM Format
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convert .PFX Certificate to PEM Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-export-a-windows-certificate-in-pfx-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To export a Windows certificate in .pfx format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-import-a-pfx-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To import a .pfx file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-convert-pfx-to-pem-with-private-key-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To convert PFX to PEM (with Private Key encryption)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-key-and-certificate-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Key and Certificate Request
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Key and Certificate Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-create-a-key-pair-on-netscaler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To create a key pair on NetScaler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-create-csr-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To create CSR file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-csr-signed-by-ca-and-install-certificate-on-netscaler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get CSR signed by CA, and install certificate on NetScaler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intermediate Certificate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intermediate Certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-get-the-correct-intermediate-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To get the correct intermediate certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-import-the-intermediate-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To import the intermediate certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-intermediate-certificate-to-server-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link Intermediate Certificate to Server Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-certificate-files-from-netscaler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export Certificate Files from NetScaler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-management-certificate-key-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Management Certificate Key Length
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace-management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replace Management Certificate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Replace Management Certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Management Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-of-replacing-the-management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods of replacing the Management Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-certificate-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Certificate Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-binding-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Binding Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-management-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force Management SSL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-certificate-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL Certificate – Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-pfx-certificate-to-pem-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convert .PFX Certificate to PEM Format
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convert .PFX Certificate to PEM Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-export-a-windows-certificate-in-pfx-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To export a Windows certificate in .pfx format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-import-a-pfx-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To import a .pfx file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-convert-pfx-to-pem-with-private-key-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To convert PFX to PEM (with Private Key encryption)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-key-and-certificate-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Key and Certificate Request
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Key and Certificate Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-create-a-key-pair-on-netscaler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To create a key pair on NetScaler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-create-csr-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To create CSR file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-csr-signed-by-ca-and-install-certificate-on-netscaler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get CSR signed by CA, and install certificate on NetScaler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intermediate Certificate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intermediate Certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-get-the-correct-intermediate-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To get the correct intermediate certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-import-the-intermediate-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To import the intermediate certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-intermediate-certificate-to-server-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link Intermediate Certificate to Server Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-certificate-files-from-netscaler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export Certificate Files from NetScaler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-management-certificate-key-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Management Certificate Key Length
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace-management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replace Management Certificate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Replace Management Certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Management Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-of-replacing-the-management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods of replacing the Management Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-certificate-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Certificate Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-binding-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Binding Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-management-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force Management SSL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-certificate-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL Certificate – Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Certificates - NetScaler 12 / Citrix ADC 12.1</h1>
+
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li>Two common methods of getting certificates on NetScaler:<ul>
+<li><a href="#pfx">Import .PFX Certificate to NetScaler</a></li>
+<li><a href="#csr">Create Key and CSR on the appliance</a></li>
+</ul>
+</li>
+<li><a href="#intermediate">Import the intermediate certificate and bind it</a>.</li>
+<li><a href="#exportcertfiles">Export/Download certificate files from NetScaler</a></li>
+<li><a href="#replace">Replace the management certificate</a>, and then <a href="#mgmtssl">force SSL access for management</a>.</li>
+<li><a href="#updatecert">Update certificates</a> before they expire.</li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2018 Oct 7 - <a href="#csr">Create Key File</a> - 12.1 build 49 supports AES256 encoding<ul>
+<li><a href="#csr">Create CSR File</a> - added info from  CTX232305 <a href="https://support.citrix.com/article/CTX232305">How to create a SAN CSR in NetScaler 12.0 57.19</a></li>
+</ul>
+</li>
+<li>2018 Mar 13 - in <a href="#replace">Replace Management Certificate</a> section, added link to CTP George Spiers <a href="http://www.jgspiers.com/secure-management-access-netscaler-and-create-unique-certificates-in-highly-available-setup/">How to secure management access to NetScaler and create unique certificates in a highly available setup</a></li>
+</ul>
+<h3 id="convert-pfx-certificate-to-pem-format">Convert .PFX Certificate to PEM Format</h3>
+<p>You can export a certificate (with private key) from Windows, and import it to NetScaler.</p>
+<h4 id="to-export-a-windows-certificate-in-pfx-format">To export a Windows certificate in .pfx format</h4>
+<ol>
+<li>If Windows Server 2012 or newer, on the Windows server that has the certificate, you can run <strong>certlm.msc</strong> to open the Certificates console pointing at Local Computer.<ol>
+<li>Or, run <strong>mmc.exe</strong>, manually add the <strong>Certificates</strong> snap-in, and point it to Local Computer.</li>
+</ol>
+</li>
+<li>Go to <strong>Personal &gt; Certificates</strong>.</li>
+<li>Right-click the certificate, expand <strong>All Tasks</strong>, and click <strong>Export</strong>. <img alt="" src="../../../img/img_59861567d5eb8.png" /></li>
+<li>On the <em>Welcome to the Certificate Export Wizard</em> page, click <strong>Next</strong>.</li>
+<li>On the <em>Export Private Key</em> page, select <strong>Yes, export the private key</strong>, and click <strong>Next</strong>. <img alt="" src="../../../img/img_598615f1c7489.png" /></li>
+<li>On the <em>Export File Format</em> page, click <strong>Next</strong>. <img alt="" src="../../../img/img_5986160c5d5ac.png" /></li>
+<li>On the <em>Security</em> page, check the box next to <strong>Password</strong>, and enter a new temporary password. Click <strong>Next.</strong> <img alt="" src="../../../img/img_5986162841795.png" /></li>
+<li>On the <em>File to Export</em> page, specify a save location and name the .pfx file. Don't put any spaces in the filename. Click <strong>Next</strong>. <img alt="" src="../../../img/img_59861682924a3.png" /></li>
+<li>In the <em>Completing the Certificate Export Wizard</em> page, click <strong>Finish</strong>.</li>
+<li>Click <strong>OK</strong> when prompted that the export was successful.</li>
+</ol>
+<h4 id="to-import-a-pfx-file">To import a .pfx file</h4>
+<p>Newer builds of NetScaler ADC (e.g. 12.0 build 59 and 12.1 build 49) import .pfx files and use them in their native encrypted format.</p>
+<ul>
+<li>NetScaler ADC 12.0 build 58 and NetScaler ADC 12.1 build 48 had bugs preventing PFX files from importing correctly. Upgrade to a newer build.</li>
+</ul>
+<p>Older builds of NetScaler ADC convert the .pfx file to an unencrypted .pem file that is named the same as the original .pfx file but with an additional .ns extension.</p>
+<p>To import the .pfx file:</p>
+<ol>
+<li>On the NetScaler, expand <strong>Traffic</strong> <strong>Management</strong>, and click <strong>SSL</strong>.</li>
+<li>If the SSL feature is disabled, right-click the <strong>SSL</strong> node, and click <strong>Enable Feature</strong>. <img alt="" src="../../../img/img_5bba1ffc3dfa6.png" /></li>
+<li>Go to <strong>Traffic Management &gt; SSL &gt;</strong> <strong>Certificates &gt; Server Certificates.</strong> <img alt="" src="../../../img/img_5bba20158dc3d.png" /></li>
+<li>There are four different certificate nodes:<ol>
+<li><strong>Server Certificates</strong> have private keys. These certificates are intended to be bound to SSL vServers.</li>
+<li><strong>Client Certificates</strong> also have private keys, but they are intended to be bound to Services so NetScaler can perform client-certificate authentication against back-end web servers.</li>
+<li><strong>CA Certificates</strong> don't have private keys. The CA certificates node contains intermediate certificates that are linked to Server Certificates. CA certificates can also be used for SAML authentication, and to verify client certificates.</li>
+<li><strong>Unknown Certificates</strong> list the certificates that don't fall under the other categories. The Azure SAML certificate shows up here.</li>
+</ol>
+</li>
+<li>On the left, click the <strong>Server Certificates</strong> node.</li>
+<li>On the right, click <strong>Install</strong>. <img alt="" src="../../../img/img_5bba2055df7fb.png" /></li>
+<li>Give the certificate (Certificate-Key Pair) a name.</li>
+<li>Click the drop-down next to <strong>Choose File</strong>, select <strong>Local</strong>, and browse to the .pfx file that you exported earlier. <img alt="" src="../../../img/img_5bba20d65ba41.png" /></li>
+<li>After browsing to the .pfx file, NetScaler ADC will prompt you to enter the password for the .pfx file.</li>
+<li>Then click <strong>Install</strong>. <img alt="" src="../../../img/img_5bba20f8aff07.png" /></li>
+<li>If you click the information icon next to the new certificate... <img alt="" src="../../../img/img_5bba2140db93e.png" /><ul>
+<li>You’ll see that NetScaler ADC uses the file in native .pfx format. No PEM conversion. <img alt="" src="../../../img/img_5bba21524155a.png" /></li>
+</ul>
+</li>
+<li>You can now <a href="#intermediate">link an intermediate certificate</a> to this SSL certificate, and then bind this SSL certificate to SSL and/or NetScaler Gateway Virtual Servers.</li>
+<li>To automatically backup SSL certificates and receive notification when the certificates are about the expire, deploy <a href="../netscaler-management-and-analytics-system-mas-12/">NetScaler Management and Analytics System</a>. Also see Citrix CTX213342 <a href="https://support.citrix.com/article/CTX213342">How to handle certificate expiry on NetScaler</a>.</li>
+</ol>
+<h4 id="to-convert-pfx-to-pem-with-private-key-encryption">To convert PFX to PEM (with Private Key encryption)</h4>
+<p>To convert PFX to PEM, do the following:</p>
+<ol>
+<li>In the NetScaler Configuration GUI, on the left, expand <strong>Traffic Management</strong>, and click <strong>SSL</strong>. <img alt="" src="../../../img/img_5bba21d328225.png" /></li>
+<li>In the right column of the right pane, in the <strong>Tools</strong> section, click <strong>Import PKCS#12</strong>. <img alt="" src="../../../img/img_5bba25d23e3ee.png" /></li>
+<li>In the <strong>Import PKCS12 File</strong> dialog box:<ol>
+<li>In the <strong>Output File Name</strong> field, enter a name for a new file where the converted PEM certificate and private key will be placed. This new file is created under <strong>/nsconfig/ssl</strong> on the NetScaler appliance.</li>
+<li>In the <strong>PKCS12 File</strong> field, click <strong>Choose File</strong>, and select the previously exported .pfx file.</li>
+<li>In the <strong>Import Password</strong> field, enter the password you specified when you previously exported the .pfx file. <img alt="" src="../../../img/img_5bba26114640a.png" /></li>
+<li>By default, the private key in the new PEM file is unencrypted. To encrypt the private key, change the <strong>Encoding Format</strong> selection to <strong>AES256</strong> (if NetScaler 12.1 build 49 or newer) or <strong>DES3</strong>. This causes the new PEM file to be password protected, and encrypted.</li>
+<li>Enter a permanent password for the new PEM file, and click <strong>OK.</strong> <img alt="" src="../../../img/img_5bba26416ca97.png" /></li>
+</ol>
+</li>
+<li>You can use the <strong>Manage Certificates / Keys / CSRs</strong> link to view the new PEM file. <img alt="" src="../../../img/img_59861ae908665.png" /><ol>
+<li>Right-click the new file, and click <strong>View</strong>. <img alt="" src="../../../img/img_59861b0d809a9.png" /></li>
+<li>Notice that the Private Key is encrypted. <img alt="" src="../../../img/img_59861b2ed5a02.png" /></li>
+<li>If you scroll down, notice that the file contains both the certificate, and the RSA Private key. <img alt="" src="../../../img/img_59861b503a747.png" /></li>
+</ol>
+</li>
+<li>Now that the PFX file has been converted to a PEM file, the PEM certificate file must be installed before it can be used.<ol>
+<li>On the left side of the NetScaler Configuration GUI, go to <strong>Traffic Management &gt; SSL &gt;</strong> <strong>Certificates &gt; Server Certificates</strong>. <img alt="" src="../../../img/img_5bba27d55d053.png" /></li>
+<li>On the right, click <strong>Install</strong>. <img alt="" src="../../../img/img_5bba27e024527.png" /></li>
+<li>In the <strong>Certificate-Key Pair Name</strong> field, enter a friendly name for this certificate.</li>
+<li>In the <strong>Certificate File Name</strong> field, click the drop-down next to <strong>Choose File</strong>, and select <strong>Appliance</strong>. <img alt="" src="../../../img/img_59861c4dd56ef.png" /></li>
+<li>Click the radio button next to the .cer file you just created, and click <strong>Open</strong>. The new file is probably at the bottom of the list. <img alt="" src="../../../img/img_59861c83ccc8e.png" /></li>
+<li>NetScaler will ask you to enter the password for the encrypted private key.</li>
+<li>Click <strong>Install</strong>. <img alt="" src="../../../img/img_59861ccd39833.png" /></li>
+</ol>
+</li>
+<li>You can now <a href="#intermediate">link an intermediate certificate</a> to this SSL certificate, and then bind this SSL certificate to SSL and/or NetScaler Gateway Virtual Servers.</li>
+<li>To automatically backup SSL certificates and receive notification when the certificates are about the expire, deploy <a href="../netscaler-management-and-analytics-system-mas-12/">NetScaler Management and Analytics System</a>. Also see Citrix CTX213342 <a href="https://support.citrix.com/article/CTX213342">How to handle certificate expiry on NetScaler</a>.</li>
+<li>You can also <a href="#exportcertfiles">export the certificate files</a> and use them on a different NetScaler.</li>
+</ol>
+<h3 id="create-key-and-certificate-request">Create Key and Certificate Request</h3>
+<p>If you want to create free Let's Encrypt certificates, see John Billekens' PowerShell script detailed at <a href="https://blog.j81.nl/2017/04/06/lets-encrypt-certificates-on-a-netscaler/">Let’s Encrypt Certificates on a NetScaler</a>.</p>
+<p>You can create a <strong>key pair</strong> and <strong>Certificate Signing Request (CSR)</strong> directly on the NetScaler appliance. The CSR can then be signed by an internal, or public, Certificate Authority.</p>
+<p>Most Certificate Authorities let you add <strong>Subject Alternative Names</strong> when creating (or purchasing) a signed certificate, and thus there’s no reason to include Subject Alternative Names in the CSR created on NetScaler. You typically create a CSR with a single DNS name. Then when submitting the CSR to the Certificate Authority, you type in additional DNS names.</p>
+<ul>
+<li>For a Microsoft Certificate Authority, you can <a href="https://ibrahimnore.wordpress.com/2012/10/21/generating-certificates-with-subject-alternative-names-sans-from-internal-certificate-authority-microsoft-ca/">enter Subject Alternative Names</a> in the <strong>Attributes</strong> box of the Web Enrollment wizard.</li>
+<li>For public Certificate Authorities, you purchase a UCC certificate or purchase a certificate option, that lets you type in additional names.</li>
+</ul>
+<h4 id="to-create-a-key-pair-on-netscaler">To create a key pair on NetScaler</h4>
+<ol>
+<li>On the left, expand <strong>Traffic Management</strong>, expand <strong>SSL</strong>, and click <strong>SSL Files</strong>. <img alt="" src="../../../img/img_5bba281576daa.png" /></li>
+<li>On the right, switch to the <strong>Keys</strong> tab. <img alt="" src="../../../img/img_5bba28218d448.png" /></li>
+<li>Click <strong>Create RSA Key</strong>. <img alt="" src="../../../img/img_5bba282af0f69.png" /></li>
+<li>In the <strong>Key Filename</strong> box, enter a new filename (e.g. <strong>wildcard.key</strong>). Key pair files typically have a <strong>.key</strong> extension.</li>
+<li>In the <strong>Key Size</strong> field, enter <strong>2048</strong> bits. <img alt="" src="../../../img/img_5bba284f75e48.png" /></li>
+<li>By default, the private key is unencrypted. To encrypt it, set the <strong>PEM Encoding Algorithm</strong> drop-down to AES256 (if NetScaler 12.1 build 49 or newer) or <strong>DES3</strong>.</li>
+<li>Enter a password to encrypt the private key.</li>
+<li>Click <strong>Create</strong>. <img alt="" src="../../../img/img_5bba287ccc375.png" /></li>
+<li>To view the new file:<ol>
+<li>Go to <strong>Traffic Management &gt; SSL</strong>.</li>
+<li>On the right, in the right column, click <strong>Manage Certificates / Keys / CSRs</strong>. <img alt="" src="../../../img/img_5bba28ba69f32.png" /></li>
+<li>Scroll down to the new file, right-click it, and click <strong>View</strong>. <img alt="" src="../../../img/img_5bba28abac1f0.png" /></li>
+<li>The Private Key should be encrypted with your chosen encoding algorithm. <img alt="" src="../../../img/img_5bba28a00daec.png" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="to-create-csr-file">To create CSR file</h4>
+<ol>
+<li>Back in the SSL Files page, on the right, switch to the <strong>CSRs</strong> tab. <img alt="" src="../../../img/img_5bba29180a373.png" /></li>
+<li>Click <strong>Create Certificate Signing Request (CSR)</strong>. <img alt="" src="../../../img/img_5bba292d93d76.png" /></li>
+<li>In the <strong>Request File Name</strong> field, enter the name of a new CSR file. CSR files typically have <strong>.csr</strong> or <strong>.txt</strong> extension.</li>
+<li>In the <strong>Key Filename</strong> field, click <strong>Choose File</strong> and select the previously created <strong>.key</strong> file. It's probably at the bottom of the list. <img alt="" src="../../../img/img_5bba29c350d74.png" /> <img alt="" src="../../../img/img_5bba29d6efc4f.png" /></li>
+<li>If the key file is encrypted, enter the password. <img alt="" src="../../../img/img_5bba29e9b921f.png" /></li>
+<li>You can optionally change the CSR <strong>Digest Method</strong> to <strong>SHA256</strong>. This only applies to the CSR and does not affect the CA-signed certificate. <img alt="" src="../../../img/img_5bba2a1836529.png" /></li>
+<li>Newer builds of NetScaler let you specify up to three Subject Alternative Names in the CSR. Some Certificate Authorities ignore this field and instead require you to specify the Subject Alternative Names when purchasing the signed certificate. See CTX232305 <a href="https://support.citrix.com/article/CTX232305">How to create a SAN CSR in NetScaler 12.0 57.19</a>. <img alt="" src="../../../img/img_5bba2a6b058d0.png" /></li>
+<li>In the <strong>Common Name</strong> field, enter the FQDN of the SSL enabled-website. If this is a wildcard certificate, enter <strong>*</strong> for the left part of the FQDN. This is the field that normally must match what users enter into their browser address bars.</li>
+<li>In the <strong>Organization Name</strong> field, enter your official Organization Name.</li>
+<li>Enter <strong>IT</strong>, or similar, as the <strong>Organization Unit</strong>.</li>
+<li>Enter the <strong>City</strong> name.</li>
+<li>In the <strong>State</strong> field, enter your state name without abbreviating. <img alt="" src="../../../img/acf936cc4a5ba78373d7d57b0840a107.png" /></li>
+<li>Scroll down and click <strong>Create</strong>. <img alt="" src="../../../img/045e4c352c6516a4f181a1d4b8c8eabf.png" /></li>
+<li>Right-click the new <strong>.csr</strong> file, and click <strong>Download</strong>. <img alt="" src="../../../img/img_5bba2afd336fd.png" /></li>
+</ol>
+<h4 id="get-csr-signed-by-ca-and-install-certificate-on-netscaler">Get CSR signed by CA, and install certificate on NetScaler</h4>
+<ol>
+<li>Open the downloaded <strong>.csr</strong> file with Notepad, and send the contents to your Certificate Authority. <img alt="" src="../../../img/img_598620935a234.png" /><ol>
+<li>Chrome requires every certificate to have at least one Subject Alternative Name that matches the FQDN entered in Chrome's address bar. Public CAs will handle this automatically. But for Internal CAs, you typically must <a href="https://ibrahimnore.wordpress.com/2012/10/21/generating-certificates-with-subject-alternative-names-sans-from-internal-certificate-authority-microsoft-ca/">specify the Subject Alternative Names manually</a> when signing the certificate. <img alt="" src="../../../img/img_5986217756538.png" /> <img alt="" src="../../../img/img_598621f3c5158.png" /></li>
+<li>If the CA asks you for the type of web server, select <strong>Apache</strong>, or save the CA response as a <strong>Base 64</strong> file. <img alt="" src="../../../img/img_598621b6d0f2f.png" /></li>
+</ol>
+</li>
+<li>After you get the signed certificate, on the left side of the NetScaler Configuration GUI, expand <strong>Traffic Management &gt; SSL &gt;</strong> <strong>Certificates</strong>, and click <strong>Server Certificates</strong>. <img alt="" src="../../../img/img_5bba2b2e37a8d.png" /></li>
+<li>On the right, click <strong>Install</strong>. <img alt="" src="../../../img/img_5bba2b3bbeda7.png" /></li>
+<li>In the <strong>Certificate-Key Pair Name</strong> field, enter a friendly name for this certificate.</li>
+<li>In the <strong>Certificate File Name</strong> field, click the drop-down next to <strong>Choose File</strong>, and select <strong>Local</strong>. <img alt="" src="../../../img/img_59862a0c48d70.png" /></li>
+<li>Browse to the Base64 (Apache) .cer file you received from the Certificate Authority.</li>
+<li>In the <strong>Key File Name</strong> field, click the drop-down next to <strong>Choose File</strong>, and select <strong>Appliance</strong>. <img alt="" src="../../../img/img_59862a5e4be5c.png" /></li>
+<li>Select the key file you created earlier, and click <strong>Open</strong>. It's probably at the bottom of the list. <img alt="" src="../../../img/img_59862a93d7056.png" /></li>
+<li>If the key file is encrypted, enter the password.</li>
+<li>Click <strong>Install</strong>. <img alt="" src="../../../img/img_59862ab9bad76.png" /></li>
+<li>The certificate is now added to the list.</li>
+<li>You can now <a href="#intermediate">link an intermediate certificate</a> to this SSL certificate, and then bind this SSL certificate to SSL and/or NetScaler Gateway Virtual Servers. <img alt="" src="../../../img/img_59862b317c895.png" /></li>
+<li>To automatically backup SSL certificates and receive notification when the certificates are about the expire, deploy <a href="../netscaler-management-and-analytics-system-mas-12/">Citrix NetScaler Management and Analytics</a>. Also see Citrix CTX213342 <a href="https://support.citrix.com/article/CTX213342">How to handle certificate expiry on NetScaler</a>.</li>
+<li>You can also <a href="#exportcertfiles">export the certificate files</a> and use them on a different NetScaler.</li>
+</ol>
+<h3 id="intermediate-certificate">Intermediate Certificate</h3>
+<p>If your Server Certificate is signed by an intermediate Certificate Authority, then you must install the intermediate Certificate Authority’s certificate on the NetScaler. This Intermediate Certificate then must be linked to the Server Certificate.</p>
+<h4 id="to-get-the-correct-intermediate-certificate">To get the correct intermediate certificate</h4>
+<ol>
+<li>Log into Windows, and double-click the signed certificate file. <img alt="" src="../../../img/img_59862b6c2287b.png" /></li>
+<li>On the <strong>Certification Path</strong> tab, double-click the intermediate certificate (e.g. <strong>Go Daddy Secure Certificate Authority</strong>. It’s the one in the middle). <img alt="" src="../../../img/img_59862b7d7426a.png" /></li>
+<li>On the <strong>Details</strong> tab, click <strong>Copy to File</strong>. <img alt="" src="../../../img/img_59862bc09fa8d.png" /></li>
+<li>In the <em>Welcome to the Certificate Export Wizard</em> page, click <strong>Next</strong>. <img alt="" src="../../../img/img_59862bd01d4c9.png" /></li>
+<li>In the <em>Export File Format</em> page, select <strong>Base-64 encoded</strong>, and click <strong>Next</strong>. <img alt="" src="../../../img/img_59862bdd2a474.png" /></li>
+<li>Give it a file name, and click <strong>Next</strong>. <img alt="" src="../../../img/img_59862c1280c8d.png" /></li>
+<li>In the <em>Completing the Certificate Export Wizard</em> page, click <strong>Finish</strong>. <img alt="" src="../../../img/img_59862c20080fc.png" /></li>
+</ol>
+<h4 id="to-import-the-intermediate-certificate">To import the intermediate certificate</h4>
+<ol>
+<li>In the NetScaler configuration GUI, expand <strong>Traffic Management</strong>, expand <strong>SSL</strong>, expand <strong>Certificates</strong>, and click <strong>CA Certificates</strong>. <img alt="" src="../../../img/img_59862c4611c24.png" /></li>
+<li>On the right, click <strong>Install</strong>. <img alt="" src="../../../img/img_59862c5134b23.png" /></li>
+<li>Name it <strong>Intermediate</strong> or similar.</li>
+<li>Click the arrow next to <strong>Choose File</strong>, select <strong>Local</strong>, and browse the Intermediate certificate file. <img alt="" src="../../../img/img_59862c6ea095d.png" /></li>
+<li>Click <strong>Install</strong>. <img alt="" src="../../../img/img_59862c955af6c.png" /></li>
+</ol>
+<h4 id="link-intermediate-certificate-to-server-certificate">Link Intermediate Certificate to Server Certificate</h4>
+<ol>
+<li>Go back to <strong>Traffic Management &gt; SSL &gt; Certificates &gt;</strong><strong>Server Certificates</strong>.</li>
+<li>Right-click the server certificate, and click <strong>Link</strong>. <img alt="" src="../../../img/img_59862ccfa19bc.png" /></li>
+<li>The previously imported Intermediate certificate should already be selected. Click <strong>OK</strong>. <img alt="" src="../../../img/img_59862cdfba48c.png" /></li>
+<li>You might be tempted to link the Intermediate certificate to a Root certificate. Don't do this. Root certificates are installed on client machines, not on NetScaler. NetScaler must never send the root certificate to the client device.</li>
+</ol>
+<h3 id="export-certificate-files-from-netscaler">Export Certificate Files from NetScaler</h3>
+<p>You can easily export certificate files from the NetScaler, and import them to a different NetScaler.</p>
+<ol>
+<li>Go to <strong>Traffic Management &gt; SSL &gt; Certificates &gt; Server Certificates</strong>. <img alt="" src="../../../img/img_59862d3621bce.png" /></li>
+<li>Move your mouse over the certificate you want to export, and then click the information icon on the far left. <img alt="" src="../../../img/img_59862d43c52c2.png" /></li>
+<li>Note the file names. There could be one or two file names. <img alt="" src="../../../img/img_59862d55b1d98.png" /></li>
+<li>On the left, go to <strong>Traffic Management &gt; SSL</strong>. <img alt="" src="../../../img/img_59862d6bb49e0.png" /></li>
+<li>On the right, in the right column, click <strong>Manage Certificates / Keys / CSRs</strong>. <img alt="" src="../../../img/img_59862d792fd8a.png" /></li>
+<li>Find the file(s) in the list, right-click it, and click <strong>Download</strong>.<ol>
+<li>While it seems like you can download multiple files, actually, it only downloads one at a time. <img alt="" src="../../../img/img_59862dd91d913.png" /></li>
+<li>You might have to increase the number of files shown per page, or go to a different page. <img alt="" src="../../../img/img_59862dab42982.png" /></li>
+</ol>
+</li>
+<li>Also download the files for any linked intermediate certificate.</li>
+<li>You can now use the downloaded files to install certificates on a different NetScaler.</li>
+</ol>
+<h3 id="default-management-certificate-key-length">Default Management Certificate Key Length</h3>
+<p>To see the key size for the management certificate, right-click the <strong>ns-server-certificate</strong> (Server Certificate), and then click <strong>Details</strong>. <img alt="" src="../../../img/img_59862ea3a6c5c.png" /> <img alt="" src="../../../img/img_59862eb9d5407.png" /></p>
+<p>If the management certificate key size is less than 2048 bits, simply delete the existing <strong>ns-server-certificate</strong> certificate files, and reboot. NetScaler will create a new management certificate with 2048-bit keys.</p>
+<ol>
+<li>Go to <strong>Traffic Management &gt; SSL</strong>. <img alt="" src="../../../img/img_59862f6051acb.png" /></li>
+<li>On the right, in the right column, click <strong>Manage Certificates / Keys / CSRs</strong>. <img alt="" src="../../../img/img_59862f6e1b202.png" /></li>
+<li>Highlight any file named <strong>ns-*</strong> and delete them. This takes several seconds. <img alt="" src="../../../img/img_59862f8c04087.png" /></li>
+<li>Then go to the <strong>System</strong> node, and reboot. <img alt="" src="../../../img/img_59862faaccb0a.png" /></li>
+<li>After a reboot, if you view the <strong>Details</strong> on the <strong>ns-server-certificate</strong>, it will be recreated as self-signed, with 2048-bit key size. <img alt="" src="../../../img/img_59862fcf73d14.png" /></li>
+</ol>
+<h3 id="replace-management-certificate">Replace Management Certificate</h3>
+<p>You can replace the default management certificate with a new trusted management certificate.</p>
+<p><strong>High Availability</strong> - When a management certificate is installed on one node of a High Availability pair, the certificate is synchronized to the other node, and used for the other node's NSIP. So make sure the management certificate matches the DNS names of both nodes. This is easily doable using a Subject Alternative Name certificate. Here are some names the management certificate should match (note: a wildcard certificate won’t match all of these names):</p>
+<ul>
+<li>The FQDN for each node's NSIP. Example: <strong>ns01.</strong><strong>corp.local</strong> and <strong>ns02.corp.local</strong></li>
+<li>The shortnames (left label) for each node's NSIP. Example: <strong>ns01</strong> and <strong>ns02</strong></li>
+<li>The NSIP IP address of each node. Example: <strong>192.</strong><strong>168.123.14</strong> and <strong>192.168.123.29</strong></li>
+<li>If you enabled management access on your SNIPs, add names for the SNIPs:<ul>
+<li>FQDN for the SNIP. Example: <strong>ns.corp.local</strong></li>
+<li>Shortname for the SNIP. Example: <strong>ns</strong></li>
+<li>SNIP IP address. Example: <strong>192.</strong><strong>168.123.30</strong></li>
+</ul>
+</li>
+</ul>
+<p>If you prefer to create a separate management certificate for each HA node, then see CTP George Spiers <a href="http://www.jgspiers.com/secure-management-access-netscaler-and-create-unique-certificates-in-highly-available-setup/">How to secure management access to NetScaler and create unique certificates in a highly available setup</a>.  :idea:</p>
+<h4 id="request-management-certificate">Request Management Certificate</h4>
+<p>If you are creating a Subject Alternative Name certificate, it’s probably easiest to request a SAN certificate from an internal CA using the MMC <strong>Certificates</strong> snap-in on a Windows box.:</p>
+<ol>
+<li>Open the MMC certificates snap-in by running <strong>certlm.msc</strong> on a Windows 2012 or newer machine.</li>
+<li>Go to <strong>Personal</strong>, right-click <strong>Certificate,</strong> expand <strong>All Tasks</strong>, and click <strong>Request New Certificate</strong>. <img alt="" src="../../../img/img_598703499163e.png" /></li>
+<li>A web server certificate template should let you specify subject information. <img alt="" src="../../../img/img_598705d8038fe.png" /></li>
+<li>In the top half, change the <strong>Subject name &gt; Type</strong> drop-down to <strong>Common Name</strong>. Enter a DNS name, and click <strong>Add</strong> to move it to the right. <img alt="" src="../../../img/img_5987037c5776d.png" /></li>
+<li>In the bottom half, change the <strong>Alternative Name &gt; Type</strong> drop-down to either <strong>DNS</strong> or <strong>IP address (v4)</strong>. Type in different names or IPs as detailed earlier, and click <strong>Add</strong> to move them to the right. <img alt="" src="../../../img/img_598704d42a6bb.png" /> <img alt="" src="../../../img/img_598705134ee4a.png" /></li>
+<li>On the <strong>Private Key</strong> tab, expand <strong>Key Options</strong>, and make sure <strong>Mark private key as exportable</strong> is checked. <img alt="" src="../../../img/img_598706247e5ae.png" /></li>
+<li>Then finish <strong>Enroll</strong>ing the certificate. <img alt="" src="../../../img/img_5987053a5929e.png" /></li>
+<li>Export the certificate and Private Key to a .pfx file. <img alt="" src="../../../img/img_598705635d430.png" /> <img alt="" src="../../../img/img_5987066638ea7.png" /></li>
+<li>On the NetScaler, if you want to encrypt the private key, then use the <strong>Traffic Management &gt; SSL &gt;</strong> <a href="#pfx"><strong>Import PKCS#12</strong></a> tool to convert the .pfx to PEM format. <img alt="" src="../../../img/img_598706bda1b4c.png" /> <img alt="" src="../../../img/img_598706e11b9ab.png" /></li>
+<li>Then follow one of the procedures below to replace the management certificate.</li>
+</ol>
+<h4 id="methods-of-replacing-the-management-certificate">Methods of replacing the Management Certificate</h4>
+<p>There are two methods of replacing the management certificate:</p>
+<ul>
+<li>In the NetScaler GUI, right-click <strong>ns-server-certificate</strong>, and click <strong>Update</strong>. This automatically updates all of the Internal Services bindings too. This method is intended for dedicated management certificates, not wildcard certificates. Notes:<ul>
+<li>You cannot rename the <strong>ns-server-certificate</strong> in the NetScaler GUI. It remains as <strong>ns-server-certificate</strong>.</li>
+<li><strong>ns-server-certificate</strong> cannot be bound to Virtual Servers. So make sure you are replacing it with a dedicated management certificate. <img alt="" src="../../../img/img_58ea3fd45d9a5.png" /></li>
+</ul>
+</li>
+<li>Or manually <strong>Bind</strong> a new management certificate to each of the Internal Services.</li>
+</ul>
+<h4 id="update-certificate-method">Update Certificate Method</h4>
+<p>The <a href="https://support.citrix.com/article/CTX122521"><strong>Update</strong> Certificate button method</a> is detailed below:</p>
+<ol>
+<li>You can’t update the certificate while connected to the NetScaler using <strong>https</strong>, so make sure you connect using <strong>http</strong>.</li>
+<li>On the left, expand <strong>Traffic Management</strong>, expand <strong>SSL</strong>, expand <strong>Certificates</strong>, and click <strong>Server Certificates</strong>. <img alt="" src="../../../img/img_59870741b5483.png" /></li>
+<li>On the right, right-click <strong>ns-server-certificate</strong>, and click <strong>Update</strong>. <img alt="" src="../../../img/img_59870757e32a2.png" /></li>
+<li>Check the box next to <strong>Click to update the certificate and key</strong>. <img alt="" src="../../../img/img_5987076aee9c7.png" /></li>
+<li>Click <strong>Choose File</strong>, and browse to the new management certificate. It could be on the appliance, or it could be on your local machine.</li>
+<li>If the PEM private key is encrypted, enter the password.</li>
+<li>Check the box next to <strong>No Domain Check</strong>. Click <strong>OK</strong>. <img alt="" src="../../../img/img_598707d185045.png" /></li>
+<li>Click <strong>Yes</strong> to update the certificate. <img alt="" src="../../../img/c3bbbdf1a34fae92282dd5ed2a5acb18.png" /></li>
+<li>You can now connect to the NetScaler using <strong>https</strong> protocol. The certificate should be valid, and it should have a 2048 bit key. <img alt="" src="../../../img/img_598708114371c.png" /></li>
+</ol>
+<h4 id="manual-binding-method">Manual Binding Method</h4>
+<p>The <strong>manual Binding</strong> to Internal Services method is detailed below:</p>
+<ol>
+<li>You can’t update the certificate while connected to the NetScaler using <strong>https</strong>, so make sure you connect using <strong>http</strong>.</li>
+<li>On the left, expand <strong>Traffic Management</strong>, expand <strong>SSL</strong>, expand <strong>Certificates</strong>, and click <strong>Server Certificates</strong>. <img alt="" src="../../../img/img_59870741b5483.png" /></li>
+<li>On the right, use the <strong>Install</strong> button to install the new management certificate. <img alt="" src="../../../img/img_598708f585155.png" /> <img alt="" src="../../../img/img_598708e6dae81.png" /></li>
+<li>Go to <strong>Traffic Management &gt; Load Balancing &gt; Services</strong>. <img alt="" src="../../../img/img_5987083292180.png" /></li>
+<li>On the right, switch to the <strong>Internal Services</strong> tab. <img alt="" src="../../../img/img_5987084102c6e.png" /></li>
+<li>Right-click one of the services, and click <strong>Edit</strong>. <img alt="" src="../../../img/img_59870858ae8ec.png" /></li>
+<li>Scroll down, and click where it says <strong>1 Server Certificate</strong>. <img alt="" src="../../../img/img_58e945e962a57.png" /></li>
+<li>Click <strong>Add Binding</strong>. <img alt="" src="../../../img/img_59870938d01fe.png" /></li>
+<li>Click where it says <strong>Click to select</strong>. <img alt="" src="../../../img/img_58e9465ab5b64.png" /></li>
+<li>Click the radio button next to the new management certificate, and click <strong>Select</strong>. <img alt="" src="../../../img/img_5987094eec3ae.png" /></li>
+<li>Click <strong>Bind</strong>, and click <strong>Close</strong>. <img alt="" src="../../../img/img_59870964c2071.png" /></li>
+<li>Click <strong>Close</strong>. <img alt="" src="../../../img/img_5987097cd3541.png" /></li>
+<li>If Default SSL Profile is not enabled, then you can <a href="#sslvserver">modify the SSL Parameters and/or Ciphers</a> on each of these Internal Services.</li>
+<li>Repeat for the rest of the internal services. There should be at least 6 services. Additional Internal Services are created for SNIPs with management access enabled, and High Availability. <img alt="" src="../../../img/img_598709a2c6e13.png" /></li>
+</ol>
+<h3 id="force-management-ssl">Force Management SSL</h3>
+<p>By default, administrators can connect to the NSIP using HTTP or SSL. This section details how to disable HTTP.</p>
+<ol>
+<li>Connect to the NSIP using <strong>https</strong>. <img alt="" src="../../../img/img_59870a54e1026.png" /></li>
+<li>On the left, expand <strong>System</strong>, expand <strong>Network</strong>, and click <strong>IPs</strong>. <img alt="" src="../../../img/img_59870a641dcb2.png" /></li>
+<li>On the right, right-click your NetScaler IP, and click <strong>Edit</strong>. <img alt="" src="../../../img/img_59870a7a848e4.png" /></li>
+<li>Near the bottom, check the box next to <strong>Secure access only</strong>, and then click <strong>OK</strong>. <img alt="" src="../../../img/img_59870a9a6b488.png" /></li>
+<li>
+<p>If you are connected using <strong>http</strong>, the page will reload using <strong>https</strong>. <img alt="" src="../../../img/img_58e9489e744e9.png" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>set ns ip 10.2.2.126 -gui SECUREONLY
+</span></code></pre></div>
+</li>
+<li>
+<p>Repeat this procedure on the secondary appliance.</p>
+</li>
+<li>Repeat for any SNIPs that have management access enabled.</li>
+</ol>
+<p>Also see:</p>
+<ul>
+<li>Citrix CTX204217 <a href="https://support.citrix.com/article/CTX204217">How to redirect users from HTTP to HTTPS while accessing NSIP/Management IP</a>. Requires a Responder policy, and a <strong>nsapimgr</strong> command.</li>
+</ul>
+<h3 id="ssl-certificate-update">SSL Certificate – Update</h3>
+<p>There are two options for updating a certificate:</p>
+<ul>
+<li><strong>Create or Import a new certificate</strong> to NetScaler &gt; Traffic Management &gt; SSL &gt; Certificates &gt; Server Certificates. Then find all of the places the original certificate is bound, and manually replace the original certificate binding with the new certificate. This method is obviously prone to errors.</li>
+<li>On NetScaler, simply right-click the existing certificate, and click <strong>Update</strong>. This automatically updates all of the bindings. Much faster and easier.</li>
+</ul>
+<p>To update a certificate using the <strong>Update</strong> method:</p>
+<ol>
+<li>Create an updated certificate, and export it as .pfx file (with private key). Don’t install the certificate onto NetScaler yet, but instead, simply have access to the .pfx file.</li>
+<li>In NetScaler, navigate to <strong>Traffic Management &gt; SSL &gt; Certificates &gt; Server Certificates</strong>. <img alt="" src="../../../img/img_59870b1d0c483.png" /></li>
+<li>On the right, right-click the certificate you intend to update, and click <strong>Update</strong>. <img alt="" src="../../../img/img_59870b7118d7d.png" /></li>
+<li>Check the box next to <strong>Update the certificate and key</strong>. <img alt="" src="../../../img/img_59870b9097e1e.png" /></li>
+<li>Click <strong>Choose File &gt; Local</strong>, and browse to the updated .pfx file. <img alt="" src="../../../img/img_59870ba8d3b00.png" /></li>
+<li>NetScaler will prompt you to specify the .pfx file password.</li>
+<li>Click <strong>OK</strong>. This will automatically update every Virtual Server on which this certificate is bound. <img alt="" src="../../../img/img_59870be51543d.png" /></li>
+<li><strong>Intermediate certificate</strong> - After replacing the certificate, you might have to update the cert link to a new Intermediate certificate.<ol>
+<li>Right-click the updated certificate, and click <strong>Cert Links</strong>, to see if it is currently linked to an intermediate certificate.</li>
+<li>If not, right-click the updated certificate, and click <strong>Link</strong>, to link it to an intermediate certificate. If it doesn't give you an option to link it to, then you'll first have to <a href="#intermediate">install the new intermediate certificate</a> on the NetScaler. <img alt="" src="../../../img/img_59870cef7b99f.png" /></li>
+</ol>
+</li>
+</ol>
+<p>Certificates can also be updated in <a href="../netscaler-management-and-analytics-system-mas-12/">NetScaler Management and Analytics System</a>.</p>
+<p>Certificates can be updated from the CLI by running <strong><code>update ssl certKey MyCert</code></strong>. However, the certificate files must be stored somewhere on the appliance, and already be in PEM format. <img alt="" src="../../../img/img_59871168c1917.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

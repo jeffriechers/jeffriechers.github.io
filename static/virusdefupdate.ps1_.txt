@@ -1,0 +1,27 @@
+# Windows Defender centralized update download script
+# Created by Jeff Riechers
+# Downloaded from https://www.jeffriechers.com
+# For additional steps needed to prep the environment visit my site for more information
+#
+# PERSISTENT DEFENDER OFFLOADING CONFIGURATION
+# This script takes inspiration from the following Microsoft Article https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus?view=o365-worldwide#download-and-unpackage-the-latest-updates
+#
+# I recommend setting this script up on multiple servers and use DFS Namespaces (not replication) to load balance this for redundancy and performance.
+# If downloaded script fails to run, make sure it is unblocked on properties of the script
+# To execute this via Task Scheduler create a New Task with multiple Daily triggers.  I recommend at least 1 per day.  Ensure this download happens outside of the 
+# For Action use powershell.exe as the program/script and "-file D:\AV_Scripts\virusdefupdates.ps1 -executionpolicy bypass" for the arguments.  Also set the start in to the Directory where definitions are deployed.
+# Don't store the AV script in the same directory as the Definitions.  This is for both security, and to prevent it from being removed as part of the cleanup.
+# This script downloads the current definition file, and then GPO is setup to have persistent machines install from this download, instead of all machines downloading from the internet.
+#
+# SCRIPT STARTS NOW
+#
+# Define the Folder and subfolders that stores the AV updates.  You should create this folder structure (D:\VirusUpdates\latest\x64) and give users NTFS read permissions to it, and admins and system full control.
+# GPO will be setup to download updates from \\domain.name\virusupdates-share.  \latest\x64 is assumed by the software, so don't add it to your GPO path
+# If you download the script and it won't execute, make sure that the script is not blocked in properties of the PS1 file.
+$vdmpathbase = 'D:\VirusUpdates\latest\x64'
+$vdmpackage = $vdmpathbase + '\mpam-fe.exe'
+# This command deletes the current downloaded version to be replaced with the new version.
+cmd /c "del $vdmpackage /q"
+# This command downloads the latest definition update for non-vdi machines to update from.
+# If the downloads fail to download, check to see if Microsoft modified the persistent path to Definition Downloads.  The link in the intro has the persistent path, and will change when MS changes it.
+Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64' -OutFile $vdmpackage

@@ -1,0 +1,15 @@
+.md-footer-nav {
+  display: none;
+}
+.nav-link[rel="next"] {display: none;}
+.nav-link[rel="prev"] {display: none;}
+.wm-article-nav {display: none;}
+/* Increase font size in fenced code blocks */
+.md-typeset code {
+  font-size: 12px;
+}
+.md-typeset pre {
+  font-size: 14px;
+}
+
+

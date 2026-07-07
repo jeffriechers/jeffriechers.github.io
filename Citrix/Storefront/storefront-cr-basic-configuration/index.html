@@ -1,0 +1,6579 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../storefront-config-for-netscaler-gateway/">
+      
+      
+        <link rel="next" href="../storefront-cr-configuration-for-citrix-gateway/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>StoreFront 2411 through 3.5 - Basic Configuration - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              StoreFront 2411 through 3.5 - Basic Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-installation-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Installation / Upgrade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StoreFront Installation / Upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-storefront-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Second StoreFront Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-experience-improvement-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer Experience Improvement Program
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Analytics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-name-rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Store Name – Rename
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL Certificate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSL Certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delivery-controllers-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Controllers – SSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-url-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL – Change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Web Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-generation-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Generation Experience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-receiver-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Receiver Appearance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-for-web-browser-pass-through-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver for Web (browser) Pass-through Authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-app-for-html5-2502" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace app for HTML5 2502
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workspace app for HTML5 2502">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html5-workspace-app-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML5 Workspace app configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-citrix-workspace-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy Citrix Workspace app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-for-web-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver for Web Timeout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#favorites-categories-and-default-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Favorites, Categories, and Default Tab
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beacons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beacons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propagate-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propagate Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exportimport-storefront-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export/Import StoreFront Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logon-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Simulator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-installation-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Installation / Upgrade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StoreFront Installation / Upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-storefront-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Second StoreFront Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-experience-improvement-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer Experience Improvement Program
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Analytics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-name-rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Store Name – Rename
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL Certificate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSL Certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delivery-controllers-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Controllers – SSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-url-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL – Change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Web Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-generation-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Generation Experience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-receiver-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Receiver Appearance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-for-web-browser-pass-through-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver for Web (browser) Pass-through Authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-app-for-html5-2502" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace app for HTML5 2502
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workspace app for HTML5 2502">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html5-workspace-app-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML5 Workspace app configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-citrix-workspace-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy Citrix Workspace app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-for-web-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver for Web Timeout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#favorites-categories-and-default-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Favorites, Categories, and Default Tab
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beacons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beacons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propagate-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propagate Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exportimport-storefront-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export/Import StoreFront Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logon-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Simulator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>StoreFront 2411 through 3.5 - Basic Configuration</h1>
+
+<h3 id="navigation">Navigation</h3>
+<p>This article applies to StoreFront versions 2411, 2402 LTSR, 2203 LTSR, 1912 LTSR, and all other versions 3.5 and newer.</p>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#versions">StoreFront Versions</a></li>
+<li><a href="#install">StoreFront  Installation / Upgrade</a><ul>
+<li><a href="#initialconfig">Initial Configuration</a></li>
+<li><a href="#secondserver">Second StoreFront Server</a></li>
+<li><a href="#ceip">Customer Experience Improvement Program (CEIP)</a></li>
+<li><a href="#citrixanalytics">Citrix Analytics</a></li>
+</ul>
+</li>
+<li><a href="#renamestore">Store Name – Rename</a></li>
+<li><a href="#sslcert">SSL Certificate</a><ul>
+<li><a href="#controllerssl">Delivery Controllers – SSL</a></li>
+</ul>
+</li>
+<li><a href="#baseurl">Base URL – Change</a></li>
+<li><a href="#defaultpage">Default Web Page</a></li>
+<li><a href="#authconfig">Authentication Configuration</a></li>
+<li>
+<p>Receiver for Web (browser interface)</p>
+<ul>
+<li><a href="#nextgen">Next Generation Experience</a></li>
+<li><a href="#customizeappearance">Customize Receiver for Web Appearance</a></li>
+<li><a href="#webauth">Receiver for Web Pass-through Authentication</a></li>
+<li><a href="#html5">Workspace app for HTML5</a></li>
+<li><a href="#receivers">Deploy Citrix Workspace app for Windows and Mac from StoreFront</a></li>
+<li><a href="#webtimeout">Receiver for Web Timeout</a></li>
+<li><a href="#defaulttab">Favorites, Categories, and Default View</a> - Default to Categories view instead of All</li>
+<li><a href="#beacons">Beacons</a></li>
+<li><a href="#propagate">Propagate Changes</a></li>
+<li><a href="#exportimport">Export/Import StoreFront Configuration</a></li>
+<li><a href="#logonsimulator">Logon Simulator</a></li>
+</ul>
+</li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2025 April 9 - <a href="#receivers">Deploy Workspace app</a> - updated for <a href="https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html">Workspace app 2503 for Mac</a></li>
+<li>2025 Mar 5 - <a href="#html5">HTML5 Workspace app</a> - updated with <a href="https://www.citrix.com/downloads/workspace-app/html5/workspace-app-for-html5-latest.html">Workspace app for HTML5 version 2502</a></li>
+<li>2025 Feb 8 - Updated <a href="#versions">Versions</a> section for <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-2402-CU2.html">StoreFront 2402 LTSR CU2</a></li>
+<li>2025 Jan 16 - <a href="#receivers">Deploy Workspace app</a> - updated for <a href="https://www.citrix.com/downloads/workspace-app/windows/workspace-app-for-windows-latest.html">Workspace app 2409.10 for Windows</a></li>
+<li>2025 Jan 9 - Updated <a href="#versions">Versions</a> section for <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-2203-CU6.html">StoreFront 2203 LTSR CU6</a></li>
+<li>2024 Dec 4 - Updated <a href="#versions">Versions</a> and <a href="#install">Install</a> sections for <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-2411.html">StoreFront 2411</a></li>
+<li>2024 Jan 24 - <a href="#versions">Versions</a> - <a href="https://support.citrix.com/article/CTX583759/citrix-storefront-security-bulletin-for-cve20235914">StoreFront security vulnerability</a></li>
+<li>2023 Dec 20 - <a href="#nextgen">Next Generation Experience</a> in StoreFront 2311</li>
+<li>2023 Dec 20 - <a href="https://docs.citrix.com/en-us/storefront/current-release/install-standard/user-access-options">Citrix Workspace web extensions</a> at Citrix Docs</li>
+<li>2024 April 30 - Updated <a href="#versions">Versions</a> and <a href="#install">Install</a> sections for <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-in-1912-ltsr-cu9.html">StoreFront 1912 LTSR CU9</a></li>
+<li>2023 June 5 - added link to CTX559036 <a href="https://support.citrix.com/article/CTX559036/storefront-2302-cu2-all-apps-are-now-showing-on-initial-landing-page-instead-of-categories-view">Storefront 2302 CU2 - All Apps are now showing on initial landing page instead of categories view</a>.</li>
+</ul>
+<h3 id="storefront-versions">StoreFront Versions</h3>
+<p>The most recent StoreFront release is version <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-2411.html">2411</a>.</p>
+<ul>
+<li>Starting with version 1811, the version numbering changed to a YYMM (year/month) format.</li>
+<li>Versions 2402, 2203, and 1912 are Long Term Service Releases (LTSR).</li>
+</ul>
+<p>The default user interface in StoreFront 1811 and newer is now the "purple" interface, which is different from versions 3.16 and older. Be aware of this change before you upgrade StoreFront. Customizations might not work in the new interface. There doesn't appear to be any way to revert to the older user interface. The <a href="#nextgen">Next-gen experience</a> in 2311 and newer is not enabled by default but can be enabled manually.<br />
+<img alt="" src="../../../img/img_5fb7a941eea19.png" /></p>
+<p>Download one of the following versions of StoreFront. For LTSR versions of Citrix Virtual Apps and Desktops (CVAD), deploy the StoreFront that comes with your version of LSTR CVAD.</p>
+<ul>
+<li>For Current Release, download <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-2411.html">StoreFront 2411</a><br />
+<img alt="" src="../../../img/image-68.png" /></li>
+<li>For CVAD 2402, download <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-2402-CU2.html">StoreFront 2402 LTSR CU2</a>.<br />
+<img alt="" src="../../../img/Hze8XsOHOCFPAAAAAElFTkSuQmCC" /></li>
+<li>For CVAD 2203, download <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-2203-CU6.html">StoreFront 2203 LTSR CU6</a>. StoreFront 2203 LTSR CU4 Update 1 and later fix a <a href="https://support.citrix.com/article/CTX583759/citrix-storefront-security-bulletin-for-cve20235914">security vulnerability</a>.<br />
+<img alt="" src="../../../img/wFdA9ELNVPWdAAAAABJRU5ErkJggg==" /></li>
+<li>For CVAD 1912 LTSR, download <a href="https://www.citrix.com/downloads/storefront/product-software/storefront-19129">StoreFront 1912 LTSR CU9 (Cumulative Update 9)</a>.<br />
+<img alt="" src="../../../img/image-50.png" /></li>
+</ul>
+<h3 id="storefront-installation-upgrade">StoreFront Installation / Upgrade</h3>
+<p>For small environments, it might be OK to install StoreFront on the Delivery Controller machines. But usually StoreFront and Delivery Controllers are separate machines.</p>
+<ul>
+<li>If StoreFront will pull icons from multiple Citrix Virtual Apps and Desktops sites/farms, then StoreFront should be installed on its own machines.</li>
+</ul>
+<p>To automate the installation of StoreFront, see Dennis Span <a href="http://dennisspan.com/citrix-storefront-unattended-installation-with-powershell/">Citrix StoreFront unattended installation with PowerShell</a>.<br />
+<img alt="" src="../../../img/img_5a72562dc293b.png" /></p>
+<p>The default user interface in StoreFront 1811 and newer is now the "purple" interface, which is different from versions 3.16 and older. Be aware of this change before you upgrade StoreFront. There doesn't appear to be any way to revert to the older user interface.<br />
+<img alt="" src="../../../img/img_5fb7a9546c013.png" /></p>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/09/16/storefront-3-0-scalability-2/">StoreFront 3.0 Scalability</a> recommends StoreFront servers to be sized with 4 vCPU and 8 GB RAM.</p>
+<ol>
+<li>
+<p>If upgrading, do the following before beginning the upgrade:</p>
+<ol>
+<li><strong>Other Users</strong> - Use Task Manager &gt; <strong>Users</strong> tab to logoff any other user currently logged into the machine.<br />
+<img alt="" src="../../../img/img_594fabb6d654a.png" /></li>
+<li><a href="https://docs.citrix.com/en-us/storefront/current-release/export-import-storefront-config.html#par_anchortitle_90b5">Export the StoreFront configuration</a> so you can restore it if something goes wrong.</li>
+<li>Stop the <strong>World Wide Web Publishing</strong> Service.</li>
+<li>Stop all StoreFront services.</li>
+<li>Close all PowerShell and StoreFront consoles.</li>
+<li>Citrix CTX226419 <a href="https://support.citrix.com/article/CTX226419">StoreFront upgrade fails to keep the setting in default ICA file</a>. Take a backup of <strong>default.ica</strong> and <strong>usernamepassword.tfrm</strong> from <strong>C:\inetpub\wwwroot\Citrix\StoreName\App_Data</strong>. After upgrading StoreFront, replace the new default.ica and usernamepassword.tfrm with the old default.ica and usernamepassword.tfrm files to ensure you retain the old settings.</li>
+<li>If Microsoft SCOM Agent is installed, then stop the <strong>Microsoft Monitoring Agent</strong> service.<br />
+<img alt="" src="../../../img/img_5b16bf3fed171.png" /></li>
+<li>See Patrick van den Born <a href="http://patrickvandenborn.blogspot.com/2016/03/avoid-1603-errors-when-upgrading-citrix.html">Avoid 1603 errors when upgrading Citrix StoreFront 2.x to Citrix StoreFront 3.5</a></li>
+<li>
+<p><strong>Operating system support</strong>:</p>
+</li>
+<li>
+<p>StoreFront 2407 and newer are not supported on Windows Server 2016.</p>
+</li>
+<li>StoreFront 2203 and newer are supported on Windows Server 2022.</li>
+<li>StoreFront 2203 is not supported on Windows Server 2012 R2.</li>
+<li>StoreFront 1912 and newer are supported on Windows Server 2019.</li>
+<li>Run <strong>CitrixStoreFront-x64.exe</strong> from the CVAD ISO at <strong>/x64/StoreFront</strong>. Or <a href="#versions">download</a> it separately.<br />
+<img alt="" src="../../../img/image-69.png" /></li>
+<li>Click Yes if asked to install .NET Runtime Version 8. 
+<img alt="" src="../../../img/image-70.png" /></li>
+<li>Click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-71.png" /></li>
+<li>Click <strong>Close</strong>.<br />
+<img alt="" src="../../../img/image-72.png" /></li>
+<li>In the <em>License Agreement</em> page, check the box next to <strong>I accept the terms</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-73.png" /></li>
+<li>In the <em>Review prerequisites</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b16b136bcf0f.png" /></li>
+<li>In the <em>Ready to install</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-74.png" /></li>
+<li>In the <em>Successfully installed StoreFront</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/image-75.png" /></li>
+<li>Click <strong>Yes</strong> if prompted to reboot.<br />
+<img alt="" src="../../../img/img_5e7f6b87e1031.png" /></li>
+<li><strong>FAS</strong> - If you upgraded a StoreFront server that was connected to Citrix Federated Authentication Service (FAS), then also <a href="../citrix-federated-authentication-service-saml/#install">upgrade Citrix Federated Authentication Service</a>.<br />
+<img alt="" src="../../../img/image-58.png" /></li>
+</ol>
+</li>
+</ol>
+<p>If this is a new install, skip to the <a href="#initialconfig">Initial Configuration</a>.</p>
+<p>If you are upgrading from StoreFront 3.8 or older, then do the following to add SAML Authentication as an option. This feature lets you perform SAML against StoreFront without needing Citrix Gateway. If you did a fresh deployment of 3.9 or newer, then SAML is already added.</p>
+<ol>
+<li>Right-click your Store and click <strong>Manage Authentication Methods</strong>.<br />
+<img alt="" src="../../../img/img_58af898c133cc.png" /></li>
+<li>On the bottom, click the <strong>Advanced</strong> button, and click <strong>Install or uninstall authentication methods</strong>.<br />
+<img alt="" src="../../../img/img_58af89a97257b.png" /></li>
+<li>Check the box next to <strong>SAML Authentication</strong>, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_58af89bbd3a78.png" /></li>
+<li>If you don't want to configure SAML at this time, then uncheck the authentication method. See the <a href="../citrix-federated-authentication-service-saml/">Federated Authentication Service</a> article for SAML details.<br />
+<img alt="" src="../../../img/img_58af89e82acb4.png" /></li>
+</ol>
+<h4 id="initial-configuration">Initial Configuration</h4>
+<p>In StoreFront 3.8 and newer, you can create multiple stores in different IIS websites. This functionality is not exposed in the GUI and instead the entire StoreFront configuration must be performed using PowerShell. See Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/12/09/storefront-3-8-is-available-now/">StoreFront 3.8 is Available NOW!</a> for sample PowerShell commands to create the stores.</p>
+<p>You can also use PowerShell to create a store and configure it as detailed at CTX206009 <a href="https://support.citrix.com/article/CTX206009">How to configure a Store via Powershell</a>.</p>
+<p>If this is a new deployment of StoreFront, do the following to perform the initial configuration:</p>
+<ol>
+<li>In PowerShell, run <strong>Set-ExecutionPolicy RemoteSigned</strong>.</li>
+<li>The management console should launch automatically. If not, launch <strong>Citrix StoreFront</strong> from the Start Menu.<br />
+<img alt="" src="../../../img/7f0e2401d0fa58958efde58de588664f.png" /></li>
+<li>In the middle, click <strong>Create a new deployment</strong>.<br />
+<img alt="" src="../../../img/img_5fb7ad6a54d02.png" /></li>
+<li>In the <em>Base URL</em> page, if you installed an SSL certificate on the StoreFront server, then the Hostname should already be filled in. For now, you can leave it set to the server's name and then change it later once you set up SSL and load balancing. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/8fe60cd4fc70b67c1af94553de618972.png" /></li>
+<li>In the <em>Getting Started</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/9ca92d1ba47917d81c1fc0b8149c3d9b.png" /></li>
+<li>In the <em>Store Name</em> page, enter a name for the store. The name entered here is part of the URL path (e.g. /Citrix/CorpStoreWeb)</li>
+<li>Check the box next to <strong>Set this Receiver for Web site as IIS default</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/f9da678efcec65c7e6d49e09bf8c48c6.png" /></li>
+<li>In the <em>Delivery Controllers</em> page, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5c9d436ca6aba.png" /></li>
+<li>Enter a descriptive name for the Citrix Virtual Apps and Desktops (CVAD). This name does not need to match the actual farm name.</li>
+<li>Add the two Delivery Controllers. Change the <em>Transport Type</em> to <strong>HTTP</strong>. Click <strong>OK</strong>. You can set it to HTTPS is you have valid certificates (trusted by StoreFront) installed on your Delivery Controllers.<br />
+<img alt="" src="../../../img/img_5c9d43b903bbd.png" /></li>
+<li>If you have multiple Citrix Virtual Apps and Desktops sites/farms, feel free to add them now. You can also add older XenApp 6.5 farms. Click <strong>Next</strong> when done.<br />
+<img alt="" src="../../../img/img_5c9d43d21b178.png" /></li>
+<li>In the <em>Remote Access</em> page, don’t check the box. Just click <strong>Next</strong>. You can set this up <a href="../storefront-cr-configuration-for-citrix-gateway/">later</a>.<br />
+<img alt="" src="../../../img/img_5c9d43e7ae01c.png" /></li>
+<li>
+<p>In the <em>Authentication Methods</em> page, check the boxes next to <strong>Domain pass-through</strong> and <strong>Pass-through from Citrix Gateway</strong>. Click <strong>Next</strong>.  </p>
+<p><strong>Note</strong>: if you want Domain pass-through authentication for browser users, you also need to <a href="#webauth">enable it for Receiver for Web</a> as detailed later in this article.</p>
+<p><img alt="" src="../../../img/img_624071d1a03bb.png" /></p>
+</li>
+<li>
+<p>In the <em>XenApp Services URL</em> page, click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/879fbf33af89d06c6932e61cc7c0edda.png" /></p>
+</li>
+<li>In the <em>Summary</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/a783a6de887fcff3da619476773d3308.png" /></li>
+</ol>
+<h4 id="second-storefront-server">Second StoreFront Server</h4>
+<p>After the server group is created, <strong>NT SERVICE\CitrixConfigurationReplication</strong> and <strong>NT SERVICE\CitrixClusterService</strong> must remain in the <strong>Administrators</strong> group on both StoreFront servers or propagation will fail.</p>
+<ol>
+<li>Install StoreFront on the second server.</li>
+<li>Create/Import an SSL certificate and bind it to the <strong>Default Web Site</strong>.</li>
+<li>Login to the first StoreFront server. In the StoreFront management console, right-click <strong>Server Group</strong> and click <strong>Add</strong> <strong>Server</strong>.<br />
+<img alt="" src="../../../img/2a81bcfd7555db57f8453a7602017c07.png" /></li>
+<li>
+<p>Copy the Authorization code.  </p>
+<p><strong>Note</strong>: the <strong>Please wait</strong> message means it is waiting on you to add the 2nd server. You don’t actually have to wait.</p>
+<p><img alt="" src="../../../img/2d65133e437b547b030782b318c7e594.png" /></p>
+</li>
+<li>
+<p>Login to the second StoreFront server and launch the management console. In the middle, click <strong>Join existing server group</strong>.<br />
+<img alt="" src="../../../img/img_5fb7b1661f8be.png" /></p>
+</li>
+<li>In the <em>Join Server Group</em> page, enter the name of the first StoreFront server and enter the Authorization code copied earlier. Click <strong>Join</strong>.<br />
+<img alt="" src="../../../img/af0de3cdc2e90e23a3be346130ef8d27.png" /></li>
+<li>Then click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/274b7809661afb854218b238e437fe46.png" /></li>
+<li>Go back to the first server. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/b6d04afa1397730b2ceb2910cceb6bbc.png" /></li>
+<li>Notice this message. It is good advice.<br />
+<img alt="" src="../../../img/f00699146628ee3cf5a5456748ce37f2.png" /></li>
+<li>All changes made on one StoreFront server must be manually propagated to the other StoreFront server. You do that by right-clicking <strong>Server Group</strong>, and clicking <strong>Propagate Changes</strong>.<br />
+<img alt="" src="../../../img/816b17da55f5dde2adf59449078c30c3.png" /></li>
+<li>When you propagate changes, the default web page might not be replicated to the other nodes. Copy <strong>C:\inetpub\wwwroot\web.config</strong> manually to each node.<br />
+<img alt="" src="../../../img/dcee891ced7cbdd890f0e166cd1130e5.png" /></li>
+</ol>
+<h4 id="customer-experience-improvement-program">Customer Experience Improvement Program</h4>
+<p>StoreFront 3.9 and newer enable Customer Experience Improvement Program (CEIP) by default. To disable it, create the registry value <strong>HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Telemetry\CEIP\Enabled</strong> (DWORD) and set it to <strong>0</strong> (zero). Also see <a href="https://docs.citrix.com/en-us/storefront/current-release/install-standard.html#ceip">CEIP</a> at <strong>Install, set up, upgrade, and uninstall</strong> at Citrix Docs.<br />
+<img alt="" src="../../../img/img_58b9cc1e68c6b.png" /></p>
+<p>See <a href="../delivery-controller-2203-ltsr-and-licensing/#ceip">../delivery-controller-2203-ltsr-and-licensing/#ceip</a> for additional places where CEIP is enabled.</p>
+<h4 id="citrix-analytics">Citrix Analytics</h4>
+<p>StoreFront 1906 and newer supports uploading data to Citrix Analytics.</p>
+<p>The client devices must be running Workspace app 1903 and newer.</p>
+<p>See <a href="https://docs.citrix.com/en-us/security-analytics/getting-started-security/virtual-apps-desktops-data-source.html#enable-analytics-on-virtual-apps-and-desktops-on-premises">Enable Analytics on Virtual Apps and Desktops on-premises</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/img_5d0f8867c3726.png" /></p>
+<h3 id="store-name-rename">Store Name – Rename</h3>
+<p>If you installed StoreFront on your Delivery Controller, it will have a default store named <strong>Store</strong>. If you don’t like the default Store Name (/Citrix/Store) then you will need to remove the store and re-add it.</p>
+<p><strong>Note</strong>: Some at Citrix Discussions (<a href="https://discussions.citrix.com/topic/376304-a-protocol-error-occured-while-communicating-with-the-authentication-service/page-2#entry1924037">A protocol error occurred while communicating with the Authentication Service</a>) have reported authentication issues after following this procedure. It's probably cleaner to uninstall StoreFront and reinstall it.</p>
+<ol>
+<li>In the StoreFront console, on the left, click <strong>Stores</strong>.</li>
+<li>Right-click your store, and click <strong>Remove Store</strong>.<br />
+<img alt="" src="../../../img/3f9619c1f9367dde5742ac7bb0e655e6.png" /></li>
+<li>Click <strong>Yes</strong>.<br />
+<img alt="" src="../../../img/58f1fb180c6af51a3edb4d4b534f17c3.png" /></li>
+<li>On the left, right-click <strong>Stores</strong>, and click <strong>Create Store</strong>.<br />
+<img alt="" src="../../../img/b1790ad4d6b5b2130a4d435f1f020929.png" /></li>
+<li>In the <em>Getting Started</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/7699e7a9731e3f3f64da5ba5fa9b5afa.png" /></li>
+<li>In the <em>Store Name</em> page, enter a name for the store. The name entered here is part of the URL path (e.g. /Citrix/CorpStoreWeb).</li>
+<li>Check the box next to <strong>Set this Receiver for Web site as IIS default</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/3f6a00ff2167fa9d7b6fbb811be95779.png" /></li>
+<li>In the <em>Delivery Controllers</em> page, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5c9facd1d8dc3.png" /></li>
+<li>Enter a descriptive name for the Citrix Virtual Apps and Desktops farm. This name does not need to match the actual farm name. (If StoreFront 3.5, <a href="https://discussions.citrix.com/topic/375907-sf-35-failed-to-launch-resource/#entry1918423">don't put spaces or periods in the farm name</a>)</li>
+<li>Change the <em>Type</em> to <strong>XenDesktop</strong> or <strong>Citrix Virtual Apps and Desktops</strong>.</li>
+<li>Add the two Delivery Controllers.</li>
+<li>Change the <em>Transport Type</em> to <strong>HTTP</strong>. Click <strong>OK</strong>. You can leave it set to HTTPS (recommended) if you have valid certificates (trusted by StoreFront) on your Delivery Controllers.<br />
+<img alt="" src="../../../img/img_5c9fac4e8cdee.png" /></li>
+<li>If you have multiple Citrix Virtual Apps and Desktops farms, feel free to add them now. You can also add older XenApp farms. Or later, you can add farms in <strong>Store &gt; Manage Delivery Controllers</strong>. Click <strong>Next</strong> when done.<br />
+<img alt="" src="../../../img/img_5c9fad00a1f59.png" /></li>
+<li>In the <em>Remote Access</em> page, don’t check the box and click <strong>Next</strong>. You can set this up <a href="../storefront-cr-configuration-for-citrix-gateway/">later</a>.<br />
+<img alt="" src="../../../img/img_5c9fad0edfe63.png" /></li>
+<li>In the <em>Authentication Methods</em> page, check the boxes next to <strong>Domain pass-through</strong> and <strong>Pass-through from Citrix Gateway</strong>. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5c9fad4129ab9.png" /></li>
+<li>In the <em>XenApp Services URL</em> page, click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/83861151c477cf9fcd91319d4443bb2c.png" /></li>
+<li>In the <em>Created Successfully</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/1be1c449c81d5f4feeb681964983e939.png" /></li>
+</ol>
+<h3 id="ssl-certificate">SSL Certificate</h3>
+<p>StoreFront requires SSL. You will save yourself much heartache if you install valid, trusted certificates on the StoreFront servers or your load balancer. There are two options for StoreFront SSL.</p>
+<ul>
+<li><strong>SSL Offload</strong>: Use Citrix ADC to do SSL Offload and load balancing. In this scenario, install the SSL certificate on the load balancer. You can leave the StoreFront servers listening on HTTP and no IIS server certificate. The SSL certificate on the Citrix ADC must match the DNS name that resolves to the load balancing VIP.</li>
+<li><strong>SSL End-to-end</strong>: Install an SSL certificate on each StoreFront server and bind it to IIS. This allows you to use SSL protocol between the load balancer and the StoreFront servers.</li>
+</ul>
+<p>If your load balancer cannot terminate SSL, then the StoreFront IIS certificate must match the DNS name that resolves to the load balancing VIP.</p>
+<p>For load balancers that can terminate SSL (e.g., Citrix ADC), the StoreFront IIS server certificate should match the StoreFront server name. If StoreFront is installed on the Delivery Controllers, with server-specific certificates you can later enable HTTPS in the StoreFront Store Delivery Controller configuration.</p>
+<p>Another option is to create an SSL certificate with Subject Alternative Names for the load balanced DNS name and each of the StoreFront server FQDNs. Then import this one certificate on all StoreFront servers. Or a wildcard certificate could match all of these names.</p>
+<p>In either case, be aware that Email-based discovery in Citrix Receiver requires the certificate to not only match the StoreFront load balanced DNS name but the certificate must also match <strong>discoverReceiver.email.suffix</strong> for every email domain. Usually, the only option to match multiple email domains is with Subject Alternative Names. If you have multiple email suffixes, then you will need multiple Subject Alternative Names, each beginning with <strong>discoverReceiver</strong>. If you don’t plan on implementing email-based discovery, then you don’t have to worry about these <strong>discoverReceiver</strong> Subject Alternative Names.</p>
+<p>If the certificate does not match <strong>discoverReceiver.email.suffix</strong>, then users will see this message when attempting to use email discovery in Citrix Workspace app.<br />
+<img alt="" src="../../../img/15189f98dbbd23ba08ffe024a327330f.png" /></p>
+<p>When adding Subject Alternative Names to a certificate, the first Subject Alternative Name should be the same as the Load Balancing FQDN. The remaining Subject Alternative Names should be <strong>discoverReceiver.email.suffix</strong> for every email domain.<br />
+<img alt="" src="../../../img/35f0632b01706b6aa6fcfc990f380afd.png" /></p>
+<p>When you view a Subject Alternative Name certificate, on the <strong>Details</strong> tab, click <strong>Subject Alternative Name</strong> to verify that all names are listed including the DNS name that resolves to the load balancing VIP.<br />
+<img alt="" src="../../../img/a570c097c1da584369e3c7f80146f56d.png" /></p>
+<p>There are several methods of creating a certificate for StoreFront.</p>
+<ul>
+<li>
+<p>If you are implementing <a href="../storefront-cr-configuration-for-citrix-gateway/#singlefqdn">Single FQDN</a> for internal and external users, then the certificate for external Citrix Gateway can also be used for internal StoreFront.</p>
+<ul>
+<li>Single FQDN has additional Subject Alternative Name certificate requirements, including Internal Beacon FQDN and Callback FQDN.</li>
+<li>If you will support non-domain-joined machines (e.g., iPads, thin clients) connecting to your internal StoreFront, then the StoreFront certificate should be signed by a public Certificate Authority. You can use IIS to request the certificate. You can then <a href="../certificates-citrix-adc-13/#pfx">export the certificate from IIS and import it to Citrix ADC</a> (for Load Balancing and Citrix Gateway). Public Certificate Authorities (e.g., GoDaddy, Digicert, etc.) let you enter additional Subject Alternative Names when you purchase the certificate.<br />
+<img alt="" src="../../../img/5db6a77831f163159ddd858b73a40d93.png" /><br />
+<img alt="" src="../../../img/ef58e2a27f5cafd0c74b79ff434324bf.png" /></li>
+<li>If all internal machines are domain-joined, then you can use an internal Certificate Authority to create the StoreFront certificate. The Certificates MMC snap-in can be used to create an internal certificate signed by a Microsoft Certificate Authority. The MMC method allows you to specify Subject Alternative Names.<br />
+<img alt="" src="../../../img/61faa8468594561cb8151888df76d8a3.png" /><br />
+<img alt="" src="../../../img/35f0632b01706b6aa6fcfc990f380afd.png" /></li>
+</ul>
+</li>
+</ul>
+<p>Once the certificate is created or imported, bind it to IIS:</p>
+<ol>
+<li>In IIS Manager, right-click the <strong>Default Web Site</strong>, and click <strong>Edit Bindings</strong>.<br />
+<img alt="" src="../../../img/4498d5fa1fb7a2d85349862ea5e4203e.png" /></li>
+<li>Click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/eb513511913e2825fb20c1f4bfe73c80.png" /></li>
+<li>Change the <em>Type</em> to <strong>https</strong> and select the SSL certificate. Do NOT put anything in the <strong>Host name</strong> field. Click <strong>OK</strong>, and then click <strong>Close</strong>.<br />
+<img alt="" src="../../../img/d57da6f20c574ecbf2159b4e09c4b329.png" /></li>
+</ol>
+<h4 id="delivery-controllers-ssl">Delivery Controllers – SSL</h4>
+<p>Delivery Controllers can be SSL enabled by using one of two methods:</p>
+<ul>
+<li>If IIS is installed on the Delivery Controller, simply install/create a certificate, and bind it to the Default Web Site.</li>
+<li>If IIS is not installed on the Delivery Controller, then you need to run a command line program as described at <a href="../delivery-controller-cr-and-licensing/#ssl">SSL for Delivery Controller.</a></li>
+</ul>
+<p>Once SSL certificates are installed on the Delivery Controller servers, then you can configure the StoreFront Store to use SSL when communicating with the Delivery Controllers.</p>
+<ol>
+<li>In the StoreFront Console, on the left click <strong>Stores</strong>.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Delivery Controllers</strong>.<br />
+<img alt="" src="../../../img/760df0a249eb43d1162a1bc78d66f68a.png" /></li>
+<li>Highlight the deployment and click <strong>Edit</strong>.<br />
+<img alt="" src="../../../img/7d396dbd44a4a28c8e9a31abc814ed93.png" /></li>
+<li>The <strong>Servers</strong> list must contain FQDNs that match the certificates installed on those Delivery Controller servers.</li>
+<li>Change the <em>Transport type</em> to <strong>HTTPS</strong>.</li>
+<li>Click <strong>OK</strong> twice.<br />
+<img alt="" src="../../../img/Pasted-58.png" /></li>
+<li>See CTX399424 <a href="https://support.citrix.com/article/CTX399424">Gateway Callback and / or XML Communication fails after upgrade to Storefront 2203</a> for a workaround. The fix is included in <a href="https://support.citrix.com/article/CTX457757">StoreFront 2203.1</a>.</li>
+</ol>
+<h3 id="base-url-change">Base URL – Change</h3>
+<ol>
+<li>Configure <a href="../storefront-load-balancing-citrix-adc/">load balancing of the StoreFront servers</a>, including SSL certificate.</li>
+<li>In the Citrix StoreFront console, right-click <strong>Server Group</strong>, and click <strong>Change Base URL</strong>.<br />
+<img alt="" src="../../../img/b7fd5b9d619b49c8c04aac4cbe3c63f2.png" /></li>
+<li>
+<p>Enter the StoreFront Load Balancing FQDN as the new Base URL in <strong>https://storefront.corp.com</strong> format.</p>
+<ol>
+<li>Receiver requires that the Base URL is <strong>https</strong>. It won’t accept <strong>http</strong>.</li>
+<li>If you want the StoreFront Base URL to be the same as your Gateway FQDN, then see the <a href="../storefront-cr-configuration-for-citrix-gateway/#singlefqdn">Single FQDN instructions</a>.<br />
+<img alt="" src="../../../img/74ad74b2a49b3eeb5c5a75e356f756f0.png" /></li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+</li>
+</ol>
+<p>If the Base URL is <strong>https</strong>, but you don’t have certificates installed on your StoreFront servers (aka SSL Offload), then you’ll need to do the following:</p>
+<ol>
+<li>On the left, click the <strong>Stores</strong> node.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Receiver for Web Sites</strong>.<br />
+<img alt="" src="../../../img/7be25f942788fd1a029addfa0864ebcd.png" /></li>
+<li>Click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/760d7ff586615cf8a93cc0ef8a196a1c.png" /></li>
+<li>On the <strong>Advanced Settings</strong> page, change <strong>Enable loopback communication</strong> to <strong>OnUsingHttp</strong>. Click <strong>OK</strong>, and then click <strong>Close</strong>.<br />
+<img alt="" src="../../../img/image-19.png" /></li>
+</ol>
+<h3 id="default-web-page">Default Web Page</h3>
+<p>After changing the Base URL, you’ll need to update the IIS Default Website.</p>
+<ol>
+<li>On the left, right-click <strong>Stores</strong>, and click <strong>Set Default Website</strong>.<br />
+<img alt="" src="../../../img/4569ccfe77ee320f1a42f37725ddbddf.png" /></li>
+<li>Check the box next to <strong>Set a Receiver for Web site as the default page in IIS</strong> and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/caaa01eb3c355efc272866f08848d953.png" /></li>
+<li>Click <strong>Yes</strong> to overwrite.<br />
+<img alt="" src="../../../img/44f34338c69e291cb35ece567a181792.png" /></li>
+<li>If you go to <strong>C:\inetpub\wwwroot</strong> and edit the file <strong>web.config</strong>, you’ll see the redirect.<br />
+<img alt="" src="../../../img/dcee891ced7cbdd890f0e166cd1130e5.png" /><br />
+<img alt="" src="../../../img/9ed99ebd2cd67bc60e7535a54bbba31f.png" /></li>
+</ol>
+<h3 id="authentication-configuration">Authentication Configuration</h3>
+<ol>
+<li>In the Citrix StoreFront console, on the left, click the <strong>Stores</strong> node.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Authentication Methods</strong>.<br />
+<img alt="" src="../../../img/e52bfa7fd2bcfdd5f477f80a81070b1d.png" /></li>
+<li>Check the boxes next to <strong>Domain pass-through</strong> and <strong>Pass-through from Citrix Gateway</strong>.<br />
+<img alt="" src="../../../img/img_5c9fadafced9a.png" /></li>
+<li>If you intend to enable pass-through authentication from Receiver Self-Service (native Workspace app) or from Receiver for Web (web browser), then in Web Studio (CVAD 2212 and newer), go to <strong>Settings</strong> and <strong>Enable XML trust</strong>.<br />
+<img alt="" src="../../../img/Pasted-5.png" /><br />
+<img alt="" src="../../../img/Pasted-4.png" /><ul>
+<li>Or go to a Delivery Controller and run the command<br />
+<code>**Set-BrokerSite -TrustRequestsSentToTheXmlServicePort $True**</code> from a Windows PowerShell command prompt. You might have to run <code>asnp citrix.*</code> first.<br />
+<img alt="" src="../../../img/f60f2e8a764b78e5457c5675d5f4ecfc.png" /></li>
+</ul>
+</li>
+<li>
+<p>If StoreFront is not in the same domain (or trusted domain) as the users, then you can configure StoreFront to delegate authentication to the Delivery Controllers. See <a href="https://docs.citrix.com/en-us/storefront/current-release/configure-authentication-and-delegation/xml-authentication.html">XML service-based authentication</a> at Citrix Docs.</p>
+<ul>
+<li>StoreFront 3.6 and newer can be workgroup members without joining a domain.</li>
+<li>Click the top gear icon, and then click <strong>Configure Trusted Domains</strong>.<br />
+<img alt="" src="../../../img/img_5c9fade42db6d.png" /></li>
+<li>Select <strong>Trusted domains only</strong>, click <strong>Add</strong>, and enter the domain names in DNS format. The DNS suffix is needed if doing userPrincipalName authentication from Citrix Gateway.</li>
+<li>Select one of the domains as the default.</li>
+<li>If desired, check the box next to <strong>Show domains list in logon page</strong>. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/46bc740f3ab6ce290e6163bf2ef22148.png" /></li>
+<li>Click the top gear icon, and then click <strong>Manage Password Options</strong>.<br />
+<img alt="" src="../../../img/img_5c9fadf75d9ac.png" /></li>
+<li>Make your selection, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/bf2c5d13b891650ff1678412e18e23aa.png" /></li>
+<li>Be careful with password changes. Any time somebody changes their password through StoreFront, a profile will be created for that user on the StoreFront server. Use a tool like <a href="https://helgeklein.com/free-tools/delprof2-user-profile-deletion-tool/">delprof2.exe</a> to periodically delete these local profiles.<br />
+<img alt="" src="../../../img/img_5a01f22fbc3c8.png" /></li>
+<li>
+<p>If you have Citrix Virtual Apps and Desktops and <a href="https://docs.citrix.com/en-us/self-service-password-reset/current-release/install-configure.html">installed Self-Service Password Reset</a>, you can integrate SSPR with StoreFront 3.7 or newer by clicking the top gear icon and clicking <strong>Configure Account Self-Service</strong>. This option is only available if your Base URL is <strong>https</strong> (encrypted). See the following for detailed implementation guides.</p>
+</li>
+<li>
+<p>Citrix CTX217143 <a href="https://support.citrix.com/article/CTX217143">Self-Service Password Reset Central Store Creation Tool</a></p>
+</li>
+<li>Citrix CTX224244 <a href="https://support.citrix.com/article/CTX224244">How Do I Deploy Self-Service Password Reset For the First Time</a></li>
+<li>George Spiers <a href="http://www.jgspiers.com/citrix-self-service-password-reset/">Citrix Self-Service Password Reset</a><br />
+<img alt="" src="../../../img/img_58af8d636715a.png" /></li>
+<li>Change the selection to <strong>Citrix SSPR</strong>, and click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/be2a3abb5c75011c523422380b3c0e06.png" /></li>
+<li>Check both boxes and enter the URL of the SSPR server using the displayed example (with /MPMService on the end). Click <strong>OK</strong> three times.<br />
+<img alt="" src="../../../img/a934d59216869eba86cc439e44cfbf03.png" /></li>
+<li>With SSPR enabled, a new <strong>Tasks</strong> tab lets users enroll with SSPR.<br />
+<img alt="" src="../../../img/cee39ec4e0ce356082ccbeffff441633.png" /></li>
+<li>The logon page also has an <strong>Account Self-Service</strong> link.<br />
+<img alt="" src="../../../img/ec414c84b01b0514ee5a65da9914e16b.png" /><br />
+<img alt="" src="../../../img/e8c9a18b17b3146d0bb2d7d8ea26a092.png" /></li>
+</ul>
+</li>
+</ol>
+<h3 id="next-generation-experience">Next Generation Experience</h3>
+<p>In StoreFront 2411 and newer, you can do the following to enable the Next-gen experience theme, which looks the same as Workspace in Citrix Cloud, including the Activity Manager. <img alt="" src="../../../img/image-17.png" /></p>
+<ol>
+<li>In the StoreFront Console, on the left, click the <strong>Stores</strong> node.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Receiver for Web Sites</strong>.<br />
+<img alt="" src="../../../img/cc892391bfc239657e941e682914e988.png" /></li>
+<li>Click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/2eba00c75e87ae210266f21621a1d598.png" /></li>
+<li>On the <strong>UI Experience</strong> page, select <strong>Next generation experience</strong> and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/image-16.png" /></li>
+<li>StoreFront 2411 adds <strong>Pinned Links</strong> to the Next generation experience.<br />
+<img alt="" src="../../../img/image-79.png" /><br />
+<img alt="" src="../../../img/image-80.png" /></li>
+</ol>
+<h3 id="customize-receiver-appearance">Customize Receiver Appearance</h3>
+<p>You can go to <strong>Stores &gt; Manage</strong> <strong>Receiver for Web Sites &gt; Configure &gt; Customize Appearance</strong> to change logos and colors. Additional customization can be performed using the SDK.<br />
+<img alt="" src="../../../img/image-20.png" /></p>
+<p>You can also <a href="https://docs.citrix.com/en-us/storefront/current-release/manage-citrix-receiver-for-web-site/manage-app-groups.html">Manage Featured App Groups</a>.</p>
+<p>In StoreFront 1811 and newer, Featured App Groups are shown in the user interface as <strong>Collections</strong>.</p>
+<ul>
+<li>The <strong>HOME</strong> page shows the Feature App Groups in a ribbon with arrows to let the user see more Featured App Groups. The ribbon view is limited to three icons per Featured App Group. When the user clicks a Featured App Group, every icon in the Featured App Groups is shown.<br />
+<img alt="" src="../../../img/img_5c1e56876ae19.png" /></li>
+<li>The <strong>APPS</strong> page has a <strong>Collections</strong> tab showing all collections and the number of icons in each Collection.<br />
+<img alt="" src="../../../img/img_5c1e55ccd8d0e.png" /></li>
+<li>When the user clicks a collection, all icons in the collection are shown. The user can click <strong>Add All</strong> on the top right to mark all of the icons as Favorites.<br />
+<img alt="" src="../../../img/img_5c1e55f6b7ded.png" /></li>
+</ul>
+<p>To create Featured App Groups:</p>
+<ol>
+<li>Go to <strong>Stores &gt; myStore &gt; Manage Receiver for Web Sites &gt; Configure</strong>.</li>
+<li>In the <strong>Edit Receiver for Web site</strong> window, on the <strong>Featured App Groups</strong> page, click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5fb7b27e45c48.png" /></li>
+<li>Give the Collection a name and a description.</li>
+<li>At the bottom, there are three methods of adding icons to the Feature App Group.<br />
+<img alt="" src="../../../img/img_5c1e547a11952.png" /></li>
+<li>If you select the Keyword option, then enter a keyword that will be added to the published apps that are in this collection.</li>
+<li>In Citrix Studio, go to the <strong>Properties</strong> of a published application. In the <strong>Description</strong> field, at the end, enter <strong>KEYWORDS:</strong>myCollectionKeyword.<br />
+<img alt="" src="../../../img/image-37.png" /></li>
+</ol>
+<p>In StoreFront older than version 1811:</p>
+<ul>
+<li>Featured App Groups are displayed at the top of the <strong>Apps &gt; All</strong> page.<br />
+<img alt="" src="../../../img/9b0ae768d6f2b53a7461e949d5569675.png" /></li>
+<li>By default, Featured App Groups are displayed with continual horizontal scrolling. This is OK if you have several Featured App Groups but doesn’t look right if you only have one Featured App Group.<br />
+<img alt="" src="../../../img/2564f98545149d91a5cdef38b1c5bdeb.png" /></li>
+<li>Michael Bednarek has posted some code at <a href="https://discussions.citrix.com/topic/366912-storefront-30-feature-app-groups-appears-more-than-one/#entry1885228">Citrix Discussions</a> to disable the continuous horizontal scrolling.<br />
+<img alt="" src="../../../img/30a60567d4a255383886174728d87e5e.png" /></li>
+<li>If you want to display more than 3 apps per group, see Michael Bednarek at <a href="https://discussions.citrix.com/topic/377366-modify-receiver-for-web-site/">Modify Receiver for Web site</a> at Citrix Discussions.<br />
+<img alt="" src="../../../img/img_5963892acea2b.png" /></li>
+</ul>
+<h3 id="receiver-for-web-browser-pass-through-authentication">Receiver for Web (browser) Pass-through Authentication</h3>
+<ol>
+<li>On the left, click the <strong>Stores</strong> node.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Receiver for Web Sites</strong>.<br />
+<img alt="" src="../../../img/cb633990da3eb793dc87e81f2e74d6de.png" /></li>
+<li>Click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/2b97e592c8d7c7d777cde6e495d91ac6.png" /></li>
+<li>On the <strong>Authentication Methods</strong> page, if desired, check the box next to <strong>Domain pass-through</strong>. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/image-21.png" /></li>
+<li>If the StoreFront URL is in the browser’s Local Intranet zone, then you’ll see a prompt to automatically <strong>Log On</strong>. This only appears once.<br />
+<img alt="" src="../../../img/img_5fb7b2bdb7dd0.png" /></li>
+<li>If you want to default to Pass-through without any user prompt, then see Citrix Blog Post <a href="https://www.citrix.com/blogs/2019/04/16/configuring-domain-pass-through-as-your-default-authentication-method/">Configuring domain pass-through as your default authentication method</a>.</li>
+</ol>
+<h3 id="workspace-app-for-html5-2502">Workspace app for HTML5 2502</h3>
+<ol>
+<li>On the left, click the <strong>Stores</strong> node.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Receiver for Web Sites</strong>.<br />
+<img alt="" src="../../../img/cb633990da3eb793dc87e81f2e74d6de.png" /></li>
+<li>Click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/2b97e592c8d7c7d777cde6e495d91ac6.png" /></li>
+<li>In StoreFront 2411 and newer, on the <strong>Launch Preferences</strong> page, change the drop-down to <strong>Use Receiver for HTML5 if local Citrix Receiver/Workspace is unavailable</strong>.<br />
+<img alt="" src="../../../img/image-77.png" />  <ul>
+<li>Prior to StoreFront 2411, on the <strong>Deploy Citrix Receiver / Workspace app</strong> page, change the drop-down to <strong>Use Receiver for HTML5 if local Citrix Receiver/Workspace is unavailable</strong>.<br />
+<img alt="" src="../../../img/image-40.png" /></li>
+</ul>
+</li>
+<li>By default, the HTML5 session opens in a new tab. You can optionally enable <strong>Launch applications in the same tab as Receiver for Web</strong>. See <a href="https://docs.citrix.com/en-us/storefront/current-release/manage-citrix-receiver-for-web-site/html5-tabs.html">Configure Citrix Receiver for HTML5 use of browser tabs</a> at Citrix Docs for more information.</li>
+<li>Click <strong>OK</strong>, and then click <strong>Close</strong>.</li>
+<li>
+<p>Download the <a href="https://www.citrix.com/downloads/workspace-app/html5/workspace-app-for-html5-latest.html">Workspace app 2411 for HTML5</a>.  </p>
+<p><strong>Note</strong>: new versions of Workspace app for HTML5 are released frequently. For example, 2306 and newer support the new launch experience.</p>
+<p><img alt="" src="../../../img/tEnaUg0AAAAASUVORK5CYII=" />
+8. Install the HTML5 Workspace app (<strong>CitrixHTML5Client-x64.exe</strong>) on one of the StoreFront servers. It installs without prompting. Repeat this step on all StoreFront servers in the Server Group since <strong>Propagate Changes</strong> doesn't seem to propagate the new Workspace App.<br />
+<img alt="" src="../../../img/UgroNLA1qwUqlKZtWQ7qHI7JhBAAAAAoP35P6N1olyLc6d6AAAAAElFTkSuQmCC" /><br />
+<img alt="" src="../../../img/img_5cc08059f2039.png" />
+9. To see the installed version of HTML5 Workspace app, in StoreFront console, click the <strong>Stores</strong> node on the left.
+10. In the middle pane, in the bottom half, switch to the <strong>Receiver for Web Sites</strong> tab. You might have to click <strong>Refresh</strong> to see the new version.<br />
+<img alt="" src="../../../img/v8HpN5fqeJzGRYAAAAASUVORK5CYII=" /></p>
+</li>
+</ol>
+<h4 id="html5-workspace-app-configuration">HTML5 Workspace app configuration</h4>
+<ol>
+<li><strong>Copy/paste of text using Ctrl+C and Ctrl+V</strong> - HTML5 Workspace app version 1907 app adds support for copy/paste of text using Ctrl+C and Ctrl+V and the feature is enabled by default. More info at <a href="https://docs.citrix.com/en-us/citrix-workspace-app-for-html5/configure.html#enhanced-clipboard-experience">Enhanced clipboard experience</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/img_5cee9388bc8f5.png" /></li>
+<li><strong>Multi-monitor</strong> - HTML5 Workspace app has a multi-monitor feature, which is enabled by default.<br />
+<img alt="" src="../../../img/img_5abf9e9634569.png" /></li>
+<li>To configure HTML5 Workspace app, edit the file <strong>"C:\Program Files\Citrix\Receiver StoreFront\HTML5Client\configuration.js"</strong>.<br />
+<img alt="" src="../../../img/img_591e29ddef919.png" /><ol>
+<li>Customer Experience Improvement Program (CEIP) is enabled by default. To disable CEIP in HTML5 Workspace App 1906 and newer, find the first <strong>analytics</strong> section and change <strong>enabled</strong> to <strong>false</strong>.<br />
+<img alt="" src="../../../img/img_5d0390323db55.png" /></li>
+<li>To disable CEIP in HTML5 Workspace App 1905 and older, search for the <strong>ceip</strong> section, and change it to <strong>false</strong>.<br />
+<img alt="" src="../../../img/img_591e29fbe1cad.png" /></li>
+</ol>
+</li>
+<li>In the StoreFront console, on the left, right-click <strong>Server Group</strong>, and click <strong>Propagate Changes</strong>.<br />
+<img alt="" src="../../../img/816b17da55f5dde2adf59449078c30c3.png" /></li>
+<li>
+<p>For VDA 7.15 and older, optionally, <a href="../virtual-delivery-agent-vda-7-15-ltsr/#pdf">install Citrix PDF Printer</a> on the VDAs. The PDF printer is in the <strong>Additional Components</strong> section of the HTML5 Workspace app download page.  </p>
+<p><strong>Note</strong>: in VDA 7.16 and newer, the PDF Printer is included with the VDA installation and no longer needs to be installed separately.</p>
+<p><img alt="" src="../../../img/img_59923ec0a04e9.png" /></p>
+</li>
+</ol>
+<p>Other HTML5 Receiver configurations you can change by either editing <strong>C:\Program Files\Citrix\Receiver StoreFront\HTML5Client\configuration.js</strong>, or use the <a href="https://support.citrix.com/article/CTX229141">Citrix Workspace app (earlier known as Citrix Receiver) for Chrome and HTML5 – Configuration Utility</a> downloadable from CTX229141. 
+<img alt="" src="../../../img/img_5b7b2975d3338.png" /></p>
+<ul>
+<li>HTML5 Workspace app has improved PDF printing in Chrome and Firefox. Enable it by setting <strong>supportedBrowsers</strong> to <strong>true</strong>.<br />
+<img alt="" src="../../../img/img_5aa1385f8de5e.png" /></li>
+<li>When printing from HTML5 Workspace app to the Citrix PDF Printer, the user must click <strong>Continue</strong> to show the PDF. You can get rid of this prompt. In the <strong>configuration.js</strong> file, scroll down to the line containing <strong>printDialog</strong> and set it to <strong>true</strong>.<br />
+<img alt="" src="../../../img/img_5a6de33c6f050.png" /><br />
+<img alt="" src="../../../img/img_59c03eed54ddb.png" /><br />
+<img alt="" src="../../../img/img_59c03e41de735.png" /></li>
+<li>The new HTML5 Workspace app toolbar can be disabled or customized by editing the file <strong>C:\Program Files\Citrix\Receiver StoreFront\HTML5Client\configuration.js</strong>.<br />
+<img alt="" src="../../../img/d9abd77f366c416336d0b8082dc27faa.png" /></li>
+</ul>
+<p>If HTML5 Workspace app is enabled, users have the option of selecting either native or HTML5 by clicking <strong>Change Citrix Receiver</strong> or <strong>Change Citrix Workspace app</strong>.</p>
+<ol>
+<li>In StoreFront 1912 and newer, click the gear icon on the top right and then click <strong>Account Settings</strong>.<br />
+<img alt="" src="../../../img/img_5fb7b3e8198e8.png" /></li>
+<li>Click either <strong>Change Citrix Workspace app</strong> or <strong>Change Citrix Receiver.</strong>.<br />
+<img alt="" src="../../../img/img_6240752a59f35.png" /><br />
+<img alt="" src="../../../img/img_5fb7b3ff47ccf.png" /></li>
+<li>If you want to use the locally installed Workspace app, then click the blue <strong>Detect Citrix Workspace app</strong> or blue <strong>Detect Receiver</strong> button. If you want to use the HTML5 Client, click <strong>Use light version</strong>.<br />
+<img alt="" src="../../../img/img_624079df79e94.png" /><br />
+<img alt="" src="../../../img/img_5fb7b41854420.png" /></li>
+</ol>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/03/09/receiver-for-html5-and-chrome-file-transfer-explained/">Receiver for HTML5 and Chrome File Transfer Explained</a>:</p>
+<ul>
+<li>How to use the toolbar to transfer files</li>
+<li>Citrix Policy settings to enable/disable file transfer</li>
+<li>VDA registry settings to control file transfer</li>
+<li><strong>HTML5Client\Configuration.js</strong> settings for client-side configuration</li>
+<li>How to view HTML5Client log file</li>
+</ul>
+<h3 id="deploy-citrix-workspace-app">Deploy Citrix Workspace app</h3>
+<ol>
+<li>Citrix recommends that all users install the <strong>Citrix Workspace Web Extension</strong> in their endpoint browsers. This extension eliminates the need for StoreFront to detect the locally installed Workspace app and enables .ica files to be downloaded to memory instead of to disk. StoreFront support for the extension is enabled by default in StoreFront 2311 and newer. See <a href="https://docs.citrix.com/en-us/storefront/current-release/install-standard/user-access-options">Citrix Workspace web extensions</a> at Citrix Docs.<br />
+<img alt="" src="../../../img/image-18.png" /></li>
+<li>StoreFront can deploy Workspace app to users that don't have Workspace app installed. In StoreFront console, on the left, click the <strong>Stores</strong> node.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Receiver for Web Sites</strong>.<br />
+<img alt="" src="../../../img/cb633990da3eb793dc87e81f2e74d6de.png" /></li>
+<li>Click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/2b97e592c8d7c7d777cde6e495d91ac6.png" /></li>
+<li>On the <strong>Deploy Citrix Receiver/ Workspace app</strong> page, check the box next to <strong>Allow users to download HDX engine (plug in)</strong>.<br />
+<img alt="" src="../../../img/image-23.png" /></li>
+<li>
+<p>Change both <strong>source</strong> drop-downs to <strong>Local files on the StoreFront server</strong>.<br />
+<img alt="" src="../../../img/img_5c9faf6e55e2d.png" /></p>
+<ol>
+<li>
+<p>For Windows, download one of the following:</p>
+<ul>
+<li>Workspace app for Windows <a href="https://www.citrix.com/downloads/workspace-app/windows/workspace-app-for-windows-latest.html">2409.10</a>. Version 2409.10 is a Current Release.<br />
+<img alt="" src="../../../img/B9E+ayS4tamMAAAAAElFTkSuQmCC" /></li>
+<li>For LTSR, download Citrix Workspace app for Windows LTSR <a href="https://www.citrix.com/downloads/workspace-app/workspace-app-for-windows-long-term-service-release/workspace-app-for-windows-LTSR-Latest.html">2402 CU1</a>.<br />
+<img alt="" src="../../../img/image-62.png" /><ol>
+<li>For Mac, download <a href="https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html">Workspace app 2503 for Mac</a>.<br />
+<img alt="" src="../../../img/Ot04qCs1j5WqLhPUjrE8uzvkJWLTeK5dlLrczj3FJR98PdBaRfpJKfwIq610oCoO4v0O8STOla7fUirjV3mWpNy2ABQ+XI13lQdT1XmY7XvzbD9RxjnagOb61R15jr2bF0NT6rQHg9VflcSnO0wdkSSpay17PP1TOveVHRr1kBVXfm7zq2+rtR8p3D+qq1Hc6TxarTxcp3Lu6OkBGEDeYkDwes5pcYzBRq30JBEMSdhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiGhoSMIAiCaGhIyAiCIIiG5v8D7jPNcVvKK8IAAAAASUVORK5CYII=" /></li>
+<li>Click each of the <strong>Browse</strong> buttons and browse to the downloaded Workspace app.<br />
+<img alt="" src="../../../img/img_5c9faf81ea4f2.png" /></li>
+<li>You can optionally enable <strong>Upgrade plug-in at logon</strong>.</li>
+<li>StoreFront 2411 and newer have an option to <strong>Require end users to use locally installed Citrix app only</strong>.<br />
+<img alt="" src="../../../img/image-78.png" /><br />
+<img alt="" src="../../../img/image-82.png" /></li>
+<li>Click <strong>OK</strong> when done, and <strong>Close</strong> when done.<br />
+<img alt="" src="../../../img/img_5c9fafa0cc4d6.png" /></li>
+</ol>
+</li>
+<li>If you prefer for users to download Workspace app from the Citrix website, then note that StoreFront might default to downloading Receiver instead of Workspace app. To change it to Workspace app, do the following:</li>
+</ul>
+</li>
+<li>
+<p>In StoreFront Console, in the <strong>Deploy Citrix Receiver/ Workspace app</strong> page, change <strong>Windows source</strong> and <strong>Mac source</strong> to <strong>Files on remote server (through URL)</strong>.<br />
+<img alt="" src="../../../img/img_5fb7b4ad66bce.png" /></p>
+</li>
+<li>
+<p>Enter the following paths. The default paths might be <strong>http</strong> instead of <strong>https</strong> and you should change them to <strong>https</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Windows Receiver = https://downloadplugins.citrix.com/Windows/CitrixWorkspaceApp.exe
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Mac Receiver = https://downloadplugins.citrix.com/Mac/CitrixWorkspaceApp.dmg
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>When users connect to Receiver for Web, they will be prompted to install or upgrade. In StoreFront 2203 and newer, the screens say Workspace app.<br />
+<img alt="" src="../../../img/img_624077f17ae22.png" /></p>
+</li>
+<li>In older versions of StoreFront, the screens might say <strong>Citrix Receiver</strong> instead of <strong>Citrix Workspace app</strong>.<br />
+<img alt="" src="../../../img/img_607eabfb17bf3.png" /><br />
+<img alt="" src="../../../img/img_5fb7b516b3793.png" /><br />
+<img alt="" src="../../../img/ec2199878b1d5d72522da5e55782cb27.png" /></li>
+<li>You can change it to Citrix Workspace app by following the instructions at <a href="https://support.citrix.com/article/CTX221097">CTX221097 How to rename items on StoreFront?</a>.<br />
+<img alt="" src="../../../img/img_607eac4834c7f.png" /><ul>
+<li>Search the list of strings in the KB article for any string containing the word <strong>Receiver</strong>, copy the string to <strong>C:\inetpub\wwwroot\Citrix\StoreWeb\custom\strings.en.js</strong>, and change it to <strong>Workspace app</strong>. A few of the strings are shown below. Make sure there are commas between each item except the last item.<br />
+<img alt="" src="../../../img/img_607eacc58998f.png" /></li>
+</ul>
+</li>
+<li>If you don't want StoreFront to detect the locally installed Workspace app, then edit the Receiver for Web site, switch to the <strong>Advanced Settings</strong> page and uncheck the box next to <strong>Enable protocol handler</strong>. This disables the button that asks users to <strong>Detect Workspace app</strong>.<br />
+<img alt="" src="../../../img/img_62407909bbf7e.png" /></li>
+</ol>
+<h3 id="receiver-for-web-timeout">Receiver for Web Timeout</h3>
+<ol>
+<li>On the left, click the <strong>Stores</strong> node.</li>
+<li>In the middle, right-click your store, and click <strong>Manage Receiver for Web Sites</strong>.<br />
+<img alt="" src="../../../img/cb633990da3eb793dc87e81f2e74d6de.png" /></li>
+<li>Click <strong>Configure</strong>.<br />
+<img alt="" src="../../../img/2b97e592c8d7c7d777cde6e495d91ac6.png" /></li>
+<li>On the <strong>Session Settings</strong> page, set the <strong>Session timeout</strong> as desired, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5fb7b54cecd49.png" /></li>
+<li>If you are using a Citrix ADC, you will need to change the Global Session Timeout located at Citrix Gateway =&gt; Global Settings =&gt; Change Global Settings (right pane) =&gt; Client Experience (tab) =&gt; Session Time-out (mins).<br />
+<img alt="" src="../../../img/img_624080827be25.png" /><br />
+<img alt="" src="../../../img/img_6240808ed9097.png" /><br />
+<img alt="" src="../../../img/img_624080afc631a.png" /><ul>
+<li>This Citrix Gateway Session Time-out only applies to StoreFront and AAA. If you want it to also apply to ICA sessions, then on the <strong>Network Configuration</strong> tab, set <strong>ICA Session Timeout</strong> to <strong>ON</strong>. Source = CTX218008 <a href="https://support.citrix.com/article/CTX218008">How to configure ICA Proxy Connection Termination upon AAA Session Time Out</a>.<br />
+<img alt="" src="../../../img/img_624080cee035f.png" /></li>
+</ul>
+</li>
+<li>From <a href="https://docs.citrix.com/en-us/storefront/1912-ltsr/communication-timeout.html#configure-the-session-time-out">Change the session time-out of Citrix Receiver for Web</a> at Citrix Docs: If you increase the session timeout for RfWeb to be more than 1 hour, you must also increase the <strong>maxLifetime</strong> appropriately in <strong>c:\inetpub\wwwroot\Citrix\Authentication\Web.config</strong>.</li>
+<li>If your desired timeout value is greater than 8 hours, you should also edit <strong>tokenLifeTime</strong> in <strong>c:\inetpub\wwwroot\Citrix\StoreWeb\web.config</strong>.</li>
+</ol>
+<h3 id="favorites-categories-and-default-tab">Favorites, Categories, and Default Tab</h3>
+<p>By default, when a user logs into StoreFront, the <strong>HOME</strong> tab or <strong>Favorites</strong> tab is selected. Users can go to other tabs to add icons to the list of Favorites.</p>
+<p>In StoreFront 1811 and newer:</p>
+<ul>
+<li>Favorites are shown on the <strong>HOME</strong> tab.<br />
+<img alt="" src="../../../img/img_5c1e5e82088e0.png" /></li>
+<li>Favorites are also shown on the <strong>APPS</strong> view on the <strong>Favorites</strong> tab.<br />
+<img alt="" src="../../../img/img_5c1e644137d7c.png" /></li>
+<li>The user can click the star icon next to a published icon to mark that published icon as a Favorite and add it to the <strong>HOME</strong> view and <strong>Favorites</strong> tab.<br />
+<img alt="" src="../../../img/img_5c1e5f0d72afd.png" /></li>
+<li>On the <strong>APPS</strong> view, the user can expand the <strong>Categories</strong> drop-down and select a Category to view all icons in that Category.<br />
+<img alt="" src="../../../img/img_5c1e614126c28.png" /><ul>
+<li>To default to the <strong>Categories</strong> view, see the custom code at CTX559036 <a href="https://support.citrix.com/article/CTX559036/storefront-2302-cu2-all-apps-are-now-showing-on-initial-landing-page-instead-of-categories-view">Storefront 2302 CU2 - All Apps are now showing on initial landing page instead of categories view</a>.</li>
+<li>StoreFront 1912 CU2 and newer has an option to collapse the categories after one is selected. Notice the <strong>Uncategorized</strong> folder.<br />
+<img alt="" src="../../../img/img_5fb7b5c78e523.png" /></li>
+<li>After clicking a category, the user must click <strong>Categories</strong> again to switch to a different category.<br />
+<img alt="" src="../../../img/img_5fb7b5fa8c428.png" /></li>
+<li>StoreFront 1912 CU5 and StoreFront 2203 have an option to show <strong>Uncategorized</strong> icons directly below the Categories list if no Category is selected by the user.<br />
+<img alt="" src="../../../img/img_62290ff07a459.png" /></li>
+<li>This feature is configured in StoreFront console &gt; click your store &gt; Manage Receiver for Web sites &gt; Configure &gt; <strong>Category Settings</strong>. 1912 CU5 and 2203 adds the checkbox option to <strong>Move uncategorized apps into an Uncategorized folder</strong>. It's checked by default, but you can uncheck it.<br />
+<img alt="" src="../../../img/image-24.png" /></li>
+</ul>
+</li>
+<li>Categories are configured in the <strong>Properties</strong> of the published application on the <strong>Delivery</strong> page.<br />
+<img alt="" src="../../../img/image-38.png" /></li>
+<li><strong>Collections</strong> are configured as <a href="../storefront-cr-basic-configuration/#customizeappearance">Featured App Groups</a>.</li>
+</ul>
+<p>In StoreFront older than 1811:</p>
+<ul>
+<li>There's a <strong>FAVORITES</strong> view.<br />
+<img alt="" src="../../../img/4ac4e199f55e385fab8098f7e1bbd86c.png" /></li>
+<li>On the APPS or DESKTOPS views, the user can click the <strong>Details</strong> link next to a published icon.<br />
+<img alt="" src="../../../img/04c93c2b8881f59e7c0b4e87c3dbeb26.png" /></li>
+<li>Then the user can click <strong>Add to Favorites</strong> to add the icon to the FAVORITES view.<br />
+<img alt="" src="../../../img/35802d7f1d12f1431eb33a9e94807bcb.png" /></li>
+</ul>
+<p>Favorites can be controlled by the administrator:</p>
+<ul>
+<li>You can completely remove the <strong>FAVORITES</strong> or <strong>HOME</strong> views by going to <strong>Stores &gt; myStore &gt; Configure Store Settings &gt; User Subscriptions</strong>, and choose <strong>Disable User Subscriptions (Mandatory Store)</strong>.<br />
+<img alt="" src="../../../img/2d6a5774d5f06e4f64d1891d12d75a75.png" /><br />
+<img alt="" src="../../../img/img_59902c490b0bd.png" /></li>
+<li>
+<p>To force a published application to be favorited (subscribed), use one of the following keywords in the published application description:</p>
+<ul>
+<li><strong>KEYWORDS: Auto</strong> = the application is automatically subscribed. But users can remove the favorite.</li>
+<li><strong>KEYWORDS: Mandatory</strong> = the application is automatically subscribed, and users cannot remove the favorite.<br />
+<img alt="" src="../../../img/image-39.png" /></li>
+<li>With Mandatory applications there is no option to remove the application from Favorites.</li>
+<li>Citrix Blog Post <a href="https://www.citrix.com/blogs/2019/08/08/how-to-implement-dynamic-landing-pages-in-storefront/">How to implement dynamic landing pages in StoreFront</a> has code for the following: If favorites exist, go to favorites tab. If favorites do not exist, go to the store tab. :idea:</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>//If favorites exist, go to favorites tab. If favorites do not exist, go to the store tab.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>var favoritesExist = false;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>CTXS.Extensions.sortMyAppList = function (app_array,defaultSortFn) {
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>//This version checks if the amount of user favorites are greater than or equal
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>//to &quot;favoriteThreshold&quot;.
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  var favoriteThreshold = 1;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  var favoriteCount = 0;
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  for (var i = 0; i &lt; app_array.length; i++){ if (app_array[i].canBeRemoved()){ favoriteCount++; } } if (favoriteCount &gt;= favoriteThreshold){
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    favoritesExist = true;
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  }
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  //This should always be called at the end
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  defaultSortFn();
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>};
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>CTXS.Extensions.afterDisplayHomeScreen = function (callback) {
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  if (favoritesExist == false){
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    CTXS.ExtensionAPI.changeView(&quot;store&quot;);
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  }
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>};
+</span></code></pre></div>
+</li>
+<li>
+<p>Trentent Tye has a simple customization for <strong>C:\inetpub\wwwroot\Citrix\StoreWeb\custom\script.js</strong> to default to the <strong>APPS</strong> view if the user doesn't have any favorites. See <a href="https://theorypc.ca/2017/12/22/citrix-storefront-adventures-in-customization-default-to-store-view-if-you-have-no-favourited-apps/">Citrix Storefront – Adventures in customization – Default to “Store” view if you have no favourited app’s</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CTXS.Extensions.afterDisplayHomeScreen = function (callback) {
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> /* If the user has no favorited apps, set the view to the apps view */
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> if (CTXS.Store.getMyApps().length == 0) {
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> CTXS.ExtensionAPI.changeView(&quot;store&quot;)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> }
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>};
+</span></code></pre></div>
+</li>
+<li>
+<p>You can change the default view and view visibility by going to the <strong>Stores &gt; myStore &gt; Manage Receiver for Web Sites &gt; Configure &gt; Client Interface Settings</strong> page.<br />
+<img alt="" src="../../../img/image-25.png" /></p>
+</li>
+<li>
+<p>In StoreFront 1811 and newer, if you want to default to the APPS tab with Categories view expanded, then see CTP Sam Jacobs at <a href="https://discussions.citrix.com/topic/400408-storefront-1811-default-to-categories-view/#comment-2030332">Storefront 1811 - Default to Categories view</a> at Citrix Discussions. Or see Citrix Blog Post <a href="https://www.citrix.com/blogs/2019/09/03/how-to-land-on-the-categories-view-in-storefront-1811/">How to land on the categories view in StoreFront 1811+</a>.<br />
+<img alt="" src="../../../img/img_5c263ec4caf68.png" /></p>
+<ul>
+<li>
+<p>Add the following to <strong>C:\Inetpub\wwwroot\Citrix\StoreWeb\custom\script.js</strong>.  </p>
+<p>Note: if you already have <strong>afterDisplayHomeScreen</strong> in your <strong>script.js</strong> file, then you'll need to merge them.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>function categoriesDelay() {
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$(&#39;#categoriesTabBtn&#39;).click();
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>}
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>CTXS.Extensions.afterDisplayHomeScreen = function (callback) {
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>CTXS.ExtensionAPI.changeView(&#39;store&#39;);
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>window.setTimeout(categoriesDelay,250);
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>callback();
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>};
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>In StoreFront older than version 1811, if you change the default view to <strong>APPS</strong>, then you might also want to default to the <strong>Categories</strong> view instead of the <strong>All</strong> view.<br />
+<img alt="" src="../../../img/099d81536710fcc7f65b425d6ac3e94a.png" /></p>
+<ul>
+<li>When publishing applications in Citrix Studio, on the <strong>Delivery</strong> page, specify an <strong>Application category</strong> so that the applications are organized into folders.<br />
+<img alt="" src="../../../img/image-36.png" /></li>
+<li>
+<p>To default the <strong>Apps</strong> view to the <strong>Categories</strong> view instead of the <strong>All</strong> view, add the following code to the end of the file <strong>C:\Inetpub\wwwroot\Citrix\StoreWeb\custom\script.js</strong>. More details at <a href="https://discussions.citrix.com/topic/366933-storefront-30-change-default-view/#entry1883282">Storefront 3.0 - change default view</a> at Citrix Discussions.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CTXS.Extensions.afterDisplayHomeScreen = function (callback) {
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>     CTXS.ExtensionAPI.navigateToFolder(&#39;/&#39;);
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>};
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>CTXS.Extensions.onViewChange = function (viewName) {
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  if (viewName == &#39;store&#39;) {
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    window.setTimeout(function () {
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    CTXS.ExtensionAPI.navigateToFolder(&#39;\\&#39;);
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    }, 0);
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  }
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>};
+</span></code></pre></div>
+<p><img alt="" src="../../../img/6b528455094c0cb7c205f05fa8a23832.png" /></p>
+</li>
+<li>
+<p>Then when you login to StoreFront, you’ll see <strong>Apps &gt; Categories</strong> as the default view. This works in Workspace app too.<br />
+<img alt="" src="../../../img/d5a3aa8d21e91db073056e8ddbed2a51.png" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="beacons">Beacons</h3>
+<ol>
+<li>On the left, right-click <strong>Stores</strong>, and click <strong>Manage Beacons</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb2685c979.png" /></li>
+<li>
+<p>Configure an <strong>Internal Beacon</strong>. Receiver Self-Service (Workspace app native interface) tries to connect to the Internal Beacon to determine if Workspace app is currently internal or not. If the Internal Beacon is reachable then Receiver Self-Service assumes it is internal, and thus connects to the StoreFront Base URL. If the Internal Beacon is not reachable, then Receiver Self-Service assumes it is external and thus connects to Citrix Gateway. For this to work properly, the Internal Beacon must not be resolvable externally.  </p>
+<p>If you are not doing <a href="../storefront-cr-configuration-for-citrix-gateway/#singlefqdn">Single FQDN</a>, then the Internal Beacon can be the StoreFront FQDN since the StoreFront FQDN is usually only available internally.</p>
+<p>If you are doing Single FQDN, then you can’t use the StoreFront FQDN. Instead, you must use a different internal website for the beacon. If you need to support internal iPads, due to differences in how iPads determine location, the Internal Beacon should be a new FQDN that resolves to the StoreFront Load Balancing VIP, thus requiring the StoreFront certificate to match both the Internal Beacon and the Base URL. If internal iPads are not needed, then the Internal Beacon can be any internal website.</p>
+<p>If you want to force internal Receiver Self-Service users to connect through Citrix Gateway (for AppFlow reporting), you can set the Internal Beacon to a fake URL. Since the Internal Beacon is never resolvable, Receiver Self-Service always uses Citrix Gateway. Or you can use <a href="https://support.citrix.com/article/CTX200129">Optimal Gateway</a> to achieve the same goal.</p>
+</li>
+<li>
+<p>The <strong>External beacons</strong> are used by Workspace app to determine if Workspace app has Internet access or not. You can use any reliable Internet DNS name. <strong>http://ping.citrix.com</strong> is no longer valid and should be changed to some other address. Click <strong>OK</strong> when done.<br />
+<img alt="" src="../../../img/img_603fa3d151b17.png" /></p>
+</li>
+</ol>
+<h3 id="propagate-changes">Propagate Changes</h3>
+<p>Any time you make a change on one StoreFront server, you must propagate the changes to the other StoreFront server.</p>
+<ol>
+<li>In the StoreFront console, on the left, right-click <strong>Server Group</strong>, and click <strong>Propagate Changes</strong>.<br />
+<img alt="" src="../../../img/816b17da55f5dde2adf59449078c30c3.png" /></li>
+<li>You might see a message saying that you made changes on the wrong server.<br />
+<img alt="" src="../../../img/4959059cd19a35636d35bfa5205e62a8.png" /></li>
+<li>Click <strong>Yes</strong> when asked to propagate changes.<br />
+<img alt="" src="../../../img/6a27e51b26484e9dde4d4460b6299d11.png" /></li>
+<li>Click <strong>OK</strong> when done.<br />
+<img alt="" src="../../../img/8ec38f02843975fddd456dc80f0dba91.png" /></li>
+<li>When you propagate changes, the default web page is not replicated to the other nodes. Copy <strong>C:\inetpub\wwwroot\web.config</strong> manually to each node.<br />
+<img alt="" src="../../../img/dcee891ced7cbdd890f0e166cd1130e5.png" /></li>
+</ol>
+<h3 id="exportimport-storefront-configuration">Export/Import StoreFront Configuration</h3>
+<p>Use the following PowerShell cmdlets to export StoreFront Configuration into a .zip file (encryption optional) and import to a different StoreFront server group:</p>
+<ul>
+<li>Export-STFConfiguration</li>
+<li>Import-STFConfiguration</li>
+</ul>
+<p>See <a href="https://docs.citrix.com/en-us/storefront/current-release/export-import-storefront-config.html">Export and import the StoreFront configuration</a> at Citrix Docs for details.</p>
+<h3 id="logon-simulator">Logon Simulator</h3>
+<p>ControlUp has <a href="https://www.controlup.com/products/scoutbees/">ScoutBees</a> logon simulator for StoreFront and Citrix Gateway.</p>
+<p>eG Innovations has a free <a href="https://www.eginnovations.com/citrix-monitoring/free-logon-simulator">Logon Simulator for Citrix XenApp and XenDesktop</a>.</p>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li><a href="../storefront-cr-tweaks/">StoreFront 2311 through 3.5 Tweaks</a></li>
+<li><a href="../storefront-cr/">Back to StoreFront 2311 through 3.5</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

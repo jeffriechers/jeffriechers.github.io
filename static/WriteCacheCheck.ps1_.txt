@@ -1,0 +1,15 @@
+$cred = Get-Credential
+$server = Read-Host "Please enter the hostname of the Citrix Server you wish to scan."
+[string]$logfile = 'd:\poolmon.txt'
+$poolmonnetwork = "<yourshare>\poolmon.exe"
+$poolmonlocal = "c:\temp\poolmon.exe"
+copy-item $poolmonnetwork -Destination "\\$server\c$\temp\poolmon.exe"
+Write-Host $server
+Invoke-Command -Computername $server -Credential $cred -ScriptBlock {Remove-Item $using:logfile -Force -EA SilentlyContinue }
+Invoke-Command -Computername $server -Credential $cred -ScriptBlock {Invoke-Expression -Command:"cmd.exe /c $using:poolmonlocal -n $using:logfile"}
+Write-Host "Ram Cache Used"
+Invoke-Command -Computername $server -Credential $cred -ScriptBlock {((Get-Content $using:logfile | ? {$_ -like "*VhdR*"}) -split "\s+")[6] /1gb}
+Write-Host "Disk Cache Used"
+Invoke-Command -Computername $server -Credential $cred -ScriptBlock {(Get-ChildItem "d:\vdiskdif.vhdx" -Force).Length /1mb}
+Invoke-Command -Computername $server -Credential $cred -ScriptBlock {Remove-Item $using:poolmonlocal -Force -EA SilentlyContinue }
+Invoke-Command -Computername $server -Credential $cred -ScriptBlock {Remove-Item $using:logfile -Force -EA SilentlyContinue }

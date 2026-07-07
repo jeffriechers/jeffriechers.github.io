@@ -1,0 +1,52 @@
+ <#
+ .Synopsis
+     Installs Prereqs for Session Recording Agent
+ .Description
+     Supports  Windows Server 2022, Windows Server 2019, Windows Server 2016, windows 11, and Windows 10.
+     Install below windows feature on this machine:
+     -Microsoft Message Queuing (MSMQ), with Active Directory integration disabled, and MSMQ HTTP support enabled.
+ #>
+ function AddFeatures($featurename)
+ {
+     try
+     {
+         $feature=Get-WindowsFeature | ? {$_.DisplayName -eq $featurename -or $_.Name -eq $featurename}
+         Add-WindowsFeature $feature
+     }
+     catch
+     {
+         Write-Host "Addition of Windows feature $featurename failed"
+         Exit 1
+     }
+     Write-Host "Addition of Windows feature $featurename succeeded"
+ }
+
+ # Start to install Windows feature
+ $system= gwmi win32_operatingSystem | select name
+
+ if (-not (($system -Like '*Microsoft Windows Server 2022*') -or ($system -Like '*Microsoft Windows Server 2019*') -or ($system -Like '*Microsoft Windows Server 2016*') -or ($system -Like '*Microsoft Windows 11*') -or ($system -Like '*Microsoft Windows 10*')))
+ {
+     Write-Host("This is not a supported platform. Installation aborted.")
+     Exit
+ }
+
+ if ($system -Like '*Microsoft Windows Server*')
+ {
+     Import-Module ServerManager
+     AddFeatures('MSMQ') #Message Queuing
+     AddFeatures('MSMQ-HTTP-Support')#MSMQ HTTP Support
+ }
+ else
+ {
+     try
+     {
+         dism /online /enable-feature /featurename:MSMQ-HTTP /all
+     }
+     catch
+     {
+         Write-Host "Addition of Windows feature MSMQ HTTP Support failed"
+         Exit 1
+     }
+     write-Host "Addition of Windows feature MSMQ HTTP Support succeeded"
+ }
+ 

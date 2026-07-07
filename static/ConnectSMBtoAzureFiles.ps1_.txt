@@ -1,0 +1,84 @@
+# Define parameters, $StorageAccountName currently has a maximum limit of 15 characters
+# If you wish to use existing Resource Group or Storage Account comment out the section near Line 50 and Line 54
+# Make sure to run this script on a machine joined to the target domain
+# Created by Jeff Riechers - jeffriechers@gmail.com  - www.jeffriechers.com
+$SubscriptionId = "<Subscription ID>"
+$ResourceGroupName = "<Resource Group>"
+$StorageAccountName = "<Storage Account Name>"
+$DomainAccountType = "ComputerAccount" 
+$OuDistinguishedName = "<Distinguished Name of OU to place AZ machine account>"
+# Specify the encryption agorithm used for Kerberos authentication. Default is configured as "'RC4','AES256'" which supports both 'RC4' and 'AES256' encryption.
+$EncryptionType = "<AES256|RC4|AES256,RC4>"
+$AZLocation = "<Azure Zone>"
+$shareName = "<fileshare name - must be lowercase letters and numbers only, no spaces or extended characters>"
+
+
+
+# Begin code execution
+# Change the execution policy to unblock importing AzFilesHybrid.psm1 module
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+# Install latest PowerShellGet module (may require a restart of powershell)
+Install-Module -Name PowerShellGet -Force
+
+#Install Azure Powershell modules
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+
+#Download AZFilesHybrid
+wget https://github.com/Azure-Samples/azure-files-samples/releases/download/v0.2.4/AzFilesHybrid.zip -outfile azfileshybrid.zip
+
+#Unzip files
+Expand-Archive .\azfileshybrid.zip
+
+# Navigate to where AzFilesHybrid is unzipped and stored and run to copy the files into your path
+# If this fails out on you, just run the CopyToPSPath.ps1 manually then comment out lines 27-35
+cd .\azfileshybrid\AzFilesHybrid\
+.\CopyToPSPath.ps1 
+# Import AzFilesHybrid module
+Import-Module -Name AzFilesHybrid
+
+# Login with an Azure AD credential that has either storage account owner or contributer Azure role assignment
+# If you are logging into an Azure environment other than Public (ex. AzureUSGovernment) you will need to specify that.
+# See https://docs.microsoft.com/azure/azure-government/documentation-government-get-started-connect-with-ps
+# for more information.
+Connect-AzAccount
+
+# Select the target subscription for the current session
+Select-AzSubscription -SubscriptionId $SubscriptionId 
+
+# Create the Resource Group for your Storage Location.  Comment this out if you are using an existing resource group
+
+New-AZResourceGroup -Name $ResourceGroupName -Location $AZLocation 
+
+# Create Storage account in the new Resource Group.  Comment this out if you are using an existing Storage account.  
+
+New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName -SkuName Premium_LRS -Location $AZLocation -Kind FileStorage -EnableLargeFileShare
+
+# If this is a test environment and you wish to use less expensive SSD storage, comment out the above line and uncomment out the item below.
+
+#New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName -SkuName Standard_LRS -Location $AZLocation -Kind StorageV2 -AllowBlobPublicAccess $false -AllowSharedKeyAccess $false
+
+
+# Register the target storage account with your active directory environment under the target OU (for example: specify the OU with Name as "UserAccounts" or DistinguishedName as "OU=UserAccounts,DC=CONTOSO,DC=COM"). 
+# You can use to this PowerShell cmdlet: Get-ADOrganizationalUnit to find the Name and DistinguishedName of your target OU. If you are using the OU Name, specify it with -OrganizationalUnitName as shown below. If you are using the OU DistinguishedName, you can set it with -OrganizationalUnitDistinguishedName. You can choose to provide one of the two names to specify the target OU.
+# You can choose to create the identity that represents the storage account as either a Service Logon Account or Computer Account (default parameter value), depends on the AD permission you have and preference. 
+# Run Get-Help Join-AzStorageAccountForAuth for more details on this cmdlet.
+
+Join-AzStorageAccountForAuth -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName -DomainAccountType $DomainAccountType -OrganizationalUnitDistinguishedName $OuDistinguishedName -EncryptionType $EncryptionType -OverwriteExistingADObject
+
+#Run the command below if you want to enable AES 256 authentication. If you plan to use RC4, you can skip this step.
+Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName
+
+
+# Set the default permission of your choice
+$defaultPermission = "StorageFileDataSmbShareContributor" 
+
+$account = Set-AzStorageAccount -ResourceGroupName $ResourceGroupName -AccountName $StorageAccountName -DefaultSharePermission $defaultPermission
+
+$account.AzureFilesIdentityBasedAuth
+
+# Create the file share in the Storage Account
+
+New-AzRmStorageShare -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName -Name $shareName -AccessTier TransactionOptimized 
+
+#You can run the Debug-AzStorageAccountAuth cmdlet to conduct a set of basic checks on your AD configuration with the logged on AD user. This cmdlet is supported on AzFilesHybrid v0.1.2+ version. For more details on the checks performed in this cmdlet, see Azure Files Windows troubleshooting guide.
+Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroupName -Verbose

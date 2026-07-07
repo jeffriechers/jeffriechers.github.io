@@ -1,0 +1,52 @@
+ <#
+ .Synopsis
+     Installs Prereqs for Session Recording Administration
+ .Description
+     Supports Windows Server 2022, Windows Server 2019 and Windows Server 2016.
+     Install below windows feature on this machine:
+     -Application Development
+     -Security - Windows Authentication
+     -Management Tools - IIS 6 Management Compatibility
+         IIS 6 Metabase Compatibility
+         IIS 6 WMI Compatibility
+         IIS 6 Scripting Tools
+         IIS 6 Management Console
+     -Microsoft Message Queuing (MSMQ), with Active Directory integration disabled, and MSMQ HTTP support enabled.
+ #>
+ function AddFeatures($featurename)
+ {
+     try
+     {
+         $feature=Get-WindowsFeature | ? {$_.DisplayName -eq $featurename -or $_.Name -eq $featurename}
+         Add-WindowsFeature $feature
+     }
+     catch
+     {
+         Write-Host "Addition of Windows feature $featurename failed"
+         Exit 1
+     }
+     Write-Host "Addition of Windows feature $featurename succeeded"
+ }
+
+ $system= gwmi win32_operatingSystem | select name
+
+ if (-not (($system -Like '*Microsoft Windows Server 2022*') -or ($system -Like '*Microsoft Windows Server 2019*') -or ($system -Like '*Microsoft Windows Server 2016*')))
+ {
+     Write-Host("This is not a supported server platform. Installation aborted.")
+     Exit
+ }
+
+ # Start to install Windows feature
+ Import-Module ServerManager
+
+ AddFeatures('Web-Asp-Net45') #ASP.NET 4.5
+ AddFeatures('Web-Mgmt-Console') #IIS Management Console
+ AddFeatures('Web-Windows-Auth') # Windows Authentication
+ AddFeatures('Web-Metabase') #IIS 6 Metabase Compatibility
+ AddFeatures('Web-WMI') #IIS 6 WMI Compatibility
+ AddFeatures('Web-Lgcy-Scripting')#IIS 6 Scripting Tools
+ AddFeatures('Web-Lgcy-Mgmt-Console') #IIS 6 Management Console
+ AddFeatures('MSMQ-HTTP-Support') #MSMQ HTTP Support
+ AddFeatures('web-websockets') #IIS Web Sockets
+ AddFeatures('NET-WCF-HTTP-Activation45') #http activate
+ 

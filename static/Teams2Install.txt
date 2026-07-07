@@ -1,0 +1,61 @@
+# Script created by Jeff Riechers
+# Downloaded from www.jeffriechers.com
+# Contact me with questions or recommendations at jeffriechers@gmail.com
+
+#Teams 2.x Install
+Start-Transcript -Path (Join-Path $env:TEMP "Updates.log") -Append -Force
+$Teams2InstallPath = "C:\Program Files\WindowsApps\MSTeams_*"
+If(!(test-path -PathType container $Teams2InstallPath)) {
+Write-output "Teams 2.x not installed, downloading the latest bootstrapper.exe and installing now"
+	$Teams2DownloadURI = "https://go.microsoft.com/fwlink/?linkid=2243204&clcid=0x409"
+	$Teams2Path = Join-Path "$($env:TEMP)" "teamsbootstrapper.exe"
+	Write-Output "Starting download of latest Teams 2.x client"
+	(New-Object System.Net.WebClient).DownloadFile($Teams2DownloadURI, $Teams2Path)
+	$Execute2Setup = " -p"
+	$Team2Installproc = Start-Process -FilePath $Teams2Path -ArgumentList $Execute2Setup -PassThru
+	$Team2Installproc.WaitForExit()
+	Start-Sleep -Seconds 15
+	Remove-Item -Path $Teams2Path -Recurse -Force
+	$UpdatedTeams = (Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname | sort name | select -First 1
+	$installableversion = Get-AppLockerFileInformation -Path $UpdatedTeams"\MICROSOFTTEAMSMEETINGADDININSTALLER.MSI" | Select -ExpandProperty Publisher | select BinaryVersion
+   	$getversionnumber = $installableversion.BinaryVersion.toString()
+	$TeamsAddinInstall = start-process -filepath "C:\Windows\System32\msiexec.exe" -argumentList '/i MicrosoftTeamsMeetingAddinInstaller.msi /qn ALLUSERS=1 /norestart TARGETDIR="C:\Program Files (x86)\Microsoft\TeamsMeetingAddin\',$getversionnumber,'"' -WorkingDirectory $UpdatedTeams -Passthru
+	$TeamsAddinInstall.WaitForExit()
+}
+else {
+Write-Output "Teams already installed, proceeding to check for updates."
+}
+
+$CurrentTeamsDirectoryCount = ((Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname).Count
+$CurrentTeams = (Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname | sort name | select -First 1
+$updateprocess = Start-Process -FilePath $CurrentTeams"\ms-teams.exe" -WindowStyle Minimized -PassThru
+Start-Sleep -Seconds 60
+$stopteams = Stop-Process -name "ms-teams"
+$UpdatedTeamsDirectoryCount = ((Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname).Count
+if ($UpdatedTeamsDirectoryCount -gt $CurrentTeamsDirectoryCount) {
+	Write-Output "Updating Teams 2.x and Outlook Add-in"
+	Start-Sleep -Seconds 60
+	$updateprocess = Start-Process -FilePath $CurrentTeams"\ms-teams.exe" -WindowStyle Minimized -PassThru
+	Start-Sleep -Seconds 60
+	$stopteams = Stop-Process -name "ms-teams"
+	$UpdatedTeams = (Get-ChildItem -Path "C:\Program Files\WindowsApps" -Filter "MSTeams_*" -Directory).Fullname | sort name | select -First 1
+if ($UpdatedTeams -gt $CurrentTeams) {
+	$updateprocess = Start-Process -FilePath $UpdatedTeams"\ms-teams.exe" -WindowStyle Minimized -PassThru
+    Start-Sleep -Seconds 15
+    $stopteams = Stop-Process -name "ms-teams"
+    $installableversion = Get-AppLockerFileInformation -Path $UpdatedTeams"\MICROSOFTTEAMSMEETINGADDININSTALLER.MSI" | Select -ExpandProperty Publisher | select BinaryVersion
+    $getversionnumber = $installableversion.BinaryVersion.toString()
+    $TeamsAddInUninstall = Start-Process -FilePath "C:\Windows\System32\msiexec.exe" -ArgumentList "-x MICROSOFTTEAMSMEETINGADDININSTALLER.MSI /qn" -WorkingDirectory "C:\PROGRAM FILES\WINDOWSAPPS\MSTEAMS_*" -Passthru
+	$TeamsAddInUninstall.WaitForExit()
+	Remove-Item -Path "C:\Program Files (x86)\Microsoft\TeamsMeetingAddin\" -Recurse -Force
+	$TeamsAddinInstall = start-process -filepath "C:\Windows\System32\msiexec.exe"-argumentList '/i MicrosoftTeamsMeetingAddinInstaller.msi /qn ALLUSERS=1 /norestart TARGETDIR="C:\Program Files (x86)\Microsoft\TeamsMeetingAddin\',$getversionnumber,'"' -WorkingDirectory $UpdatedTeams -Passthru
+	$TeamsAddinInstall.WaitForExit()
+	}
+else {
+	Write-Output "There are no new Teams 2.x updates available."
+}
+}
+else {
+Write-Output "There are no new Teams 2.x updates available."
+}
+Stop-Transcript

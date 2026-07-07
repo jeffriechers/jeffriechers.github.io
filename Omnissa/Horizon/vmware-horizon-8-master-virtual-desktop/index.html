@@ -1,0 +1,6120 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../vmware-horizon-8-master-rds-host/">
+      
+      
+        <link rel="next" href="../vmware-horizon-8-rds-farms-pools/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Omnissa Horizon 2503: Master Virtual Desktop - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Omnissa Horizon 2503: Master Virtual Desktop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antivirus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antivirus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#carbon-black" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Carbon Black
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Carbon Black">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-defender-antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Defender Antivirus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizon-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Horizon Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizon-agent-installationupgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Agent Installation/Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installupgrade-dynamic-environment-manager-dem-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade Dynamic Environment Manager (DEM) Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logon-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloneprep-rearm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClonePrep – Rearm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-fslogix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft FSLogix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft FSLogix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-fslogix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why FSLogix?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fslogix-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSLogix Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-os-optimization-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows OS Optimization Tool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows OS Optimization Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Optimizations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snapshot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antivirus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antivirus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#carbon-black" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Carbon Black
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Carbon Black">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-defender-antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Defender Antivirus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizon-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Horizon Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizon-agent-installationupgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Agent Installation/Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installupgrade-dynamic-environment-manager-dem-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade Dynamic Environment Manager (DEM) Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logon-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloneprep-rearm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClonePrep – Rearm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-fslogix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft FSLogix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft FSLogix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-fslogix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why FSLogix?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fslogix-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSLogix Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-os-optimization-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows OS Optimization Tool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows OS Optimization Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Optimizations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snapshot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Omnissa Horizon 2503: Master Virtual Desktop</h1>
+
+<h3 id="navigation">Navigation</h3>
+<p>Use this post to build a virtual desktop that will be used as the parent image (aka source image, aka master image, aka gold image) for additional virtual desktops. There's a separate article for <a href="../vmware-horizon-8-master-rds-host/">RDS Session Host</a>.</p>
+<p>This post applies to all Horizon versions 2006 (aka 8.0) and newer.</p>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#hardware">Virtual Hardware</a></li>
+<li>
+<p>Windows</p>
+<ul>
+<li><a href="#windowsprep">Preparation</a></li>
+<li><a href="#power">Power Options</a></li>
+<li><a href="#system">System Settings</a></li>
+<li><a href="#apps">Install Applications</a></li>
+<li><a href="#antivirus">Antivirus</a></li>
+<li>
+<p>Horizon Agent</p>
+</li>
+<li>
+<p><a href="#agent">Horizon Agent Installation/Upgrade</a></p>
+</li>
+<li><a href="#uem">Dynamic Environment Manager (DEM) Agent Installation/Upgrade</a></li>
+<li><a href="#logonmonitor">Logon Monitoring</a></li>
+<li><a href="#rearm">ClonePrep – Rearm</a></li>
+<li><a href="#fslogix">Microsoft FSLogix</a></li>
+<li><a href="#whyfslogix">Why FSLogix?</a></li>
+<li><a href="#fslogixinstall">FSLogix Installation</a></li>
+<li><a href="#optimize">Windows OS Optimization Tool</a></li>
+<li><a href="#additionaloptimizations">Additional Optimizations</a></li>
+<li><a href="#snapshot">Snapshot</a></li>
+</ul>
+</li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2025 April 17 - <a href="#agent">Horizon Agent</a> - updated for <a href="https://customerconnect.omnissa.com/downloads/details?downloadGroup=HZN-2503-ENT&amp;productId=1598&amp;rPId=118967">Horizon 2503 (8.15)</a>, <a href="https://customerconnect.omnissa.com/downloads/details?downloadGroup=DEM-1015-ENTERPRISE&amp;productId=1597&amp;rPId=118963">DEM 2503</a>, and <a href="https://customerconnect.omnissa.com/downloads/details?downloadGroup=CART_OSOT_1_2_HZN_2503&amp;productId=1604&amp;rPId=118992">OS Optimization Tool 2503</a>.</li>
+<li>2023 July 7 - added link to VMware 93158 <a href="https://kb.vmware.com/s/article/93158?lang=en_US">Information about changes in logon timing data format in Horizon form Horizon 8 2111 and Later</a>.</li>
+<li>2022 Nov 29 - added link to Tristan Tyson <a href="https://modernenduser.wordpress.com/2020/01/29/on-boarding-vmware-horizon-view-instant-clone-vdi-pools-into-microsoft-defender-advanced-threat-protection/">On-boarding VMware Horizon View Instant-Clone VDI Pools into Microsoft Defender Advanced Threat Protection</a>.</li>
+</ul>
+<h2 id="virtual-hardware">Virtual Hardware</h2>
+<p>Omnissa Tech Zone <a href="https://techzone.omnissa.com/resource/manually-creating-optimized-windows-images-horizon-vms#tested-operating-systems">Manually Creating Optimized Windows Images for Horizon VMs</a></p>
+<ol>
+<li>
+<p>The virtual desktop pools will use the same hardware specs (e.g., vCPUs, memory size, network label) specified on the master virtual desktop. Adjust accordingly.</p>
+<ul>
+<li>When using Microsoft Teams with Real-Time Audio-Video (RTAV), Omnissa recommends that the virtual desktop have a minimum of <strong>4vCPU</strong> and <strong>4 GB RAM</strong>. See <a href="https://docs.omnissa.com/bundle/Horizon-Remote-Desktop-FeaturesVmulti/page/SystemRequirementsforReal-TimeAudio-Video.html">System Requirements for Real-Time Audio-Video</a> at Omnissa Docs.</li>
+<li>For New Hard disk, consider setting <strong>Thin provision</strong>.<br />
+<img alt="" src="../../../img/img_5f356448e49df.png" /></li>
+<li>Make sure the virtual desktop is using a SCSI controller.<br />
+<img alt="" src="../../../img/img_5f35645b925e1.png" /></li>
+<li>The master virtual desktop should be configured with a VMXNET 3 network adapter.<br />
+<img alt="" src="../../../img/img_5f35647538c97.png" /></li>
+<li>When building the master virtual desktop, you will probably boot from an ISO.</li>
+<li>Before using Horizon Console to create a pool based off of this master image, ensure the CD/DVD drive points to <strong>Client Device</strong> and is not Connected. The important part is to make sure that ISO file is not configured.<br />
+<img alt="" src="../../../img/img_5f3564a63cb42.png" /></li>
+<li>There’s no need for the Floppy drive so remove it.</li>
+<li>If you have any Serial ports, remove them.</li>
+</ul>
+</li>
+</ol>
+<h2 id="windows">Windows</h2>
+<p>Omnissa TechZone <a href="https://techzone.omnissa.com/resource/manually-creating-optimized-windows-images-horizon-vms">Manually Creating Optimized Windows Images for Horizon VMs</a></p>
+<h3 id="preparation">Preparation</h3>
+<ul>
+<li>
+<p><strong>Windows 11 Versions</strong> - Windows 11 is supported with Horizon 2111 (8.4) and newer.</p>
+<ul>
+<li>Windows 11 22H2 is supported with Horizon Agent 2209 (8.7) and DEM Agent 2209 (10.7) and newer.</li>
+<li>Omnissa says don't add vTPM to the gold image. Instead add the vTPM when creating the Instant Clone pool or Full Clone pool. There are various methods of installing Windows 11 without a vTPM. See Omnissa KB article 85960 <a href="https://kb.omnissa.com/s/article/85960">Omnissa Horizon and Horizon Cloud readiness for Microsoft Windows 11</a>.<br />
+<img alt="" src="../../../img/img_62d9b35918fa3.png" /></li>
+<li>
+<p>vTPM requires a Key Provider. vSphere 7 and newer have a Native Key Provider that does not need any additional servers or licenses.</p>
+<ol>
+<li>In vSphere Client, in <strong>Inventory</strong>, click the vCenter object. On the right, on the <strong>Configure</strong> tab, scroll down to <strong>Key Providers</strong> and add a <strong>Native Key Provider</strong>.<br />
+<img alt="" src="../../../img/img_618917c0006ec.png" /></li>
+<li>After it’s added, select it and then click <strong>Back-up</strong> to activate it.<br />
+<img alt="" src="../../../img/img_618917fe152b8.png" /><br />
+<img alt="" src="../../../img/img_6189181eceefd.png" /></li>
+<li><strong>Windows 10 Versions</strong><ul>
+<li>Omnissa 51663 <a href="https://kb.omnissa.com/s/article/51663">Windows 10 Guest OS support FAQ for Horizon 7.13</a>.</li>
+<li>Microsoft 365 Apps is not supported on LTSC. See <a href="https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Changes-to-Office-and-Windows-servicing-and-support/ba-p/151509">Changes to Office and Windows servicing and support</a>.</li>
+<li>Visual Studio 2017 and newer are not supported on LTSC. See <a href="https://docs.microsoft.com/en-us/visualstudio/releases/2019/system-requirements">Visual Studio 2019 Product Family System Requirements</a>.</li>
+</ul>
+</li>
+<li><strong>VMware Tools.</strong> Install the latest version of VMware Tools and Guest Introspection (formerly known as vShield Endpoint) Driver prior to installing the Horizon Agent.</li>
+</ol>
+</li>
+<li>
+<p>See <a href="https://interopmatrix.omnissa.com/Interoperability">Omnissa Product Interoperability Matrices</a> for supported versions of VMware Tools with different versions of Horizon Agent.</p>
+</li>
+<li>For the <strong>AppVolumes Agent</strong> and <strong>Imprivata OneSign agent</strong> (if applicable), don’t install them until Horizon Agent is installed.</li>
+</ul>
+</li>
+</ul>
+<h3 id="power-options">Power Options</h3>
+<ol>
+<li>Run <strong>Power Options</strong>. Right-click the Start Menu to access <strong>Power Options</strong>.<br />
+<img alt="" src="../../../img/img_5f356683cf8be.png" /></li>
+<li>Click <strong>Additional power settings</strong>.<br />
+<img alt="" src="../../../img/img_5f35669601d18.png" /></li>
+<li>Select <strong>Ultimate Performance</strong>, or click the arrow to show more plans, and select <strong>High performance</strong>.<br />
+<img alt="" src="../../../img/img_5f3566da6e2ad.png" /></li>
+<li>Next to the power plan, click <strong>Change plan settings</strong>.<br />
+<img alt="" src="../../../img/img_5f3566fee3646.png" /></li>
+<li>Change the selection for <strong>Turn off the display</strong> to <strong>Never</strong> and click <strong>Save changes</strong>.<br />
+<img alt="" src="../../../img/img_5f3567100f49b.png" /></li>
+<li>You can also configure these settings using group policy.<br />
+<img alt="" src="../../../img/img_5f356745ea190.png" /></li>
+</ol>
+<h3 id="system-settings">System Settings</h3>
+<ol>
+<li><strong>Domain Join</strong>. Use <strong>sysdm.cpl</strong> to join the machine to the domain. Also see Omnissa 2150495 <a href="https://kb.omnissa.com/s/article/2150495">Computer-based Global Policy Objects (GPOs) that require reboot are not applied on instant clones</a>.<br />
+<img alt="" src="../../../img/2800fe836f5626ad99610edef051d104.png" /></li>
+<li>In <strong>System</strong> control panel applet (<strong>sysdm.cpl</strong>), on the <strong>Remote</strong> tab, enable <strong>Remote Desktop</strong>.<br />
+<img alt="" src="../../../img/e5b970177274b7a6c01cb3075dae68c3.png" /></li>
+<li>Activate Windows with a KMS license if not already activated. Note: only KMS is supported with Instant Clones.</li>
+</ol>
+<h2 id="install-applications">Install Applications</h2>
+<p><strong>Install applications</strong> locally if you want them to be available on all virtual desktops created based on this master virtual desktop.</p>
+<ul>
+<li>
+<p>Choose installers that install to <strong>C:\Program Files</strong> instead of to <strong>%appdata%</strong>. Search for <strong>VDI</strong> or <strong>Enterprise</strong> versions of the following applications. These VDI versions do not auto-update so you'll have to update them manually.</p>
+<ul>
+<li>Google Chrome - <a href="https://chromeenterprise.google/browser/download/">Chrome Enterprise</a></li>
+<li>Microsoft Edge - <a href="https://www.microsoft.com/en-us/edge/business/download">Edge for Business</a></li>
+<li>Microsoft Teams - <a href="https://learn.microsoft.com/en-us/microsoftteams/new-teams-vdi-requirements-deploy">Teams for VDI</a></li>
+<li>Microsoft OneDrive - <a href="https://docs.microsoft.com/en-us/onedrive/per-machine-installation">Install the sync app per machine</a></li>
+<li>Zoom - <a href="https://support.zoom.us/hc/en-us/articles/360031096531-Getting-Started-with-VDI">Zoom VDI</a></li>
+<li>WebEx - <a href="https://help.webex.com/en-us/article/ntp1us7/Webex-App-%7C-VDI-release-notes#_ff8dd002-55da-4c64-a481-32a465c09fc1">WebEx VDI</a></li>
+<li>Cisco Jabber - <a href="https://www.webex.com/downloads/jabber/jabber-vdi.html">Jabber VDI</a></li>
+<li>Etc.</li>
+</ul>
+</li>
+</ul>
+<p>Or you can use a <strong>Layering</strong> product (e.g. Omnissa App Volumes, Microsoft MSI-X App Attach, Liquidware FlexApp) or App <strong>Streaming</strong> (e.g. ThinApp, Microsoft App-V). Note: logins are fastest if apps are installed in the master image. All app layering/streaming technologies introduce a logon delay. You can use <a href="https://learn.microsoft.com/en-us/fslogix/tutorial-application-rule-sets">Microsoft FSLogix App Masking</a> to hide applications and Start Menu shortcuts that users should not see.</p>
+<h2 id="antivirus">Antivirus</h2>
+<p>Omnissa Tech Zone <a href="https://techzone.omnissa.com/resource/antivirus-considerations-horizon-environment">Antivirus Considerations in a Horizon Environment</a> contains exclusions for Horizon, App Volumes, Dynamic Environment Manager, ThinApp, etc.</p>
+<p>Microsoft’s virus scanning recommendations (e.g., exclude group policy files) - <a href="https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-runni">http://support.microsoft.com/kb/822158</a>.</p>
+<h3 id="carbon-black">Carbon Black</h3>
+<p><a href="https://kb.omnissa.com/s/article/79180?lang=en_US">Interoperability of VMware Carbon Black and Horizon (79180)</a></p>
+<h4 id="windows-defender-antivirus">Windows Defender Antivirus</h4>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-defender-atp/configuring-microsoft-defender-antivirus-for-non-persistent-vdi/ba-p/1489633">Configuring Microsoft Defender Antivirus for non-persistent VDI machines</a> - Microsoft Blog</p>
+<p><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus">Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment</a> - Microsoft Docs<br />
+<img alt="" src="../../../img/img_5918e7d56e0b5.png" /></p>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-defender-atp/onboarding-and-servicing-non-persistent-vdi-machines-with/ba-p/1360721">Onboarding and servicing non-persistent VDI machines with Microsoft Defender ATP</a><br />
+<img alt="" src="../../../img/img_5eb356bce1e7c.png" /></p>
+<p>For Instant Clones, Defender ATP on-boarding script should run as ClonePrep post-sync script. See Tristan Tyson <a href="https://modernenduser.wordpress.com/2020/01/29/on-boarding-vmware-horizon-view-instant-clone-vdi-pools-into-microsoft-defender-advanced-threat-protection/">On-boarding VMware Horizon View Instant-Clone VDI Pools into Microsoft Defender Advanced Threat Protection</a>.</p>
+<h2 id="horizon-agent">Horizon Agent</h2>
+<h3 id="horizon-agent-installationupgrade">Horizon Agent Installation/Upgrade</h3>
+<p>Install Horizon Agent on the master virtual desktop. Upgrades are performed in-place.</p>
+<ol>
+<li><strong>Latency</strong> - In Horizon 2111 (8.4) and newer, maximum latency between the Horizon Agent machine and Connection Server is 120ms. Older versions of Horizon have lower maximum latencies.</li>
+<li><strong>Group Policy</strong> - Don't upgrade Horizon Agent to version 2412 or later until the Horizon group policy settings are reconfigured under the <strong>Omnissa</strong> nodes instead of under the <strong>VMware</strong> nodes.</li>
+<li>
+<p><strong>VMware Tools</strong> - Only install Horizon Agent after you install VMware Tools.</p>
+<ol>
+<li>The latest versions of VMware Tools resolve <a href="https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/23678">security vulnerabilities</a>.</li>
+<li>If you need to update VMware Tools, uninstall Horizon Agent, upgrade VMware Tools, and then reinstall Horizon Agent.</li>
+<li>See <a href="https://interopmatrix.omnissa.com/Interoperability">Omnissa Product Interoperability Matrices</a> for supported versions of VMware Tools with different versions of Horizon Agent.</li>
+<li>Horizon 2503 (8.15) is an <a href="https://kb.omnissa.com/s/article/86477">Extended Service Branch</a>, which is supported for three years from its January 2024 release date.</li>
+<li>Download <a href="https://customerconnect.omnissa.com/downloads/details?downloadGroup=HZN-2503-ENT&amp;productId=1598&amp;rPId=118967">Horizon Agent 2503 (8.15)</a>.<br />
+<img alt="" src="../../img/IRsSmClTtSmDsVn59sFGvZnoWIYQ8vtCoCSGEkBBDoyaEEEJCDI2aEEIICTE0akIIISTE0KgJIYSQEEOjJoQQQkIMjZoQQggJMTRqQgghJMTQqAkhhJAQQ6MmhBBCQgyNmhBCCAkxNGpCCCEkxNCoCSGEkBBDoyaEEEJCzP8HewYaB4Ou3W4AAAAASUVORK5CYII=" /></li>
+<li>Run the downloaded <strong>Omnissa-Horizon-Agent-x86_64-2503-8.15.0.exe</strong>.<br />
+<img alt="" src="../../img/mEVezEGmqigAAAAASUVORK5CYII=" /></li>
+<li>If you want the URL Content Redirection feature, then you must run the Agent installer with the following switches: <code>/v URL_FILTERING_ENABLED=1</code></li>
+<li>If you want the UNC Path Redirection feature in 8.7 and newer, then you must run the Agent installer with the following switches: <code>/v ENABLE_UNC_REDIRECTION=1</code>. You can combine the two switches.<br />
+<img alt="" src="../../img/2EuACgAAAAC4aIMA9a10AlQAAAAAwAUbBKgPMhGgAgAAAAAu2v8HI5l3uSod6ngAAAAASUVORK5CYII=" /></li>
+<li>In the <em>Welcome to the Installation Wizard for Omnissa Horizon Agent</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/P7zTKICyJQqQAAAAAElFTkSuQmCC" /></li>
+<li>In the <em>Network protocol configuration</em> page, select <strong>IPv4</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/A0JjA+ve3jUVAAAAAElFTkSuQmCC" /></li>
+<li>
+<p>In the <em>Custom Setup</em> page, there are several features not enabled by default. <a href="../vmware-user-environment-manager/#horizonsmartpolicies">Horizon Smart Policies</a> in Dynamic Environment Manager (DEM) can control some of these features but only if the features are installed.</p>
+</li>
+<li>
+<p>If you want <strong>USB Redirection</strong>, then enable that feature.<br />
+<img alt="" src="../../img/8BwK81FWQ6AjEAAAAASUVORK5CYII=" /></p>
+</li>
+<li>Horizon Agent 2006 (8.0) and newer does not include <strong>Persona</strong>.</li>
+<li>If you want <strong>Scanner Redirection</strong>, then enable that feature. Note: Scanner Redirection will impact host density.<br />
+<img alt="" src="../../img/1AugExvHCAAAAAElFTkSuQmCC" /></li>
+<li><strong>Horizon Performance Tracker</strong> adds a program to the Agent that can show the user performance of the remote session. You can publish the Tracker.<br />
+<img alt="" src="../../img/AVIbnA8GhWWrAAAAAElFTkSuQmCC" /><br />
+<img alt="" src="../../../img/img_5b0dd68d8c9ea.png" /></li>
+<li>In Horizon 2206 and newer, <strong>Storage Drive Redirection</strong> provides faster performance than <strong>Client Drive Redirection</strong>.<br />
+<img alt="" src="../../img/AUHuJbQDaz6yAAAAAElFTkSuQmCC" /></li>
+<li>Click <strong>Next</strong> when done making selections.</li>
+<li>If you see the <em>Remote Desktop Protocol Configuration</em> screen, then select <strong>Enable</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/zIgj8vClMj4AAAAASUVORK5CYII=" /></li>
+<li>In the <em>Ready to Install the Program</em> page, Horizon Agent 2306 and newer have an option to <strong>Automatically restart system on successful completion</strong>. Click <strong>Install</strong>.<br />
+<img alt="" src="../../img/P+bTl3Z0AAAAABJRU5ErkJggg==" /></li>
+<li>In the <em>Installer Completed</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../img/H6Y3GucWow3sAAAAAElFTkSuQmCC" /></li>
+<li>Click <strong>Yes</strong> when asked to restart.<br />
+<img alt="" src="../../img/q+PQqHZAAAAAElFTkSuQmCC" /></li>
+<li>If you want to know what features were selected during installation, look in <strong>HKLM\Software\Omnissa\Horizon\Installer\Features_HorizonAgent</strong> (or <strong>HKLM\Software\VMware, Inc.\Installer\Features_HorizonAgent</strong>). Or look in the installation log files as detailed at Paul Grevink <a href="https://paulgrevink.wordpress.com/2016/07/16/view-agent-what-is-installed/">View Agent, what is installed?</a><br />
+<img alt="" src="../../img/wNEakVIuOYOxgAAAABJRU5ErkJggg==" />  </li>
+<li>To add features to an existing Horizon Agent installation, use the command line as detailed by Terence Luk at <a href="http://terenceluk.blogspot.com/2018/03/add-features-to-existing-vmware-horizon.html">Add features to an existing VMware Horizon View 7.x Agent install</a>.<br />
+<img alt="" src="../../../img/img_5aa1c0c28aa0b.png" /></li>
+<li>To verify installation of the URL Content Redirection feature, check for the presence of <strong>C:\Program Files\Omnissa\Horizon\Agent\bin\UrlRedirection</strong> (or <strong>C:\Program Files\VMware\VMware View\Agent\bin\UrlRedirection</strong>).<br />
+<img alt="" src="../../img/+AAAAAElFTkSuQmCC" /></li>
+<li><a href="../horizon-group-policy-and-profiles/#urlredirection">URL Content Redirection is configured using group policy</a>.</li>
+<li>To verify installation of the UNC Content Redirection feature, check for the presence of <strong>C:\Program Files\Omnissa\Horizon\Agent\bin\UncRedirection</strong> (or <strong>C:\Program Files\VMware\VMware View\Agent\bin\UncRedirection</strong>).<br />
+<img alt="" src="../../../img/img_6352dba1102ab.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="installupgrade-dynamic-environment-manager-dem-agent">Install/Upgrade Dynamic Environment Manager (DEM) Agent</h3>
+<p>All editions of Horizon 2006 (8.0) and newer are entitled to Dynamic Environment Management (DEM).</p>
+<ul>
+<li>Horizon Standard Edition and Horizon Advanced Edition are entitled to <strong>DEM Standard Edition</strong>, which only has personalization features that replace Persona. If you are using FSLogix Profile Containers for profiles, then you probably don't need DEM Standard Edition.</li>
+<li>Horizon Enterprise Edition is entitled to <strong>DEM Enterprise Edition</strong>, which has all DEM features, including Smart Policies, Privilege Elevation, etc.</li>
+</ul>
+<p>DEM 2006 and newer Agents (FlexEngines) require additional configuration to enable DEM Computer Settings. You can either configure registry settings on each DEM Agent machine, or in DEM Agent 2103 and newer you can use an installer command-line switch. Both are detailed at <a href="https://docs.omnissa.com/bundle/DEMInstallConfigGuideV2406/page/PerformInstallationwithComputerEnvironmentSettingsSupport.html">Perform Installation with Computer Environment Settings Support</a> at Omnissa Docs.</p>
+<ul>
+<li><a href="../horizon-group-policy-and-profiles/#uempolicy">Group Policy Preferences</a> can push these registry keys to the Horizon Agent machines. Or you can manually modify the registry in your master images. The minimum registry values are <strong>Enabled</strong> and <strong>ConfigFilePath</strong> as detailed at <a href="https://docs.omnissa.com/bundle/DEMInstallConfigGuideV2406/page/PerformInstallationwithComputerEnvironmentSettingsSupport.html">Perform Installation with Computer Environment Settings Support</a> at Omnissa Docs. For the list of additional registry values, see <a href="https://docs.omnissa.com/bundle/DEMInstallConfigGuideV2406/page/FlexEngineConfigurationforComputerEnvironmentSettings.html">FlexEngine Configuration for Computer Environment Settings</a> at Omnissa Docs.<br />
+<img alt="" src="../../../img/img_605cc03dbffd9.png" /></li>
+<li>
+<p>Command line install looks something like below. The command line installer switch sets the same <strong>ConfigFilePath</strong> and <strong>Enabled</strong> registry values as shown above.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>msiexec /i &quot;\\fs01\bin\Omnissa\DEM\Omnissa-DEM-Enterprise-2503-10.15\Omnissa Dynamic Environment Manager Enterprise 2503 10.15 x64.msi&quot; /qn COMPENVCONFIGFILEPATH=\\fs01\DEMConfig\general
+</span></code></pre></div>
+<p><img alt="" src="../../img/1I0Vkr5JYNQAAAABJRU5ErkJggg==" /></p>
+</li>
+</ul>
+<p>To install DEM Agent:</p>
+<ol>
+<li><strong>Windows 10 Compatibility</strong> - See Omnissa 57386 <a href="https://kb.omnissa.com/s/article/57386">Omnissa Dynamic Environment Manager and Windows 10 Versions Support Matrix</a></li>
+<li>Make sure <strong>Prevent access to registry editing tools</strong> is not enabled in any GPO since this setting prevents the FlexEngine from operating properly.</li>
+<li>DEM 2503 (10.15) is an ESB release.</li>
+<li>Based on your entitlement, download either <a href="https://customerconnect.omnissa.com/downloads/details?downloadGroup=DEM-1015-ENTERPRISE&amp;productId=1597&amp;rPId=118963">DEM 2503 (10.15) Enterprise Edition</a>. For ESB Horizon, download the DEM version included with your <a href="https://customerconnect.vmware.com/downloads/info/slug/desktop_end_user_computing/vmware_horizon/2312">ESB version of Horizon</a>.<br />
+<img alt="" src="../../img/AaDZGrI+oMpYAAAAAElFTkSuQmCC" /></li>
+<li>Run the extracted <strong>Omnissa Dynamic Environment Manager Enterprise 2503 10.15 x64.msi</strong>.<br />
+<img alt="" src="../../img/w8tINntANroqQAAAABJRU5ErkJggg==" /></li>
+<li>In the <em>Welcome to the Omnissa Dynamic Environment Manager Enterprise Setup Wizard</em> page, check the box next to <strong>I accept</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/4Q9FRjaBlM77bYDAYDAY9CyrvMEjmb731lsi2aVY1EjeVmZnVDAaDwWAIUpH3zWbXrl3YuXOneCT4doPBYDAYDFX+PziXEhIfcTAWAAAAAElFTkSuQmCC" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/6FTpilERsFuAAAAAElFTkSuQmCC" /></li>
+<li>In <em>Choose Setup Type</em> page, click <strong>Custom</strong>.<br />
+<img alt="" src="../../img/ssanyixJ2HoAAAAASUVORK5CYII=" /></li>
+<li>In the <em>Custom Setup</em> page, click <strong>Next</strong>. Note: the DEM Management Console is typically installed on an administrator's machine.<br />
+<img alt="" src="../../img/x4DiJwF7xKwAAAAASUVORK5CYII=" /></li>
+<li>In the <em>Ready to install Omnissa Dynamic Environment Manager Enterprise</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../img/+9a9j2parqom4ZR6vrDZ4UN6EEEIKNJVLImfiHlwob0IIIaRlUN6EEEJIyyjkTQghhJD28P8Bapp3cBJVQOUAAAAASUVORK5CYII=" /></li>
+<li>In the <em>Completed the Omnissa Dynamic Environment Manager Enterprise Setup Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../img/8HilMw3jwyApQAAAAASUVORK5CYII=" /></li>
+<li>
+<p>If you have PCoIP Zero Clients that map USB devices (e.g. USB drives), then you might have to set the following registry value:</p>
+<ul>
+<li>
+<p>HKLM\Software\Omnissa\Omnissa VDM\Agent\USB</p>
+<ul>
+<li><strong>UemFlags</strong> (DWORD) = 1</li>
+<li>DEM is enabled using <a href="../horizon-group-policy-and-profiles/#uempolicy">Group Policy</a> and configured using the <a href="../vmware-user-environment-manager/">DEM Management Console</a>.</li>
+</ul>
+</li>
+<li>
+<p>DEM can also be enabled without Active Directory (Group Policy); see Omnissa article 2148324 <a href="https://kb.omnissa.com/s/article/2148324">Configuring advanced UEM settings in NoAD mode</a> for details.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="logon-monitoring">Logon Monitoring</h3>
+<p>See Omnissa 93158 <a href="https://kb.omnissa.com/s/article/93158?lang=en_US">Information about changes in logon timing data format in Horizon form Horizon 8 2111 and Later</a>.</p>
+<p>By default, in <strong>services.msc</strong>, the <strong>Omnissa Horizon Logon Monitor</strong> service (or <strong>VMware Horizon View Logon Monitor</strong> service) is not running. Set it to <strong>Automatic</strong> and start it.<br />
+<img alt="" src="../../img/AwWtEyHfwyjAMwzAMsxz8H3rMojAnZHQwAAAAAElFTkSuQmCC" /></p>
+<p>The logon logs are stored at <strong>C:\programdata\VMware\VMware Logon Monitor\Logs</strong> on each Horizon Agent.<br />
+<img alt="" src="../../../img/img_5918f46e2f0d7.png" /></p>
+<p>Inside each session log file are logon time statistics.<br />
+<img alt="" src="../../../img/img_5918f526c6c79.png" /></p>
+<h3 id="cloneprep-rearm">ClonePrep – Rearm</h3>
+<p>By default, when Horizon creates Instant Clones, one of the tasks that ClonePrep performs is to rearm licensing. You can prevent rearm by setting the following registry key:</p>
+<ul>
+<li>
+<p>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\<strong>omn-instantclone-ga</strong> (or <strong>vmware-viewcomposer-ga</strong>)</p>
+<ul>
+<li><strong>SkipLicenseActivation</strong>  (DWORD) = 0x1</li>
+</ul>
+</li>
+</ul>
+<h2 id="microsoft-fslogix">Microsoft FSLogix</h2>
+<h3 id="why-fslogix">Why FSLogix?</h3>
+<p><a href="https://learn.microsoft.com/en-us/fslogix/how-to-install-fslogix">Microsoft FSLogix</a> has two major features:</p>
+<ul>
+<li><strong>Profile Container</strong> is an alternative to DEM Personalization.</li>
+<li><strong>App Masking</strong> is an alternative to App Volumes.</li>
+</ul>
+<p>DEM has three categories of features: <strong>Personalization</strong>, <strong>User Settings</strong>, and <strong>Computer Setting</strong>s. FSLogix Profile Container only replaces the Personalization feature set. You typically do FSLogix Profile Container for profiles and use DEM for User Settings and Computer Settings. Here are some advantages of FSLogix Profile Container over DEM Personalization:</p>
+<ul>
+<li>FSLogix Profile Container saves the entire profile but DEM Personalization requires you to specify each setting location that you want to save. FSLogix is "set and forget" while DEM Personalization requires tweaking for each application.</li>
+<li>At logon, DEM Personalization must download and unzip each application's profile settings, which takes time. FSLogix simply mounts the user's profile disk, which is faster than DEM Personalization.</li>
+<li>FSLogix Profile Container has special support for roaming caches and search indexes produced by Microsoft Office products (e.g. Outlook .ost file).</li>
+<li>FSLogix is owned, developed and supported by Microsoft.</li>
+</ul>
+<p>Here are some FSLogix Challenges as compared to DEM Personalization:</p>
+<ul>
+<li>FSLogix Profile disk consumes significant disk space. The default maximum size for a FSLogix profile disk is 30 GB per user.</li>
+<li>High Availability for FSLogix Profile disks file share is challenging. The file server High Availability capability must be able to handle .vhdx files that are always open. DFS Replication is not an acceptable HA solution. One option is Microsoft Scale Out File Server (SOFS) cluster. Another option is Nutanix Files.</li>
+</ul>
+<p>Omnissa App Volumes has some drawbacks, including the following:</p>
+<ul>
+<li>Completely separate infrastructure that must be built, maintained, and troubleshooted.</li>
+<li>Introduces delays during logon as AppStacks are mounted.</li>
+<li>AppStacks can sometimes conflict with the base image or other AppStacks.</li>
+</ul>
+<p>An alternative approach is to install all apps on the base image and use <strong><a href="https://docs.microsoft.com/en-us/fslogix/application-masking-rules-ht">FSLogix App Masking</a></strong> to hide unauthorized apps from unauthorized users. No delays during logon.</p>
+<p>Microsoft FSLogix is free for all Microsoft RDS CALs, Microsoft Virtual Desktop Access per-user CALs, and all Microsoft Enterprise E3/E5 per-user licenses. Notice that per-device licenses are excluded. See <a href="https://learn.microsoft.com/en-us/fslogix/overview#eligibility-requirements">Eligibility Requirements</a> at Microsoft Docs.</p>
+<h3 id="fslogix-installation">FSLogix Installation</h3>
+<p>Do the following to install Microsoft FSLogix on the Horizon Agent machine:</p>
+<ol>
+<li>Go to <a href="https://learn.microsoft.com/en-us/fslogix/how-to-install-fslogix#download-fslogix">https://docs.microsoft.com/en-us/fslogix/install-ht</a> and click the <strong>download</strong> link.<br />
+<img alt="" src="../../../img/Pasted-34.png" /></li>
+<li>Extract the downloaded .zip file.</li>
+<li>In the FSLogix <strong>\x64\Release</strong> folder, run <strong>FSLogixAppsSetup.exe</strong>.<br />
+<img alt="" src="../../../img/img_5eac0e1b8c286.png" /></li>
+<li>Check the box next to <strong>I agree to the license terms and conditions</strong> and click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/img_5d21f9a488374.png" /></li>
+<li>In the <strong>Setup Successful</strong> page, click <strong>Restart</strong>.<br />
+<img alt="" src="../../../img/img_5d21fa8d501cf.png" /></li>
+<li>Make sure the <strong>Windows Search</strong> service is set to <strong>Automatic</strong> and <strong>Running</strong>.<br />
+<img alt="" src="../../../img/img_5d235d2c4d72a.png" /></li>
+<li>If Office is already installed, then repair the Office installation after installing and starting the Windows Search Service.<br />
+<img alt="" src="../../../img/img_5d235dab449e0.png" /></li>
+</ol>
+<p>FSLogix is configured through <a href="../group-policy-objects-vda-computer-settings/#fslogix">Group Policy</a> or by <a href="https://learn.microsoft.com/en-us/fslogix/tutorial-configure-profile-containers">editing registry values on each FSLogix Agent machine</a>.</p>
+<h2 id="windows-os-optimization-tool">Windows OS Optimization Tool</h2>
+<ol>
+<li>See <a href="https://techzone.omnissa.com/resource/windows-os-optimization-tool-horizon-guide">Windows OS Optimization Tool for Horizon Guide</a> at Omnissa Tech Zone for details on this tool.</li>
+<li>Download the <a href="https://customerconnect.omnissa.com/downloads/info/slug/desktop_end_user_computing/os_optimization_tool/2503">Windows OS Optimization Tool</a>. Version 2503 supports Horizon 2503. 
+    <img alt="" src="../../img/3NvOlPJpGCCFrG5o5IYQQEnJo5oQQQkjIoZkTQgghIYdmTgghhIQcmjkhhBAScmjmhBBCSMihmRNCCCEhh2ZOCCGEhByaOSGEEBJyaOaEEEJIyKGZE0IIISGHZk4IIYSEHJo5IYQQEnJo5oQQQkjI+f+pLJdnRj8xFwAAAABJRU5ErkJggg==" /></li>
+<li>Run <strong>VMwareOSOptimizationTool-x86_64.exe</strong>.<br />
+<img alt="" src="../../img/dV6AAAAAElFTkSuQmCC" /></li>
+<li>On the <strong>Optimize</strong> tab, click <strong>Analyze</strong> on the bottom of the window.<br />
+<img alt="" src="../../img/wPJiTm6hNpp+gAAAABJRU5ErkJggg==" /></li>
+<li>Near the top of the window click the <strong>Common Options</strong> button and make your selections on each of the pages. Click <strong>OK</strong> when done.<br />
+<img alt="" src="../../img/PRiZ41kRqIsAAAAASUVORK5CYII=" /><br />
+<img alt="" src="../../img/w+qSLU9di+AJgAAAABJRU5ErkJggg==" /></li>
+<li>The top right box named <strong>Analysis Summary</strong> shows the number of optimizations not yet applied.<br />
+<img alt="" src="../../img/A6EVLpTWse5+AAAAAElFTkSuQmCC" /></li>
+<li>Review the optimizations and make changes as desired. Then on the bottom right, click <strong>Optimize</strong>.<br />
+<img alt="" src="../../img/Sj4LacdcsuQAAAABJRU5ErkJggg==" /></li>
+<li>The <strong>History</strong> tab lets you rollback the optimizations.<br />
+<img alt="" src="../../img/xO6YAAAAASUVORK5CYII=" /></li>
+<li>The <strong>Finalize</strong> tab contains tasks that should be run every time you seal your parent image.<br />
+<img alt="" src="../../img/D+gQDkxA3ZrzAAAAAElFTkSuQmCC" /></li>
+<li>The <strong>Update</strong> tab lets you re-enable Windows Update so you can update the parent image.<br />
+<img alt="" src="../../img/FKLEviXJLb9h2RWTSpLvPXyfkmQhhBBCCCEcSpKFEEIIIYQAlCQLIYQQQggBKEkWQgghhBACUJIshBBCCCEEoCRZCCGEEEIIQEmyEEIIIYQQgJJkIYQQQgghgO7ug59WkiyEEEIIIYRDSbIQQgghhBCAkmQhhBBCCCEAJclCCCGEEEIASpKFEEIIIYQAlCQLIYQQQggBKEkWQgghhBACUJIshBBCCCEEoCRZCCGEEEIIQEmyEEIIIYQQwP8DREi4Ue1JWpgAAAAASUVORK5CYII=" /></li>
+</ol>
+<h4 id="additional-optimizations">Additional Optimizations</h4>
+<p><strong>Additional Windows 10 Optimizations</strong></p>
+<ul>
+<li>
+<p>James Rankin <a href="https://4sysops.com/archives/improving-windows-10-logon-time/">Improving Windows 10 logon time</a>:</p>
+<ul>
+<li>Use <strong>Remove-AppXProvisionedPackage</strong> to remove Modern apps. See the article for a list of apps to remove. Also see James Rankin <a href="http://appsensebigot.blogspot.com/2016/09/everything-you-wanted-to-know-about_12.html">Everything you wanted to know about virtualizing, optimizing and managing Windows 10...but were afraid to ask - part #3: MODERN APPS</a></li>
+<li>Import a Standard <strong>Start Tiles layout</strong> (Export-StartLayout)</li>
+<li>Create a template user profile</li>
+<li>Carl Luberti (Microsoft) <a href="https://github.com/cluberti/VDI">Windows 10 VDI Optimization Script</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="snapshot">Snapshot</h2>
+<ol>
+<li>Make sure the master virtual desktop is configured for DHCP.<br />
+<img alt="" src="../../../img/f6cc64b0d34c36f90e5e5462d55493fb.png" /></li>
+<li>If connected to the console, run <strong>ipconfig /release</strong>.<br />
+<img alt="" src="../../../img/2771a1e8d022a305a4dbacac3ef6ec90.png" /></li>
+<li>
+<p>Run antivirus sealing tasks. For example:</p>
+<ul>
+<li>Symantec: Run a full scan and then run the Virtual Image Exception tool - <a href="https://support.symantec.com/en_US/article.TECH173650.html">http://www.symantec.com/business/support/index?page=content&amp;id=TECH173650</a></li>
+<li>Symantec: run the ClientSideClonePrepTool -<a href="https://support.symantec.com/en_US/article.HOWTO54706.html">http://www.symantec.com/business/support/index?page=content&amp;id=HOWTO54706</a></li>
+<li><a href="https://eucweb.com/download-bis-f">Base Image Script Framework (BIS-F)</a> automates many image sealing tasks. The script is configurable using Group Policy.<br />
+<img alt="" src="../../../img/img_593316b719c4a.png" /><br />
+<img alt="" src="../../../img/img_5933173c3029d.png" /></li>
+<li>Shutdown the master virtual desktop.<br />
+<img alt="" src="../../../img/6bc5d1e4076b2b2b3bbb4e616eb8c537.png" /></li>
+<li>Edit the Settings of the master virtual machine and disconnect the CD-ROM. Make sure no ISO is configured in the virtual machine.<br />
+<img alt="" src="../../../img/img_5f36914fbd665.png" /></li>
+<li>Take a snapshot of the master virtual desktop. Instant Clones requires a snapshot.<br />
+<img alt="" src="../../../img/img_5f36916871c62.png" /><br />
+<img alt="" src="../../../img/img_5f36917d4976c.png" /></li>
+</ul>
+</li>
+</ol>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li>Back to <a href="../vmware-horizon-8/">Omnissa Horizon 8</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

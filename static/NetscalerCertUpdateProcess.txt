@@ -1,0 +1,107 @@
+# NetScaler Let’s Encrypt update certificate automated task
+# Created by Jeff Riechers
+# Downloaded from https://www.jeffriechers.com
+# For additional steps needed to prep the environment visit my site for more.
+# Save this file next to your password file as a ps1.  I recommend C:\CertificateUpdate\ on a secure datacenter server
+
+
+# Netscaler Cert keyPair to Update, this is the name of the Certificate on the Netscaler
+
+$Cert1keyPair = "Cert1"
+$Cert2keyPair = "Cert2"
+$Cert3keypair = "Cert3"
+
+# This is the path to the encrypted password created earlier. This is a per machine password file and can’t be migrated
+
+$passwdpath = "C:\CertificateUpdate\"
+
+#Set Netscaler OS Creds and IP for connection
+
+$User = "<set your NetScaler username here>"
+$Password = Get-Content $passwdpath"password.txt" | ConvertTo-SecureString 
+$Credential = New-Object System.Management.Automation.PSCredential ($User, $Password)
+$NetScalerIP = '<set your IP here>'
+
+#Set File Paths
+
+$FilePath = 'C:\Users\<Windows username>\AppData\Local\Posh-ACME\acme-v02.api.letsencrypt.org\<your id>\!.<domainname 1>\'
+$FilePath2 = 'C:\Users\<Windows username>\AppData\Local\Posh-ACME\acme-v02.api.letsencrypt.org\<your id>\!.<domainname 2>\'
+$FilePath3 = 'C:\Users\<Windows username>\AppData\Local\Posh-ACME\acme-v02.api.letsencrypt.org\<your id>\!.<domainname 3>\'
+
+$SftpPath = '/nsconfig/ssl'
+
+#Items are left individual in case cert names change in the future
+
+$SftpCert1 = 'cert.cer'
+$SftpKey1 = 'cert.key'
+
+$SftpCert2 = 'cert.cer'
+$SftpKey2 = 'cert.key'
+
+$SftpCert3 = 'cert.cer'
+$SftpKey3 = 'cert.key'
+
+$SftpCert1NSName = 'NScert.cer'
+$SftpKey1NSName = 'NScert.key'
+
+$SftpCert2NSName = 'NScert2.cer'
+$SftpKey2NSName = 'NScert2.key'
+
+$SftpCert3NSName = 'NScert2.cer'
+$SftpKey3NSName = 'NScert2.key'
+
+# Remove the old certificates before upload
+
+Remove-Item $FilePath$SftpCert1NSName
+Remove-Item $FilePath$SftpKey1NSName
+Remove-Item $FilePath2$SftpCert2NSName
+Remove-Item $FilePath2$SftpKey2NSName
+Remove-Item $FilePath3$SftpCert3NSName
+Remove-Item $FilePath3$SftpKey3NSName
+
+# Copy the let’s encrypt certificates to the names needed on the NetScaler
+
+copy $FilePath$SftpCert1 $FilePath$SftpCert1NSName
+copy $FilePath$SftpKey1 $FilePath$SftpKey1NSName
+copy $FilePath2$SftpCert2 $FilePath2$SftpCert2NSName
+copy $FilePath2$SftpKey2 $FilePath2$SftpKey2NSName
+copy $FilePath3$SftpCert3 $FilePath3$SftpCert3NSName
+copy $FilePath3$SftpKey3 $FilePath3$SftpKey3NSName
+
+#Establish SFTP Connection to NetScaler
+
+$SFTPSession = New-SFTPSession -ComputerName $NetScalerIP -Credential $Credential -AcceptKey
+echo connected
+
+#Upload the file to SFTP
+
+Set-SFTPItem -SessionId ($SFTPSession).SessionID -Path $FilePath$SftpCert1NSName -Destination $SftpPath -Force
+Set-SFTPItem -SessionId ($SFTPSession).SessionID -Path $FilePath$SftpKey1NSName -Destination $SftpPath -Force
+Set-SFTPItem -SessionId ($SFTPSession).SessionID -Path $FilePath2$SftpCert2NSName -Destination $SftpPath -Force
+Set-SFTPItem -SessionId ($SFTPSession).SessionID -Path $FilePath2$SftpKey2NSName -Destination $SftpPath -Force
+Set-SFTPItem -SessionId ($SFTPSession).SessionID -Path $FilePath3$SftpCert3NSName -Destination $SftpPath -Force
+Set-SFTPItem -SessionId ($SFTPSession).SessionID -Path $FilePath3$SftpKey3NSName -Destination $SftpPath -Force
+echo uploaded
+
+#Disconnect SFTP Session
+
+Get-SFTPSession | % { Remove-SFTPSession -SessionID ($_.SessionID) }
+echo disconnected
+
+#Establish SSH Session
+
+New-SSHSession -ComputerName $NetScalerIP -Credential $Credential
+echo connected
+
+#Update Cert KeyPair and save config
+
+Invoke-SSHCommand -Index 0 -Command "update ssl certkey $Cert1keypair -cert $SftpCert1NSName -key $SftpKey1NSName"
+Invoke-SSHCommand -Index 0 -Command "update ssl certkey $Cert2keypair -cert $SftpCert2NSName -key $SftpKey2NSName"
+Invoke-SSHCommand -Index 0 -Command "update ssl certkey $Cert3keypair -cert $SftpCert3NSName -key $SftpKey3NSName"
+Invoke-SSHCommand -Index 0 -Command "save config"
+Invoke-SSHCommand -Index 0 -Command "exit"
+echo updated
+
+#Kill SSH Session
+
+Get-SSHSession | Remove-SSHSession | Out-Null 

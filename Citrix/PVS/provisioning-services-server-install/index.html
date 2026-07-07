@@ -1,0 +1,6301 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../provisioning-services-console-config/">
+      
+      
+        <link rel="next" href="../pvs-create-devices/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Citrix Provisioning 2411 - Server Install - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Citrix Provisioning 2411 - Server Install
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-and-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning and Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citrix-license-server-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix License Server Version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vdisk-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vDisk Storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vDisk Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-d-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create D: Drive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdisk-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vDisk Folders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robocopy-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robocopy Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Account
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-console-installupgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provisioning Console Install/Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-server-installupgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provisioning Server - Install/Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-wizard-new-farm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Wizard – New Farm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-wizard-join-farm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Wizard – Join Farm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-networking-services-dont-work-after-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting - Networking Services Don't Work After Reboot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Firewall
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-bios-boot-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable BIOS Boot Menu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-mode-vdisk-no-servers-available-for-vdisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private Mode vDisk – No Servers Available for vDisk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-homed-provisioning-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Homed Provisioning Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antivirus-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antivirus Exclusions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antivirus Exclusions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrixs-recommended-antivirus-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix’s Recommended Antivirus Exclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsofts-virus-scanning-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft’s virus scanning recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tftp-high-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TFTP High Availability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcp-failover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP Failover
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-and-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning and Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citrix-license-server-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix License Server Version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vdisk-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vDisk Storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vDisk Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-d-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create D: Drive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdisk-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vDisk Folders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robocopy-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robocopy Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Account
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-console-installupgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provisioning Console Install/Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-server-installupgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provisioning Server - Install/Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-wizard-new-farm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Wizard – New Farm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-wizard-join-farm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Wizard – Join Farm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-networking-services-dont-work-after-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting - Networking Services Don't Work After Reboot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Firewall
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-bios-boot-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable BIOS Boot Menu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-mode-vdisk-no-servers-available-for-vdisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private Mode vDisk – No Servers Available for vDisk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-homed-provisioning-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Homed Provisioning Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antivirus-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antivirus Exclusions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antivirus Exclusions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrixs-recommended-antivirus-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix’s Recommended Antivirus Exclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsofts-virus-scanning-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft’s virus scanning recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tftp-high-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TFTP High Availability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcp-failover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP Failover
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Citrix Provisioning 2411 - Server Install</h1>
+
+<h3 id="navigation">Navigation</h3>
+<p>This article applies to all 7.x versions of Citrix Provisioning, including 2411, 2402 LTSR, and 2203 LTSR.</p>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#planning">Planning and Versions</a></li>
+<li><a href="#licensing">Citrix License Server Version</a></li>
+<li><a href="#upgrade">Upgrade</a></li>
+<li><a href="#storage">vDisk Storage</a><ul>
+<li><a href="#robocopy">Robocopy Script</a></li>
+</ul>
+</li>
+<li>
+<p>Installs/Upgrades</p>
+<ul>
+<li><a href="#.net">.Net Framework</a></li>
+<li><a href="#console">Provisioning Console</a></li>
+<li><a href="#server">Provisioning Server</a></li>
+<li>
+<p>Database Configuration</p>
+</li>
+<li>
+<p><a href="#dbscript">Database Script</a></p>
+</li>
+<li><a href="#newfarm">Configuration Wizard - New Farm</a></li>
+<li><a href="#joinfarm">Configuration Wizard - Join Farm</a></li>
+<li>Troubleshooting - <a href="#services">Networking Services Don't Work After Reboot</a></li>
+<li><a href="#firewall">Firewall</a></li>
+<li><a href="#bootmenu">Disable BIOS Boot Menu</a></li>
+<li><a href="#privatemode">Private Mode vDisk – No Servers Available for vDisk</a></li>
+<li><a href="#multihomed">Multi-homed Provisioning Server</a></li>
+<li><a href="#antivirus">Antivirus Exclusions</a></li>
+<li><a href="#tftp">TFTP High Availability</a></li>
+<li><a href="#dhcpfailover">DHCP Failover</a></li>
+<li><a href="#healthcheck">Health Check</a></li>
+</ul>
+</li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2025 March 7 - updated <a href="#planning">Versions</a> section with <a href="https://www.citrix.com/downloads/provisioning-services/product-software/provisioning-services-24022.html">Citrix Provisioning 2402 LTSR CU2</a></li>
+<li>2025 Jan 9 - updated <a href="#planning">Versions</a> section with <a href="https://www.citrix.com/downloads/provisioning-services/product-software/provisioning-services-22036.html">Citrix Provisioning 2203 LTSR CU6</a></li>
+<li>2024 Dec 4 - updated <a href="#planning">Versions</a> section and <a href="#console">Install</a> sections with <a href="https://www.citrix.com/downloads/provisioning-services/product-software/citrix-provisioning-2411.html">Citrix Provisioning 2411</a></li>
+<li>2024 April 30 - updated <a href="#planning">Versions</a> section with <a href="https://www.citrix.com/downloads/provisioning-services/product-software/provisioning-services-19129.html">Citrix Provisioning 1912 LTSR CU9</a></li>
+<li>2023 Mar 20 - updated <a href="#planning">Versions</a> section and <a href="#console">Install</a> sections with <a href="https://www.citrix.com/downloads/provisioning-services/product-software/citrix-provisioning-2303.html">Citrix Provisioning 2303</a><ul>
+<li>Join PVS Farm to Citrix Cloud</li>
+</ul>
+</li>
+<li>2022 July 29 - updated <a href="#planning">Versions</a> section with <a href="https://www.citrix.com/downloads/provisioning-services/product-software/provisioning-services-71545.html">PVS 7.15.45</a> (from LTSR 7.15 Cumulative Update 9)</li>
+</ul>
+<h3 id="planning-and-versions">Planning and Versions</h3>
+<p>CTX220651 <a href="https://support.citrix.com/article/CTX220651">Best Practices for deploying PVS in multi-geo environments</a>: ensure that Provisioning farms do not span data centers with a network latency that can affect communications between the Provisioning Servers and the SQL database</p>
+<p>SQL 2019 is supported with Citrix Provisioning 2003 and newer.</p>
+<p><a href="../netscaler-firewall-rules/#pvs" title="PvS Firewall Rules">Citrix Provisioning Firewall Rules</a></p>
+<p>The most recent <strong>Current Release</strong> version of Citrix Provisioning is <a href="https://www.citrix.com/downloads/provisioning-services/product-software/citrix-provisioning-2411.html">2411</a>.<br />
+<img alt="" src="../../../img/image-111.png" /></p>
+<p>For LTSR CVAD, deploy the Citrix Provisioning version that matches your CVAD version:</p>
+<ul>
+<li>For Citrix Virtual Apps and Desktops (CVAD) 2402 LTSR, deploy <a href="http://2024 October 16 - updated Versions section with Citrix Provisioning 2402 LTSR CU2">Citrix Provisioning 2402 LTSR CU2</a><br />
+<img alt="" src="../../../img/kvwWWx95dfcF6qnJZY2JJwEQRA+IeEkCILwCQknQRCET0g4CYIgfELCSRAE4RMSToIgCJ+QcBIEQfiEhJMgCMInJJwEQRA++f9dbz06Qc0HMQAAAABJRU5ErkJggg==" /></li>
+<li>For Citrix Virtual Apps and Desktops (CVAD) 2203 LTSR, deploy <a href="https://www.citrix.com/downloads/provisioning-services/product-software/provisioning-services-22036.html">Citrix Provisioning 2203 LTSR CU6</a>.<br />
+<img alt="" src="../../../img/UVePgsLAP4AAAAASUVORK5CYII=" /></li>
+<li>For Citrix Virtual Apps and Desktops (CVAD) 1912 LTSR, deploy <a href="https://www.citrix.com/downloads/provisioning-services/product-software/provisioning-services-19129.html">Citrix Provisioning 1912 LTSR Cumulative Update 9 (CU9)</a>.<br />
+<img alt="" src="../../../img/image-72.png" /></li>
+<li>For XenApp and XenDesktop 7.15 LTSR, deploy <a href="https://www.citrix.com/downloads/provisioning-services/product-software/provisioning-services-71545.html">7.15.45 (7.15 LTSR Update 9)</a>. 7.15.45 is the version included in XenApp/XenDesktop LTSR 7.15 Cumulative Update 9. Yes, it's confusing.<br />
+<img alt="" src="../../../img/img_62e3fd9c99aca.png" /><ul>
+<li>Also see CTX256773 <a href="https://support.citrix.com/article/CTX256773">Powershell SnapIns are not upgraded from PVS 7.15 LTSR CU3 to 7.15 LTSR CU4 after the upgrade is complete</a><br />
+<img alt="" src="../../../img/img_5d0e49facff5f.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="citrix-license-server-version">Citrix License Server Version</h3>
+<p>Upgrade the <a href="https://www.citrix.com/downloads/licensing/license-server/">Citrix Licensing server</a> to the latest version. Citrix now requires the latest License Server version and is configured to upload license telemetry data.<br />
+<img alt="" src="../../../img/Pasted-94.png" /></p>
+<h3 id="upgrade">Upgrade</h3>
+<p>Windows Server 2022 is supported with Citrix Provisioning 2203 and newer.</p>
+<p>VMware ESXi 8.0 is supported with Citrix Provisioning 2212 and newer.</p>
+<p>SCVMM 2022 is supported with Citrix Provisioning 2203 and newer.</p>
+<p>If you are upgrading from an older version of Citrix Provisioning, do the following:</p>
+<ol>
+<li>In-place upgrade the <a href="https://www.citrix.com/downloads/licensing/">Citrix License Server</a>.</li>
+<li>
+<p>In-place upgrade the <a href="#console">Provisioning Console</a>.</p>
+<ol>
+<li>
+<p>Re-register the Citrix.PVS.snapin.dll snap-in:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe&quot; &quot;c:\program files\citrix\provisioning services console\Citrix.PVS.snapin.dll&quot;
+</span></code></pre></div>
+</li>
+<li>
+<p>If upgrading from 7.15.3000 to 7.15.4000, then manually upgrade the snap-ins. See CTX256773 <a href="https://support.citrix.com/article/CTX256773">Powershell SnapIns are not upgraded from PVS 7.15 LTSR CU3 to 7.15 LTSR CU4 after the upgrade is complete</a><br />
+<img alt="" src="../../../img/img_5d0e49facff5f.png" /></p>
+</li>
+<li>
+<p>In-place upgrade the <a href="#server">Provisioning Server</a>. If you have two or more Provisioning servers, upgrade one, and then the other. If High Availability is configured correctly, then the Target Devices should move to a different Provisioning server while a Provisioning server is being upgraded.</p>
+</li>
+<li>
+<p>After the first Provisioning server is upgraded, run the <a href="#joinfarm">Configuration Wizard</a>. You can generally just click <strong>Next</strong> through the wizard. At the end, you'll be prompted to upgrade the database. Then upgrade the remaining Provisioning servers and run the Config Wizard on each of them too.<br />
+<img alt="" src="../../../img/img_58b2017d0a975.png" /></p>
+</li>
+<li>
+<p>Upgrade the <a href="../pvs-master-device-preparation/#tdsoftware">Target Device Software</a> inside each vDisk. Don't do this until the Provisioning servers are upgraded (Target Device Software must be same version or older than the Provisioning Servers).</p>
+</li>
+<li>
+<p>If your Target Devices are 7.6.1 or newer, you can <a href="../pvs-update-vdisk/#versioning">create a Maintenance version</a>, boot an Updater Target Device, and in-place upgrade the Target Device Software.</p>
+</li>
+<li>If your Target Devices are older, then you must <a href="../pvs-update-vdisk/#reverseimagebcdedit">reverse image</a>.</li>
+</ol>
+</li>
+</ol>
+<h3 id="vdisk-storage">vDisk Storage</h3>
+<p>Do the following on both Provisioning Servers. The vDisks will be stored locally on both servers. You must synchronize the files on the two servers: either manually (e.g. Robocopy), or automatically (e.g. DFS Replication).</p>
+<h4 id="create-d-drive">Create D: Drive</h4>
+<ol>
+<li>In the vSphere Web Client, edit the settings for each of the Provisioning server virtual machines.</li>
+<li>On the bottom, use the drop-down list to select <strong>New Hard</strong> Disk, and click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/780d3aff95fb4850578c2829243aa065.png" /></li>
+<li>Expand the New Hard disk by clicking the arrow next to it.</li>
+<li>Change the disk size to 500 GB or higher. It needs to be large enough to store the vDisks. Each full vDisk is 40 GB plus a chain of snapshots. Additional space is needed to merge the chain.</li>
+<li>Feel free to select <strong>Thin provision</strong>, if desired. Click <strong>OK</strong> when done.<br />
+<img alt="" src="../../../img/03721b6f2a848042144b6783bb7b35c2.png" /></li>
+<li>Login to the session host. Right-click the Start Button, and click <strong>Disk Management</strong>.<br />
+<img alt="" src="../../../img/af36f8da77114e552d6d63944464ab6e.png" /></li>
+<li>In the <strong>Action</strong> menu, click <strong>Rescan Disks</strong>.<br />
+<img alt="" src="../../../img/a15158c1cfaaca9f71edefe9afcb6314.png" /></li>
+<li>On the bottom right, right-click the CD-ROM partition, and click **Change Drive Letters and Paths.<br />
+<img alt="" src="../../../img/ec219ffef29c7bba1fd1132d110100a4.png" /><br />
+    **</li>
+<li>Click <strong>Change</strong>.<br />
+<img alt="" src="../../../img/ea217e48e2d6b09fb1140c260615f4e0.png" /></li>
+<li>Change the drive letter to <strong>E:</strong>, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/f27dfd37eb91d79b71ce826196d3c973.png" /></li>
+<li>Click <strong>Yes</strong> when asked to continue.<br />
+<img alt="" src="../../../img/6817e66ed67997900ccdba4636c2a7a6.png" /></li>
+<li>Right-click Disk 1 and click <strong>Online</strong>.<br />
+<img alt="" src="../../../img/b14376fdb736e2ac6e6b7d1f271e1dde.png" /></li>
+<li>Right-click Disk 1 and click <strong>Initialize Disk</strong>.<br />
+<img alt="" src="../../../img/09d08e0d028150add15b228e489837fe.png" /></li>
+<li>Click <strong>OK</strong> to initialize the disk.<br />
+<img alt="" src="../../../img/d4bcf50abdc96ed965c64321f4064e30.png" /></li>
+<li>Right-click the <strong>Unallocated</strong> space, and click <strong>New Simple Volume</strong>.<br />
+<img alt="" src="../../../img/5796545bda115d67f2ce2d8a92598268.png" /></li>
+<li>In the <em>Welcome to the New Simple Volume Wizard</em> page, click <strong>Next</strong>.</li>
+<li>In the <em>Specify Volume Size</em> page, click <strong>Next</strong>.</li>
+<li>In the <em>Assign Drive Letter or Path</em> page, select <strong>D:</strong> and click <strong>Next</strong>.</li>
+<li>In the <em>Format Partition</em> page, change the <em>Volume label</em> to <strong>vDisks</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/5aa6af627d74d6da81644ea2e1d50360.png" /></li>
+<li>In the <em>Completing the New Simple Volume Wizard</em> page, click <strong>Finish</strong>.</li>
+<li>If you see a pop-up asking you to format the disk, click <strong>Cancel</strong> since Disk Management is already doing that.</li>
+</ol>
+<h4 id="vdisk-folders">vDisk Folders</h4>
+<p>On the new <strong>D:</strong> partition, create one folder per Delivery Group. For example, create one called <strong>Win10Common</strong>, and create another folder called <strong>Win10SAP</strong>. Each vDisk is composed of several files, so its best to place each vDisk in a separate folder. Each Delivery Group is usually a different vDisk.<br />
+<img alt="" src="../../../img/c2192172583bcced2dfe999a0c550731.png" /></p>
+<h4 id="robocopy-script">Robocopy Script</h4>
+<p>Here is a sample robocopy statement to copy vDisk files from one Provisioning server to another. It excludes .lok files and excludes the WriteCache folders.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>REM Robocopy from PVS01 to PVS02
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>REM Deletes files from other server if not present on local server
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Robocopy D:\vDisks \\pvs02\d$\vDisks *.vhd *.vhdx *.avhd *.avhdx *.pvp /b /mir /xf *.lok /xd WriteCache /xo
+</span></code></pre></div>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2018/06/08/vdisk-replicator-utility/">vDisk Replicator Utility</a> has a GUI utility script that can replicate vDisks between Provisioning Sites and between Provisioning Farms.<br />
+<img alt="" src="../../../img/img_5b1bfd318eb05.png" /><br />
+<img alt="" src="../../../img/img_5b1bfd473ac67.png" /></p>
+<h3 id="service-account">Service Account</h3>
+<p>Provisioning Services should run as a domain account that is in the local administrators group on both Provisioning servers. This is required for KMS Licensing.<br />
+<img alt="" src="../../../img/9d4f4a1399ee674429b6883b0f9800fb.png" /></p>
+<h3 id="provisioning-console-installupgrade">Provisioning Console Install/Upgrade</h3>
+<p>The installation and administration of Citrix Provisioning 2411 and older (including LTSR versions 2203 and 1912) are essentially identical.</p>
+<p><strong>Operating System</strong> - Windows Server 2022 is supported with Citrix Provisioning 2203 and newer.</p>
+<p><strong>Hypervisor</strong> - VMware ESXi 8.0 is supported with Citrix Provisioning 2212 and newer. VMware VSAN 8 is supported with Citrix Provisioning 2311 and newer.</p>
+<ul>
+<li>SCVMM 2022 is supported with Citrix Provisioning 2203 and newer. See CTX131239 <a href="https://support.citrix.com/article/CTX131239/supported-hypervisors-for-citrix-virtual-apps-and-desktops-and-provisioning-provisioning-services">Supported Hypervisors for Citrix Virtual Apps and Desktops and Provisioning (Provisioning Services).</a></li>
+</ul>
+<p><strong>BIOS</strong> - Citrix Provisioning 2311 and newer no longer support BIOS. See <a href="https://docs.citrix.com/en-us/provisioning/current-release/manage/managing-vdisks/converting-bios-vdisks-to-uefi">Converting BIOS vDisks to UEFI</a> at Citrix Docs.</p>
+<p>If you want to automate the installation and configuration of Citrix Provisioning, see Dennis Span <a href="http://dennisspan.com/citrix-provisioning-server-unattended-installation/?es_p=4195660">Citrix Provisioning Server unattended installation</a>.<br />
+<img alt="" src="../../../img/img_5920486134abe.png" /></p>
+<p>To manually install Provisioning Console, or in-place upgrade the Provisioning Console:</p>
+<ol>
+<li>Go to the <a href="#planning">downloaded Citrix Provisioning</a>, and in the <strong>Console</strong> folder, run <strong>PVS_Console_x64.exe</strong>.<br />
+<img alt="" src="../../../img/image-112.png" /></li>
+<li>Click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-113.png" /></li>
+<li>
+<p>If you see the <em>.NET Framework Setup</em> page:</p>
+<ol>
+<li>Check the box next to <strong>I have read and accept the license terms</strong>, and click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/img_5eeb5df4c81ba.png" /></li>
+<li>In the <em>Installation Is Complete</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/img_5eeb5f66edf1c.png" /></li>
+<li>Click <strong>Restart Now</strong>.<br />
+<img alt="" src="../../../img/img_5b8c24c65a1ac.png" /></li>
+<li>Restart the <strong>PVS_Console_x64.exe</strong> installer.<br />
+<img alt="" src="../../../img/Pasted-5.png" /></li>
+<li>Click <strong>Install</strong>.</li>
+<li>Click <strong>Yes</strong> to reboot when prompted. Then restart the installation.<br />
+<img alt="" src="../../../img/image-114.png" /></li>
+<li>In the <em>Welcome to the InstallShield Wizard for Citrix Provisioning Console x64</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-115.png" /></li>
+<li>In the <em>License Agreement</em> page, select <strong>I accept the terms</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-116.png" /></li>
+<li>In the <em>Customer Information</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-117.png" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-118.png" /></li>
+<li>In the <em>Ready to Install the Program</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-119.png" /></li>
+<li>In the <em>InstallShield Wizard Completed</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/image-120.png" /></li>
+<li>Click <strong>Yes</strong> if you are prompted to restart.<br />
+<img alt="" src="../../../img/img_5eeb60c2973d1.png" /></li>
+</ol>
+</li>
+</ol>
+<p>After upgrading the Console, re-register the PowerShell snap-in. This is required for the <a href="../app-layering-enterprise-layer-manager/#pvs">Citrix App Layering Agent</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&quot;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe&quot; &quot;c:\program files\citrix\provisioning services console\Citrix.PVS.snapin.dll&quot;
+</span></code></pre></div>
+<p><img alt="" src="../../../img/img_5b8c26a4282a2.png" /></p>
+<h3 id="provisioning-server-installupgrade">Provisioning Server - Install/Upgrade</h3>
+<p>The installation and administration of Citrix Provisioning 2411, 1912 LTSR CU9, 7.15.45, 7.6.9 and other 7.x versions are essentially identical.</p>
+<p><strong>Operating System</strong> - Windows Server 2022 is supported with Citrix Provisioning 2203 and newer.</p>
+<p><strong>Hypervisor</strong> - VMware ESXi 8.0 is supported with Citrix Provisioning 2212 and newer. VMware VSAN 8 is supported with Citrix Provisioning 2311 and newer.</p>
+<ul>
+<li>SCVMM 2022 is supported with Citrix Provisioning 2203 and newer. See CTX131239 <a href="https://support.citrix.com/article/CTX131239/supported-hypervisors-for-citrix-virtual-apps-and-desktops-and-provisioning-provisioning-services">Supported Hypervisors for Citrix Virtual Apps and Desktops and Provisioning (Provisioning Services).</a></li>
+</ul>
+<p><strong>BIOS</strong> - Citrix Provisioning 2311 and newer no longer support BIOS. See <a href="https://docs.citrix.com/en-us/provisioning/current-release/manage/managing-vdisks/converting-bios-vdisks-to-uefi">Converting BIOS vDisks to UEFI</a> at Citrix Docs.</p>
+<p>You can in-place upgrade Provisioning Server. The Provisioning Servers must be upgraded before the vDisks' Target Device Software are upgraded. While upgrading one Provisioning Server, all Target Devices are moved to the other Provisioning Server assuming that vDisk High Availability is properly configured.</p>
+<p>To install/upgrade Provisioning server:</p>
+<ol>
+<li>If vSphere, make sure the Provisioning server virtual machine Network Adapter Type is <strong>VMXNET 3</strong>.<br />
+<img alt="" src="../../../img/df97f2c9537a2b3e1336f1f24be5d0d2.png" /></li>
+<li>Go to the downloaded <a href="#planning">Provisioning ISO</a>, and in the <strong>Server</strong> folder, run <strong>PVS_Server_x64.exe</strong>.<br />
+<img alt="" src="../../../img/image-121.png" /></li>
+<li>Click <strong>Install</strong> when asked to install prerequisites.<br />
+<img alt="" src="../../../img/image-122.png" /></li>
+<li>Click <strong>Yes</strong> to reboot. After the restart, relaunch the installer.<br />
+<img alt="" src="../../../img/image-123.png" /></li>
+<li>Note: there's a long delay before the installation wizard appears.</li>
+<li>In the <em>Welcome to the Installation Wizard for Citrix Provisioning Server x64</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-124.png" /></li>
+<li>In the <em>License Agreement</em> page, select <strong>I accept the terms</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-125.png" /></li>
+<li>In Citrix Provisioning 1811 and newer, you'll see a <strong>Default Firewall Ports</strong> page. You can optionally select <strong>Automatically open all Citrix Provisioning ports</strong> in Windows Firewall. If you later use the Citrix Provisioning Console to change the ports, then the Windows Firewall rules need to be adjusted manually since the Citrix Provisioning Console won't do it for you.<br />
+<img alt="" src="../../../img/image-126.png" /></li>
+<li>In the <em>Customer Information</em> page, select <strong>Anyone who users this computer</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-127.png" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-128.png" /></li>
+<li>In the <em>Ready to Install the Program</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-129.png" /></li>
+<li>In the <em>Installation Wizard Completed</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/image-130.png" /></li>
+</ol>
+<h3 id="database-script">Database Script</h3>
+<p>By default, the Citrix Provisioning Configuration Wizard will try to create the database using the credentials of the person that is running the Wizard. This isn’t always feasible. An alternative is to create a script that a DBA can run on the SQL server.</p>
+<ol>
+<li>Go to <strong>C:\Program Files\Citrix\Provisioning Services</strong> and run <strong>DBScript.exe</strong>.<br />
+<img alt="" src="../../../img/img_5c152a973a1a9.png" /></li>
+<li>Change the selection to <strong>New database for 2012 or higher</strong>.</li>
+<li>Enter a path to save the script file.</li>
+<li>Fill in the other fields.</li>
+<li>Select an Active Directory group containing your Citrix administrators, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_62409ca3e2551.png" /></li>
+<li>In SQL Server Management Studio, open the SQL script.<br />
+<img alt="" src="../../../img/c1261def23978a1deb89e23f3e364a99.png" /><br />
+<img alt="" src="../../../img/b9fafd02de20e32bf0b5eb83d34537e5.png" /></li>
+<li>Execute the script to create the database.<br />
+<img alt="" src="../../../img/1242b28366a5920a1539fb215bc79d21.png" /><br />
+<img alt="" src="../../../img/d841db5f821498620c0bfa31d040c8a6.png" /></li>
+<li>The person that runs the Citrix Provisioning Configuration Wizard will need <strong>db_owner</strong> permission to the new Citrix Provisioning database.<br />
+<img alt="" src="../../../img/460ce96ace441378d1d4373e4e9b04ab.png" /></li>
+<li>Create a Windows service account that will run the services on the Citrix Provisioning server. This account must have a SQL login on the SQL server containing the Citrix Provisioning database. The Citrix Provisioning Configuration Wizard will grant this account the correct permissions in the database.<br />
+<img alt="" src="../../../img/e8d3626772433df936aa85cb4fa4fbfd.png" /></li>
+</ol>
+<h3 id="configuration-wizard-new-farm">Configuration Wizard – New Farm</h3>
+<ol>
+<li>If you used <strong>DBScript.exe</strong> to pre-create the database, skip to <a href="#joinfarm">Configuration Wizard - Join Farm</a>.</li>
+<li><strong>Certificate</strong> - Joining PVS to CVAD site requires a valid certificate on the PVS server.<br />
+<img alt="" src="../../../img/image-29.png" /></li>
+<li>For <strong>SQL AlwaysOn Availability Group</strong>, see CTX201203 <a href="https://support.citrix.com/article/CTX201203">SQL Server AlwaysOn Configuration for PVS 7.6</a>. In summary: Use the wizard to create the database instance. In SQL, create the Availability Group. Then reconfigure Citrix Provisioning Server to point to the SQL AlwaysOn listener.</li>
+<li>The Citrix Provisioning Configuration Wizard launches automatically. If the database wasn't pre-created, then the person running the wizard must have <strong>dbcreator</strong> and <strong>securityadmin</strong> roles on the SQL Server. If true, click <strong>Next</strong>. If not true, then cancel the wizard and launch it as somebody that does have those roles.<br />
+<img alt="" src="../../../img/img_5b8c2c8315fec.png" /><br />
+<img alt="" src="../../../img/Pasted-114.png" /></li>
+<li>The <em>DHCP Services</em> page appears. DHCP is typically hosted on a different server so select <strong>The service that runs on another computer</strong>. It is also possible to install DHCP on the Provisioning Servers. <strong>Click Next.</strong><br />
+<img alt="" src="../../../img/img_5b8c3c5e1fd40.png" /></li>
+<li>In the <em>PXE Services</em> page, if you intend to use Boot Device Manager (BDM or ISO) instead of PXE, then change the selection to <strong>The service that runs on another computer</strong>, which disables the PXE service.</li>
+<li>If your Target Devices and Provisioning Servers are on the same broadcast network, then change the selection to <strong>Citrix Provisioning PXE service on this computer</strong>.</li>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c3cba4f9e6.png" /><br />
+<img alt="" src="../../../img/img_5b8c3c895a4fb.png" /></li>
+<li>In the <em>Farm Configuration</em> page, choose <strong>Create Farm</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4681e65ae.png" /></li>
+<li>In the <em>Database Server</em> page, enter the name of the SQL server. Citrix Provisioning 2203 and newer has an option for specifying credentials to the SQL server.<br />
+<img alt="" src="../../../img/img_62409cfae4244.png" /><ul>
+<li>In Citrix Provisioning 2203 and newer, click the <strong>Connection Options</strong> button and there's an option for <strong>Enable MultiSubnetFailover for SQL Always On</strong>. There's also an <strong>Optional TCP port</strong> field. Click <strong>OK</strong> and then click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_62409d5d2b4e1.png" /></li>
+<li>Older versions of Provisioning have an option for <strong>MultiSubnetFailover</strong> on the <em>Database Server</em> page. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c46b5e5725.png" /></li>
+</ul>
+</li>
+<li>
+<p>In the <em>New Farm</em> page, enter the following:</p>
+<ul>
+<li>Enter a descriptive <strong>Database name</strong>. Put the word <strong>Citrix</strong> in the database name so the DBA knows what it is for.</li>
+<li>Enter a descriptive <strong>Farm name</strong>.</li>
+<li>Enter a descriptive <strong>Site name</strong>.</li>
+<li>Enter a descriptive <strong>Collection name</strong>. All of these names can be changed later.</li>
+<li>Select the Active Directory group that will have administrator permissions to Citrix Provisioning, and click <strong>Next</strong>. If you don't see your group here, select any group you belong to, and you can fix it later in the console.<br />
+<img alt="" src="../../../img/img_5b8c46eb5ae6d.png" /></li>
+<li>In the <em>New Store</em> page, browse to one of the vDisk folders, and give the store a name. Then click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4783590ad.png" /></li>
+<li>You can optionally join the Provisioning Farm to CVAD or Citrix Cloud so that you can use Web Studio to provision Targets. The CVAD option is available in Citrix Provisioning 2311 and newer.<br />
+<img alt="" src="../../../img/image-22.png" />  </li>
+<li>Click <strong>Yes</strong> to join the farm to a CVAD Site.<br />
+<img alt="" src="../../../img/image-23.png" /></li>
+<li>In the <em>Citrix Virtual Desktops Controller</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-24.png" /></li>
+<li>Later in the wizard, an SSL certificate is required on the PVS server.<br />
+<img alt="" src="../../../img/image-105.png" /></li>
+<li>The <strong>Registration</strong> tab in Provisioning Console &gt; <strong>Farm Properties</strong> shows the status of CVAD Site registration.<br />
+<img alt="" src="../../../img/image-31.png" /></li>
+<li>In the <em>License Server</em> page, enter the name of your Citrix license server, check the box next to <strong>Validate license server communication</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-104.png" /></li>
+<li>Click <strong>Yes</strong> to trust the license server certificate.<br />
+<img alt="" src="../../../img/image-147.png" /></li>
+<li>In the <em>User account</em> page, notice it defaults to Network service account. This won’t work with KMS licensing so change it to <strong>Specified user account</strong>. Enter credentials for an account that is a local administrator on all Provisioning servers, and click <strong>Next</strong>. Note: Provisioning 7.16 and newer support Group Managed Service Accounts.<br />
+<img alt="" src="../../../img/img_5b8c489dec829.png" /><br />
+<img alt="" src="../../../img/img_5b8c48854d7a8.png" /></li>
+<li>In the <em>Active Directory Computer Account Password</em> page, check the box, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c47eacf07a.png" /></li>
+<li>In the <em>Network Communications</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c47f8d11a1.png" /></li>
+<li>In the <em>TFTP Option and Bootstrap Location</em> page, check the box, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c480cc96cd.png" /></li>
+<li>In the <em>Stream Servers Boot List</em> page, click <strong>Advanced</strong>.<br />
+<img alt="" src="../../../img/image-26.png" /></li>
+<li>Check the box next to <strong>Verbose mode</strong>, click <strong>OK</strong>, and then click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/33ebf2e9f88ab400b5395342244de08c.png" /></li>
+<li>If Provisioning 7.12 or newer, in the <em>SSL Configuration</em> page, click <strong>Next.</strong><br />
+<img alt="" src="../../../img/image-28.png" /></li>
+<li>If you see the <em>Problem Report Configuration</em> page, enter your MyCitrix credentials and click <strong>Next.</strong><br />
+<img alt="" src="../../../img/img_5b8c492544a48.png" /></li>
+<li>In the <em>Finish</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/image-30.png" /></li>
+<li>If you are upgrading, then you might be asked to upgrade the database. Click <strong>Yes</strong>.<br />
+<img alt="" src="../../../img/img_5945527fa792e.png" /></li>
+<li>Click <strong>OK</strong> if you see the firewall message.<br />
+<img alt="" src="../../../img/aa16a4041ab6739798198f792f47d246.png" /></li>
+<li>In the <em>Finish</em> page, click <strong>Done</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4ab202f6a.png" /></li>
+</ul>
+</li>
+</ol>
+<p>From <a href="https://docs.citrix.com/en-us/provisioning/current-release/install/install-wizard-silent.html">Running the Configuration Wizard silently</a> at Citrix Docs: Now that you have a configured server, you can run <code>**"C:\Program Files\Citrix\Provisioning Services\ConfigWizard.exe" /s**</code> to produce an .ans file at <code>**"C:\ProgramData\Citrix\Provisioning Services\ConfigWizard.ans"**</code>. This .ans file can be modified and copied to additional Provisioning servers. <code>**"C:\Program Files\Citrix\Provisioning Services\ConfigWizard.exe" /a**</code> reads the .ans file and applies the configuration silently.</p>
+<h3 id="configuration-wizard-join-farm">Configuration Wizard – Join Farm</h3>
+<ol>
+<li>The Configuration Wizard launches automatically.</li>
+<li>
+<p>There are two methods of handling SQL permissions:</p>
+<ol>
+<li>The person running the wizard must have <strong>db_owner</strong> on the database and <strong>securityadmin</strong> role on the SQL Server. This allows the wizard to add the service account to SQL logins and grant it access to the database.</li>
+<li>Or the person running the wizard can be limited to just <strong>db_owner</strong> permission to the database. The service account must be added manually to SQL logins by a DBA.<br />
+<img alt="" src="../../../img/img_5f747918be8b9.png" /></li>
+<li>The <em>DHCP Services</em> page appears. DHCP is typically hosted on a different server so select <strong>The service that runs on another computer</strong>. It is also possible to install DHCP on the Provisioning Servers. <strong>Click Next.</strong><br />
+<img alt="" src="../../../img/img_5b8c496e1774b.png" /></li>
+<li>In the <em>PXE Services</em> page, if you intend to use Boot Device Manager (BDM or ISO) instead of PXE, then change the selection to <strong>The service that runs on another computer</strong>, which disables the PXE service.</li>
+<li>If your Target Devices and Provisioning Servers are on the same broadcast network, then change the selection to <strong>Citrix Provisioning PXE service on this computer</strong>.</li>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c3d64cb71b.png" /><br />
+<img alt="" src="../../../img/img_5b8c3dcd30662.png" /></li>
+<li>In the <em>Farm Configuration</em> page, click <strong>Join existing farm</strong>.<br />
+<img alt="" src="../../../img/img_5b8c482a0582a.png" /></li>
+<li>In the <em>Database Server</em> page, enter the name of the SQL server. Citrix Provisioning 2203 and newer has an option for specifying credentials to the SQL server.<br />
+<img alt="" src="../../../img/img_62409cfae4244.png" /></li>
+<li>In Citrix Provisioning 2203 and newer, click the <strong>Connection Options</strong> button and there's an option for <strong>Enable MultiSubnetFailover for SQL Always On</strong>. There's also an <strong>Optional TCP port</strong> field. Click <strong>OK</strong> and then click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_62409d5d2b4e1.png" /></li>
+<li>Older versions of Provisioning have an option for <strong>MultiSubnetFailover</strong> on the <em>Database Server</em> page. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c46b5e5725.png" /></li>
+<li>In the <em>Existing Farm</em> page, select the database, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c498a80f70.png" /></li>
+<li>In the <em>Site</em> page, select an existing site, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c49991ca23.png" /></li>
+<li>If you used the script to create the database, then there probably are no stores defined. Do so now.<br />
+<img alt="" src="../../../img/img_5b8c49d19c99f.png" /></li>
+<li>Otherwise, in the <em>New Store</em> page, select the existing store, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c49dfede83.png" /></li>
+<li>In the <em>License Server</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c49ef92d85.png" /></li>
+<li>In the <em>User account</em> page, notice it defaults to Network service account. This won’t work with KMS licensing so change it to <strong>Specified user account</strong>. Enter credentials for an account that is a local administrator on all Provisioning servers, and click <strong>Next</strong>. Note: Provisioning 7.16 and newer support Group Managed Service Accounts.<br />
+<img alt="" src="../../../img/img_5b8c48a756587.png" /><br />
+<img alt="" src="../../../img/img_5b8c48854d7a8.png" /></li>
+<li>In the <em>Active Directory Computer Account Password</em> page, check the box, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4a0f3a473.png" /></li>
+<li>In the <em>Network Communications</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4a1c0f473.png" /></li>
+<li>In the <em>TFTP Option and Bootstrap Location</em> page, check the box, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4a2ac865e.png" /></li>
+<li>In the <em>Stream Servers Boot List</em> page, click <strong>Advanced</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4a3a07b7d.png" /></li>
+<li>Check the box next to <strong>Verbose mode</strong>, click <strong>OK</strong>, and then click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/56c5a8b711ebafb9c4f9006851a3f933.png" /></li>
+<li>If Provisioning 7.12 or newer, in the <em>Soap SSL Configuration</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4a4c6be24.png" /></li>
+<li>If Provisioning 7.11 or newer, in the <strong>Problem Report Configuration</strong> page, enter your MyCitrix credentials, and click <strong>Next</strong>.<img alt="" src="../../../img/img_5b8c4a5a3d880.png" /></li>
+<li>In the <em>Finish</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4a68b921a.png" /></li>
+<li>Click <strong>OK</strong> if you see the firewall message.<br />
+<img alt="" src="../../../img/df3d7d7d00a49b3bcc80d4d6ba4c9b52.png" /></li>
+<li>In the <em>Finish</em> page, click <strong>Done</strong>.<br />
+<img alt="" src="../../../img/img_5b8c4aa878f6b.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="troubleshooting-networking-services-dont-work-after-reboot">Troubleshooting - Networking Services Don't Work After Reboot</h3>
+<p>If your PXE service or TFTP service does not work after a reboot of the Provisioning server, do the following:</p>
+<ol>
+<li>One option is to set the Citrix PVS PXE Service, Citrix PVS TFTP Service, and Citrix PVS Two-stage boot Service to <strong>Automatic (Delayed Start)</strong>.</li>
+<li>
+<p>The TFTP and Two-stage Boot services can be delayed by setting registry keys.</p>
+<ul>
+<li>Keys = HKLM\System\CurrentControlSet\services\BNTFTP (and PVSTSB)\Parameters</li>
+<li>Value = InitTimeoutSec (DWORD). 1 – 4 seconds. Default is 1.</li>
+<li>Value = MaxBindRetry (DWORD). 5 – 20 retries. Default is 5.</li>
+</ul>
+</li>
+</ol>
+<h3 id="disable-firewall">Disable Firewall</h3>
+<p>Disable the Windows Firewall to allow communication to all Citrix Provisioning Server ports. Or, see <a href="../netscaler-firewall-rules/#pvs" title="PvS Firewall Rules">Citrix Provisioning Firewall Rules</a> and manually open all required ports. If you change the ports in the Citrix Provisioning Console, then you'll need to adjust the Windows Firewall rules accordingly.</p>
+<ol>
+<li>In Server Manager, click <strong>Tools</strong>, and click <strong>Windows Firewall with Advanced Security</strong>.<br />
+<img alt="" src="../../../img/cbf47a2d913b90d2f716018c16317afc.png" /></li>
+<li>Click <strong>Windows Firewall Properties</strong>.<br />
+<img alt="" src="../../../img/db6e2f0c6544b313ad9e997c3ae8617b.png" /></li>
+<li>On the <strong>Domain Profile</strong> tab, change the <em>Firewall state</em> to <strong>Off</strong>.<br />
+<img alt="" src="../../../img/704bc78c46ab6d39c60b0a00307f6793.png" /></li>
+</ol>
+<h3 id="disable-bios-boot-menu">Disable BIOS Boot Menu</h3>
+<p>The versioning process in Citrix Provisioning will present a boot menu when booting any version except <strong>Production</strong>.<br />
+<img alt="" src="../../../img/img_5b92cca50d796.png" /></p>
+<ol>
+<li>To avoid this, create the DWORD registry value <strong>HKLM\Software\Citrix\ProvisioningServices\StreamProcess\SkipBootMenu</strong> on both Provisioning Servers and set it to <strong>1</strong>. Note: the location of this key changed in Provisioning Services 7.0 and newer.<br />
+<img alt="" src="../../../img/e09a1e0ba74bba98b58e2ed63899a575.png" /></li>
+<li>Then restart the <strong>Citrix PVS Stream Service</strong>.<br />
+<img alt="" src="../../../img/8b4dd11651a8b523f768b9ca17e8a2d7.png" /></li>
+</ol>
+<h3 id="private-mode-vdisk-no-servers-available-for-vdisk">Private Mode vDisk – No Servers Available for vDisk</h3>
+<p>Citrix CTX200233 - <a href="https://support.citrix.com/article/CTX200233">Error: "No servers available for disk"</a>: When you set a vDisk to Private Image mode (or new Maintenance version), if the Target Device is not connected to the server that contains the vDisk then you might see a message saying “No Servers Available for vDisk”.</p>
+<ol>
+<li>To avoid this, create the DWORD registry value <strong>HKLM\Software\Citrix\ProvisioningServices\StreamProcess\</strong><strong>SkipRIMSForPrivate</strong> on both Provisioning Servers and set it to <strong>1</strong>. Note: the location of this key changed in Provisioning Services 7.0. 
+    <img alt="" src="../../../img/f17565a195c9de1b40878b4921cafb76.png" /></li>
+<li>Then restart the <strong>Citrix PVS Stream Service</strong>.<br />
+<img alt="" src="../../../img/8b4dd11651a8b523f768b9ca17e8a2d7.png" /></li>
+</ol>
+<h3 id="multi-homed-provisioning-server">Multi-Homed Provisioning Server</h3>
+<p>From slide 20 of <a href="https://www.slideshare.net/davidmcg/implementing-and-troubleshooting-pvs">http://www.slideshare.net/davidmcg/implementing-and-troubleshooting-pvs</a>:, Multi-homed Provisioning server is not recommended but if you insist, and if running Provisioning 6.1 or older, configure the following. Provisioning 7.7 configuration wizard should have asked you for the management NIC.</p>
+<ul>
+<li>
+<p>HKLM\Software\Citrix\ProvisioningServices\IPC</p>
+<ul>
+<li>New Reg_Sz (string) named <strong>IPv4Address</strong> with the IP of the NIC for IPC</li>
+<li>
+<p>HKLM\Software\Citrix\ProvisioningServices\Manager</p>
+</li>
+<li>
+<p>New Reg_Sz (string) named <strong>GeneralInetAddr</strong> with the IP of the NIC and port</p>
+</li>
+<li>e.g. 10.1.1.2:6909</li>
+</ul>
+</li>
+</ul>
+<p>Citrix 133877 <a href="https://support.citrix.com/article/CTX133877">Timeout Error 4002 in Provisioning Server Console after Clicking "Show Connected Devices_"_</a>: when there are multiple streaming NICs assigned to the Provisioning Server, when Show Connected Devices was clicked in the Provisioning console, the following symptoms might be experienced: Server timeout error 4002, unusual delay of 3 to 4 minutes to list the connected devices, or Provisioning console stops responding. Complete the following to resolve the issue:</p>
+<ol>
+<li>On the Provisioning Server machine, under <strong>HKLM\software\citrix\provisioningServices\Manager</strong> key, create registry DWORD <strong>RelayedRequestReplyTimeoutMilliseconds</strong>, and set it to 50 ms (Decimal).</li>
+<li>Create a DWORD <strong>RelayedRequestTryTimes</strong>, and set it to 1.</li>
+<li>Open the Provisioning Server console and test by selecting the Show Connected Devices command.</li>
+</ol>
+<h3 id="antivirus-exclusions">Antivirus Exclusions</h3>
+<h4 id="citrixs-recommended-antivirus-exclusions"><strong>Citrix’s Recommended Antivirus Exclusions</strong></h4>
+<p><a href="https://docs.citrix.com/en-us/tech-zone/build/tech-papers/antivirus-best-practices.html#provisioning">Endpoint Security, Antivirus, and Antimalware Best Practices</a> at Citrix Docs TechZone contains a list of recommended exclusions for Citrix Provisioning.</p>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/12/02/citrix-recommended-antivirus-exclusions/">Citrix Recommended Antivirus Exclusions</a>: the goal here is to provide you with a consolidated list of recommended antivirus exclusions for your Citrix virtualization environment focused on the key processes, folders, and files that we have seen cause issues in the field:</p>
+<ul>
+<li>Set real-time scanning to scan local drives only and not network drives</li>
+<li>Disable scan on boot</li>
+<li>Remove any unnecessary antivirus related entries from the Run key</li>
+<li>Exclude the pagefile(s) from being scanned</li>
+<li>Exclude Windows event logs from being scanned</li>
+<li>Exclude IIS log files from being scanned</li>
+</ul>
+<p>See the <a href="https://www.citrix.com/blogs/2016/12/02/citrix-recommended-antivirus-exclusions/">Blog Post</a> for exclusions for each Citrix component/product including: StoreFront, VDA, Controller, and Provisioning. The Blog Post also has links to additional KB articles on antivirus.</p>
+<h4 id="microsofts-virus-scanning-recommendations">Microsoft’s virus scanning recommendations</h4>
+<p>(e.g. exclude group policy files) - <a href="https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-runni">http://support.microsoft.com/kb/822158</a>.</p>
+<h3 id="tftp-high-availability">TFTP High Availability</h3>
+<p>BIOS machines have multiple methods of booting into PVS:</p>
+<ul>
+<li>PXE (network boot) on same subnet as Citrix Provisioning Servers.</li>
+<li>PXE (network boot) on different subnet as Citrix Provisioning Servers. DHCP Scope Options 66 and 67 required.</li>
+<li>Boot ISO created by Citrix Provisioning Boot Device Manager.</li>
+<li>Boot partition created by the Citrix Provisioning Virtual Desktops Setup Wizard.</li>
+</ul>
+<p>EFI/UEFI machines have two methods of booting into PVS:</p>
+<ul>
+<li>PXE (network boot) on same subnet as Citrix Provisioning Servers. DHCP Scope Option 11 required.</li>
+<li>PXE (network boot) on different subnet as Citrix Provisioning Servers. DHCP Scope Options 66, 67, and 11 required.</li>
+</ul>
+<p>If PXE booting on same subnet as Provisioning Servers, then make sure the PXE service is running on the Citrix Provisioning Servers. When your target device boots, it will broadcast a PXE Request message to the entire subnet. One of the Provisioning Servers PXE services will reply with the IP address of the TFTP service on the local Provisioning Server.</p>
+<ul>
+<li>If EFI/UEFI, the bootstrap file cannot be modified to contain the Provisioning Server addresses so you must instead configure DHCP Scope Option 11 with those addresses. See CTX208519 <a href="https://support.citrix.com/article/CTX208519">Configuring PVS for High Availability with UEFI Booting and PXE service</a>.</li>
+</ul>
+<p>If your Target Devices are not on the same VLAN/subnet as the Provisioning Servers, then use Boot ISO or Boot Partition.</p>
+<p>HA for DHCP Scope Options:</p>
+<ul>
+<li>DHCP Scope Option 66 (TFTP Server address) only supports a single address. For High Availability, either DNS Round Robin your TFTP servers, or configure Citrix ADC to load balance TFTP. TFTP service runs on the Citrix Provisioning Servers.</li>
+<li>Citrix CTX131954 <a href="https://support.citrix.com/article/CTX131954">Implementation Guide - High Availability for TFTP</a></li>
+<li>NetScaler has native load balancing support for TFTP protocol.<br />
+<img alt="" src="../../../img/img_5b17d2ba482b8.png" /></li>
+<li>For EFI/UEFI, for DHCP Scope Option 67, see <a href="https://docs.citrix.com/en-us/provisioning/current-release/configure/configure-UEFI.html">Unified Extensible Firmware Interface (UEFI) pre-boot environments</a> at Citrix Docs for the correct file name.</li>
+</ul>
+<h3 id="dhcp-failover">DHCP Failover</h3>
+<p>The DHCP infrastructure must be highly available. And session hosts should be configured with DHCP Reservations. With multiple DHCP servers, any reservation should be created on all DHCP servers hosting the same DHCP scope. The easiest way to accomplish this is with the <strong>DHCP Failover</strong> feature in Windows Server 2012 and newer.</p>
+<ol>
+<li>Build two DHCP servers on Windows Server 2012 or newer.</li>
+<li>Create a scope for the Provisioning Target Devices.</li>
+<li>Right-click the existing scope, and click <strong>Configure Failover</strong>.<br />
+<img alt="" src="../../../img/aedda61d774c1ec92191d14685ad45bb.png" /></li>
+<li>In the <em>Introduction to DHCP Failover</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/bae7fbb1c7910aaa13ddcf678157f571.png" /></li>
+<li>In the <em>Specify the partner server to use for failover</em> page, enter the name of the other DHCP server, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/f389f1899da2ad778609b27db38c03df.png" /></li>
+<li>In the <em>Create a new failover relationship</em> page, enter a Shared Secret, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/481ecd9a87c15983da263a2849ca4675.png" /></li>
+<li>Click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/aa318ed898b99cbf7e617738c8ca7b73.png" /></li>
+<li>Click <strong>Close</strong>.<br />
+<img alt="" src="../../../img/ccbdabecd2d293268d684e7dca27a964.png" /></li>
+</ol>
+<h3 id="health-check">Health Check</h3>
+<p>CTP Sacha Thomet's PowerShell script to view the health/status of the Provisioning environment. Emails an HTML Report. For Provisioning 7.7 and newer, see <a href="https://blog.sachathomet.ch/2015/12/29/happy-new-script-pvs-7-7-healthcheck/">https://blog.sachathomet.ch/2015/12/29/happy-new-script-pvs-7-7-healthcheck/</a>.<br />
+<img alt="" src="../../../img/826f3cbaa886aea557d7e1639421999a.png" /></p>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li><a href="../provisioning-services-console-config/" title="Provisioning Services – Console Config">Provisioning - Console Configuration</a></li>
+<li>Back to <a href="../provisioning-services/" title="Provisioning Services">Citrix Provisioning</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

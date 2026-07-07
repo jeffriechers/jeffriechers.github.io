@@ -1,0 +1,6061 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../storefront-subscriptions/">
+      
+      
+        <link rel="next" href="../../WEM/about/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>StoreFront Tweaks - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              StoreFront Tweaks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crl-checking-disable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRL Checking – Disable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pnagent-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PNAgent Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PNAgent Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-sign-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single Sign-on
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remember-my-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remember my password
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hide-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-webconfig-gui-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront web.config GUI Assistant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-autolaunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desktop Autolaunch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-screen-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Screen Desktop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-for-anonymous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Store for Anonymous
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workspace Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receiver-for-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver for Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receiver-self-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver Self-Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#treat-desktops-as-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Treat Desktops as Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-folder-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Folder Redirection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-self-service-disable-remember-my-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver Self-service - Disable "Remember My Password"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-option-in-web-page-disable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Activate” Option in Web Page – Disable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5-receiver-getting-started-tour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML5 Receiver Getting Started Tour
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-receiver-ui-in-storefront-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Receiver UI in StoreFront 3.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-receiver-for-web-in-storefront-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Receiver for Web in StoreFront 2.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront SDK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-30-theme-for-netscaler-105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront 3.0 Theme for NetScaler 10.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-30-portal-theme-for-netscaler-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront 3.0 Portal Theme for NetScaler 11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crl-checking-disable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRL Checking – Disable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pnagent-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PNAgent Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PNAgent Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-sign-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single Sign-on
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remember-my-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remember my password
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hide-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-webconfig-gui-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront web.config GUI Assistant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-autolaunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desktop Autolaunch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-screen-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Screen Desktop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-for-anonymous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Store for Anonymous
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workspace Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receiver-for-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver for Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receiver-self-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver Self-Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#treat-desktops-as-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Treat Desktops as Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-folder-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Folder Redirection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-self-service-disable-remember-my-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver Self-service - Disable "Remember My Password"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-option-in-web-page-disable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Activate” Option in Web Page – Disable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5-receiver-getting-started-tour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML5 Receiver Getting Started Tour
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-receiver-ui-in-storefront-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Receiver UI in StoreFront 3.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-receiver-for-web-in-storefront-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Receiver for Web in StoreFront 2.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront SDK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-30-theme-for-netscaler-105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront 3.0 Theme for NetScaler 10.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-30-portal-theme-for-netscaler-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront 3.0 Portal Theme for NetScaler 11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>StoreFront Tweaks</h1>
+
+<h3 id="navigation">Navigation</h3>
+<p>This article applies to all versions of StoreFront between 2.6 and 3.0.9000 (LTSR CU9). For newer versions, see the <a href="../storefront-cr-tweaks/">newer article</a>.</p>
+<p>Here is a collection of optional StoreFront configurations.</p>
+<ul>
+<li><a href="#crl">Disable CRL Checking to speed up .NET</a></li>
+<li><a href="#shortcuts">StoreFront can control Receiver Shortcut placement</a></li>
+<li><a href="#pnagent">PNAgent Authentication</a></li>
+<li><a href="#hideapps">Hide Applications from the Store</a></li>
+<li><a href="#guiassist">StoreFront web.config GUI Assistant</a></li>
+<li><a href="#desktopautolaunch">Desktop Autolaunch</a></li>
+<li><a href="#fullscreen">Force desktops to launch full screen</a></li>
+<li><a href="#anon">Store for Anonymous users</a></li>
+<li><a href="#workspacecontrol">Workspace Control</a></li>
+<li><a href="#treatasapp">Treat Desktops as Applications</a></li>
+<li><a href="#special">Enable Special Folder Redirection</a></li>
+<li><a href="#remembermypassword">Disable "Remember My Password" in Receiver Self-Service</a></li>
+<li><a href="#activate">Remove "Activate" Option from Receiver for Web</a></li>
+<li><a href="#html5tour">Disable HTML5 Receiver Getting Started Tour</a></li>
+<li><a href="#customize3">Customize Appearance of Receiver in StoreFront 3.0</a></li>
+<li><a href="#customize">Customize Appearance of Receiver for Web in StoreFront 2.6</a></li>
+<li><a href="#sdk">StoreFront SDK</a></li>
+<li><a href="#netscaler105">StoreFront 3.0 Theme for NetScaler 10.5</a></li>
+<li><a href="#netscaler11">StoreFront 3.0 Portal Theme for NetScaler 11.0</a></li>
+</ul>
+<h3 id="crl-checking-disable">CRL Checking – Disable</h3>
+<p>When the StoreFront server checks certificate revocation for its locally signed files, a delay can occur before the StoreFront logon page is displayed.</p>
+<ol>
+<li>
+<p>Run the following PowerShell commands:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Add-PSSnapin Citrix.DeliveryServices.Framework.Commands
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Set-DSAssemblyVerification $false
+</span></code></pre></div>
+</li>
+<li>
+<p>Another potential tweak to speed up StoreFront is to disable NetBIOS. Right-click the Start Menu and click <strong>Network Connections</strong>. <img alt="" src="../../../img/59af343157f1de3a8d60e932444bbc00.png" /></p>
+</li>
+<li>Right-click the NIC and click <strong>Properties</strong>. <img alt="" src="../../../img/c244c3deb226e2cd030db2d9d96a04f7.png" /></li>
+<li>Highlight <strong>Internet Protocol Version 4</strong> and click <strong>Properties</strong>. <img alt="" src="../../../img/40cfb73d038d2fe9de7cb590e745fcc0.png" /></li>
+<li>Click <strong>Advanced</strong>. <img alt="" src="../../../img/463f7cd7ff5b15f28fa8b5023bf7f4b7.png" /></li>
+<li>On the <em>WINS</em> tab, change the selection to <strong>Disable NetBIOS over TCP/IP</strong> and click <strong>OK</strong> twice and <strong>Close</strong> once. <img alt="" src="../../../img/7407bb9c9ef908a410275e99abd27774.png" /></li>
+<li>Repeat on the other StoreFront servers.</li>
+</ol>
+<p>Note: <a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element">According to Microsoft</a>, it is no longer necessary to configure generatePublisherEvidence in <strong>C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet.config</strong>.</p>
+<h3 id="receiver-shortcuts">Receiver Shortcuts</h3>
+<p>You can use StoreFront to control placement of shortcuts on Receiver machines.</p>
+<ol>
+<li>Run Notepad elevated (as administrator).</li>
+<li>Edit the file <strong>C:\inetpub\wwwroot\Citrix\Roaming\web.config</strong>. <img alt="" src="../../../img/bc7a76861e967244230adc37287b4134.png" /></li>
+<li>Search for <strong>&lt;account</strong>. Find the Store name in the <strong>name</strong> attribute. <img alt="" src="../../../img/a885ec46232ad57561beb05bae37de25.png" /></li>
+<li>Scroll down to the first <strong><properties></strong> section located under <strong><annotatedServices></strong>.</li>
+<li>See <a href="https://docs.citrix.com/en-us/receiver/windows/current-release/configure/config-app-delivery.html#using-storefront-account-settings-to-customize-app-shortcut-locations">Using StoreFront account settings to customize app shortcut locations</a> at docs.citrix.com for a list of properties. Add the properties as detailed at docs.citrix.com. The properties should be added after the <strong>clear</strong> tag. <img alt="" src="../../../img/c3c99b6fa9ef98df5a05e6b10d57ba74.png" /></li>
+<li>Note: if subscriptions are enabled in StoreFront then only Favorites are added to the Start Menu and Desktop. If subscriptions are disabled then all applications are placed on the Start Menu or Desktop. <img alt="" src="../../../img/6daaa3c536a9752947290ef5e61d89c8.png" /></li>
+<li>Close and save the file.</li>
+<li>Then <strong>Propagate Changes</strong>. <img alt="" src="../../../img/eca7a0a41b67fcbacbe15bfbc19ec641.png" /></li>
+</ol>
+<h3 id="pnagent-authentication">PNAgent Authentication</h3>
+<h4 id="single-sign-on">Single Sign-on</h4>
+<p>From <a href="https://docs.citrix.com/en-us/categories/legacy-archive/downloads/storefront-3-0.pdf">Configure authentication for XenApp Services URLs</a> at docs.citrix.com: XenApp Services URLs support explicit, domain pass-through, and pass-through with smart card authentication. Explicit authentication is enabled by default. You can change the authentication method, but only one authentication method can be configured for each XenApp Services URL. To enable multiple authentication methods, create separate stores, each with a XenApp Services URL, for each authentication method. To change the authentication method for a XenApp Services URL, you run a Windows PowerShell script.</p>
+<ol>
+<li>On the primary StoreFront server in your deployment, use an account with local administrator permissions to start Windows PowerShell.</li>
+<li>
+<p>At a command prompt, type the following command to configure the user authentication method for users accessing the store through the XenApp Services URL.</p>
+<p><code>&amp; "C:\Program Files\Citrix\Receiver StoreFront\Scripts\EnablePnaForStore.ps1" –SiteId 1 -ResourcesVirtualPath /Citrix/Store –LogonMethod sson</code></p>
+</li>
+<li>
+<p><a href="../storefront-basic-configuration/#propagate">Propagate changes.</a></p>
+</li>
+</ol>
+<h4 id="remember-my-password">Remember my password</h4>
+<p>If you leave PNAgent authentication set to Prompt, you can enable the Remember my password box by doing the following:</p>
+<ol>
+<li>Run Notepad as Administrator and edit the file <strong>C:\inetpub\wwwroot\Citrix\Store\Views\PnaConfig\Config.aspx</strong>. <img alt="" src="../../../img/828ecfe0ac2167645a2c9cd6cc252009.png" /></li>
+<li>Near line 74 is <strong>EnableSavePassword</strong>. Change it to <strong>true</strong>. <img alt="" src="../../../img/e1d7812eb26293eb34b033f62cc8183b.png" /></li>
+<li>When PNAgent connects, there should now be a <strong>Remember my password</strong> checkbox. <img alt="" src="../../../img/184dbe916eb258f9815654376cbb93f1.png" /></li>
+</ol>
+<h3 id="hide-applications">Hide Applications</h3>
+<p>Hide applications from Receiver - <a href="https://www.citrix.com/blogs/2014/03/27/hiding-applications-in-citrix-storefront/">http://blogs.citrix.com/2014/03/27/hiding-applications-in-citrix-storefront/</a>. Note: each StoreFront Store has its own filter configuration.</p>
+<p>Open PowerShell and run:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$dsInstallProp = Get-ItemProperty -Path HKLM:\SOFTWARE\Citrix\DeliveryServicesManagement -Name InstallDir
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$dsInstallDir = $dsInstallProp.InstallDir
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&amp; $dsInstallDir\..\Scripts\ImportModules.ps1
+</span></code></pre></div>
+<p>To filter by type, run:</p>
+<p><code>Set-DSResourceFilterType -SiteId 1 -VirtualPath "/Citrix/Store" ?IncludeTypes @("Applications")</code></p>
+<p>Default type filters = @(“Applications”,”Desktops”,”Documents”)</p>
+<p>To filter by keyword, run:</p>
+<p><code>Set-DSResourceFilterKeyword -SiteId 1 -VirtualPath "/Citrix/Store" -ExcludeKeywords @("Hidden")</code></p>
+<p>Once the ExcludeKeyword has been defined, add the keyword to a published application description and that application will no longer display in Receiver. This works for both Receiver for Web and Receiver Self-Service (non-browser). <img alt="" src="../../../img/932f55a66d6743226afdef8d184a8f76.png" /></p>
+<h3 id="storefront-webconfig-gui-assistant">StoreFront web.config GUI Assistant</h3>
+<p>Jake Rutski <a href="https://blogs.serioustek.net/storefront-configurator">Citrix Storefront Configurator</a> is a GUI tool to modify the web.config files in StoreFront 3.0. <img alt="" src="../../../img/SFConfiguratorV03-239x300.png" /><img alt="" src="../../../img/SFConfiguratorV04-241x300.png" /></p>
+<p>The <a href="https://support.citrix.com/article/CTX138991">tool</a> offers a GUI to ease configuration of the StoreFront 1.2/2.0/2.1/2.5 “Receiver for Web”.</p>
+<p>Run the tool, the below interface will be shown <img alt="" src="../../../img/57b687024bbe96ae46156da08f8ad515.png" /></p>
+<p>Click on <strong>Browse</strong> to open the web.config file <img alt="" src="../../../img/a71bf1e3d62268bac5ae8ac072134b8e.png" /></p>
+<p>The tool will switch to the Server Settings tab and the Save button will appear.</p>
+<p>The StoreFront version is shown in the GUI <img alt="" src="../../../img/512cc450cd9dbb0f6ecb94d299d58a24.png" /> <img alt="" src="../../../img/81ccc09d0c0bd0473d904edf51f8b9f2.png" /></p>
+<p>Change the parameters within the different tabs exposed in the GUI and click on the “Save” button to validate the changes.</p>
+<p>When clicking “Save”, a backup copy will be created (web.config.bak) at the target location. If the tool is launched from a StoreFront server, a replication process to the other StoreFront servers can be initiated.</p>
+<h3 id="desktop-autolaunch">Desktop Autolaunch</h3>
+<p>By default, if only a single desktop is published to the user, Receiver for Web will auto-launch it. You can change this behavior by editing the Receiver for Web site configuration file or by using the GUI Assistant:</p>
+<ol>
+<li>On the StoreFront server, use a text editor to open the <strong>web.</strong><strong>config</strong> file for the Receiver for Web site, which is typically located in the <strong>C:\inetpub\wwwroot\Citrix\_storename_Web</strong>\ directory, where <em>storename</em> is the name specified for the store when it was created.</li>
+<li>Search for <strong>autoLaunchDesktop</strong> near line 58. <img alt="" src="../../../img/d51c0366af774186962b4e9d15793b54.png" /></li>
+<li>Change the value of the <strong>autoLaunchDesktop</strong>attribute to <strong>false</strong> to prevent Receiver for Web from automatically starting and accessing a desktop when a user logs on to the site and only a single desktop is available for that user.</li>
+</ol>
+<p>Note: The Receiver Self-Service interface does not auto-launch desktops.</p>
+<h3 id="full-screen-desktop">Full Screen Desktop</h3>
+<p>Citrix CTX139762 <a href="https://support.citrix.com/article/CTX139762">How to Configure StoreFront to Start Published Desktops in Full Screen Mode</a>: This article describes how to configure StoreFront to start published desktops in Full Screen Mode.</p>
+<ol>
+<li>Open the file <strong>C:\inetpub\wwwroot\Citrix\Store\App_Data\default.ica</strong> on the StoreFront server(s) with notepad (as Administrator)</li>
+<li>
+<p>Add the line:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Application]
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>DesktopViewer-ForceFullScreenStartup=On
+</span></code></pre></div>
+</li>
+<li>
+<p>In older versions of StoreFront, it should be <strong>true</strong> instead of <strong>On</strong>.</p>
+</li>
+<li>Save the file</li>
+<li>Open the command prompt (cmd) and run <strong>iisreset</strong>.</li>
+</ol>
+<h3 id="store-for-anonymous">Store for Anonymous</h3>
+<p>If you intend to publish applications to anonymous users then you can create a StoreFront store that does not require authentication. Note: anonymous stores only work internally (no NetScaler Gateway).</p>
+<ol>
+<li>On the VDAs, <a href="../virtual-delivery-agent/#anon">create and configure anonymous accounts</a>.</li>
+<li>In Citrix Studio, <a href="../published-applications/#anon">configure a Delivery Group to accept unauthenticated (anonymous) users</a>.</li>
+<li>In the StoreFront Console, on the left, click <strong>Stores</strong>. On the right, <strong>click Create Store for Unauthenticated Users</strong>. <img alt="" src="../../../img/68fc1d56b3d79e61c514f55ca857cd6c.png" /></li>
+<li>In the <em>Information</em> page, click <strong>Next</strong>. <img alt="" src="../../../img/c23ae71a20efe5596fb579b1ffe48067.png" /></li>
+<li>In the <em>Store Name</em> page, enter a new store name and click <strong>Next</strong>. <img alt="" src="../../../img/80a1ba1d3d2c36cda77870d54746a905.png" /></li>
+<li>In the <em>Delivery Controllers</em> page, click <strong>Add</strong>. <img alt="" src="../../../img/e5366b95f04f27cc4296545afc568943.png" /></li>
+<li>Enter the name of your XenApp farm (e.g. CorpSite).</li>
+<li>Add all of your XenApp Controllers.</li>
+<li>Change the Transport type to <strong>HTTP</strong>. Click <strong>Add</strong>. <img alt="" src="../../../img/99da3cfba3d4a441f59194ebf7a3e7d8.png" /></li>
+<li>Click <strong>Create</strong> when you are done creating deployments.</li>
+<li>Click <strong>Finish</strong>. <img alt="" src="../../../img/b64599d97cbf41725a1de6033cf94ed8.png" /></li>
+</ol>
+<h3 id="workspace-control">Workspace Control</h3>
+<p>Workspace Control reconnects user sessions. It can be disabled. Or configure various reconnection options.</p>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/05/02/workspace-control-when-you-dont-want-to-roam/">Workspace Control: When You DON’T Want to Roam</a> details complete session reconnection configuration instructions for XenApp, Remote Desktop Services, StoreFront, and Receiver.</p>
+<h4 id="receiver-for-web"><strong>Receiver for Web</strong></h4>
+<p>To edit Workspace Control in Receiver for Web, edit the file <strong>C:\inetpub\wwwroot\Citrix\StoreWeb\web.config</strong> and edit the attributes of the following line:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;workspaceControl enabled=&quot;true&quot; autoReconnectAtLogon=&quot;true&quot; logoffAction=&quot;disconnect&quot; showReconnectButton=&quot;false&quot; showDisconnectButton=&quot;false&quot; /&gt;
+</span></code></pre></div>
+<h4 id="receiver-self-service"><strong>Receiver Self-Service</strong></h4>
+<p>Citrix Blog Post - <a href="https://www.citrix.com/blogs/2015/03/04/how-to-disable-workspace-control-reconnect/">How to Disable Workspace Control Reconnect</a>: For Receiver for Windows, workspace control can be managed on client devices by modifying the registry. Please see <a href="https://support.citrix.com/article/CTX136339">this Knowledgebase Article</a> for how to implement it. This can also be done for domain-joined client devices using Group Policy.</p>
+<p>StoreFront 2.6 introduces a configuration to disable workspace control reconnect in the Store Service for all receivers. This can be managed by using PowerShell or by editing web.config.</p>
+<p><strong>Using PowerShell</strong></p>
+<p>Make sure that you close the Admin Console. Run the following code snippet to import the StoreFront PowerShell modules:</p>
+<p><code>&amp; C:\Program Files\Citrix\Receiver StoreFront\Scripts\ImportModules.ps1</code></p>
+<p>Workspace control reconnect can then be turned on/off by the PowerShell command Set-DSAllowSessionReconnect. For example, if you would like turn off workspace control reconnect for a store in /Citrix/Store, the following command will configure the store appropriately:</p>
+<p><code>Set-DSAllowSessionReconnect -SiteId 1 -VirtualPath /Citrix/Store -IsAllowed $false</code></p>
+<p><strong>Editing web.config</strong></p>
+<p>Open <strong>C:\inetpub\wwwroot\Citrix\Store\web.config</strong> in a text editor. Locate the line that looks like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;resourcesService id=&quot;f01f7dc4-7f28-4bc1-b8fb-7c0db9570d20&quot; storeLockedDown=&quot;false&quot; anonymousStore=&quot;false&quot; allowSessionReconnect=&quot;true&quot; /&gt;
+</span></code></pre></div>
+<p>Change the value of <strong>allowSessionReconnect</strong> to <strong>false</strong> to disable workspace control reconnect or <strong>true</strong> to enable it.</p>
+<h3 id="treat-desktops-as-applications">Treat Desktops as Applications</h3>
+<p>From <em>Treating All Desktops as Applications</em> at Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/06/30/whats-new-in-storefront-3-0/">What’s New in StoreFront 3.0</a>: Desktops are treated differently from applications in StoreFront/Receivers. They are placed in a separate Desktop tab and in the case of Receiver for Web, they are not reconnected with workspace control. In some use cases, it is desirable to treat desktops as applications so that they are placed together with applications and get reconnected as part of workspace control. With StoreFront 2.x, you have to add the <strong>TreatAsApp</strong> keyword to all published desktops to achieve this effect. StoreFront 3.0 enables you to configure treating all desktops as applications at the store level without the need of adding the <strong>TreatAsApp</strong> keyword to all the published desktops. This is configurable using a PowerShell cmdlet.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&amp; &quot;C:\Program Files\Citrix\Receiver StoreFront\Scripts\ImportModules.ps1&quot;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Set-EnhancedEnumerationOptions -siteId 1 -storeVirtualPath /Citrix/Store `
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>-treatDesktopsAsApps $true
+</span></code></pre></div>
+<h3 id="special-folder-redirection">Special Folder Redirection</h3>
+<p>From <a href="https://docs.citrix.com/en-us/categories/legacy-archive/downloads/storefront-3-0.pdf">Configure special folder redirection</a> at docs.citrix.com: With Special Folder Redirection configured, users can map Windows special folders for the server to those on their local computers. Special folders refer to standard Windows folders, such as \Documents and \Desktop.</p>
+<ol>
+<li>Open PowerShell as administrator (elevated).</li>
+<li>Run <strong>&amp; "</strong><strong>C:\Program Files\Citrix\Receiver StoreFront\Management\Cmdlets\</strong><strong>AdminServiceLoader.</strong><strong>ps1"</strong> to load the modules. <img alt="" src="../../../img/9a31626c7f4fdfc60148777358790275.png" /></li>
+<li>
+<p>Run the following command:</p>
+<p><code>Set-DSClientSettings -SiteId 1 -VirtualPath /Citrix/Store -SpecialFolderRedirectionAllowed $true ![](../../../img/51c86984de3d73114a021d9582495a8e.png)</code> </p>
+</li>
+</ol>
+<h3 id="receiver-self-service-disable-remember-my-password">Receiver Self-service - Disable "Remember My Password"</h3>
+<p>By default, when Receiver Self-Service connects internally to StoreFront, the user is able to check the box next to <strong>Remember my password</strong>. Note: When connecting through NetScaler Gateway, this checkbox is never available. <img alt="" src="../../../img/7134412bd793433ff311b43b092a4d0f.png" /></p>
+<p>This can be disabled by making a change on the StoreFront server. This procedure is documented by John Ashman at <a href="https://discussions.citrix.com/topic/351727-storefront-25-cannot-remove-remember-my-password-tickbox/">Citrix Discussions</a> and <a href="https://docs.citrix.com/en-us/categories/legacy-archive/downloads/storefront-3-0.pdf">Prevent Citrix Receiver for Windows from caching passwords and usernames</a> at docs.citrix.com.</p>
+<ol>
+<li>Note that this procedure seems to prevent Receiver for iOS from adding accounts.</li>
+<li>On the StoreFront server, run a text editor elevated (as administrator). <img alt="" src="../../../img/b029f186fd404cbd88a2ab5de5d46f95.png" /></li>
+<li>Open the file <code>C:\inetpub\wwwroot\Citrix\Authentication\App_Data\Templates\UsernamePassword.tfrm. ![](../../../img/891a301dac2b32e6fa500bf39dfeba80.png)</code> </li>
+<li>Go to line 20, which should start with <code>@SaveCredential</code>.</li>
+<li>To comment out the line, wrap it in <code>@*</code> and <code>*@</code>. Save the file when done. <img alt="" src="../../../img/d0d5de5aa851f3a6a9f5a6c994998848.png" /> <img alt="" src="../../../img/e7138af020f21e978da03ad7b05569de.png" /></li>
+<li>Now the <strong>Remember My Password</strong> checkbox is gone. <img alt="" src="../../../img/09b7916a154d04d88ba019b2fead5711.png" /></li>
+</ol>
+<h3 id="activate-option-in-web-page-disable">“Activate” Option in Web Page – Disable</h3>
+<p>From <a href="https://discussions.citrix.com/topic/337877-disable-citrix-receiver-activate-option-in-citrixreceiver-web-interface/#entry1768367">Citrix Discussions</a>: to disable the "activate..."; function for Citrix receiver for windows that is visible when a user clicks their username in the upper right hand corner of Receiver for Web:</p>
+<ol>
+<li>Browse to <strong>C:\inetpub\wwwroot\Citrix\"NameoftheStoreWeb"\</strong></li>
+<li>Open <strong>config</strong></li>
+<li>
+<p>Locate the following line.</p>
+<p><code>&lt;receiverConfiguration enabled=”true” downloadURL=”ServiceRecord/GetDocument/receiverconfig.cr” /&gt;</code></p>
+</li>
+<li>
+<p>Change the <strong>true</strong> to <strong>false</strong></p>
+</li>
+</ol>
+<h3 id="html5-receiver-getting-started-tour">HTML5 Receiver Getting Started Tour</h3>
+<p>The first time a user connects to HTML5 Receiver, the user is prompted to tour the interface. <img alt="" src="../../../img/e090b0f15aa3bb75b4e477e90386ad16.png" /> <img alt="" src="../../../img/15a3a580ff31f23667730349141e2efe.png" /></p>
+<p>The Getting Started Tour can be disabled by doing the following:</p>
+<ol>
+<li>Edit the file <strong>C:\Inetpub\wwwroot\Citrix\StoreWeb\custom\script.js</strong>. <img alt="" src="../../../img/5f6d7a32e5cc02f3d297dabb393ae050.png" /></li>
+<li>
+<p>At the bottom of the file, add Feng Huang’s code from <a href="https://discussions.citrix.com/topic/372822-first-time-user-tutorial/#entry1906461">First time user tutorial</a> at discussions.citrix.com. Make sure the quotes are straight quotes and not curly quotes.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>localStorage[&quot;showFtu&quot;] = false;
+</span></code></pre></div>
+<p><img alt="" src="../../../img/d58804a9d8ec59cdca76fe4535214ead.png" /></p>
+</li>
+</ol>
+<h3 id="customize-receiver-ui-in-storefront-30">Customize Receiver UI in StoreFront 3.0</h3>
+<p>StoreFront 3.0 customizations are visible in both Receiver for Web and in Receiver Self-Service.</p>
+<p>If you are load balancing StoreFront and want to put the server name on the webpage, see Nicolas Ignoto <a href="http://www.citrixguru.com/2016/02/27/display-server-name-with-citrix-storefront-3/">Display server name with Citrix StoreFront 3</a>. <img alt="Server name is displayed " src="../../../img/CitrixGuru_Lab_Capture_458_1456622917-1024x673.png" /></p>
+<p>Nicolas Ignoto <a href="http://www.citrixguru.com/2016/03/08/lab-ultimate-storefront-customization-guide/">Lab: Part 22 – Ultimate StoreFront 3 customization guide</a> contains many StoreFront customizations including:</p>
+<ul>
+<li>Add disclaimer</li>
+<li>Change logo/background</li>
+<li>Add header</li>
+<li>Add text</li>
+<li>Change colors</li>
+<li>Etc.</li>
+</ul>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/08/25/citrix-customization-cookbook/">Citrix Customization Cookbook</a> contains a collection of customizations including:</p>
+<ul>
+<li>Add Static or dynamic (read from file) text to the header and/or footer of the login page.</li>
+<li>Click-through disclaimer before or after login page</li>
+<li>Footer for every page</li>
+<li>Default to Folder view when visiting the Apps tab</li>
+<li>Change default text</li>
+<li>Change background images for featured categories</li>
+<li>Background image</li>
+</ul>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/09/04/storefront-3-web-customization-branding-your-deployment/">Storefront 3 Web Customization: Branding Your Deployment</a> describes the following how to modify CSS to customize the appearance of StoreFront 3.0:</p>
+<ul>
+<li>Background images</li>
+<li>Logon button</li>
+<li>Colors for page and text</li>
+<li>How to view the mobile version of the page</li>
+<li>CSS for mobile pages</li>
+</ul>
+<p>Jason Samuel <a href="https://www.jasonsamuel.com/2015/07/06/upgrading-citrix-storefront-2-6-to-storefront-3-0-things-to-know/">Upgrading Citrix StoreFront 2.6 to StoreFront 3.0 – Things to Know</a> details how to change the <strong>StoreFront</strong> logo to a <strong>Receiver</strong> logo.</p>
+<p><img alt="" src="../../../img/85dfc9b22c0c5488a17eeeb5b2837e92.png" /></p>
+<p><img alt="" src="../../../img/fcaf751d42d9bf00c95135c167c46ae0.png" /></p>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/07/15/storefront-3-0-message-customization/">StoreFront 3.0: Message Customization</a> describes how to add a scrolling message to the top of the screen. This is displayed in both Browsers and Receivers.</p>
+<p><img alt="" src="../../../img/d3eb6c07a73d335354ce1a26e42f7485.png" /><img alt="" src="../../../img/C:\Users\CarlS\AppData\Local\Temp\msohtmlclip1\01\clip_image002.gif" /></p>
+<p><a href="https://docs.citrix.com/en-us/categories/legacy-archive/downloads/storefront-3-0.pdf">Migrate Web Interface features to StoreFront</a> at Docs.citrix.com details how to configure Web Interface features in StoreFront. This includes:</p>
+<ul>
+<li>Enable return to last folder</li>
+<li>Header logo</li>
+<li>Pre-logon welcome message</li>
+<li>Logon screen customization</li>
+<li>Footer text</li>
+</ul>
+<p>StoreFront 3.0 <a href="https://www.citrix.com/community/citrix-developer/storefront-receiver/receiver-customization-api.html">Receiver Customization APIs</a> are detailed at Citrix Developer. Use the Receiver Customization API to brand or customize your end users’ app and desktop selection experience beyond capabilities provided in the StoreFront admin console. Customizations apply to latest Web, Chrome, Windows, Mac and Linux clients, and will be extended to mobile devices in future releases.</p>
+<p>An example use case for the StoreFront 3.0 APIs is <a href="https://www.citrix.com/blogs/2015/08/17/citrix-recipe-box-storefront-approvals/">Citrix Blog Post Citrix Recipe Box: StoreFront Approvals</a>. This is code for StoreFront that requires workflow approval when a user subscribes to an app.</p>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/03/19/receiver-x1-apis/">Receiver X1 APIs</a> describes the following:</p>
+<ul>
+<li>Overview of the CSS classes that can be customized.</li>
+<li>Override Citrix’s JavaScript functions to modify behavior – exclude or restyle apps, change a sort order, add a warning message etc.</li>
+<li>How to force X1 UI to display in either phone or larger mode.</li>
+</ul>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/03/12/x1-customization-going-deeper-with-css/">X1 Customization: Going deeper with CSS</a> describes the following:</p>
+<ul>
+<li>Use CSS <strong>(/custom/style.css</strong>) to style the three custom regions (#customTop, #customBottom, #customScrollTop). Shown below in red, blue, and pink. <img alt="" src="../../../img/381f8ac309e4b35ad29afcdc8aca4462.png" /></li>
+<li>Marker classes for showing/hiding or highlighting parts of the UI: large display, small display, high DPI, Favorites view, Desktops view, Apps view, appinfo view.</li>
+</ul>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/03/17/scripting-x1/">Scripting X1</a> describes the following:</p>
+<ul>
+<li>JavaScript code to display an Acceptance dialog box before users can login. <img alt="" src="../../../img/05be9d8e2878762203d137224227ecf1.png" /></li>
+<li>Use JQuery to add HTML code to custom regions (e.g. #customScrollTop) including using CSS to hide the HTML code unless a specific tab is selected by the user.</li>
+</ul>
+<p>Citrix Blog Post - <a href="https://www.citrix.com/blogs/2015/07/01/rewriting-the-session-clientname-from-storefront/">Rewriting the Session ClientName from StoreFront</a>: I would like to offer the following customisation DLL which can apply client name rewrites based on a template. The customisation template can be any string, but where that string contains a particular token, the token will be replaced by some information from the User Context. If the intent was just to replace the ClientName with the user name, the template is then just “$U”. More details and the .dll file are in the blog post.</p>
+<p><a href="https://www.citrix.com/community/citrix-developer/storefront-receiver/store-customization-api.html">StoreFront Store Customization SDK</a> at Citrix Developer: The Store Customization SDK allows you to apply custom logic to the process of displaying resources to users and to adjust launch parameters. For example, you can use the SDK to control which apps and desktops are displayed to users, to change ICA virtual channel parameters, or to modify access conditions through XenApp and XenDesktop policy selection. Key Customization Points:</p>
+<ul>
+<li>Post-Enumeration</li>
+<li>Post-Launch ICA File</li>
+<li>Post-Session Enumeration</li>
+<li>Access Conditions (pre-launch and pre-enumeration)</li>
+<li>Provider List</li>
+<li>Device information</li>
+</ul>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/09/25/adding-a-language-to-storefront-3-0/">Adding a Language to StoreFront 3.0</a>: A new language pack is comprised of a culture definition file, a string bundle file and a custom string bundle file. See the Blog Post for more details.</p>
+<p>To change the StoreFront page title, see Sam Jacobs <a href="https://www.mycugc.org/browse/blogs/blogviewer?BlogKey=b049c40d-efb4-4d2e-942d-8e7da44f61ac">How to Change the Page Title in Citrix Receiver 3.x</a> at mycugc.org. <img alt="" src="../../../img/35d3a7a1ada33e09d77ac0fece4bd7fe.png" /> <img alt="" src="../../../img/7f199329fc073c3b5f1f74a6d878a715.png" /></p>
+<h3 id="customize-receiver-for-web-in-storefront-26">Customize Receiver for Web in StoreFront 2.6</h3>
+<p>These customizations apply to Receiver for Web only. They do not apply to Receiver Self-Service or NetScaler Gateway.</p>
+<p>Citrix Blog post <a href="https://www.citrix.com/blogs/2014/11/14/receiver-for-web-ui-themes/">Receiver for Web UI Themes</a>: White Theme and Dark Theme.</p>
+<p>The Citrix blog post <a href="https://www.citrix.com/blogs/2014/04/04/customizing-receiver-for-web-2-5/">Customizing Receiver for Web 2.5</a> applies to StoreFront 2.6 except for the changes detailed in the blog post <a href="https://www.citrix.com/blogs/2014/10/14/customizing-receiver-for-web-2-6/">Customizing Receiver for Web 2.6</a>. Here are some customizations detailed in these blog posts:</p>
+<ul>
+<li>Hyperlink in the Footer Area – for example, contact the help desk</li>
+<li>Pre-login (Disclaimer) and Post-login (Announcement) Messages</li>
+<li>Display Client IP Address</li>
+<li>Display StoreFront server name</li>
+</ul>
+<p>Citrix blog post – <a href="https://www.citrix.com/blogs/2014/12/01/how-to-add-a-custom-banner-to-the-logon-page-of-storefront-2-x-director-7-x-or-citrix-license-server-11-x/">How to Add a Custom Banner to the Logon Page of StoreFront 2.x, Director 7.x, or Citrix License Server 11.x</a>: Some customers require that all levels of authentication (all logon pages) display security banners which outline the rights to privacy (or lack thereof) when accessing their sites.  In this case, a simple change to the web page code results in the addition of text – a security banner – near the authentication fields which is visible each time a user logs onto the site. This article contains information about the customization of the logon page of StoreFront, Director, and Citrix License Server web pages.</p>
+<p>From <a href="https://discussions.citrix.com/topic/329265-customize-the-timeout-message/http:/forums.citrix.com/thread.jspa?threadID=329265">Citrix Discussions</a>: Just realized that you probably should not modify the original files. All StoreFront modifications are done by adding CSS/Javascript into the /contrib directory, which overrides the default values. You would simply create a file called *custom.wrstrings.en.js* (for English) in that directory, replacing just the values that you wish to override.</p>
+<p>More customizations are detailed Citrix Knowledgebase article <a href="https://support.citrix.com/article/CTX134791">Customizing the Receiver for Web User Interface</a> including:</p>
+<ul>
+<li>Language strings and Language Pack</li>
+<li>CSS Customization</li>
+<li>Javascript Customization</li>
+</ul>
+<p>From Daniel Ruiz – <a href="https://danielruiz.net/2014/10/10/customizing-citrix-storefront-2-6-including-pre-login-message-page/">Customizing Citrix StoreFront 2.6 including Pre-Login message page</a>: The following customizations include the following:</p>
+<ul>
+<li>Pre-Login message page</li>
+<li>Front Page with custom logo and title header</li>
+<li>App/Desktop page with custom logo, user client IP</li>
+<li>Apps/Desktop Tab on top with Disable user multiclick</li>
+<li>Page footer</li>
+</ul>
+<p>From Czerno blog - <a href="https://www.czerno.com/Blog/post/2014/10/03/redirect-citrix-storefront-to-a-different-page-at-log-off">Redirect Citrix Storefront to a different page at log off</a>: To make Storefront redirect to a different page rather than just sit at the "You have logged off successfully" page, edit the "custom.wrstrings.en.js" file in the contrib folder of the Web Store. By default this will be located at "C:\inetpub\wwwroot\Citrix\<StoreName>Web\contrib". If you have not created any customizations, select everything in the file and replace with the following:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>(function ($) {
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$.localization.customStringBundle(&#39;en&#39;, {
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>YouAreLoggedOff: &#39;You have logged off successfully. &lt;br&gt;&#39;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>+&#39;You are being redirected to &lt;Enter your web page here or delete this line&gt;&#39;
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>+&#39;&lt;script type=&quot;text/javascript&quot;&gt;&#39;
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>+&#39;window.location.replace(&quot;http://www.czerno.com&quot;);&#39;
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>+&#39;&lt;/script&gt;&#39;
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>});
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>})(jQuery);
+</span></code></pre></div>
+<h3 id="storefront-sdk">StoreFront SDK</h3>
+<p>Use the Store Customization SDK to apply custom logic to the process of displaying resources to users and to adjust launch parameters.  For example, you can use the SDK to control which apps and desktops are displayed to users, to change ICA virtual channel parameters, or to modify access conditions through XenApp and XenDesktop policy selection.</p>
+<p>Requires Visual Studio to create .dll files that replace the ones bundled with StoreFront.</p>
+<p><a href="https://www.citrix.com/community/citrix-developer/storefront-receiver/store-customization-api.html">https://www.citrix.com/downloads/storefront-web-interface/sdks/storefront-customization-software-development-kit</a></p>
+<h3 id="storefront-30-theme-for-netscaler-105">StoreFront 3.0 Theme for NetScaler 10.5</h3>
+<p>You can make the NetScaler Gateway 10.5 logon page look like the Receiver for Web in StoreFront 3.0. Daniel Ruiz <a href="https://danielruiz.net/2015/08/18/netscaler-gateway-front-page-a-la-storefront-3-0/">NetScaler Gateway front page à la StoreFront 3.0</a> has instructions for manually editing the NetScaler Gateway theme to match StoreFront 3.0. Or visit Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/03/24/x1-skin-for-netscaler-gateaway/">X1 Skin for NetScaler Gateway</a> for an already developed theme package.</p>
+<ol>
+<li>Download the theme from the Citrix Blog post.</li>
+<li>WinSCP to the NetScaler and switch to <strong>/var/netscaler/gui/themes</strong>.<ol>
+<li>On the right, rename the existing <strong>receivertheme.</strong><strong>tar.gz</strong> file. <img alt="" src="../../../img/9f4520e83febcdb0a5bcd7a3dce1d208.png" /> <img alt="" src="../../../img/7393f870a0808d3a637f5df193f0968c.png" /></li>
+</ol>
+</li>
+<li>Upload the theme that was downloaded from the Citrix Blog post. <img alt="" src="../../../img/e324a1e61a7e4cdc6f1ea49f42a69e75.png" /></li>
+<li>In NetScaler GUI, go to <strong>NetScaler Gateway &gt; Global Settings &gt; Change Global Settings</strong>. <img alt="" src="../../../img/fdbcbcb7b7c98f4580959e660c62638f.png" /></li>
+<li>Switch to the <strong>Client Experience</strong> tab. <img alt="" src="../../../img/3a5cb00a20e809bae2e61a8dc3ced04e.png" /></li>
+<li>At the bottom, if the current <strong>UI Theme</strong> is <strong>Green Bubble</strong>, change it to <strong>Default</strong>. Then go back into the screen and change it back to <strong>Green Bubble</strong>. This causes the theme to reload. Click <strong>OK</strong>. <img alt="" src="../../../img/e023d62ee0e2682175b318f9a8b9d524.png" /></li>
+<li>The logon page should now look more like Receiver for Web in StoreFront 3.0. <img alt="" src="../../../img/411eac9319d6eb7244f20be67bca6b86.png" /></li>
+</ol>
+<h3 id="storefront-30-portal-theme-for-netscaler-11">StoreFront 3.0 Portal Theme for NetScaler 11</h3>
+<p>See <a href="../netscaler-gateway-11-virtual-server/#theme">NetScaler Gateway 11 &gt; Portal Themes</a>. Build 62 and newer have a built-in X1 theme.</p>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li><a href="../storefront-basic-configuration/" title="StoreFront Basic Configuration">StoreFront Basic Configuration</a></li>
+<li><a href="../storefront-subscriptions/" title="StoreFront Subscriptions">StoreFront Favorites / Subscriptions</a> - disable, replicate, control, etc.</li>
+<li><a href="../netscaler-gateway-session-policies-storefront/">NetScaler Gateway 10.5</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

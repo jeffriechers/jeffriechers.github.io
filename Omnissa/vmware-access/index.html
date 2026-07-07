@@ -1,0 +1,6713 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../about/">
+      
+      
+        <link rel="next" href="../vmware-access-load-balancing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>VMware Workspace ONE Access 23.09 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../custom.css">
+    
+      <link rel="stylesheet" href="../../base.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VMware Workspace ONE Access 23.09
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Appliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-deployment-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Deployment Preparation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Deployment Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldap-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LDAP Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ovf-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OVF Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Wizard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-enable-root-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH – Enable Root Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vmware-access-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMware Access Certificate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Balancing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Connector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-connector-redundancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Connector Redundancy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-group-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Group Membership
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logon-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Experience
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kerberos Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kerberos Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connector-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connector Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-443-inbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP 443 Inbound
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-kerberos-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Kerberos authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-policy-to-use-kerberos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Policy to use Kerberos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Appearance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizon-console-enable-saml-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Console – Enable SAML Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmware-access-virtual-apps-collection-for-horizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMware Access – Virtual Apps Collection for Horizon
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VMware Access – Virtual Apps Collection for Horizon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizon-pools-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Pools Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Appliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-deployment-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Deployment Preparation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Deployment Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldap-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LDAP Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ovf-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OVF Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Wizard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-enable-root-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH – Enable Root Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vmware-access-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMware Access Certificate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Balancing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Connector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-connector-redundancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Connector Redundancy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-group-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Group Membership
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logon-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Experience
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kerberos Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kerberos Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connector-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connector Certificate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-443-inbound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP 443 Inbound
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-kerberos-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Kerberos authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-policy-to-use-kerberos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Policy to use Kerberos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Appearance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizon-console-enable-saml-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Console – Enable SAML Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmware-access-virtual-apps-collection-for-horizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMware Access – Virtual Apps Collection for Horizon
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VMware Access – Virtual Apps Collection for Horizon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizon-pools-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizon Pools Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>VMware Workspace ONE Access 23.09</h1>
+
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#planning">Planning</a></li>
+<li><a href="#upgrade">Upgrade</a></li>
+<li>
+<p>Prep:</p>
+<ul>
+<li><a href="#dns">DNS Configuration</a></li>
+<li><a href="#ldapaccounts">LDAP Accounts</a></li>
+<li><a href="#sqldb">SQL Database</a></li>
+<li><a href="#ovfdeploy">OVF Deployment</a></li>
+<li><a href="#setupwizard">Setup Wizard</a></li>
+<li><a href="#ssh">SSH – Enable Root Access</a></li>
+<li><a href="#identitymanagercertificate">Identity Manager Certificate</a></li>
+<li><a href="#lb">Load Balancing</a></li>
+<li><a href="#windowsconnector">Windows Connector</a></li>
+<li>
+<p>Configure:</p>
+</li>
+<li>
+<p><a href="#ad">Active Directory</a></p>
+</li>
+<li><a href="#syncconnectorredundancy">Sync Connector Redundancy</a></li>
+<li><a href="#syncgroupmembership">Sync Group Membership</a></li>
+<li><a href="#logonexperience">Logon Experience</a></li>
+<li><a href="#admins">Administrators</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#smtp">SMTP</a></li>
+<li><a href="#kerb">Kerberos Authentication</a></li>
+<li><a href="#customize">Customize Appearance</a></li>
+<li>
+<p>Resources:</p>
+</li>
+<li>
+<p><a href="#enablesaml">Horizon Console – Enable SAML Authentication</a></p>
+</li>
+<li><a href="#enableview">VMware Access – Connect to Horizon</a></li>
+<li><a href="#horizonpoolscatalog">Horizon Pools Catalog</a></li>
+<li><a href="#userportal">VMware Access User Portal</a></li>
+</ul>
+</li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2022 Dec 14 - updated article for <a href="https://customerconnect.vmware.com/downloads/details?downloadGroup=WS1A_ONPREM_230900&amp;productId=1412&amp;rPId=111557">VMware Workspace ONE Access 23.09</a></li>
+<li>2022 Dec 14 - updated article for <a href="https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WS1A_ONPREM_220910&amp;productId=1361">VMware Workspace ONE Access 22.09.1</a></li>
+<li>2022 Oct 13 - updated entire article for <a href="https://customerconnect.vmware.com/downloads/details?downloadGroup=WS1A_ONPREM_220900&amp;productId=1340&amp;rPId=94109">VMware Workspace ONE Access 22.09</a></li>
+<li>2021 Sep 8 - updated entire article for <a href="https://customerconnect.vmware.com/downloads/details?downloadGroup=WS1A_ONPREM_210800&amp;productId=1166&amp;rPId=72076&amp;download=true&amp;fileId=9105132915e73dc7c0019f80b266d79d&amp;uuId=d74aa804-dea0-43aa-ae53-9a64c5454288">VMware Workspace ONE Access 21.08</a></li>
+</ul>
+<h2 id="planning">Planning</h2>
+<p>VMware Workspace ONE Access (formerly known as Identity Manager) is a component of <a href="https://techzone.vmware.com/resource/vmware-workspace-one-frequently-asked-questions-faqs">VMware Workspace ONE</a>.</p>
+<ul>
+<li>For Horizon, VMware Workspace ONE Access enables integration of additional apps from Citrix and the web (e.g., SaaS).</li>
+<li>For full functionality, VMware Workspace ONE Access should be paired with VMware Workspace ONE UEM (aka AirWatch; not detailed in this article).</li>
+</ul>
+<p><a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-E81B6B1B-A3D1-40D0-806A-3D31502C53A5.html">Workspace ONE Access System and Network Configuration Requirements</a> at VMware Docs.<br />
+<img alt="" src="../../img/img_6138b43a828cd.png" /></p>
+<p>From <a href="https://techzone.vmware.com/resource/workspace-one-access-architecture">Workspace ONE Access Architecture</a> in the <strong>VMware Workspace ONE and VMware Horizon Reference Architecture</strong>:</p>
+<p>Single data center:<br />
+<img alt="" src="../../img/img_6138b4ae2831c.png" /></p>
+<p>Multiple data centers:<br />
+<img alt="" src="../../img/img_6138b4d49be37.png" /></p>
+<p>Outbound firewall requirements are detailed at <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-073BBC3D-4E47-43CC-9822-1FF049ADC768.html">VMware Docs</a>.</p>
+<h2 id="upgrade-appliance">Upgrade Appliance</h2>
+<p>Version 19.03 and newer no longer include the embedded Connector so you must deploy one or two Windows machines to run the external connector. The embedded Connector version 19.03 can be <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspaceoneaccess_connector_migration/GUID-C6027093-7C67-4AB2-8082-CD42C2CC17B7.html">migrated</a> to the external Windows Connector 23.09.</p>
+<p>See Supported Upgrade Paths at <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_upgade.doc/GUID-9D3BCE4A-6711-4CCD-AF7E-7EA23DB66697.html">VMware Docs</a>:<br />
+<img alt="" src="../../img/img_634ecd1b7e5d2.png" /></p>
+<p><img alt="" src="../../img/img_5ba67838347bb.png" /></p>
+<p>For <strong>clusters</strong>, remove all nodes except one from the load balancer and upgrade the node that is still connected to the load balancer. Then upgrade the remaining nodes.</p>
+<p>If you have the older 19.03 Identity Manager Connectors, then see <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspaceoneaccess_connector_migration/GUID-4144EAF6-A7AE-4CCB-82E0-1A11D723E898.html">Migrating to VMware Workspace ONE Access Connector 22.09</a> at VMware Docs.</p>
+<p>To upgrade an appliance:</p>
+<ol>
+<li>Ensure SQL is version 2014 or newer.</li>
+<li>Backup the database.</li>
+<li>Make sure the VMware Access SQL Service Account is a <strong>db_owner</strong> on the VMware Access database.<br />
+<img alt="" src="../../img/img_5ba677c9a3f64.png" /></li>
+<li>In the Access admin console, go to <strong>Dashboard</strong> &gt; <strong>System Diagnostics Dashboard</strong> to verify no issues with the appliance.<br />
+<img alt="" src="../../img/img_6355166a79ed5.png" /></li>
+<li>SSH (e.g., Putty) to the appliance as <strong>sshuser</strong> and then run <strong>su</strong> to elevate to root user.</li>
+<li>Run <strong>df -h</strong> to verify at least 4 GB of free space on the <strong>/</strong> partition.<br />
+<img alt="" src="../../img/img_63551610a70ea.png" /></li>
+<li>For online updates, verify that the virtual appliance can resolve and reach <strong>vapp-updates.vmware.com</strong> on ports 80 and 443.</li>
+<li>If your appliance is version 21.08.0.1 (not 21.08.0.0), then download <a href="https://customerconnect.vmware.com/downloads/details?downloadGroup=WS1A_ONPREM_220900&amp;productId=1361&amp;rPId=95380">update-fix.tgz</a> and install it as detailed at <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_upgade.doc/GUID-084552E0-2FDF-4366-836B-943CAAA44B51.html">VMware Docs</a>.<br />
+<img alt="" src="../../img/img_635517f64b9ad.png" /><br />
+<img alt="" src="../../img/img_635519634222f.png" /></li>
+<li>Run <strong>/usr/local/horizon/update/updatemgr.hzn check</strong> to verify that an update is available.<br />
+<img alt="" src="../../img/image-40.png" /></li>
+<li>Snapshot the appliance.<br />
+<img alt="" src="../../img/img_635516cc0a69d.png" /></li>
+<li>Run <strong>/usr/local/horizon/update/updatemgr.hzn updateinstaller</strong><br />
+<img alt="" src="../../img/image-41.png" /></li>
+<li>Run <strong>/usr/local/horizon/update/updatemgr.hzn update</strong>. Updating will take several minutes.<br />
+<img alt="" src="../../img/image-42.png" /></li>
+<li>On the first node, enter <strong>y</strong> to perform a reindex. Enter <strong>n</strong> on other nodes.<br />
+<img alt="" src="../../img/image-43.png" /></li>
+<li>Reboot the VM when done.<br />
+<img alt="" src="../../img/image-44.png" /></li>
+<li>Upgrade log files are in the <strong>/opt/vmware/var/log</strong> directory, or <strong>https://WS1AccessHostnameFQDN:8443/cfg/logs</strong></li>
+<li>Run the <strong>check</strong> command again to see if there are any other updates available.<br />
+<img alt="" src="../../img/img_63551e9cd60bc.png" /></li>
+<li>Repeat the upgrade on the remaining nodes.</li>
+<li>See <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_upgade.doc/GUID-BA7A1C10-35AC-41E1-B942-6D8CDD0866D9.html">Post-upgrade Configuration of Workspace ONE Access</a> at VMware Docs to reinstall the provisioning adapters, refresh People Search Configuration, update Log4j Configuration Files, and fix Cluster ID in second data center</li>
+<li>
+<p>Upgrade your Connectors to a version that is the same or older than the appliance. You might need a new <strong>es-config.json</strong> file to add support for Virtual Apps Collections.</p>
+<ol>
+<li>Before upgrading, suspend all the connector services at <strong>Integrations</strong> &gt; <strong>Connectors</strong> &gt; <strong>Manage</strong></li>
+<li><a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspaceoneaccess_connector_upgrade/GUID-E9305362-6EBE-47B7-8374-9768856D055C.html#prerequisites-1">RSA</a> needs changes if upgrading from Connector 20.10 and older</li>
+</ol>
+</li>
+</ol>
+<h2 id="new-deployment-preparation">New Deployment Preparation</h2>
+<h3 id="dns-configuration">DNS Configuration</h3>
+<p>If you intend to build multiple appliances (3 or more) and load balance them, specify a unique DNS name for each appliance. The Load Balancing DNS name is different from the appliance DNS names. For example:</p>
+<ul>
+<li>Appliance 1 = <strong>access01.corp.local</strong></li>
+<li>Appliance 2 = <strong>access02.corp.local</strong></li>
+<li>Appliance 3 = <strong>access03.corp.local</strong></li>
+<li>Load Balancing Name = <strong>access.corp.com</strong>. This name is used both internally and externally.</li>
+</ul>
+<p>VMware Workspace ONE Access DNS names are separate from Horizon DNS names.</p>
+<p>You’ll need SSL certificates that match these names.</p>
+<p>Each of these DNS names must have a corresponding reverse DNS pointer record.</p>
+<ol>
+<li>Create DNS records for the virtual appliances.<br />
+<img alt="" src="../../img/img_594ff775c2224.png" /></li>
+<li>Create reverse pointer records too. Reverse pointer records are required.<br />
+<img alt="" src="../../img/img_6138b5c2833c8.png" /></li>
+</ol>
+<h3 id="ldap-accounts">LDAP Accounts</h3>
+<ol>
+<li>All accounts synced with VMware Workspace ONE Access must have First Name, Last Name, and E-mail Address configured, including the Bind account.<br />
+<img alt="" src="../../img/img_594ff7e523d73.png" /></li>
+<li>Create a new Active Directory group for your VMware Workspace ONE Access users. Assign this group to your pools instead of assigning Domain Users.<br />
+<img alt="" src="../../img/img_6138b606d0db5.png" /></li>
+</ol>
+<h3 id="sql-database">SQL Database</h3>
+<p>If you want to build multiple Identity Manager appliances and load balance them, configure them with an external database (e.g. Microsoft SQL).</p>
+<p>For a script that performs all required SQL configuration, see <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-8184612F-1C2D-4945-97DD-46CB963FC7B3.html">Configure a Microsoft SQL Database</a> at VMware Docs.</p>
+<ol>
+<li>In SQL Management Studio, create a <strong>New Query</strong>.<br />
+<img alt="" src="../../img/img_595009b8788d0.png" /></li>
+<li>
+<p>Copy the SQL commands from VMware Docs and paste them into the New Query window.</p>
+<ol>
+<li>For Windows Authentication, copy the commands from <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-8184612F-1C2D-4945-97DD-46CB963FC7B3.html">Configure the Microsoft SQL Database with Windows Authentication Mode</a>.</li>
+<li>For SQL Authentication, copy the commands from <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-FCDC0FBF-5BD5-442E-B6C1-92540389C106.html">Configure Microsoft SQL Database Using Local SQL Server Authentication Mode</a>.</li>
+<li>Change the values in the brackets and remove the brackets. Don't forget the collation at the top of the script.</li>
+<li>Then click <strong>Execute</strong>.<br />
+<img alt="" src="../../img/img_6138b7d03d6df.png" /></li>
+<li>Configure SQL Autogrowth to 128 MB as detailed at <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-F6D62FB4-1E7D-4147-A3A4-FDF1BB137CA6.html">VMware Docs</a>.<br />
+<img alt="" src="../../img/img_635521b8202b6.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="ovf-deployment">OVF Deployment</h3>
+<ol>
+<li>Download the <a href="https://customerconnect.vmware.com/downloads/details?downloadGroup=WS1A_ONPREM_230900&amp;productId=1412&amp;rPId=111557">VMware Workspace ONE Access 23.09</a> Virtual Appliance OVA file.<br />
+<img alt="" src="../../img/image-37.png" /></li>
+<li>In the vSphere Web Client, right-click a cluster and click <strong>Deploy OVF Template</strong>.<br />
+<img alt="" src="../../img/img_634ed036c5ae4.png" /></li>
+<li>In the <em>Select source</em> page, browse to the <strong>identity-manager-23.09.0.0_OVF10.ova</strong> file, and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/image-38.png" /></li>
+<li>In the <em>Select name and location</em> page, enter a name for the VM, and click <strong>Next</strong>.</li>
+<li>In the <em>Select a resource</em> page, select a cluster, and click <strong>Next</strong>.</li>
+<li>In the <em>Review details</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/image-39.png" /></li>
+<li>In the <em>Accept License Agreements</em> page, click <strong>Accept</strong>, and then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_634ed0db6b812.png" /></li>
+<li>In the <strong>Configuration</strong> page, select a size and click <strong>Next</strong>. 4 vCPU and 8 GB of RAM are sufficient for 25,000 users.<br />
+<img alt="" src="../../img/img_634ed0eb7bf07.png" /></li>
+<li>In the <em>Select storage</em> page, select <strong>Thin Provision</strong>, select a datastore, and click <strong>Next</strong>.</li>
+<li>In the <em>Select networks</em> page, select the network for the appliance. You can deploy it either internally, or in the DMZ. If in the DMZ, you can later install Workspace ONE Access Connectors in the internal network in outbound only mode. Click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_5ba679da5b5a8.png" /></li>
+<li>
+<p>In the <em>Customize template</em> page:</p>
+<ol>
+<li>Select a time zone.<br />
+<img alt="" src="../../img/img_634ed1a9a07cc.png" /></li>
+<li>Expand <strong>Networking Properties</strong> if it's not already expanded.</li>
+<li>
+<p><strong>Host Name</strong> - Enter a hostname for the first appliance.</p>
+<ul>
+<li>If you intend to build multiple appliances and load balance them, then each appliance needs a unique name that does not match the load balanced name. If you only want to build one appliance, then the appliance Host Name should match whatever users will use to access Identity Manager.<ol>
+<li><strong>DNS and Gateway</strong> - In the <strong>Networking Properties</strong> section, enter the standard DNS and Gateway information.<br />
+<img alt="" src="../../img/img_634ed1ea54820.png" /></li>
+<li>According to <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-47DCE6F4-4620-4D0E-A153-186A3A157F47.html">Install the Workspace ONE Access OVA File</a> at VMware Docs, the <strong>Domain Name</strong> and <strong>Domain Search Path</strong> fields are not used.<br />
+<img alt="" src="../../img/img_6138bbc6142b9.png" /></li>
+<li><strong>IP Address</strong> - Enter the IP address that is configured in DNS for the host name. DNS reverse lookup for this IP address must resolve to the appliance Host Name.<br />
+<img alt="" src="../../img/img_6138bbf041da3.png" /></li>
+</ol>
+</li>
+<li>Click <strong>Next</strong>.</li>
+<li>In the <em>Ready to complete</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../img/img_634ed22ac1c4e.png" /></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="setup-wizard">Setup Wizard</h3>
+<ol>
+<li>Power on the appliance.<br />
+<img alt="" src="../../img/img_6138c0fa3af80.png" /></li>
+<li>Wait for the appliance to power on and fully boot.<br />
+<img alt="" src="../../img/img_634ed90f48d29.png" /></li>
+<li>
+<p>Go to <strong>https://myAccessFQDN</strong> to access the Access Setup Wizard.  </p>
+<p>You must connect to the DNS name. Connecting to the IP address will cause problems during the database setup process.</p>
+</li>
+<li>
+<p>In the <em>Set Passwords</em> page, enter passwords for the three accounts and click <strong>Continue</strong>. Notice that two of the passwords must be 14 characters or longer.<br />
+<img alt="" src="../../img/img_634ed99cb7dfd.png" /></p>
+</li>
+<li>
+<p>In the <em>Select Database</em> page, change it to <strong>External Database</strong>.<br />
+<img alt="" src="../../img/img_634ed9bfef3fe.png" /></p>
+<p>Note: this page will only function properly if your address bar has a DNS name instead of an IP address.</p>
+</li>
+<li>
+<p>For <strong>Windows authentication</strong>, enter a JDBC URL similar to the following (<a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-6EF14E22-3B13-4163-9B3E-25E19A2E192B.html#procedure-2">VMware Docs</a>), enter credentials for the Horizon Windows service account, and then click <strong>Continue</strong>. The connection string changed in version 22.09.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>jdbc:sqlserver://sql03.corp.local:1533;DatabaseName=VMwareAccess;integratedSecurity=true;authenticationScheme=NTLM;domain=corp
+</span></code></pre></div>
+</li>
+<li>
+<p>For <strong>SQL authentication</strong>, enter a JDBC URL similar to the following, enter the credentials for the Horizon SQL account, and then click <strong>Continue</strong>. Access 21.08 and newer has an option to encrypt the database connection.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>jdbc:sqlserver://mysqlserver.corp.local;DatabaseName=saas;multiSubnetFailover=true
+</span></code></pre></div>
+<p><img alt="" src="../../img/img_6138c4b1d99dc.png" /></p>
+</li>
+<li>
+<p>The database will be configured.<br />
+<img alt="" src="../../img/img_59500ec20428b.png" /></p>
+</li>
+<li>In the <em>Setup Review</em> page, click the link to log in to the Admin Console.<br />
+<img alt="" src="../../img/img_6138c80741a17.png" /></li>
+</ol>
+<h2 id="ssh-enable-root-access">SSH – Enable Root Access</h2>
+<p>This is optional. Enabling root access lets you use root credentials when using WinSCP to connect to the appliance.</p>
+<ol>
+<li>Putty to the VMware Workspace ONE Access appliance.</li>
+<li>Login as <strong>sshuser</strong>.<br />
+<img alt="" src="../../img/img_6138c86392964.png" /></li>
+<li>Run <strong>su -</strong> and enter the <strong>root</strong> password.<br />
+<img alt="" src="../../img/img_6138c87d0d711.png" /></li>
+<li>Run <strong><code>vi /etc/ssh/sshd_config</code></strong>.<br />
+<img alt="" src="../../img/img_6138c89146ef4.png" /></li>
+<li>Scroll down to line containing <strong>PermitRootLogin</strong>.</li>
+<li>Press &lt;<strong>i</strong>&gt; on the keyboard to change to insert mode.</li>
+<li>Go to the end of the line and change <strong>no</strong> to <strong>yes</strong>.<br />
+<img alt="" src="../../img/img_6138c8d7ee144.png" /></li>
+<li>Press &lt;<strong>ESC</strong>&gt; to exit insert mode.</li>
+<li>Type <strong><code>:x</code></strong> to save the file and exit.<br />
+<img alt="" src="../../img/9f0b952416aaa0a00d513502f22915ef.png" /></li>
+<li>Run <code>systemctl restart sshd</code>.<br />
+<img alt="" src="../../img/img_6138c981ad23b.png" /></li>
+</ol>
+<h2 id="vmware-access-certificate">VMware Access Certificate</h2>
+<p>The Windows Connectors require the VMware Access certificate to be trusted. Generate a new appliance certificate using a trusted Certificate Authority and install the certificate on the appliance.</p>
+<ol>
+<li>Login to the Identity Manager web page as the <strong>admin</strong> user in the System Domain.<br />
+<img alt="" src="../../img/img_5cbb36aa9e781.png" /></li>
+<li>Click <strong>Monitor</strong> and then click <strong>Resiliency</strong>.<br />
+<img alt="" src="../../img/img_634fdde7dacbd.png" /></li>
+<li>Click the <strong>VA Configuration</strong> button next to the appliance name.<br />
+<img alt="" src="../../img/img_634fde1c3dc34.png" /></li>
+<li>On the left, click the page named <strong>Install SSL Certificates</strong>.</li>
+<li>On the right, click <strong>Choose File</strong> next to <strong>Import Certificate File</strong>.<br />
+<img alt="" src="../../img/img_6138cae0928e6.png" /></li>
+<li>.pfx files are supported.</li>
+<li>In the <strong>Password</strong> field, enter the .pfx password.</li>
+<li>Click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_6138caffc37e3.png" /></li>
+<li>It will take several minutes for the certificate to be installed and the appliance to restart.<br />
+<img alt="" src="../../img/img_5cbb3c3c1eb7c.png" /></li>
+</ol>
+<h2 id="load-balancing">Load Balancing</h2>
+<p>VMware Access can be cloned, clustered, load balanced, and globally load balanced as shown below. Source = <a href="https://techzone.vmware.com/resource/workspace-one-access-architecture">Multi-site Design</a> in the <strong>Workspace ONE Access Architecture</strong>.<br />
+<img alt="" src="../../img/img_6138cb8125b08.png" /></p>
+<p>To clone multiple VMware Access appliances and load balance them, see one of the following:</p>
+<ul>
+<li>For Citrix ADC load balancing of VMware Access, see <a href="../VMware-Identity-Manager-Load-Balancing/">../VMware-Identity-Manager-Load-Balancing</a></li>
+<li>For F5 load balancing of Identity Manager, see <a href="https://communities.vmware.com/docs/DOC-33552?et=watches.email.document">EUC CST Tech Notes - IDM Steps by steps 3 node cluster - v4.pdf</a> at VMware Communities</li>
+</ul>
+<h2 id="windows-connector">Windows Connector</h2>
+<p>All VMware Access Connectors are Windows Servers.</p>
+<p>VMware Access supports Connectors that are the same version or older than the VMware Access appliance.</p>
+<p>A Connector with 4 vCPU and 8 GB RAM supports 100,000 users.</p>
+<ol>
+<li><a href="#lb">Load balance your VMware Access appliances</a> so the Connector can connect to the Load Balanced FQDN instead of a single VMware Access appliance.</li>
+<li>
+<p>Build one or more Windows machines on the internal network that will host the Windows connector. The Windows machines must be joined to the domain.</p>
+<ul>
+<li>Windows Server 2019 is <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/21.08/ws1_access_connector_install/GUID-6A070A5E-3DC3-4D2F-AE5B-8A8201310C92.html">supported</a> in Connector 21.08 and newer.</li>
+<li>Windows Server 2022 is supported by <a href="https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WS1A_ONPREM_220910&amp;productId=1361">Connector 22.09.1</a> but not by Connector 22.09.</li>
+<li>See <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_connector_install/GUID-6A070A5E-3DC3-4D2F-AE5B-8A8201310C92.html">System Requirements</a> at VMware Docs for sizing information.</li>
+<li>Connector Firewall requirements at <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_connector_install/GUID-6A070A5E-3DC3-4D2F-AE5B-8A8201310C92.html#network-requirements-4">VMware Docs</a>.</li>
+<li>For multi-data center, build separate Connectors for each data center. The Connectors connect to the VMware Access appliances in the local data center. For details, see <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/workspace_one_access_install/GUID-4725FC8A-A501-4AF2-9977-192BB41E3F55.html">Deploying VMware Workspace ONE Access in a Secondary Data Center for Failover and Redundancy</a> at VMware Docs.</li>
+<li>The VMware Access certificate must be trusted by the Connector servers.</li>
+<li>Login to the VMware Access administration console through the load balanced FQDN as the <strong>admin</strong> user in the System Domain.<br />
+<img alt="" src="../../img/img_5cbb36aa9e781.png" /></li>
+<li>In 22.09 and newer, go to <strong>Integrations</strong> &gt; <strong>Connectors</strong> and click <strong>New</strong>.<br />
+<img alt="" src="../../img/img_634ee6f8c7b50.png" /></li>
+<li>
+<p>In older Access:</p>
+</li>
+<li>
+<p>On the top tabs, switch to <strong>Identity &amp; Access Management</strong>.</p>
+</li>
+<li>On the sub-menu bar, on the far right, click <strong>Setup</strong>.</li>
+<li>On the sub-menu bar, on the left, click <strong>Connectors</strong>.</li>
+<li>Click the blue <strong>NEW</strong> button.<br />
+<img alt="" src="../../img/img_6139e7833bce0.png" /></li>
+<li>In the <strong>Select the Connector</strong> page, select the <strong>Latest Workspace ONE Access Connector</strong> and click <strong>OK</strong>.<br />
+<img alt="" src="../../img/img_634ee7d67035b.png" /><br />
+<img alt="" src="../../img/img_6139e7b99bd1d.png" /></li>
+<li>Click <strong>Confirm</strong>.<br />
+<img alt="" src="../../img/img_634ee7e93f805.png" /></li>
+<li>In the <strong>Download Installer</strong> page, click the button to <strong>Go to myvmware.com</strong> and download the connector installer if you haven't downloaded it already. Then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_634ee80010505.png" /></li>
+<li>In the <strong>Download Configuration File</strong> page, enter a 14-character password, click <strong>Download Configuration File</strong>, and save it somewhere. Then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_634ee8498686e.png" /></li>
+<li>In the <strong>Summary</strong> page, click <strong>Close</strong>.<br />
+<img alt="" src="../../img/img_634ee871995ef.png" /></li>
+<li>See <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_connector_install/GUID-6A070A5E-3DC3-4D2F-AE5B-8A8201310C92.html">Workspace ONE Access Connector Systems Requirements</a> at VMware Docs for sizing guidelines. For example, installing all components on a single server requires 12 GB of RAM.</li>
+<li>On the Windows machine, run <strong>Workspace-ONE-Access-Connector-Installer-22.09.1.0.exe</strong>.<br />
+<img alt="" src="../../img/Pasted.png" /></li>
+<li>Click Install to install .NET Framework 4.8. 
+<img alt="" src="../../img/img_6139e8b350c0d.png" /></li>
+<li>Click <strong>Yes</strong> to restart.<br />
+<img alt="" src="../../img/img_6139e9821faa6.png" /></li>
+<li>The Connector installer should automatically launch again. If not, you can launch it manually.</li>
+<li>In the <strong>Welcome to the Installation Wizard for Workspace ONE Access Connector</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_634fd7dcc0301.png" /></li>
+<li>In the <strong>License Agreement</strong> page, click <strong>I accept the terms</strong>, and then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_634fd7f4c87e3.png" /></li>
+<li>In the <strong>Service Selection</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139ea6cd1f76.png" /></li>
+<li>In the <strong>Specify configuration file</strong> page, browse to the <strong>es-config.json</strong> file downloaded earlier and then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_634fd8373dd34.png" /></li>
+<li>In the <strong>Select Default or Custom Installation</strong> page, choose <strong>Custom</strong> and then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139f14bedfe8.png" /></li>
+<li>In the <strong>Specify Proxy Server Information</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139f15a58df8.png" /></li>
+<li>In the <strong>Specify Syslog Server Information</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139f16a7312e.png" /></li>
+<li>In the <strong>Citrix Configuration</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_634fd86b4666a.png" /></li>
+<li>In the <strong>Install Trusted Root Certificates</strong> page, click <strong>Browse</strong> and upload your CA and Intermediate certificates that signed the VMware Access certificate. Java uses different root certificates than Windows so you'll need to upload them here so Java can use them. Click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139f19520671.png" /></li>
+<li>In the <strong>Specify Ports</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139f1a1b341d.png" /></li>
+<li>If you are installing the Kerberos Auth Service, then select a .pfx certificate that clients will trust and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139f1d718f18.png" /></li>
+<li>In the <strong>Specify Service Account</strong> page, enter service account credentials and then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139eb2c8a867.png" /></li>
+<li>The service account must be added to the local <strong>Administrators</strong> group.<br />
+<img alt="" src="../../img/img_5cbb3a0647d9d.png" /></li>
+<li>In the <strong>Ready to Install the Program</strong> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../img/img_6139f1f78e045.png" /></li>
+<li>In the <strong>Installation Wizard Completed</strong> page, click <strong>Finish</strong><br />
+<img alt="" src="../../img/img_6139ed6e434d0.png" /></li>
+<li>In VMware Access, go to <strong>Integrations</strong> &gt; <strong>Connectors</strong> to see the new Connector. If you don't see it, then check <strong>C:\Program Files\Workspace ONE Access\Virtual App Service\logs\eis-service.log</strong> on the Connector server.<br />
+<img alt="" src="../../img/img_634fe08420345.png" /></li>
+<li>Repeat these steps to add another connector. You can use the same <strong>es-config.json</strong> file.<br />
+<img alt="" src="../../img/img_63512aa9dc188.png" /></li>
+</ul>
+</li>
+</ol>
+<h2 id="configuration">Configuration</h2>
+<h3 id="active-directory">Active Directory</h3>
+<ol>
+<li>Login to the VMware Access web page as the <strong>admin</strong> user in the System Domain.<br />
+<img alt="" src="../../img/img_5cbb36aa9e781.png" /></li>
+<li>In 22.09 and newer, go to <strong>Settings</strong> &gt; <strong>User Attributes</strong>.<br />
+<img alt="" src="../../img/img_63507f6100dab.png" /><ol>
+<li>In older VMware Access, switch to the <strong>Identity &amp; Access</strong> <strong>Management</strong> tab.<br />
+<img alt="" src="../../img/4a7e38b75098e4c47b3dd595cd4839f0.png" /></li>
+<li>On the top right, switch to the <strong>Setup</strong> view.<br />
+<img alt="" src="../../img/img_6139f4ae8f9ea.png" /></li>
+<li>On the left, switch to the <strong>User Attributes</strong> sub-tab.<br />
+<img alt="" src="../../img/img_6139f4bcb4fd8.png" /></li>
+</ol>
+</li>
+<li>In the <strong>Default Attributes</strong> section, check the boxes next to <strong>distinguishedName</strong> and <strong>userPrincipalName</strong>. These are needed for Horizon.<br />
+<img alt="" src="../../img/img_63507fd3a5430.png" /><br />
+<img alt="" src="../../img/img_63507fc377b49.png" /></li>
+<li>In the <strong>Custom Attributes</strong> section, click <strong>Add Row</strong> and enter <strong>objectGUID</strong>.</li>
+<li>Add another row and enter <strong>mS-DS-ConsistencyGuid</strong>. These are needed for Office 365 integration.<br />
+<img alt="" src="../../img/img_6350806160dcd.png" /><ul>
+<li>In older VMware Access, in the <strong>Add other attributes to use</strong> section, click the plus icon and enter <strong>objectGUID</strong>.<br />
+<img alt="" src="../../img/img_5b187e4957d34.png" /></li>
+<li>Click the green plus and add <strong>mS-DS-ConsistencyGuid</strong>. These are needed for Office 365 integration.<br />
+<img alt="" src="../../img/img_5cbb5bd33e95c.png" /></li>
+</ul>
+</li>
+<li>At the top of the page, click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_6350808fec89c.png" /></li>
+<li>In 22.09 and newer, go to <strong>Integrations</strong> &gt; <strong>Directories</strong> and click <strong>Add Directory &gt; Active Directory</strong> at the top right of the page.<br />
+<img alt="" src="../../img/img_635080b7abe7e.png" /><br />
+<img alt="" src="../../img/img_63512612e6525.png" /><ol>
+<li>In older VMware Access, on the top right, switch to the <strong>Manage</strong> view.<br />
+<img alt="" src="../../img/img_6139f50636751.png" /></li>
+<li>On the <strong>Directories</strong> tab, click <strong>Add</strong> <strong>Directory</strong> &gt; <strong>Active Directory</strong>.<br />
+<img alt="" src="../../img/img_6139f53c8ad43.png" /></li>
+</ol>
+</li>
+<li>Enter a <strong>Directory Name</strong>.</li>
+<li>Change it to <strong>Active Directory over integrated Windows Authentication</strong>.<br />
+<img alt="" src="../../img/img_6139f5e8db344.png" /></li>
+<li>Select one or more Connectors as <strong>Directory Sync Hosts</strong> and <strong>User Auth Hosts</strong>.</li>
+<li>Select which attribute users should enter as their <strong>User Name</strong>.<br />
+<img alt="" src="../../img/img_63512b0082603.png" /></li>
+<li>Scroll down.</li>
+<li>Enter the LDAP Bind credentials. Click <strong>Save</strong> <strong>&amp; Next</strong>.<br />
+<img alt="" src="../../img/img_5cbb5cd623079.png" /></li>
+<li>Select the domains you want to sync and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/cd24ba434d9e305722217f16e1f83e4f.png" /></li>
+<li>In the <em>Map User Attributes</em> page, scroll down, enter Active Directory attribute names for any missing attribute, and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_5cbb5d53cb865.png" /></li>
+<li>In the <em>Select the Groups</em> page, click the plus icon to add a DN.<br />
+<img alt="" src="../../img/img_59501153bc8ff.png" /></li>
+<li>Enter a Base DN in LDAP format and then click <strong>Select Groups</strong>.<br />
+<img alt="" src="../../img/img_63512c791ceb3.png" /></li>
+<li>Search for your Access Users group, select it, and click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_6139f6d046fab.png" /></li>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_63512cab47b95.png" /></li>
+<li>In the <em>Select the Users</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_6139f7021a232.png" /></li>
+<li>In the <strong>Sync Frequency</strong> field, make a selection and then click <strong>Sync Directory</strong>.<br />
+<img alt="" src="../../img/img_63512ce4cc2fc.png" /></li>
+<li>You can click the link to view the Sync log.<br />
+<img alt="" src="../../img/adedee573de574e2146e580b92f4f72c.png" /></li>
+<li>Or from the main directories list, you can click the directory name, and then click the tab named <strong>Sync log</strong> to view the log.<br />
+<img alt="" src="../../img/ceeba6c8088d12bd9bee589c2e7322bc.png" /><br />
+<img alt="" src="../../img/img_63512d3f030d3.png" /></li>
+<li><strong>Sync Settings</strong> can be changed by clicking the button on the right.<br />
+<img alt="" src="../../img/img_6139f7b9d5e7d.png" /></li>
+</ol>
+<h3 id="sync-connector-redundancy">Sync Connector Redundancy</h3>
+<p>If you build another Windows Connector, you can add it to the Directory as another Sync Service.</p>
+<ol>
+<li>In VMware Access 22.09 and newer, at <strong>Integrations</strong> &gt; <strong>Directories</strong>, click the directory.<br />
+<img alt="" src="../../img/img_63512da6f147d.png" /><ol>
+<li>Or in older VMware Access, in the VMware Access console, in the <strong>Identity &amp; Access Management</strong> page, on the left, click the <strong>Directories</strong> link.<br />
+<img alt="" src="../../img/img_613a0dd0a0acb.png" /></li>
+<li>Click the link for your Active Directory domain.<br />
+<img alt="" src="../../img/img_5cbb623f32045.png" /></li>
+</ol>
+</li>
+<li>On the right, click the <strong>Sync Settings</strong> button.<br />
+<img alt="" src="../../img/img_63512de5a2b05.png" /></li>
+<li>Switch to the <strong>Sync Service</strong> tab.</li>
+<li>Select the new connector and click the plus icon to move it to the bottom.<br />
+<img alt="" src="../../img/img_613a0df9246e0.png" /></li>
+<li>You can order the connectors in failover order. Click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_613a0e0b71ca1.png" /></li>
+</ol>
+<h3 id="sync-group-membership">Sync Group Membership</h3>
+<p>By default, VMware Access does not synchronize group members. You can force a sync.</p>
+<ol>
+<li>In VMware Access 22.09 and newer, go to <strong>Accounts</strong> &gt; <strong>User Groups</strong>.<br />
+<img alt="" src="../../img/img_63512e317985a.png" /><ol>
+<li>In older VMware Access, go to <strong>Users &amp; Groups &gt; Groups</strong>.<br />
+<img alt="" src="../../img/img_613a0e2c9019f.png" /></li>
+</ol>
+</li>
+<li>Notice that the groups are <strong>Not Synced</strong>. Click the link for a group.<br />
+<img alt="" src="../../img/img_613a0e3ac4b14.png" /></li>
+<li>Switch to the <strong>Users</strong> tab. Then click the <strong>Sync Users</strong> button.<br />
+<img alt="" src="../../img/img_63512e80a2111.png" /></li>
+</ol>
+<h3 id="logon-experience">Logon Experience</h3>
+<ol>
+<li>In VMware Access 22.09 and newer, go to <strong>Settings</strong> &gt; <strong>Login Preferences</strong> and click <strong>Edit</strong>.<br />
+<img alt="" src="../../img/img_63512eb8a0c40.png" /><ol>
+<li>Or in older VMware Access, go to <strong>Identity &amp; Access Management &gt; Setup &gt; Preferences</strong>.<br />
+<img alt="" src="../../img/img_5cbcaa1d2c213.png" /></li>
+</ol>
+</li>
+<li>On the bottom, you can optionally hide the Domain Drop-Down menu. Then select the unique identifier that Identity Manager will use to find the user's domain (typically UPN if multiple domains). VMware Access can show a Domain Drop-Down if a unique domain cannot be identified.<br />
+<img alt="" src="../../img/img_63512fdb8acbf.png" /></li>
+<li>The user will be prompted to enter the unique identifier.<br />
+<img alt="" src="../../img/img_5950276ccef09.png" /><br />
+<img alt="" src="../../img/img_595027da08c20.png" /></li>
+</ol>
+<h3 id="administrators">Administrators</h3>
+<ol>
+<li>Sync the user that you want to assign the role to. Or <a href="#syncgroupmembership">sync the group</a> that the user is a member of. If syncing a group, also sync the members of that group.<br />
+<img alt="" src="../../img/img_6351321774986.png" /></li>
+<li>You can assign a role from the <strong>Accounts</strong> &gt; <strong>Users</strong> page by clicking a user and then clicking <strong>Edit Roles</strong>.<br />
+<img alt="" src="../../img/img_6351323e462a3.png" /><br />
+<img alt="" src="../../img/img_63513257a0d1f.png" /></li>
+<li>To add a role, in VMware Access 22.09 and newer, go to <strong>Accounts</strong> &gt; <strong>Roles</strong>.<br />
+<img alt="" src="../../img/img_63513056588d0.png" /><ol>
+<li>In older VMware Access, go to the <strong>Roles</strong> tab.<br />
+<img alt="" src="../../img/img_613a1bd8d645e.png" /></li>
+</ol>
+</li>
+<li>You can add a Role. See VMware Blog Post <a href="https://blogs.vmware.com/euc/2018/01/identity-management-rbac-vmware-identity-manager-3-2.html">Introducing Role-Based Access Control (RBAC) in VMware Identity Manager 3.2</a>.</li>
+<li>Then you can assign synced users to a role (e.g., <strong>Super Admin</strong>) by selecting the role and then clicking <strong>Assign</strong>.<br />
+<img alt="" src="../../img/img_63513092b8133.png" /></li>
+<li>Search for a synced user and then click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_6351316fda7e4.png" /></li>
+</ol>
+<h3 id="license">License</h3>
+<ol>
+<li>In VMware Access 22.09 and newer, go to <strong>Settings</strong> &gt; <strong>Appliance</strong> and then switch to the tab named <strong>License</strong>.<br />
+<img alt="" src="../../img/img_6351333df04a9.png" /><ol>
+<li>Or in older VMware Access, switch to the tab named <strong>Appliance</strong> <strong>Settings</strong>.</li>
+<li>Switch to the sub-tab named <strong>License</strong>.<br />
+<img alt="" src="../../img/img_613a1c224562e.png" /></li>
+</ol>
+</li>
+<li>Enter the license key and click <strong>Save</strong>. The Workspace ONE Access license is separate from your Horizon license.<br />
+<img alt="" src="../../img/img_635135ca64958.png" /></li>
+</ol>
+<h3 id="smtp">SMTP</h3>
+<ol>
+<li>In VMware Access 22.09 and newer, go to <strong>Settings</strong> &gt; <strong>Appliance</strong> and click the tab named <strong>SMTP</strong>.<br />
+<img alt="" src="../../img/img_635136078e6b2.png" /><ol>
+<li>In older VMware Access, on the top, click the <strong>Appliance</strong> <strong>Settings</strong> tab,</li>
+<li>Click the sub-tab named <strong>SMTP</strong>.</li>
+</ol>
+</li>
+<li>Enter your mail server information and click <strong>Test Connection</strong> and then click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_6351365349cbc.png" /></li>
+</ol>
+<h3 id="kerberos-authentication">Kerberos Authentication</h3>
+<p>Kerberos lets users Single Sign-on to the VMware Access web page. Some notes on Kerberos authentication:</p>
+<ul>
+<li>It only works for Windows clients.</li>
+<li>
+<p>The clients connect to the Connectors, so firewall must permit the inbound connection to the Connectors on TCP 443.</p>
+<ul>
+<li>For High Availability, load balance your Connectors.</li>
+<li>The Connector (or load balancer) must have a valid, trusted certificate.</li>
+<li>The Connector's FQDN (or load balancer FQDN) must be in Internet Explorer’s <strong>Local Intranet</strong> zone.</li>
+</ul>
+</li>
+</ul>
+<h4 id="connector-certificate">Connector Certificate</h4>
+<p>To upload a certificate to the Connector:</p>
+<ol>
+<li>On the Windows Connector machine, run the Connector installer.<br />
+<img alt="" src="../../img/img_635136d1e68d0.png" /></li>
+<li>In the <strong>Program Maintenance</strong> page, leave it set to <strong>Add/Remove Services</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_613a1e2389ae9.png" /></li>
+<li>Keep clicking <strong>Next</strong> until you get to the <strong>Install SSL Certificate for Kerberos Auth Service</strong> page. Browse to the .pfx, enter the password, and then finish the wizard.<br />
+<img alt="" src="../../img/img_613a1e4d68d1f.png" /></li>
+</ol>
+<h4 id="tcp-443-inbound">TCP 443 Inbound</h4>
+<p>TCP 443 must be opened inbound to the Connectors. You might have to add TCP 443 to a Windows Firewall rule.<br />
+<img alt="" src="../../img/img_5cbdbc764d955.png" /></p>
+<h4 id="enable-kerberos-authentication">Enable Kerberos authentication</h4>
+<ol>
+<li>In VMware Access 22.09 and newer, go to <strong>Integrations</strong> &gt; <strong>Connector Authentication Methods</strong>. Click <strong>New</strong> and then click <strong>Kerberos</strong>.<br />
+<img alt="" src="../../img/img_635138a28f44d.png" /><ol>
+<li>On in older VMware Access, on the top, go to the <strong>Identity &amp; Access</strong> <strong>Management</strong> tab.</li>
+<li>Click the sub-tab named <strong>Enterprise Authentication Methods</strong>.<br />
+<img alt="" src="../../img/img_613a202670f6d.png" /></li>
+<li>Click the <strong>New</strong> button and then click <strong>Kerberos</strong>.<br />
+<img alt="" src="../../img/img_613a204339604.png" /></li>
+</ol>
+</li>
+<li>In the <strong>Directory and Hosts</strong> page, select the Connectors. Then click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_613a205a2947e.png" /></li>
+<li>In the <strong>Configuration</strong> page, if you plan to load balance the Connectors, then change <strong>Enable Redirect</strong> to <strong>Yes</strong>. Then finish the wizard.<br />
+<img alt="" src="../../img/img_613a20b7e2d25.png" /></li>
+<li>In VMware Access 22.09 and newer, go to <strong>Integrations</strong> &gt; <strong>Identity Providers</strong>.<br />
+<img alt="" src="../../img/img_6351395d4c2fb.png" /><ol>
+<li>Or in older VMware Access, go to <strong>Identity &amp; Access Management</strong> &gt; <strong>Identity Providers</strong>.<br />
+<img alt="" src="../../img/img_613a2dde6b7d0.png" /></li>
+</ol>
+</li>
+<li>On the top right, click <strong>Add Identity Provider</strong> and then click <strong>Create Workspace IDP</strong>.<br />
+<img alt="" src="../../img/img_63513995e1533.png" /></li>
+<li>Give the IDP a name.</li>
+<li>In the <strong>Users</strong> field, select the directory.</li>
+<li>In the <strong>Authentication Method</strong> field, select <strong>Kerberos</strong>.</li>
+<li>In the Network field, check the box next to <strong>ALL RANGES</strong>.</li>
+<li>In the <strong>IdP Hostname</strong> field, enter the FQDN that is load balanced to the Connectors. Click <strong>Add</strong>.<br />
+<img alt="" src="../../img/img_613a21751ffbb.png" /><br />
+<img alt="" src="../../img/img_613a218bd00ab.png" /></li>
+</ol>
+<h4 id="configure-policy-to-use-kerberos">Configure Policy to use Kerberos</h4>
+<ol>
+<li>In VMware Access 22.09 and newer, go to <strong>Resources</strong> &gt; <strong>Policies</strong> and click the <strong>Network Ranges</strong> button.<br />
+<img alt="" src="../../img/img_63513a27d5d76.png" /><br />
+<img alt="" src="../../img/img_63513a5f389d4.png" /><ol>
+<li>Or in older VMware Access, go to <strong>Identity &amp; Access Management</strong> &gt; <strong>Manage</strong> &gt; <strong>Policies</strong> and click <strong>Network Ranges</strong>.<br />
+<img alt="" src="../../img/img_613a21d7be71e.png" /></li>
+</ol>
+</li>
+<li>Add a Network Range for internal networks if you haven't already.<br />
+<img alt="" src="../../img/img_5aaf9dc3aed81.png" /></li>
+<li>At <strong>Resources</strong> &gt; <strong>Policies</strong>, click <strong>Edit Default Policy</strong>.<br />
+<img alt="" src="../../img/img_63513ab1ca7d7.png" /><ol>
+<li>Or in older VMware Access, go to <strong>Identity &amp; Access Management</strong> &gt; <strong>Manage</strong> &gt; <strong>Policies</strong>.</li>
+<li>Click <strong>Edit Default Policy</strong>.<br />
+<img alt="" src="../../img/img_613a220c54e55.png" /></li>
+</ol>
+</li>
+<li>Click <strong>Next</strong> to go to the <strong>Configuration</strong> page.<br />
+<img alt="" src="../../img/img_613a22329a8b2.png" /></li>
+<li>Click <strong>Add Policy Rule</strong>. Or click the plus icon to add a Policy Rule.<br />
+<img alt="" src="../../img/img_613a2240da188.png" /></li>
+<li>Select a <strong>Network Range</strong> for the internal network.</li>
+<li>For <strong>and the user accessing content from</strong>, set it to <strong>Web Browser</strong>.</li>
+<li>Optionally configure <strong>and user belongs to group(s)</strong>. When enabled, VMware Access asks the user for username only, and then looks up group membership to determine which authentication methods should be used. See <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_authentication_cloud/GUID-C2B03912-C7D8-4524-AE6E-8E8B901B9FD6.html">Access Policy Settings</a> at VMware Docs.</li>
+<li>Select <strong>Kerberos</strong> as the first authentication method.</li>
+<li>Select <strong>Password (cloud deployment)</strong> as the second authentication method. Click <strong>Save</strong> or <strong>OK</strong>.<br />
+<img alt="" src="../../img/img_613a2328b64b0.png" /></li>
+<li>Drag the new Policy Rule to move it to the top. Then click <strong>Next</strong> and <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_613a233d8dda5.png" /></li>
+<li>If you break your config such that you can't login anymore, then see <a href="https://docs.vmware.com/en/VMware-Workspace-ONE-Access/22.09/ws1_access_service_administration_cloud/GUID-37C79290-B83E-4B88-A91B-5B94514738DD.html">Enabling Break-Glass URL Endpoint /SAAS/Login/0 in Workspace ONE Access</a> at VMware Docs.</li>
+</ol>
+<h3 id="customize-appearance">Customize Appearance</h3>
+<ol>
+<li>You can change the browser’s title and favicon at <strong>Settings</strong> &gt; <strong>Branding</strong>.<br />
+<img alt="" src="../../img/img_635140a4a20b6.png" /><ol>
+<li>Or in older VMware Access, go to <strong>Identity &amp; Access Management</strong> &gt; <strong>Setup</strong> &gt; <strong>Custom Branding</strong>, on the <strong>Names &amp; Logos</strong> tab.<br />
+<img alt="" src="../../img/img_613a2379c46d5.png" /><br />
+<img alt="" src="../../img/img_613a23970573a.png" /></li>
+</ol>
+</li>
+<li>The <strong>Sign-In Screen</strong> section lets you upload a logo, upload an image, and change colors.<br />
+<img alt="" src="../../img/img_635140d764a5b.png" /></li>
+<li>If you go to <strong>Settings &gt; P</strong><strong>assword Recovery</strong>, you can configure a link to a password recovery tool or change the Forgot Password message.<br />
+<img alt="" src="../../img/img_63514114bf77e.png" /><ol>
+<li>In older VMware Access, find it at <strong>Identity &amp; Access Management</strong> &gt; <strong>Manage</strong> &gt; <strong>Password Recovery Assistant</strong>.<br />
+<img alt="" src="../../img/img_613a23c7badd9.png" /></li>
+</ol>
+</li>
+<li>If you scroll down, you can optionally <strong>Show detailed message to End User when authentication fails</strong>.<br />
+<img alt="" src="../../img/img_6351417c8969a.png" /></li>
+<li>For branding of the user portal, go to <strong>Integrations</strong> &gt; <strong>Hub Configuration</strong> and click <strong>Launch</strong>.<br />
+<img alt="" src="../../img/img_635142b34ca02.png" /></li>
+<li>Then go to the <strong>Branding</strong> page from inside Hub Services.<br />
+<img alt="" src="../../img/img_635142d710ea6.png" /><ol>
+<li>Or in older VMware Access, click <strong>Catalog</strong>, and then click <strong>Settings</strong>.<br />
+<img alt="" src="../../img/img_613a23e1319a7.png" /></li>
+<li>On the left, click <strong>User Portal Branding</strong>.<br />
+<img alt="" src="../../img/img_613a23ed35a96.png" /></li>
+</ol>
+</li>
+<li>Make changes to Logos, colors, etc.<br />
+<img alt="" src="../../img/img_6351430f173a3.png" /></li>
+<li>On the top right, click <strong>Log out of Hub Services</strong> to return to the VMware Access administration console.<br />
+<img alt="" src="../../img/img_635143224f634.png" /></li>
+</ol>
+<h2 id="resources">Resources</h2>
+<h3 id="horizon-console-enable-saml-authentication">Horizon Console – Enable SAML Authentication</h3>
+<ol>
+<li>Login to Horizon Console.</li>
+<li>On the left, under <strong>Settings</strong>, click <strong>Servers.</strong></li>
+<li>On the right, switch to the <strong>Connection Servers</strong> tab.</li>
+<li>Select a Connection Server and click <strong>Edit</strong>.<br />
+<img alt="" src="../../img/img_613a28ed34573.png" /></li>
+<li>On the <strong>Authentication</strong> tab, change <strong>Delegation of authentication to VMware Horizon</strong> to <strong>Allowed</strong>.<br />
+<img alt="" src="../../img/img_635191ad821d5.png" /></li>
+<li>Click <strong>Manage SAML Authenticators</strong>.<br />
+<img alt="" src="../../img/img_613a29109e051.png" /></li>
+<li>Click <strong>Add</strong>.<br />
+<img alt="" src="../../img/img_613a291cc6c64.png" /></li>
+<li>In the <strong>Label</strong> field, enter a descriptive label.</li>
+<li>In the <strong>Metadata URL</strong> field, enter the VMware Access FQDN.</li>
+<li>In the <strong>Administration URL</strong> field, enter the VMware Access FQDN, and click <strong>OK</strong>.<br />
+<img alt="" src="../../img/img_613a2956806af.png" /></li>
+<li>If you see a certificate error, click <strong>View Certificate</strong>, and then click <strong>Accept</strong>.</li>
+<li>Click <strong>OK</strong> to close the <em>Manage SAML Authenticators</em> window.<br />
+<img alt="" src="../../img/img_613a29819b1fd.png" /></li>
+<li>There's a <strong>Workspace ONE mode</strong>, which forces all Horizon Clients to connect through VMware Access instead of directly to the Connection Servers. Delegation of authentication must be set to <strong>Required</strong> before Workspace ONE mode can be enabled.<br />
+<img alt="" src="../../img/img_613a29a377f55.png" /></li>
+</ol>
+<h3 id="vmware-access-virtual-apps-collection-for-horizon">VMware Access – Virtual Apps Collection for Horizon</h3>
+<ol>
+<li>In the VMware Access Admin Portal, go to <strong>Resources</strong> &gt; <strong>Virtual Apps Collections</strong>.<br />
+<img alt="" src="../../img/img_6351920c6ff5f.png" /><ol>
+<li>Or in older VMware Access, in the VMware Access Admin Portal, click the <strong>Catalog</strong> tab, and then click <strong>Virtual Apps Collection</strong>.<br />
+<img alt="" src="../../img/img_613a2a4eaff83.png" /></li>
+</ol>
+</li>
+<li>If you see <em>Introducing Virtual Apps Collection</em> page, click <strong>Get Started</strong>.<br />
+<img alt="" src="../../img/img_635192435cc99.png" /></li>
+<li>Click the <strong>SELECT</strong> link in the <strong>Horizon</strong> box. Note: Horizon Cloud is only for Single Pod brokers. For Universal Broker, configure it from inside Horizon Cloud.<br />
+<img alt="" src="../../img/img_635192550b45d.png" /></li>
+<li>Give the Horizon Connection a name.</li>
+<li>Arrange the Sync Connector appliances in priority order. Click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_613a2ab116d0f.png" /></li>
+<li>Click <strong>Add a Pod</strong>.<br />
+<img alt="" src="../../img/img_5cc0cd999639d.png" /></li>
+<li>Enter the FQDN of a Connection Server in the Pod.</li>
+<li>Enter Horizon View admin credentials in UPN format. The account needs at least Read Only Administrator access to Horizon.</li>
+<li>There's a <strong>True SSO</strong> option if you enabled a password-less authentication (e.g., SAML) to VMware Access.</li>
+<li>Click <strong>Add</strong>.<br />
+<img alt="" src="../../img/img_635192d977921.png" /></li>
+<li>You can optionally add more pods and then enable the <strong>Cloud Pod Architecture</strong> option. Click <strong>Next</strong> when done.<br />
+<img alt="" src="../../img/img_5cc0ce801c699.png" /></li>
+<li>Change the <strong>Sync Frequency</strong> and <strong>Safeguards</strong> as desired.</li>
+<li>Click <strong>Next</strong> when done.<br />
+<img alt="" src="../../img/img_613a2b2ee8ab6.png" /></li>
+<li>Click <strong>Save &amp; Configure</strong>. The connection is tested at this time.<br />
+<img alt="" src="../../img/img_63519315edee7.png" /></li>
+<li>The URLs for accessing Horizon are defined in each Network Range. For each Horizon URL, create Network Ranges. Or click <strong>All Ranges</strong>.<br />
+<img alt="" src="../../img/img_6351937e242a0.png" /></li>
+<li>Near the bottom, in the <strong>Client Access FQDN</strong> field, enter the FQDN that users in this Network Range use to login to Horizon. Then click <strong>Save</strong>. Note: the Horizon FQDN is different than the VMware Access FQDN.<br />
+<img alt="" src="../../img/img_613a2c3158db9.png" /></li>
+<li>After the Horizon Virtual Apps Collection is added, switch to the Overview tab, select the collection, and click <strong>Sync without safeguards</strong>.<br />
+<img alt="" src="../../img/img_635193b317773.png" /><ul>
+<li>Note: whenever you make a change to the pools in Horizon Administrator, you must either wait for the next automatic Sync time, or you can return to this screen and click <strong>Sync</strong>.</li>
+</ul>
+</li>
+<li>You can click the alert icon to see issues.<br />
+<img alt="" src="../../img/img_613a2ca757c54.png" /></li>
+<li>If you go to <strong>Resources</strong> &gt; <strong>Virtual Apps</strong>, you will see your synced Application and Desktop pools<br />
+<img alt="" src="../../img/img_635194b2d1963.png" /></li>
+</ol>
+<h4 id="horizon-pools-catalog">Horizon Pools Catalog</h4>
+<ol>
+<li>In the VMware Access Admin console, at <strong>Resources &gt; Virtual Apps</strong>, you can see the Horizon View icons. Only the pools in the root Access Group are synced.</li>
+<li>Click an icon, and then click <strong>View Assignments</strong>.<br />
+<img alt="" src="../../img/img_6351958651dc2.png" /></li>
+<li>Make sure entitlements are listed. Entitlements are assigned in Horizon Console, and not in VMware Access. VMware Access merely syncs the entitlements from Horizon.</li>
+<li>Only AD groups synced to VMware Access will be displayed. Domain Users are not synced by VMware Access and thus won't be displayed here.</li>
+<li>If you make changes in Horizon Console, then manually sync the Virtual Apps Collection so the changes are reflected in VMware Access.<br />
+<img alt="" src="../../img/img_613a2f61f217d.png" /></li>
+<li>
+<p>Back in the Virtual Apps list, if you check the box next to one of the icons, you can place the icon in a Category by clicking the <strong>Categories</strong> menu.</p>
+<ul>
+<li>You can select or more existing categories.<br />
+<img alt="" src="../../img/img_5cc0d3d2b6a7e.png" /></li>
+<li>Or type in a new category name at the top of the list.<br />
+<img alt="" src="../../img/img_5cc0d29417a5e.png" />3The category is then displayed next to the catalog item.<br />
+<img alt="" src="../../img/img_5cc0d4085d86b.png" /></li>
+<li>There's also a <strong>Recommended</strong> category.<br />
+<img alt="" src="../../img/img_5cc0d2dc29a57.png" /></li>
+<li>Recommended icons can be found in the User Portal at <strong>Apps</strong> &gt; <strong>Recommended</strong>. Users can click the <strong>Categories</strong> drop-down to see other categories. Users have to logoff and log back in to see Category changes.<br />
+<img alt="" src="../../img/img_613a361f3560e.png" /></li>
+<li>In VMware Access 22.09 and newer, user portal settings are configured in Hub Services. Launch it from <strong>Integrations</strong> &gt; <strong>Hub Configuration</strong>.<br />
+<img alt="" src="../../img/img_63519652e48d1.png" /></li>
+<li>The <strong>App Catalog</strong> page has some settings for the <strong>Catalog</strong> Layout.<br />
+<img alt="" src="../../img/img_635196b1c2dd0.png" /></li>
+<li>
+<p>Or in older VMware Access:</p>
+</li>
+<li>
+<p>Go to <strong>Catalog</strong> &gt; <strong>Settings</strong>.<br />
+<img alt="" src="../../img/img_613a3677ea492.png" /></p>
+</li>
+<li>On the left, click <strong>User Portal Configuration</strong>.</li>
+<li>From this screen, you can control tab visibility, and put recommended apps in the Bookmarks tab. Click <strong>Save</strong> when done.<br />
+<img alt="" src="../../img/img_613a368953824.png" /></li>
+</ul>
+</li>
+</ol>
+<h3 id="user-portal">User Portal</h3>
+<p>The User Portal (aka Intelligent Hub) is the interface that non-administrators see after logging in. Administrators can switch to the User Portal by clicking the username on the top right and clicking <strong>User Portal</strong>.</p>
+<p><img alt="" src="../../img/img_6354ffc916410.png" /></p>
+<p>Administrators in the User Portal can switch to the <strong>Workspace ONE Access Console</strong> by clicking the username on the top right.<br />
+<img alt="" src="../../img/img_6354ffe3bb463.png" /></p>
+<p>Some User Portal features:</p>
+<ol>
+<li>When a user logs in to the VMware Access web page the pool icons will be displayed.</li>
+<li>When the user clicks an icon, you can use either Horizon client or Browser for opening a pool.<br />
+<img alt="" src="../../img/img_6355010cc400c.png" /></li>
+<li>
+<p>To set the default launch method:</p>
+<ol>
+<li>On the top right, click your name, and click <strong>Account</strong>.<br />
+<img alt="" src="../../img/img_63550167e947e.png" /></li>
+<li>In the <strong>Horizon Remote Apps</strong> section, click either <strong>Horizon Client</strong> or click <strong>Browser</strong>.</li>
+<li>The Horizon Client option has a link to download and <strong>Install</strong> the Horizon Client.<br />
+<img alt="" src="../../img/img_6355018588a53.png" /></li>
+<li>Back in the Apps list, to mark an icon as a <strong>Favorite</strong>, click the three dots next to an icon and then click <strong>Add to Favorites</strong>.<br />
+<img alt="" src="../../img/img_6355027a7e294.png" /></li>
+<li>Or open an app's <strong>Details</strong> page, and then click the star icon.<br />
+<img alt="" src="../../img/img_613a3d5adad18.png" /></li>
+<li>Then you can click <strong>Favorites</strong> tab to display only icons that are marked as Favorites.<br />
+<img alt="" src="../../img/img_613a3d7c2a699.png" /></li>
+<li>If you configured Categories, they are listed in the <strong>Apps</strong> tab in the <strong>Categories</strong> drop-down.<br />
+<img alt="" src="../../img/img_635503d15a379.png" /></li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

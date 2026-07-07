@@ -1,0 +1,7039 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../virtual-delivery-agent/">
+      
+      
+        <link rel="next" href="../virtual-delivery-agent-vda-cr/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Virtual Delivery Agent (VDA) 2402 LTSR CU2 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../../base.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Virtual Delivery Agent (VDA) 2402 LTSR CU2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-host-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hypervisor Host Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Machine Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-vsphere-disable-nic-hotplug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If vSphere, disable NIC Hotplug
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Preparation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-virtual-delivery-agent-vda-2402-ltsr-cu2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Virtual Delivery Agent (VDA) 2402 LTSR CU2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Virtual Delivery Agent (VDA) 2402 LTSR CU2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-fslogix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft FSLogix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-desktop-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Desktop Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-experience-improvement-program-ceip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer Experience Improvement Program (CEIP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-quality-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Quality Indicator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Transport
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-logons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slow Logons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-that-the-vda-registered-with-a-delivery-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify that the VDA registered with a Delivery Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify that the VDA registered with a Delivery Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-workspace-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Workspace app
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citrix-file-access-204-for-workspace-app-for-chrome-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix File Access 2.0.4 for Workspace app for Chrome OS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-desktop-licensing-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote Desktop Licensing Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-drive-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C: Drive Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pagefile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direct-access-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct Access Users
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shellbridge-for-published-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ShellBridge for Published Apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#black-screen-when-launch-published-apps-on-windows-server-2016" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Black Screen when launch Published Apps on Windows Server 2016
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faster Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#published-app-launch-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Published App Launch Timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-saver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen Saver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logon-disclaimer-window-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Disclaimer Window Size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-app-for-html5chrome-upload-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace app for HTML5/Chrome Upload Folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-client-drive-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legacy Client Drive Mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-driver-for-maclinux-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Print Driver for Mac/Linux Clients
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-for-vda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL for VDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anonymous-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anonymous Accounts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anonymous Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-policy-for-anonymous-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Policy for Anonymous Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antivirus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antivirus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrixs-recommended-antivirus-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix’s Recommended Antivirus Exclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-defender-antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Defender Antivirus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimize-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimize Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimize Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-optimizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Optimizer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seal-and-shut-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seal and Shut Down
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstall-vda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uninstall VDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-host-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hypervisor Host Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Machine Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-vsphere-disable-nic-hotplug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If vSphere, disable NIC Hotplug
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Preparation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-virtual-delivery-agent-vda-2402-ltsr-cu2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Virtual Delivery Agent (VDA) 2402 LTSR CU2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Virtual Delivery Agent (VDA) 2402 LTSR CU2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-fslogix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft FSLogix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-desktop-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Desktop Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-experience-improvement-program-ceip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer Experience Improvement Program (CEIP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-quality-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Quality Indicator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Transport
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-logons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slow Logons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-that-the-vda-registered-with-a-delivery-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify that the VDA registered with a Delivery Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify that the VDA registered with a Delivery Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-workspace-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Workspace app
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citrix-file-access-204-for-workspace-app-for-chrome-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix File Access 2.0.4 for Workspace app for Chrome OS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-desktop-licensing-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote Desktop Licensing Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-drive-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C: Drive Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pagefile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direct-access-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct Access Users
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shellbridge-for-published-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ShellBridge for Published Apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#black-screen-when-launch-published-apps-on-windows-server-2016" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Black Screen when launch Published Apps on Windows Server 2016
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faster Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#published-app-launch-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Published App Launch Timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-saver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen Saver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logon-disclaimer-window-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logon Disclaimer Window Size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-app-for-html5chrome-upload-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace app for HTML5/Chrome Upload Folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-client-drive-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legacy Client Drive Mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-driver-for-maclinux-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Print Driver for Mac/Linux Clients
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl-for-vda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL for VDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anonymous-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anonymous Accounts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anonymous Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-policy-for-anonymous-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Policy for Anonymous Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antivirus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antivirus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrixs-recommended-antivirus-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix’s Recommended Antivirus Exclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-defender-antivirus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Defender Antivirus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimize-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimize Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimize Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-optimizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Optimizer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seal-and-shut-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seal and Shut Down
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstall-vda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uninstall VDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Virtual Delivery Agent (VDA) 2402 LTSR CU2</h1>
+
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#hardware">VDA Virtual Machine Hardware</a></li>
+<li><a href="#windows">Windows Configuration</a></li>
+<li><a href="#vda">Install - Virtual Delivery Agent 2402 LTSR CU2</a>  <ul>
+<li><a href="#fslogix">Install - Microsoft FSLogix</a> - Outlook OST, OneDrive, etc.</li>
+<li><a href="#desktophelper">Citrix Desktop Service</a></li>
+<li><a href="#ceip">Customer Experience Improvement Program (CEIP)</a></li>
+<li><a href="#cqi">Connection Quality Indicator</a></li>
+<li><a href="#adaptivetransport">Adaptive Transport</a></li>
+<li><a href="#logondelay">Slow Logons</a></li>
+<li><a href="#registration">Verify VDA Registration with Controller</a></li>
+</ul>
+</li>
+<li>
+<p>Workspace app:</p>
+<ul>
+<li><a href="#workspaceapp">Workspace App</a></li>
+<li><a href="#fileaccess">Citrix File Access 2.0.4 for Workspace app for Chrome</a></li>
+<li><a href="#rdplicensing">Remote Desktop Licensing Configuration</a></li>
+<li><a href="#cdrive">Reduce C: Drive Permissions</a></li>
+<li><a href="#pagefile">Configure Pagefile for Citrix Provisioning</a></li>
+<li><a href="#directaccess">Direct Access Users Group</a> - allow non-administrators to RDP to the VDA</li>
+<li><a href="#registry">Registry Settings</a> - <a href="#shellbridge">ShellBridge</a>, <a href="#blackscreen">black screen</a>, <a href="#fasterlogin">faster login</a>, <a href="#applaunchtimeout">published app launch timeout</a>, <a href="#screensaver">Screen Saver</a>, <a href="#html5upload">HTML5 Upload Folder</a></li>
+<li><a href="#clientdrives">Restore Legacy Client Drive Mapping</a></li>
+<li><a href="#printdriver">Print Driver for Mac and Linux Clients</a></li>
+<li>HTML5 Workspace app - <a href="#sslvda">SSL for VDA</a></li>
+<li><a href="#anon">Anonymous Accounts</a></li>
+<li><a href="#antivirus">Antivirus</a></li>
+<li><a href="#optimize">Optimize Performance</a></li>
+<li><a href="#apps">Apps</a></li>
+<li><a href="#seal">Seal and Shut Down</a></li>
+<li><a href="#uninstall">Uninstall VDA</a></li>
+</ul>
+</li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2025 April 2 - <a href="https://www.citrix.com/downloads/workspace-app/workspace-app-for-windows-long-term-service-release/workspace-app-for-windows-LTSR-Latest.ext.html">Workspace app 2402 CU3</a></li>
+<li>2025 Feb 8 - updated article for <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2402ltsr-cu2-all-editions.html">VDA 2402 LTSR CU2</a></li>
+<li>2024 Feb 16 - Updated <a href="#vda">VDA Install</a> for <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-alleditions-2402.html">VDA 2402</a>. Many edits.</li>
+</ul>
+<h3 id="hardware">Hardware</h3>
+<h4 id="hypervisor-host-hardware">Hypervisor Host Hardware</h4>
+<ul>
+<li>G0-EUC <a href="https://www.go-euc.com/moores-law-of-windows-10-1903/">Moore’s law of Windows 10 1903</a> - Newer versions of Windows 10 have lower density than older versions<br />
+<img alt="" src="../../../../img/img_5cfbf8179e903.png" /></li>
+<li>Citrix Blog Post <a href="https://www.citrix.com/blogs/2017/03/20/citrix-scalability-the-rule-of-5-and-10/">Citrix Scalability — The Rule of 5 and 10</a>: Simply take the number of physical cores in a hypervisor host, multiply it by 5 or 10, and the result will be your Single Server Scalability. Use 5 if you’re looking for the number of Virtual Desktop VMs you can host on a box, and use 10 if you’re looking for the number of Virtual Apps user sessions you can host on a box.</li>
+</ul>
+<h4 id="virtual-machine-hardware">Virtual Machine Hardware</h4>
+<ol>
+<li>
+<p><strong>Operating system version support</strong>: VDA version 2402 CU2 supports Windows 11, Windows 10 64-bit (1607 and newer), Windows Server 2022, Windows Server 2019, and Windows Server 2016.</p>
+<ul>
+<li>Windows Server 2025 is not supported.</li>
+<li>Windows Server 2012 R2 is no longer supported. For Windows Server 2012 R2, install <a href="../citrix-virtual-delivery-agent-vda-1912-ltsr/">VDA 1912</a> with the latest Cumulative Update. VDA 1912 will work with newer Delivery Controllers (e.g., Delivery Controller 2402 CU2).</li>
+<li><strong>Cloud VDAs licensing</strong> – Cloud VDAs are supported if you are licensed for Citrix Cloud with Hybrid Usage rights or Universal licenses. See CTX270373 <a href="https://support.citrix.com/article/CTX270373">Citrix Virtual Apps and Desktops: Public cloud support with Current Releases and Long Term Service Releases</a>.</li>
+<li>
+<p><strong>Windows 11 and vSphere</strong> - Citrix supports Windows 11 on vSphere 7 or newer. Windows 11 requires TPM. vSphere requires VM encryption of the VM files before it will let you add a TPM to the virtual machine. VM encryption requires a Key Provider. vSphere 7 has a Native Key Provider that does not need any additional servers or licenses. See VMware Tech Zone <a href="https://core.vmware.com/resource/windows-11-support-vsphere">Windows 11 Support on vSphere</a>.</p>
+</li>
+<li>
+<p>In vSphere Client, in Inventory, click the vCenter object. On the right, on the <strong>Configure</strong> tab, scroll down to <strong>Key Providers</strong> and add a <strong>Native Key Provider</strong>.<br />
+<img alt="" src="../../../../img/img_618917c0006ec.png" /></p>
+</li>
+<li>After it's added, select it and then click <strong>Back-up</strong> to activate it.<br />
+<img alt="" src="../../../../img/img_618917fe152b8.png" /><br />
+<img alt="" src="../../../../img/img_6189181eceefd.png" /></li>
+<li>Microsoft TechNet Blog - <a href="https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/say-no-to-long-term-servicing-channel-ltsc/ba-p/714795">Say No to Windows 10 Long Term Servicing Channel (LTSC)</a></li>
+<li>No Edge</li>
+<li>From January 2020, Microsoft Office 365 will not be supported on LTSC.</li>
+<li>Non-security operating system fixes and enhancements may not get back-ported to LTSC.</li>
+<li>CTX224843 <a href="https://support.citrix.com/article/CTX224843">Windows 10 compatibility with Citrix Virtual Desktops</a><br />
+<img alt="" src="../../../../img/image-97.png" />  </li>
+<li>CTX464127 <a href="https://support.citrix.com/article/CTX464127/windows-11-22h2-update-citrix-known-issues">Windows 11 2022 Update (22H2) &amp; 2023 Update (23H2) – Citrix Known Issues</a></li>
+<li><strong>Hypervisor Support</strong> - CTX131239 <a href="https://support.citrix.com/article/CTX131239">Supported Hypervisors for Virtual Desktops (XenDesktop) and Provisioning Services</a></li>
+<li>vSphere 7 is supported with CVAD 2106 and newer.</li>
+<li>SCVMM 2022 is supported with CVAD 2203 and newer.</li>
+<li>
+<p><strong>Firewall</strong> - the UDP-based EDT protocol is enabled by default. Make sure the UDP ports are open for ICA/HDX:</p>
+</li>
+<li>
+<p>UDP 1494</p>
+</li>
+<li>UDP 2598</li>
+<li>UDP 443 - from Internet to Citrix Gateway.</li>
+<li>UDP 443 can also be used by internal ICA connections if <a href="#sslvda">VDA SSL</a> is configured.</li>
+<li>For EDT through Citrix Gateway, make sure your Citrix ADC firmware is up to date, preferably 12.1 or newer. Then enable DTLS on the Gateway Virtual Server.</li>
+<li>TCP 443 and UDP 443 for <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/hdx-transport/hdx-direct.html">HDX Direct</a>.</li>
+<li>Citrix Blog Post <a href="https://www.citrix.com/blogs/2024/04/15/whats-new-with-hdx-in-the-2402-ltsr/">What’s new with HDX in the 2402 LTSR</a></li>
+<li>
+<p><strong>VDA virtual machine sizing</strong>:</p>
+</li>
+<li>
+<p>For <strong>Windows 11 or Windows 10 virtual desktops</strong>, give the virtual machine: 2+ vCPU and 4+ GB of RAM - higher RAM for browsers running on the VDA</p>
+</li>
+<li>For <strong>Windows Server 2022, 2019, or 2016 RDSH</strong>, give the virtual machine 8 vCPU, and 24-48 GB of RAM</li>
+<li>If using memory caching (MCSIO or PvS) for storage, add <a href="https://www.citrix.com/blogs/2015/01/19/size-matters-pvs-ram-cache-overflow-sizing/">more RAM</a> for the cache.</li>
+<li>Remove the <strong>floppy drive</strong>.</li>
+<li>Remove any <strong>serial or LPT ports</strong>.</li>
+<li>
+<p>If <strong>Windows 11</strong> on vSphere:</p>
+</li>
+<li>
+<p>When creating the Windows 11 virtual machine, enable <strong>Encrypt this virtual machine</strong>.<br />
+<img alt="" src="../../../../img/img_61891866970a7.png" /></p>
+</li>
+<li>In the <strong>Select a guest OS</strong> screen, if you don't see Windows 11, then select Windows 10. 
+    <img alt="" src="../../../../img/img_6189188846cad.png" /></li>
+<li>On the <strong>Customize hardware</strong> page, make sure <strong>VM configuration files are encrypted</strong>. Hard disk encryption is not required, and you can deselect it. Only the VM configuration files must be encrypted.<br />
+<img alt="" src="../../../../img/img_618918cd58a19.png" /></li>
+<li>Then you can use the <strong>Add New Device</strong> drop-down to add a <strong>Trusted Platform Module</strong>.<br />
+<img alt="" src="../../../../img/img_618918db4024d.png" /></li>
+<li>
+<p>If <strong>vSphere</strong>:</p>
+</li>
+<li>
+<p>To reduce disk space, reserve memory. <strong>Memory reservations</strong> reduce or eliminate the virtual machine <strong>.vswp</strong> file.<br />
+<img alt="" src="../../../../img/img_61891dd8a0703.png" /></p>
+</li>
+<li>The NIC should be <strong>VMXNET3</strong>.<br />
+<img alt="" src="../../../../img/img_61891dc863404.png" /></li>
+<li>For vGPU, set <strong>vgpu.hotmigrate.enabled</strong> Advanced vCenter Server Setting to <strong>true</strong>. (source = William Lam <a href="https://www.virtuallyghetto.com/2018/10/quick-tip-how-to-enable-vgpu-vmotion-in-vsphere-6-7-update-1.html">How to enable vGPU vMotion in vSphere 6.7 Update 1</a>)<br />
+<img alt="" src="../../../../img/img_5be99a25b2a7c.png" /></li>
+<li><strong>App Layering and UEFI</strong> - In Citrix App Layering 2003 and newer, import UEFI images by running a <a href="https://docs.citrix.com/en-us/citrix-app-layering/4/layer/create-os-layer.html#run-the-script">script</a> instead of using a connector.</li>
+<li>
+<p>If this VDA will boot from <a href="../provisioning-services/" title="Provisioning Services">Citrix Provisioning</a>:</p>
+</li>
+<li>
+<p>For vSphere, the NIC Adapter Type must be VMXNET3. 
+    <img alt="" src="../../../../img/img_5dfe355161612.png" /></p>
+</li>
+<li>For vSphere, configure the CD/DVD Drive to boot from IDE instead of SATA. SATA won't work with PVS.<br />
+<img alt="" src="../../../../img/img_5dfe35782d7de.png" /></li>
+<li>Make sure you remove the <strong>SATA Controller</strong> after you change the CD/DVD Drive to be IDE.<br />
+<img alt="" src="../../../../img/img_5dfe3589eeaf4.png" /></li>
+<li>Install the latest version of hypervisor drivers (e.g., <strong>VMware Tools</strong>).</li>
+<li>The vSphere Activity Monitoring Feature with NSX Guest Introspection feature uses a TDI driver (<strong>vnetflt.sys</strong>), which might cause a "Connection Interrupted" message when users log off of Citrix. See CTX221206 <a href="https://support.citrix.com/article/CTX221206">"Connection Interrupted" error message displayed while logging off ICA session</a>.</li>
+</ul>
+</li>
+</ol>
+<h4 id="if-vsphere-disable-nic-hotplug">If vSphere, disable NIC Hotplug</h4>
+<ol>
+<li>Users could use the systray icon to Eject the Ethernet Controller. Obviously, this is bad.<br />
+<img alt="" src="../../../../img/f0c9ef5ae9e480a9bc3972bbf4e517bb.png" /></li>
+<li>To disable this functionality, power off the virtual machine.<br />
+<img alt="" src="../../../../img/img_598f45748d619.png" /></li>
+<li>Once powered off, right-click the virtual machine, and click <strong>Edit</strong> <strong>Settings</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe36df72937.png" /></li>
+<li>Switch to the tab named <strong>VM Options</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe36fb3c0c3.png" /></li>
+<li>Expand <strong>Advanced</strong> and then click <strong>Edit Configuration</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe37230b525.png" /></li>
+<li>Click the button labelled <strong>Add Configuration Params</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe3738180f9.png" /></li>
+<li>For the Name, enter <strong>devices.</strong><strong>hotplug</strong>.</li>
+<li>For the Value, enter <strong>false</strong>. Then click <strong>OK</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe3765cdbfe.png" /></li>
+<li>The VM can then be powered on.<br />
+<img alt="" src="../../../../img/img_5dfe37a07f954.png" /></li>
+</ol>
+<h3 id="windows-preparation">Windows Preparation</h3>
+<ol>
+<li><strong>Computer Group Policy</strong> – Make sure the Master VM is in the same OU as the Linked Clones so that the Master VM will get the computer-level GPO settings in its registry. Run <strong>gpupdate</strong> on the master after moving the VM to the correct OU. When Clones are created from the Master, the computer-level GPO settings will already be applied, thus eliminating timing issues.<br />
+<img alt="" src="../../../../img/img_594faa35b2433.png" /></li>
+<li>If Server OS, disable <strong>IE Enhanced Security Configuration</strong> in Server Manager &gt; <strong>Local Server</strong>.<br />
+<img alt="" src="../../../../img/f997ef2600c049be0e0ac654b802e36b.png" /></li>
+<li>Run <strong>Windows Update</strong>. Do not skip this step. Many VDA installation problems are fixed by simply updating Windows.<br />
+<img alt="" src="../../../../img/img_6189205540722.png" /><br />
+<img alt="" src="../../../../img/img_5a0860886a7fe.png" /></li>
+<li><strong>Defer Feature Updates</strong> - For Windows 10, since Citrix VDA does not immediately support new Windows 10 versions, configure Windows Update to defer feature updates. In Windows 11, or in newer versions of Windows 10, defer updates can only be configured using group policy.<br />
+<img alt="" src="../../../../img/img_6189224aa01bc.png" /></li>
+<li>Add your <strong>Citrix Administrators</strong> group to the local Administrators group on the VDA. Computer Management.<br />
+<img alt="" src="../../../../img/e3da23c493cb62f61d07a7bfe1483926.png" /></li>
+<li>
+<p>The Remote Desktop Services “<strong>Prompt for Password</strong>” policy prevents Single Sign-on to the Virtual Delivery Agent. Check registry key <code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services</code>. If <strong>fPromptForPassword</strong> = 1 then you need to fix group policy. The following GPO setting will prevent Single Sign-on from working.  </p>
+<p><strong>Computer Configuration</strong> | Policies | Administrative Templates | Windows Components | Remote Desktop Services | Remote Desktop Session Host | Security | <strong>Always prompt for password upon connection</strong></p>
+<p>Or set the registry value <code>HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\</code><strong>Portica\AutoLogon</strong> (DWORD) = 0x1. This registry value only applies to Single-session OS (aka Desktop OS), not Multi-session OS (aka Server OS). (source = <a href="../virtual-delivery-agent-vda-7-15-ltsr/#comment-9755">comments</a>)</p>
+</li>
+<li>
+<p>For <strong>Remote Assistance</strong> in Citrix Director, configure the GPO setting <strong>Computer Configuration | Policies | Administrative Templates | System | Remote Assistance | Offer Remote Assistance</strong>. See Jason Samuel - <a href="https://www.jasonsamuel.com/2015/02/01/how-to-setup-citrix-director-shadowing-with-remote-assistance-using-group-policy/">How to setup Citrix Director Shadowing with Remote Assistance using Group Policy</a> for more details.<br />
+<img alt="" src="../../../../img/34203a93734ee2ae625b391ed516e940.png" /></p>
+</li>
+</ol>
+<h3 id="install-virtual-delivery-agent-vda-2402-ltsr-cu2">Install Virtual Delivery Agent (VDA) 2402 LTSR CU2</h3>
+<p><strong>Mixed versions</strong> - You can upgrade the VDAs before you upgrade the Delivery Controllers resulting in VDAs being newer than the Delivery Controllers. You can upgrade the Delivery Controllers before you upgrade the VDAs. In other words, you can mix and match VDA versions and Delivery Controller versions.</p>
+<p><strong>CLI Install</strong>:</p>
+<p>Command Line Install Options are detailed at <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-command.html">Install using the command line</a> at Citrix Docs.</p>
+<p><strong>Scripted Upgrade</strong>:</p>
+<p>To automate the upgrade of VDA software on persistent machines, see <a href="https://xenapplepie.com/2023/04/13/updated-vda-install-upgrade-rds-install-desktop-server-app-install-script/">Updated VDA Install / Upgrade / RDS Install / Desktop / Server / App Install Script</a> by Kris Davis.</p>
+<p><strong>GUI Install</strong>:</p>
+<ol>
+<li>Mount the downloaded <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2402ltsr-cu2-all-editions.html">Citrix Virtual Apps and Desktops 7 2402 LTSR CU2 ISO</a> and run <strong>AutoSelect.exe</strong>.<br />
+<img alt="" src="../../../img/8P6goB2cyWBJMAAAAASUVORK5CYII=" />  <ul>
+<li>Alternatively, you can download the standalone VDA package and run that instead. Go the main <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2402ltsr-cu2-all-editions.html">Citrix Virtual Apps and Desktops 7 2402 CU2</a> download page. Expand the section labelled <strong>Components that are in the ISO but also available separately</strong>. There is also a VDA installer called <strong>Single-session OS Core Services</strong> that is designed for Remote PC deployments.<br />
+<img alt="" src="../../../img/wLPjT4CGGHF6gAAAABJRU5ErkJggg==" /></li>
+</ul>
+</li>
+<li>Click <strong>Start</strong> next to either <strong>Virtual Apps</strong> or <strong>Virtual Apps and Desktops</strong>. The only difference is the product name displayed in the installation wizard.<br />
+<img alt="" src="../../../../img/image-37.png" /></li>
+<li>On the top right, click <strong>Virtual Delivery Agent for Windows Multi-session OS</strong> (aka RDSH, aka Server OS), or <strong>Windows Single-session OS</strong> (aka virtual desktop, aka Desktop OS), depending on which type of VDA you are building.<br />
+<img alt="" src="../../../../img/image-109.png" /><br />
+<img alt="" src="../../../../img/image-110.png" /></li>
+<li>In the <em>Environment</em> page, select <strong>Create a master MCS Image</strong> or <strong>Create master image to be used for Citrix Provisioning (PVS) streaming</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-101.png" /><br />
+<img alt="" src="../../../../img/image-111.png" /></li>
+<li>In the <em>Core Components</em> page, if you don’t need Citrix Workspace App installed on your VDA, then leave the box unchecked. Workspace app is usually only needed for double-hop ICA connections (connect to first VDA, and then from there, connect to second VDA). Click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-102.png" /></li>
+<li>
+<p>In the <strong>Additional Components</strong> page:</p>
+<ol>
+<li><strong>Workspace Environment Management</strong> agent is no longer an option on this screen and is instead a separate box on the main splash screen.</li>
+<li>Single-session OS (not Multi-session OS) has an option for <strong>Citrix User Personalization Layer</strong> (UPL). This component comes from Citrix App Layering but does not need any of the App Layering infrastructure.<br />
+<img alt="" src="../../../../img/image-112.png" />  <ul>
+<li>Do not enable User Personalization Layer if you are also using Citrix App Layering.</li>
+<li><strong>Warning</strong>: A Citrix Policy setting activates Citrix User Personalization Layer by setting the UNC path to where the User Personalization Layers should be stored. The Citrix Policy setting should only be deployed to non-persistent machines. If you deploy the Citrix Policy Setting to your Master Image, then your Master Image will be hosed, and you must rebuild it from scratch.<br />
+<img alt="" src="../../../../img/img_5dfe3cee492df.png" /></li>
+</ul>
+</li>
+<li>There's an option for <strong>Machine Creation Services (MCS) storage optimization</strong>. This is also known as <strong>MCS I/O</strong>. In VDA 1912 and newer, the MCSIO driver is now the exact same driver as the driver used in Citrix Provisioning. MCS I/O in older VDAs has performance problems.</li>
+<li>The new <strong>Images</strong> node (<a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/image-management">Image Management</a>) in Web Studio requires MCSIO to be installed.<br />
+<img alt="" src="../../../../img/image-113.png" /></li>
+<li>VDA 2109 and newer have an option for <strong>VDA Upgrade Agent</strong> for Citrix Cloud deployments.<br />
+<img alt="" src="../../../../img/image-103.png" /></li>
+<li>There's an option for <strong>Citrix Backup and Restore Service</strong> that creates a restore point before installation or upgrade.<br />
+<img alt="" src="../../../../img/image-104.png" /></li>
+<li>Click <strong>Next</strong>.</li>
+<li>In the <em>Delivery Controller</em> page, select <strong>Do it manually</strong>. Enter the FQDN of each Delivery Controller (at least two). Click <strong>Test connection</strong>. And then make sure you click <strong>Add</strong>. Click <strong>Next</strong> when done.<br />
+<img alt="" src="../../../../img/image-105.png" /></li>
+<li>VDA registration normally occurs over port 80. VDA 2402 LTSR CU2 supports VDA registration over SSL 443 (WebSockets). This requires trusted SSL certificates on the Delivery Controllers and registry values on the Delivery Controllers and the VDAs. See <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/websocket-vda-support">WebSocket communication between VDA and Delivery Controller</a> at Citrix Docs.</li>
+<li>In the <em>Features</em> page, if you want to use the features, then check the boxes. <strong>Remote Assistance</strong> is for Director. The <strong>Cloud</strong> checkbox is only for telemetry and does not affect installation. Then click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-106.png" /></li>
+<li>In the <em>Firewall</em> page, VDA 2112 and newer have ports 52525 - 52625 for <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/graphics/screen-sharing.html">Screen Sharing</a>. Port TCP/UDP 443 is for <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/hdx-transport/hdx-direct.html">HDX Direct</a>. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-107.png" /></li>
+<li>In the <em>Summary</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../../img/image-108.png" /><br />
+<img alt="" src="../../../../img/image-114.png" /></li>
+<li>Click <strong>Close</strong> if you are prompted to restart.<br />
+<img alt="" src="../../../../img/image-115.png" /></li>
+<li>
+<p>After the machine reboots twice, login and installation should continue.</p>
+</li>
+<li>
+<p>If you see a <strong>Locate 'Citrix Virtual Apps and Desktops 7' installation media</strong> window, don't click anything.<br />
+<img alt="" src="../../../../img/img_5b698b2db0c2e.png" /></p>
+</li>
+<li>Go to the <strong>Citrix_Virtual_Apps_and_Desktops_7_2402_LTSR_CU2_2100.iso</strong> file and mount it.<br />
+<img alt="" src="../../../img/DLIy9TTmAAAAAElFTkSuQmCC" /></li>
+<li>Go back to the <strong>Locate 'Citrix Virtual Apps and Desktops 7' installation media</strong> window.</li>
+<li>On the left, expand <strong>This PC</strong>, and click the DVD Drive.</li>
+<li>Click <strong>Select Folder</strong>.<br />
+<img alt="" src="../../../../img/image-117.png" /></li>
+<li>Repeat these instructions every time you're prompted to restart.</li>
+<li>Installation will continue automatically.</li>
+<li>Note: <strong>NT SERVICE\CitrixTelemetryService</strong> needs permission to <a href="https://support.citrix.com/article/CTX207907/xendesktop-78-install-error-installation-of-msi-file-telemetryserviceinstallerx64msi">login as a service</a>.</li>
+<li>In the <em>Diagnostics</em> page, you can optionally check the box next to <strong>Collect diagnostic information</strong>, click <strong>Connect</strong>, enter your Citrix account credentials, and then click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/image-118.png" /></li>
+<li>In the <em>Finish</em> page, click <strong>Finish</strong> to restart the machine again.<br />
+<img alt="" src="../../../../img/image-120.png" /><br />
+<img alt="" src="../../../../img/image-119.png" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="microsoft-fslogix">Microsoft FSLogix</h4>
+<p>If you need to roam the user's Outlook .OST file (Outlook Cached Mode), Outlook Search Index, OneDrive cache, OneNote data, SharePoint data, Skype data, and/or Teams data, then download, install, and configure <a href="https://docs.microsoft.com/en-us/fslogix/install-ht">Microsoft FSLogix</a>. A common architecture is to enable <strong>FSLogix Office Container</strong> for the Office cache files and use <strong>Citrix Profile Management</strong> for all other roaming profile files and registry keys.</p>
+<p>Microsoft FSLogix is free for all Microsoft RDS CALs, Microsoft Virtual Desktop Access per-user CALs, and all Microsoft Enterprise E3/E5 per-user licenses. Notice that per-device licenses are excluded. See <a href="https://learn.microsoft.com/en-us/fslogix/overview-prerequisites#eligibility">Licensing Requirements</a> at Microsoft Docs.</p>
+<p>Microsoft Teams 2.1 requires <a href="https://learn.microsoft.com/en-us/fslogix/overview-release-notes#fslogix-2210-hotfix-3-preview-29871630241">FSLogix 2210 Hotfix 3</a>.<br />
+<img alt="" src="../../../../img/image-121.png" /></p>
+<p>Do the following to install Microsoft FSLogix on the VDA machine:</p>
+<ol>
+<li>Go to <a href="https://aka.ms/fslogix-latest">https://docs.microsoft.com/en-us/fslogix/install-ht</a> and click the <strong>download</strong> link.<br />
+<img alt="" src="../../../../img/image-122.png" /></li>
+<li>Extract the downloaded .zip file.</li>
+<li>In the FSLogix <strong>\x64\Release</strong> folder, run <strong>FSLogixAppsSetup.exe</strong>.<br />
+<img alt="" src="../../../../img/image-123.png" /></li>
+<li>Check the box next to <strong>I agree to the license terms and conditions</strong> and click <strong>Install</strong>.<br />
+<img alt="" src="../../../../img/img_5d21f9a488374.png" /></li>
+<li>In the <strong>Setup Successful</strong> page, click <strong>Restart</strong>.<br />
+<img alt="" src="../../../../img/img_5d21fa8d501cf.png" /></li>
+<li>Make sure the <strong>Windows Search</strong> service is set to <strong>Automatic</strong> and <strong>Running</strong>.<br />
+<img alt="" src="../../../../img/img_5d235d2c4d72a.png" /></li>
+<li>If Office is already installed, then repair the Office installation after installing and starting the Windows Search Service.<br />
+<img alt="" src="../../../../img/img_5d235dab449e0.png" /></li>
+</ol>
+<p>FSLogix is configured through <a href="../group-policy-objects-vda-computer-settings/#fslogix">Group Policy</a> or by <a href="https://docs.microsoft.com/en-us/fslogix/configure-office-container-tutorial">editing registry values on each FSLogix Agent machine</a>.</p>
+<h4 id="citrix-desktop-service">Citrix Desktop Service</h4>
+<p>To prevent Citrix Desktop Service (BrokerAgent) from starting and registering with the Delivery Controllers before the boot process is complete, see Jeremy Saunders <a href="http://www.jhouseconsulting.com/controlling-the-starting-of-the-citrix-desktop-service-brokeragent/">Controlling the Starting of the Citrix Desktop Service (BrokerAgent)</a>.<br />
+<img alt="" src="../../../../img/img_5c7d0005066eb.png" /></p>
+<h4 id="customer-experience-improvement-program-ceip">Customer Experience Improvement Program (CEIP)</h4>
+<p>Customer Experience Improvement Program (CEIP) is enabled by default. To disable it, create the registry value <code>HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Telemetry\CEIP\**Enabled**</code> (DWORD), and set it to <code>**0**</code> (zero). Also see <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/manage-deployment/cis.html#citrix-customer-experience-improvement-program">CEIP</a> at <strong>Citrix Insight Services</strong> at Citrix Docs.<br />
+<img alt="" src="../../../../img/img_58b9cadbd9a8b.png" /></p>
+<p>See <a href="../delivery-controller-1912-ltsr-and-licensing/#ceip">../delivery-controller-cr-and-licensing/#ceip</a> for additional places where CEIP is enabled.</p>
+<h3 id="connection-quality-indicator">Connection Quality Indicator</h3>
+<p>The Connection Quality Indicator tells the user the quality of the connection. Position of the indicator is configurable by the user. Thresholds are configurable through group policy.<br />
+<img alt="" src="../../../../img/img_5b646a29e9cd2.png" /><br />
+<img alt="" src="../../../../img/img_5b646a8d7e32f.png" /></p>
+<p>Download it from CTX220774 <a href="https://support.citrix.com/article/CTX220774">Connection Quality Indicator</a> and install it. The article is very detailed.<br />
+<img alt="" src="../../../../img/img_5dfe40302efcc.png" /></p>
+<p>Group Policy templates are located at <strong>C:\Program Files (x86)\Citrix\Connection Quality Indicator\Configuration</strong>. Copy the files and folder to <Sysvol>\Policies\<strong>PolicyDefinitions</strong>, or C:\Windows\<strong>PolicyDefinitions</strong>.<br />
+<img alt="" src="../../../../img/img_5b6468988610a.png" /></p>
+<p><img alt="" src="../../../../img/img_58a61a7d2612d.png" /></p>
+<p>Find the Group Policy settings under <strong>Computer Config</strong> | Policies | Administrative Templates | <strong>Citrix Components</strong> | <strong>Virtual Desktop Agent</strong> | <strong>CQI</strong><br />
+<img alt="" src="../../../../img/img_58a61ad442068.png" /></p>
+<p>Version 1.2 adds the GPO settings to the user half of a GPO, which lets you disable CQI for some users and enable it for others.<br />
+<img alt="" src="../../../../img/img_59bcfba26a64f.png" /></p>
+<p><strong>Notification display settings</strong> lets you customize the user notifications or disable them.<br />
+<img alt="" src="../../../../img/img_59bcfc0dae871.png" /></p>
+<p><strong>Connection Threshold Settings</strong> lets you set the notification thresholds.<br />
+<img alt="" src="../../../../img/img_58a61b074ce3e.png" /></p>
+<h3 id="adaptive-transport">Adaptive Transport</h3>
+<p>Adaptive Transport is an HDX/ICA protocol feature that tries to use UDP ports (EDT protocol) if they are open and falls back to TCP ICA if UDP connection is not successful. On higher latency connections, EDT (UDP) tends to perform better than traditional TCP ICA.</p>
+<p>The Citrix Policy setting <strong>HDX Adaptive Transport</strong> defaults to <strong>Preferred</strong>, which means Adaptive Transport is enabled by default.<br />
+<img alt="" src="../../../../img/img_5a1f01fc70532.png" /></p>
+<p>The newer Citrix EDT protocol use <strong>UDP</strong> Ports 1494/2598 for HDX connections to the VDA. The UDP ports should already be open in the VDA's Windows Firewall. In other words, HDX/ICA uses both TCP and UDP ports.<br />
+<img alt="" src="../../../../img/img_58aef09b36398.png" /></p>
+<p>For EDT (and Adaptive Transport) through Citrix Gateway, make sure your Citrix ADC firmware is up to date, preferably 12.1 or newer. Then make sure <strong>DTLS</strong> is enabled on the Gateway Virtual Server. DTLS is the UDP version of SSL/TLS.</p>
+<p>See Citrix Blog Post <a href="https://www.citrix.com/blogs/2024/04/15/whats-new-with-hdx-in-the-2402-ltsr/">What’s new with HDX in the 2402 LTSR</a> for new EDT features in 2402.</p>
+<h3 id="slow-logons">Slow Logons</h3>
+<p>Marvin Neys at <a href="https://discussions.citrix.com/topic/381735-xenapp-slow-logon-times-user-get-black-screen-for-20-seconds/page-7#entry1967006">XenApp slow logon times, user get black screen for 20 seconds</a> at Citrix Discussions says that deleting <strong>HKCU\Software\Microsoft\Windows\CurrentVersion\UFH\SHC</strong> at logoff reduces logon times from 40 seconds to 6 seconds.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Remove-Item HKCU:\Software\Microsoft\Windows\CurrentVersion\UFH\SHC
+</span></code></pre></div>
+<p>For additional logon delay troubleshooting, see Alexander Ollischer <a href="http://blog.ollischer.com/xenappxendesktop-please-wait-for-local-session-manager-message-when-logging-into-rds">XenApp/XenDesktop – “Please Wait For Local Session Manager” message when logging into RDS</a>. He found some Windows Updates that caused a logon delay.<br />
+<img alt="" src="../../../../img/9d8d09141d0a1886008774d0b2080e3c.png" /></p>
+<p>VDA recalculates WMI filters on every reconnect. CTX212610 <a href="https://support.citrix.com/article/CTX212610">Session Reconnect 30 sec Delay - DisableGPCalculation - WMI Filters</a> indicates that recalculation can be disabled by setting HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Reconnect\<strong>DisableGPCalculation</strong> (DWORD) to <strong>1</strong>. Note: this registry value might stop Citrix Policies from being re-evaluated when users reconnect (source = <a href="https://discussions.citrix.com/topic/404366-force-reapply-citrix-polices-cvad-715-cu3-server-2016/#comment-2047462">Citrix Discussions</a>).</p>
+<h3 id="verify-that-the-vda-registered-with-a-delivery-controller">Verify that the VDA registered with a Delivery Controller</h3>
+<ol>
+<li>If you restart the Virtual Delivery Agent machine, or restart the <strong>Citrix Desktop Service</strong>...<br />
+<img alt="" src="../../../../img/f69fa6669e321b6c6ca287d3681c3d91.png" /></li>
+<li>In Event Viewer &gt; <strong>Windows Logs</strong> &gt; <strong>Application</strong> log, you should see an event 1012 from <strong>Citrix Desktop Service</strong> saying that it successfully registered with a delivery controller.<br />
+<img alt="" src="../../../../img/8118a0cb20e7c3ce7fb3a30bd91eac13.png" /></li>
+<li>
+<p>If you don't see successful registration, then you'll need to fix the <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/manage-deployment/vda-registration.html#registry-based">ListOfDDCs</a> registry key.</p>
+<ol>
+<li>See <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/manage-deployment/vda-registration.html">VDA registration with Controllers</a> at Citrix Docs.</li>
+<li>See <a href="https://www.citrix.com/blogs/2018/02/13/the-most-common-vda-registration-issues-troubleshooting-steps/">The Most Common VDA Registration Issues &amp; Troubleshooting Steps</a> at Citrix Blogs.</li>
+<li>You can also run Citrix's <a href="https://support.citrix.com/article/CTX207624">Health Assistant</a> on the VDA.<br />
+<img alt="" src="../../../../img/img_5b89d930d0b22.png" /><br />
+<img alt="" src="../../../../img/img_5b89d997e9cc0.png" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="citrix-workspace-app">Citrix Workspace app</h4>
+<p>If you want to run Workspace app on the VDA machine, then upgrade it to Workspace app 2402 LTSR CU3.</p>
+<p>Download and install Workspace app:</p>
+<ol>
+<li>Download <a href="https://www.citrix.com/downloads/workspace-app/workspace-app-for-windows-long-term-service-release/workspace-app-for-windows-LTSR-Latest.html">Citrix Workspace app 2402 LTSR CU3</a>.<br />
+<img alt="" src="../../../img/wFobAlX2rA7wAAAAABJRU5ErkJggg==" /></li>
+<li>On the VDA, as administrator, run the downloaded <strong>CitrixWorkspaceFullInstaller.exe</strong>.<br />
+<img alt="" src="../../../../img/image-125.png" /></li>
+<li>Wait for prerequisites to install.<br />
+<img alt="" src="../../../../img/image-126.png" /></li>
+<li>In the <em>Welcome to Citrix Workspace app</em> page, click <strong>Continue</strong>.<br />
+<img alt="" src="../../../../img/image-127.png" /></li>
+<li>In the <em>CITRIX LICENSE AGREEMENT</em> page, check the box next to <strong>I agree</strong> and click <strong>Continue</strong>.<br />
+<img alt="" src="../../../../img/image-128.png" /></li>
+<li>In the <em>Add-on(s)</em> page, check the box next to <strong>Enable single sign-on</strong>. The Teams VDI Plugin is usually only needed on the endpoint device, not on the VDA. Click <strong>Install</strong>.<br />
+<img alt="" src="../../../../img/image-129.png" /></li>
+</ol>
+<h3 id="citrix-file-access-204-for-workspace-app-for-chrome-os">Citrix File Access 2.0.4 for Workspace app for Chrome OS</h3>
+<ol>
+<li>If you support Workspace app for Chrome OS (Chromebook) and want published applications to open files on <a href="https://docs.citrix.com/en-us/receiver/chrome/current-release/configure.html#par_anchortitle_bd36">Google Drive</a>, install Citrix File Access on the VDAs. Get it from the <a href="https://www.citrix.com/downloads/workspace-app/citrix-file-access-for-chrome/citrix-file-access-for-chrome-latest.html">Citrix File Access for Chrome</a>.<br />
+<img alt="" src="../../../../img/img_60991981ece89.png" /></li>
+<li>Go to the extracted <strong>Citrix_File_Access_2.0.4</strong> and run <strong>FileAccess.msi</strong>.<br />
+<img alt="" src="../../../../img/img_609919e2eff9c.png" /></li>
+<li>In the <em>Please read the File Access License Agreement</em> page, check the box next to <strong>I accept the terms</strong>, and click <strong>Install</strong>.<br />
+<img alt="" src="../../../../img/89d390fbea55e581f5be399779b8e2f3.png" /></li>
+<li>In the <em>Completed the File Access Setup Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../../img/7d55a900d266c2aa2bffb97b03c0958e.png" /></li>
+<li><strong>File Access</strong> is listed in <strong>Apps &amp; Features</strong> or <strong>Programs and Features</strong> as version 2.0.4.34. 
+    <img alt="" src="../../../../img/img_61893b09d55e0.png" /><br />
+<img alt="" src="../../../../img/img_60991a0ccb7f0.png" /></li>
+<li>File Access has a default list of supported file extensions. The list can be expanded by editing the registry on the VDA. See CTX219983 <a href="https://support.citrix.com/article/CTX219983">Receiver for Chrome Error: Invalid command line arguments: Unable to open the file as it has an unsupported extension</a>.<br />
+<img alt="" src="../../../../img/4252bc1d79d62fb6a2d13b344137a1a6.png" /></li>
+<li>To open a file from Google Drive, right-click the file and open the file using Citrix Workspace app.</li>
+</ol>
+<h3 id="remote-desktop-licensing-configuration">Remote Desktop Licensing Configuration</h3>
+<p>On Windows 2016 and newer RDSH, the only way to configure Remote Desktop Licensing is using group policy (local or domain). This procedure is not needed on virtual desktops.</p>
+<ol>
+<li>For local group policy, run <strong>gpedit.</strong><strong>msc</strong>. Alternatively, you can configure this in a <a href="../group-policy-objects-vda-computer-settings/">domain GPO</a>.<br />
+<img alt="" src="../../../../img/01cdb6f788819d598280df393775ceb7.png" /></li>
+<li>Go to <strong>Computer Configuration</strong> &gt; <strong>Administrative Templates</strong> &gt; <strong>Windows Components</strong> &gt; <strong>Remote Desktop Services</strong> &gt; <strong>Remote Desktop Session Host</strong> &gt; <strong>Licensing</strong>.<br />
+<img alt="" src="../../../../img/9e923eb70e92d9acf2a343e0b7b0f42b.png" /></li>
+<li>Double-click <strong>Use the specified Remote Desktop license servers</strong>. Change it to <strong>Enabled</strong>, and enter the names of the RDS Licensing Servers (typically installed on Delivery Controllers). Click <strong>OK</strong>.<br />
+<img alt="" src="../../../../img/f338fe3cdf8226244c5b2aaf469313f6.png" /></li>
+<li>Double-click <strong>Set the Remote Desktop licensing mode</strong>. Change it to <strong>Enabled</strong> and select <strong>Per User</strong>. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../../img/18ff219221cf935e43d9707e16ebdef0.png" /></li>
+<li>Optionally, you can install the <strong>Remote Desktop Licensing Diagnoser Tool</strong>. In the Server Manager &gt; <strong>Add Roles and Features Wizard</strong>, on the <strong>Features</strong> page, expand <strong>Remote Server Administration Tools</strong>, expand <strong>Role Administration Tools</strong>, expand <strong>Remote Desktop Services Tools</strong>, and select <strong>Remote Desktop Licensing Diagnoser Tool</strong>. Then Finish the wizard.<br />
+<img alt="" src="../../../../img/092687c6c4aff42266bc40accb0669da.png" /></li>
+<li>If it won't install from Server Manager, you can install it from PowerShell by running <code>Install-WindowsFeature rsat-rds-licensing-diagnosis-ui</code>.<br />
+<img alt="" src="../../../../img/7cc50f9afd1d5dbcd80d298909c21449.png" /></li>
+<li>In Server Manager, open the <strong>Tools</strong> menu, expand <strong>Remote Desktop Services</strong> (or <strong>Terminal Services</strong>), and click <strong>Remote Desktop Licensing Diagnoser</strong>.<br />
+<img alt="" src="../../../../img/ad83de636e1ba093cf1e655505dbba2b.png" /><br />
+<img alt="" src="../../../../img/652efc467078a1742b70afd56c661583.png" /></li>
+<li>The Diagnoser should find the license server and indicate the licensing mode. If you're configured for Per User licenses, then it’s OK if there are no licenses installed on the Remote Desktop License Server.<br />
+<img alt="" src="../../../../img/ccd74b07539719a72e922c409491339e.png" /></li>
+</ol>
+<p>Several people in <a href="https://discussions.citrix.com/topic/359099-session-stuck-in-application-prelogon-state/">Citrix Discussions</a> reported the following issue: If you see a message about RD Licensing Grace Period has expired even though RD Licensing is properly configured, see Eric Verdumen <a href="http://www.360ict.nl/blog/no-remote-desktop-licence-server-availible-on-rd-session-host-server-2012/">No remote Desktop Licence Server availible on RD Session Host server 2012</a>. The solution was to delete the REG_BINARY in <strong>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\GracePeriod</strong> only leaving the default. You must take ownership and give admin users full control to be able to delete this value.</p>
+<h3 id="c-drive-permissions">C: Drive Permissions</h3>
+<p>This section is more important for multi-session VDAs.</p>
+<p>The default permissions allow users to store files on the C: drive in places other than their profile.</p>
+<ol>
+<li>Open the <em>Properties</em> dialog box for <strong>C:</strong>.<br />
+<img alt="" src="../../../../img/eced0b3e66b558bd27588454414eb1d8.png" /></li>
+<li>On the <strong>Security</strong> tab, click <strong>Advanced</strong>.<br />
+<img alt="" src="../../../../img/9c79f49eee8c48be950e395c1d84c0c4.png" /></li>
+<li>If UAC is enabled, click <strong>Change permissions</strong>.<br />
+<img alt="" src="../../../../img/2348f21fdc8aa72628a1c979bfa5a942.png" /></li>
+<li>Highlight the line containing <strong>Users</strong> and <strong>Create Folders</strong> and click <strong>Remove</strong>.<br />
+<img alt="" src="../../../../img/52992677916353fb192d2beee53d9026.png" /></li>
+<li>Highlight the line containing <strong>Users</strong> and <strong>Create files</strong> (or <strong>Special)</strong> and click <strong>Remove</strong>. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../../img/a50305b51c4faac88a2c46a01a1b9218.png" /></li>
+<li>Click <strong>Yes</strong> to confirm the permissions change.<br />
+<img alt="" src="../../../../img/30d1572fe2358878c2f0196071eb6651.png" /></li>
+<li>If you see any of these <em>Error Applying Security</em> windows, click <strong>Continue</strong>. This window should appear multiple times.<br />
+<img alt="" src="../../../../img/70ba3257e34a5537c04b8d7c0a3d65a4.png" /></li>
+<li>Click <strong>OK</strong> to close the <strong>C:</strong> drive properties.</li>
+</ol>
+<h3 id="pagefile">Pagefile</h3>
+<p>If this image will be converted to a <a href="../provisioning-services/" title="Provisioning Services">Citrix Provisioning</a> vDisk, then you must ensure the pagefile is smaller than the cache disk. For example, if you allocate 20 GB of RAM to your VDA, and if the cache disk is only 15 GB, then Windows will have a default pagefile size of 20 GB, and Citrix Provisioning will be unable to move it to the cache disk. This causes Citrix Provisioning to cache to server instead of caching to your local cache disk (or RAM).</p>
+<ol>
+<li>
+<p>Open <strong>System</strong>.</p>
+<ol>
+<li>The quickest method of opening advanced system parameters is to run <strong>sysdm.cpl</strong>.<br />
+<img alt="" src="../../../../img/img_618938ca5a8c7.png" /></li>
+<li>In Windows Server 2016 and newer, you can right-click the <strong>Start</strong> button, and click <strong>System</strong>.<br />
+<img alt="" src="../../../../img/f33bd0079b4e25c061a5f3e558522302.png" /></li>
+<li>In Windows 10 1703 or newer (or Windows Server 2019 or newer), search the Start Menu for <strong>advanced system settings</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe53ca2baef.png" /></li>
+<li>Another option is to open File Explorer, right-click <strong>This PC</strong>, and click <strong>Properties</strong>. This works in Windows 10 1703 and newer.<br />
+<img alt="" src="../../../../img/img_59186bdd7f399.png" /></li>
+<li>Click <strong>Advanced system settings</strong>.<br />
+<img alt="" src="../../../../img/img_618938f836041.png" /><br />
+<img alt="" src="../../../../img/92d38eef2889a3a50f05936cf560a6ae.png" /></li>
+<li>On the <strong>Advanced</strong> tab, click the top <strong>Settings</strong> button.<br />
+<img alt="" src="../../../../img/582e445241e26bf4706c807a842edd77.png" /></li>
+<li>On the <strong>Advanced</strong> tab, click <strong>Change</strong>.<br />
+<img alt="" src="../../../../img/08f4d80a7e361055a5ab2c30229fedcd.png" /></li>
+<li>Uncheck the box next to <strong>Automatically manage paging file size for all drives</strong>. Then either turn off the pagefile, or set the pagefile to be smaller than the cache disk. Don’t leave it set to <strong>System managed size</strong>. Click <strong>OK</strong> several times.<br />
+<img alt="" src="../../../../img/fdfd7f98840dfa64c09e129df58bf8f6.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="direct-access-users">Direct Access Users</h3>
+<p>When Citrix Virtual Delivery Agent (VDA) is installed on a machine, non-administrators can no longer RDP to the machine. A new local group called <strong>Direct Access Users</strong> is created on each Virtual Delivery Agent. Add your non-administrator RDP users to this local group so they can RDP directly to the machine.</p>
+<p><img alt="" src="../../../../img/img_618939306f3fe.png" /><br />
+<img alt="" src="../../../../img/img_59186c28704f4.png" /><br />
+<img alt="" src="../../../../img/689ebcf582cede2971ab7cd71c4fa973.png" /></p>
+<p>From CTX228128 <a href="https://support.citrix.com/article/CTX228128">What is the HKLM\Software\Citrix\PortICA\DirectAccessUsers registry function</a>: The <strong>HKLM\Software\Citrix\PortICA\DirectAccessUsers</strong> registry key determines which Local group the VDA references to determine if a user should be allowed Unbrokered RDP access. Members of the Local Administrators group will always be granted access. If the Registry Key does not exist, or gets deleted, VDA will always allow the Unbrokered RDP Connection. The Registry key and local group are created as part of the VDA installation process.</p>
+<h3 id="registry">Registry</h3>
+<p>Links:</p>
+<ul>
+<li>
+<p>Citrix Docs has a list of <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/policies/reference/hdx-registry-settings">HDX features managed through the registry</a>. Example settings:</p>
+<ul>
+<li>Devices - Bloomberg keyboard, execute from client drive, Windows Image Acquisition application allow list</li>
+<li>General - HDX Reducer V4, EDT connection timeout, Rendezvous version (default V2), two-minute warning for idle or active sessions, audio loss tolerant mode</li>
+<li>Content Redirection</li>
+<li>Graphics - GPU acceleration of CUDA and OpenCL, Windows Presentation Foundation (WPF) rendering on GPU</li>
+<li>Multimedia - High-definition webcam streaming</li>
+<li>Citrix Blog Post <a href="https://www.citrix.com/blogs/2024/04/15/whats-new-with-hdx-in-the-2402-ltsr/">What’s new with HDX in the 2402 LTSR</a></li>
+<li>Many of the new features are configured in <a href="../citrix-policy-settings/">Citrix Policy</a>.</li>
+</ul>
+</li>
+</ul>
+<p>New Teams (version 2.1 or newer) no longer needs the <strong>msedgewebview2.exe</strong> registry entry as it is now whitelisted by default in VDA 2402 and newer.</p>
+<h4 id="shellbridge-for-published-apps">ShellBridge for Published Apps</h4>
+<p>ShellBridge is a new Windows feature that fixes the following published app issues:</p>
+<ul>
+<li><a href="https://support.citrix.com/article/CTX267071/password-field-not-displayed-when-publishing-any-office-365-application-such-as-excel-or-word-on-server-2019-or-windows-10">Missing password field in Office apps</a></li>
+<li><a href="https://support.citrix.com/article/CTX214638/outlook-email-toast-notification-does-not-pop-up-in-seamless-published-application">Outlook Toast notifications</a></li>
+<li><a href="https://support.citrix.com/article/CTX263595/server-2019-file-explorer-explorerexe-not-refreshing-data-when-published-as-an-app-or-being-accessed-within-an-app">File Explorer not refreshing</a></li>
+</ul>
+<p><strong>ShellBridge</strong> is enabled by default. If enabled, when users launch published apps, Windows will load background programs, like system tray icons, from the <strong>Run</strong> registry key. These extra processes might prevent sessions from closing after a user closes the published app. More info at CTX573346 <a href="https://support.citrix.com/article/CTX573346/sessions-not-logging-out-after-enabling-shellbridge">Sessions not logging out after enabling Shellbridge</a>.</p>
+<p>You can disable ShellBridge by setting the following registry value. Disabling ShellBridge might prevent Office apps from signing in correctly.</p>
+<ul>
+<li>Key = <code>HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Citrix Virtual Desktop Agent</code><ul>
+<li>Value (DWORD) = <code>ShellBridge</code> = <strong>0</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="black-screen-when-launch-published-apps-on-windows-server-2016">Black Screen when launch Published Apps on Windows Server 2016</h4>
+<p>From CTX225819 <a href="https://support.citrix.com/article/CTX225819">When Launching an Application Published from Windows Server 2016, a Black Screen Appears for Several Seconds Before Application is Visible:</a> Citrix and Microsoft have worked together to deliver code fixes for both Windows Server 2016 and Citrix Virtual Apps. Microsoft is targeting their KB4034661 patch for the third week of August 2017. This fix requires a registry edit to enable.</p>
+<ul>
+<li>Key = <code>HKLM\SOFTWARE\Citrix\Citrix Virtual Desktop Agent</code><ul>
+<li>Value (DWORD) = <code>DisableLogonUISuppression</code> = <strong>0</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="faster-login">Faster Login</h4>
+<p>From CTP James Rankin <a href="https://james-rankin.com/features/the-ultimate-guide-to-windows-logon-optimizations-part-6/">The ultimate guide to Windows logon time optimizations, part #6</a>: <strong>DelayedDesktopSwitchTimeout</strong> tells the logon process to wait for a shorter time before switching from session 0 to the actual session in use.</p>
+<ul>
+<li>Key = <code>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code><ul>
+<li>Value (DWORD) = <code>DelayedDesktopSwitchTimeout</code>  = <strong>1</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="published-app-launch-timeout">Published App Launch Timeout</h4>
+<p>From CTX128009 <a href="https://support.citrix.com/article/CTX128009/published-application-fails-to-appear">Published Application Fails to Appear</a>: By default, VDA only waits 60 seconds for a published app to start. This is frequently too short.</p>
+<ul>
+<li>Key = <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\wfshell\TWI</code><ul>
+<li>Value (DWORD) = <code>ApplicationLaunchWaitTimeoutMS</code> = <strong>180000</strong> (time-out, in milliseconds)</li>
+</ul>
+</li>
+</ul>
+<h4 id="screen-saver">Screen Saver</h4>
+<p>From Citrix CTX205214 <a href="https://support.citrix.com/article/CTX205214">Screensaver Not Working in XenDesktop</a>: By default, Screen Saver doesn't work on Desktop OS. To enable it, on the VDA, configure the following registry value:</p>
+<ul>
+<li>Key = <code>HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Graphics</code><ul>
+<li>Value (DWORD) = <code>SetDisplayRequiredMode</code> = <strong>0</strong></li>
+</ul>
+</li>
+</ul>
+<p>You might also have to enable the Citrix Policy setting named <strong>Allow windows screen lock</strong>. This setting was added in VDA 2402. 
+<img alt="" src="../../../../img/image-133.png" /></p>
+<h4 id="logon-disclaimer-window-size">Logon Disclaimer Window Size</h4>
+<p>From CTX231945 <a href="https://support.citrix.com/article/CTX231945/how-to-modify-logonui-to-view-windows-disclaimer-message-in-full-size-when-launching-published-applications">How to Modify LogonUI to view Windows Disclaimer Message in Full Size when Launching Published Applications</a>: If your logon disclaimer window has scroll bars, set the following registry values:</p>
+<ul>
+<li>Key = <code>HKEY_LOCAL_MACHINE\Software\Wow6432node\Citrix\CtxHook\AppInit_DLLS\Multiple Monitor Hook</code><ul>
+<li>Value (DWORD) = <code>LogonUIWidth</code> = <strong>800</strong></li>
+<li>Value (DWORD) = <code>LogonUIHeight</code> = 6<strong>00</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="login-timeout">Login Timeout</h4>
+<p>From Citrix CTX203760 <a href="https://support.citrix.com/article/CTX203760">VDI Session Launches Then Disappears</a>: VDA, by default, only allows 180 seconds to complete a logon operation. The timeout can be increased by setting the following:</p>
+<ul>
+<li>Key = <code>HKLM\SOFTWARE\Citrix\PortICA</code><ul>
+<li>Value (DWORD) = <code>AutoLogonTimeout</code> = decimal <strong>240</strong> or higher (up to 3599).</li>
+</ul>
+</li>
+</ul>
+<h4 id="workspace-app-for-html5chrome-upload-folder">Workspace app for HTML5/Chrome Upload Folder</h4>
+<p>The Workspace app for HTML5 (or Chrome) lets upload files.<br />
+<img alt="" src="../../../../img/d65fc8afb2eb38f229c5377611df267c.png" /></p>
+<p>By default, the user is prompted to select a upload location. If you use the Upload feature multiple times, the last selected folder is not remembered.<br />
+<img alt="" src="../../../../img/6431493910a391e07d48b1e4e6e358b2.png" /></p>
+<p>Citrix CTX217351 <a href="https://support.citrix.com/article/CTX217351">How to Customize File Upload and Download Using Receiver for HTML5 and Receiver for Chrome</a>. You can specify a default uploads location by editing <strong>HKLM\Software\Citrix\FileTransfer\UploadFolderLocation</strong> on the VDA. Environment variables are supported. When this value is configured, users are no longer prompted to select an upload location. The change takes effect at next logon.<br />
+<img alt="" src="../../../../img/dbd25f445cec746f99b655f602b9a261.png" /></p>
+<p>Note: HTML5/Chrome Workspace app also adds a <strong>Save to My Device</strong> location to facilitate downloads.<br />
+<img alt="" src="../../../../img/e5d8850b3b5cae1c09734b1c9720db07.png" /></p>
+<h3 id="legacy-client-drive-mapping">Legacy Client Drive Mapping</h3>
+<p>Citrix CTX127968 <a href="https://support.citrix.com/article/CTX127968">How to Enable Legacy Client Drive Mapping Format on XenApp</a>: Citrix Client Drive Mapping no longer uses drive letters and instead they appear as local disks. This is similar to RDP drive mapping.<br />
+<img alt="" src="../../../../img/edc981c426e2274f16880a20c4a158fe.png" /></p>
+<p>The old drive letter method can be enabled by setting the registry value:</p>
+<ul>
+<li>
+<p>Key = <code>HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\UncLinks</code> (create the key)</p>
+<ul>
+<li>Value (DWORD) = <code>UNCEnabled</code> = 0<br />
+<img alt="" src="../../../../img/08e5cafd61c8d08153e8e09cc90501ad.png" /></li>
+</ul>
+</li>
+</ul>
+<p>When you reconnect, the client drives will be mapped as drive letters (starts with V: and goes backwards).<br />
+<img alt="" src="../../../../img/dc215699a375442bc8c6b8642e163a20.png" /></p>
+<h3 id="print-driver-for-maclinux-clients">Print Driver for Mac/Linux Clients</h3>
+<p>Workspace app for Mac version 2112 and newer support PDF printing instead of Postscript printing. With PDF, it's no longer necessary to install the HP Color LaserJet 2800 Series PS driver on the VDA. Citrix Policy setting <strong>Universal driver preference</strong> must be adjusted to enable PDF printing as higher priority than PS (postscript) printing. See <a href="https://docs.citrix.com/en-us/citrix-workspace-app-for-mac/devices/printing">Citrix Docs</a> for more details.</p>
+<p><img alt="" src="../../../../img/img_6229e8bfe2430.png" /></p>
+<p>For Linux clients or older Mac clients, from CTX140208 <a href="https://support.citrix.com/article/CTX140208">Client printing from Mac and Linux clients on Windows 10, Server 2012 R2, and Server 2016</a>. By default, non-Windows clients cannot map printers due to a missing print driver on the VDA machine.</p>
+<ol>
+<li>Download the HP Color LaserJet 2800 Series PS driver directly from <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=hp%20color%20laserjet%202800">Microsoft Catalog</a> as detailed at CTX283355 <a href="https://support.citrix.com/article/CTX283355">Client Printing from Linux/MAC is not working on Windows Server 2016 and 2019</a>. The Catalog is at <a href="https://www.catalog.update.microsoft.com/">https://www.catalog.update.microsoft.com/</a>. Then search for <strong>hp color laserjet 2800</strong>. Pick the 6.1.7600.16385 driver version<br />
+<img alt="" src="../../../../img/img_6019281088038.png" /></li>
+<li>Extract the .cab file using 7-zip or similar.<br />
+<img alt="" src="../../../../img/img_6019283f515fc.png" /></li>
+<li>In Windows 10 1803+, open <strong>Printers &amp; scanners</strong>. On the right (or scroll down) is a link to <strong>Print Server Properties</strong>.<br />
+<img alt="" src="../../../../img/img_6189396cb7f95.png" /><br />
+<img alt="" src="../../../../img/img_5bd2371810ebc.png" /></li>
+<li>
+<p>In older versions of Windows, you can get to <strong>Print server properties</strong> from <strong>Devices and Printers</strong>.</p>
+<ol>
+<li>In Windows prior to Windows 10 1703, click Start, and run <strong>Devices and Printers</strong>.<br />
+<img alt="" src="../../../../img/544e22fa544d5d375f8d58fec0e909b0.png" /></li>
+<li>In Windows 10 1703, open <strong>Printers &amp; scanners</strong>, then scroll down, and click <strong>Devices and printers</strong>.<br />
+<img alt="" src="../../../../img/img_592419ffbdd20.png" /><br />
+<img alt="" src="../../../../img/img_59241a155ec58.png" /></li>
+<li>In the <strong>Printers</strong> section, highlight a local printer (e.g. Microsoft XPS Document Writer). Then in the toolbar, click <strong>Print server properties</strong>.<br />
+<img alt="" src="../../../../img/img_59241a2b579be.png" /></li>
+<li>Switch to the <strong>Drivers</strong> tab and click <strong>Change Driver Settings</strong>.<br />
+<img alt="" src="../../../../img/d150b739ba7de8ce656d3f0e11e9bfc5.png" /></li>
+<li>Then click <strong>Add</strong>.<br />
+<img alt="" src="../../../../img/d48b2270832aa7aead20b9ada59f7aae.png" /></li>
+<li>In the <em>Welcome to the Add Printer Driver Wizard</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/85c40db5dc35f0a5e69ca56c24e94d12.png" /></li>
+<li>In the <em>Processor Selection</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/9a854c72740deea6af0591c16fa5cdb7.png" /></li>
+<li>In the <em>Printer Driver Selection</em> page, click <strong>Have Disk</strong> and browse to the .inf that you extracted from the .cab file.<br />
+<img alt="" src="../../../../img/img_6019288581e97.png" /><br />
+<img alt="" src="../../../../img/img_601928b9d26e5.png" /></li>
+<li>Select <strong>HP Color LaserJet 2800 Series PS</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../../../img/img_601928d13b29c.png" /></li>
+<li>In the <em>Completing the Add Printer Driver Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../../../img/f7df4512ce2ebb50461bb4399afc2755.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="ssl-for-vda">SSL for VDA</h3>
+<p>If you intend to use HTML5 Workspace app directly to VDAs, install certificates on the VDAs so that the browsers can connect WebSockets to the VDAs on TCP/SSL 443. Alternatively, HTML5 users can use Citrix Gateway ICA Proxy without installing any certs on the VDAs.</p>
+<ul>
+<li>If you install SSL certificates on the VDAs, you can enforce encrypted SSL connections from normal Workspace apps to the VDAs instead of the default unencrypted (or RC5) ICA protocol.</li>
+<li><a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/hdx-transport/hdx-direct.html">HDX Direct</a> is a preview feature that uses self-signed certs instead of CA-issued certs.</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>Each Virtual Delivery Agent needs a machine certificate that matches the machine name. This is feasible for a small number of persistent VDAs. For non-persistent VDAs, you’ll need some automatic means for creating machine certificates every time they reboot.</li>
+<li>As detailed in the following procedure, use PowerShell on the Delivery Controller to enable SSL for the Delivery Group. This forces SSL for every VDA in the Delivery Group, which means every VDA in the Delivery Group must have SSL certificates installed.</li>
+</ul>
+<p>The following instructions for manually enabling SSL on VDA can be found at <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/tls.html#configure-tls-on-a-vda-using-the-powershell-script">Configure TLS on a VDA using the PowerShell script</a> at Citrix Docs.</p>
+<ol>
+<li>On the VDA machine, run <strong>certlm.msc</strong>.</li>
+<li>Right-click <strong>Personal</strong>, expand <strong>All Tasks</strong>, and click <strong>Request New Certificate</strong> to request a certificate from your internal Certificate Authority. You can use either the <strong>Computer</strong> template or the <strong>Web Server</strong> template.<br />
+<img alt="" src="../../../../img/fbd0c0083d2672827747e0be0df3c82a.png" /><ul>
+<li>You can also use group policy to enable Certificate Auto-Enrollment for the VDA computers.<br />
+<img alt="" src="../../../../img/c770f51ebcc6e81b884edceb5ad7d411.png" /></li>
+</ul>
+</li>
+<li>Browse to the Citrix Virtual Apps and Desktops ISO. In the <strong>Support\Tools\SslSupport</strong> folder, shift+right-click the <strong>Enable-VdaSSL.ps1</strong> script, and click <strong>Copy as path</strong>.<br />
+<img alt="" src="../../../../img/9bf22273cfbce91a04d95e1f9faa7e03.png" /></li>
+<li>Run PowerShell as administrator (elevated).<br />
+<img alt="" src="../../../../img/ab92e1c072085d0533c105cd560e539b.png" /></li>
+<li>Run the command <strong>Set-ExecutionPolicy unrestricted</strong>. Enter <strong>Y</strong> to approve.<br />
+<img alt="" src="../../../../img/e9e49cf0a8a6def39301dae578e51062.png" /></li>
+<li>In the PowerShell prompt, type in an ampersand (<strong>&amp;</strong>), and a space.</li>
+<li>Right-click the PowerShell prompt to paste in the path copied earlier.</li>
+<li>At the end of the path, type in <code>-Enable</code></li>
+<li>If there’s only one certificate on this machine, press <strong>Enter</strong>.<br />
+<img alt="" src="../../../../img/img_58aef44a6b6ae.png" /></li>
+<li>
+<p>If there are multiple viable certificates, then you’ll need to specify the thumbprint of the certificate you want to use. Open the <strong>Certificates</strong> snap-in, open the properties of the machine certificate you want to use, and copy the Thumbprint from the <strong>Details</strong> tab.<br />
+<img alt="" src="../../../../img/b6abe5bf745b2405ae3ee08684897d34.png" /></p>
+<p>In the PowerShell prompt, at the end of the command, enter <code>‑CertificateThumbPrint</code>, add a space, and type quotes (<code>"</code>).</p>
+<p>Right-click the PowerShell prompt to paste the thumbprint.</p>
+<p>Type quotes (<code>"</code>) at the end of the thumbprint. Then remove all spaces from the thumbprint. The thumbprint needs to be wrapped in quotes.<br />
+<img alt="" src="../../../../img/img_58aef46216b4f.png" /></p>
+</li>
+<li>
+<p>There are additional <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/tls.html#syntax">switches</a> to specify minimum SSL Version and Cipher Suites. <img alt="" src="../../../../img/image-130.png" /></p>
+</li>
+<li>Press &lt;<strong>Enter</strong>&gt; to run the <strong>Enable-VdaSSL.ps1</strong> script.</li>
+<li>Press <strong><Y></strong> twice to configure the ACLs and Firewall.</li>
+<li>You might have to reboot before the settings take effect.<br />
+<img alt="" src="../../../../img/img_58aef49f978a1.png" /></li>
+<li>Login to a Delivery Controller and run PowerShell as Administrator (elevated).</li>
+<li>Run the command <code>asnp Citrix.*</code><br />
+<img alt="" src="../../../../img/216cbbb15c288b5345e898f8368d10f9.png" /></li>
+<li>
+<p>Enter the command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Get-BrokerAccessPolicyRule -DesktopGroupName &#39;&lt;delivery-group-name&gt;&#39; | Set-BrokerAccessPolicyRule ‑HdxSslEnabled $true
+</span></code></pre></div>
+<p>where <em><delivery-group-name></em> is the name of the Delivery Group containing the VDAs.<br />
+<img alt="" src="../../../../img/cdedfae4fd1f6cc341fe0cc24e310f54.png" /></p>
+</li>
+<li>
+<p>You can run <code>Get-BrokerAccessPolicyRule -DesktopGroupName '_&lt;delivery-group-name&gt;_'</code> to verify that HDX SSL is enabled.<br />
+<img alt="" src="../../../../img/a308b9704374e3fcc7098bf680a3ffaa.png" /></p>
+</li>
+<li>
+<p>Also run the following command to enable DNS resolution.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Set-BrokerSite –DnsResolutionEnabled $true
+</span></code></pre></div>
+<p><img alt="" src="../../../../img/2b8e582213a278b24562436876db16da.png" /></p>
+</li>
+<li>
+<p>Since the UDP-based EDT protocol is enabled by default, open port UDP 443 to the VDAs.</p>
+</li>
+</ol>
+<p>You should now be able to connect to the VDA using the HTML5 Workspace app from internal machines.</p>
+<p>The Citrix blog post <a href="https://www.citrix.com/blogs/2014/12/11/how-to-secure-ica-connections-in-xenapp-and-xendesktop-7-6-using-ssl/">How To Secure ICA Connections in XenApp and XenDesktop 7.6 using SSL</a> has a method for automatically provisioning certificates for non-persistent virtual desktops by enabling certificate auto-enrollment and setting up a task that runs after the certificate has been enrolled.</p>
+<ul>
+<li>
+<p>From Russ Hargrove at <a href="https://discussions.citrix.com/topic/387565-a-note-on-vda-certificates-in-714/#entry1975584">A note on VDA certificates in 7.14</a> at Citrix Discussions: Citrix installs a new "Citrix XenApp/XenDesktop HDX Service" certificate in the Personal store which breaks the automation of the <strong>Enable-VdaSSL.ps1</strong> script. To fix the problem, modify the task scheduler powershell script to:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Enable-VdaSSL.ps1 -Enable -CertificateThumbPrint (Get-ChildItem -path cert:\LocalMachine\My | Where-Object -FilterScript {$_.Subject -eq &quot;&quot;} | Select-Object -ExpandProperty Thumbprint) -Confirm:$False
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="anonymous-accounts">Anonymous Accounts</h3>
+<p>If you intend to publish apps anonymously then follow this section.</p>
+<ol>
+<li>Anonymous accounts are created locally on the VDAs. When VDA creates Anon accounts, it gives them an idle time as specified at <strong>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\AnonymousUserIdleTime</strong>. The default is 10 minutes. Adjust as desired.<br />
+<img alt="" src="../../../../img/0a08ae2399d19f6b8a6ab8445a63bd2f.png" /></li>
+<li>Pre-create the Anon accounts on the VDA by running <code>**"C:\Program Files\Citrix\ICAConfigTool\CreateAnonymousUsersApp.exe"**</code>. If you don’t run this tool, then anonymous users can't login.<br />
+<img alt="" src="../../../../img/c104b09c5cddd9479bcf68f4a24f1c20.png" /></li>
+<li>You can see the local Anon accounts by opening <strong>Computer Management</strong>, expanding <strong>System Tools</strong>, expanding <strong>Local Users and Groups</strong> and clicking <strong>Users</strong>.<br />
+<img alt="" src="../../../../img/537c93e309442e8e5b7fedb8c9fcfc3a.png" /></li>
+<li>If you want profiles for anonymous users to delete at logoff, then you'll need to add the local Anon users to the local <strong>Guests</strong> group.<br />
+<img alt="" src="../../../../img/img_59d114a90f906.png" /></li>
+<li>If you open one of the accounts, on the <strong>Sessions</strong> tab, notice that idle timeout defaults to <strong>10 minutes</strong>. Feel free to change it.<br />
+<img alt="" src="../../../../img/7171ab9125872a3f86eb9f628a33ddb8.png" /></li>
+</ol>
+<h4 id="group-policy-for-anonymous-users">Group Policy for Anonymous Users</h4>
+<p>Since Anonymous users are local accounts on each Virtual Delivery Agent, domain-based GPOs will not apply. To work around this limitation, you’ll need to edit the local group policy on each Virtual Delivery Agent.</p>
+<ol>
+<li>On the Virtual Delivery Agent, run <strong>mmc.exe</strong>.</li>
+<li>Open the <strong>File</strong> menu, and click <strong>Add/Remove Snap-in</strong>.<br />
+<img alt="" src="../../../../img/e98d96c8d06aef5a398674d9ae9df55e.png" /></li>
+<li>Highlight <strong>Group Policy Object Editor</strong>, and click <strong>Add</strong> to move it to the right.<br />
+<img alt="" src="../../../../img/fee8f813506d6fbfbc59cee97b24af3a.png" /></li>
+<li>In the <em>Welcome to the Group Policy Wizard</em> page, click <strong>Browse</strong>.<br />
+<img alt="" src="../../../../img/7423fb56e1dc59d50f114d143bf0685c.png" /></li>
+<li>On the <strong>Users</strong> tab, select <strong>Non-Administrators</strong>.<br />
+<img alt="" src="../../../../img/b475182f1880b731c1e39feebcb5a870.png" /></li>
+<li>Click <strong>Finish</strong>.<br />
+<img alt="" src="../../../../img/ef38d4fd2f25458b5c9217d0d416747a.png" /></li>
+<li>Now you can <a href="../group-policy-objects-vda-user-settings/#lockdown">configure group policy to lock down sessions</a> for anonymous users. Since this is a local group policy, you’ll need to repeat the group policy configuration on every Virtual Delivery Agent image. Also, Group Policy Preferences is not available in local group policy.</li>
+</ol>
+<h3 id="antivirus">Antivirus</h3>
+<p>Install antivirus using your normal procedure. Instructions vary for each Antivirus product.</p>
+<p>Microsoft’s virus scanning recommendations (e.g., exclude group policy files) - <a href="https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-runni">http://support.microsoft.com/kb/822158</a>.</p>
+<p>Every antivirus vendor has their own guidance for VDI. Search their knowledgebase for "non-persistent", "VDI", or "clones".</p>
+<h4 id="citrixs-recommended-antivirus-exclusions">Citrix’s Recommended Antivirus Exclusions</h4>
+<p>Citrix Tech Zone <a href="https://docs.citrix.com/en-us/tech-zone/build/tech-papers/antivirus-best-practices.html#antivirus-exclusions">Endpoint Security and Antivirus Best Practices</a>: provides guidelines for configuring antivirus software in Citrix Virtual Apps and Desktops environments.</p>
+<p>Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/12/02/citrix-recommended-antivirus-exclusions/">Citrix Recommended Antivirus Exclusions</a>: the goal here is to provide you with a consolidated list of recommended antivirus exclusions for your Citrix virtualization environment focused on the key processes, folders, and files that we have seen cause issues in the field:</p>
+<ul>
+<li>Set real-time scanning to scan local drives only and not network drives</li>
+<li>Disable scan on boot</li>
+<li>Remove any unnecessary antivirus related entries from the Run key</li>
+<li>Exclude the pagefile(s) from being scanned</li>
+<li>Exclude Windows event logs from being scanned</li>
+<li>Exclude IIS log files from being scanned</li>
+</ul>
+<p>See the <a href="https://www.citrix.com/blogs/2016/12/02/citrix-recommended-antivirus-exclusions/">Blog Post</a> for exclusions for each Citrix component/product including: StoreFront, VDA, Controller, and Citrix Provisioning. The Blog Post also has links to additional KB articles on antivirus.</p>
+<h4 id="windows-defender-antivirus">Windows Defender Antivirus</h4>
+<p><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus">Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment</a> - Microsoft Docs</p>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-defender-atp/configuring-microsoft-defender-antivirus-for-non-persistent-vdi/ba-p/1489633">Configuring Microsoft Defender Antivirus for non-persistent VDI machines</a> - Microsoft Blog</p>
+<p>Disable <strong>Network protection</strong> and configure Citrix's antivirus exclusions (source = Citrix CTX319676 <a href="https://support.citrix.com/article/CTX319676">Users sessions are getting disconnected - Connection Interrupted</a>)</p>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-defender-atp/onboarding-and-servicing-non-persistent-vdi-machines-with/ba-p/1360721">Onboarding and servicing non-persistent VDI machines with Microsoft Defender ATP</a><br />
+<img alt="" src="../../../../img/img_5eb356bce1e7c.png" /></p>
+<h3 id="optimize-performance">Optimize Performance</h3>
+<h4 id="citrix-optimizer">Citrix Optimizer</h4>
+<p>Download <a href="https://support.citrix.com/article/CTX224676">Citrix Optimizer</a> and run it.</p>
+<ul>
+<li>Citrix Blog Post <a href="https://www.citrix.com/blogs/2019/11/13/citrix-optimizer-2-6-whats-new/">Citrix Optimizer 2.6 – What’s new</a>.</li>
+<li><a href="https://www.techdrabble.com/citrix/35-citrix-optimizer-community-template-marketplace">Citrix Optimizer Community Template Marketplace</a> - for more templates, add the Community Template Marketplace.<br />
+<img alt="" src="../../../../img/img_5cfbf68f60103.png" /><br />
+<img alt="" src="../../../../img/img_5cfbf6a8c9ec2.png" /></li>
+<li>Select a template (or download one from the Marketplace). Then click <strong>Optimize</strong>.<br />
+<img alt="" src="../../../../img/img_5cfbf6397aa6f.png" /><br />
+<img alt="" src="../../../../img/img_5c19204822de0.png" /></li>
+<li>To roll back Citrix Optimizer, see Citrix Blog Post <a href="https://www.citrix.com/blogs/2018/10/12/citrix-optimizer-how-to-roll-back-changes/">Citrix Optimizer: How to Roll Back Changes</a>.</li>
+</ul>
+<p>James Rankin <a href="https://4sysops.com/archives/improving-windows-10-logon-time/">Improving Windows 10 logon time</a>:</p>
+<ul>
+<li>Use <strong>Remove-AppXProvisionedPackage</strong> to remove Modern apps. See the article for a list of apps to remove. Also see James Rankin <a href="http://appsensebigot.blogspot.com/2016/09/everything-you-wanted-to-know-about_12.html">Everything you wanted to know about virtualizing, optimizing and managing Windows 10...but were afraid to ask - part #3: MODERN APPS</a></li>
+<li>Import a Standard <strong>Start Tiles layout</strong> (Export-StartLayout)</li>
+<li>Create a template user profile</li>
+</ul>
+<p>David Wilkinson links:</p>
+<ul>
+<li><a href="https://wilkyit.com/2017/05/08/citrix-xendesktop-and-windows-10-optimisation-script-2/">Citrix XenDesktop and Windows 10 Optimisation Script</a> - "Optimise Windows 10 in XenDesktop based environment as per citrix optimisation recommendations/Various blogs and my own experience in running citrix environments."<br />
+<img alt="" src="../../../../img/img_5918b14ec7e56.png" /></li>
+<li><a href="https://wilkyit.com/2017/04/28/citrix-xenapp-and-windows-server-2016-optimisation-script/">Citrix XenApp and Windows Server 2016 – Optimisation Script</a> - "Optimise Windows Server 2016 in XenApp/RDS based environment as per citrix optimisation Guide in 2008 R2/Various blogs and my own experience in running citrix environments."<br />
+<img alt="" src="../../../../img/img_5918b183983d5.png" /></li>
+</ul>
+<p>Citrix Links:</p>
+<ul>
+<li>
+<p>CTX232313 <a href="https://support.citrix.com/article/CTX232313">Citrix Provisioning Services: Slow Login Performance with Windows 10 VDA Machines</a> says that if you removed all Store apps, then the <strong>Network Location Awareness Service</strong> can be disabled.</p>
+<ul>
+<li>Or enable the local group policy setting <strong>Computer Configuration</strong> | Administrative Templates | <strong>Network</strong> | <strong>Network Isolation</strong> | <strong>Subnet definitions are authoritative</strong>.<br />
+<img alt="" src="../../../../img/img_5a7cbcb400849.png" /></li>
+</ul>
+</li>
+</ul>
+<p>Microsoft links:</p>
+<ul>
+<li><a href="https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool">Windows Virtual Desktop Optimization Tool (VDOT)</a> - Github<br />
+<img alt="" src="../../../../img/image-132.png" /></li>
+<li>Microsoft Docs <a href="https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004">Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role</a><br />
+<img alt="" src="../../../../img/image-131.png" /></li>
+<li>Microsoft Docs <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations">Recommended settings for VDI desktops</a> contains a list of settings with their Default Value and Recommended value for VDI use.</li>
+<li>Microsoft TechNet Blog <a href="https://blogs.technet.microsoft.com/secguide/2017/05/29/guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience/">Guidance on Disabling System Services on Windows Server 2016 with Desktop Experience</a> contains a spreadsheet with a list of services categorized as follows:<br />
+<img alt="" src="../../../../img/img_593090b25758a.png" /></li>
+</ul>
+<p>Optimization Notes:</p>
+<ul>
+<li>If this machine is provisioned using Citrix Provisioning, do not disable the <strong>Shadow Copy</strong> services.</li>
+<li>Citrix CTX213540 <a href="https://support.citrix.com/article/CTX213540">Citrix UPS Printers are not visible via Control Panel, Devices And Printers</a> - don't disable the <strong>Device Setup Manager</strong> Service</li>
+<li>Citrix CTX131995 <a href="https://support.citrix.com/article/CTX131995">User Cannot Launch Application in Seamless Mode in a Provisioning Services Server when XenApp Optimization Best Practices are Applied</a>. Do not enable NtfsDisable8dot3NameCreation.</li>
+</ul>
+<h3 id="applications">Applications</h3>
+<p>Choose installers that install to <strong>C:\Program Files</strong> instead of to <strong>%appdata%</strong> or <strong>%localappdata%</strong>. Search for <strong>VDI</strong> or <strong>Enterprise</strong> versions of the following applications. These VDI versions do not auto-update, so you'll have to update them manually.</p>
+<ul>
+<li>Google Chrome - <a href="https://chromeenterprise.google/browser/download/">Chrome Enterprise</a></li>
+<li>Microsoft Edge - <a href="https://www.microsoft.com/en-us/edge/business/download">Edge for Business</a></li>
+<li>Microsoft Teams - <a href="https://docs.microsoft.com/en-us/microsoftteams/teams-for-vdi#install-or-update-the-teams-desktop-app-on-vdi">Teams for VDI</a></li>
+<li>Microsoft OneDrive - <a href="https://docs.microsoft.com/en-us/onedrive/per-machine-installation">Install the sync app per machine</a></li>
+<li>Zoom - <a href="https://support.zoom.us/hc/en-us/articles/360031096531-Getting-Started-with-VDI">Zoom VDI</a></li>
+<li>WebEx - <a href="https://www.webex.com/downloads/teams-vdi.html">WebEx VDI</a></li>
+<li>Cisco Jabber - <a href="https://www.webex.com/downloads/jabber/jabber-vdi.html">Jabber VDI</a></li>
+<li>Etc.</li>
+</ul>
+<h3 id="seal-and-shut-down">Seal and Shut Down</h3>
+<p>If this VDA will be a master image in a <a href="../catalogs-delivery-groups/#mcs">Machine Creation Services</a> or <a href="../provisioning-services/" title="Provisioning Services">Citrix Provisioning</a> catalog, after the master is fully prepared (including applications), do the following:</p>
+<ol>
+<li>Go to the properties of the C: drive and run <strong>Disk Cleanup</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe58d63c7fd.png" /></li>
+<li>If Disk Cleanup is missing, you can run <strong>cleanmgr.exe</strong> instead.<br />
+<img alt="" src="../../../../img/e532d0e5d6dc4a51580fd674d5482e21.png" /></li>
+<li>
+<p>Windows 10 1703 and newer has a new method for cleaning up temporary files.</p>
+<ol>
+<li>Right-click the Start button and click <strong>System</strong>.</li>
+<li>Click <strong>Storage</strong> on the left and click <strong>This PC (C:)</strong> on the right.<br />
+<img alt="" src="../../../../img/img_5dfe5934f2580.png" /></li>
+<li>Click <strong>Temporary Files</strong>.<br />
+<img alt="" src="../../../../img/img_5918d9aae8c85.png" /></li>
+<li>Check boxes and click <strong>Remove files</strong>.<br />
+<img alt="" src="../../../../img/img_5dfe599a87058.png" /></li>
+<li>On the <strong>Tools</strong> tab of the local C: drive Properties, click <strong>Optimize</strong> to defrag the drive.<br />
+<img alt="" src="../../../../img/e039b47b32865ae18b59f354ceda2481.png" />`</li>
+<li>If KMS Server licensing, run <strong>slmgr.</strong><strong>vbs /dlv</strong> and make sure it is licensed with KMS Server and has at least one rearm remaining. It is not necessary to manually rearm licensing since MCS will do it automatically.<br />
+<img alt="" src="../../../../img/5ce8100a3870503e1b3ecb4d698c6907.png" /></li>
+<li>Run <strong>Delprof2</strong> to clean up local profiles. Get it from <a href="https://helgeklein.com/download/">http://helgeklein.com/download/</a>.<br />
+<img alt="" src="../../../../img/img_58aef56b51570.png" /></li>
+<li>Machine Creation Services and Citrix Provisioning require DHCP.<br />
+<img alt="" src="../../../../img/img_58aef5a1d863a.png" /></li>
+<li>Session hosts (RDSH) commonly have DHCP reservations.<br />
+<img alt="" src="../../../../img/9048549e32fc0e9f0a925e24b861312b.png" /></li>
+<li><a href="https://eucweb.com/download-bis-f">Base Image Script Framework (BIS-F)</a> automates many sealing tasks. The script is configurable using Group Policy.<br />
+<img alt="" src="../../../../img/img_593316b719c4a.png" /><img alt="" src="../../../../img/img_5933173c3029d.png" /></li>
+<li>Shut down the master image. You can now use Studio (<a href="../catalogs-delivery-groups/#mcs">Machine Creation Services</a>) or <a href="../provisioning-services/" title="Provisioning Services">Citrix Provisioning</a> to create a catalog of linked clones.<br />
+<img alt="" src="../../../../img/349d6d2dc56f7c9cdc7b55112a76cea0.png" /></li>
+</ol>
+</li>
+</ol>
+<h3 id="uninstall-vda">Uninstall VDA</h3>
+<p>Uninstall the VDA from <strong>Apps &amp; Features</strong> or <strong>Programs and Features</strong>.</p>
+<p>Then see CTX209255 <a href="https://support.citrix.com/article/CTX209255">VDA Cleanup Utility</a>.</p>
+<p>To run the VDA Cleanup Tool silently:</p>
+<ol>
+<li>Execute <strong>VDACleanupUtility.exe /silent /noreboot</strong> to suppress reboot.</li>
+<li>Once the VDACleanupUtility has finished executing, setup Auto logon for the current user.</li>
+<li>Reboot.</li>
+<li>After reboot, tool will launch automatically to continue Cleanup.</li>
+</ol>
+<p>Another option is to delete <strong>CitrixVdaCleanup</strong> value under <strong>HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce</strong>. Then after reboot, run <strong>VDACleanupUtility.exe /silent /reboot</strong> to indicate that it's running after the reboot.</p>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li><a href="../pvs-master-device-preparation/" title="PvS Master Device – Preparation">Citrix Provisioning Master Device Preparation</a></li>
+<li><a href="../catalogs-delivery-groups/" title="Catalogs / Delivery Groups">Catalogs / Delivery Groups</a></li>
+<li><a href="../citrix-policy-settings/">Citrix Policy Settings</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

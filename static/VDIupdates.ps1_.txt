@@ -1,0 +1,44 @@
+﻿# NON-PERSISTENT VDI (SERVER AND DESKTOP OS) DEFENDER OFFLOADING CONFIGURATION
+# This script is based on the following Microsoft Article https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus?view=o365-worldwide#download-and-unpackage-the-latest-updates
+#
+# Non-Persistent VDI Windows Defender offload download script
+# Created by Jeff Riechers
+# Downloaded from https://www.jeffriechers.com
+# For additional steps needed to prep the environment visit my site for more information
+#
+# I recommend setting this script up on multiple servers and use DFS Namespaces (not replication) to load balance this for redundancy and performance.
+# If downloaded script fails to run, make sure it is unblocked on properties of the script
+# To execute this via Task Scheduler create a New Task with multiple Daily triggers.  I recommend at least 3 per day.
+# For Action use powershell.exe as the program/script and "-file D:\AV_Scripts\VDIupdates.ps1 -executionpolicy bypass" for the arguments.  Also set the start in to the Directory where definitions are deployed.
+# Don't store the AV script in the same directory as the Definitions.  This is for both security, and to prevent it from being removed as part of the cleanup.
+#
+# SCRIPT STARTS NOW
+#
+# DELETE OLD DEFINITIONS
+# Set how many days back you wish to keep vdi updates, with -1 it will delete anything older than the current day.
+
+$age = (Get-Date).AddDays(-1)
+
+# Define the Folder that stores the AV updates.  You should create this folder and give users NTFS read permissions to it, and admins and system full control.
+$avpath = "D:\VirusDef"
+
+# Remove old files and directories
+get-childitem -recurse -directory $avpath |
+  where {$_.CreationTime -le $age} |
+  remove-item -recurse
+
+# Define the folder structure for the downloads.  This will be the necessary size, and unique path for each download.
+$vdmpathbase = $avpath + '\{00000000-0000-0000-0000-'
+$vdmpathtime = Get-Date -format "yMMddHHmmss"
+$vdmpath = $vdmpathbase + $vdmpathtime + '}'
+$vdmpackage = $vdmpath + '\mpam-fe.exe'
+
+# Create the new directory for this definition download
+New-Item -ItemType Directory -Force -Path $vdmpath | Out-Null
+
+# Download the current definitions to the newly created directory
+# If the downloads fail to download, check to see if Microsoft modified the persistent path to Definition Downloads.  The link in the intro has the persistent path, and will change when MS changes it.
+Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64' -OutFile $vdmpackage
+
+# Extract the definition into a format that can be utilized by the VDI offload functions.
+cmd /c "cd $vdmpath & mpam-fe.exe /x"

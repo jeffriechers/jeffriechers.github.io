@@ -1,0 +1,6273 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../storefront-cr-basic-configuration/">
+      
+      
+        <link rel="next" href="../storefront-cr-tweaks/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>StoreFront 2411 - Configuration for Citrix Gateway - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              StoreFront 2411 - Configuration for Citrix Gateway
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-configuration-for-citrix-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Configuration for Citrix Gateway
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StoreFront Configuration for Citrix Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-gateway-logon-page-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Gateway Logon Page Theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-fqdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single FQDN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single FQDN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-single-fqdn-without-email-based-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Single FQDN without email-based discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-datacenters-farms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Datacenters / Farms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Datacenters / Farms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-datacenter-citrix-gateway-and-storefront-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-datacenter Citrix Gateway and StoreFront Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-datacenter Citrix Gateway and StoreFront Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-vs-ica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP vs ICA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storefront-and-multiple-sitesfarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront and Multiple Sites/Farms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storefront-in-multiple-datacenters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront in Multiple Datacenters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-multi-datacenter-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Multi-Datacenter Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icon-aggregation-and-home-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Icon Aggregation and Home Sites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdx-optimal-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDX Optimal Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-gateways-gslb-to-one-storefront-server-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Gateways (GSLB) to One StoreFront Server Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-configuration-for-citrix-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Configuration for Citrix Gateway
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StoreFront Configuration for Citrix Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-gateway-logon-page-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Gateway Logon Page Theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-fqdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single FQDN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single FQDN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-single-fqdn-without-email-based-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Single FQDN without email-based discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-datacenters-farms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Datacenters / Farms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Datacenters / Farms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-datacenter-citrix-gateway-and-storefront-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-datacenter Citrix Gateway and StoreFront Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-datacenter Citrix Gateway and StoreFront Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-vs-ica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP vs ICA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storefront-and-multiple-sitesfarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront and Multiple Sites/Farms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storefront-in-multiple-datacenters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront in Multiple Datacenters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-multi-datacenter-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Multi-Datacenter Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icon-aggregation-and-home-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Icon Aggregation and Home Sites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdx-optimal-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDX Optimal Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-gateways-gslb-to-one-storefront-server-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Gateways (GSLB) to One StoreFront Server Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>StoreFront 2411 - Configuration for Citrix Gateway</h1>
+
+<h3 id="navigation">Navigation</h3>
+<p>This article applies to StoreFront versions 2411, 2402 LTSR, 2203 LTSR, 1912 LTSR, and all other versions 3.5 and newer.</p>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#storefront">StoreFront Configuration for Citrix Gateway</a><ul>
+<li><a href="#portaltheme">Citrix Gateway Logon Page Theme</a></li>
+</ul>
+</li>
+<li><a href="#singlefqdn">Single FQDN for internal and external</a></li>
+<li>Design StoreFront and Citrix Gateway for <a href="#multipledatacenters">Multiple Data Centers</a><ul>
+<li><a href="#httpvsica">HTTP protocol vs ICA protocol</a></li>
+<li><a href="#multiplesiteszones">StoreFront and Multiple Sites or Zones</a></li>
+<li><a href="#storefrontinmultipledcs">StoreFront in Multiple Data Centers</a></li>
+<li><a href="#typicaldesign">Typical Multi-datacenter Design</a></li>
+</ul>
+</li>
+<li>
+<p>StoreFront Configuration for Multiple Data Centers</p>
+<ul>
+<li><a href="#aggregation">Configure Icon Aggregation and Home Sites</a></li>
+<li><a href="#optimal">Configure HDX Optimal Gateway</a></li>
+<li><a href="#gslb">Multiple Gateways Connecting to One StoreFront</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="changelog">Changelog</h3>
+<ul>
+<li>2023 Dec 22 - <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-core/multisite-mgmt">Enable multiple site management</a></li>
+<li>2019 Dec 5 - <a href="#storefront">Internal Beacon</a> - added link to Julian Mooren <a href="https://citrixguyblog.com/2019/11/30/citrix-adc-how-to-create-a-high-available-beacon-point-for-citrix-storefront/">Citrix ADC – How to create a High Available Beacon Point for Citrix StoreFront</a></li>
+<li>2019 Mar 30 - changed NetScaler Gateway to Citrix Gateway for StoreFront 1903</li>
+<li>2018 Sep 2 - replaced XenApp/XenDesktop with Citrix Virtual Apps and Desktops</li>
+<li>2018 Mar 13 - in the <a href="#aggregation">Icon Aggregation</a> section, added link to CTA Dennis Span <a href="https://www.mycugc.org/blogs/cugc-blogs/2018/02/21/citrix-storefront-multi-site-aggregation-with-powe">Citrix StoreFront Multi-Site Aggregation with PowerShell</a> at CUGC</li>
+<li>2017 Dec 2 - updated Docs links for current-release</li>
+</ul>
+<h3 id="storefront-configuration-for-citrix-gateway">StoreFront Configuration for Citrix Gateway</h3>
+<p>See the <a href="../citrix-gateway-ica-proxy/" title="NetScaler">Citrix Gateway ICA Proxy</a> for instructions to create a Citrix Gateway Virtual Server for ICA Proxy and StoreFront. You then must configure StoreFront to enable the Gateway.</p>
+<ol>
+<li>In the StoreFront Console, in the middle, right-click your Store, and click <strong>Manage Authentication Methods</strong>.<br />
+<img alt="" src="../../../img/img_5998b533a646c.png" /></li>
+<li>Ensure <strong>Pass-through from Citrix Gateway</strong> is selected and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb32391a23.png" /></li>
+<li>In the StoreFront Console, right-click the <strong>Stores</strong> node, and click <strong>Manage Citrix Gateways</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb33395d28.png" /></li>
+<li>If StoreFront 3.6 or newer, notice the <strong>imported from file</strong> link on top. This is a new feature of NetScaler 11.1 and newer. An example configuration that uses this feature can be found in the <a href="../citrix-gateway-storefrontauth-and-xendesktop-wizard/">StoreFrontAuth</a> page.<br />
+<img alt="" src="../../../img/img_5c9fb34cddf93.png" /><br />
+<img alt="" src="../../../img/1f95e9fa8bf2bf09d2b78004a37fbc5f.png" /></li>
+<li>
+<p>If you're not using the Gateway config file from NetScaler 11.1 and newer, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb6178c29a.png" /></p>
+<ol>
+<li>In the <em>General Settings</em> page, enter a display name. This name appears in Citrix Receiver or Citrix Workspace app, so make it descriptive.</li>
+<li>
+<p>In the <strong>Citrix Gateway URL</strong> field, enter the Citrix Gateway Public URL that resolves to the Citrix Gateway VIP.</p>
+<ul>
+<li>The URL entered here must match what users enter into their browser address bars.</li>
+<li>This URL can be a <a href="../global-server-load-balancing-gslb-netscaler-12/">GSLB-enabled</a> DNS name.</li>
+<li>
+<p>The Gateway URL usually does not need to be reachable from StoreFront unless you need the Callback for SmartAccess or non-password authentication (e.g. Smart Cards or <a href="../citrix-federated-authentication-service-saml/">Citrix Federated Authentication Service</a>).</p>
+<ol>
+<li>Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb6481eb82.png" /></li>
+<li>In the <em>Secure Ticket Authority</em> page, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb65a68cd6.png" /></li>
+<li>Enter the URL to a Delivery Controller. This can be http or https.</li>
+</ol>
+</li>
+<li>
+<p>STA is installed automatically on Delivery Controllers.</p>
+</li>
+<li>There is no relationship between STA and CVAD farms. Any CVAD farm can use any STA server.</li>
+<li>
+<p>StoreFront chooses the STA server. Citrix Gateway must be configured to use the same STA servers that StoreFront chose.</p>
+<ol>
+<li>Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5998b652b5d9c.png" /></li>
+<li>Continue adding Secure Ticket Authorities (Delivery Controllers). Whatever Secure Ticket Authorities you add here must also be added to the Citrix Gateway Virtual Server on the Citrix ADC appliance. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb6976f627.png" /></li>
+<li>In the <strong>Authentication Settings</strong> page, the <strong>VServer IP Address</strong> field is typically left blank. You only use this field if you have multiple Gateways (on separate appliance pairs) connecting to one StoreFront server. See <a href="#gslb">below</a> for details.</li>
+<li>If you need <a href="../smartaccess-smartcontrol-citrix-gateway/"><strong>SmartAccess</strong></a> or non-password authentication (e.g. Smart Cards or <a href="../citrix-federated-authentication-service-saml/">Citrix Federated Authentication Service</a>), then enter the <strong>Callback URL</strong>.</li>
+</ol>
+</li>
+<li>
+<p>The Callback URL must resolve to <strong>any</strong> Citrix Gateway VIP on the same appliance that authenticated the user. Edit the HOSTS file on the StoreFront server so the Callback URL resolves correctly.</p>
+</li>
+<li>If you are configuring <a href="#singlefqdn">Single FQDN</a>, then the Callback URL must be different than the Single FQDN.</li>
+<li>The Gateway Virtual Server that the Callback URL resolves to must have a trusted and valid certificate that matches the FQDN you are entering here.</li>
+<li>The Gateway Virtual Server that the Callback URL resolves to must not have client certificates set to Mandatory.</li>
+<li>See CTX399424 <a href="https://support.citrix.com/article/CTX399424">Gateway Callback and / or XML Communication fails after upgrade to Storefront 2203</a> for a workaround.<ol>
+<li>If you don’t need SmartAccess or non-password authentication, then leave the <strong>Callback URL</strong> field empty.<br />
+<img alt="" src="../../../img/img_5998b727a05e9.png" /></li>
+<li>If you enabled <a href="../netscaler-gateway-11-1-radius-authentication/" title="NetScaler Gateway RADIUS Authentication">two-factor authentication</a> (LDAP and RADIUS) on your Citrix Gateway, change the <strong>Logon type</strong> to <strong>Domain and security token</strong>. Otherwise leave it set to <strong>Domain only</strong>.<br />
+<img alt="" src="../../../img/img_5998b73f82af3.png" /></li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5998b75f393a6.png" /></li>
+<li>Then click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/img_5998b7a3adea5.png" /></li>
+</ol>
+</li>
+<li>You can add more Gateways depending on your design. <a href="#multipledatacenters">Multiple datacenters</a> typically requires multiple Gateways. Click <strong>Close</strong> when done.<br />
+<img alt="" src="../../../img/img_5c9fb6d9b1e93.png" /></li>
+<li>
+<p>To enable the store to use Citrix Gateway, in the middle, right-click your store, and click <strong>Configure Remote Access Settings</strong>.<br />
+<img alt="" src="../../../img/img_5998b8668d461.png" /></p>
+<ol>
+<li>Check the box next to <strong>Enable Remote Access</strong>.</li>
+<li>Leave it set to <strong>No VPN tunnel</strong>.</li>
+</ol>
+</li>
+<li>
+<p>Note: if you want Receiver to automatically launch a VPN tunnel, then see CTX200664 <a href="https://support.citrix.com/article/CTX200664">How to Configure Receiver for Seamless Experience Through NetScaler Gateway</a>.</p>
+<ol>
+<li>Check the box next to the Citrix Gateway object you just created. This binds the Gateway to the Store.</li>
+<li>If you have multiple Gateways, select one of them as the <strong>Default appliance</strong>.</li>
+</ol>
+</li>
+<li>
+<p>Note: when you point Receiver to a Citrix Gateway URL for Discovery, after Discovery is complete, the Default appliance selected here is the Gateway that Receiver uses. In other words, Receiver ignores the Gateway you entered during discovery.</p>
+<ol>
+<li>Click <strong>OK</strong> to close the <strong>Configure Remote Access Settings</strong> dialog box.<br />
+<img alt="" src="../../../img/img_5c9fb703bb691.png" /></li>
+</ol>
+</li>
+<li>In the StoreFront Console, right-click the <strong>Stores</strong> node, and click <strong>Manage Beacons</strong>.<br />
+<img alt="" src="../../../img/img_5c9fb71ca92a9.png" /></li>
+<li>In the top half of the window, make sure the <strong>Internal beacon</strong> is set to a URL that is only reachable internally.</li>
+</ul>
+</li>
+<li>
+<p>If you are configuring <a href="#singlefqdn">Single FQDN</a>, then the Internal beacon must be different than the Single FQDN.</p>
+</li>
+<li><strong>Service URL</strong> = the StoreFront <strong>Base URL</strong>. If you're not configuring Single FQDN, then the Base URL is usually not accessible externally and is acceptable as an Internal Beacon.</li>
+<li>The Internal beacon must never go down. If it's down, then internal native Receivers will stop working. One option is to configure a Citrix ADC Responder HTML page as detailed at Julian Mooren <a href="https://citrixguyblog.com/2019/11/30/citrix-adc-how-to-create-a-high-available-beacon-point-for-citrix-storefront/">Citrix ADC – How to create a High Available Beacon Point for Citrix StoreFront</a>. :idea:</li>
+<li>Click <strong>OK</strong> when done.<br />
+<img alt="" src="../../../img/img_5998bc868f565.png" /></li>
+<li>Right-click the <strong>Server Group</strong> node, and click <strong>Propagate Changes</strong>.<br />
+<img alt="" src="../../../img/816b17da55f5dde2adf59449078c30c3.png" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="citrix-gateway-logon-page-theme">Citrix Gateway Logon Page Theme</h4>
+<p>To make the Citrix Gateway logon page look like Receiver 3.0 and newer, see <a href="../citrix-gateway-tweaks/#theme">Citrix Gateway 12 Portal Theme</a>. The Citrix Gateway <strong>X1</strong> theme has the fewest issues and the most readily available documentation for customization. The Citrix Gateway <strong>RfWebUI</strong> theme has less documentation for customizations.</p>
+<h3 id="single-fqdn">Single FQDN</h3>
+<h4 id="overview">Overview</h4>
+<p>Links:</p>
+<ul>
+<li>Citrix CTX200848 <a href="https://support.citrix.com/article/CTX200848">How to Configure Single Fully Qualified Domain Name for StoreFront and NetScaler Gateway</a></li>
+<li>Citrix Docs - <a href="https://docs.citrix.com/en-us/storefront/current-release/advanced-configurations/configure-single-fqdn.html">Create a single Fully Qualified Domain Name (FQDN) to access a store internally and externally</a></li>
+</ul>
+<p>You can either define separate FQDNs for StoreFront Load Balancing (internal) and Citrix Gateway (external). Or, you can define a <strong>Single FQDN</strong> for both.</p>
+<p>Single FQDN has the following <strong>requirements</strong>:</p>
+<ul>
+<li>
+<p>Receivers:</p>
+<ul>
+<li>Receiver for Windows 4.2 or newer. Or upgrade to Workspace app.</li>
+<li>Receiver for Mac 11.9 or newer. Or upgrade to Workspace app.</li>
+<li>Mobile Receivers</li>
+<li>StoreFront 2.6 or newer</li>
+<li>
+<p>Split DNS – different DNS resolution for internal vs external</p>
+</li>
+<li>
+<p>Internal DNS should resolve the Single FQDN to the <strong>StoreFront Load Balancing VIP</strong></p>
+</li>
+<li>External DNS should resolve the Single FQDN to the <strong>Citrix Gateway VIP</strong> (public IP)</li>
+<li>NetScaler 10.1 or newer</li>
+<li>
+<p>The FQDN for <strong>Internal Beacon</strong> must be different than the Single FQDN.</p>
+</li>
+<li>
+<p>The Internal Beacon URL must not be externally resolvable or accessible.</p>
+</li>
+<li>If Internal Beacon is down, then internal Receiver Self-Service clients will not function correctly.</li>
+<li>Internal Beacon URL can be http instead of https.</li>
+<li>If Internal Beacon URL is https, then the machine hosting the IP address for the Internal Beacon must have a certificate that matches the Internal Beacon FQDN.</li>
+<li>
+<p>The FQDN for <strong>Citrix Gateway Callback</strong> must be a different FQDN than the Single FQDN. Callback is only needed for SmartAccess and SAML.</p>
+</li>
+<li>
+<p>Callback FQDN can resolve tot he same Gateway VIP used by external users. Or, you can create a new Gateway VIP on the same appliance that authenticated the users.</p>
+</li>
+<li>The Gateway Virtual Server for Callback must have a certificate that matches the Callback FQDN.</li>
+</ul>
+</li>
+</ul>
+<p><strong>DNS caching interferes with Single FQDN</strong> - Note: if you have laptops that move from internal to external and back again, then DNS caching will interfere with Single FQDN. The DNS response for Single FQDN needs to change whenever the device moves from internal to external and back again. However, Receiver uses the same DNS cache as Internet Explorer, which caches DNS responses for 30 minutes. To clear the DNS cache, you have to close Receiver and re-open it. The DNS response you see when you ping the Single FQDN does not necessarily match the DNS response used by Internet Explorer and Receiver.</p>
+<h4 id="configure-single-fqdn-without-email-based-discovery">Configure Single FQDN without email-based discovery</h4>
+<p>If you don’t care about email-based discovery, then the configuration of Single FQDN is fairly simple. Sample DNS names are used below. Make sure the certificates match the DNS names.</p>
+<ol>
+<li><strong>Internal DNS name</strong> = the Single FQDN (e.g. <strong>storefront.</strong><strong>corp.com</strong>). Internally, the DNS name resolves to the internal Load Balancing VIP for StoreFront. Set the StoreFront Base URL to this address.<br />
+<img alt="" src="../../../img/img_59c104acbe6da.png" /></li>
+<li><strong>External DNS name</strong> = the Single FQDN (e.g. <strong>storefront.</strong><strong>corp.com</strong>). Externally, the DNS name resolves to a public IP, which is NAT’d to Citrix Gateway VIP on DMZ Citrix ADC. Set the Citrix Gateway object in StoreFront to this FQDN.<br />
+<img alt="" src="../../../img/img_5c9fb7b753592.png" /><br />
+<img alt="" src="../../../img/img_5c9fb7ef0d46a.png" /><br />
+<img alt="" src="../../../img/img_5c9fb80ded28d.png" /></li>
+<li>If you need SmartAccess, then the <strong>Callback URL</strong> = any DNS name (e.g. <strong>callback.corp.com</strong>) that resolves to a Citrix Gateway VIP on the same DMZ Citrix ADC appliance that authenticated the user. The Callback URL cannot be the Single FQDN.<br />
+<img alt="" src="../../../img/img_59c1053f8308f.png" /><ul>
+<li>Callback URL can be omitted if you don’t need SmartAccess features, or SAML authentication.</li>
+<li>The callback DNS name must be different than the Single FQDN.</li>
+<li>The callback DNS name must resolve to a Citrix Gateway VIP on the same appliance that authenticated the user. This could be the same DMZ Gateway VIP used by external users. Or you can create a separate internal Gateway VIP on the same appliance.</li>
+<li>The Citrix Gateway vServer for callback must have a certificate that matches the Callback DNS name.</li>
+</ul>
+</li>
+<li><strong>Internal Beacon</strong> = any internal website URL that is not externally accessible. You can’t use the Single FQDN as the Internal Beacon. Note: if the internal beacon is down, then internal Receiver Self-service will not work correctly.<br />
+<img alt="" src="../../../img/img_5998bc868f565.png" /><ul>
+<li>Make sure the Internal Beacon is not resolvable externally.</li>
+<li>The Internal Beacon URL cannot be the Single FQDN. It must be different.</li>
+<li>Ideally, the Internal Beacon should be a new DNS name that resolves to a StoreFront Load Balancing VIP.</li>
+<li>If the internal beacon is https, then the certificate must match the internal beacon DNS name. However, http URLs also work.</li>
+<li>See CTX218708 <a href="https://support.citrix.com/article/CTX218708">How to Configure Internal Beacon for Single FQDN on StoreFront</a>.</li>
+</ul>
+</li>
+<li>Make sure the DMZ Citrix ADC resolves the Single FQDN to the internal StoreFront Load Balancing VIP. You typically add internal DNS servers to the Citrix ADC. Or you can create a local <strong>Address Record</strong> on Citrix ADC for the Single FQDN.<br />
+<img alt="" src="../../../img/img_59c1b1bc4ef1b.png" /><br />
+<img alt="" src="../../../img/img_59c11c494bbf7.png" /></li>
+<li>In the Citrix Gateway <a href="../citrix-gateway-ica-proxy/#sessionprofiles">Session Profiles</a>, on the <strong>Published Applications</strong> tab, set the <strong>Web Interface Address</strong>, and the <strong>Account Services Address</strong> to the Single FQDN.<br />
+<img alt="" src="../../../img/img_5c9fb87fa710a.png" /><br />
+<img alt="" src="../../../img/img_5c9fb8a6e394f.png" /><br />
+<img alt="" src="../../../img/img_5c9fb8c77c9ae.png" /></li>
+<li>That’s all you need to implement Single FQDN. If you made changes to an existing StoreFront deployment, then you might have to remove accounts from Receiver, and re-add the account.</li>
+</ol>
+<p>If you need email-based discovery, then here’s an example configuration for ICA Proxy Citrix Gateway</p>
+<p><strong>DNS</strong>:</p>
+<ul>
+<li>
+<p>Sample DNS names:</p>
+<ul>
+<li>Single FQDN = <strong>citrix.corp.com</strong></li>
+<li>Callback FQDN = <strong>callback.corp.com</strong></li>
+<li>Internal Beacon FQDN = <strong>internalbeacon.corp.com</strong></li>
+<li>
+<p>External DNS:</p>
+</li>
+<li>
+<p><strong>citrix.corp.com</strong> resolves to a public IP, which is NAT’d to a Citrix Gateway VIP on a DMZ Citrix ADC.</p>
+</li>
+<li>If email-based discovery, SRV record for <strong>_citrixreceiver._tcp.email.suffix</strong> points to <strong>citrix.corp.com</strong>. Create this SRV record in every email suffix DNS zone.</li>
+<li>
+<p>Internal DNS:</p>
+</li>
+<li>
+<p><strong>citrix.corp.com</strong> resolves to the Load Balancing VIP for StoreFront</p>
+</li>
+<li><strong>callback.corp.com</strong> resolves to a Citrix Gateway VIP on the same Citrix ADC that authenticated the user. Usually only needed for SmartAccess and/or SAML.</li>
+<li>For the internal beacon, FQDN of any internal web server. Make sure this name is not resolvable externally.</li>
+<li>If email-based discovery, SRV record for <strong>_citrixreceiver._tcp.email.suffix</strong> points to <strong>citrix.corp.com</strong>. Create this SRV record in every email suffix DNS zone.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Certificates:</strong></p>
+<ul>
+<li>
+<p>External, publicly-signed certificate for Citrix Gateway:</p>
+<ul>
+<li>One option is wildcard for <strong>*.corp.com</strong>. Assumes email suffix is also corp.com. If you more than one email suffix, then wildcard will not work.</li>
+<li>
+<p>Another option is the following Subject Alternative Names:</p>
+<ul>
+<li><strong>citrix.corp.com</strong></li>
+<li>
+<p><strong>callback.corp.com</strong> – for callback URL. Only accessed from internal.</p>
+<ul>
+<li>Or you can create a separate internally-facing Gateway vServer for callback with a separate certificate.
+        - If email-based discovery, <strong>discoverReceiver.email.suffix</strong> for each email suffix. If you have multiple email suffixes, you'll need multiple SAN Names.</li>
+<li>Internal certificate for StoreFront Load Balancing:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Publicly-signed certificate is recommended, especially for mobile devices and thin clients.</p>
+</li>
+<li>Since you have the same DNS name for internal and external, you can use the external certificate for internal StoreFront.</li>
+<li>One option is wildcard for <strong>*.corp.com</strong>. Assumes email suffix is also corp.com. If you have more than one email suffix, then wildcard will not work.</li>
+<li>
+<p>Another option is the following Subject Alternative Names:</p>
+<ul>
+<li><strong>citrix.corp.com</strong></li>
+<li>If email-based discovery, <strong>discoverReceiver.email.suffix</strong> for every email suffix. If you have multiple email suffixes, then you will have multiple SAN names.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>StoreFront Configuration:</strong></p>
+<ul>
+<li>Base URL = <strong>https://citrix.corp.com</strong></li>
+<li>Internal beacon = <strong>https://internalbeacon.corp.com</strong>. Make sure it’s not resolvable externally.</li>
+<li>
+<p>Gateway object:</p>
+<ul>
+<li>Gateway URL = <strong>https://citrix.corp.com</strong></li>
+<li>Callback URL = <strong>https://callback.corp.com</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>Receiver for Web session policy:</strong></p>
+<ul>
+<li>Policy expression = REQ.HTTP.HEADER User-Agent NOTCONTAINS CitrixReceiver</li>
+<li>
+<p>Client Experience tab:</p>
+<ul>
+<li>Clientless Access = Allow or Off</li>
+<li>Plug-in Type = Java</li>
+<li>Single Sign-on to Web Applications = checked</li>
+<li>
+<p>Security tab:</p>
+</li>
+<li>
+<p>Default authorization = ALLOW</p>
+</li>
+<li>
+<p>Published Applications tab:</p>
+</li>
+<li>
+<p>ICA Proxy = On</p>
+</li>
+<li>Web Interface address = <strong>https://citrix.corp.com/Citrix/StoreWeb</strong></li>
+<li>Single Sign-on Domain = Corp</li>
+</ul>
+</li>
+</ul>
+<p><strong>Receiver Self-Service session policy</strong>:</p>
+<ul>
+<li>Policy expression = REQ.HTTP.HEADER User-Agent CONTAINS CitrixReceiver</li>
+<li>
+<p>Client Experience tab:</p>
+<ul>
+<li>Clientless Access = Allow or Off</li>
+<li>Plug-in Type = Java</li>
+<li>Single Sign-on to Web Applications = checked</li>
+<li>
+<p>Security tab:</p>
+</li>
+<li>
+<p>Default authorization = ALLOW</p>
+</li>
+<li>
+<p>Published Applications tab:</p>
+</li>
+<li>
+<p>ICA Proxy = On</p>
+</li>
+<li>Web Interface address = <strong>https://citrix.corp.com</strong></li>
+<li>Single Sign-on Domain = Corp</li>
+<li>Account Services address = <strong>https://citrix.corp.com</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="multiple-datacenters-farms">Multiple Datacenters / Farms</h2>
+<h3 id="multi-datacenter-citrix-gateway-and-storefront-design">Multi-datacenter Citrix Gateway and StoreFront Design</h3>
+<h4 id="http-vs-ica">HTTP vs ICA</h4>
+<p>There are two connections from every Citrix client:</p>
+<ul>
+<li><strong>HTTP</strong> (SSL required) - goes to <strong>StoreFront</strong><ul>
+<li>HTTP is usually proxied through Citrix ADC load balancing</li>
+<li>If external, HTTP is proxied through Citrix Gateway, which proxies it through Citrix ADC load balancing.</li>
+<li>HTTP traffic is initiated by either a web browser, or by Receiver Self-Service</li>
+</ul>
+</li>
+<li><strong>ICA</strong> (SSL optional) - goes to <strong>Virtual Delivery Agent</strong><ul>
+<li>ICA can go direct (internal) to a VDA</li>
+<li>Or ICA can be proxied through Citrix Gateway ICA Proxy</li>
+<li>ICA traffic is handled by Workspace app's ICA engine - either locally installed Workspace app, or HTML5 Workspace app</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../../img/img_59e535d69cd4a.png" /></p>
+<p>The FQDN for the HTTP connection can be the same or different than the FQDN for the ICA connection.</p>
+<p>The <strong>HTTP connection</strong> is easily handled by GSLB, HTTP/SSL load balancing, etc.</p>
+<ol>
+<li>
+<p><strong>DNS name</strong> - Users connect to a DNS name that resolves to StoreFront and/or Citrix Gateway.</p>
+<ol>
+<li>StoreFront is usually proxied through Citrix ADC Load Balancing.</li>
+<li>If Citrix Gateway, the HTTP connection is proxied to StoreFront, usually through Load Balancing.</li>
+<li><strong>Separate VIP per datacenter</strong> - For multiple datacenters, each datacenter has its own StoreFront and/or Citrix Gateway VIP.</li>
+<li>
+<p><a href="../global-server-load-balancing-gslb-netscaler-12/">GSLB</a> resolves the DNS name to one of the datacenter VIPs.</p>
+</li>
+<li>
+<p>This can be active/active, or active/passive.</p>
+</li>
+<li>
+<p><strong>Proximity and persistence</strong> - For active/active, since StoreFront traffic (HTTP) is so minimal, it usually doesn't matter which datacenter is selected. But you can optionally enable one of the Proximity GSLB load balancing algorithms so the closest datacenter is selected.</p>
+</li>
+<li>
+<p>Enable one of the GSLB Service cookie-based persistence methods. Connection Proxy is the easiest to configure.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>The <strong>ICA connection</strong> is dictated by StoreFront.</p>
+<ol>
+<li>
+<p><strong>.ica file</strong> - When a user clicks an icon in StoreFront, StoreFront generates an .ica file containing an address.</p>
+<ol>
+<li>If the user is internal, then the .ica file usually contains the private IP address of the Virtual Delivery Agent. Receiver connects directly to the VDA's private IP.</li>
+<li>If the user is connecting through Citrix Gateway, or if HDX Optimal Routing is enabled, then the .ica file usually contains the FQDN of a Citrix Gateway that can proxy the ICA connection.</li>
+<li><strong>Receiver engine for ICA protocol</strong> - The StoreFront provided .ica file is given to a Receiver engine. Receiver engine (locally installed Receiver, or HTML5 Receiver), uses ICA protocol to connect to the address contained inside the .ica file.</li>
+<li><strong>One public IP</strong> - For external users, an advantage of Citrix Gateway is that you only have to expose one public IP address per datacenter no matter how many VDAs you have.</li>
+<li>
+<p><strong>FQDN for Gateway</strong> - For Citrix Gateway, StoreFront inserts a FQDN into the .ica file. This FQDN can be one of the following:</p>
+</li>
+<li>
+<p>Active/active GSLB</p>
+</li>
+<li>Datacenter-specific - If you have two datacenters, each datacenter has a unique FQDN that resolves to a specific Citrix Gateway VIP in a specific datacenter. GSLB active/passive handles failover if the datacenter-specific VIP is down.</li>
+<li>
+<p><strong>ICA Routing</strong> - ICA traffic is heavier and more latency sensitive than StoreFront. Thus you typically want to control which datacenter is used for the ICA connection. There are two common designs:</p>
+</li>
+<li>
+<p>Proxy ICA traffic through a Citrix Gateway that's in the same datacenter as the VDA.</p>
+</li>
+<li>Proxy ICA traffic through the Citrix Gateway that's closest to the user. The idea here is that back haul WAN connections are faster than Internet connection to a remote datacenter.</li>
+<li>
+<p><strong>HDX Optimal Routing</strong> - For proxying ICA through Citrix Gateway in the same datacenter as the VDA, StoreFront has two methods for identifying the Citrix Gateway that's closest to the VDA:</p>
+</li>
+<li>
+<p>Different Citrix Virtual Apps and Desktops site/farm in each datacenter. If a VDA is launched from a particular site/farm, then provide the Citrix Gateway FQDN that is associated with that site/farm. This is configured using HDX Optimal Routing.</p>
+</li>
+<li>Different Citrix Virtual Apps and Desktops <a href="../catalogs-delivery-groups/#zones">zone</a> per datacenter. If the VDA is launched from a particular zone, then provide the Citrix Gateway FQDN that is associated with that zone. This is configured using HDX Optimal Routing.</li>
+<li>
+<p><strong>Proximity and Persistence</strong> - For proxying ICA through a Citrix Gateway that is closest to the user, StoreFront returns an FQDN that is GSLB Active/Active load balanced using a Proximity load balancing algorithm.</p>
+</li>
+<li>
+<p>ICA is usually a long-lived TCP connection to the Citrix Gateway VIP.</p>
+</li>
+<li>You can enable Source IP persistence on the active/active GSLB Virtual Server.</li>
+<li>Another method of proximity load balancing ICA is to configure Citrix ADC to insert a header to StoreFront indicating the Citrix Virtual Apps and Desktops zone the user is connecting from. See the <a href="https://docs.citrix.com/en-us/citrix-adc/downloads/global-server-load-balancing-powered-zone-preference.pdf">GSLB Powered Zone Preference</a> whitepaper.</li>
+</ol>
+</li>
+</ol>
+<p><img alt="" src="../../../img/img_59e535b250571.png" /></p>
+<p><strong>Internal Citrix Gateway ICA Proxy?</strong> - Internal users typically have direct connectivity to VDA Private IP addresses, so you usually don't need to use Citrix Gateway ICA Proxy internally. However, an advantage of using Citrix Gateway ICA Proxy internally is that now all ICA traffic is going through a Citrix Gateway, which makes it easy to enable <strong>AppFlow</strong> (HDX Insight) reporting to <a href="../netscaler-management-and-analytics-system-mas-12-1/">Citrix Application Delivery Management (ADM)</a>.</p>
+<ul>
+<li>ICA Proxy through Citrix Gateway wraps ICA traffic in SSL, increasing the packet size.</li>
+<li>SSL-Encrypted ICA packets cannot be optimized by normal WAN optimization products.</li>
+</ul>
+<h4 id="storefront-and-multiple-sitesfarms">StoreFront and Multiple Sites/Farms</h4>
+<p>A <strong>Citrix Virtual Apps and Desktops Site/Farm</strong> is a collection of Delivery Controllers that share a single Site SQL Database. Multiple Citrix Virtual Apps and Desktops Sites/Farms implies multiple Site SQL databases, each configured separately. Note: <strong>farm</strong> is the old name for Citrix Virtual Apps and Desktops <strong>Site</strong>.</p>
+<ul>
+<li>If you stretch a single Citrix Virtual Apps and Desktops Site/Farm across datacenters, then you have to deal with replication and recovery of the single SQL database.</li>
+<li>Citrix Virtual Apps and Desktops <a href="../catalogs-delivery-groups/#zones">Zones</a> and <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/manage-deployment/local-host-cache.html">Local Host Cache</a> make it more feasible to stretch a farm. See <a href="https://www.mycugc.org/community/community-home/digestviewer/viewthread?MessageKey=7798b9a7-5b86-418e-bcbe-43b7f35c2e8f&amp;CommunityKey=e9779e96-b558-4fba-abf2-4c62c79cb305&amp;tab=digestviewer">XenDesktop Site Failover - how do you do it?</a> at CUGC for an excellent discussion on multi-datacenter zone design.</li>
+<li>VDAs can only register with one Citrix Virtual Apps and Desktops Site/farm.</li>
+</ul>
+<p><strong>Multiple Citrix Virtual Apps and Desktops Sites/Farms</strong> - StoreFront can enumerate icons from multiple Citrix Virtual Apps and Desktops Sites/Farms. If there are identical icons in multiple farms, then the icons can be aggregated so that only a single icon is displayed to the user. When the user clicks the icon, StoreFront then needs to select a site/farm.</p>
+<ul>
+<li>CVAD 2311 and newer have <strong>multiple site management</strong> in Web Studio in the <strong>Settings</strong> node.<br />
+<img alt="" src="../../../img/image-27.png" /><br />
+<img alt="" src="../../../img/image-28.png" />  <ul>
+<li>Use the Site selector at the top right of the page.<br />
+<img alt="" src="../../../img/image-29.png" /></li>
+</ul>
+</li>
+<li>In StoreFront, Sites/Farms can be prioritized (active/passive) for different Active Directory groups. This allows you to specify a "home" site for specific users. Typically, you set the preferred site/farm to be in the same datacenter that contains the user's <strong>home directory</strong> and <a href="../citrix-profile-management/#multidatacenter">roaming profile</a>.</li>
+<li>Or sites/farms can be active/active load balanced. This works best for applications that have synchronized active/active back-end data.</li>
+</ul>
+<p><img alt="" src="../../../img/img_59e537e932c40.png" /></p>
+<p><strong>Icon aggregation</strong> - There are two methods of configuring icon aggregation in StoreFront:</p>
+<ul>
+<li><strong>StoreFront Console GUI</strong> - The most common multi-site/farm configurations can be done in the StoreFront Console GUI, including configuration of “Home Sites” (different AD groups prioritizing different sites/farms).</li>
+<li><strong>XML files</strong> – for more complex multi-site configurations. See Citrix Docs – <a href="https://docs.citrix.com/en-us/storefront/current-release/set-up-highly-available-multi-site-stores.html">Set up highly available multi-site store configurations</a></li>
+</ul>
+<p>Note: if you have existing subscriptions/favorites, then enabling icon aggregation will cause the existing subscriptions to be ignored. You can migrate the existing subscriptions by exporting, modifying, and importing. See <a href="https://discussions.citrix.com/topic/378802-subscriptions-missing-after-enabling-aggregation/#entry1931274">Subscriptions Missing after Enabling Aggregation</a> at Citrix Discussions.</p>
+<h4 id="storefront-in-multiple-datacenters">StoreFront in Multiple Datacenters</h4>
+<p><strong>Stretching</strong> - Citrix does not support stretching a single StoreFront Server Group across multiple datacenters. Each datacenter is expected be a different StoreFront Server Group.</p>
+<ul>
+<li>Citrix provides <a href="https://docs.citrix.com/en-us/storefront/current-release/plan.html">scaling guidance</a> for up to 6 servers in a single StoreFront Server Group.</li>
+</ul>
+<p><img alt="" src="../../../img/img_59e539bf52853.png" /></p>
+<p><strong>Management</strong> - Each StoreFront Server Group is managed separately.</p>
+<ul>
+<li>Subscriptions/Favorites can be <a href="../storefront-subscriptions/#replication">replicated</a> between the two StoreFront Sever Groups.</li>
+</ul>
+<p><strong>Receiver Roaming</strong> - When Citrix Receiver switches between different StoreFront Server Groups in multiple datacenters, it’s possible for each datacenter to be treated as a separate Store, causing multiple Store entries in Receiver. This can be prevented by ensuring the following configurations are identical in both datacenters. Source = Juan Zevallos at <a href="https://discussions.citrix.com/topic/357226-receiver-failover-between-storefront-server-groups/#entry1856858">Citrix Discussions</a>:</p>
+<ul>
+<li>Match the <strong>SRID</strong> - in StoreFront, if you use the same Base URL in the 2 separate installations, then the SRID should end up being identical. If the Base URL is changed after the initial setup, the SRID doesn't change. The SRID can be safely edited in the <strong>\inetpub\wwwroot\Citrix\Roaming\web.config</strong> file. It will be replicated into the discovery servicerecord entry in the Store web.config, which can be edited as well, or refreshed from the admin console by going into Remote Access setup for the store, and hitting OK. Make sure to propagate changes to other servers in the group.</li>
+<li>Match the <strong>Base URL</strong></li>
+<li>Match the Delivery Controller names under <strong>"Manage Delivery Controllers"</strong> - The XML brokers can be different, but the actual name of the Delivery Controller/Farms must be identical.<br />
+<img alt="" src="../../../img/img_59c1316ae0e05.png" /></li>
+</ul>
+<h4 id="typical-multi-datacenter-configuration">Typical Multi-Datacenter Configuration</h4>
+<p>Here's a typical active/active Citrix Virtual Apps and Desktops configuration using separate sites/farms in each datacenter. Another option is <a href="../catalogs-delivery-groups/#zones">zones</a>.</p>
+<ul>
+<li>
+<p><strong>Citrix Virtual Apps and Desktops Sites/Farms:</strong> Separate Citrix Virtual Apps and Desktops sites/farms in each datacenter.</p>
+<ul>
+<li>The Delivery Controllers for each site/farm point to a SQL database in the local datacenter. There usually is no need to enable SQL failover across datacenters.</li>
+<li>Each datacenter is managed separately. But Citrix Policies in a GPO can apply to both sites/farms.</li>
+<li>An advantage of separate sites/farms is that you can upgrade one datacenter before upgrading the other.</li>
+<li>
+<p><strong>StoreFront Server Groups:</strong> Separate StoreFront Server Groups in each datacenter.</p>
+</li>
+<li>
+<p>Citrix doesn't support stretching a single StoreFront Server Group across a WAN link.</p>
+</li>
+<li>Each Server Group is configured identically. You can export the config from one Server Group, and import it to the other. Or configure each of them separately, but identically. Identical means: same <strong>Base URL</strong>, same <strong>farms</strong> (Manage Delivery Controllers), same <strong>SRID</strong>, same <strong>Gateways</strong>, and same <strong>Beacons</strong>.</li>
+<li>If subscriptions/favorites are enabled, use PowerShell commands to <a href="../storefront-subscriptions/#replication">configure subscription replication</a> between the two Server Groups.</li>
+<li>
+<p><strong>StoreFront Load Balancing:</strong> Separate StoreFront load balancing VIP in each datacenter</p>
+</li>
+<li>
+<p>Each Load Balancing VIP can be active/passive. Active = the StoreFront servers in the local datacenter. Passive = the StoreFront servers in the remote datacenter.</p>
+<ul>
+<li>Create two Load Balancing vServers: one for local StoreFront, one for remote StoreFront. In the Active (local) Load Balancing vServer, add the <strong>Protection</strong> section, and configure the Backup (remote) vServer.</li>
+<li>When the active StoreFront is down, Citrix Gateway will use StoreFront in the remote datacenter. However, the remote datacenter has its own Citrix Gateway, thus there will be two different Citrix Gateways connecting to one StoreFront Server Group. If you use SmartAccess or SAML and need the Callback URL, then you'll need a <a href="#gslb">special StoreFront configuration</a> to handle the Callback URL from multiple Gateway appliances.</li>
+<li><strong>Icon aggregation:</strong> Configure StoreFront to <a href="#aggregation">aggregate icons from the two farms.</a><ul>
+<li>Use AD groups to specify a user's home datacenter, which contains the user's roaming profile and home directory.</li>
+<li>Configure farm priority based on AD groups. For an aggregated icon, the AD group and farm priority determines which farm the icon is launched from.</li>
+</ul>
+</li>
+<li><strong>External Citrix Gateways:</strong> Externally-accessible Citrix Gateway ICA Proxy VIPs in both datacenters.</li>
+</ul>
+</li>
+<li>
+<p>The main Citrix Gateway DNS name is active/active GSLB. For example: <strong>citrix.company.com</strong>)</p>
+</li>
+<li>Each datacenter has a datacenter-specific GSLB active/passive DNS name for Citrix Gateway. For example: <strong>citrix-a.company.com</strong>, and <strong>citrix-b.company.com</strong></li>
+<li>The Gateway SSL certificate needs to match all three DNS names: the main active/active DNS name, and the two datacenter-specific active/passive DNS names.</li>
+<li>
+<p><strong>Internal Citrix Gateways:</strong> Internally-accessible Citrix Gateway ICA Proxy VIPs in both datacenters for AppFlow reporting.</p>
+</li>
+<li>
+<p>For AppFlow/Insight reporting, Citrix Gateway ICA Proxy is typically used internally too. If you don't need AppFlow, then you don't need internal Citrix Gateway.</p>
+</li>
+<li>
+<p>To handle Single Sign-on from Receiver, internal Receivers will connect HTTP directly to StoreFront Load Balancing instead of proxied through Citrix Gateway.</p>
+<ul>
+<li>
+<p>This implies that you have separate DNS names for StoreFront and Citrix Gateway.</p>
+<ul>
+<li>HDX Optimal Routing will force the ICA connection to go through Citrix Gateway instead of directly to the VDA.</li>
+<li>HDX Optimal Routing is a global setting that applies to both internal and external users. The DNS name used by HDX Optimal Routing must be valid for both internal and external. If this is not the case, then you can deploy separate StoreFront servers for internal and external.</li>
+<li>DNS:</li>
+</ul>
+</li>
+<li>
+<p>The main Citrix Gateway DNS name is active/active GSLB. For example: <strong>citrix.company.com</strong>.</p>
+</li>
+<li>Each datacenter has a datacenter-specific GSLB active/passive DNS name for Citrix Gateway. For example: <strong>citrix-a.company.com</strong>, and <strong>citrix-b.company.com</strong></li>
+<li>The Gateway SSL certificate needs to match all three DNS names - the main active/active DNS name, and the two datacenter-specific active/passive DNS names.</li>
+<li><strong>Main StoreFront and Gateway FQDNs:</strong> separate FQDNs for StoreFront and Citrix Gateway.</li>
+</ul>
+</li>
+<li>
+<p>Externally,  <strong>citrix.company.com</strong> resolves to a Citrix Gateway VIP.</p>
+</li>
+<li>Internally,  <strong>storefront.company.com</strong> resolves to a StoreFront Load balancing VIP.</li>
+<li>Single FQDN usually causes more problems than it's worth. If you don't do Single FQDN, then you can hide the StoreFront DNS name by pushing the store configuration to Receiver using <a href="../workspace-app-for-windows/#accounts">Group Policy</a>. Browser users would only need to know the Citrix Gateway DNS name.</li>
+<li>
+<p><strong>DNS Delegation for GSLB:</strong> multiple DNS names are delegated from internal DNS and public DNS to Citrix ADNS (internal and external) for GSLB.</p>
+</li>
+<li>
+<p>Internal GSLB and public GSLB need to resolve <strong>citrix.company.com</strong> differently. Public GSLB should resolve it to public IPs. Internal GSLB should resolve it to internal IPs.</p>
+</li>
+<li>Combining internal and public GSLB on the same Citrix ADC is not recommended. Public GSLB should be handled by DMZ Citrix ADC appliances. Internal GSLB should be handled by Internal Citrix ADC appliances.</li>
+<li>If you only have one Citrix ADC appliance for both internal and public, then see <strong>One appliance resolving a single DNS name differently for internal and public</strong> at <a href="../global-server-load-balancing-gslb-netscaler-12/#planning">GSLB Planning</a>.</li>
+<li><strong>citrix.company.com</strong> is configured as Active/Active GSLB with Proximity Load Balancing, and Site Persistence equal or greater than StoreFront RfWeb timeout.</li>
+<li><strong>citrix-a.company.com</strong> is configured as Active/Passive GSLB with Datacenter A as the Active service.</li>
+<li><strong>citrix-b.company.com</strong> is configured as Active/Passive GSLB with Datacenter B as the Active service.</li>
+<li><strong>storefront.company.com</strong> is configured as Active/Active GSLB with Proximity Load Balancing, and Site Persistence equal or greater than StoreFront RfWeb timeout.</li>
+<li>
+<p><strong>HDX Optimal Routing:</strong> Use HDX Optimal Routing to route ICA traffic through the Citrix Gateway that is closest to the destination farm. This requires datacenter-specific DNS names (e.g. <strong>citrix-a.company.com</strong>, <strong>citrix-b.company.com</strong>)</p>
+</li>
+<li>
+<p>You can use one of these DNS names to connect to StoreFront in a specific datacenter, which is helpful for testing.</p>
+</li>
+<li><strong>STAs</strong>: each StoreFront Server Group uses STAs in the local datacenter. Since ICA Traffic could end up on either Citrix ADC, all STAs must be added to all Citrix Gateways.</li>
+<li><strong>Beacons</strong>: the internal beacon is critical. If the internal beacon is down then Receiver Self-service won't be able to determine if the client device is internal or not. GSLB can be used for the internal beacon DNS name.</li>
+<li><strong>Roaming Profiles:</strong> If you are running Citrix Virtual Apps and Desktops in multiple datacenters, you must <a href="../citrix-profile-management/#multidatacenter" title="Multi-datacenter roaming profiles">design roaming profiles</a> and home directories correctly.</li>
+</ul>
+</li>
+</ul>
+<h3 id="icon-aggregation-and-home-sites">Icon Aggregation and Home Sites</h3>
+<p>To configure icon aggregation using PowerShell, see CTA Dennis Span at <a href="https://www.mycugc.org/blogs/cugc-blogs/2018/02/21/citrix-storefront-multi-site-aggregation-with-powe">Citrix StoreFront Multi-Site Aggregation with PowerShell</a> at CUGC. The PowerShell cmdlets include the following:</p>
+<ul>
+<li>New-STFEquivalentFarmset</li>
+<li>Add-STFUserFarmMapping</li>
+</ul>
+<p>To configure icon aggregation using the StoreFront Console:</p>
+<ol>
+<li>In StoreFront Console, go to <strong>Stores</strong>.</li>
+<li>In the middle, right-click your Store, and click <strong>Manage Delivery Controllers</strong>.<br />
+<img alt="" src="../../../img/img_59c129ebd32e8.png" /></li>
+<li>Add multiple sites/farms. Typically, each datacenter is a separate farm.<br />
+<img alt="" src="../../../img/img_59c12a2e593e9.png" /></li>
+<li>After adding multiple farms, the <strong>Configure</strong> button becomes available. Click it.<br />
+<img alt="" src="../../../img/img_59c12a4c770d9.png" /></li>
+<li>If you are publishing identical resources from multiple farms, click the link to <strong>Aggregate resources</strong>.<br />
+<img alt="" src="../../../img/img_59c12b0577ec6.png" /></li>
+<li>
+<p>In the <strong>Aggregate Resources</strong> dialog box, do the following:</p>
+<ol>
+<li>Select the farms with identical resources that you want to aggregate.</li>
+<li>Notice the checkboxes on the bottom. If your goal is to configure home sites, then make sure you uncheck <strong>Load balance resources across controllers</strong>.</li>
+<li>Click the <strong>Aggregate</strong> button to move them up to the <strong>Aggregated</strong> section.<br />
+<img alt="" src="../../../img/img_59c12dc15c605.png" /></li>
+<li>Note: if you have existing subscriptions/favorites, then enabling icon aggregation will cause the existing subscriptions to be ignored. You can migrate the existing subscriptions/favorites by exporting, modifying, and importing. See <a href="https://discussions.citrix.com/topic/378802-subscriptions-missing-after-enabling-aggregation/#entry1931274">Subscriptions Missing after Enabling Aggregation</a> at Citrix Discussions.</li>
+<li>Click <strong>OK</strong> when done.<br />
+<img alt="" src="../../../img/img_59c12e0a34364.png" /></li>
+<li>Back in the <strong>Configure User Mapping and Multi-Site Aggregation</strong> window, click <strong>Map users to controllers</strong>.<br />
+<img alt="" src="../../../img/img_59c12c158b55a.png" /></li>
+<li>
+<p>In the <strong>Create User Mapping</strong> wizard, do the following:</p>
+</li>
+<li>
+<p>If you want the same farm failover order (active/passive) or farm load balancing settings for everyone, then leave the <strong>User Groups</strong> page set to <strong>Everyone</strong>. Or if you intend to have different home sites for different users, add a user group that contains the users that will be homed to a particular datacenter. You can run this wizard multiple times to specify different home sites for different user groups. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_59c12d230bcdf.png" /></p>
+</li>
+<li>In the <em>Controllers</em> page, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_59c12d4f70930.png" /></li>
+<li>Select the farms that these users will have access to, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_59c12d7ed3aff.png" /></li>
+<li>If you configured farm aggregation without load balancing, then use the up and down arrow buttons to put the active site/farm for this group of users on top. The lower priority sites will only be accessed if the primary site is down. You can run this wizard multiple times to specify different active sites for different users.</li>
+<li>If farm aggregation is configured for load balancing, then there are no arrows to prioritize the farms.<br />
+<img alt="" src="../../../img/img_59c12e4325a5b.png" /></li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_59c12e7b570bc.png" /></li>
+<li>You can click <strong>Add</strong> to add more user mappings. If you add multiple user groups, you can assign different primary sites/farms to each Active Directory group. This is how you configure “home sites”. Click <strong>OK</strong> twice when done.<br />
+<img alt="" src="../../../img/img_59c12ea614cca.png" /></li>
+</ol>
+</li>
+</ol>
+<p>Shaun Ritchie <a href="https://meritum.cloud/citrix-storefront-high-availability-and-aggregation-a-dual-site-active-active-design/">Citrix StoreFront High Availability and Aggregation – A dual site Active Active design</a> has a sample multi-site configuration using XML Notepad and explains how to use the <strong>Primary</strong> and <strong>Secondary</strong> keywords to override farm priority order.</p>
+<p>Citrix Blogs <a href="https://www.citrix.com/blogs/2014/10/13/storefront-multi-site-settings-some-examples/">StoreFront Multi-Site Settings: Some Examples</a> has example XML configurations for various multi-datacenter Load Balancing and failover scenarios.</p>
+<h3 id="hdx-optimal-routing">HDX Optimal Routing</h3>
+<p>The Optimal Gateway feature lets you control the Citrix Gateway used for ICA connections. Here are some scenarios where this would be useful:</p>
+<ul>
+<li>
+<p><strong>Multi-site Load Balancing</strong>. If the icon selected by the user is published from Citrix Virtual Apps and Desktops in Datacenter A, then you probably want the ICA connection to go through a Citrix Gateway Virtual Server in Datacenter A.</p>
+<ul>
+<li>If the main DNS name for accessing Citrix Gateway is GSLB load balanced across datacenters, then you need additional datacenter-specific DNS names so you can control which datacenter the ICA connection goes through.</li>
+<li>Note: Optimal Gateway is configured at the farm/site level, or zone level.</li>
+<li><strong>Citrix Gateway for internal connections (AppFlow)</strong>. If you want to force internal ICA connections to go through Citrix Gateway so AppFlow data can be sent to <a href="../netscaler-management-and-analytics-system-mas-12-1/">Citrix Application Delivery Management (ADM)</a>, then you can do that using HDX Optimal Gateway, even if the user originally connected directly to the StoreFront server. See CTX200129 <a href="https://support.citrix.com/article/CTX200129">How to Force Connections through NetScaler Gateway Using Optimal Gateways Feature of StoreFront</a> for more information.</li>
+<li><strong>The Citrix Gateway Virtual Server requires user certificates.</strong> If ICA traffic goes through a Citrix Gateway Virtual Server that requires user certificates (e.g. Smart Card), then each session launch will result in a PIN prompt. To prevent these extra prompts, build a separate Citrix Gateway Virtual Server that doesn’t have user certificates as <strong>Mandatory</strong>. Use Optimal Gateway to force ICA connections through the other Citrix Gateway Virtual Server. Note: SmartAccess Callback URL also cannot use a Citrix Gateway Virtual Server where client certificates are set to Mandatory, so the extra Citrix Gateway Virtual Server would be useful for that scenario too.</li>
+</ul>
+</li>
+</ul>
+<p>HDX Optimal Gateway can be configured in the StoreFront Console:</p>
+<ol>
+<li>Right-click the <strong>Stores</strong> node, and click <strong>Manage Citrix Gateways</strong>.<br />
+<img alt="" src="../../../img/img_5c9fba8ab7981.png" /></li>
+<li>Add more Citrix Gateways: one for each datacenter.<br />
+<img alt="" src="../../../img/img_5c9fbacbe19dc.png" /></li>
+<li>
+<p>When adding a Gateway, you can designate a <strong>Usage or role</strong>.</p>
+<ol>
+<li>The Gateway accessed through the active/active GSLB DNS name must be set to <strong>Authentication and HDX routing</strong>.</li>
+<li>The Gateways for Optimal Routing could be set to <strong>HDX routing only</strong>. Or if test users will use these datacenter-specific DNS names to connect to Gateways in specific datacenters, leave them set to <strong>Authentication and HDX routing</strong>. There's no harm in leaving all of the Gateways set to <strong>Authentication and HDX routing</strong>.<br />
+<img alt="" src="../../../img/img_5c9fbae079baf.png" /></li>
+<li>Go to <strong>Stores</strong>, right-click your store in the middle pane, and click <strong>Configure Store Settings</strong>.<br />
+<img alt="" src="../../../img/img_59c15a22d94af.png" /></li>
+<li>Go to the <strong>Optimal HDX Routing</strong> page.</li>
+<li>Highlight one of the datacenter-specific Gateways, and click <strong>Manage Delivery Controllers</strong>.<br />
+<img alt="" src="../../../img/img_5c9fbb063938b.png" /></li>
+<li>Select the farms that should use this gateway, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5c9fbb3a98e1f.png" /></li>
+<li>Repeat for the other datacenter-specific Gateways.</li>
+<li>The Gateway for the active/active GSLB-enabled DNS name doesn’t need any farms associated with it.<br />
+<img alt="" src="../../../img/img_5c9fbb9c7fa43.png" /></li>
+<li>If you want to use Citrix Gateway internally for AppFlow reporting, then uncheck the <strong>External only</strong> checkbox.<br />
+<img alt="" src="../../../img/img_59c15ae299c19.png" /></li>
+<li>Another option for Optimal Gateway selection is zones. In XenApp/XenDesktop 7.7 and newer and Citrix Virtual Apps and Desktops, you can stretch a farm across datacenters (zones), and use a different Gateway for each zone. Highlight a Gateway. Click <strong>Manage Zones</strong>, and add the zone name. This assumes the zone name has also been specified in the <strong>Manage Delivery Controllers</strong> dialog box &gt; <strong>Advanced Settings</strong>.<br />
+<img alt="" src="../../../img/img_59c15b83a3888.png" /></li>
+<li>Click <strong>OK</strong> when done.</li>
+<li>In summary, users will connect to the active/active GSLB-enabled Gateway and login. After clicking an icon, HDX will be routed through one of the datacenter-specific Gateways based on the farm the icon was launched from.</li>
+</ol>
+</li>
+</ol>
+<h3 id="multiple-gateways-gslb-to-one-storefront-server-group">Multiple Gateways (GSLB) to One StoreFront Server Group</h3>
+<p>This section applies to SmartAccess, or SAML, and the Callback URL. If you don't need the Callback URL for SmartAccess or SAML, then skip this section.</p>
+<p>The Callback URL must go to the same Citrix ADC appliance that authenticated the user. If you have multiple Citrix ADC appliance pairs communicating with a single StoreFront server, then StoreFront needs to identify which Citrix ADC appliance pair the request came from, so it can perform a callback to that particular appliance pair.</p>
+<p>If each of the Citrix Gateways uses the same DNS name (e.g. GSLB), then you can't use the DNS name to distinguish one appliance from the other. Instead, StoreFront can use the Gateway VIP to distinguish appliances so the callback goes to the correct appliance.</p>
+<ol>
+<li>Create datacenter-specific callback DNS names. For example: <strong>callback-a.corp.com</strong> and <strong>callback-b.corp.com</strong>.</li>
+<li>
+<p>The datacenter-specific callback DNS name must match the certificate on the Citrix Gateway Virtual Server that is handling the callback. Here are some options to handle the certificate requirement:</p>
+<ul>
+<li>On the main Citrix Gateway Virtual Server, assign a wildcard certificate that matches both the GSLB name, and the datacenter-specific callback name.</li>
+<li>On the main Citrix Gateway Virtual Server, assign an SSL certificate with Subject Alternative Names for both the GSLB name, and the datacenter-specific callback name.</li>
+<li>Create an additional Citrix Gateway Virtual Server on the appliance. Bind a certificate that matches the datacenter-specific callback name.</li>
+<li>In the StoreFront console, create multiple Citrix Gateway appliances, one for each datacenter.<br />
+<img alt="" src="../../../img/img_5c9fbbd7465af.png" /></li>
+<li>Give each of the gateway objects unique <strong>Display names</strong>. You can't have two Gateway objects with the same display name.</li>
+<li>Enter the same <strong>Citrix Gateway URL</strong> in all of the gateway appliances.<br />
+<img alt="" src="../../../img/img_5c9fbc0f4faa2.png" /><br />
+<img alt="" src="../../../img/img_5c9fbc296946c.png" /></li>
+<li>
+<p>In the <em>Authentication Settings</em> page, in the <strong>VServer IP address</strong> field, enter the Gateway VIP for this particular appliance pair. StoreFront will use this VIP to distinguish one Citrix ADC appliance from another.</p>
+</li>
+<li>
+<p>When users use HTTP to connect to a Citrix Gateway for authentication and icon enumeration, when Citrix Gateway communicates with StoreFront, Citrix Gateway inserts its VIP into a HTTP Header field named <strong>X-Citrix-Via-VIP</strong>. StoreFront reads this VIP header, and compares it to the Gateway objects bound to the Store. If there's a match, StoreFront uses the Callback URL configured for that Gateway object.</p>
+</li>
+<li>The callback URL must be unique for each Citrix ADC appliance pair (e.g. callback-a.corp.com). The callback URL must resolve to a Citrix Gateway VIP on the same appliance pair that authenticated the user.<br />
+<img alt="" src="../../../img/img_5c9fbc92af727.png" /><br />
+<img alt="" src="../../../img/img_5c9fbc73a6d1a.png" /></li>
+<li>When enabling <strong>Remote Access</strong> on the store, select both Gateway appliances. Select one as the default appliance. It shouldn't matter which one is default.<br />
+<img alt="" src="../../../img/img_59c15e54d0efa.png" /><br />
+<img alt="" src="../../../img/img_5c9fbcaf9ae6d.png" /></li>
+</ul>
+</li>
+</ol>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li><a href="../storefront-cr/">Back to StoreFront 2203 LTSR through 3.5</a></li>
+<li><a href="../netscaler-menu/netscaler-12/" title="NetScaler 10.5">Citrix Gateway 12.1 / NetScaler Gateway 12.0</a></li>
+<li><a href="../netscaler-menu/citrix-adc-13/">Citrix Gateway 13.x</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

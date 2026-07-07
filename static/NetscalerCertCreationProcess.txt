@@ -1,0 +1,15 @@
+# Let's Encrypt Certificate Creation process
+# Created by Jeff Riechers
+# Downloaded from https://www.jeffriechers.com
+# For additional steps needed to prep the environment visit my site for more.
+# Save this file as a ps1.  I recommend C:\CertificateUpdate\ on a secure datacenter server
+
+# Enter the plug-in arguements for your DNS host, my example here is for GoDaddy
+# Let's Encrypt works with various DNS vendors, so check this site for more info for your vendor.
+# https://poshac.me/docs/v4/Plugins/
+# 
+# I recommend creating all domain certificates from the same machine
+# This makes updating them a single process from a single secured machine
+
+$pArgs = @{GDKey='<your GoDaddy Key>';GDSecret='<your GoDaddy Secret'}
+New-PACertificate *.domain.name -Contact domaincontact.email.com -DnsPlugin GoDaddy -PluginArgs $pArgs

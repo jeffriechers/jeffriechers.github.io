@@ -1,0 +1,6104 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../vmware-access-load-balancing/">
+      
+      
+        <link rel="next" href="../vmware-user-environment-manager/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Omnissa Unified Access Gateway 2503 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../custom.css">
+    
+      <link rel="stylesheet" href="../../base.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Omnissa Unified Access Gateway 2503
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Citrix/WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell-deploy-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell Deploy Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy New
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uag-admin-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UAG Admin Interface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UAG Admin Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-horizon-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Horizon Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-uag-to-horizon-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add UAG to Horizon Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uag-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UAG Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-uag-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other UAG Configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitor-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitor Sessions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Balancing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Balancing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell-deploy-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell Deploy Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy New
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uag-admin-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UAG Admin Interface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UAG Admin Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-horizon-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Horizon Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-uag-to-horizon-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add UAG to Horizon Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uag-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UAG Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-uag-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other UAG Configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitor-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitor Sessions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Balancing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Balancing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Omnissa Unified Access Gateway 2503</h1>
+
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#overview">Overview</a><ul>
+<li><a href="#firewall">Firewall</a></li>
+</ul>
+</li>
+<li><a href="#powershelldeploy">PowerShell Deploy Script Method</a> - both upgrade and new</li>
+<li><strong>vSphere Client Deploy OVF method</strong> - <a href="#upgrade">Upgrade Existing</a>, or <a href="#deployovf">Deploy New</a></li>
+<li><a href="#admininterface">Web-based Admin Interface</a></li>
+<li><a href="#adduagtohorizon">Add UAG to Horizon Console</a></li>
+<li><a href="#sessions">Monitor Sessions</a></li>
+<li><a href="#logs">Logs and Troubleshooting</a></li>
+<li><a href="#loadbalancing">Load Balancing</a></li>
+<li><a href="#uagauthentication">UAG Authentication</a> - SAML, RADIUS</li>
+<li><a href="#otheruagconfig">Other UAG Configurations</a> - High Availability, Network Settings, System Settings</li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2025 July 29 - updated <a href="#deployovf">Import OVF section</a> for <a href="https://customerconnect.omnissa.com/downloads/info/slug/desktop_end_user_computing/omnissa_unified_access_gateway/25_03">UAG 2503</a></li>
+<li>2024 Jan 31 - <a href="https://kb.vmware.com/s/article/96373?lang=en_US">SHA-1 thumbprint no longer supported</a>. Replace with SHA-256 thumbprint (fingerprint).</li>
+<li>2021 Sep 30 - <a href="#horizonedge">Horizon Edge configuration</a> - added instructions to disable CORS to fix HTML Access in Horizon 2106 and newer.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>Unified Access Gateway provides remote connectivity to internal Horizon Agent machines. For an explanation of how this works (i.e., traffic flow), see <a href="https://techzone.omnissa.com/resource/understand-and-troubleshoot-horizon-connections">Understand and Troubleshoot Horizon Connections</a> at Omnissa Tech Zone.<br />
+<img alt="" src="../../img/img_5d221750add47.png" /></p>
+<p>Unified Access Gateway (formerly known as Access Point) is a replacement for Horizon Security Servers. Advantages include:</p>
+<ul>
+<li>You don't need to build extra Connection Servers just for pairing. However, you might want extra Horizon Connection Servers so you can filter pools based on <a href="https://docs.omnissa.com/bundle/HorizonOverviewDeployment/page/RestrictingRemoteDesktopAccessinHorizon8Environments.html">tags</a>.</li>
+<li>Between Unified Access Gateway and Horizon Connection Servers you only need TCP 443. No need for IPSec or 4001 or the other ports. You still need 4172, 22443, etc. to the View Agents.</li>
+<li>No need to enable Gateway/Tunnel on the internal Horizon Connection Servers.</li>
+<li>Additional security with DMZ authentication. Some of the Authentication methods supported on Unified Access Gateway are RSA SecurID, RADIUS, CAC/certificates, etc.</li>
+</ul>
+<p>However:</p>
+<ul>
+<li>It's Linux. You can deploy and configure the appliance without any Linux skills. But you might need some Linux skills during troubleshooting.</li>
+</ul>
+<p>Horizon View <strong>Security Server</strong> has been removed from Horizon 2006 (aka Horizon 8).</p>
+<ul>
+<li>Some of the newer Blast Extreme functionality only works in <strong>Unified Access Gateway</strong>. See <a href="https://docs.omnissa.com/bundle/Horizon8InstallUpgrade/page/ConfiguretheBlastSecureGateway.html">Configure the Blast Secure Gateway</a> at Omnissa Docs.</li>
+</ul>
+<p>More information at VMware Blog Post <a href="https://blogs.vmware.com/euc/2015/09/what-is-vmware-unified-access-gateway-secure-remote-access.html#sf40959323">Technical Introduction to VMware Unified Access Gateway for Horizon Secure Remote Access</a>.</p>
+<p><strong>Horizon Compatibility</strong> - Refer to the <a href="https://interopmatrix.omnissa.com/Interoperability">interoperability matrix</a> to determine which version of Unified Access Gateway is compatible with your version of Horizon.</p>
+<ul>
+<li>
+<p>The latest version of UAG is <a href="https://customerconnect.omnissa.com/downloads/details?downloadGroup=UAG2503_DLG&amp;productId=1603&amp;rPId=118978">2503</a>.</p>
+<ul>
+<li>You usually want the <strong>Non-FIPS</strong> version.<br />
+<img alt="" src="../../img/Ie2h4tgUNKUAAAAASUVORK5CYII=" /></li>
+<li>Then download the <strong>PowerShell deployment scripts</strong> on the same UAG download page.<br />
+<img alt="" src="../../img/GAr2kK8quKLjr+5iurve8xTkGrDVvt1mAp0vbl8w7Zr9w+ht9CrKje6UPGsNPZVJSjbkcTQF87+YPN8kFdVCCFkeaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEhoXkSQgghIaF5EkIIISGheRJCCCEh+f+CH8ch9gCYrwAAAABJRU5ErkJggg==" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="firewall">Firewall</h3>
+<p>Omnissa Tech Zone <a href="https://techzone.omnissa.com/resource/omnissa-horizon-blast-extreme-display-protocol">Omnissa Horizon Blast Extreme Display Protocol</a>, and <a href="https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2412/page/FirewallrulesforDMZ-basedUnifiedAccessGatewayappliances.html">Firewall Rules for DMZ-Based Unified Access Gateway Appliances</a> at Omnissa Docs.<br />
+<img alt="" src="../../img/img_58d4507fcd3ef.png" /></p>
+<p>Open these ports from any device on the Internet to the Unified Access Gateway Load Balancer VIP:</p>
+<ul>
+<li>TCP and UDP 443</li>
+<li>TCP and UDP 4172. UDP 4172 must be opened in both directions. (PCoIP)</li>
+<li>TCP and UDP 8443 (for HTML Blast)</li>
+</ul>
+<p>Open these ports from the Unified Access Gateways to internal:</p>
+<ul>
+<li>TCP 443 to internal Connection Servers (through a load balancer)</li>
+<li>TCP and UDP 4172 (PCoIP) to all internal Horizon View Agents. UDP 4172 must be opened in both directions.</li>
+<li>TCP 32111 (USB Redirection) to all internal Horizon View Agents.</li>
+<li>TCP and UDP 22443 (Blast Extreme) to all internal Horizon View Agents.</li>
+<li>TCP 9427 (MMR and CDR) to all internal Horizon View Agents.</li>
+</ul>
+<p>Open these ports from any internal administrator workstations to the Unified Access Gateway appliance IPs:</p>
+<ul>
+<li>TCP 9443 (REST API)</li>
+<li>TCP 80/443 (Edge Gateway)</li>
+</ul>
+<h3 id="powershell-deploy-script">PowerShell Deploy Script</h3>
+<p>Omnissa Docs <a href="https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2412/page/UsingPowerShelltoDeployUnifiedAccessGateway.html">Using PowerShell to Deploy VMware Unified Access Gateway</a>. The script runs OVF Tool to deploy and configure Unified Access Gateway. The PowerShell script is updated as newer versions of Unified Access Gateways are released. This is the recommended method of deploying Unified Access Gateway.</p>
+<p>If you prefer to use vSphere Client to Deploy the OVF file, skip ahead to <a href="#upgrade">Upgrade</a> or <a href="#deployovf">Deploy</a>.</p>
+<p>The PowerShell deployment script is downloadable from the UAG download page.<br />
+<img alt="" src="../../img/QSE2Q3BzYvEAAAAASUVORK5CYII=" /></p>
+<p>The PowerShell deploy script requires the OVF Tool:</p>
+<ol>
+<li>Download <a href="https://developer.broadcom.com/tools/open-virtualization-format-ovf-tool/latest">ovftool</a> from Broadcom.<br />
+<img alt="" src="../../img/image-96.png" /></li>
+<li>On the machine where you will run the UAG Deploy script, install <strong>VMware-ovftool-...-win.x86_64.msi</strong>.<br />
+<img alt="" src="../../img/img_62d1c7e448ada.png" /></li>
+<li>In the <em>Welcome to the VMware OVF Tool Setup Wizard</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_62d1c82267524.png" /></li>
+<li>In the <em>End-User License Agreement</em> page, check the box next to <strong>I accept the terms</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_5dd07cdc1c964.png" /></li>
+<li>In the <em>Destination Folder</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_5dd07cea5ffb1.png" /></li>
+<li>In the <em>Ready to install VMware OVF Tool</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../img/img_5dd07cf512c76.png" /></li>
+<li>In the <em>Completed the VMware OVF Tool Setup Wizard</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../img/img_5dd07d08becdc.png" /></li>
+</ol>
+<p>Create or Edit a UAG .ini configuration file:</p>
+<ol>
+<li>Extract the downloaded <strong>uagdeploy</strong> PowerShell scripts for your version of Unified Access Gateway.<br />
+<img alt="" src="../../img/img_62d1c8674ca43.png" /></li>
+<li>If you have an existing UAG appliance, then you can download an INI of the configuration from the UAG Administrator page.<br />
+<img alt="" src="../../img/img_5f7498ba102da.png" /><ul>
+<li>Or copy and edit one of the downloaded .ini files, like <strong>uag2-advanced.ini</strong>.<br />
+<img alt="" src="../../img/img_5dd07dbb55eaa.png" /></li>
+</ul>
+</li>
+<li>A full explanation of all configuration settings can be found at <a href="https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2406/page/UsingPowerShelltoDeployUnifiedAccessGateway.html">Using PowerShell to Deploy Unified Access Gateway</a> at Omnissa Docs.</li>
+<li>For any value that has spaces, do not include quotes in the .ini file. The script adds the quotes automatically.</li>
+<li>The <strong>name</strong> setting specifies the name of the virtual machine in vCenter. If this VM name already exists in vCenter, then OVF Tool will delete the existing VM and replace it.</li>
+<li>Add a <strong>uagName</strong> setting and specify a friendly name. You'll later add this name to Horizon Console so you can view the health of the UAG appliance in Horizon Console.<br />
+<img alt="" src="../../img/img_5dd09bcbaefda.png" /></li>
+<li>You can optionally enable SSH on the appliance by adding <strong>sshEnabled=true</strong>.<br />
+<img alt="" src="../../img/img_5df65e29b6c25.png" /></li>
+<li>For the <strong>source</strong> setting, enter the full path to the UAG .ova file.<br />
+<img alt="" src="../../img/img_5df65adda72f8.png" /></li>
+<li>For the <strong>target</strong> setting, leave PASSWORD in upper case. Don't enter an actual password. OVF Tool will instead prompt you for the password.</li>
+<li>
+<p>For the <strong>target</strong> setting, specify a cluster name instead of a host. If spaces, there's no need for quotes. For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>target=vi://admin@corp.local:PASSWORD@vcenter02.corp.local/Datacenter/host/Cluster 1
+</span></code></pre></div>
+</li>
+<li>
+<p>Specify the exact datastore name for the UAG appliance.</p>
+</li>
+<li>Optionally uncomment the <strong>diskMode</strong> setting.<br />
+<img alt="" src="../../img/img_5df65b48d1514.png" /></li>
+<li>For a <strong>onenic</strong> configuration (recommended), set the <strong>netInternet</strong>, <strong>netManagementNetwork</strong>, and <strong>netBackendNetwork</strong> settings to the same port group name.<br />
+<img alt="" src="../../img/img_5dd0977a4fa21.png" /></li>
+<li>Multiple <strong>dns</strong> servers are space delimited.<br />
+<img alt="" src="../../img/img_5dd09788c662e.png" /></li>
+<li>For <strong>pfxCerts</strong>, UNC paths don't work. Make sure you enter a local path (e.g. C:\). OVA Source File can be UNC, but the .pfx file must be local.</li>
+<li>There's no need to enter the .pfx password in the .ini file since the uagdeploy.ps1 script will prompt you for the password.<br />
+<img alt="" src="../../img/img_5dd0974232db6.png" /></li>
+<li><strong>proxyDestinationUrl</strong> should point to the internal load balancer for the Horizon Connection Servers.<br />
+<img alt="" src="../../img/img_5dd097df6a911.png" /></li>
+<li>
+<p>For <strong>proxyDestinationUrlThumbprints</strong>, paste in the sha256 or higher thumbprint of the Horizon Connection Server certificate in the format shown.</p>
+<ul>
+<li>If your Horizon Connection Servers each have different certificates, then you can include multiple thumbprints (comma separated).</li>
+<li>Make sure there's no hidden character between <strong>sha256</strong> and the beginning of the thumbprint. Or you can just paste the thumbprint without specifying <strong>sha256</strong>. Note: <strong>sha1</strong> is no longer supported. Edge and Chrome can show <strong>sha256</strong> certificate fingerprint.<br />
+<img alt="" src="../../img/image-77.png" /></li>
+<li>Change the <strong>ExternalUrl</strong> entries to an externally-resolvable DNS name and a public IP address. For multiple UAGs, the FQDNs and public IP address should resolve to the load balancer. Note: your load balancer must support persistence across multiple port numbers (443, 8443, 4172).<br />
+<img alt="" src="../../img/img_5dd0982f70a84.png" /></li>
+</ul>
+</li>
+</ol>
+<p>When you run the PowerShell script, if the UAG appliance already exists, then the PowerShell script will replace the existing appliance. There's no need to power off the old appliance since the OVF tool will do that for you.</p>
+<ol>
+<li>Open an elevated PowerShell prompt.</li>
+<li>Paste in the path to the <strong>uagdeploy.ps1</strong> file. If there are quotes around the path, then add a <strong>&amp;</strong> to the beginning of the line so PowerShell executes the path instead of just echoing the string.</li>
+<li>Add the <strong>-iniFile</strong> argument and enter the path to the <strong>.ini</strong> file that you modified. Press <Enter> to run the script.<br />
+<img alt="" src="../../img/img_5dd0843babd20.png" /></li>
+<li>You'll be prompted to enter the root password for the UAG appliance. Make sure the password meets password complexity requirements.<br />
+<img alt="" src="../../img/img_5dd084612e955.png" /></li>
+<li>You'll be prompted to enter the admin password for the UAG appliance. Make sure the password meets password complexity requirements.<br />
+<img alt="" src="../../img/img_5dd08475ef19e.png" /></li>
+<li>For CEIP, enter <strong>yes</strong> or <strong>no</strong>.<br />
+<img alt="" src="../../img/img_5dd0849defedf.png" /></li>
+<li>For .pfx files, you'll be prompted to enter the password for the .pfx file. Note: the .pfx file must be local, not UNC.<br />
+<img alt="" src="../../img/img_5dd09889a46a3.png" /></li>
+<li>OVF Tool will prompt you for the vCenter password. Special characters in the vCenter password must be encoded. Use a URL encoder tool (e.g., <a href="https://www.urlencoder.org/">https://www.urlencoder.org/</a>) to encode the password. Then paste the encoded password when prompted by the ovftool. The UAG passwords do not need encoding, but the vCenter password does.<br />
+<img alt="" src="../../img/img_5dd09c6c89749.png" /></li>
+<li>The deploy script will display the IP address of the powered on UAG appliance.<br />
+<img alt="" src="../../img/img_5dd09e50bef13.png" /></li>
+<li>Review settings in the <a href="#admininterface">UAG admin interface</a>.</li>
+<li><a href="#adduagtohorizon">Add the new UAG appliance to Horizon Console</a>.</li>
+</ol>
+<h3 id="upgrade">Upgrade</h3>
+<p>To upgrade from an older appliance, you delete the old appliance and import the new one. Before deleting the older appliance, export your settings:</p>
+<ol>
+<li>Login to the UAG at <strong>https://<Your\_UAG\_IP>:9443/admin/index.html</strong>.</li>
+<li>In the <strong>Configure Manually</strong> section, click <strong>Select</strong>.<br />
+<img alt="" src="../../img/Pasted-119.png" /></li>
+<li>Scroll down to the <strong>Support Settings</strong> section, and then click the <strong>JSON</strong> button next to <strong>Export Unified Access Gateway Settings</strong>.<br />
+<img alt="" src="../../img/img_5b0694d94e5c4.png" /></li>
+<li>Note: the exported JSON file does not include the UAG certificate, so you'll also need the .pfx file. If RADIUS is configured, then during import you'll be prompted to enter the RADIUS secret.<br />
+<img alt="" src="../../img/img_605ccec883a1a.png" /></li>
+</ol>
+<h3 id="deploy-new">Deploy New</h3>
+<p><strong>Horizon Compatibility</strong> - Refer to the <a href="https://interopmatrix.omnissa.com/Interoperability">interoperability matrix</a> to determine which version of Unified Access Gateway is compatible with your version of Horizon.</p>
+<ul>
+<li>
+<p>The latest version of UAG is <a href="https://customerconnect.omnissa.com/downloads/details?downloadGroup=UAG2503_DLG&amp;productId=1603&amp;rPId=118978">2503</a>.</p>
+<ul>
+<li>You usually want the <strong>Non-FIPS</strong> version.<br />
+<img alt="" src="../../img/jxE5NZ0wAAAABJRU5ErkJggg==" /></li>
+</ul>
+</li>
+</ul>
+<p>To deploy the Unified Access Gateway using VMware vSphere Client:</p>
+<ol>
+<li>If vSphere Client, right-click a cluster, and click <strong>Deploy OVF Template</strong>.<br />
+<img alt="" src="../../img/img_5b0695e27c3c1.png" /></li>
+<li>Select <strong>Local File</strong> and click <strong>Upload Files</strong>. In the <em>Open</em> window, browse to the downloaded <strong>euc-unified-access-gateway.ova</strong> file, and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/wflQ7UI519KTgAAAABJRU5ErkJggg==" /></li>
+<li>In the <em>Select a name and folder</em> page, give the machine a name, and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/GHLSJHW1jZMAAAAASUVORK5CYII=" /></li>
+<li>In the <em>Review Details</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../img/4Akhvacff98IIYQQQgh5LNBAIIS8sfTj7xshhBBCCCGPhf8HqOqTBzD3RjwAAAAASUVORK5CYII=" /></li>
+<li>In the <em>Select configuration</em> page, select a Deployment Configuration. See Network Segments at <a href="https://techzone.omnissa.com/resource/unified-access-gateway-architecture#network-segments">Unified Access Gateway Architecture</a> at Omnissa Tech Zone. Click <strong>Next</strong>.<br />
+<img alt="" src="../../img/B0YUQHEmpLb4AAAAAElFTkSuQmCC" /></li>
+<li>In the <em>Select storage</em> page, select a datastore, select a disk format, and click <strong>Next</strong>.<br />
+<img alt="" src="../../img/img_61a8a380820e1.png" /></li>
+<li>In the <strong>Select networks</strong> page, even if you select <strong>Single NIC</strong>, the OVF deployment wizard asks you for multiple NICs. UAG typically goes in the DMZ.<br />
+<img alt="" src="../../img/img_61a8a393a12f5.png" /></li>
+<li>In the <em>Customize template</em> page, select <strong>STATICV4</strong>, and scroll down.<br />
+<img alt="" src="../../img/img_61a8a3b70f131.png" /></li>
+<li>In the <strong>NIC1 (eth0) IPv4 address</strong> field, enter the NIC1 (eth0) IPv4 address. Scroll down.<br />
+<img alt="" src="../../img/img_5c15616076920.png" /></li>
+<li>Enter DNS addresses, Gateway, and Subnet Mask. Scroll down.<br />
+<img alt="" src="../../img/img_5f09af3a4a090.png" /></li>
+<li>Scroll down and enter more IP info.<br />
+<img alt="" src="../../img/img_61a8a3ef1fb76.png" /></li>
+<li>Scroll down.</li>
+<li>Enter a Unified Gateway Appliance Name.<br />
+<img alt="" src="../../img/img_5b0699e9e1324.png" /></li>
+<li>Scroll down.</li>
+<li>UAG 2207 and newer let you specify the local root username.<br />
+<img alt="" src="../../img/img_62d1cb05de8a6.png" /></li>
+<li>Enter passwords.<br />
+<img alt="" src="../../img/img_62d1cb47a86b9.png" /><ul>
+<li>UAG 20.12 (2012) and newer let you specify Password Policy settings when deploying the OVF.<br />
+<img alt="" src="../../img/img_5fe90d5e56e1f.png" /></li>
+</ul>
+</li>
+<li>Scroll down and enter the password for the <strong>admin</strong> user.<br />
+<img alt="" src="../../img/img_5fe90db825dfb.png" /></li>
+<li>UAG 2207 and newer have an <strong>adminreset</strong> command if you mess up the admin interface login. There's also an <strong>adminpwd</strong> command to reset the password.<br />
+<img alt="" src="../../img/img_62d550bbbcd64.png" /></li>
+<li>UAG 2207 and newer have an option to enable DISA STIG compliance, usually on the FIPS version of UAG.<br />
+<img alt="" src="../../img/img_62d1cb8029ab2.png" /></li>
+<li>There's a checkbox for <strong>Enable SSH</strong>.</li>
+<li>In UAG 3.9 and newer, there's an option to login using a SSH key/pair instead of a password.<br />
+<img alt="" src="../../img/img_62d1cbc09f305.png" /></li>
+<li>Newer versions of UAG have more SSH options.<br />
+<img alt="" src="../../img/img_62d1cbfd73b9b.png" /></li>
+<li>UAG 2207 adds <strong>Commands to Run on First Boot</strong> or <strong>Every Boot</strong>.<br />
+<img alt="" src="../../img/img_62d1cc13df096.png" /></li>
+<li>Click <strong>Next</strong>.</li>
+<li>In the <em>Ready to complete</em> page, click <strong>Finish</strong>.<br />
+<img alt="" src="../../img/img_62d1cc3c696eb.png" /></li>
+</ol>
+<h2 id="uag-admin-interface">UAG Admin Interface</h2>
+<ol>
+<li>Power on the Unified Access Gateway appliance.<br />
+<img alt="" src="../../img/img_61a8a8429953b.png" /></li>
+<li>Point your browser to <strong>https://My_UAG_IP:9443/admin/index.html</strong> and login as <strong>admin</strong>. It might take a few minutes before the admin page is accessible.<br />
+<img alt="" src="../../img/wNPWr9Z32ahlAAAAABJRU5ErkJggg==" /></li>
+<li>UAG 2207 and newer have an <strong>adminreset</strong> command if you mess up the admin interface login. There's also an <strong>adminpwd</strong> command to reset the password.<br />
+<img alt="" src="../../img/img_62d550bbbcd64.png" /></li>
+</ol>
+<h4 id="import-settings">Import Settings</h4>
+<ol>
+<li>If you have previously exported settings, you can import it now by clicking <strong>Select</strong> in the <strong>Import Settings</strong> section.<br />
+<img alt="" src="../../img/i8HEwQPAAQQAACAhKCmBABwEQIIAACAM9SUAAAuQgABAABwhpoSAMBFCCAAAADOUFMCALgIAQQAAMAZakoAABchgAAAADhDTQkA4CIEEAAAAGeoKQEAXIQAAgAA4Aw1JQCAixBAAAAAnKGmBABwEQIIAACAM9SUAAAuQgABAABwhpoSAMBFCCAAAADOUFMCALgIAQQAAMAZakoAABchgAAAADj7f+KAi5V2NZcWAAAAAElFTkSuQmCC" /></li>
+<li>Browse to the previously exported <strong>UAG_Settings.json</strong> file and then click <strong>Import</strong>. Note that this json file might have old settings, like old ciphers. Review the file to ensure you're not importing legacy configurations. If the .json file has a SHA-1 thumbprint, then edit the file and replace it with SHA-256 thumbprint (fingerprint).<br />
+<img alt="" src="../../img/img_5fe90fe6bc528.png" /></li>
+<li>It should say <strong>UAG settings imported successfully</strong>. If you don't see this, then your .json file probably has a SHA-1 thumbprint.</li>
+<li>Press <F5> on your keyboard to refresh the browser.</li>
+<li>The .json file does not include the certificate so you'll have to do that separately. In the Admin console, in the <strong>Advanced Settings</strong> section, click <strong>TLS Server Certificate Settings</strong>.<br />
+<img alt="" src="../../img/img_605cc6b5e3696.png" /></li>
+<li>Check the box next to <strong>Internet Interface</strong>. Optionally uncheck the box next to <strong>Admin Interface</strong>.</li>
+<li>Change the drop-down for <strong>Certificate Type</strong> to <strong>PFX</strong>.</li>
+<li>In the row <strong>Upload PFX</strong>, click <strong>Select</strong> and browse to your PFX file.<br />
+<img alt="" src="../../img/AGS97F5nmqEAAAAASUVORK5CYII=" /></li>
+<li>In the <strong>Password</strong> field, enter the PFX password and then click <strong>Save</strong>.<br />
+<img alt="" src="../../img/w8v4BIGWRzITgAAAABJRU5ErkJggg==" /></li>
+</ol>
+<h4 id="configure-horizon-settings">Configure Horizon Settings</h4>
+<ol>
+<li>To manually configure the appliance, under <strong>Configure Manually</strong>, click <strong>Select</strong>.<br />
+<img alt="" src="../../img/T9dSlygFeHQiwAAAABJRU5ErkJggg==" /></li>
+<li>Click the slider for <strong>Edge Service Settings</strong>.<br />
+<img alt="" src="../../img/jMlyWz+FzuQ6ui+sErQdIEwAAgFaDnBwus04sQJx5qq6uFlJUVVVlCt7Hx7gMl+Vz+FyuA8LU+oA0AQAAaFXIrJOUJ84aSYHiqKvjeU11xjYfk5klKUsQptYJpAkAAECrRJUnKVB2IY9DlgCkCQAAAFAkSg8AJJAmAAAAAAAXQJoAAAAAAFwAaQIAAAAAcAGkCQAAAADABf8fa16FByxq6vkAAAAASUVORK5CYII=" /></li>
+<li>Click the gear icon for <strong>Horizon Settings</strong>.<br />
+<img alt="" src="../../img/w9PjsLdsh+xqwAAAABJRU5ErkJggg==" /></li>
+<li>Click the slider for <strong>Enable Horizon</strong>.<br />
+<img alt="" src="../../img/SxNO6xdd3dfbiTl+xyd+KRDl3veFCWJBNQloSQnIayJJmAsiSE5DSUJckElCUhJKehLEkmoCwJITkNZUkyAWVJCMlpKEuSCShLQkhOQ1mSTEBZEkJyGsqSZALKkhCS01CWJBNQloSQnIayJJmAsiSE5DQjR46UvXv36sWEpBTKkhCS0+Tn58vkyZMjnoVLSCqhLAkhOU1lZaVMnTpVRo8ebYZkGYx0BGVJCCGExIGyJIQQQuJAWRJCCCFxoCwJIYSQOFCWhBBCSBwoS0IIISQOlCUhhBASB8qSEEIIiQNlSQghhMSBsiSEEELiQFkSQgghcaAsCSGEkDhQloQQQkgcKEtCCCEkDpQlIYQQEgfKkhBCCIkDZUkIIYTE4f8BsmN6Tk+Np+QAAAAASUVORK5CYII=" /></li>
+<li>As you fill in these fields, hover over the information icon to see the syntax.</li>
+<li>The <strong>Connection Server URL</strong> should point to the internal load balanced DNS name (URL) for your internal Connection Servers.<br />
+<img alt="" src="../../img/iCNPr0MGvOoAAAAASUVORK5CYII=" />  <ol>
+<li>For the <strong>Connection Server URL Thumbprint</strong>, get the thumbprint from the internal Horizon certificate. Point your browser to the internal Horizon Connection Server FQDN (load balanced) and click the padlock icon to open the certificate.<br />
+<img alt="" src="../../img/image-79.png" /></li>
+<li>On the <strong>Details</strong> tab, copy the <strong>SHA-256 Fingerprint</strong>. Note that SHA-1 thumbprint is no longer supported.<br />
+<img alt="" src="../../img/image-78.png" /></li>
+</ol>
+</li>
+<li>In the <strong>Proxy Destination URL Thumb Prints</strong> field, type in <code>**sha256=**</code> and paste the certificate thumbprint.</li>
+<li>At the beginning of the <strong>Thumbprint</strong> field, immediately after the equals sign, there might be a hidden character. Press the arrow keys on the keyboard to find it. Then delete the hidden character.<br />
+<img alt="" src="../../img/v8DezgajUZboOgAAAAASUVORK5CYII=" /></li>
+<li>
+<p>Enable the three PCOIP, Blast, and Tunnel Gateways and perform the following configurations:</p>
+<ol>
+<li>For <strong>PCOIP External URL</strong>, enter the external IP and <code>**:4172**</code>. The IP should point to your external load balancer that's load balancing UDP 4172 and TCP 4172 to multiple Unified Access Gateways.</li>
+<li>
+<p>For <strong>Blast External URL</strong>, enter https://<FQDN>:8443 (e.g. https://view.corp.com:8443). This FQDN should resolve to your external load balancer that's load balancing UDP 8443 and TCP 8443 to multiple Unified Access Gateways.</p>
+<ul>
+<li>You could change the Blast port to 443 but this would increase CPU utilization on UAG. See Omnissa 78419 <a href="https://kb.omnissa.com/s/article/78419">Unified Access Gateway (UAG) high CPU utilization</a>.</li>
+<li>Link: <a href="https://community.omnissa.com/forums/topic/39-troubleshooting-blast/">Troubleshooting Blast</a> at Omnissa Discussions<ol>
+<li>For <strong>Enable UDP Tunnel Server</strong>, enable the setting.</li>
+<li>For <strong>Tunnel External URL</strong>, enter https://<FQDN>:443 (e.g., https://view.corp.com:443). This FQDN should resolve to your external load balancer that's load balancing TCP 443 to multiple Unified Access Gateways.</li>
+<li>The external load balancer must be capable of using the same persistence across multiple port numbers. On NetScaler, this feature is called <strong>Persistency Group</strong>. On F5, the feature is called <strong>Match Across</strong>.</li>
+</ol>
+</li>
+<li>Then click <strong>More</strong>.<br />
+<img alt="" src="../../img/WxX6ZVQVgt3S69rJZcrP8fPO7yUNAKrgkAAAAASUVORK5CYII=" /></li>
+<li>Unified Access Gateway has a default list of paths it will forward to the Horizon Connection Server. You can edit the <strong>Proxy Pattern</strong> and add <code>|/downloads(.*)</code> to the list so that users can also download Horizon Clients that are stored on your Horizon Connection Servers as detailed elsewhere at <a href="../vmware-horizon-8-connection-server/#portal">carlstalhood.com</a>. Make sure you click <strong>Save</strong> at least once so it saves the default <strong>Proxy Pattern</strong>. Then go back in and add <code>|/downloads(.*)</code> to the end of the <strong>Proxy Pattern</strong> but inside the last parentheses. In UAG 2406, the default <strong>Proxy Pattern</strong> looks something like below:<br />
+<img alt="" src="../../img/image-111.png" />  </li>
+</ul>
+</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>(/|/view-client(.*)|/portal(.*)|/appblast(.*)|/iwa(.*)|/downloads(.*))
+</span></code></pre></div>
+</li>
+<li>
+<p>Scroll down and click <strong>Save</strong> when done.<br />
+<img alt="" src="../../img/A8ezpDhINB6RAAAAAElFTkSuQmCC" /></p>
+</li>
+<li>If you click the arrow next to <strong>Horizon Settings</strong>, then it shows you the status of the Edge services. It might take a minute or two to start working.<br />
+<img alt="" src="../../img/d5AAAAAElFTkSuQmCC" /></li>
+<li>
+<p>In your Horizon Connection Servers, the Secure Gateways (e.g. PCoIP Gateway) should be disabled.</p>
+<ol>
+<li>Go to Horizon Console.</li>
+<li>Expand <strong>Settings</strong> and click <strong>Servers</strong>. On the right, switch to the tab named <strong>Connection Servers</strong>. Highlight your Connection Servers and click <strong>Edit</strong>.<br />
+<img alt="" src="../../img/DoU1cxWFrU9QmoCml+KoijK6aL5dSiqma0sanuE1AQ0vxRFUZTT9f9hdr4ibZg5tAAAAABJRU5ErkJggg==" /></li>
+<li>Then uncheck or disable all three Tunnels/Gateways.<br />
+<img alt="" src="../../img/vgT5muCIAiCIAhCA6LebbwsCIIgCIIgnBli+ARBEARBEBo4YvgEQRAEQRAaOGL4BEEQBEEQGjhi+ARBEARBEBo4YvgEQRAEQRAaOGL4BEEQBEEQGjhi+ARBEARBEBo4YvgEQRAEQRAaOGL4BEEQBEEQGjhi+ARBEARBEBo4YvgEQRAEQRAaOGL4BEEQBEEQGjhi+ARBEARBEBo4YvgEQRAEQRAaOGL4BEEQBEEQGjhi+ARBEARBEBo49crwlZSUiEQikUgkEonOUPXK8AmCIAiCIAhnjhg+QRAEQRCEBo4YPkEQBEEQhAaOGD5BEARBEIQGjhg+QRAEQRCEBo4YPkEQBEEQhAaOGD5BEARBEIQGzv8H2Mkuh1QCmToAAAAASUVORK5CYII=" /><img alt="" src="../../img/wdizkSj4CeSewAAAABJRU5ErkJggg==" /></li>
+<li>HTML Access probably won't work through Unified Access Gateway. You'll probably see the message <strong>Failed to connect to the Connection Server</strong>.<br />
+<img alt="" src="../../img/img_61565bc3606e4.png" /></li>
+<li>To fix this, configure on each Connection Server the file <strong>C:\Program Files\Omnissa\Horizon\Server\sslgateway\conf\locked.properties</strong> (or <strong>C:\Program Files\VMware\VMware View\Server\sslgateway\conf\locked.properties</strong>) to <a href="https://kb.omnissa.com/s/article/2144768">disable Origin Check</a> (<strong>checkOrigin=false</strong>) or <a href="https://docs.omnissa.com/bundle/Horizon8InstallUpgrade/page/AllowHTMLAccessThroughaGateway.html">configure the Connection Server's <strong>locked.properties</strong> with the UAG addresses</a>. Also see 2144768 <a href="https://kb.omnissa.com/s/article/2144768">Accessing the Horizon View Administrator page displays a blank error window in Horizon 7</a>.</li>
+<li>Horizon 2106 and newer enable CORS by default so you'll need to either disable CORS by adding <strong>enableCORS=false</strong> to <strong>C:\Program Files\Omnissa\Horizon\Server\sslgateway\conf\locked.properties</strong> (0r <strong>C</strong><strong>:\Program Files\VMware\VMware View\Server\sslgateway\conf\locked.properties</strong>) or configure the <strong>portalHost</strong> entries in <strong>locked.properties</strong> as detailed at 85801 <a href="https://kb.omnissa.com/s/article/85801?lang=en_US">Cross-Origin Resource Sharing (CORS) with Horizon 8 and loadbalanced HTML5 access</a>.<br />
+<img alt="" src="../../img/rphhwD+uS3wAAAABJRU5ErkJggg==" /></li>
+<li>After modifying the <strong>locked.properties</strong> file, restart the <strong>Omnissa Horizon Secure Gateway</strong> (or <strong>VMware Horizon View Security Gateway Component</strong>) service.<br />
+<img alt="" src="../../img/P8BjLU91uq8doEAAAAASUVORK5CYII=" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="add-uag-to-horizon-console">Add UAG to Horizon Console</h4>
+<p>In Horizon 7.7 and newer, you can add UAG 3.4 and newer to Horizon Console so you can check its status in the Dashboard.</p>
+<ol>
+<li>In UAG Admin console, under <strong>Advanced Settings</strong>, click the gear icon next to <strong>System Configuration</strong>.<br />
+<img alt="" src="../../img/5Gentjef7OQK6esd3dq3SEMgBgeDuyViacljxxffbPN7trBxWhDABARRDKAABUBKEMAEBFEMoAAFQEoQwAQEUQygAAVAShDABARRDKAABUBKEMAEBFEMoAAFQEoQwAQEUQygAAVAShDABARRDKAABUxIBC+dbxk2g0Go1GO3HahMe709zj9rP1ZUChDAAAuo9QBgCgIghlAAAqglAGAKAiCGUAACqCUAYAoCIIZQAAKoJQBgCgIghlAAAq4v8BNe2dxcJ1ZQUAAAAASUVORK5CYII=" /></li>
+<li>At the top of the page, change the <strong>UAG Name</strong> to a friendly name. You'll use this case-sensitive name later.<br />
+<img alt="" src="../../img/vXdn0AAAAASUVORK5CYII=" /></li>
+<li>Click <strong>Save</strong> at the bottom of the page.<br />
+<img alt="" src="../../img/UiisKiRTyvLJpfUei3S5do2vRZ1LRZO6rXoBk1adqWevd5ieYvWEg7d+7k6IM8CnnQmbNnyZ6XR16feutHSSxaSnKO5Or5P+jkJWF4FAFJAAAAAElFTkSuQmCC" /></li>
+<li>In Horizon Administrator Console, on the left, expand <strong>Settings</strong> and click <strong>Servers</strong>. On the right, switch to the tab named <strong>Gateways</strong>. Click the <strong>Register</strong> button.<br />
+<img alt="" src="../../img/AAAAAElFTkSuQmCC" /></li>
+<li>In the <strong>Gateway Name</strong> field, enter the case-sensitive friendly name you specified earlier, and then click <strong>OK</strong>.<br />
+<img alt="" src="../../img/ycVPXq1pEAAAAASUVORK5CYII=" /></li>
+</ol>
+<p>See status of UAG appliances:</p>
+<ol>
+<li>Use a Horizon Client to connect through a Unified Access Gateway. Horizon Console only detects the UAG status for active sessions.</li>
+<li>In Horizon Console 7.10 and newer, to see the status of the UAG appliances, on the top left, expand <strong>Monitor</strong> and click <strong>Dashboard</strong>.<br />
+<img alt="" src="../../img/Oe3HcAAAAAElFTkSuQmCC" /></li>
+<li>In the top-left block named <strong>System Health</strong>, click <strong>VIEW</strong>.<br />
+<img alt="" src="../../img/88JUyJbeB+PwAAAABJRU5ErkJggg==" /></li>
+<li>With <strong>Components</strong> highlighted on the left, on the right, switch to the tab named <strong>Gateway Servers</strong>.</li>
+<li>This tab shows the status of the UAG appliances, including its version. If you don't see this info, then make sure you launch a session through the UAG.<br />
+<img alt="" src="../../img/k9FWryo01I4AAAAASUVORK5CYII=" /></li>
+</ol>
+<p>To see the Gateway that users are connected to:</p>
+<ol>
+<li>In Horizon Console 7.10 or newer, go to <strong>Monitor</strong> &gt; <strong>Sessions</strong>.<br />
+<img alt="" src="../../img/lBPyxiuAZuwAAAABJRU5ErkJggg==" /></li>
+<li>Search for a session and notice the <strong>Security Gateway</strong> column. It might take a few minutes for it to fill in.<br />
+<img alt="" src="../../img/img_6353d9a7ba38f.png" /></li>
+</ol>
+<h3 id="uag-authentication">UAG Authentication</h3>
+<p><strong>SAML</strong> is configured in UAG 3.8 and newer in the <strong>Identity Bridging Settings</strong> section.</p>
+<ol>
+<li>Upload Identity Provider Metadata.<br />
+<img alt="" src="../../img/EdsvrK1RI8sV+OvbCheLBtarMcOz4r668LZNk96um2CUaAAwAWoW0SpAG+5K5pPbMRCHAAABqIAAcAoIEIcAAAGogABwCggQhwAAAaiAAHAKCBCHAAABqIAAcAoIEIcAAAGogABwCggQhwAAAaiAAHAKCBCHAAABqIAAcAoIEIcAAAGujfAdzZZXTWqD4iAAAAAElFTkSuQmCC" /></li>
+<li>Then in <strong>UAG Admin</strong> &gt; <strong>Edge Service Settings</strong> &gt; <strong>Horizon Settings</strong> &gt; <strong>More</strong> (bottom of page), you can set <strong>Auth Methods</strong> (near top of page) to <strong>SAML</strong> only, which requires True SSO implementation, or <strong>SAML and Passthrough</strong>, which requires two logins: one to IdP, and one to Horizon.<br />
+<img alt="" src="../../img/WDNHI2t8sP0AAAAASUVORK5CYII=" /></li>
+<li>For complete True SSO instructions, see <a href="../vmware-horizon-true-sso-uag-saml/">../vmware-horizon-true-sso-uag-saml/</a>.</li>
+<li>For Okta and True SSO, see <a href="https://techzone.omnissa.com/resource/enabling-saml-20-authentication-horizon-unified-access-gateway-and-okta">Enabling SAML 2.0 Authentication for Horizon with Unified Access Gateway and Okta: VMware Horizon Operational Tutorial</a> at Omnissa Tech Zone.</li>
+<li>For Azure MFA, see Sean Massey <a href="https://thevirtualhorizon.com/2019/12/14/integrating-microsoft-azure-mfa-with-vmware-unified-access-gateway-3-8/amp/">Integrating Microsoft Azure MFA with VMware Unified Access Gateway 3.8</a>.</li>
+</ol>
+<p>For <strong>RADIUS</strong> authentication:</p>
+<ol>
+<li>Enable the <strong>Authentication Settings</strong> section and configure the settings as appropriate for your requirements. See <a href="https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2412/page/ConfiguringauthenticationinDMZ.html">Configuring Authentication in DMZ</a> at VMware Docs.<br />
+<img alt="" src="../../img/pPRDz84bX23JpFCAMAAACAFBHCAAAAACBFhDAAAAAASBEhDAAAAABSRAgDAAAAgBQRwgAAAAAgRYQwAAAAAEgRIQwAAAAAUkQIAwAAAIAUEcIAAAAAIEWEMAAAAABIESEMAAAAAFJECAMAAACAFBHCAAAAACBFhDAAAAAASBEhDAAAAABS9P8DoCfztxCEvLsAAAAASUVORK5CYII=" />  <ul>
+<li>When configuring RADIUS, if you click <strong>More</strong>, there's a field for <strong>Login page passphrase hint</strong>.<br />
+<img alt="" src="../../img/8HgEeF3Gi3yVoAAAAASUVORK5CYII=" /></li>
+</ul>
+</li>
+<li>Then in <strong>Edge Service Settings</strong> &gt; <strong>Horizon Settings</strong> &gt; <strong>More</strong> (bottom of page), you can set <strong>Auth Methods</strong> (near top of page) to <strong>RADIUS</strong>.<br />
+<img alt="" src="../../img/img_5f09b62f24ec9.png" /></li>
+<li>If you scroll down the <strong>Horizon Settings</strong> page, you'll see additional fields for RADIUS.</li>
+<li>In UAG 3.8 and newer, <strong>Passcode label</strong> field can be customized for MFA providers like Duo.</li>
+<li>If your RADIUS is doing Active Directory authentication (e.g. Microsoft Network Policy Server with Azure MFA), then <strong>Enable Windows SSO</strong> so the user isn't prompted twice for the password.<br />
+<img alt="" src="../../img/img_5df664a1a5e01.png" /></li>
+</ol>
+<h3 id="other-uag-configurations">Other UAG Configurations</h3>
+<ol>
+<li>UAG 3.8 and newer shows when the admin password expires in <strong>Account Settings</strong> in the <strong>Advanced Settings</strong> section.<br />
+<img alt="" src="../../img/img_6353d9f24ca9c.png" /><br />
+<img alt="" src="../../img/img_5df66dbe6b34b.png" /></li>
+<li>
+<p>Ciphers are configured under <strong>Advanced Settings &gt; System Configuration</strong>.<br />
+<img alt="" src="../../img/img_5c156c53034c8.png" /></p>
+<ul>
+<li>
+<p>The default ciphers in UAG 2412 are the following and include support for TLS 1.3.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256
+</span></code></pre></div>
+<p><img alt="" src="../../img/B9IBJyARQywiaADDBwsDpoTOt+HQCJoB6QdAEgBrjQTIuAFBvCJoAAADIBUETAAAAuSBoAgAAIBcETQAAAOSCoAkAAIBcEDQBAACQC4ImAAAAckHQBAAAQC4ImgAAAMgFQRMAAAC5+P8BBsSdgrYTc9UAAAAASUVORK5CYII=" /></p>
+</li>
+<li>
+<p>In UAG older than 2103, <strong>Syslog</strong> is also configured here. In UAG 2103 and newer, Syslog is in a different menu as described below.<br />
+<img alt="" src="../../img/img_5f75ca2036452.png" /></p>
+</li>
+<li>At the bottom of the <strong>System Configuration</strong> page are several settings for SNMP, DNS, and NTP.</li>
+<li>UAG 20.12 (2012) and newer support <strong>SNMPv3</strong>.<br />
+<img alt="" src="../../img/207d69OxwMAGNOvlAp+hzU5+FoI1gCKGp79+61hx56yHbt2kXPJYBxp7Gx0Xbu3Bl9DurzcLQRLAEUvf3799szzzxjixYtio4xotFotPHS9Lmnzz99DqYBwRIAAACJIFgCAAAgEQRLAAAAJIJgCQAAgEQQLAEAAJAIgiUAAAASQbAEAABAIgiWAAAASATBEgAAAIn4P4LnBesO2ii4AAAAAElFTkSuQmCC" /></li>
+<li>UAG 3.10 and newer have <strong>Admin Disclaimer Text</strong>.</li>
+<li>You can add NTP Servers.<br />
+<img alt="" src="../../img/wPhd4zltjQNJAAAAABJRU5ErkJggg==" /></li>
+<li><strong>Session Timeout</strong> is configured in <strong>System Configuration</strong>. It defaults to 10 hours.<br />
+<img alt="" src="../../img/AdUyRWVxP8FBAAAAAElFTkSuQmCC" /></li>
+<li>
+<p>UAG 3.6 and newer let you add static routes to each NIC.</p>
+</li>
+<li>
+<p>Click <strong>Network Settings</strong>.<br />
+<img alt="" src="../../img/w9vY0YiEYPZAAAAAElFTkSuQmCC" /></p>
+</li>
+<li>Click the gear icon next to a NIC.<br />
+<img alt="" src="../../img/img_5d1e22b87fde8.png" /></li>
+<li>Click <strong>IPv4 Configuration</strong> to expand it and then configure <strong>IPv4 Static Routes</strong>.<br />
+<img alt="" src="../../img/img_5d1e22c896c25.png" /></li>
+<li>UAG 2103 and newer have a different menu item for <strong>Syslog Server Settings</strong>.<br />
+<img alt="" src="../../img/img_6353ddced449e.png" /></li>
+<li>You can specify up to two Syslog servers.</li>
+<li>You can include System Messages.<br />
+<img alt="" src="../../img/img_62d551bd7bd58.png" /></li>
+<li>UAG 2207 supports MQTT when adding Syslog servers.<br />
+<img alt="" src="../../img/img_62d551e3a5ebe.png" /></li>
+<li>
+<p>UAG 20.09 (2009) and newer can automatically install patches/updates when the appliance reboots.</p>
+</li>
+<li>
+<p>In the <strong>Advanced Settings</strong> section, click <strong>Appliance Updates Settings</strong>.<br />
+<img alt="" src="../../img/img_6353ddf06d6fc.png" /></p>
+</li>
+<li>For <strong>Apply Updates Scheme</strong>, select an option. Click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_5f75c54975d57.png" /></li>
+<li>UAG supports <strong>High Availability Settings</strong>.<br />
+<img alt="" src="../../img/img_5c156c8848c0f.png" /></li>
+<li>
+<p>With the High Availability Virtual IP address, you might not need load balancing of the UAG appliances. See <a href="https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2406/page/UnifiedAccessGatewayHighAvailability.html">Unified Access Gateway High Availability</a> at Omnissa Docs.</p>
+<ol>
+<li>
+<p>The High Availability feature requires three IP addresses and three DNS names:</p>
+<ol>
+<li>One IP/FQDN for the High Availability Virtual IP.</li>
+<li>And one IP/FQDN for each appliance/node.
+        2. The Horizon Edge Gateways should be set to node-specific IP addresses and node-specific DNS names. Each appliance is set to a different IP/FQDN.
+        3. The Virtual IP (and its DNS name) is only used for the High Availability configuration.
+        4. The YouTube video <a href="https://www.youtube.com/watch?v=zofY6OU7YLI&amp;feature=em-uploademail">High Availability on VMware Unified Access Gateway Feature Walk-through</a> explains the High Availability architecture.<ol>
+<li>Set the Mode to <strong>ENABLED</strong>.</li>
+<li>Enter a new <strong>Virtual IP Address</strong> which is active on both appliances.</li>
+<li>Enter a unique Group ID between 1 and 255 for the subnet.</li>
+<li>Click <strong>Save</strong>.</li>
+<li>On the second appliance, configure the exact same High Availability Settings.<br />
+<img alt="" src="../../img/img_5c156cca55720.png" /></li>
+</ol>
+</li>
+<li>To upload a valid certificate, scroll down to the <strong>Advanced Settings</strong> section, and next to <strong>TLS Server Certificate Settings</strong>, click the gear icon.<br />
+<img alt="" src="../../img/img_5c156c6e1489a.png" /><ol>
+<li>In Unified Access Gateway 2312 and newer, click <strong>Edit</strong> in the <strong>Internet</strong> section.<br />
+<img alt="" src="../../img/image-76.png" /></li>
+<li>In Unified Access Gateway 3.2 and newer, you can apply the uploaded certificate to <strong>Internet Interface</strong>, <strong>Admin Interface</strong>, or both.<br />
+<img alt="" src="../../img/img_5a538afed8f77.png" /></li>
+<li>In Unified Access Gateway 3.0 and newer, change the <strong>Certificate Type</strong> to <strong>PFX</strong>, browse to a PFX file, and then enter the password. This PFX file certificate must match the Public FQDN (load balanced) for Unified Access Gateway. If your load balancer is terminating SSL, then the certificate on the UAG must be identical to the certificate on the load balancer.</li>
+<li>Leave the <strong>Alias</strong> field blank.</li>
+<li>Click <strong>Save</strong>.<br />
+<img alt="" src="../../img/img_5a538b568e117.png" /><br />
+<img alt="" src="../../img/img_5a538b91248ac.png" /></li>
+<li>If you changed the Admin Interface certificate, then you will be prompted to close the browser window and re-open it.<br />
+<img alt="" src="../../img/img_5a538bafa9ff3.png" /></li>
+</ol>
+</li>
+<li>Or, you can upload a PEM certificate/key (this is the only option in older UAG). Next to <strong>Private Key</strong>, click the <strong>Select</strong> link.<br />
+<img alt="" src="../../img/img_5a538bfae3788.png" /><ol>
+<li>Browse to a PEM keyfile. If not running Unified Access Gateway 3.0 or newer, then certificates created on Windows (PFX files) must be converted to PEM before they can be used with Unified Access Gateway. You can use <strong>openssl</strong> commands to perform this conversion. The private key should be unencrypted.<br />
+<img alt="" src="../../img/e7b442acf9c7fe999f19e977c0a767ba.png" /></li>
+<li>Browse to a PEM certificate file (Base-64) that contains the server certificate, and any intermediate certificates. The server certificate is on top, the intermediate certificates are below it. The server certificate must match the public FQDN (load balanced) for the Unified Access Gateway.<br />
+<img alt="" src="../../img/3e146bbbb4e16b9e7309bd28de9bb493.png" /></li>
+<li>Click <strong>Save</strong> when done.<br />
+<img alt="" src="../../img/img_5a538c2d5a9bc.png" /></li>
+</ol>
+</li>
+<li>UAG 3.1 and newer have an <strong>Endpoint Compliance Check</strong> feature. The feature requires an OPSWAT subscription. Newer versions of UAG can deploy the OPSWAT agent. It's pass/fail. See <a href="https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2406/page/ConfigureOPSWATastheEndpointComplianceCheckProviderforHorizon.html">Configure OPSWAT as the Endpoint Compliance Check Provider for Horizon</a> at VMware Docs.<br />
+<img alt="" src="../../img/img_6353de6e416bc.png" /><br />
+<img alt="" src="../../img/img_5e73490821109.png" /><ul>
+<li>UAG 3.9 and newer let you upload the Opswat Endpoint Compliance on-demand agent executables. Horizon Client downloads the executables from UAG and runs them. See <a href="https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2312/page/UploadOPSWATMetaAccesson-demandagentSoftwareonUnifiedAccessGateway.html">Upload OPSWAT MetaAccess on-demand agent Software on Unified Access Gateway</a> at VMware Docs.<br />
+<img alt="" src="../../img/img_5e73491d7447a.png" /></li>
+<li>In UAG 20.09 and newer, <strong>Outbound Proxy Settings</strong> can be configured to allow UAG to contact the Opswat servers when checking for device compliance.<br />
+<img alt="" src="../../img/img_6353de8bf0cce.png" /><br />
+<img alt="" src="../../img/img_5f75cba0f01d4.png" /></li>
+</ul>
+</li>
+<li>Scroll down to <strong>Support Settings</strong> and click the icon next to <strong>Export Unified Access Gateway Settings</strong> to save the settings to a JSON file. If you need to rebuild your Unified Access Gateway, simply import the the JSON file.<br />
+<img alt="" src="../../img/img_5c156de0b60ce.png" /><ul>
+<li>The exported JSON file does not include the UAG certificate, so you'll also need the .pfx file.<br />
+<img alt="" src="../../img/img_605cced482fed.png" /></li>
+</ul>
+</li>
+<li>If you point your browser to the Unified Access Gateway external URL, you should see the Horizon Connection Server portal page. Horizon Clients should also work to the Unified Access Gateway URL.<br />
+<img alt="" src="../../img/img_5c93fec5ddbbe.png" /></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="monitor-sessions">Monitor Sessions</h2>
+<p>In UAG 3.4 and newer, in the <a href="#admininterface">UAG Admin interface</a>,</p>
+<ul>
+<li>At the top of the page, next to <strong>Edge Service Settings</strong>, you can see the number of Active Sessions on this appliance.<br />
+<img alt="" src="../../img/img_5c15765fd576a.png" /></li>
+<li>At the bottom of the page, under <strong>Support Settings</strong>, click <strong>Edge Service Session</strong> <strong>Statistics</strong> to see more details.<br />
+<img alt="" src="../../img/img_5c15719d93757.png" /><br />
+<img alt="" src="../../img/img_5c1571dd73df4.png" /></li>
+</ul>
+<p>In older versions of UAG, to see existing Horizon connections going through UAG, point your browser to <strong>https://uag-hostname-or-ip-addr:9443/rest/v1/monitor/stats</strong>.<br />
+<img alt="" src="../../img/img_5bc8ffcfdf1c6.png" /></p>
+<h2 id="logs-and-troubleshooting">Logs and Troubleshooting</h2>
+<p>You can download logs from the <a href="#admininterface">Admin Interface</a> by clicking the icon next to <strong>Log Archive</strong>.<br />
+<img alt="" src="../../img/img_5c157202cdc2f.png" /></p>
+<p>You can also review the logs at <code>/opt/vmware/gateway/logs</code>. You can <code>less</code> these logs from the appliance console.</p>
+<p>Or you can point your browser to <a href="https://MyApplianceIP:9443/rest/v1/monitor/support-archive">https://MyApplianceIP:9443/rest/v1/monitor/support-archive</a>. This will download a .zip file with all of the logfiles. Much easier to read in a GUI text editor.</p>
+<p>For initial configuration problems, check out <strong>admin.log</strong>.</p>
+<p>For Horizon View brokering problems, check out <strong>esmanager.log</strong>.</p>
+<p>By default, <strong>tcpdump</strong> is not installed on UAG. To install it, login to the console and run <code>/etc/vmware/gss-support/install.sh</code></p>
+<ul>
+<li>More info at Justin Johnson <a href="http://www.evengooder.com/2018/01/troubleshooting-port-connectivity-for.html">Troubleshooting Port Connectivity For Horizon’s Unified Access Gateway 3.2 Using Curl And Tcpdump</a></li>
+</ul>
+<h2 id="load-balancing">Load Balancing</h2>
+<p>If NetScaler, see <a href="../vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/">../vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/</a> load balance Unified Access Gateways.</p>
+<p>To help with load balancing affinity, UAG 3.8 and newer can redirect the load balanced DNS name to a node-specific DNS name. This is configured in <strong>Edge Service Settings</strong> &gt; <strong>Horizon Settings</strong> &gt; <strong>More</strong> (bottom of page).<br />
+<img alt="" src="../../img/img_5df66e8a32aad.png" /></p>
+<h3 id="related-pages">Related Pages</h3>
+<ul>
+<li>Back to <a href="../vmware-horizon-8/">Omnissa Horizon 8</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

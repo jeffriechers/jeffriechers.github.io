@@ -1,0 +1,135 @@
+# Script created by Jeff Riechers
+# Downloaded from www.jeffriechers.com
+# Contact me with questions or recommendations at jeffriechers@gmail.com
+
+#Pull audited events from a WEM Report for Allow Listing
+# Login to your WEM Web Console and go to Montioring --> Reports
+# Create a filter on the Reports for Event Type is Application security logs, and optionally Configuration Set is <Set you want to analyze>, and/or Event time is within <a time frame since your last check>
+# Click Export --> Export to CSV or JSON
+# Select CSV for the file format, and choose the Save a copy of the export to your local machine
+# Once downloaded, extract the Report.csv to a folder of your choosing.
+# Run this powershell script against that report.csv file
+#
+# AppLockerReport.ps1 <path to report.csv> <Command>
+#
+# For example, if you extracted the Report.csv to C:\temp and you want to see all triggered exe entries, your command would be "AppLockerReport.ps1 c:\temp\report.csv exe"
+
+param (
+    [string]$TextFile,
+    [string]$Command
+)
+
+switch ($Command) {
+    "EXE" {
+        # Define the regex pattern to match sections starting with "C:\ and ending with .exe"
+        $pattern = '"C:\\[^"]*\.exe"'
+
+        # Read the file line by line
+        $lines = Get-Content -Path $textFile
+
+        # Initialize an array to store results
+        $matches = @()
+
+        # Iterate through each line in the file
+        foreach ($line in $lines) {
+            # Extract all matches within the line
+            $foundMatches = [regex]::Matches($line, $pattern) | ForEach-Object { $_.Value }
+
+            foreach ($match in $foundMatches) {
+                # Store only the extracted matches
+                $matches += [PSCustomObject]@{
+                    ExtractedValue = $match
+                }
+            }
+        }
+
+        # Output results
+        # Modify extracted values to replace \\ with \
+        $processedMatches = $matches | ForEach-Object {
+            [PSCustomObject]@{
+                ExtractedValue = $_.ExtractedValue -replace '\\\\', '\'
+            }
+        }
+
+        # Display corrected output
+        $processedMatches | Format-Table -AutoSize
+    }
+    "DLL" {
+        # Define the regex pattern to match sections starting with "C:\ and ending with .dll"
+        $pattern = '"C:\\[^"]*\.dll"'
+
+        # Read the file line by line
+        $lines = Get-Content -Path $textFile
+
+        # Initialize an array to store results
+        $matches = @()
+
+        # Iterate through each line in the file
+        foreach ($line in $lines) {
+            # Extract all matches within the line
+            $foundMatches = [regex]::Matches($line, $pattern) | ForEach-Object { $_.Value }
+
+            foreach ($match in $foundMatches) {
+                # Store only the extracted matches
+                $matches += [PSCustomObject]@{
+                    ExtractedValue = $match
+                }
+            }
+        }
+
+        # Output results
+        # Modify extracted values to replace \\ with \
+        $processedMatches = $matches | ForEach-Object {
+            [PSCustomObject]@{
+                ExtractedValue = $_.ExtractedValue -replace '\\\\', '\'
+            }
+        }
+
+        # Display corrected output
+        $processedMatches | Format-Table -AutoSize
+    }
+    "PS1" {
+        # Define the regex pattern to match sections starting with "C:\ and ending with .ps1"
+        $pattern = '"C:\\[^"]*\.ps1"'
+
+        # Read the file line by line
+        $lines = Get-Content -Path $textFile
+
+        # Initialize an array to store results
+        $matches = @()
+
+        # Iterate through each line in the file
+        foreach ($line in $lines) {
+            # Extract all matches within the line
+            $foundMatches = [regex]::Matches($line, $pattern) | ForEach-Object { $_.Value }
+
+            foreach ($match in $foundMatches) {
+                # Ensure we are NOT storing matches containing "PSScriptPolicyTest"
+                if ($match -notlike "*PSScriptPolicyTest*") {
+                    $matches += [PSCustomObject]@{
+                        ExtractedValue = $match
+                    }
+                }
+            }
+        }
+
+        # Output results (only valid matches)
+        if ($matches.Count -gt 0) {
+            # Modify extracted values to replace \\ with \
+            $processedMatches = $matches | ForEach-Object {
+                [PSCustomObject]@{
+                    ExtractedValue = $_.ExtractedValue -replace '\\\\', '\'
+                }
+            }
+
+            # Display corrected output
+            $processedMatches | Format-Table -AutoSize
+        }
+        else {
+            Write-Host "No valid matches found."
+        }
+    }
+    Default {
+        Write-Host "Invalid option. You must select EXE, DLL, or PS1"
+    }
+}

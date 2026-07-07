@@ -1,0 +1,6566 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../azuread-prt-with-fas-certificates/">
+      
+      
+        <link rel="next" href="../../PVS/about/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Citrix Federated Authentication Service (SAML) 2411 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Citrix Federated Authentication Service (SAML) 2411
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federated-authentication-service-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Federated Authentication Service Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-federated-authentication-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade Federated Authentication Service
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fas-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAS Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fas-1909-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAS 1909+ Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fas-1906-and-older-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAS 1906 and older Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAS 1906 and older Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificate Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saml-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SAML Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saml-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-saml-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure the SAML IdP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure the SAML IdP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-ad-as-saml-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure AD as SAML IdP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adfs-as-saml-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADFS as SAML IdP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-adc-saml-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix ADC SAML Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Citrix ADC SAML Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saml-serveraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Server/Action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saml-policy-advanced-nfactor-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Policy - Advanced (nFactor) Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saml-nfactor-ldap-group-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML nFactor LDAP Group Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-storefront-for-saml-citrix-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure StoreFront for SAML Citrix Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#native-saml-on-storefront-without-citrix-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native SAML on StoreFront without Citrix ADC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-directory-shadow-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Directory Shadow Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-fas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify FAS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console/netscaler-management-and-analytics-system-mas-12-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NetScaler/NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federated-authentication-service-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Federated Authentication Service Versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installupgrade-federated-authentication-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install/Upgrade Federated Authentication Service
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fas-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAS Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fas-1909-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAS 1909+ Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fas-1906-and-older-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAS 1906 and older Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAS 1906 and older Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificate Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storefront-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StoreFront Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saml-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SAML Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saml-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-saml-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure the SAML IdP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure the SAML IdP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-ad-as-saml-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure AD as SAML IdP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adfs-as-saml-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADFS as SAML IdP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-adc-saml-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix ADC SAML Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Citrix ADC SAML Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saml-serveraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Server/Action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saml-policy-advanced-nfactor-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML Policy - Advanced (nFactor) Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saml-nfactor-ldap-group-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAML nFactor LDAP Group Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-storefront-for-saml-citrix-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure StoreFront for SAML Citrix Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#native-saml-on-storefront-without-citrix-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native SAML on StoreFront without Citrix ADC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-directory-shadow-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Directory Shadow Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-fas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify FAS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Citrix Federated Authentication Service (SAML) 2411</h1>
+
+<h3 id="navigation">Navigation</h3>
+<p>This article applies to Federated Authentication Service (FAS) versions 2411, 2402 LTSR, 2203 LTSR, 1912 LTSR, and all other versions 7.9 and newer.</p>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#overview">Overview</a><ul>
+<li><a href="#versions">FAS Versions</a></li>
+</ul>
+</li>
+<li><a href="#install">Install/Upgrade FAS Service</a></li>
+<li><a href="#fasgrouppolicy">FAS Group Policy</a></li>
+<li><a href="#fasconfiguration">FAS Configuration</a></li>
+<li><a href="#storefrontconfig">StoreFront Configuration</a></li>
+<li>
+<p>SAML Configuration:</p>
+<ul>
+<li><a href="#samlflow">SAML Traffic Flow</a></li>
+<li><a href="#samlidp">Configure the SAML Identity Provider</a><ul>
+<li><a href="#azureadsaml">Azure AD as Identity Provider</a></li>
+<li><a href="#adfsidp">Microsoft ADFS as Identity Provider</a></li>
+</ul>
+</li>
+<li><a href="#samlgateway111">Configure Citrix ADC as SAML Service Provider</a><ul>
+<li><a href="#nfactormethod">nFactor Method</a><ul>
+<li><a href="#nfactorsamlldapgroupextract">nFactor LDAP Group Extraction</a></li>
+</ul>
+</li>
+<li><a href="#storefrontsamlgateway">StoreFront Configuration for SAML through Citrix Gateway</a></li>
+</ul>
+</li>
+<li><a href="#samlstorefront">Native SAML on StoreFront 3.9+ without Citrix Gateway/ADC</a></li>
+<li><a href="#activedirectory">Active Directory Shadow Accounts</a></li>
+<li><a href="#verifyfas">Verify FAS</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2025 Jan 9 - updated <a href="#versions">Versions</a> section for <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2203ltsr-cu6-all-editions.html">version 2203 CU6</a></li>
+<li>2024 Dec 4 - updated <a href="#versions">Versions</a> and <a href="#install">Install</a> sections for <a href="https://www.citrix.com/downloads/federated-authentication-service/product-software/fas-2411.html">version 2411</a></li>
+<li>2024 April 2 - added <strong>Force Authentication</strong> in <a href="#samlgateway111">NetScaler SAML Action</a></li>
+<li>2024 March 6 - added Standard Edition instructions</li>
+<li>2024 April 30 - updated <a href="#versions">Versions</a> section for <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-1912ltsr-cu9-all-editions.html">version 1912 LTSR CU9</a></li>
+<li>2023 Aug 11 - added link to <a href="https://docs.citrix.com/en-us/tech-zone/build/deployment-guides/multi-domain-fas">Deployment Guide: Multi-Domain FAS Architecture</a> at Citrix Tech Zone.</li>
+<li>2023 May 17 - added info from <a href="https://help.duo.com/s/article/4041?language=en_US">Can I enable other credential providers after installing Duo Authentication for Windows Logon?</a> (h/t Barry Barclay)</li>
+</ul>
+<h3 id="overview">Overview</h3>
+<p>Citrix Federated Authentication Service (FAS) enables users to log in to Citrix Gateway and Citrix StoreFront using SAML authentication.</p>
+<p>With SAML, Citrix Gateway and StoreFront do not have access to the user's password and thus cannot perform single sign-on to the VDA. FAS works around this limitation by using issuing certificates that can be used to logon to the VDA.</p>
+<ul>
+<li>StoreFront asks Citrix Federated Authentication Service (FAS) to use a Microsoft Certificate Authority to issue Smart Card certificates on behalf of users.</li>
+<li>The certificates are stored on the FAS server.</li>
+<li>The VDA requests the user's certificate from FAS so it can complete the VDA Windows logon process.</li>
+</ul>
+<p>FAS can be used for any authentication scenario where the user's password is not provided.</p>
+<p>Requirements:</p>
+<ul>
+<li>
+<p>Microsoft Certification Authority (CA) in Enterprise mode.</p>
+<ul>
+<li>When configuring FAS, you tell it what CA server to use.</li>
+<li>You can build a new CA server just for FAS.</li>
+<li>You can install CA on the FAS server.</li>
+<li>
+<p>Domain Controllers must have Domain Controller certificates. See CTX218941 <a href="https://support.citrix.com/article/CTX218941">FAS - Request not supported</a>.</p>
+</li>
+<li>
+<p>The certificates on the Domain Controllers must support smart card authentication. Certificates created using the Microsoft CA certificate template named Domain Controller Authentication supports smart cards. Manually created Domain Controller certificates might not work. See <a href="https://support.citrix.com/article/CTX270737">CTX270737</a> for the Domain Controller certificate requirements.<br />
+<img alt="" src="../../../img/img_5c199c616835f.png" /><br />
+<img alt="" src="../../../img/img_5c199c7be853f.png" /></p>
+</li>
+<li>Citrix Virtual Apps and Desktops or XenApp/XenDesktop 7.9 or newer</li>
+<li>StoreFront 3.6 or newer</li>
+<li>
+<p>Citrix Gateway.</p>
+</li>
+<li>
+<p>StoreFront 3.9 and newer also support SAML authentication natively without Citrix ADC.</p>
+</li>
+<li>SAML in an nFactor (Authentication Virtual Server) configuration works in both browsers and Workspace app.</li>
+<li>For multiple domains, see <a href="https://docs.citrix.com/en-us/tech-zone/build/deployment-guides/multi-domain-fas">Deployment Guide: Multi-Domain FAS Architecture</a> at Citrix Tech Zone.</li>
+</ul>
+</li>
+</ul>
+<p>Configuration overview:</p>
+<ol>
+<li>
+<p>Build one or more FAS servers.</p>
+<ul>
+<li>For security reasons, FAS should be its own server and not installed on a Delivery Controller.</li>
+<li>
+<p>Upload Certificate Templates to Active Directory and configure a CA server to issue certificates using the new templates.</p>
+</li>
+<li>
+<p>Enterprise Admin permissions are needed to upload the Certificate Templates.</p>
+</li>
+<li>One of the Certificate Templates is for Smart Card logon to Citrix VDA.</li>
+<li>The other two Certificate Templates are to authorize FAS as a certificate registration authority.</li>
+<li>The registration authority certificate does not renew automatically so be prepared to renew it manually every two years. See <a href="https://docs.citrix.com/en-us/federated-authentication-service/current-release/config-manage/ca-configuration.html#renew-registration-authority-certificates">Renew registration authority certificates</a> at Citrix Docs.</li>
+<li>Install the Citrix FAS group policy .admx template into PolicyDefinitions.</li>
+<li>
+<p>Create a group policy object (GPO) and configure the GPO with the addresses of the FAS servers.</p>
+</li>
+<li>
+<p>The GPO must apply to FAS servers, StoreFront servers, and every VDA. It does not need to apply to Delivery Controllers, but there's no harm in applying it to the Delivery Controllers.</p>
+</li>
+<li>Authorize FAS to request certificates from a Microsoft CA server.</li>
+<li>Configure FAS Rules to permit StoreFront servers to request FAS to generate certificates for users and permit VDA machines to retrieve the certificates from FAS.</li>
+<li>Configure StoreFront to use FAS for VDA single sign-on.</li>
+</ul>
+</li>
+</ol>
+<p>Links:</p>
+<ul>
+<li>CTA Julian Mooren <a href="https://citrixguyblog.com/2020/01/25/citrix-fas-notes-from-the-field/">Citrix FAS – Notes from the Field</a></li>
+<li>CTP Wilco van Bragt <a href="http://virtualization.vanbragt.net/articles/general-articles/citrix-federated-authentication-service-fas-tips-and-tricks">Citrix Federated Authentication Service (FAS) Tips and Tricks</a></li>
+</ul>
+<p>From Citrix CTX225721 <a href="https://support.citrix.com/article/CTX225721">Federated Authentication Service High Availability and Scalability</a>: you can build multiple FAS servers. Enter all FAS server FQDNs in the Group Policy. StoreFront will then use a hashing algorithm on the username to select a FAS server.</p>
+<ol>
+<li>If you have less than 10K users, one FAS server with 4 vCPUs (2.5Ghz) should be sufficient.</li>
+<li>You will require a minimum of one FAS server (with 8 vCPUs) per 25,000 users if all users expect to be able to logon under cold start conditions (no keys or certificates cached) within 60-90 minutes.</li>
+<li>A single FAS server can handle greater than 50K users under warm start conditions (keys and certificates pre-cached)</li>
+<li>One reserve FAS server for every four FAS servers for “Day 1” cold start (Users get new keys/certificates) &amp; disaster recovery scenarios</li>
+<li>Split the FAS Certificate Authority from Certificate Authority that performs other tasks for both security and scalability purposes.</li>
+</ol>
+<p>Michael Shuster explains the Group Policy configuration for FAS in multiple datacenters at <a href="https://www.ferroquesystems.com/2019/01/howto-active-active-multi-datacenter-citrix-fas/">HowTo: Active-Active Multi-Datacenter Citrix FAS</a>.<br />
+<img alt="" src="../../../img/img_5c58085adbe5d.png" /></p>
+<p>Also see the <a href="https://docs.citrix.com/en-us/advanced-concepts/downloads/citrix-federated-authentication-service-scalability.pdf">Citrix Federated Authentication Service Scalability</a> whitepaper.<br />
+<img alt="" src="../../../img/img_59bd89f87b3f6.png" /></p>
+<h3 id="federated-authentication-service-versions">Federated Authentication Service Versions</h3>
+<p>The most recent Federated Authentication Service <strong>Current Release</strong> is version 2411.</p>
+<ul>
+<li>Download <a href="https://www.citrix.com/downloads/federated-authentication-service/product-software/fas-2411.html">FAS 2411</a>.<br />
+<img alt="" src="../../../img/image-22.png" /></li>
+</ul>
+<p>For LTSR versions of Citrix Virtual Apps and Desktops (CVAD) and StoreFront, install the version of FAS that comes with the CVAD LTSR version.</p>
+<ul>
+<li>FAS LTSR version 2402 CU2 is included in the <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2402ltsr-cu2-all-editions.html">Citrix Virtual Apps and Desktops 2402 LTSR CU2 ISO</a>.<br />
+<img alt="" src="../../../img/k75hOy0hhBj+P97WFlOlqAeQAAAAAElFTkSuQmCC" /></li>
+<li>FAS LTSR version 2203 CU6 is included in the <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-2203ltsr-cu6-all-editions.html">Citrix Virtual Apps and Desktops 7 2203 LTSR CU6 ISO</a>.<br />
+<img alt="" src="../../../img/VyCIFYXJLwEQRAEUUH+P3+HoQUvqAl3AAAAAElFTkSuQmCC" /></li>
+<li>FAS LTSR version 1912 CU9 is included in the <a href="https://www.citrix.com/downloads/citrix-virtual-apps-and-desktops/product-software/citrix-virtual-apps-and-desktops-1912ltsr-cu9-all-editions.html">Citrix Virtual Apps and Desktops 7 1912 LTSR CU9 ISO</a>.<br />
+<img alt="" src="../../../img/image-11.png" /></li>
+</ul>
+<h3 id="installupgrade-federated-authentication-service">Install/Upgrade Federated Authentication Service</h3>
+<p>The service should be installed on a secure, standalone server that does not have any other Citrix components installed. The FAS server stores user authentication keys, and thus security is paramount.</p>
+<ol>
+<li>On the Federated Authentication Service server, go to the <a href="#versions">Citrix Virtual Apps and Desktops, or XenDesktop 7.9, or newer ISO</a>, and run <strong>AutoSelect.</strong><strong>exe</strong>. Or you can download the <a href="https://www.citrix.com/downloads/federated-authentication-service/product-software/">standalone installer</a> and run that.<br />
+<img alt="" src="../../../img/image-6.png" /></li>
+<li>In the lower half of the window, click <strong>Federated Authentication Service</strong>.<br />
+<img alt="" src="../../../img/image-14.png" /></li>
+<li>In the <em>Licensing Agreement</em> page, select <strong>I have read, understand, and accept the terms of the license agreement</strong>, and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-26.png" /></li>
+<li>In the <em>Core Components</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-27.png" /></li>
+<li>In the <em>Firewall</em> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/image-28.png" /></li>
+<li>In the <em>Summary</em> page, click <strong>Install</strong>.<br />
+<img alt="" src="../../../img/image-29.png" /></li>
+<li>The installer will probably ask for a restart.<br />
+<img alt="" src="../../../img/image-23.png" />  <ol>
+<li>After the reboot, and after logging in again, you might see a <strong>Locate 'Citrix Virtual Apps and Desktops 7' installation media</strong> window. Don't click anything yet.<br />
+<img alt="" src="../../../img/img_623c74d2482a6.png" /></li>
+<li>Go to the <strong>Citrix_Virtual_Apps_and_Desktops_7_2411.iso</strong> file and mount it.<br />
+<img alt="" src="../../../img/image-24.png" /></li>
+<li>Go back to the <strong>Locate 'Citrix Virtual Apps and Desktops 7' installation media</strong> window.</li>
+<li>On the left, expand <strong>This PC</strong>, and click the DVD Drive.</li>
+<li>Click <strong>Select Folder</strong>.<br />
+<img alt="" src="../../../img/image-25.png" /></li>
+</ol>
+</li>
+<li>Click <strong>Finish</strong>.<br />
+<img alt="" src="../../../img/image-30.png" /></li>
+</ol>
+<h3 id="fas-group-policy">FAS Group Policy</h3>
+<p>Configure a Group Policy that instructs StoreFront servers and VDAs on how to locate the FAS servers.</p>
+<ol>
+<li>On the Federated Authentication Service server, browse to <strong>C:\Program Files\Citrix\Federated Authentication Service\PolicyDefinitions</strong>. Copy the files and folder.<br />
+<img alt="" src="../../../img/5364b151d9c60ee68b203a9370053c56.png" /></li>
+<li>Go to <strong>\\domain.com\SYSVOL\domain.com\Policies\PolicyDefinitions</strong> and paste the files and folder. If PolicyDefinitions doesn’t exist in SYSVOL, then copy them to <strong>C:\Windows\PolicyDefinitions</strong> instead.<br />
+<img alt="" src="../../../img/673a71de7f3f94f34e295fe4edfe07ee.png" /></li>
+<li>Edit a GPO that applies to all StoreFront servers, all Federated Authentication Service servers, and all VDAs.</li>
+<li>Navigate to <strong>Computer Configuration</strong> &gt; Policies &gt; Administrative Templates &gt; <strong>Citrix Components &gt; Authentication</strong>.</li>
+<li>Edit the setting <strong>Federated Authentication Service</strong>.<br />
+<img alt="" src="../../../img/231a79144a1930a7dfeead3884e4a277.png" /></li>
+<li>Enable the setting and click <strong>Show</strong>.<br />
+<img alt="" src="../../../img/b25e050ef5e021df8a5e524a3ce527a3.png" /></li>
+<li>
+<p>Enter the FQDN of the Federated Authentication Service server. You can add more than one Federated Authentication Service server.</p>
+<ul>
+<li>Michael Shuster explains the Group Policy configuration for FAS in multiple datacenters at <a href="https://www.ferroquesystems.com/2019/01/howto-active-active-multi-datacenter-citrix-fas/">HowTo: Active-Active Multi-Datacenter Citrix FAS</a>.<br />
+<img alt="" src="../../../img/img_5c58086602a02.png" /></li>
+<li>Click <strong>OK</strong> twice.<br />
+<img alt="" src="../../../img/d3b54871b8d2ee050a8755348c83d8ec.png" /></li>
+<li>On the Federated Authentication Service server, and VDAs, run <strong>gpupdate</strong>.<br />
+<img alt="" src="../../../img/af3d95c31da6990a235b6abc0a447949.png" /></li>
+<li>On the FAS server, and on VDAs, look in the registry at <strong>HKLM\Software\Policies\Citrix\Authentication\UserCredentialService\Addresses</strong>. Make sure this key and value exists. The number one cause why FAS doesn't work is because this key is missing from VDAs. The FAS Address GPO must apply to <strong>VDAs</strong> too.<br />
+<img alt="" src="../../../img/img_59bfb364072e4.png" /></li>
+<li>If the VDAs and Users are in different domains, see CTX220497 <a href="https://support.citrix.com/article/CTX220497">Users from one AD Domain not able to get FAS user certificates from another trusted domain</a>: add the Citrix StoreFront Servers, FAS server and VDA servers to the <strong>Windows Authorization Access Group</strong> in the users' domain. Also see <a href="https://docs.citrix.com/en-us/tech-zone/build/deployment-guides/multi-domain-fas">Deployment Guide: Multi-Domain FAS Architecture</a> at Citrix Tech Zone.</li>
+<li><img alt="" src="../../../img/img_594f073875c00.png" /></li>
+<li>By default, the VDAs will verify the certificates aren't revoked by downloading the Certificate Revocation List. You can disable CRL checking by configuring HKEY_Local_Machine\System\CurrentControlSet\Control\LSA\Kerberos\Parameters\<strong>UseCachedCRLOnlyAndIgnoreRevocationUnknownErrors</strong> (DWORD) = <strong>1</strong> as detailed at CTX217150 <a href="https://support.citrix.com/article/CTX217150">Unable to login using the FAS Authentication - Getting Stuck on Please wait for local session manager</a>.<br />
+<img alt="" src="../../../img/0363b6812c47d71a93a12257d813de21.png" /></li>
+<li>
+<p>If your VDAs have third party credential providers (e.g., Duo), then it might interfere with FAS Single Sign-on.</p>
+</li>
+<li>
+<p>For Duo, see <a href="https://help.duo.com/s/article/4041?language=en_US">Can I enable other credential providers after installing Duo Authentication for Windows Logon?</a> to whitelist the FAS credential provider, which is <strong>{81C8E4DC-B376-4D88-BCCD-BD0DD65BEE2B} CitrixMirrorCredentialProvider</strong>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="fas-1909-configuration">FAS 1909+ Configuration</h3>
+<p>If you prefer to script the FAS configuration, then see Citrix Blog Post <a href="https://www.citrix.com/blogs/2019/05/30/automating-federated-authentication-services-with-powershell/">Automating the Citrix Federated Authentication Service with PowerShell</a>.</p>
+<p>FAS 1909 and newer have a different configuration GUI than <a href="#fas1906configuration">FAS 1906 and older</a>.</p>
+<p>Here are 1909 and newer GUI configuration instructions:</p>
+<ol>
+<li>Log into the FAS server as an Enterprise Administrator that can upload certificate templates to Active Directory.</li>
+<li>On the FAS server, from the Start Menu, run <strong>Citrix Federated Authentication Service</strong> as administrator. Make sure you run it elevated.<br />
+<img alt="" src="../../../img/5a71d22a433c483c5c59cde820aae247.png" /></li>
+<li>In the tab named <strong>Initial Setup</strong>, in the row named <strong>Deploy certificate templates</strong>, click <strong>Deploy</strong>.<br />
+<img alt="" src="../../../img/img_5d6437d75e1db.png" /></li>
+<li>Click <strong>OK</strong> to deploy the templates to Active Directory.<br />
+<img alt="" src="../../../img/img_5d6437e7eeb8c.png" /></li>
+<li>In the row named <strong>Set up a certificate authority</strong>, click <strong>Publish</strong>.<br />
+<img alt="" src="../../../img/img_5d6437f71b918.png" /></li>
+<li>Select an Enterprise Certificate Authority that will be issue the FAS certificates and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5d64380511845.png" /></li>
+<li>In the row named <strong>Authorize this service</strong>, click <strong>Authorize</strong>.<br />
+<img alt="" src="../../../img/img_5d643812cc753.png" /></li>
+<li>Select a CA that will issue this FAS server a Registration Authority certificate. Later, you will need to open the Certificate Authority console on the chosen server. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5d643820a77d6.png" /></li>
+<li>The row named <strong>Authorize this service</strong> has a new icon indicating it is waiting on the registration authority certificate to be approved.<br />
+<img alt="" src="../../../img/img_5d64382f7050c.png" /></li>
+<li>Open the Certification Authority console and point it to the CA server. In the <strong>Pending Requests</strong> node, find the certificate request for the FAS server and <strong>Issue</strong> it.<br />
+<img alt="" src="../../../img/img_5d64384847386.png" /></li>
+<li>Back in the FAS Administration Console, on the top right, click <strong>Refresh</strong>.<br />
+<img alt="" src="../../../img/img_5d64386070a25.png" /></li>
+<li>The row named <strong>Authorize this service</strong> should now have a green check mark.</li>
+<li>In the row named <strong>Create a rule</strong>, click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5d64386dbcbc3.png" /></li>
+<li>In the <strong>Rule name</strong> page, leave it set to <strong>Create the default rule</strong> and click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5d643882c645b.png" /></li>
+<li>In the <strong>Template</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5d64388f33997.png" /></li>
+<li>In the <strong>Certificate authority</strong> page, select the CA that has the issuing templates configured and click <strong>Next</strong>. You can select more than one CA server.<br />
+<img alt="" src="../../../img/img_5d64389b0fa11.png" /></li>
+<li>In the <strong>In-session use</strong> page, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5d6438aa40944.png" /></li>
+<li>In the <strong>Access control</strong> page, click the link to <strong>Manage StoreFront access permissions</strong>.<br />
+<img alt="" src="../../../img/img_5d6438b6b026c.png" /></li>
+<li>In the <strong>Permission for StoreFront Servers</strong> page, add your StoreFront servers and give them the permission <strong>Assert Identity</strong>. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5d6438f7bf496.png" /></li>
+<li>Back in the Create Rule wizard, click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5d643902e7fbf.png" /></li>
+<li>In the <strong>Restrictions</strong> page, you can optionally reduce the VDAs that are authorized to use FAS. Click <strong>Next</strong>.<br />
+<img alt="" src="../../../img/img_5d6439117ba59.png" /></li>
+<li>In the <strong>Summary</strong> page, click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5d64391ec6d5e.png" /></li>
+<li>
+<p>The FAS Registration Authority certificate expires in two years. You'll need to manually renew the FAS Registration Authority certificate before it expires. Put a notification on your calendar. For details, see <a href="https://docs.citrix.com/en-us/federated-authentication-service/current-release/config-manage/ca-configuration.html#renew-registration-authority-certificates">Renew registration authority certificates</a> at Citrix Docs.</p>
+<ul>
+<li>In the row named <strong>Authorize this service</strong>, you can click the link for <strong>authorization certificate</strong> to see when it expires. Before expiration, use the <strong>Reauthorize</strong> button on the right of the same row.<br />
+<img alt="" src="../../../img/img_5d867978bca55.png" /></li>
+<li>Jump ahead to <a href="#certificatetemplates">Certificate Templates</a>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fas-1906-and-older-configuration">FAS 1906 and older Configuration</h3>
+<p>If you prefer to script the FAS configuration, then see Citrix Blog Post <a href="https://www.citrix.com/blogs/2019/05/30/automating-federated-authentication-services-with-powershell/">Automating the Citrix Federated Authentication Service with PowerShell</a>.</p>
+<p>Here are GUI configuration instructions for FAS 1906 and older:</p>
+<ol>
+<li>Log into the FAS server as a Domain Administrator or Enterprise Administrator that can upload certificate templates to Active Directory.</li>
+<li>On the FAS server, from the Start Menu, run <strong>Citrix Federated Authentication Service</strong> as administrator. Make sure you run it elevated.<br />
+<img alt="" src="../../../img/5a71d22a433c483c5c59cde820aae247.png" /></li>
+<li>The Federated Authentication Service FQDN should already be in the list (from group policy). Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/d4cc3f349e99bf19b0240b93f642ebd0.png" /></li>
+<li>In Step 1: <strong>Deploy certificate templates</strong>, click <strong>Start</strong>.<br />
+<img alt="" src="../../../img/94f7bd10384c74b3af66949beac975be.png" /></li>
+<li>Click <strong>OK</strong> to add certificate templates to Active Directory. Sufficient permission is required.<br />
+<img alt="" src="../../../img/9c9c681a50a4739ea998c4eb8525682c.png" /></li>
+<li>In Step 2: <strong>Setup Certificate Authority</strong>, click <strong>Start</strong>.<br />
+<img alt="" src="../../../img/7241e47190a539e25f63b10136c73195.png" /></li>
+<li>Select a Certificate Authority to issue the certificates, and click <strong>Ok</strong>.<br />
+<img alt="" src="../../../img/690985bbc8e5e4ff13939616d0439110.png" /></li>
+<li>In Step 3: <strong>Authorize this Service</strong>, click <strong>Start</strong>.<br />
+<img alt="" src="../../../img/6afceafd013906ee76beec4e62dbd5d5.png" /><ul>
+<li>Step 3 automatically submits an online request for the Registration Authority certificate to the CA and stores the non-exportable private key in the standard Microsoft Enhanced RSA and AES Cryptographic Provider.</li>
+<li>Alternatively, you can submit the certificate request manually, and store the private key in TPM or HSM as detailed at <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/federated-authentication-service/fas-config-manage/fas-private-key-protection.html">Federated Authentication Service private key protection</a> at Citrix Docs. When running <strong>New-FasAuthorizationCertificateRequest</strong>, the -UseTPM switch is optional.</li>
+</ul>
+</li>
+<li>
+<p>Select the issuing Certificate Authority, and click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/013584d73c672354ec6008d739de1d01.png" /></p>
+<ul>
+<li>
+<p><strong>Authorize this Service</strong> only lets you select one Certificate Authority. If you want to load balance certificate requests against multiple Certificate Authorities, then see <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/federated-authentication-service/fas-config-manage/fas-ca-configuration.html#set-up-multiple-ca-servers-for-use-in-fas">Set up multiple CA servers for use in FAS</a> at Citrix Docs.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Set-FasCertificateDefinition -Name default_Definition -CertificateAuthorities @(&quot;ca1.corp.local\CA1.corp.local&quot;, &quot;ca2.corp.local\ca2.corp.local&quot;)
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 3 is now yellow.<br />
+<img alt="" src="../../../img/244ea87d32f6419a5f107f8e3c9cec5b.png" /></p>
+</li>
+<li>On the Microsoft CA server, go to the Certification Authority Console &gt; <strong>Pending Requests</strong>. Find the pending request, and <strong>Issue</strong> it.<br />
+<img alt="" src="../../../img/15e0f8bbb53ff60d6ca98fd33f708fc6.png" /></li>
+<li>In a minute or two, Federated Authentication Service will recognize the issued certificate and Step 3 will turn green.<br />
+<img alt="" src="../../../img/1751400a76aac11b0d4dd6f01a79c15c.png" /></li>
+<li>After FAS authorization with the CA, in the FAS Configuration tool, switch to the <strong>User Rules</strong> tab.</li>
+<li>Use the <strong>Certificate Authority</strong> drop-down to select the issuing Certificate Authority.</li>
+<li>Use the <strong>Certificate Template</strong> drop-down to select the <strong>Citrix_SmartcardLogon</strong> template.</li>
+<li>Click <strong>Edit</strong> next to <strong>List of StoreFront servers that can use this rule</strong>.<br />
+<img alt="" src="../../../img/d2ed9e780db4c6378907ab73f3b13020.png" /></li>
+<li>Remove <strong>Domain Computers</strong> from the top half, and instead add your StoreFront servers. You could add an Active Directory security group instead of individual StoreFront servers.</li>
+<li>On the bottom half, make sure <strong>Assert Identity</strong> is <strong>Allowed</strong>. Click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/2f287dd113388bb84ea24803e4c4e408.png" /></li>
+<li>By default, all users and all VDAs are allowed. You can click the other two <strong>Edit</strong> boxes to change this.<br />
+<img alt="" src="../../../img/c49ea4f9c3933a7c02efb9f78d225f0f.png" /></li>
+<li>When done, click <strong>Apply</strong>.<br />
+<img alt="" src="../../../img/27dd4cd9e9e3c526db969e490e8a3bd8.png" /></li>
+<li>Click <strong>OK</strong> when you see <strong>Rule updated successfully</strong>.<br />
+<img alt="" src="../../../img/3ab5321a9e53dee9f611554226f4dc43.png" /></li>
+<li>
+<p>The FAS Registration Authority certificate expires in two years. You'll need to manually renew the FAS Registration Authority certificate before it expires. Put a notification on your calendar. For details, see <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/federated-authentication-service/fas-config-manage/fas-ca-configuration.html#renew-registration-authority-certificates">Renew registration authority certificates</a> at Citrix Docs.</p>
+<ul>
+<li>
+<p>To see the expiration date of the authorization certificate, run the following PowerShell command after running <code>add-pssnapin Citrix.Authentication.FederatedAuthenticationService.V1</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Get-FasAuthorizationCertificate -FullCertInfo -address myFASServer
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="certificate-templates">Certificate Templates</h4>
+<p>The deployed FAS Certificate Templates from older versions of FAS have <strong>Autoenroll</strong> enabled. Newer versions of FAS (e.g., 2203) no longer have <strong>Autoenroll</strong> enabled.</p>
+<ol>
+<li>Open the <strong>Certificate Templates</strong> console. One option is to open the Certification Authority console, right-click <strong>Certificate Templates</strong>, and then click <strong>Manage</strong>.<br />
+<img alt="" src="../../../img/img_5a32b20d763fa.png" /></li>
+<li>There should be three templates with names starting with <strong>Citrix_</strong>. Open the properties on each one.<br />
+<img alt="" src="../../../img/img_5a32b21e50d7c.png" /></li>
+<li>On the <strong>Security</strong> tab, highlight each group assigned to the template.</li>
+<li>On the bottom half, uncheck the box in the <strong>Autoenroll</strong> row but leave <strong>Enroll</strong> checked. Perform this step for every group assigned to this template. Then click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_5a32b23790b03.png" /></li>
+<li>Repeat disabling autoenroll for the other two templates.<br />
+<img alt="" src="../../../img/img_5a32b26bd446a.png" /></li>
+</ol>
+<p>The Registration Authority certificate templates are permitted to all Domain Computers. You might want to change that.</p>
+<ol>
+<li>Open the Properties of one of the <strong>Citrix_RegistrationAuthority</strong> certificate templates.<br />
+<img alt="" src="../../../img/img_5c1b840d09005.png" /></li>
+<li>On the <strong>Security</strong> tab, remove <strong>Domain Computers</strong>.<br />
+<img alt="" src="../../../img/img_5c1b841eb0626.png" /></li>
+<li>Add your FAS servers and enable the <strong>Enroll</strong> permission.<br />
+<img alt="" src="../../../img/img_5c1b8488bc836.png" /></li>
+<li>Repeat for the other Registration Authority certificate.<br />
+<img alt="" src="../../../img/img_5c1b84a797d6c.png" /></li>
+</ol>
+<p>To further restrict who can be issued certificates, go to your Certificate Authority’s <strong>Properties</strong> and use the <strong>Enrollment Agents</strong> tab to restrict enrollment agents.<br />
+<img alt="" src="../../../img/de0c6f077ca3b33e6ff3bda5033e965c.png" /><br />
+<img alt="" src="../../../img/19a592b9a35bee961fdfeb4b4354e5fc.png" /></p>
+<h3 id="storefront-configuration">StoreFront Configuration</h3>
+<p>Once FAS is enabled on a StoreFront store, it applies to all connections through that store, including password-based authentications. One option is to create a new store just for FAS users.</p>
+<ol>
+<li>Check the registry at at <strong>HKLM\Software\Policies\Citrix\Authentication\UserCredentialService\Addresses</strong> to confirm that the group policy with FAS addresses has been applied to the StoreFront servers.</li>
+<li>
+<p>On the StoreFront 3.6 or newer server, run the following elevated PowerShell command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&amp; &quot;$Env:PROGRAMFILES\Citrix\Receiver StoreFront\Scripts\ImportModules.ps1&quot;
+</span></code></pre></div>
+</li>
+<li>
+<p>Run the following commands. Adjust the store name as required.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$StoreVirtualPath = &quot;/Citrix/Store&quot;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$store = Get-STFStoreService -VirtualPath $StoreVirtualPath
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$auth = Get-STFAuthenticationService -StoreService $store
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Set-STFClaimsFactoryNames -AuthenticationService $auth -ClaimsFactoryName &quot;FASClaimsFactory&quot;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Set-STFStoreLaunchOptions -StoreService $store -VdaLogonDataProvider &quot;FASLogonDataProvider&quot;
+</span></code></pre></div>
+</li>
+<li>
+<p>If you have multiple StoreFront servers, <strong>Propagate Changes</strong>.</p>
+</li>
+<li>In Web Studio (CVAD 2212 and newer), go to <strong>Settings</strong> and <strong>Enable XML Trust</strong>.<br />
+<img alt="" src="../../../img/Pasted-3.png" /><br />
+<img alt="" src="../../../img/Pasted-4.png" /><ul>
+<li>
+<p>Or on a Citrix Delivery Controller, run the following PowerShell command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Set-BrokerSite -TrustRequestsSentToTheXmlServicePort $true
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+</ol>
+<p>If you ever need to disable FAS on StoreFront, run the following commands. Adjust the store name as required.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$StoreVirtualPath = &quot;/Citrix/Store&quot;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$store = Get-STFStoreService -VirtualPath $StoreVirtualPath
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$auth = Get-STFAuthenticationService -StoreService $store
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Set-STFClaimsFactoryNames -AuthenticationService $auth -ClaimsFactoryName &quot;standardClaimsFactory&quot;
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Set-STFStoreLaunchOptions -StoreService $store -VdaLogonDataProvider &quot;&quot;
+</span></code></pre></div>
+<h2 id="saml-configuration">SAML Configuration</h2>
+<h3 id="saml-flow">SAML Flow</h3>
+<p>SAML flows like this:</p>
+<ol>
+<li>
+<p>(Optional) User goes to the web application aka Service Provider (e.g. Citrix Gateway).</p>
+<ul>
+<li>The Service Provider (SP) redirects the user's browser to the Identity Provider's (IdP) SAML Single Sign-on (SSO) URL and includes an authentication request in the Redirect. The IdP SSO URL might be different for each Service Provider.</li>
+<li>The Authentication Request from the Service Provider includes a Service Provider Entity ID. The IdP matches the SP Entity ID with an entry in its database so it knows which SP is making the authentication request. The Entity ID must match on both the SP and the IdP.</li>
+<li>If the Authentication Request is signed by the Service Provider's certificate private key, then the IdP will verify the signature using the Service Provider's certificate public key. In this scenario, the Service Provider's certificate (without private key) must be loaded into the IdP.</li>
+<li>
+<p>The user authenticates to the IdP, typically using Multi-factor Authentication.</p>
+</li>
+<li>
+<p>If the user was redirected from the SP, then the IdP already knows which SP to authenticate with.</p>
+</li>
+<li>If the user went directly to the IdP, then the user typically needs to click an icon representing the web application (Service Provider).</li>
+<li>
+<p>IdP generates a SAML Assertion containing the user's userPrincipalName or email address.</p>
+</li>
+<li>
+<p>Configure the IdP to include the user's UPN or email address in the NameID field of the assertion. SAMAccountName won't work with Citrix FAS.</p>
+</li>
+<li>The SAML Assertion also includes the Service Provider's Entity ID. The ID in the Assertion must match the ID configured on the SP.</li>
+<li>IdP signs the SAML Assertion using an IdP certificate private key.</li>
+<li>
+<p>IdP has a configuration for the SP that includes a SAML Assertion Consumer Service (ACS) URL. IdP redirects the user's browser to the SP's ACS URL and POST's the SAML Assertion.</p>
+<ul>
+<li>The ACS URL on Citrix Gateway ends in /cgi/samlauth</li>
+<li>SP uses the IdP certificate's public key to verify the signature on the SAML Assertion.</li>
+</ul>
+</li>
+<li>
+<p>The IdP's certificate (without private key) is installed on the Citrix ADC so it can verify the Assertion's signature.</p>
+</li>
+<li>
+<p>SP extracts the user's userPrincipalName from the Assertion and uses the UPN for Single Sign-on to StoreFront and the rest of the Citrix components.</p>
+</li>
+<li>
+<p>Note that the SP does not have access to the user's password and thus that's why we need Citrix FAS to generate certificates for each user.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="configure-the-saml-idp">Configure the SAML IdP</h3>
+<p>You typically start the configuration on the Identity Provider (IdP). Every IdP has unique instructions. Search Google for your IdP and Citrix ADC and you might find a IdP-specific guide. After IdP configuration, you download the IdP's certificate and copy the IdP's SSO URL so you can configure them on Citrix ADC.</p>
+<ul>
+<li>
+<p><strong>Azure Active Directory IdP</strong> - See the <a href="#azureadsaml">next section</a>. Also see:</p>
+<ul>
+<li>Marius Sandbu <a href="https://msandbu.org/setting-up-citrix-sso-with-windows-10-and-azure-ad-join/">Setting up Citrix SSO with Windows 10 and Azure AD Join</a></li>
+<li>
+<p><strong>ADFS IdP</strong> - jump to the <a href="#adfsidp">ADFS as IdP</a> section. Also see:</p>
+</li>
+<li>
+<p>George Spiers <a href="http://www.jgspiers.com/adfs-authentication-storefront-netscaler-saml-citrix-federated-authentication-service/">ADFS authentication to StoreFront using NetScaler, SAML and Citrix Federated Authentication Service</a></p>
+</li>
+<li>Dennis Radstake <a href="https://blog.route443.eu/2016/05/26/saml-authentication-for-citrix-xendesktop-and-xenapp/">SAML authentication for Citrix XenDesktop and XenApp</a>.</li>
+<li>Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/05/29/adfs-v3-on-windows-server-2012-r2-with-netscaler/">ADFS v3 on Windows Server 2012 R2 with NetScaler</a>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="azure-ad-as-saml-idp">Azure AD as SAML IdP</h4>
+<ol>
+<li>In Azure Portal, go to Azure Active Directory.</li>
+<li>On the left, click <strong>Enterprise applications</strong>.<br />
+<img alt="" src="../../../img/img_5c1a5a50a5a30.png" /></li>
+<li>In the new blade that appears, on the <strong>All applications</strong> page, on the right, click <strong>New application</strong>.<br />
+<img alt="" src="../../../img/img_5c1a5a65abc9d.png" /></li>
+<li>In the <strong>All Categories</strong> view of the gallery, on the top right, click <strong>Non-gallery application</strong>.<br />
+<img alt="" src="../../../img/img_5c1a5a90cd1d0.png" /></li>
+<li>Give the application a descriptive name. Azure AD shows this name in the myapps portal. Click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5c1a5b2a82665.png" /></li>
+<li>After the application is created, on the left, in the <strong>Manage</strong> section, click <strong>Single sign-on</strong>.</li>
+<li>On the right, click the big button for <strong>SAML</strong>.<br />
+<img alt="" src="../../../img/img_5c1a5b3ee1a39.png" /></li>
+<li>In section 1 labelled <strong>Basic SAML Configuration</strong>, click the pencil icon.<br />
+<img alt="" src="../../../img/img_5c1a5aec132d5.png" /></li>
+<li>In the <strong>Identifier (Entity ID)</strong> field, enter an identifier in URI format. Usually it matches the FQDN of the Citrix Gateway and can be entered in https://gateway.corp.com format. You'll later need to specify the exact same Identifier on the Citrix ADC.</li>
+<li>In the <strong>Reply URL (Assertion Consumer Service URL)</strong> field, enter a URL similar to https://mygateway.company.com/cgi/samlauth. The path must be <strong>/cgi/samlauth</strong>. The scheme should be <strong>https</strong>. And the FQDN is your Citrix Gateway's FQDN.</li>
+<li>Click <strong>Save</strong>. Then you might have to click the x on the top right to make it go away.<br />
+<img alt="" src="../../../img/img_5c1a5b6f13a8d.png" /></li>
+<li>In section 2 labelled <strong>User Attributes &amp; Claims</strong>, notice that it defaults to sending the userprincipalname. You can click the pencil to change the attribute used for the Name identifier value. Whatever value you send will need to match the userPrincipalNames of local Active Directory accounts (aka <a href="#activedirectory">shadow accounts</a>).<br />
+<img alt="" src="../../../img/img_5c1aac6e84549.png" /><br />
+<img alt="" src="../../../img/img_5c1aac8e0940f.png" /><br />
+<img alt="" src="../../../img/img_5c1aacf8077ae.png" /></li>
+<li>In section 3 labelled <strong>SAML Signing Certificate</strong>, click the <strong>Download</strong> link in the <strong>Certificate (Base64)</strong> line.</li>
+<li>Citrix ADC 12.1 and newer support SAML metadata so feel free to copy the <strong>App Federation Metadata Url</strong> field.<br />
+<img alt="" src="../../../img/img_5c1a5ba57a774.png" /></li>
+<li>If you are running NetScaler 12.0 or older, then you will need to copy the <strong>Login URL</strong> field from section 4 labelled <strong>Set up gateway5.corp.com</strong><br />
+<img alt="" src="../../../img/img_5c1a5bd71baa5.png" /></li>
+<li>On the left, under <strong>Manage</strong>, click <strong>Users and groups</strong>.<br />
+<img alt="" src="../../../img/img_5c1a5bee2c06d.png" /></li>
+<li>Use the normal process to assign Azure AD users and groups to this application. Click <strong>Assign</strong>.<br />
+<img alt="" src="../../../img/img_5c1a5c1750ac4.png" /></li>
+<li>Jump to the section named <a href="#adcsamlconfig">Citrix ADC SAML Configuration</a>.</li>
+</ol>
+<h4 id="adfs-as-saml-idp">ADFS as SAML IdP</h4>
+<p>The screenshots in this section use ADFS as an example IdP. Your IdP will be different.</p>
+<ol>
+<li>In your SAML IdP, create a Relying Party Trust (aka service provider trust) or new Application.<br />
+<img alt="" src="../../../img/img_58e91abb8c8fa.png" /></li>
+<li>Since we're configuring the IdP before we configure Citrix ADC and thus don't have access to the SP metadata, select the option to <strong>Enter data about the relying party manually</strong>.<br />
+<img alt="" src="../../../img/img_58e91ad71c827.png" /></li>
+<li>For the Assertion Consumer Service URL (aka relying party service URL), enter the URL to your Citrix Gateway with <strong>/cgi/samlauth</strong> appended to the end (e.g. <strong>https://gateway.corp.com/cgi/samlauth</strong>)<br />
+<img alt="" src="../../../img/img_58e91b0464b19.png" /></li>
+<li>Enter a Relying party trust identifier in URI format. You must specify the same identifier (<strong>Issuer Name</strong>) on the Citrix ADC as detailed in the next section.<br />
+<img alt="" src="../../../img/img_58e91b196c2e3.png" /></li>
+<li>Configure the SAML IdP to send email address or User-Principal-name as <strong>Name ID</strong>. Citrix ADC receives the Name ID and sends it to StoreFront. StoreFront will look in Active Directory for an account with userPrincipalName that matches the Name ID.<br />
+<img alt="" src="../../../img/img_58e91b57d69f3.png" /></li>
+<li>Citrix ADC will sign the authentication requests it sends to the IdP. On the Citrix ADC, you will soon configure the Citrix ADC SAML SP signing certificate with private key that signs the authentication requests that are sent to the IdP. In your SAML IdP, import the same Citrix ADC SAML SP signing certificate but without the private key.<br />
+<img alt="" src="../../../img/img_58e91b816f171.png" /></li>
+<li>Copy the SAML authentication URL (aka Token Issuance URL) from your SAML IdP. You'll need to enter this same URL on your Citrix ADC later.<br />
+<img alt="" src="../../../img/img_58e91f1d3e835.png" /></li>
+<li>Export the IdP Token-signing certificate from your SAML IdP. The IdP could be ADFS, Okta, Ping, etc.<br />
+<img alt="" src="../../../img/img_58be04f4798f4.png" /></li>
+</ol>
+<h3 id="citrix-adc-saml-configuration">Citrix ADC SAML Configuration</h3>
+<h4 id="saml-serveraction">SAML Server/Action</h4>
+<ol>
+<li>
+<p>Instructions for Citrix ADC 13.0, Citrix ADC 12.1, NetScaler 12.0, and NetScaler 11.1 are essentially the same.</p>
+<ul>
+<li>Citrix ADC 12.1 and newer support SAML Metadata while older versions of NetScaler do not support SAML Metadata.</li>
+<li>NetScaler 11 is very similar, except Certificates are in a different place in the NetScaler menu tree.</li>
+<li><strong>Workspace app support</strong> - If you bind a SAML Authentication Policy directly to the Gateway Virtual Server (no nFactor/AAA), then Workspace app and Gateway VPN plug-in won't work. To support SAML with Workspace app and Gateway VPN plug-in, configure <a href="../nfactor-authentication-citrix-gateway-13/">nFactor</a> (Authentication Virtual Server with Authentication Profile) instead of directly on the Gateway Virtual Server.</li>
+<li><strong>IdP Signing Certificate</strong> - On Citrix ADC, if you are not importing IdP metadata, then manually import the IdP SAML token-signing certificate (without private key) under <strong>Traffic Management &gt; SSL &gt; Certificates &gt; CA Certificates</strong>. Citrix ADC uses this certificate to verify the signature of the SAML assertion from the IdP.  </li>
+</ul>
+<p>Note: when you later create the SAML Action on Citrix ADC, there's a place to add a SAML certificate. Unfortunately, the SAML Action is trying to import the wrong type of certificate since it wants the private key, which you don't have access to. If you import the certificate here under <strong>CA Certificates,</strong> then there's no prompt for private key.</p>
+<p><img alt="" src="../../../img/img_5c1a82f84d29e.png" /><br />
+<img alt="" src="../../../img/img_5c1a83caab965.png" /></p>
+<ul>
+<li>SAML IdP certificates are shown in the <strong>Unknown Certificates</strong> node.<br />
+<img alt="" src="../../../img/img_5c1a8436b76f5.png" /></li>
+<li>
+<p>If you want ADC to sign the authentication requests it sends to the IdP, then do the following:</p>
+</li>
+<li>
+<p>Move up two nodes to <strong>Server Certificates</strong> and Import or create a SP SAML signing certificate with private key. This can be the same certificate used on Citrix Gateway. Or a more common practice is to create a self-signed certificate.<br />
+<img alt="" src="../../../img/img_5a22f930437ac.png" /><br />
+<img alt="" src="../../../img/img_5a22f95916b5f.png" /></p>
+</li>
+<li>You’ll also need to import this SAML SP signing certificate (without private key) to your SAML IdP so it can verify the SAML authentication request signature from the Citrix ADC.</li>
+<li>Go to <strong>Citrix Gateway &gt; Policies &gt; Authentication &gt; SAML</strong>. The quickest way to get here is to enter SAML in the search box on top of the menu.<br />
+<img alt="" src="../../../img/img_5c1a8483be016.png" /></li>
+<li>On the right, switch to the tab labelled <strong>Servers</strong>, and click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_5c1a84a3dd2fc.png" /></li>
+<li>In the <strong>Name</strong> field, give the SAML Action a name that indicates the IdP's name.</li>
+<li>If your Citrix ADC is 12.1 or newer, then get the SAML Metadata URL (or file) from the IdP.<br />
+<img alt="" src="../../../img/img_5c1a85008dd4c.png" /></li>
+<li>In the SAML Server on Citrix ADC, in the <strong>SAML IDP Metadata URL</strong> field, paste in the URL. ADC should be able to extract the IdP's certificate from the Metadata URL.<br />
+<img alt="" src="../../../img/img_5c1a852075b79.png" /></li>
+<li>In the <strong>Issuer Name</strong> field, enter the ID that the SAML IdP is expecting for the Relying Party.  This Issuer Name must match the name you configured on the IdP's Relying Party (Service Provider) Trust. Azure AD calls this the <strong>Identifier</strong> or <strong>Entity ID</strong>.<br />
+<img alt="" src="../../../img/img_60bf645030720.png" /></li>
+<li>
+<p>Near the bottom, configure a <strong>Relay State Rule</strong> to prevent session hijack. It should check the Relay State field to make sure it matches the URL that users using to reach the Gateway Virtual Server. Make sure you include the forward slash at the end of the URL. Sample expression below. Pattern set is also possible. See <a href="https://support.citrix.com/article/CTX316577">CTX316577</a> for details. To avoid relay state "does not match" error, make sure users enter the Gateway URL instead of using a bookmark. :idea:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>AAA.LOGIN.RELAYSTATE.EQ(&quot;https://gateway5.corp.com/&quot;)
+</span></code></pre></div>
+<p><img alt="" src="../../../img/img_60bf67a0ec439.png" /></p>
+</li>
+<li>
+<p>Scroll down and click <strong>More</strong>.<br />
+<img alt="" src="../../../img/image-2.png" /></p>
+</li>
+<li>You can optionally check <strong>Force Authentication</strong> to prevent users from doing SAML authentication using cached credentials. This prompts for MFA every time the user accesses Citrix Gateway.<br />
+<img alt="" src="../../../img/image-4.png" /></li>
+<li>Scroll down and click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_5c1a852db1c4a.png" /></li>
+<li><strong>Edit</strong> the SAML Server again.<br />
+<img alt="" src="../../../img/img_5c1a8538d4d3d.png" /></li>
+<li>If you uncheck the box next to <strong>Import Metadata</strong>, you can see the fields that it filled in for you. Unfortunately, other fields must be configured manually as detailed soon.<br />
+<img alt="" src="../../../img/img_5c1a854a5c3df.png" /></li>
+<li>
+<p>Configure the SAML Server based on the data provided by your IdP. If you imported Metadata, then some of the fields might already be populated.</p>
+</li>
+<li>
+<p>For <strong>IDP Certificate Name</strong>, select the SAML IdP's certificate that was exported from the SAML IdP and imported to Citrix ADC. Citrix ADC will use this IdP certificate to verify SAML assertions from the IdP.  </p>
+<p>Note: the <strong>Add</strong> button here does not work correctly. Instead, if you need to import the SAML IDP certificate, then do it at the <strong>CA Certificates</strong> node as detailed earlier in this section.</p>
+</li>
+<li>
+<p>For <strong>Redirect URL</strong>, enter the URL to the SAML IdP's authentication page. Citrix Gateway will redirect users to this URL. For ADFS, enter your ADFS URL appended with <strong>/adfs/ls</strong> (e.g. https://adfs.corp.com/adfs/ls). For other IdP's, get the URL from your IdP.<br />
+<img alt="" src="../../../img/img_5c1a8650c821a.png" /></p>
+</li>
+<li>For <strong>User Field,</strong> enter the name of the SAML Claim from the IdP that contains the value that matches the userPrincipalName of your local Active Directory users (aka <a href="#activedirectory">shadow accounts</a>). This defaults to the <strong>NameID</strong> field, but you might have to use a different claim, like emailaddress.</li>
+<li>In the <strong>Issuer Name</strong> field, enter the ID that the SAML IdP is expecting for the Relying Party.  This Issuer Name must match the name you configured on the IdP's Relying Party (Service Provider) Trust. Azure AD calls this the <strong>Identifier</strong> or <strong>Entity ID</strong>.<br />
+<img alt="" src="../../../img/img_60bf645030720.png" /></li>
+<li>Near the bottom, configure a <strong>Relay State Rule</strong> to prevent session hijack. It should check the Relay State field to make sure it matches the URL that users using to reach the Gateway Virtual Server. Make sure you include the forward slash at the end of the URL. Sample expression below. Pattern set is also possible. See <a href="https://support.citrix.com/article/CTX316577">CTX316577</a> for details. :idea:<br />
+<img alt="" src="../../../img/img_60bf67a0ec439.png" /></li>
+<li>Optionally, for <strong>Signing Certificate Name</strong>, select the SAML SP certificate (with private key) that Citrix ADC will use to sign authentication requests to the IdP. This same certificate (without private key) must be imported to the IdP, so the IdP can verify the authentication request signature. This field usually isn't needed by most IdPs.</li>
+<li>Scroll down and click <strong>More</strong>.<br />
+<img alt="" src="../../../img/img_5a22fa1ce78c1.png" /></li>
+<li>Citrix ADC defaults to SHA1. You might have to change the <strong>Signature Algorithm</strong> and <strong>Digest Method</strong> to <strong>SHA256</strong>.<br />
+<img alt="" src="../../../img/img_5a22fa6795064.png" /></li>
+<li>Review the other settings as needed by your IdP. Click <strong>Create</strong> when done.<br />
+<img alt="" src="../../../img/img_5a22fa82cd7a9.png" /></li>
+</ul>
+</li>
+</ol>
+<h4 id="saml-policy-advanced-nfactor-method">SAML Policy - Advanced (nFactor) Method</h4>
+<p>Workspace app and Gateway Plugin (i.e. VPN plugin) require nFactor (Advanced Authentication Policies) to support SAML authentication.</p>
+<p><strong>Licensing</strong> - nFactor requires NetScaler ADC Advanced Edition or NetScaler ADC Premium Edition. The newest builds of NetScaler ADC 13 have added nFactor support for NetScaler ADC Standard Edition, but the configuration of an Authentication Virtual Server is not directly accessible from the main menu. If you only have Standard Edition, then do the following to get to the Authentication Virtual Server:</p>
+<ol>
+<li>Go to <strong>Citrix Gateway</strong> &gt; <strong>Virtual Servers</strong> and edit one.</li>
+<li>On the right, add the <strong>Authentication Profile</strong> section.</li>
+<li>On the left, in the <strong>Authentication Profile</strong> section, click <strong>Add</strong> to create an Authentication Profile.</li>
+<li>In the Authentication Virtual Server row, click Add to create an Authentication Virtual Server.</li>
+<li>The rest of the nFactor configuration is similar to what's detailed below.</li>
+</ol>
+<p>If you prefer to configure the older Classic Method, which doesn't work with Workspace app, then skip to the <a href="#classicmethod">Classic Method</a>.</p>
+<p>Do the following to create an Advanced Authentication Policy, an Authentication Virtual Server, and bind it to the Gateway Virtual Server:</p>
+<ol>
+<li>In the left menu, expand <strong>Security</strong>, expand <strong>AAA - Application Traffic</strong>, expand <strong>Policies</strong>, expand <strong>Authentication</strong>, expand <strong>Advanced Policies</strong>, and then click <strong>Policy</strong>.<br />
+<img alt="" src="../../../img/img_6054e949e33d2.png" /></li>
+<li>On the right, click the button labelled <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_6054e71d5fe3a.png" /><ol>
+<li>Change the drop-down for <strong>Action Type</strong> to <strong>SAML</strong>.<br />
+<img alt="" src="../../../img/img_6054e7352e3cf.png" /></li>
+<li>Change the drop-down for <strong>Action</strong> to the SAML Action you created earlier.<br />
+<img alt="" src="../../../img/img_6054e778a0572.png" /></li>
+<li>In the box labelled <strong>Expression</strong>, enter <strong>true</strong>.</li>
+<li>Give the policy a name and click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_6054e76c97bd3.png" /></li>
+</ol>
+</li>
+<li>In the left menu, expand <strong>Security</strong>, expand <strong>AAA - Application Traffic</strong> and then click <strong>Virtual Servers</strong>.<br />
+<img alt="" src="../../../img/img_6054e78b8dbdd.png" /></li>
+<li>On the right, click the button labelled <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_6054e794c7e34.png" /><ol>
+<li>Change the drop-down named <strong>IP Address Type</strong> to <strong>Non Addressable</strong> and then click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_6054e7afc7114.png" /></li>
+</ol>
+</li>
+<li>You can optionally bind a <strong>Server Certificate</strong>. If you don't bind a certificate, then the AAA vServer will be down but it will still work. It doesn't matter what certificate you choose. Click <strong>Continue</strong> when done.<br />
+<img alt="" src="../../../img/img_6054e7bcaef35.png" /></li>
+<li>On the left, in the section named <strong>Advanced Authentication Policies</strong>, click the row that says <strong>No Authentication Policy</strong>.<br />
+<img alt="" src="../../../img/img_6054e7df699e6.png" /><ol>
+<li>Click where it says <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_6054e7ec58a5d.png" /></li>
+<li>Click the small circle to the left of the SAML Policy that you created earlier. Then click the blue button labelled <strong>Select</strong> at the top of the screen.<br />
+<img alt="" src="../../../img/img_6054e80c66e66.png" /></li>
+<li>There's no need to configure <strong>Select Next Factor</strong> unless you want to bind an LDAP Policy with Authentication Disabled so you can extract groups from Active Directory and use those groups for Gateway authorization. This configuration procedure is detailed in the next section.</li>
+<li>Click the blue button labelled <strong>Bind</strong> at the bottom of the window.<br />
+<img alt="" src="../../../img/img_6054e81d5c294.png" /></li>
+</ol>
+</li>
+<li>Click <strong>Continue</strong>,<br />
+<img alt="" src="../../../img/img_6054e82f3fd2b.png" /></li>
+<li>At the bottom of the page, click <strong>Done</strong> to finish creating the AAA vServer.<br />
+<img alt="" src="../../../img/img_6054e83dbb866.png" /></li>
+<li>In the left menu, expand <strong>Citrix Gateway</strong> and click <strong>Virtual Servers</strong>.</li>
+<li>On the right, edit your existing Gateway Virtual Server.<br />
+<img alt="" src="../../../img/img_6054e854d26ee.png" /></li>
+<li>On the right side of the screen, in the <strong>Advanced Settings</strong> column, click <strong>Authentication Profile</strong>.<br />
+<img alt="" src="../../../img/img_6054e864ec542.png" /></li>
+<li>On the left side of the screen, find the <strong>Authentication Profile</strong> section and then click the button labelled <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_6054e87234ae3.png" /></li>
+<li>Click where it says <strong>Click to Select</strong> and then select your AAA vServer.</li>
+<li>Give the Authentication Profile a name and then click the blue button named <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_6054e89a6ade3.png" /></li>
+<li>Make sure you click the blue <strong>OK</strong> button before you click <strong>Done</strong>. If you don't click <strong>OK</strong> then your changes won't be saved.<br />
+<img alt="" src="../../../img/img_6054e8a81b2b4.png" /></li>
+</ol>
+<p>Here are some sample CLI commands for this nFactor SAML configuration.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># SAML Actions
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a># ------------
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>add authentication samlAction &quot;Azure AD&quot; -samlIdPCertName AzureADSAML -samlSigningCertName WildcardCorpCom -samlRedirectUrl &quot;https://login.microsoftonline.com/815e26a9-4a9b/saml2&quot; -samlIssuerName gateway5.corp.com -Attribute1 emailaddress -logoutURL &quot;https://login.microsoftonline.com/815e26a9/saml2&quot; -logoutBinding REDIRECT -relaystateRule &quot;aaa.LOGIN.RELAYSTATE.EQ(\&quot;https://gateway5.corp.com/\&quot;)&quot;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a># SAML Authentication Policies
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a># ----------------------------
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>add authentication samlPolicy &quot;Azure AD&quot; ns_true &quot;Azure AD&quot;
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a># Advanced Authentication Policies
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a># --------------------------------
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>add authentication Policy &quot;Azure AD Advanced&quot; -rule true -action &quot;Azure AD&quot;
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a># Authentication Virtual Servers
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a># ------------------------------
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>add authentication vserver nFactor-AzureAD-SAML SSL 0.0.0.0
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>bind authentication vserver nFactor-AzureAD-SAML -policy &quot;Azure AD Advanced&quot; -priority 100 -gotoPriorityExpression NEXT
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a># Authentication Profiles
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a># -----------------------
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>add authentication authnProfile nFactor-AzureAD-SAML -authnVsName nFactor-AzureAD-SAML
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a># Citrix Gateway Virtual Servers
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a># ------------------------------
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>set vpn vserver gateway5.corp.com -authnProfile nFactor-AzureAD-SAML
+</span></code></pre></div>
+<h4 id="saml-nfactor-ldap-group-extraction">SAML nFactor LDAP Group Extraction</h4>
+<p>If you use <strong>AAA Groups</strong> with Citrix Gateway, then be aware that SAML usually does not provide the user's group membership. Instead, configure a LDAP Policy to get the user's groups from Active Directory so the groups can be later used by Citrix Gateway.</p>
+<p>If you don't need LDAP Group Extraction, then skip ahead to the <a href="#storefrontsamlgateway">StoreFront section</a>.</p>
+<p>Do the following to configure LDAP Group Extraction.</p>
+<ol>
+<li>
+<p>Create a new LDAP Action.</p>
+<ol>
+<li>Use the <strong>Search in Menu</strong> to find <strong>LDAP</strong> then pick any of the results.<br />
+<img alt="" src="../../../img/img_60606d5f3d03a.png" /></li>
+<li>Check the box next to an existing LDAP policy and click <strong>Add</strong> to copy its configuration. Or create a new one.<br />
+<img alt="" src="../../../img/img_60606d813dc6d.png" /></li>
+<li>Change the name of the LDAP Action.</li>
+<li>On the top right, uncheck the box next to <strong>Authentication</strong>.<br />
+<img alt="" src="../../../img/img_60606b03a1223.png" /></li>
+<li>Scroll down a bit and in the right side re-enter the <strong>Administrator Password</strong>. Copying an existing LDAP Action does not copy the Bind password.<br />
+<img alt="" src="../../../img/img_60606b33a7521.png" /></li>
+<li>Scroll down to the <strong>Other Settings</strong> section.</li>
+<li>On the left, change <strong>Server Logon Name Attribute</strong> to <strong>--&lt;&lt; New &gt;&gt;--</strong>.</li>
+<li>Enter <strong>userPrincipalName</strong>. The UPN is extracted from the SAML Assertion.<br />
+<img alt="" src="../../../img/img_60606b489e558.png" /></li>
+<li>Scroll down and click <strong>Create</strong>.</li>
+<li>On the left, go to <strong>Security</strong> &gt; <strong>AAA - Application Traffic</strong> &gt; <strong>Policies</strong> &gt; <strong>Authentication</strong> &gt; <strong>Advanced Policies</strong> &gt; <strong>Policy</strong> and click <strong>Add</strong> to create a new Policy.<br />
+<img alt="" src="../../../img/img_60606b6965cc6.png" /></li>
+<li>Change <strong>Action Type</strong> to <strong>LDAP</strong>.</li>
+<li><strong>Expression</strong> = <strong>true</strong>.</li>
+<li>Click <strong>Create</strong>.<br />
+<img alt="" src="../../../img/img_60606b928a62a.png" /></li>
+<li>On the left, go to <strong>Security</strong> &gt; <strong>AAA - Application Traffic</strong> &gt; <strong>Policies</strong> &gt; <strong>Authentication</strong> &gt; <strong>Advanced Policies</strong> &gt; <strong>Policy Label</strong>. On the right, click <strong>Add</strong>.<br />
+<img alt="" src="../../../img/img_60606ba601d3b.png" /></li>
+<li>Give the Policy Label a name and click <strong>Continue</strong>. The Login Schema should be LSCHEMA_INT.<br />
+<img alt="" src="../../../img/img_60606bbc5c790.png" /></li>
+<li>Select your LDAP Group Extract policy and then on the bottom click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_60606bd57988b.png" /></li>
+<li>Click <strong>Done</strong> to close the Policy Label.<br />
+<img alt="" src="../../../img/img_60606be2795d6.png" /></li>
+<li>On the left, go to <strong>Security</strong> &gt; <strong>AAA - Application Traffic</strong> &gt; <strong>Virtual Servers</strong>. On the right, edit your SAML AAA vServer.<br />
+<img alt="" src="../../../img/img_60606c9518b7f.png" /></li>
+<li>Click where it says <strong>1 Authentication Policy</strong>.<br />
+<img alt="" src="../../../img/img_60606ca2beffa.png" /></li>
+<li>Right-click the Authentication Policy and then click <strong>Edit Binding</strong>.<br />
+<img alt="" src="../../../img/img_60606cb5ad6a0.png" /></li>
+<li>In the <strong>Select Next Factor</strong> field, click where it says <strong>Click to select</strong>.<br />
+<img alt="" src="../../../img/img_60606cc211ab0.png" /></li>
+<li>Select your LDAP Group Extract Policy Label and then click <strong>Bind</strong>.<br />
+<img alt="" src="../../../img/img_60606cda0cc5b.png" /></li>
+<li>Skip ahead to the <a href="#storefrontsamlgateway">StoreFront section</a>.</li>
+</ol>
+</li>
+</ol>
+<p>Here are some sample CLI commands for this nFactor SAML LDAP Group Extract configuration.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># LDAP Actions
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a># ------------
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>add authentication ldapAction LDAP-GroupExtract -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn ctxsvc@corp.local -ldapBindDnPassword ****** -ldapLoginName userPrincipalName -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a># LDAP Policies
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a># -------------
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>add authentication ldapPolicy LDAP-Corp ns_true LDAP-Corp
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a># Authentication Policy Labels
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a># ----------------------------
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>add authentication policylabel LDAP-GroupExtract -loginSchema LSCHEMA_INT
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>bind authentication policylabel LDAP-GroupExtract -policyName LDAP-GroupExtract -priority 100 -gotoPriorityExpression NEXT
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a># Authentication Virtual Servers
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a># ------------------------------
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>bind authentication vserver nFactor-AzureAD-SAML -policy &quot;Azure AD Advanced&quot; -priority 100 -nextFactor LDAP-GroupExtract -gotoPriorityExpression NEXT
+</span></code></pre></div>
+<h4 id="configure-storefront-for-saml-citrix-gateway">Configure StoreFront for SAML Citrix Gateway</h4>
+<ol>
+<li>In StoreFront 3.6 or newer, in the StoreFront Console, go to <strong>Stores</strong>, right-click the store, and click <strong>Manage Authentication Methods</strong>.<br />
+<img alt="" src="../../../img/66e2dfb98e9aa92b790c90e8ae571d9f.png" /></li>
+<li>Make sure <strong>Pass-through from Citrix Gateway</strong> is selected.</li>
+<li>Click the bottom gear icon on the right, and click <strong>Configure Delegated Authentication</strong>.<br />
+<img alt="" src="../../../img/9e7e824729ebf4687bfdd80bfa2e9d53.png" /></li>
+<li>Check the box next to <strong>Fully delegate credential validation to</strong> <strong>Citrix Gateway and</strong> click <strong>OK</strong> twice.<br />
+<img alt="" src="../../../img/b9b70d7e8eb4ef224be98cdb694d22a9.png" /></li>
+<li>In StoreFront, add a Citrix Gateway object that matches the FQDN of the Citrix Gateway Virtual Server that has SAML enabled.<br />
+<img alt="" src="../../../img/3bb47e2e4e5c7892fd9e99575e523791.png" /></li>
+<li>On the <strong>Authentication Settings</strong> page, make sure you configure a <strong>Callback URL</strong>. It won’t work without it.<br />
+<img alt="" src="../../../img/img_5c1aad5329d56.png" /></li>
+<li>Then assign (<strong>Configure Remote Access Settings</strong>) the Gateway to your Store.<br />
+<img alt="" src="../../../img/5d48cdb4fa59b53f4b76627299a333a2.png" /><br />
+<img alt="" src="../../../img/img_5c1aad6d4bca0.png" /></li>
+<li>Next step: create <a href="#activedirectory">Active Directory Shadow Accounts</a></li>
+</ol>
+<h3 id="native-saml-on-storefront-without-citrix-adc">Native SAML on StoreFront without Citrix ADC</h3>
+<p>StoreFront 3.9 and newer have native support for SAML Authentication without Citrix ADC. Notes:</p>
+<ul>
+<li>SAML overrides Explicit and Pass-through authentication.</li>
+<li>SAML in StoreFront without Citrix ADC seems to work in Workspace app and Receiver Self-Service for Windows.</li>
+</ul>
+<p>For an example configuration using StoreFront PowerShell commands and SAML metadata, see CTX232042 <a href="https://support.citrix.com/article/CTX232042">Configure StoreFront with OKTA</a>.</p>
+<p>To configure native SAML in StoreFront 3.9 or newer:</p>
+<ol>
+<li>Export the signing certificate from your SAML IdP. The IdP could be ADFS, Okta, Ping Identity, etc.<br />
+<img alt="" src="../../../img/img_58be04fea382b.png" /></li>
+<li>In StoreFront 3.9 or newer console, right-click a Store, and click <strong>Manage Authentication Methods</strong>.<br />
+<img alt="" src="../../../img/img_58b084a72b597.png" /></li>
+<li>Check the box next to <strong>SAML Authentication</strong>. If you don't see this option (because you upgraded from an older version), click the <strong>Advanced</strong> button on the bottom of the window, and install the authentication method.</li>
+<li>On the right, click the gear icon for <strong>SAML</strong>, and click <strong>Identity Provider</strong>.<br />
+<img alt="" src="../../../img/img_58b0854837336.png" /></li>
+<li>Change the SAML Binding to the method your IdP expects.</li>
+<li>Enter the IdP token issuance endpoint URL. For example, in ADFS, the path is <strong>/adfs/ls</strong>.</li>
+<li>Click <strong>Import</strong>.<br />
+<img alt="" src="../../../img/img_58b085c82739a.png" /></li>
+<li>Browse to the signing certificate exported from your IdP, and click <strong>Open</strong>.<br />
+<img alt="" src="../../../img/img_58b085e3c27c8.png" /></li>
+<li>Then click <strong>OK</strong> to close the <em>Identity Provider</em> window.<br />
+<img alt="" src="../../../img/img_58b085f3cbb6e.png" /></li>
+<li>On the right, in the <strong>SAML Authentication</strong> row, click the gear icon, and then click <strong>Service Provider</strong>.<br />
+<img alt="" src="../../../img/img_58b0860497f80.png" /></li>
+<li>Click the first <strong>Browse</strong> button.<br />
+<img alt="" src="../../../img/img_58b086190c3ad.png" /></li>
+<li>Give the Signing certificate a name, and save it somewhere.<br />
+<img alt="" src="../../../img/img_58b0862ed0e59.png" /></li>
+<li>Click the second <strong>Browse</strong> button.<br />
+<img alt="" src="../../../img/img_58b0863e44fc7.png" /></li>
+<li>Give the Encryption certificate a name, and save it somewhere.<br />
+<img alt="" src="../../../img/img_58b0865b27736.png" /></li>
+<li>Copy the <strong>Service Provider Identifier</strong>. Or you can change it to your desired value. Then click <strong>OK</strong>.<br />
+<img alt="" src="../../../img/img_58b086744decc.png" /></li>
+<li>In your IdP (e.g. ADFS), create a Relying Party Trust.</li>
+<li>Import the Encryption certificate that you exported from StoreFront.<br />
+<img alt="" src="../../../img/img_58be05762d103.png" /><img alt="" src="../../../img/img_58be059ecd321.png" /></li>
+<li>Enable SAML 2.0.</li>
+<li>For the Assertion Consumer Service (ACS) path, enter something similar to <strong>https://storefront.corp.com/Citrix/StoreAuth/SamlForms/AssertionConsumerService</strong>. The hostname portion of the URL is equivalent to your StoreFront Base URL. <strong>/Citrix/StoreAuth</strong> matches your Store name with Auth on the end. The rest of the path must be <strong>/SamlForms/AssertionConsumerService</strong>. You can get this ACS value by looking in the SAML metadata at the bottom of https://<storefront host><strong>/Citrix/StoreAuth/SamlForms/ServiceProvider/Metadata</strong>.<br />
+<img alt="" src="../../../img/img_58b08ffd01c4f.png" /><br />
+<img alt="" src="../../../img/img_58be05bf44421.png" /></li>
+<li>For the <strong>Relying party trust identifier</strong>, enter the identifier you copied from the Service Provider window in StoreFront.<br />
+<img alt="" src="../../../img/img_58be060f7cc44.png" /></li>
+<li>Configure the Claim Rules to send the user's email address or userPrincipalName as <strong>Name ID</strong>.<br />
+<img alt="" src="../../../img/img_58be067fc4cfc.png" /></li>
+<li>Edit the Relying Party Trust. Import the <strong>Signing certificate</strong> that you exported from StoreFront.<br />
+<img alt="" src="../../../img/img_58be06aec3296.png" /><br />
+<img alt="" src="../../../img/img_58be06a26e143.png" /></li>
+<li>Create <a href="#activedirectory">Active Directory Shadow Accounts</a>. Federated users must be <strong>userPrincipalName</strong> mapped to local Active Directory accounts.<br />
+<img alt="" src="../../../img/img_58a451500e32e.png" /></li>
+<li>If you point your browser to <strong>https://<storefront-host>/Citrix/<storename>Auth/SamlTest</strong>, it should perform a SAML Login, and then show you the assertion that was returned from the IdP. See Citrix <a href="https://support.citrix.com/article/CTX220639">CTX220639 How to configure SAML Authentication-Test Configuration</a>.<br />
+<img alt="" src="../../../img/img_58b5790207727.png" /></li>
+<li>See Citrix CTX220682 <a href="https://support.citrix.com/article/CTX220682">Storefront SAML Troubleshooting Guide</a> for event logs, SAML Metadata, Active Directory account mapping, Trust XML, etc.<br />
+<img alt="" src="../../../img/img_58b57a3a4ae54.png" /></li>
+<li>When you go to your Receiver for Web page, it should automatically redirect you to your IdP. After authentication, it should redirect you back to StoreFront and show you your icons.<br />
+<img alt="" src="../../../img/img_58b1e91b9174a.png" /></li>
+<li>ADFS also works in Receiver 4.6 and newer, and Workspace app.<br />
+<img alt="" src="../../../img/img_58e14a17cde22.png" /></li>
+<li>When you logoff, it won't let you log on again unless you close your browser and reopen it.<br />
+<img alt="" src="../../../img/img_58be07fbc39d4.png" /><br />
+<img alt="" src="../../../img/img_58be08066ebfc.png" /></li>
+<li>
+<p>To fix this problem, see CTP Sacha Thomet <a href="http://blog.sachathomet.ch/2017/01/03/storefront-allowreloginwithoutbrowserclose/">StoreFront – Allow relogin without browser close</a>. Edit the file <strong>C:\inetpub\wwwroot\Citrix\StoreWeb\custom\script.js</strong>, and add the following line:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>CTXS.allowReloginWithoutBrowserClose = true
+</span></code></pre></div>
+<p><img alt="" src="../../../img/img_58be086386e7a.png" /></p>
+</li>
+<li>
+<p>Now when you logoff, you're given an option to log on again.<br />
+<img alt="" src="../../../img/img_58be088ec0294.png" /></p>
+</li>
+</ol>
+<h3 id="active-directory-shadow-accounts">Active Directory Shadow Accounts</h3>
+<p>To login to Windows (Citrix VDA), every user must have an Active Directory account in a domain trusted by the VDA. For Federated Users, you typically need to create <strong>shadow</strong> accounts for each Federated user in your local Active Directory. These Shadow accounts need a userPrincipalName that matches the SAML attribute (usually email address) provided by the SAML IdP.</p>
+<p>If the email address provided by the SAML IdP does not match the UPN suffix for your domain, then do the following:</p>
+<ol>
+<li>Open <strong>Active Directory Domains and Trust</strong>.</li>
+<li>Right-click the top left node (not a domain node), and click <strong>Properties</strong>.<br />
+<img alt="" src="../../../img/img_58a450c338c97.png" /></li>
+<li>In the <strong>UPN Suffixes</strong> tab, add a UPN suffix that matches the email suffix provided by the SAML IdP.<br />
+<img alt="" src="../../../img/img_58a45264f3212.png" /></li>
+<li>When creating a shadow account in your Active Directory, the new UPN suffix is available in the drop-down list. Note that the <strong>pre-Windows 2000 logon name</strong> can't conflict with any other user in the domain.</li>
+<li>The password for these Shadow accounts can be any random complex password since the Federated users never need the Shadow account's password.<br />
+<img alt="" src="../../../img/img_58a451500e32e.png" /></li>
+<li>If the shadow account is already created, edit the account, and on the <strong>Account</strong> tab, use the drop-down to select the new UPN suffix.<br />
+<img alt="" src="../../../img/img_58a4520a1ef18.png" /></li>
+<li>Create a shadow account for every federated user. There are third party Identity Management tools that can automate this. Or get an export from the IdP and use PowerShell scripting to create the acccounts.</li>
+</ol>
+<h3 id="verify-fas">Verify FAS</h3>
+<p>When FAS is enabled on StoreFront, every user that logs into StoreFront (local or remote) causes a user certificate to be created on the FAS server. You can see these user certificates by running the following PowerShell commands:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Add-PSSnapin Citrix.Authentication.FederatedAuthenticationService.V1
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Get-FasUserCertificate -address fas01.corp.local
+</span></code></pre></div>
+<p><img alt="" src="../../../img/1a15d662dbc4c0c95fcc0f74e1fd2da7.png" /></p>
+<p>Citrix uses these certificates to logon to the VDA as the user. No password needed.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,7264 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../netscaler-management-and-analytics-system-mas-12/">
+      
+      
+        <link rel="next" href="../../NetScaler%20Console%20Service/about/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Citrix Application Delivery Management (ADM) 12.1 - EUC Extended Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+      <link rel="stylesheet" href="../../../base.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-733Y5T0GLW"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-733Y5T0GLW",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-733Y5T0GLW",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="EUC Extended Documentation" class="md-header__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EUC Extended Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Citrix Application Delivery Management (ADM) 12.1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="EUC Extended Documentation" class="md-nav__button md-logo" aria-label="EUC Extended Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EUC Extended Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citrix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/gpo-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPO configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/LicenseActivationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Activation Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/pre-populate-domain-name-in-citrix-web-consoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-populate Domain Name in Citrix Web Consoles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/restart-machine-script-with-tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Restart Machine Script with tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/roaming-profiles-for-non-persistent-linux-sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    "Roaming" Profiles for Non-Persistent Linux sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/un-favoriting-de-mandatory-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Un-favoriting De-Mandatory Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CVAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/citrix-sfta-and-the-battle-against-msedge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix SFTA and the battle against MSEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/las-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Server install and LAS registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/launch-onedrive-with-citrix-published-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launch OneDrive with Citrix Published Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controllers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery Controllers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-1912-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 1912 LTSR CU9 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2203-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2203 LTSR CU6 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2402-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2402 LTSR CU2 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-2507-ltsr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2507 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Delivery%20Controllers/delivery-controller-cr-and-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Controller 2411 and Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Director
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Director 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/director-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/Director/remove-citrix-director-hypervisor-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remove Citrix Director Hypervisor Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/server-2022-connection-issues-on-upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server 2022 connection issues on upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 7.6.0 / 7.6.300
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-2402-ltsr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Delivery Agent (VDA) 2402 LTSR CU2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/VDA/virtual-delivery-agent-vda-cr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Virtual Delivery Agent (VDA) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaaS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaaS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/DaaS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/azuread-prt-with-fas-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AzureAD PRT with FAS certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/FAS/citrix-federated-authentication-service-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Federated Authentication Service (SAML) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PVS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-console-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/provisioning-services-server-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning 2411 - Server Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-create-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Create Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-convert-to-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Convert to vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-master-device-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning Master Device - Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-update-vdisk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Provisioning - Update vDisk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/PVS/pvs-writecache-usage-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PVS Writecache Usage Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storefront
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Storefront
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/citrix-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-config-for-netscaler-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 3.0 and older Config for NetScaler Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-basic-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Basic Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-configuration-for-citrix-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 - Configuration for Citrix Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-cr-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront 2411 through 3.5 - Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-subscriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Favorites/Subscriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/Storefront/storefront-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StoreFront Tweaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/best-practices-start-environments-strong-with-wem-or-gpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices - Start Environments Strong with WEM or GPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-applocker-report-parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM AppLocker Report parsing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wem-based-non-persistent-image-optimizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM Based Non-Persistent Image Optimizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/wemchanging-actions-not-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WEM:Changing Actions not caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Citrix/WEM/workspace-environment-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace Environment Management (WEM) 2411
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/24h2-windows-11-and-server-2025-vmxnet3-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24H2 Windows 11 and Server 2025 VMXnet3 Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/azure-files-for-profiles-and-pvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure Files for Profiles and PVS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/chocolatey-easy-app-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chocolatey Easy App Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/fixing-server-2019-rds-broken-start-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixing Server 2019 RDS broken Start Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-2-1-with-fslogix-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams with FSLogix setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/teams-deployment-and-update-for-server-2019-2022-and-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams Deployment and Update for Windows 10 and later, and Server 2019 and later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/vdi-defender-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDI Defender offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/zero-machine-maintenance-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Machine Maintenance Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AVD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/AVD/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FSLogix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/fslogix-app-hiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSLogix App hiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Microsoft/FSLogix/keeping-fslogix-profiles-small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keeping FSLogix Profiles small
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-insight-center-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Insight Center 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-management-and-analytics-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netscaler-management-and-analytics-system-mas-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Management and Analytics System (MAS) 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix Application Delivery Management (ADM) 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-adm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why ADM?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adm-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-vs-on-prem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud vs on-prem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdx-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDX Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-datacenter-deployment-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Datacenter Deployment Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-adm-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import ADM Appliance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import ADM Appliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appliance-ip-address-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appliance IP Address Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Second Disk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ha-pair-in-the-main-datacenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HA Pair in the Main Datacenter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dr-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DR Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adm-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adm-appliance-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM Appliance Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Instances
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-adc-sdx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix ADC SDX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licenses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Licenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-server-license-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Server License Packs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocate-licenses-to-virtual-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Allocate licenses to Virtual Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-appflow-insight-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable AppFlow / Insight / Analytics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-syslog-on-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Syslog on Instance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adm-nsroot-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM nsroot Password
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Management Certificate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-of-the-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message of the Day
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prune Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTP Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syslog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syslog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-notification-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Notification Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Thresholds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-ip-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private IP Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-email-alerts-snmp-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Email Alerts (SNMP Traps)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Email Alerts (SNMP Traps)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#events-digest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events Digest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-citrix-adm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Citrix ADM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Citrix ADM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Networks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-record-and-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Record and Play
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics and Applications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdx-insight_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDX Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gateway Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-citrix-adm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Citrix ADM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrade Citrix ADM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-disaster-recovery-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Disaster Recovery Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-adm-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade ADM Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Console Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler Console Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20Console%20Service/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler SDX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/Netscaler%20SDX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Netscaler SDX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20SDX/netscaler-sdx-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler SDX 12 / Citrix ADC SDX 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler VPX MPX BPX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NetScaler VPX MPX BPX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/automated-lets-encrypt-netscaler-certificate-update-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Let's Encrypt NetScaler certificate update process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/backup-of-ns-conf-on-regular-intervals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup of ns.conf on regular intervals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/block-non-us-and-canada-sites-from-vservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Block non-US and/or Canada sites from vservers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/clear-space-on-adc-for-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear space on ADC for upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/easy-ip-reputation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easy IP Reputation and Bad IP Blocking Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/harden-adc-ciphers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harden NetScalers and get an A+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-11-1-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11.1 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-11-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-11-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 11 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-12-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-12-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Configuration - NetScaler 12 / Citrix ADC 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC Fundamental Concepts: Part 1 - Request-Response, HTTP Basics, and Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-essential-concepts-part-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC Fundamental Concepts: Part 2 - Certificates/SSL, Authentication, HTTP, VPN Networking, PXE, GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-firewall-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix ADC and CVAD Firewall Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-1-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11.1 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 RADIUS Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-rdp-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - RDP Proxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-ssl-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 - SSL VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-11-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 11 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-native-one-time-passwords-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native One Time Passwords (OTP) - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-12-pcoip-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCoIP Proxy - NetScaler Gateway 12 / Citrix Gateway 12.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-ldap-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-radius-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Authentication - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-session-policies-storefront/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Policies for StoreFront - NetScaler Gateway 10.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-gateway-virtual-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Gateway 10.5 Virtual Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/netscaler-system-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NetScaler 10.5 System Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-11-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 11.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/radius-load-balancing-netscaler-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RADIUS Load Balancing - NetScaler 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/redirect-cvad-director-to-https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redirect CVAD Director to https
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/ssl-load-balancing-netscaler-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL Virtual Servers - NetScaler 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetScaler%20VPX%20MPX%20BPX/verifying-external-nat-for-gslb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verifying External NAT for GSLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Omnissa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access 23.09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-access-load-balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Workspace ONE Access Load Balancing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-unified-access-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Unified Access Gateway 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-user-environment-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Dynamic Environment Manager (DEM) 2503
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/vmware-vrealize-operations-for-horizon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vRealize Operations for Horizon 6.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizon
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizon
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-cloud-pod-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Cloud Pod Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8 Console Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-connection-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Connection Server 2503 (8.15)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-rds-host/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master RDS Host
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 2503: Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-rds-farms-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: RDS Farms/Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-8-virtual-desktop-pools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon 8: Virtual Desktop Pools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-master-virtual-desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Horizon 6 - Master Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-true-sso-uag-saml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon True SSO with UAG SAML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Omnissa/Horizon/vmware-horizon-unified-access-gateway-load-balancing-citrix-adc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Omnissa Horizon Load Balancing - NetScaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-adm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why ADM?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adm-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-vs-on-prem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud vs on-prem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdx-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDX Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-datacenter-deployment-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Datacenter Deployment Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-adm-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import ADM Appliance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import ADM Appliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appliance-ip-address-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appliance IP Address Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Second Disk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ha-pair-in-the-main-datacenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HA Pair in the Main Datacenter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dr-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DR Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adm-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adm-appliance-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM Appliance Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Instances
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-adc-sdx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix ADC SDX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licenses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Licenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-server-license-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Server License Packs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocate-licenses-to-virtual-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Allocate licenses to Virtual Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-appflow-insight-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable AppFlow / Insight / Analytics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-syslog-on-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Syslog on Instance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adm-nsroot-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADM nsroot Password
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#management-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Management Certificate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-of-the-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message of the Day
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prune Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTP Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syslog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syslog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-notification-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Notification Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Thresholds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-ip-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private IP Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-email-alerts-snmp-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Email Alerts (SNMP Traps)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Email Alerts (SNMP Traps)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#events-digest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events Digest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#director-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Director Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-citrix-adm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Citrix ADM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Citrix ADM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Networks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-record-and-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Record and Play
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics and Applications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hdx-insight_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDX Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gateway Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-citrix-adm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Citrix ADM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrade Citrix ADM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-disaster-recovery-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade Disaster Recovery Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-adm-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade ADM Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Citrix Application Delivery Management (ADM) 12.1</h1>
+
+<h3 id="navigation">Navigation</h3>
+<p>The older 12.0 version of NetScaler MAS is detailed in a <a href="../netscaler-management-and-analytics-system-mas-12/">different post</a>.</p>
+<ul>
+<li><a href="#changelog">Change Log</a></li>
+<li><a href="#planning">Planning</a><ul>
+<li><a href="#whymas">Why ADM?</a></li>
+<li><a href="#multidatacenter">Multi-datacenter Deployment Architecture</a></li>
+</ul>
+</li>
+<li><a href="#import">Import Appliance into vSphere</a><ul>
+<li><a href="#ip">IP Configuration</a></li>
+<li><a href="#seconddisk">Second Disk</a></li>
+</ul>
+</li>
+<li><a href="#deploymentmodes">Deployment Modes</a><ul>
+<li><a href="#hapair">HA Pair</a></li>
+<li><a href="#drnode">DR node</a></li>
+<li><a href="#masagents">ADM Agents</a></li>
+<li><a href="#masmaintenance">ADM Appliance Maintenance</a></li>
+</ul>
+</li>
+<li><a href="#addinstances">Add Instances</a><ul>
+<li><a href="#sdx">Citrix ADC SDX</a></li>
+<li><a href="#instancemanagement">Instance Management</a></li>
+</ul>
+</li>
+<li><a href="#licensing">Virtual Server Licensing</a></li>
+<li><a href="#appflow">Enable AppFlow / Insight / Analytics</a></li>
+<li><a href="#syslogjob">Enable Syslog on Instances</a></li>
+<li><a href="#nsroot">nsroot and nsrecover Password</a></li>
+<li><a href="#certificate">Management Certificate</a></li>
+<li><a href="#system">System Configuration</a></li>
+<li><a href="#email">Email Notification Server</a></li>
+<li><a href="#auth">Authentication</a></li>
+<li><a href="#thresholds">Analytics (Insight) Thresholds and Alerts</a></li>
+<li><a href="#snmpalerts">Email Alerts (SNMP Traps)</a><ul>
+<li><a href="#eventsdigest">Events Digest</a></li>
+</ul>
+</li>
+<li><a href="#director">Director Integration</a></li>
+<li><a href="#useinsightcenter">Use Citrix ADM</a> - HDX Insight, Gateway Insight, Security Insight<ul>
+<li><a href="#networks">Networks</a></li>
+<li><a href="#recordandplay">Record and Play</a></li>
+<li><a href="#analytics">Analytics</a></li>
+</ul>
+</li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#upgrade">Upgrade Citrix ADM</a></li>
+</ul>
+<p>:idea: = <a href="../detailed-change-log/">Recently Updated</a></p>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li>2019 May 3 - <a href="#instancemanagement">Instance Management</a> - added link to <a href="https://github.com/det0n8r/scripts/tree/master/Citrix/ADM">Citrix Application Delivery Management PowerShell Module</a> by Kenny Baldwin</li>
+<li>2019 Apr 26 - <a href="#upgrade">Upgrade ADM</a> - Updated screenshots for <a href="https://www.citrix.com/downloads/citrix-application-management/product-software/netscaler-mas-121-build-50-43.html">ADM 12.1 build 50.43</a></li>
+<li>2019 Mar 31 - <a href="#upgrade">Upgrade ADM</a> - Updated screenshots for <a href="https://www.citrix.com/downloads/citrix-application-management/">ADM 12.1 build 50.39</a></li>
+<li>2019 Mar 24 - <a href="#upgrademasagents">Upgrade ADM Agent</a> - updated for build 50.33, which resolves a <a href="https://support.citrix.com/article/CTX247738">security vulnerability</a></li>
+<li>2019 Jan 18 - <a href="#upgrade">Upgrade ADM</a> - Updated screenshots for <a href="https://www.citrix.com/downloads/citrix-application-management/product-software/netscaler-mas-121-build-50-28.html">ADM 12.1 build 50.30</a></li>
+<li>2019 Jan 7 - <a href="#useinsightcenter">Use Citrix ADM</a> - added <a href="https://docs.citrix.com/en-us/citrix-application-delivery-management-service/hybrid-multi-cloud-deployments/infrastructure-analytics.html">Infrastructure Analytics</a> from cloud version of ADM.</li>
+<li>2018 Dec 7 - <a href="#hdxinsight">HDX Insight</a> - added link to CTX239748 <a href="https://support.citrix.com/article/CTX239748">HDX Insight Quality Improvements</a></li>
+<li>2018 Dec 5 - <a href="#motd">Message of the Day</a> - new feature in 12.1 build 50</li>
+<li>2018 Dec 5 - renamed MAS to ADM, renamed NetScaler to ADC</li>
+<li>2018 Dec 4 - <a href="#upgrade">Upgrade</a> - Updated screenshots for <a href="https://www.citrix.com/downloads/citrix-application-management/product-software/netscaler-mas-121-build-50-28.html">ADM 12.1 build 50.28</a></li>
+<li>2018 Nov 10 - added latency maximums for HA pair, DR node, and instances</li>
+<li>2018 Oct 28 - <a href="#upgrade">Upgrade</a> - Updated screenshots for <a href="https://www.citrix.com/downloads/citrix-application-management/product-software/netscaler-mas-121-build-49-23.html">MAS 12.1 build 49.37</a></li>
+<li>2018 Oct 7 - <a href="#hdxinsight">HDX Insight Requirements</a> - EDT AppFlow requires Citrix ADC 12.1 build 49 or newer</li>
+<li>2018 Oct 6 - <a href="#upgrade">Upgrade</a> - added upgrade instructions for DR node and MAS Agents<ul>
+<li><a href="#email">Email Notification Server</a> - added Test button from 12.1 build 49</li>
+<li><a href="#snmpalerts">Email Alerts</a> - added <strong>Prefix severity, category, and failure object information to the custom email subject</strong></li>
+<li><a href="#addinstances">Add Instance</a> - assign tags to instances</li>
+</ul>
+</li>
+<li>2018 Oct 2 - <a href="#planning">Planning</a> - added AppFlow NSAP info from Citrix Blog Post <a href="https://www.citrix.com/blogs/2018/08/15/hdx-insight-2-0/">HDX Insight 2.0</a></li>
+<li>2018 Aug 1 - <a href="#appflow">Enable Analytics</a> - verify that ULFD is enabled on ADC instance</li>
+<li>2018 June 23 - <a href="#upgrade">Upgrade MAS</a> - Upgrade to <a href="https://www.citrix.com/downloads/citrix-application-management/product-software/netscaler-mas-120-build-57-19.html">MAS 12.0 build 57.24</a> before you can upgrade to MAS 12.1. (Source = <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/upgrade.html#before-upgrade">Before you upgrade</a> at Citrix Docs)</li>
+<li>2018 June 10 - <a href="#masmaintenance">MAS Appliance Maintenance</a> - added link to <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/manage-system-settings/recover-inaccessible-servers.html">Recover inaccessible NetScaler MAS servers</a> at Citrix Docs</li>
+<li>2018 May 28 - updated <a href="#deploymentmodes">install/deploy</a> for HA, DR, and remote agents</li>
+</ul>
+<h3 id="planning">Planning</h3>
+<h4 id="why-adm"><strong>Why ADM?</strong></h4>
+<p>Citrix Application Delivery Management (ADM), formerly known as NetScaler Management and Analytics System (MAS), enables every Citrix ADC (formerly known as NetScaler) administrator to achieve the following:</p>
+<ul>
+<li><strong>Alert notifications</strong> - Receive email alerts whenever something goes down. For example, if a Load Balancing service goes down, you can receive an email alert.<ul>
+<li>ADM can email you for any Major SNMP trap produced by any ADC appliance.</li>
+</ul>
+</li>
+<li><strong>Automatically backup</strong> all Citrix ADC instances.<ul>
+<li>ADM can even transfer the backups to an external system, which is then backed up by a normal backup tool.</li>
+</ul>
+</li>
+<li><strong>SSL Certificate Expiration</strong> - Alert you when SSL certificates are about to expire.<ul>
+<li>Show you all SSL certificates across all ADC appliances.</li>
+</ul>
+</li>
+<li><strong>Configuration Record and Play</strong> - Use the Configuration Recorder to configure one ADC appliance, and then push out the same configuration changes to additional appliances. This is the easiest method of managing ADC appliances in multiple datacenters.</li>
+<li><strong>AppFlow Reporting</strong> - Receive ICA AppFlow traffic from ADC and show it in graphs.<ul>
+<li>Integrate ADM with Citrix Director so Help Desk can see the AppFlow data.</li>
+</ul>
+</li>
+</ul>
+<p>Everything listed above is completely free, so there's no reason not to deploy ADM.</p>
+<h4 id="adm-overview">ADM Overview</h4>
+<p>For an overview of ADM, see Citrix's YouTube video <a href="https://www.youtube.com/watch?v=Fxej7dP5B8I">Citrix NetScaler MAS: Application visibility and control in the cloud</a>. <img alt="" src="../../../img/img_5a5a58c19d923.png" /> <img alt="" src="../../../img/img_5a5a5897ea63e.png" /></p>
+<h4 id="cloud-vs-on-prem"><strong>Cloud vs on-prem</strong></h4>
+<p>ADM is available both on-premises, and as a Cloud Service. For the Cloud Service, you import a ADM Agent appliance to an on-prem hypervisor, or deploy a ADM Agent to AWS or Azure. The ADM Agent is the broker between the Cloud Service and the on-prem (or cloud hosted) Citrix ADC appliances. For more info on the ADM Cloud Service, see the following:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ZnGCR7S4Tn0&amp;feature=em-uploademail">Demo: Citrix NetScaler Management and Analytics Service</a> - YouTube video</li>
+<li>Most ADM features are supported in the Cloud Service, but <a href="https://docs.citrix.com/en-us/netscaler-mas/netscaler-management-and-analytics-service/features-and-solutions.html">some are missing</a>.</li>
+<li>The Cloud Service uses <a href="https://docs.citrix.com/en-us/netscaler-mas/netscaler-management-and-analytics-service/managing-subscriptions.html">subscription licensing</a>.</li>
+<li><a href="https://docs.citrix.com/en-us/netscaler-mas/netscaler-management-and-analytics-service.html">Citrix Application Delivery Management</a> at Citrix Docs</li>
+<li>George Spiers <a href="http://www.jgspiers.com/netscaler-management-analytics-service/">NetScaler Management and Analytics Service</a></li>
+</ul>
+<p>The rest of this article focuses on the on-premises version, but much of it also applies to the Cloud Service.</p>
+<p><strong>On-premises ADM Licensing:</strong></p>
+<ul>
+<li><strong>Instance management</strong> is free (unlimited). This includes Configuration Jobs, Instance Backups, Network Functions/Reporting. Basically everything in the <strong>Networks</strong> node is free.</li>
+<li><strong>Analytics</strong> and <strong>Application</strong> monitoring are free for up to 30 Virtual Servers (Load Balancing, Citrix Gateway, Content Switching, etc.).<ul>
+<li>Beyond 30 Virtual Servers, licenses can be purchased in 100 Virtual Server packs. See <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/licensing.html">Citrix Application Delivery Management (ADM) Licensing</a> at Citrix Docs.</li>
+<li>You can control assignment of licenses to Virtual Servers.</li>
+</ul>
+</li>
+</ul>
+<p><strong>ADM version</strong> - The version/build of Citrix ADM must be the same or newer than the version/build of the Citrix ADC appliances being monitored. ADM 12.1 can monitor 12.0 and older ADC appliances.</p>
+<h4 id="hdx-insight">HDX Insight</h4>
+<p>See CTX239748 for a list of <a href="https://support.citrix.com/article/CTX239748">HDX Insight Quality Improvements</a> in Citrix Gateway 12.1. These include:</p>
+<ul>
+<li>NSAP protocol for reduced performance impact on ADC</li>
+<li>EDT support</li>
+</ul>
+<p>HDX Insight Requirements (aka AppFlow Analytics for Citrix ICA traffic):</p>
+<ul>
+<li>Your ADC appliance must be running Enterprise Edition or Platinum Edition.</li>
+<li>ADC must be 10.1 or newer.</li>
+<li>HDX Insight works with the following Receivers:<ul>
+<li>Receiver for Windows must be 3.4 or newer. Or upgrade to Workspace app.</li>
+<li>Receiver for Mac must be 11.8 or newer. Or upgrade to Workspace app.</li>
+<li>Receiver for Linux must be 13 or newer. Or upgrade to Workspace app.</li>
+<li>Notice no mobile Receivers. See the <a href="https://www.citrix.com/content/dam/citrix/en_us/documents/data-sheet/citrix-workspace-app-feature-matrix.pdf">Citrix Receiver Feature Matrix</a> for the latest details.</li>
+</ul>
+</li>
+<li>For ICA Session Reliability with AppFlow: NetScaler 10.5 build 54 and newer.<ul>
+<li>For ICA Session Reliability, AppFlow, and ADC High Availability: NetScaler 11.1 build 49 and newer.</li>
+</ul>
+</li>
+<li>For EDT (UDT-based ICA), Citrix ADC must be 12.1 build 49 or newer.</li>
+<li>AppFlow statistics are only generated when ICA traffic flows through a Citrix Gateway. Internally, when a user clicks an icon from StoreFront, an ICA connection is established directly from Receiver to the VDA, thus bypassing the internal ADC. Here are some methods of getting ICA traffic to flow through an internal ADC:<ul>
+<li>Implement Citrix Gateway ICA Proxy (SSL) internally.<ul>
+<li>However, Single Sign-on (pass-through authentication) has special considerations for Citrix Gateway:<ul>
+<li>In the newest Workspace app, you can set the client-side GPO setting to enable Single Sign-on through Gateway.</li>
+<li>Or, use SSL ICA Proxy without authenticating at NetScaler Gateway, see CTX200129 - <a href="https://support.citrix.com/article/CTX200129">How to Force Connections through NetScaler Gateway Using Optimal Gateways Feature of StoreFront</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Route ICA traffic (TCP/UDP 1494 and TCP/UDP 2598) through a ADC SNIP, and ADC routes it to the VDAs.<ul>
+<li>Citrix Blog Post - <a href="https://www.citrix.com/blogs/2015/02/02/how-to-deploy-netscaler-insight-center-with-policy-based-routing/">How to Deploy NetScaler Insight Center with Policy Based Routing</a></li>
+</ul>
+</li>
+<li>ADC 11 and newer can proxy ICA traffic through a SOCKS protocol Cache Redirection vServer.<ul>
+<li>Advantages: no need to authenticate at Citrix Gateway, and no routing changes. See Citrix Blog Post <a href="https://www.citrix.com/blogs/2015/06/29/gathering-hdx-insight-analytics-for-lan-users-with-netscaler-using-socks/">Gathering HDX Insight Analytics for LAN Users with NetScaler Using SOCKS</a> for more information.</li>
+</ul>
+</li>
+<li>Citrix Docs <a href="https://docs.citrix.com/en-us/categories/legacy-archive/downloads/netscaler-insight-center-11-1.pdf">How NetScaler Insight Center is Deployed in a Network</a> and <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/analytics/hdx-insight/enable-data-collection.html">Enabling HDX Insight Data Collection</a> detail additional ICA routing/proxy considerations – Transparent Mode, Citrix Gateway Single-Hop and Double-Hop, LAN User Mode (ADC as SOCKS Proxy), CloudBridge, Multi-Hop (ADC and CloudBridge with connection chaining)</li>
+</ul>
+</li>
+<li>A new Receiver / Workspace app Virtual Channel named <strong>NetScaler App Experience</strong> or <strong>NSAP</strong> can dramatically reduce the CPU needed on the ADC to process AppFlow. Details at Citrix Blog Post <a href="https://www.citrix.com/blogs/2018/08/15/hdx-insight-2-0/">HDX Insight 2.0</a>. NSAP requires the following:<ul>
+<li>VDA 7.17 or newer, including VDA 1903. VDA 7.15 (LTSR) does not include the NSAP functionality.</li>
+<li>Workspace app or Receiver 4.10 and newer.</li>
+<li>ADC 12.0 build 57.24 or newer, including ADC 12.1.</li>
+</ul>
+</li>
+<li>For <a href="https://docs.citrix.com/en-us/categories/legacy-archive/downloads/netscaler-insight-center-11-1.pdf">ICA round trip time calculations</a>, in a Citrix Policy, enable the following settings:<ul>
+<li>ICA &gt; End User Monitoring &gt; <strong>ICA Round Trip Calculation</strong></li>
+<li>ICA &gt; End User Monitoring &gt; <strong>ICA Round Trip Calculation Interval</strong></li>
+<li>ICA &gt; End User Monitoring &gt; <strong>ICA Round Trip Calculation for Idle Connections</strong></li>
+</ul>
+</li>
+<li>Citrix CTX215130 <a href="https://support.citrix.com/article/CTX215130">HDX Insight Diagnostics and Troubleshooting Guide</a> contains the following contents:<ul>
+<li>Introduction</li>
+<li>Prerequisites for Configuring HDX Insight</li>
+<li>Troubleshooting<ul>
+<li>Issues Related to ICA parsing</li>
+<li>Error Counter details</li>
+</ul>
+</li>
+<li>Checklist before Contacting Citrix Technical Support</li>
+<li>Information to collect before Contacting Citrix Technical support</li>
+<li>Known Issues</li>
+</ul>
+</li>
+</ul>
+<p>Citrix CTX204274 <a href="https://support.citrix.com/article/CTX204274">How ICA RTT is calculated on NetScaler Insight</a>: ICA RTT constitutes the actual application delay. ICA_RTT = 1 + 2 + 3 + 4 +5 +6:</p>
+<ol>
+<li>Client OS introduced delay</li>
+<li>Client to NS introduced network delay (Wan Latency)</li>
+<li>NS introduced delay in processing client to NS traffic (Client Side Device Latency)</li>
+<li>NS introduced delay in processing NS to Server (XA/XD) traffic (Server Side Device Latency)</li>
+<li>NS to Server network delay (DC Latency)</li>
+<li>Server (XA/XD) OS introduced delay (Host Delay)</li>
+</ol>
+<h4 id="multi-datacenter-deployment-architecture">Multi-Datacenter Deployment Architecture</h4>
+<p>In a main datacenter, import two Citrix ADM appliances into the same subnet and configure them as an HA pair with a Floating IP address.</p>
+<ul>
+<li>Documentation at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/deploy/high-availability-deployment.html">Configure high availability deployment</a> at Citrix Docs, and will be detailed later in this post.</li>
+</ul>
+<p>In a DR datacenter, import a Citrix ADM appliance, and configure it to replicate with the main datacenter.</p>
+<ul>
+<li>Documentation at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/deploy/disaster-recovery.html">Configure disaster recovery for high availability</a> at Citrix Docs, and will be detailed later in this post.</li>
+</ul>
+<p>For Citrix ADC appliances in additional datacenters, import two ADM Agent appliances into each datacenter, and configure them as remote agents to the main datacenter. Two ADM Agents per datacenter enables HA. The virtual appliance for ADM Agent is different than the normal ADM appliance.</p>
+<ul>
+<li>Documentation at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/deploy/multisite-deployment.html">Configure multisite deployment</a> at Citrix Docs, and will be detailed later in this post.</li>
+</ul>
+<h3 id="import-adm-appliance">Import ADM Appliance</h3>
+<p>If you are upgrading an existing MAS, skip to the <a href="#upgrade">Upgrade</a> section.</p>
+<p>To import a ADM Appliance into vSphere, do the following. The same process is used for DR ADM appliance. The ADM Agent appliance is different from the normal ADM appliances that are detailed in this section.</p>
+<ol>
+<li>Go to the <a href="https://www.citrix.com/downloads/citrix-application-management/">ADM 12.1 download page</a>. Expand <strong>NetScaler MAS Release 12.1</strong>. Expand <strong>Product Software</strong>. Click the latest release of 12.1.</li>
+<li>Download the <strong>Citrix ADM image for ESX</strong>. <img alt="" src="../../../img/img_5df016a16a968.png" /></li>
+<li>Then extract the .zip file.</li>
+<li>In vSphere Web Client, right-click a cluster, and click <strong>Deploy OVF Template</strong>. <img alt="" src="../../../img/img_5a9afdf14d7eb.png" /></li>
+<li>In the <em>Select an OVF Template</em> page, select <strong>Local file</strong>, and browse to the <a href="https://www.citrix.com/downloads/citrix-application-management/">Citrix ADM .ovf files</a>. If vCenter 6.5+, select all three files. Click <strong>Next</strong>. <img alt="" src="../../../img/img_5a9afe1295971.png" /> <img alt="" src="../../../img/img_5cc2fed9f1778.png" /></li>
+<li>In the <em>Select name and folder</em> page, enter a name for the virtual machine, and select an inventory folder. Then click <strong>Next</strong>. <img alt="" src="../../../img/img_5c06e359ee4e4.png" /></li>
+<li>In the <em>Select a resource</em> page, select a cluster or resource pool, and click <strong>Next</strong>. <img alt="" src="../../../img/img_5a9afea9071fd.png" /></li>
+<li>In the <em>Review details</em> page, click <strong>Next</strong>. <img alt="" src="../../../img/img_5c41cfcfd6bec.png" /></li>
+<li>In the <em>Select storage</em> page, select a datastore. Due to high IOPS requirement, SSD or Flash is recommended.</li>
+<li>Change the <strong>virtual disk format</strong> to <strong>Thin Provision</strong>. Click <strong>Next</strong>. <img alt="" src="../../../img/img_5a9afee8d132b.png" /></li>
+<li>In the <em>Select networks</em> page, choose a valid port group, and click <strong>Finish</strong>. <img alt="" src="../../../img/img_5a9aff022c8a3.png" /></li>
+<li>In the <em>Ready to Complete</em> page, click <strong>Finish</strong>. <img alt="" src="../../../img/img_5cc2ff1336fb1.png" /></li>
+<li>Before powering on the appliance, you can review its specs. Right-click the virtual machine, and click <strong>Edit Settings</strong>. <img alt="" src="../../../img/img_5c06e44faa6e1.png" /></li>
+<li>Review the specs. Citrix Docs <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/deploy/install-mas-on-esxi.html">VMware ESXi Hardware Requirements</a> has recommended specs.</li>
+<li>The OVF defaults to 8 vCPU and 32 GB of RAM.</li>
+<li>You can add a second hard disk at this time. <img alt="" src="../../../img/img_5c06e49723dc3.png" /></li>
+<li>Citrix Docs <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/deploy/how-to-attach-an-additional-disk.html">Attach an additional disk to Citrix ADM</a> says that an additional disk must be added before initial deployment.<ul>
+<li>Use the ADM storage calculator to determine the recommended size of the disk. Ask your Citrix Partner for the tool.</li>
+<li>The new disk must be larger than 120 GB.</li>
+<li>In ADM 12.1, the new disk can be larger than 2 TB.</li>
+<li>In ADM 12.1, the new disk can be grown later, and <code>**/mps/DiskPartitionTool.py**</code> can resize the partition, but only up to 2 TB. If you need more than 2 TB, the initial disk should be larger than 2 TB.</li>
+</ul>
+</li>
+<li>Power on the Virtual Machine. <img alt="" src="../../../img/img_5c06e4e99400a.png" /></li>
+</ol>
+<h4 id="appliance-ip-address-configuration">Appliance IP Address Configuration</h4>
+<ol>
+<li>Open the console of the virtual machine. <img alt="" src="../../../img/img_5c06e55913d0e.png" /></li>
+<li>Configure IP address information.</li>
+<li>Enter <strong>7</strong> when done. <img alt="" src="../../../img/img_5c06e59eb75da.png" /></li>
+</ol>
+<h4 id="second-disk">Second Disk</h4>
+<ol>
+<li>SSH to the appliance and login as <strong>nsrecover/nsroot</strong>. <img alt="" src="../../../img/img_5b0bf39d512a9.png" /></li>
+<li>Enter <code>**/mps/DiskPartitionTool.py**</code> <img alt="" src="../../../img/img_5b0c05822f380.png" /><ul>
+<li>The Disk Partition Tool is documented at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/deploy/how-to-attach-an-additional-disk.html">Attach an additional disk to Citrix ADM</a> at Citrix Docs.</li>
+</ul>
+</li>
+<li>Enter <code>**info**</code> to see that there are no existing partitions on the second disk. <img alt="" src="../../../img/img_5c06e60911b86.png" /></li>
+<li>Enter <code>**create**</code> to create partitions on the second disk. A reboot is required. <img alt="" src="../../../img/img_5b0c05d4f2611.png" /></li>
+<li>During the reboot, the database is moved to the second disk. <img alt="" src="../../../img/img_5b0c066d74ef8.png" /></li>
+<li>After the reboot, the Disk Partition Tool <strong>info</strong> command shows the partition on the second disk. <img alt="" src="../../../img/img_5b0c0708a099a.png" /></li>
+<li>If you need to increase the size of the disk, reboot the ADM appliance so it detects the larger size. Then use the Disk Partition Tool <code>**resize**</code> command. <img alt="" src="../../../img/img_5b0c0773bbf1e.png" /></li>
+</ol>
+<h3 id="deployment-modes">Deployment Modes</h3>
+<h4 id="ha-pair-in-the-main-datacenter">HA Pair in the Main Datacenter</h4>
+<p><strong>First Node:</strong></p>
+<ol>
+<li>SSH to the first node and login as <strong>nsrecover/nsroot</strong>. <img alt="" src="../../../img/img_5b0bf39d512a9.png" /></li>
+<li>Enter <strong>deployment_type.py</strong>. <img alt="" src="../../../img/img_5b0bf3fe49510.png" /></li>
+<li>Enter <strong>1</strong> for <strong>Citrix ADM Server</strong>. <img alt="" src="../../../img/img_5c06e71ddd1a4.png" /></li>
+<li>Enter <strong>no</strong> when prompted for <strong>Citrix ADM Standalone deployment</strong>. <img alt="" src="../../../img/img_5c06e72f89467.png" /></li>
+<li>For the <strong>First Server Node</strong> prompt, enter <strong>yes</strong>. <img alt="" src="../../../img/img_5c06e74cae80a.png" /></li>
+<li>Enter <strong>yes</strong> to Restart the system. <img alt="" src="../../../img/img_5b0bf526eb5e7.png" /></li>
+</ol>
+<p><strong>Second Node:</strong></p>
+<ol>
+<li><a href="#import">Import</a> another ADM appliance to the same subnet, and configure an IP address.<ul>
+<li>Latency to the HA node must not exceed 10 ms.</li>
+<li>The HA nodes must be on the same subnet.</li>
+</ul>
+</li>
+<li>If you added a second disk to the first ADM appliance, then you must add the same size second disk to the second ADM appliance.</li>
+<li>Configure the new nodes' IP address.</li>
+<li>SSH to the second appliance, login as <strong>nsrecover/nsroot</strong>, and run the Disk Partition tool.</li>
+<li>SSH to the second appliance, login as <strong>nsrecover/nsroot</strong>, and run <strong>deployment_type.py</strong>. <img alt="" src="../../../img/img_5b0bf3fe49510.png" /></li>
+<li>Enter <strong>1</strong> for <strong>Citrix ADM Server</strong>. <img alt="" src="../../../img/img_5c06e71ddd1a4.png" /></li>
+<li>Enter <strong>no</strong> when prompted for <strong>Citrix ADM Standalone deployment</strong>. <img alt="" src="../../../img/img_5c06e72f89467.png" /></li>
+<li>Enter <strong>no</strong> when prompted is this is First Server Node. <img alt="" src="../../../img/img_5c06e9b2ba95e.png" /></li>
+<li>Enter the IP address of the first MAS node. <img alt="" src="../../../img/img_5c06e9d2c1812.png" /></li>
+<li>Enter the nsroot password of the first node. The default password is <strong>nsroot</strong>. <img alt="" src="../../../img/img_5c06e9e966ac9.png" /></li>
+<li>Enter a new Floating IP address. <img alt="" src="../../../img/img_5c06e9fc6d122.png" /></li>
+<li>Enter <strong>yes</strong> to restart the system. <img alt="" src="../../../img/img_5c06ea184f1dc.png" /></li>
+</ol>
+<p><strong>Deploy HA Configuration:</strong></p>
+<ol>
+<li>Point your browser to the first appliance's IP address, and login as nsroot/nsroot. <img alt="" src="../../../img/img_5c06df8c073ad.png" /></li>
+<li>If you see Customer User Experience Improvement Program, click <strong>Enable</strong>, or click <strong>Skip</strong>. <img alt="" src="../../../img/img_5c0719fd45004.png" /></li>
+<li>The <strong>System &gt; Deployment</strong> page is displayed. In the top right, click <strong>Deploy</strong>. <img alt="" src="../../../img/img_5c071a2ad1cda.png" /></li>
+<li>Click <strong>Yes</strong> to reboot. <img alt="" src="../../../img/img_5c071a4d5c9b7.png" /></li>
+<li>After deployment, you can now use the Floating IP to manage the appliance.</li>
+<li>After the reboot, login again. You'll see a <a href="#addinstances">Wizard to add instances</a>.</li>
+</ol>
+<p>After the add instance wizard is complete, you can manage High Availability.</p>
+<ol>
+<li><strong>System</strong> &gt; <strong>Deployment</strong> lets you see the HA nodes.</li>
+<li>You can <strong>Force Failover</strong> from here. Note: HA failover only occurs after three minutes of no heartbeats.</li>
+<li>On the top right is a <strong>HA Settings</strong> button that lets you change the Floating IP. <img alt="" src="../../../img/img_5c06e02e26947.png" /><img alt="" src="../../../img/img_5b0c03c88869e.png" /></li>
+</ol>
+<h4 id="dr-node">DR Node</h4>
+<p>Requirements for the DR node:</p>
+<ul>
+<li>The main datacenter must have an HA pair of ADM appliances. Standalone in the main datacenter is not supported.</li>
+<li>Latency from the main datacenter HA pair to the DR node must not exceed 200 ms.</li>
+</ul>
+<p>To configure a DR node:</p>
+<ol>
+<li><a href="#import">Import</a> another ADM appliance into a remote datacenter, and configure an IP address. <img alt="" src="../../../img/img_5c07de2994854.png" /></li>
+<li>If you added a second disk to the main datacenter ADM appliances, then you must add the same size second disk to the DR ADM  appliance.</li>
+<li>After configuring the new nodes' IP address, SSH to the DR appliance and login as <strong>nsrecover/nsroot</strong>. <img alt="" src="../../../img/img_5b0bf39d512a9.png" /></li>
+<li>Enter <strong>deployment_type.py</strong>. <img alt="" src="../../../img/img_5b0bf3fe49510.png" /></li>
+<li>Enter <strong>2</strong> for <strong>Remote Disaster Recovery Node</strong>. <img alt="" src="../../../img/img_5c07de6f36463.png" /></li>
+<li>Enter the Floating IP address of the HA pair in the main datacenter. <img alt="" src="../../../img/img_5c07de81217e3.png" /></li>
+<li>Enter the <strong>nsroot</strong> password, which is <strong>nsroot</strong> by default. <img alt="" src="../../../img/img_5c07de9587739.png" /></li>
+<li>The DR node registers with the MAS HA Pair. <img alt="" src="../../../img/img_5b0c0d65a092e.png" /></li>
+<li>Point your browser to the Floating IP Address and login.</li>
+<li>Go to <strong>System &gt; System Administration</strong>.</li>
+<li>On the right, in the right column, click <strong>Disaster Recovery Settings</strong>. <img alt="" src="../../../img/img_5c06e0504dafd.png" /></li>
+<li>The Registered Recovery Node should already be filled in.</li>
+<li>Check the box next to <strong>Enable Disaster Recovery</strong>, and click <strong>Apply Settings</strong>. <img alt="" src="../../../img/img_5b0c0b4b80679.png" /></li>
+<li>Click <strong>Yes</strong> to enable DR. <img alt="" src="../../../img/img_5b0c0b5a36107.png" /></li>
+<li>A System Backup is performed and replicated to the DR appliance. <img alt="" src="../../../img/img_5b0c0b7837d9b.png" /></li>
+<li>Disaster Recovery is not automatic. See the <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/deploy/disaster-recovery.html#par_anchortitle_819639040">manual DR procedure</a> at at Citrix Docs.<ul>
+<li><code>**/mps/scripts/pgsql/pgsql_restore_remote_backup.sh**</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="adm-agents">ADM Agents</h4>
+<p>The virtual appliance for ADM Agent is different than the normal ADM appliance.</p>
+<ol>
+<li>Download the ADM Agent from the <a href="https://www.citrix.com/downloads/citrix-application-management/">main ADM download page</a>. Scroll down the page to find the ADM Agent images. Note: The ADM Agent has a newer build number than the ADM image due to a <a href="https://support.citrix.com/article/CTX247738">security vulnerability</a>. <img alt="" src="../../../img/img_5cc307a267ffd.png" /></li>
+<li>Extract the downloaded .zip file. <img alt="" src="../../../img/img_5cc307ca27ff2.png" /></li>
+<li><a href="#import">Import the .ovf</a> to vSphere. <img alt="" src="../../../img/img_5b1d09884d978.png" /> <img alt="" src="../../../img/img_5cc3081bf0336.png" /></li>
+<li>Edit the settings of the virtual machine to see the allocated CPU and Memory. <img alt="" src="../../../img/img_5b1d0aacd18d6.png" /></li>
+<li>Power on the ADM Agent virtual machine. <img alt="" src="../../../img/img_5b1d0abc1ee74.png" /></li>
+<li>At the virtual machine's console, configure an IP address. <img alt="" src="../../../img/img_5c41d4778cf3e.png" /></li>
+<li>Login as <strong>nsrecover/nsroot</strong>. <img alt="" src="../../../img/img_5b1d0b5a64e2a.png" /></li>
+<li>Run <code>**/mps/register_agent_onprem.py**</code> <img alt="" src="../../../img/img_5b1d0b842ecc3.png" /></li>
+<li>Enter the floating IP address of the main ADM HA Pair. Enter nsroot credentials. <img alt="" src="../../../img/img_5c41d4cd15511.png" /></li>
+<li>The Agent will be registered and services restarted. <img alt="" src="../../../img/img_5c41d4e8335b7.png" /></li>
+<li>Login to the ADM Floating IP.</li>
+<li>Go to <strong>Networks &gt; Agents</strong>.</li>
+<li>On the right, select the ADM Agent, and then click <strong>Attach Site</strong>. <img alt="" src="../../../img/img_5c41d56240251.png" /></li>
+<li>In the <strong>Site</strong> drop-down, if you don't see your site, then you can click the Add button to create a new site. <img alt="" src="../../../img/img_5b1d0cf323f33.png" /></li>
+<li>Enter a name, enter a search location, and click <strong>Get Location</strong> to get the coordinates. Click <strong>Create</strong> when done. <img alt="" src="../../../img/img_5b1d0d1cbb7d4.png" /></li>
+<li>Click <strong>Save</strong> to attach the site. <img alt="" src="../../../img/img_5b1d0d2d931c0.png" /></li>
+<li>For HA, import two ADM Agents into the same Site. <img alt="" src="../../../img/img_5b1d102b23fe7.png" /></li>
+</ol>
+<h4 id="adm-appliance-maintenance">ADM Appliance Maintenance</h4>
+<ul>
+<li><strong>Shutdown or Reboot</strong> - From CTX220000 <a href="https://support.citrix.com/article/CTX220000">How to reboot or shutdown NetScaler MAS using CLI</a>: when using the ADM CLI, do not use the <strong>reboot</strong> command since it will cause data corruption. Instead, run <strong>shutdown -r now</strong>. <img alt="" src="../../../img/img_590de3c72cd8a.png" /></li>
+<li><strong>Static Route</strong> - If you need to add a static route to Citrix ADM, then see CTX223282 <a href="https://support.citrix.com/article/CTX223282">How to Add a Static Route on NetScaler MAS</a>. <img alt="" src="../../../img/img_58fa9ee329ad5.png" /></li>
+<li><strong>ADM Database Cleanup Tool</strong> - Run <code>**/mps/mas_recovery/mas_recovery.py**</code>. For details, see <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/manage-system-settings/recover-inaccessible-servers.html">Recover inaccessible Citrix ADM servers</a> at Citrix Docs. <img alt="" src="../../../img/img_5c07e45ec2bdc.png" /></li>
+</ul>
+<h3 id="add-instances">Add Instances</h3>
+<p>Citrix ADM must discover Citrix ADC instances before they can be managed. Citrix Docs <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/overview/how-mas-discovers-instances.html">How Citix ADM discovers instances</a>.</p>
+<ol>
+<li>Once you’ve built all of the nodes, point your browser to the Citrix ADM Floating IP address, and login as <strong>nsroot/nsroot</strong>. <img alt="" src="../../../img/img_5c06df97ecd6c.png" /></li>
+<li>Deployment should already be done, so click <strong>Next</strong>. <img alt="" src="../../../img/img_5c06d951a565b.png" /></li>
+<li>On the <strong>Add New Instances</strong> page, click <strong>Add Instance</strong> near the top right. <img alt="" src="../../../img/img_5c06d964d4500.png" /></li>
+<li>Enter the NSIP address of a Citrix ADC appliance.<ul>
+<li>CItrix ADM supports up to 400 ms latency to the instances.</li>
+</ul>
+</li>
+<li>Click <strong>Edit</strong> next to <strong>ns_nsroot_profile</strong>. <img alt="" src="../../../img/img_5c06d9bb22e63.png" /></li>
+<li>Check the box next to <strong>Change Password</strong>. <img alt="" src="../../../img/img_5c06d9d00fd40.png" /></li>
+<li>Type in the <strong>nsroot</strong> password, and then scroll down. <img alt="" src="../../../img/img_5c06d9efdccd1.png" /></li>
+<li>The Citrix ADC Profile defaults to using <strong>https</strong> for instance communication. You can change it by unchecking <strong>Use global settings for Citrix ADC communication</strong>. <img alt="" src="../../../img/img_5c06da142f88d.png" /></li>
+<li>Click <strong>OK</strong>. <img alt="" src="../../../img/img_5c06da3ace0cc.png" /></li>
+<li>Select the Site for the instance. You can click <strong>Add</strong> to create a Site.</li>
+<li>For remote sites, you can optionally choose a ADM Agent.</li>
+<li>Then click <strong>OK</strong> to add the instance. <img alt="" src="../../../img/img_5c06da6e4a1c4.png" /></li>
+<li>A progress window will appear. Click <strong>Close</strong> when complete. <img alt="" src="../../../img/img_5c06dab6f4145.png" /></li>
+<li>You can add more instances, or just click <strong>Next</strong>. <img alt="" src="../../../img/img_5c06dae25e56e.png" /></li>
+<li>In the <strong>Customer Identity</strong> page, make your choice, then click <strong>Next</strong> or <strong>Skip</strong>. <img alt="" src="../../../img/img_5c06db04b6b58.png" /></li>
+<li>In the <strong>Done</strong> page, click <strong>Finish</strong>. <img alt="" src="../../../img/img_5c06db2b1c4c2.png" /></li>
+</ol>
+<p>To add more instances later:</p>
+<ol>
+<li>Click the top left hamburger icon. <img alt="" src="../../../img/img_5c06db9569066.png" /></li>
+<li>Go to <strong>Networks</strong> &gt; <strong>Instances</strong> &gt; <strong>Citrix ADC</strong>.</li>
+<li>On the right, select a tab (e.g. MPX), and then click <strong>Add</strong>. <img alt="" src="../../../img/img_5c06db887e20d.png" /></li>
+<li>To edit, or create new Admin Profiles, go to <strong>Networks</strong> &gt; <strong>Instances</strong> &gt; <strong>Citrix ADC</strong>, and on the right is a <strong>Profiles</strong> button. <img alt="" src="../../../img/img_5c06dbb1960ab.png" /> <img alt="" src="../../../img/img_5b1d2237e44d5.png" /></li>
+<li>ADM 12.1 build 49 and newer lets you assign <strong>Tags</strong> to instances. See <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/networks/instance-management/create-tags.html">How to create tags and assign to instances</a> at Citrix Docs. <img alt="" src="../../../img/img_5c06dbcb802d7.png" /> <img alt="" src="../../../img/img_5bb8d0c60bab3.png" /></li>
+<li>You can then search instances based on the Tags. <img alt="" src="../../../img/img_5bb8d13801e1b.png" /></li>
+</ol>
+<h4 id="citrix-adc-sdx">Citrix ADC SDX</h4>
+<ol>
+<li>At <strong>Networks &gt; Instances &gt; Citrix ADC</strong>, on the <strong>SDX</strong> tab, you can click <strong>Add</strong> to discover a SDX appliance, and all VPXs on that SDX appliance. You don't have to discover the VPXs separately. <img alt="" src="../../../img/img_5c06dcbab66a8.png" /></li>
+<li>In the <strong>Add Citrix ADC SDX</strong> page, click the <strong>Edit</strong> button next to the <strong>Profile Name</strong> drop-down to edit <strong>nssdx_default_profile</strong>. Or you can click the <strong>Add</strong> button to create a new SDX Profile. Note: SDX profiles are different than VPX profiles. <img alt="" src="../../../img/img_5c07f8e6ea055.png" /></li>
+<li>Enter the credentials for the SDX SVM Management Service.</li>
+<li>For <strong>Citrix ADC Profile</strong>, select an admin profile that has nsroot credentials for the VPX instances. After the VPXs are discovered, ADM uses the ADC Profile to login to each VPX. If you don't have a VPX Admin Profile in your drop-down list, click the <strong>Add</strong> button. Note: You can only select one ADC Profile. If each VPX instance has different nsroot credentials, you can fix it after SDX discovery has been performed. The ADC Profile is different than the SDX Profile. <img alt="" src="../../../img/img_5c07e4e896ffa.png" /><ol>
+<li>In the <strong>Create Citrix ADC Profile</strong> page, enter the nsroot credentials for the VPX instances, and then scroll down. <img alt="" src="../../../img/img_5c07e53c47b4a.png" /></li>
+<li>Enter a new SNMP Security Name or Community String.</li>
+<li>Then click <strong>Create</strong>. <img alt="" src="../../../img/img_5b1d2ca105cce.png" /></li>
+</ol>
+</li>
+<li>Back in the <strong>Configure ADC SDX Profile</strong> page, enter a new <strong>Community</strong> string for the SDX SVM. This appears to be SNMP v2 only. <img alt="" src="../../../img/img_5c07e5690b088.png" /></li>
+<li>You can uncheck the box for <strong>Use global settings for SDX communication</strong>, and change the protocol.</li>
+<li>Click <strong>OK</strong> when done.</li>
+<li>Back in the <strong>Add Citrix ADC SDX</strong> page, select a <strong>Site</strong>, and optionally an <strong>Agent</strong>.</li>
+<li>Click <strong>OK</strong> to start discovery. <img alt="" src="../../../img/img_5c07e5c0d45cb.png" /></li>
+<li>After discovery is complete, switch to the <strong>VPX</strong> tab. You should automatically see the VPX instances.</li>
+<li>To specify the nsroot credentials for a VPX, right-click the VPX, and click <strong>Edit</strong>. <img alt="" src="../../../img/img_5c07e609309bd.png" /><ol>
+<li>In the <strong>Modify Citrix ADC VPX</strong> page, either select an existing <strong>Profile Name</strong>, or click the <strong>Add</strong> button to create a new one. Click <strong>OK</strong> when done. It should start rediscovery automatically. <img alt="" src="../../../img/img_5c07e62ea37e2.png" /></li>
+</ol>
+</li>
+<li>After fixing the nsroot credentials, right-click the VPX instance, and click <strong>Configure SNMP</strong>. ADM will configure the VPX to send SNMP Traps to ADM. <img alt="" src="../../../img/img_5c07e6422a93b.png" /></li>
+</ol>
+<h4 id="instance-management">Instance management</h4>
+<ul>
+<li><strong>REST API proxy</strong> - Citrix ADM can function as a REST API proxy server for its managed instances. Instead of sending API requests directly to the managed instances, REST API clients can send the API requests to Citrix ADM. See Citrix CTX228449 <a href="https://docs.citrix.com/en-us/netscaler-mas/12/mas-as-api-proxy-server.html">NetScaler MAS as an API Proxy Server</a><ul>
+<li><a href="https://github.com/det0n8r/scripts/tree/master/Citrix/ADM">Citrix Application Delivery Management PowerShell Module</a> by Kenny Baldwin provides a Invoke-ADMNitro cmdlet to send Nitro commands to instances through ADM. :idea:</li>
+</ul>
+</li>
+<li><strong>Citrix ADC VPX Check-In/Check-Out Licensing</strong> - You can allocate VPX licenses to Citrix ADC instances on demand from Citrix ADM. The Licenses are stored and managed by Citrix ADM, which has a licensing framework that provides scalable and automated license provisioning. A Citrix ADC VPX instance can check out the license from the Citrix ADM when a Citrix ADC VPX instance is provisioned, or check back in its license to Citrix ADM when an instance is removed or destroyed. See Citrix CTX228451 <a href="https://docs.citrix.com/en-us/netscaler-mas/12/netscaler-cico">NetScaler VPX Check-In/Check-Out Licensing with NMAS</a></li>
+</ul>
+<h3 id="licenses">Licenses</h3>
+<h4 id="virtual-server-license-packs">Virtual Server License Packs</h4>
+<p>Without licenses, you can enable analytics features on only 30 Virtual Servers. You can install additional licenses in 100 Virtual Server packs. More info at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/licensing.html">Licensing</a> at Citrix Docs.</p>
+<ol>
+<li>On the left, go to <strong>Networks &gt; Licenses</strong>. <img alt="" src="../../../img/img_5c07e6c2af3bd.png" /></li>
+<li>On the right, notice the Host ID. <img alt="" src="../../../img/img_5c07e6dedf3da.png" /></li>
+<li>At <a href="https://identity.citrix.com/Utility/STS/Sign-In?ReturnUrl=https://www.citrix.com%2Faccount/">mycitrix.com</a>, allocate your Citrix ADM licenses to this Host ID.</li>
+<li>Then use the <strong>Browse</strong> button to upload the allocated license file.</li>
+<li>Click <strong>Finish</strong> after uploading the license file to apply it. <img alt="" src="../../../img/img_5b1d30670712f.png" /></li>
+<li>The <strong>License Expiry Information</strong> section shows you the number of installed licenses and when they expire. <img alt="" src="../../../img/img_5b1d323ed77dc.png" /></li>
+<li>You can use the <strong>Notification Settings</strong> section to email you when licenses are almost fully consumed or about to expire. <img alt="" src="../../../img/img_5b1d3251e99fc.png" /></li>
+<li>If you don't have an Email server setup yet, click the <strong>Add</strong> button to create one. <img alt="" src="../../../img/img_5c07f949ec675.png" /></li>
+</ol>
+<h4 id="allocate-licenses-to-virtual-servers">Allocate licenses to Virtual Servers</h4>
+<p>You can manually unassign an automatically-allocated ADM Virtual Server license and reassign it to a different Virtual Server.</p>
+<ol>
+<li>Go to <strong>Networks&gt; Licenses &gt; System Licenses</strong> to see the number of currently installed licenses, and the number of managed virtual servers.</li>
+<li>By default, <strong>Auto-select Virtual Servers</strong> is enabled. If you disable this setting, then the <strong>Click to select</strong> button appears. <img alt="" src="../../../img/img_5c07e73a6ee12.png" /></li>
+<li>Click the <strong>Click to select</strong> button.</li>
+<li>The top right shows you the number of licensed Virtual Servers. <img alt="" src="../../../img/img_5c07e7683c7d2.png" /></li>
+<li>In the left, select the type of <strong>Virtual Server</strong> you want to unlicense or license. <img alt="" src="../../../img/img_5c07e79e0490e.png" /></li>
+<li>On the right, the <strong>License Type</strong> column indicates if the Virtual Server is licensed or not. <img alt="" src="../../../img/img_5c07e7b783d98.png" /></li>
+<li>Select a Virtual Server you want to license, and then click the <strong>Apply Basic License</strong> button. Note: you might have to unlicense a different Virtual Server first. <img alt="" src="../../../img/img_5c07e7ea72796.png" /></li>
+<li>Click <strong>Close</strong> when done. <img alt="" src="../../../img/img_5c07e823d17c2.png" /></li>
+</ol>
+<h3 id="enable-appflow-insight-analytics">Enable AppFlow / Insight / Analytics</h3>
+<ol>
+<li>Go to <strong>Networks &gt; Instances &gt; Citrix ADC</strong>.</li>
+<li>On the right, switch to one of the instance type tabs (e.g. VPX).</li>
+<li>Select an instance, open the <strong>Select Action</strong> menu, and click <strong>Configure Analytics</strong>. <img alt="" src="../../../img/img_5c07e84d32e17.png" /></li>
+<li>At the top of the page are boxes you can check. <img alt="" src="../../../img/img_5c07e8610e214.png" /></li>
+<li>Down the page, in the <em>Application List</em> section, with <strong>Load Balancing</strong> selected in the <strong>View</strong> list, select your StoreFront load balancer, and then click <strong>Enable AppFlow</strong>. If you don't see your Virtual Server in this list, then you first need to <a href="#allocatelicenses">assign a Virtual Server License</a>. <img alt="" src="../../../img/img_5c07e8de2c4c4.png" /></li>
+<li>In the <em>Enable AppFlow</em> window, do the following:<ol>
+<li>In the larger Expression box, type in <strong>true</strong>.</li>
+<li>For newer ADC appliances, change the <strong>Transport Mode</strong> selection to <strong>Logstream</strong> instead of IPFIX. Notice the firewall requirement for TCP port 5557.</li>
+<li>Select <strong>Web Insight</strong>.</li>
+<li>If App Firewall is enabled on the vServer, then also select <strong>Security Insight</strong>.</li>
+<li><strong>Client Side Measurement</strong> injects JavaScript in HTTP responses to measure page load times and can sometimes cause problems in Receiver / Workspace app.</li>
+</ol>
+</li>
+<li>Click <strong>OK</strong>. <img alt="" src="../../../img/img_5b1d4d123bae7.png" /></li>
+<li>Use the <strong>View</strong> drop-down to select <strong>Citrix Gateway</strong>. <img alt="" src="../../../img/img_5c07e958cc9f6.png" /></li>
+<li>Right-click a Citrix Gateway Virtual Server, and click <strong>Enable AppFlow</strong>. <img alt="" src="../../../img/img_5c07e98b6d4cf.png" /></li>
+<li>In the <em>Enable AppFlow</em> window, do the following:<ol>
+<li>In the <strong>Select Expression</strong> drop-down, select <strong>true</strong>.</li>
+<li>For newer ADC appliances, change the <strong>Transport Mode</strong> to <strong>Logstream</strong>. Notice the firewall warning.</li>
+<li>Select both <strong>ICA</strong> and <strong>HTTP</strong>. The HTTP option is for Gateway Insight.</li>
+<li>The TCP option is for the second appliance in double-hop ICA. If you need double-hop, then you’ll also need to run <code>set appflow param -connectionChaining ENABLED</code> on both appliances. See <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/analytics/hdx-insight/enable-data-collection/gateway-appliances-deployed-double-hop-mode.html">Enabling Data Collection for NetScaler Gateway Appliances Deployed in Double-Hop Mode</a> at Citrix Docs for more information.</li>
+<li>The AppFlow processing impact on the ADC is much reduced if you run VDA 7.16 or newer (including VDA 1903), Workspace app or Receiver 4.10 and newer, and ADC 12.0 build 57.24 or newer (including NetScaler 12.1). VDA 7.15 (LTSR) does not include the new AppFlow NSAP functionality. Details at Citrix Blog Post <a href="https://www.citrix.com/blogs/2018/08/15/hdx-insight-2-0/">HDX Insight 2.0</a>.</li>
+</ol>
+</li>
+<li>Click <strong>OK</strong>. <img alt="" src="../../../img/img_5c07e9a56f60f.png" /></li>
+<li>Login to the Citrix ADC (not ADM), and go to <strong>System &gt; Settings</strong>.</li>
+<li>On the right, click <strong>Configure Modes</strong>. <img alt="" src="../../../img/img_5c07e9dae08b4.png" /></li>
+<li>
+<p>If you are using LogStream, then make sure <strong>ULFD</strong> is checked. Click <strong>OK</strong>. <img alt="" src="../../../img/img_5b61f54320bda.png" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>enable mode ulfd
+</span></code></pre></div>
+</li>
+<li>
+<p>On the right, click <strong>Change Global System Settings</strong>. <img alt="" src="../../../img/img_5c07ea2f0e390.png" /></p>
+</li>
+<li>
+<p>Scroll down to <strong>ICA port(s)</strong> and enter <strong>1494</strong> and <strong>2598</strong>. Click <strong>OK</strong>. (Source = <a href="https://discussions.citrix.com/topic/396517-ns-mas-121-not-showing-hdx-data/?source=email">Citrix Discussions</a>) <img alt="" src="../../../img/img_5b61f7d533765.png" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>set ns param -icaPort 1494 2598
+</span></code></pre></div>
+</li>
+<li>
+<p>On the right, click <strong>Change HTTP Parameters</strong>. <img alt="" src="../../../img/img_5c07ea50ab5ab.png" /></p>
+</li>
+<li>
+<p>At the top, add <strong>80</strong> and <strong>443</strong> to the <strong>Http Ports</strong> list. Click <strong>OK</strong>. (Source = <a href="https://discussions.citrix.com/topic/396517-ns-mas-121-not-showing-hdx-data/?source=email">Citrix Discussions</a>) <img alt="" src="../../../img/img_5b61f82f6e7d1.png" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>set ns param -httpPort 80 443
+</span></code></pre></div>
+</li>
+<li>
+<p>By default, with AppFlow enabled, if a ADC High Availability pair fails over, all Citrix connections will drop, and users must reconnect manually. NetScaler 11.1 build 49 and newer have a feature to replicate Session Reliability state between both HA nodes.</p>
+<ol>
+<li>From <a href="https://docs.citrix.com/en-us/citrix-adc/13/ns-ag-appflow-intro-wrapper-con/session-reliablility-on-citrix-adc-ha-pair.html">Session Reliability on NetScaler High Availability Pair</a> at Citrix Docs: Enabling this feature will result in increased bandwidth consumption, which is due to ICA compression being turned off by the feature, and the extra traffic between the primary and secondary nodes to keep them in sync.</li>
+<li>On a NetScaler 11.1 build 49 and newer ADC appliance, go to <strong>System</strong> &gt; <strong>Settings</strong>. <img alt="" src="../../../img/img_5b1d4e3ec1f3b.png" /></li>
+<li>On the right, in the <strong>Settings</strong> section, click <strong>Change ICA Parameters</strong>. <img alt="" src="../../../img/img_5b1d4e4b1d025.png" /></li>
+<li>Check the box next to <strong>Session Reliability on HA Failover</strong>, and click <strong>OK</strong>. <img alt="" src="../../../img/img_5973b6acab397.png" /></li>
+</ol>
+</li>
+<li>In a NetScaler 12 or newer instance, at <strong>System &gt; AppFlow &gt; Collectors</strong>, you can see if the Collector (ADM) is up or not. However, ADC uses SNIP to verify connectivity, but AppFlow is sent using NSIP, so being DOWN doesn't necessarily mean that AppFlow isn't working. Citrix CTX227438 <a href="https://support.citrix.com/article/CTX227438">After NetScaler Upgrade to Release 12.0 State of AppFlow Collector Shows as DOWN</a>. <img alt="" src="../../../img/img_5b1d4e762b4d5.png" /> <img alt="" src="../../../img/img_5b1d4e98edf9c.png" /></li>
+<li>On the ADM appliance, AppFlow for ICA (HDX Insight) information can be viewed MAS under the <strong>Analytics &gt; HDX Insight</strong> node. <img alt="" src="../../../img/img_5c07eadc597ae.png" /></li>
+</ol>
+<p>Citrix Blog Post - <a href="https://www.citrix.com/blogs/2013/10/23/nstipster-series-netscaler-insight-center-part-3/">NetScaler Insight Center – Tips, Troubleshooting and Upgrade</a></p>
+<h3 id="enable-syslog-on-instance">Enable Syslog on Instance</h3>
+<p>ADM can configure ADC instances to send Syslog to ADM. Note: this will increase disk space consumption on the ADM appliances.</p>
+<ol>
+<li>Go to <strong>Networks</strong> &gt; <strong>Instances</strong> &gt; <strong>Citrix ADC</strong>. On the right, select a tab.. <img alt="" src="../../../img/img_5c07eb1e735b0.png" /></li>
+<li>On the right, select an instance, open the <strong>Select Action</strong> drop-down, and click <strong>Configure Syslog</strong>. <img alt="" src="../../../img/img_5c07eb2e588b0.png" /></li>
+<li>Uncheck <strong>All</strong> and check the other boxes. You probably don't want <strong>Debug</strong> or <strong>None</strong>. Click <strong>OK</strong>. <img alt="" src="../../../img/img_5b1d4f5f03e31.png" /></li>
+</ol>
+<h3 id="adm-nsroot-password">ADM nsroot Password</h3>
+<p>Changing the <strong>nsroot</strong> password also changes the <strong>nsrecover</strong> password.</p>
+<ol>
+<li>In ADM , go to <strong>System &gt; User Administration &gt; Users</strong>.</li>
+<li>On the right, select the <strong>nsroot</strong> account, and click <strong>Edit</strong>. <img alt="" src="../../../img/img_5c07eb5c412be.png" /></li>
+<li>Check the box next to <strong>Change Password</strong> and enter a new password. <img alt="" src="../../../img/img_5973b9c78275e.png" /></li>
+<li>You can also specify a session timeout by checking the box next to <strong>Configure Session Timeout</strong>.</li>
+<li>Click <strong>OK</strong>. <img alt="" src="../../../img/img_5973b9e553953.png" /></li>
+</ol>
+<h3 id="management-certificate">Management Certificate</h3>
+<p>The certificate to upload must already be in PEM format. If you have a .pfx, you must first convert it to PEM (separate certificate and key files). You can use a ADC to <a href="../netscaler-12-certificates/#pfx">convert the .pfx</a>, and then download the converted certificate from the appliance.</p>
+<ol>
+<li>Go to <strong>System &gt; System Administration</strong>. <img alt="" src="../../../img/img_5a428c1638c69.png" /></li>
+<li>On the right, in the <strong>Set Up Citrix ADM</strong> section, click <strong>Install SSL Certificate</strong>. <img alt="" src="../../../img/img_5c07eb7bd59e7.png" /></li>
+<li>Click <strong>Choose File</strong> to browse to the PEM format certificate and key files. If the keyfile is encrypted, enter the password. Click <strong>OK</strong>. <img alt="" src="../../../img/img_5c07ebb23f29d.png" /></li>
+<li>Click <strong>Yes</strong> to reboot the system. <img alt="" src="../../../img/5094c93ed5bc7878fd489cddb9353b58.png" /> <img alt="" src="../../../img/img_5c07ebcea28cf.png" /></li>
+</ol>
+<h3 id="system-configuration">System Configuration</h3>
+<ol>
+<li>Go to <strong>System &gt; System Administration</strong>.</li>
+<li>On the right, modify settings (e.g. <strong>Change System Time Zone</strong>) as desired. <img alt="" src="../../../img/img_5c07ed238cd84.png" /> <img alt="" src="../../../img/img_5c07ed3fad5d1.png" /></li>
+<li>Click <strong>Change System Settings</strong>. <img alt="" src="../../../img/img_5c07ed4e036a5.png" /><ol>
+<li>Check the box next to <strong>Enable Session Timeout</strong>, and specify a value. <img alt="" src="../../../img/img_5973baac93f58.png" /></li>
+<li>By default, at <strong>Networks</strong> &gt; <strong>Instances &gt; Citrix ADC</strong> , if you click a blue IP address link, it opens the instance in a new web page, and logs in automatically using the nsroot credentials. If you want to force ADM users to login using non-nsroot credentials, in <strong>Modify System Settings</strong>, check the bottom box for <strong>Prompt Credentials for Instance Login</strong>. <img alt="" src="../../../img/img_5c07ed8453b8a.png" /> <img alt="" src="../../../img/img_5a29b88819706.png" /></li>
+<li>Click <strong>OK</strong> when done.</li>
+</ol>
+</li>
+<li><strong>Configure SSL Settings</strong> lets you disable TLS 1 and TLS 1.1. <img alt="" src="../../../img/img_5c07ed9f0906b.png" /><ol>
+<li>Click the <strong>Protocol Settings</strong> section in the <strong>Edit Settings</strong> section on the right side of the screen. <img alt="" src="../../../img/img_5a428ac66cf4f.png" /></li>
+<li>On the left, uncheck <strong>TLSv1</strong> and <strong>TLSv1.1</strong>. Then click <strong>OK</strong> and <strong>Close</strong>. <img alt="" src="../../../img/img_5b1d54536edb0.png" /></li>
+<li>A restart is required. <img alt="" src="../../../img/img_5b1d548353be6.png" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="message-of-the-day">Message of the Day</h4>
+<p>In ADM 12.1 build 50 and newer, you can configure a Message of the day.</p>
+<ol>
+<li>In ADM, on the left, go to <strong>System</strong> &gt; <strong>System Administration</strong>.</li>
+<li>On the right, in the <strong>System Settings</strong> section, click <strong>Configure message of the day</strong>. <img alt="" src="../../../img/img_5c081e1b6d50d.png" /></li>
+<li>Enter a message and click <strong>OK</strong>. <img alt="" src="../../../img/img_5c081e2b211f8.png" /></li>
+<li>When you login to ADM, you'll be shown the message. <img alt="" src="../../../img/img_5c081e3ec06af.png" /></li>
+</ol>
+<h4 id="prune-settings">Prune Settings</h4>
+<ol>
+<li>At <strong>System</strong> &gt; <strong>System Administration</strong>, on the left are <strong>Prune Settings</strong>.</li>
+<li><strong>System Prune Settings</strong> ... <img alt="" src="../../../img/img_5c07edd3c3882.png" /><ol>
+<li>...defaults to deleting System Events, Audit Logs, and Task Logs after <strong>15</strong> days. <strong>System events</strong> are generated by the MAS appliance, which is different than <strong>Instance events</strong> (SNMP traps) that are generated by ADC appliances.</li>
+<li>MAS can initiate a purge automatically as the database starts to get full.</li>
+<li>If you click the pencil next to the purge threshold value, you can configure an alarm for when the database gets full. <img alt="" src="../../../img/img_59d6cf430732c.png" /> <img alt="" src="../../../img/img_59d6cf87b58c5.png" /></li>
+</ol>
+</li>
+<li>To see the current database disk usage, go to <strong>System</strong> &gt; <strong>Statistics</strong>. <img alt="" src="../../../img/img_5c07ee0a1ae9f.png" /></li>
+<li><strong>Instance Events prune Settings</strong> controls when instance SNMP traps are pruned, which defaults to 40 days. <img alt="" src="../../../img/img_5c07ee1c3f9c6.png" /> <img alt="" src="../../../img/img_5973bb495d583.png" /></li>
+<li>If you are sending Syslog from instances to MAS, <strong>Instance Syslog Purge Settings</strong> controls when the log entries are purged. <img alt="" src="../../../img/img_5c07ee2b524e3.png" /> <img alt="" src="../../../img/img_5c07ee3bac520.png" /></li>
+</ol>
+<h4 id="backup-settings">Backup Settings</h4>
+<ol>
+<li>In the right column, under <strong>Backup Settings</strong>, are additional settings.</li>
+<li><strong>System Backup Settings</strong> defines how many MAS backups you want to keep. <img alt="" src="../../../img/img_5c07ee495224b.png" /> <img alt="" src="../../../img/img_5b1d55fbcb36a.png" /></li>
+<li><strong>Instance Backup Settings</strong> lets you configure how often the instances are backed up. <img alt="" src="../../../img/img_5c07ee5e42f85.png" /><ol>
+<li>You probably want to increase the number of instance backups, or decrease the backup interval.</li>
+<li>There is an option to perform a backup whenever the ADC configuration is saved. <img alt="" src="../../../img/img_5b1d5634a8f7d.png" /></li>
+<li>The <strong>Enable External Transfer</strong> checkbox lets you transfer the backups to an external system so it can be backed up by your backup tool. <img alt="" src="../../../img/img_5b1d567547ca6.png" /></li>
+</ol>
+</li>
+</ol>
+<h4 id="analytics-settings">Analytics Settings</h4>
+<ol>
+<li>There are more settings at <strong>Analytics &gt; Settings</strong>. <img alt="" src="../../../img/img_5c07ee8a495de.png" /></li>
+<li><strong>ICA Session Timeout</strong> can be configured by clicking the link. <img alt="" src="../../../img/img_5c07ee954f093.png" /><ul>
+<li>If ADM doesn't receive AppFlow records for a session, it will consider that session has got terminated in ADC and stops monitoring that session further. The time for which ADM needs to wait before considering a session terminated is ICA session timeout. This is configurable in ADM, by default it is set to 15 minutes. (source = <a href="https://discussions.citrix.com/topic/404635-ica-session-timeout-on-nmas/?source=email#comment-2048539">Citrix Discussions</a>) <img alt="" src="../../../img/img_5973bbe81df3d.png" /></li>
+</ul>
+</li>
+<li>You can configure how the <strong>App Score</strong> (Application Dashboard) is calculated. <img alt="" src="../../../img/img_5c07eea63aca7.png" /> <img alt="" src="../../../img/img_5a428557399f9.png" /></li>
+<li><strong>Analytics &gt; Settings &gt; Data Persistence</strong> lets you configure how long Analytics data is retained. Adjusting these values could dramatically increase disk space consumption. See CTX224238 <a href="https://support.citrix.com/article/CTX224238">How Do I Increase Granularity of Data Points Stored on NetScaler MAS Analytics?</a>. <img alt="" src="../../../img/img_5c07eebd070b7.png" /> <img alt="" src="../../../img/img_5b1d57495eb07.png" /><ul>
+<li>To see the current database disk usage, go to <strong>System</strong> &gt; <strong>Statistics</strong>. <img alt="" src="../../../img/img_5c07eefa1979e.png" /></li>
+</ul>
+</li>
+</ol>
+<h4 id="ntp-servers">NTP Servers</h4>
+<ol>
+<li>On the left, click <strong>System &gt; NTP Servers</strong>.</li>
+<li>On the right, click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07ef2200e97.png" /></li>
+<li>Enter an NTP server, and click <strong>Create</strong>. <img alt="" src="../../../img/img_5a42860dc4ed2.png" /> <img alt="" src="../../../img/d42f619b325e97653566a45edd97045c.png" /></li>
+<li>After adding NTP servers, click the <strong>NTP Synchronization</strong> button. <img alt="" src="../../../img/img_5a428693371bd.png" /></li>
+<li>Check the box next to <strong>Enable NTP Synchronization</strong>, and click <strong>OK</strong>. <img alt="" src="../../../img/img_5973bc2a5c99a.png" /></li>
+<li>Click <strong>Yes</strong> to restart. <img alt="" src="../../../img/img_5c07ef40c6bc9.png" /> <img alt="" src="../../../img/img_5c07ef5d695f1.png" /></li>
+</ol>
+<h4 id="syslog">Syslog</h4>
+<p>This is for log entries generated by ADM, and not for log entries generated by instances.</p>
+<ol>
+<li>Go to <strong>System &gt; Auditing &gt; Syslog Servers</strong>.</li>
+<li>On the right, click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07f00a59c79.png" /></li>
+<li>Enter the syslog server IP address, and select Log Levels. Click <strong>Create.</strong> <img alt="" src="../../../img/img_5973bc4a664c3.png" /></li>
+<li>You can click <strong>Syslog Parameters</strong> to change the timezone and date format. <img alt="" src="../../../img/img_5c07f01c45920.png" /> <img alt="" src="../../../img/img_5973bc667c79f.png" /></li>
+</ol>
+<h3 id="email-notification-server">Email Notification Server</h3>
+<ol>
+<li>Go to <strong>System &gt; Notifications &gt; Email</strong>.</li>
+<li>On the right, on the <strong>Email Servers</strong> tab, click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07f036ac764.png" /></li>
+<li>Enter the SMTP server address, and click <strong>Create</strong>. <img alt="" src="../../../img/img_5973bc8543da1.png" /></li>
+<li>On the right, switch to the <strong>Email Distribution List</strong> tab, and click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07f05200704.png" /></li>
+<li>Enter an address for a destination distribution list, and click <strong>Create</strong>. <img alt="" src="../../../img/img_5973bcc082f97.png" /></li>
+<li>In ADM 12.1 build 49 and newer, you can highlight a Distribution List and click the <strong>Test</strong> button. <img alt="" src="../../../img/img_5bb8ccb1bb337.png" /> <img alt="" src="../../../img/img_5bb8ccd2acdb2.png" /> <img alt="" src="../../../img/img_5bb8cd4c19cd3.png" /></li>
+<li>On the left, click <strong>System &gt; Notifications</strong>.</li>
+<li>On the right, click <strong>Change Notification Settings</strong>. <img alt="" src="../../../img/img_5b1d5bb5c37c3.png" /></li>
+<li>Move notification categories (e.g. UserLogin) to the right.</li>
+<li>Check the box next to <strong>Send Email</strong>. Select a notification distribution list. Then click <strong>OK</strong>. <img alt="" src="../../../img/img_5b1d5bd4565fd.png" /></li>
+</ol>
+<h3 id="authentication">Authentication</h3>
+<ol>
+<li>Go to <strong>System &gt; Authentication &gt; LDAP</strong>.</li>
+<li>On the right, click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07f08bab75d.png" /></li>
+<li>This is <a href="../citrix-gateway-ldap-authentication/">configured identically to ADC</a>.<ol>
+<li>Enter a <a href="../domain-controller-ldaps-load-balancing-citrix-adc/">Load Balancing VIP for LDAP</a>.</li>
+<li>Change the <strong>Security Type</strong> to <strong>SSL</strong>, and <strong>Port</strong> to <strong>636</strong>. Scroll down. <img alt="" src="../../../img/img_5973bd07bfe7d.png" /></li>
+<li>Enter the <strong>Base DN</strong> in LDAP format.</li>
+<li>Enter the bind account credentials.</li>
+<li>Check the box for <strong>Enable Change Password</strong>.</li>
+<li>Click <strong>Retrieve Attributes</strong>, and scroll down. <img alt="" src="../../../img/e11ebb8bcc31082a57b59ee974ae6b49.png" /></li>
+<li>For <strong>Server Logon Attribute</strong>, select <strong>sAMAccountName</strong>.</li>
+<li>For <strong>Group Attribute</strong>, select <strong>memberOf</strong>.</li>
+<li>For <strong>Sub Attribute Name</strong>, select <strong>cn</strong>.</li>
+<li>To prevent unauthorized users from logging in, configure a <strong>Search Filter</strong>. Scroll down. <img alt="" src="../../../img/e4d92dd3056b7c56183c4b376856d566.png" /></li>
+<li>If desired, configure Nested Group Extraction.</li>
+</ol>
+</li>
+<li>Click <strong>Create</strong>. <img alt="" src="../../../img/a3922e7f70247cbb197d65365dc6a0a8.png" /></li>
+<li>On the left, go to <strong>System &gt; User Administration &gt;</strong> <strong>Groups</strong>.</li>
+<li>On the right, click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07f0bfc1ef9.png" /><ol>
+<li>Enter the case sensitive name of your Citrix ADC Admins AD group.</li>
+<li>Move the <strong>admin</strong> Permission to the right. <img alt="" src="../../../img/img_5b1d5c9567f80.png" /></li>
+<li>The <strong>Configure User Session Timeout</strong> checkbox lets you configure a session timeout.</li>
+<li>Click <strong>Next</strong>. <img alt="" src="../../../img/img_5a9c37ccb1e44.png" /></li>
+<li>On the <strong>Authorization Settings</strong> page, if you are delegating limited permissions, you can uncheck these boxes and delegate specific entities.<ul>
+<li><strong>All DNS Domain Names</strong> (GSLB) is an option for Stylebooks in ADM 12.1 build 49 and newer.</li>
+</ul>
+</li>
+<li>Click <strong>Create Group</strong>. <img alt="" src="../../../img/img_5bb8cf8067d5d.png" /></li>
+<li>In the <strong>Assign Users</strong> page, click <strong>Finish</strong>. Group membership comes from LDAP, so there's no need to add local users. <img alt="" src="../../../img/img_5b1d5cb017ddd.png" /></li>
+</ol>
+</li>
+<li>On the left, go to <strong>System &gt; User Administration</strong>.</li>
+<li>On the right, click <strong>User Lockout Configuration</strong>. <img alt="" src="../../../img/img_5b1d5cd8bcc46.png" /></li>
+<li>If desired, check the box next to <strong>Enable User Lockout</strong>, and configure the maximum logon attempts. Click <strong>OK</strong>. <img alt="" src="../../../img/img_5b1d5d0b1a282.png" /></li>
+<li>On the left, go to <strong>System &gt;</strong> <strong>Authentication</strong>.</li>
+<li>On the right, click <strong>Authentication Configuration</strong>. <img alt="" src="../../../img/img_5b1d5d1f154ad.png" /></li>
+<li>Change the <strong>Server Type</strong> to <strong>EXTERNAL</strong>, and click <strong>Insert</strong>. <img alt="" src="../../../img/img_5b1d5d3e492bb.png" /></li>
+<li>Select the LDAP server you created, and click <strong>OK</strong>. <img alt="" src="../../../img/img_5b1d5d555016d.png" /></li>
+<li>Make sure <strong>Enable fallback local authentication</strong> is checked, and click <strong>OK</strong>. <img alt="" src="../../../img/img_5b1d5d6819ec9.png" /></li>
+</ol>
+<h3 id="analytics-thresholds">Analytics Thresholds</h3>
+<ol>
+<li>Go to <strong>Analytics &gt; Settings &gt; Thresholds</strong>.</li>
+<li>On the right, click <strong>Add</strong>. <img alt="" src="../../../img/img_5b1d5d918f3c7.png" /></li>
+<li>Enter a name.</li>
+<li>Use the <strong>Traffic Type</strong> drop-down to select <strong>HDX</strong>, <strong>WEB</strong>, <strong>SECURITY</strong>, or <strong>APPANALYTICS</strong>. <img alt="" src="../../../img/img_5b1d5daacbff6.png" /></li>
+<li>Use the <strong>Entity</strong> drop-down to select a category of alerts. What you choose here determines what’s available as Metrics when you click <strong>Add Rule</strong>.<ol>
+<li>With <strong>HDX</strong> as the Traffic Type, to add multiple rules for multiple Entity types, simply change the Entity drop-down before adding a new rule. <img alt="" src="../../../img/img_5a427fb079578.png" /></li>
+<li>If the <strong>Traffic Type</strong> is HDX, and the <strong>Entity</strong> drop-down is set to <strong>Users</strong>, on the bottom in the <strong>Configure Geo Details</strong> section, you can restrict the rule so it only fires for users for a specific geographical location. <img alt="" src="../../../img/img_5a4282b22a3f1.png" /> <img alt="" src="../../../img/img_5a4282995f005.png" /></li>
+</ol>
+</li>
+<li>In the <em>Notification Settings</em> section, check the box to <strong>Enable Treshold</strong>.</li>
+<li>Check the box to <strong>Notify through Email</strong>, and select an existing Email Distribution List.</li>
+<li>Click <strong>Create</strong>. <img alt="" src="../../../img/img_5b1d5e52413d1.png" /></li>
+</ol>
+<h3 id="private-ip-blocks">Private IP Blocks</h3>
+<p>You can define Geo locations for internal subnets.</p>
+<ol>
+<li>Go to <strong>Analytics &gt; Settings &gt; IP Blocks</strong>.</li>
+<li>On the right, click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07f1d710e42.png" /></li>
+<li>In the <em>Create IP Blocks</em> page:<ol>
+<li>Enter a name for the subnet.</li>
+<li>Enter the starting and ending IP address.</li>
+<li>Select a Geo Location (Country, Region, City). As you change the fields, the coordinates are automatically filled in.</li>
+</ol>
+</li>
+<li>Click <strong>Create</strong>. <img alt="" src="../../../img/img_5b1d5f81dbb46.png" /></li>
+</ol>
+<h3 id="instance-email-alerts-snmp-traps">Instance Email Alerts (SNMP Traps)</h3>
+<p>You can receive email alerts whenever a ADC appliance sends a critical SNMP trap.</p>
+<ol>
+<li>On the left, go to <strong>Networks &gt; Events &gt; Rules</strong>.</li>
+<li>On the right, click <strong>Add</strong>. <img alt="" src="../../../img/img_5c07f217962a7.png" /></li>
+<li>Give the rule a name.</li>
+<li>Move <strong>Severity</strong> filters (e.g. Major, Critical) to the right by clicking the plus icon next to each Severity. <img alt="" src="../../../img/img_5973c03e4945c.png" /></li>
+<li>While scrolling down, you can configure additional alert filters. Leaving them blank will alert you for all categories, objects, and instances. <img alt="" src="../../../img/img_5b1d6c65441df.png" /></li>
+<li>On the bottom of the page, in the <em>Event Rule Actions</em> section, click <strong>Add Action</strong>. <img alt="" src="../../../img/img_5b1d6c8ab938d.png" /></li>
+<li>In the <em>Add Event Action</em> page:<ol>
+<li>Select an <strong>Action Type</strong> (e.g. Send e-mail Action). <img alt="" src="../../../img/img_590dd61d66a0d.png" /></li>
+<li>Select the recipients (or click the <strong>Add</strong> button to add recipients).</li>
+<li>Optionally, enter a Subject and/or Message.</li>
+<li>In ADM 12.1 build 49 and newer, if you enter a Subject, you can check <strong>Prefix severity, category, and failure object information to the custom email subject</strong>.</li>
+<li>Emails can be repeated by selecting <strong>Repeat Email Notification until the event is cleared.</strong></li>
+</ol>
+</li>
+<li>Click <strong>OK</strong>. <img alt="" src="../../../img/img_5bb8cea2acb97.png" /></li>
+<li>Then click <strong>Create</strong>. <img alt="" src="../../../img/img_5b1d6cd138d71.png" /></li>
+<li>See the <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/how-to-articles.html#par_anchortitle_172f">Event Management</a> section at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/how-to-articles.html">All how to articles</a> at Citrix Docs.</li>
+</ol>
+<h4 id="events-digest">Events Digest</h4>
+<p>ADM can email you a daily digest (PDF format) of system and instance events <img alt="" src="../../../img/img_5b0ad5b1147cb.png" /> <img alt="" src="../../../img/img_5b0ad5c82f374.png" /></p>
+<p>To enable the daily digest:</p>
+<ol>
+<li>Go to <strong>System &gt; Notifications</strong>.</li>
+<li>On the right, click <strong>Configure Event Digest Settings</strong>. <img alt="" src="../../../img/img_5c07f297aca14.png" /></li>
+<li>Uncheck the box next to <strong>Disable Event Digest</strong>.</li>
+<li>Configure the other settings as desired, and click <strong>OK</strong>. <img alt="" src="../../../img/img_5c07f2b1cced2.png" /></li>
+</ol>
+<h3 id="director-integration">Director Integration</h3>
+<p>Integrating Citrix ADM with Director adds <strong>Network</strong> tabs to Director's <strong>Trends</strong> and <strong>Session Details</strong> views. Citrix Blog Post <a href="https://www.citrix.com/blogs/2016/10/12/configure-director-with-netscaler-management-analytics-system-mas/">Configure Director with Netscaler Management &amp; Analytics System (MAS)</a> <img alt="" src="../../../img/f6f4536cbc7c20a6014920b669de954f.png" /></p>
+<p>Requirements:</p>
+<ul>
+<li>Citrix Virtual Apps and Desktops (CVAD) must be licensed for Platinum Edition. This is only required for the Director integration. Without Platinum, you can still access the HDX Insight data by going visiting the Citrix ADM website.</li>
+<li>Director must be 7.11 or newer for Citrix ADM support.</li>
+</ul>
+<p>To link Citrix Director with Citrix ADM:</p>
+<ol>
+<li>On the Director server, run <strong>C:\inetpub\wwwroot\Director\tools\DirectorConfig.exe /confignetscaler</strong>.</li>
+<li>Enter the Citrix ADM <strong>nsroot</strong> credentials.</li>
+<li>If HTTPS Connection (recommended), the Citrix ADM certificate must be valid and trusted by both the Director Server and the Director user's browser.</li>
+<li>Enter <strong>1</strong> for Citrix ADM (aka MAS). <img alt="" src="../../../img/img_590dd9b13779a.png" /></li>
+<li>Do this on both Director servers.</li>
+</ol>
+<h3 id="use-citrix-adm">Use Citrix ADM</h3>
+<h4 id="networks">Networks</h4>
+<p>Everything under the <strong>Networks</strong> node is free.</p>
+<p>At <strong>Networks &gt; Instances</strong>, select an instance, and view its <strong>Dashboard</strong>. <img alt="" src="../../../img/img_5c07f39ee61db.png" /></p>
+<p>ADM 12.1 adds a series of tabs to the Instance Dashboard. <img alt="" src="../../../img/img_5c07f4190d197.png" /></p>
+<p>Backups are available by selecting an instance, and clicking <strong>Backup/Restore</strong>. <img alt="" src="../../../img/img_5c07f3e9716be.png" /> <img alt="" src="../../../img/img_5c07f44be29f7.png" /></p>
+<p><strong>Infrastructure Analytics</strong>. The ADM Cloud Service has an Infrastructure Analytics node under the Networks node. For details, see <a href="https://docs.citrix.com/en-us/citrix-application-delivery-management-service/hybrid-multi-cloud-deployments/infrastructure-analytics.html">Infrastructure Analytics</a> at Citrix Docs. <img alt="" src="../../../img/img_5c3338e9d3529.png" /></p>
+<ul>
+<li>On the right, if you click the gear icon above the table, then the right panel changes to the <strong>Settings Panel</strong> instead of the Summary Panel. In the right panel, you can then switch to the tab named <strong>Score Thresholds</strong> to adjust how Infrastructure Analytics scores instance CPU, Memory, Disk, etc. <img alt="" src="../../../img/img_5c3339362d0bc.png" /></li>
+<li>You can click the <strong>Circle Pack</strong> button to change to the Circle Pack view. <img alt="" src="../../../img/img_5c3339a8328de.png" /></li>
+</ul>
+<p><strong>Networks &gt; Network Reporting</strong> lets you create Dashboards where you can view Instance performance data. <img alt="" src="../../../img/img_5c07f464879fc.png" /> <img alt="" src="../../../img/img_5b1d6edf44171.png" /></p>
+<p><strong>Networks</strong> &gt; <strong>Network Reporting</strong> &gt; <strong>Thresholds</strong> lets you create thresholds when counters cross a threshold. For example, you might want a notification when Throughput gets close to the licensed limit. <img alt="" src="../../../img/img_5c07f48c67973.png" /> <img alt="" src="../../../img/img_5c07f4b18a3e9.png" /></p>
+<h4 id="configuration-record-and-play">Configuration Record and Play</h4>
+<p>Use ADM to record a configuration change on one instance, and push to other instances.</p>
+<ol>
+<li>Go to <strong>Networks &gt; Configuration Jobs</strong>.</li>
+<li>On the right, click <strong>Create Job</strong>. <img alt="" src="../../../img/img_5b1d720a7a477.png" /></li>
+<li>Change the <strong>Configuration Source</strong> drop-down to <strong>Record and Play</strong>.</li>
+<li>Change the <strong>Source Instance</strong> drop-down to the instance you want to record.</li>
+<li>Click <strong>Record</strong>. <img alt="" src="../../../img/img_5b1d721b78db3.png" /></li>
+<li>ADM opens the instance GUI. Make changes as desired. <img alt="" src="../../../img/img_5c07f575c9daa.png" /></li>
+<li>When done, go back to ADC, and click <strong>Stop</strong>. <img alt="" src="../../../img/img_5b1d72a967f7a.png" /></li>
+<li>ADC retrieves the changed config. <img alt="" src="../../../img/img_5b1d72b0dbb8a.png" /></li>
+<li>On the left, you'll see the changed commands. Drag them to the right. <img alt="" src="../../../img/img_5b1d72bbe1b3a.png" /></li>
+<li>On the right, you can change instance-specific values to variables by simply highlighting the values. This allows you to change the values for each instance you push this config to. <img alt="" src="../../../img/img_5b1d72d23053c.png" /></li>
+<li>Proceed through the rest of the Configuration Job wizard like normal. You'll select instances, specify variable values for each instance, and schedule the job.</li>
+</ol>
+<p>Dave Brett <a href="http://bretty.me.uk/automating-your-netscaler-11-1-vserver-config-using-netscaler-management-and-analytics-system/">Automating Your Netscaler 11.1 Vserver Config Using Netscaler Management and Analytics System</a> uses a Configuration Job to deploy StoreFront load balancing configuration to an instance.</p>
+<h4 id="analytics-and-applications">Analytics and Applications</h4>
+<p>This functionality requires Virtual Server licenses, which can come from your built-in 30 free licenses.</p>
+<p>The AppFlow Analysis tools (e.g. HDX Insight) are located under the <strong>Analytics</strong> node. See <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/analytics/hdx-insight/view-reports-metrics.html">Viewing HDX Insight Reports and Metrics</a> at Citrix Docs. <img alt="" src="../../../img/img_5b1d6d941b6e1.png" /></p>
+<p><strong>Applications &gt; Dashboard</strong> automatically includes all licensed Virtual Servers in the <strong>Others</strong> section. On the top middle, click <strong>Define Custom App</strong> to group Virtual Servers together into an application. The grouped Virtual Servers are removed from the <strong>Others</strong> list. <img alt="" src="../../../img/img_5b1d7003a436d.png" /> <img alt="" src="../../../img/img_5b1d7047ea440.png" /></p>
+<p><strong>Applications</strong> &gt; <strong>Configurations</strong> &gt; <strong>Stylebooks</strong> lets you use Stylebooks to create new ADC configurations. <img alt="" src="../../../img/img_5b1d7b80b35f4.png" /></p>
+<p>There are built-in Stylebooks for Exchange, SharePoint, Oracle, ADFS, etc. Or you can create your own Stylebook and use it to create ADC configurations. For details, see <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/stylebooks.html">Stylebooks</a> at Citrix Docs. <img alt="" src="../../../img/img_5c07f5ef56d58.png" /> <img alt="" src="../../../img/img_5c07f6054dae8.png" /></p>
+<p>The <strong>Applications</strong> Node has quite a bit of functionality. See <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/application-analytics-and-management.html">Application Analytics and Management</a> at Citrix Docs for details. <img alt="" src="../../../img/img_590ddf3a1d363.png" /></p>
+<p>Link:</p>
+<ul>
+<li>Citrix ADM <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/how-to-articles.html">How-to Articles</a> at Citrix Docs.</li>
+</ul>
+<h4 id="hdx-insight_1">HDX Insight</h4>
+<p>HDX Insight Dashboard displays ICA session details including the following:</p>
+<ul>
+<li>WAN Latency</li>
+<li>DC Latency</li>
+<li>RTT (round trip time)</li>
+<li>Retransmits</li>
+<li>Application Launch Duration</li>
+<li>Client Type/Version</li>
+<li>Bandwidth</li>
+<li>Licenses in use</li>
+</ul>
+<p>Citrix CTX215130 <a href="https://support.citrix.com/article/CTX215130">HDX Insight Diagnostics and Troubleshooting Guide</a> contains the following contents:</p>
+<ul>
+<li>Introduction</li>
+<li>Prerequisites for Configuring HDX Insight</li>
+<li>Troubleshooting<ul>
+<li>Issues Related to ICA parsing</li>
+<li>Error Counter details</li>
+</ul>
+</li>
+<li>Checklist before Contacting Citrix Technical Support</li>
+<li>Information to collect before Contacting Citrix Technical support</li>
+<li>Known Issues</li>
+</ul>
+<h4 id="gateway-insight">Gateway Insight</h4>
+<p>In the <strong>Analytics</strong> node is <strong>Gateway Insight</strong>. <img alt="" src="../../../img/img_5b1d70dec0953.png" /></p>
+<p>This feature displays the following details:</p>
+<ul>
+<li>Gateway connection failures due to failed EPA scans, failed authentication, failed SSON, or failed application launches.</li>
+<li>Bandwidth and Bytes Consumed for ICA and other applications accessed through Gateway.</li>
+<li># of users</li>
+<li>Session Modes (clientless, VPN, ICA)</li>
+<li>Client Operating Systems</li>
+<li>Client Browsers</li>
+</ul>
+<p>More details at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/analytics/gateway-insight.html">Gateway Insight</a> at Citrix Docs.</p>
+<h4 id="security-insight">Security Insight</h4>
+<p>The Security Insight dashboard uses data from Application Firewall to display Threat Index (criticality of attack), Safety Index (how securely ADC is configured), and Actionable Information. More info at <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/analytics/security-insight.html">Security Insight</a> at Citrix Docs. <img alt="" src="../../../img/img_590de046dff04.png" /></p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>Citrix CTX215130 <a href="https://support.citrix.com/article/CTX215130">HDX Insight Diagnostics and Troubleshooting Guide</a>: Syslog messages; Error counters; Troubleshooting checklist, Logs</p>
+<p>Citrix CTX224502 <a href="https://support.citrix.com/article/CTX224502">NetScaler MAS Troubleshooting Guide</a> <img alt="" src="../../../img/img_59d81c0d51d19.png" /></p>
+<h3 id="upgrade-citrix-adm">Upgrade Citrix ADM</h3>
+<ol>
+<li>For MAS 12.0 build 56 and older, you must upgrade to <a href="https://www.citrix.com/downloads/citrix-application-management/product-software/netscaler-mas-120-build-57-19.html">MAS 12.0 build 57.24</a> before you can upgrade to ADM 12.1. (Source = <a href="https://docs.citrix.com/en-us/netscaler-mas/12-1/upgrade.html#before-upgrade">Before you upgrade</a> at Citrix Docs) <img alt="" src="../../../img/img_5b2e34053c790.png" /></li>
+<li>Download the latest <a href="https://www.citrix.com/downloads/citrix-application-management/">Citrix Application Delivery Management (NetScaler MAS) Upgrade Package</a>. You want the <strong>ADM Upgrade Package</strong>, not a ADM image. It's around halfway down the page. <img alt="" src="../../../img/img_5cc2ff3996099.png" /></li>
+<li>Login to Citrix ADM Floating IP or Active Node. Upgrading the Active Node automatically upgrades the Passive Node.</li>
+<li>Go to <strong>System &gt; Deployment</strong> and make sure both nodes are online and replicating. <img alt="" src="../../../img/img_5cc2ff77e1840.png" /></li>
+<li>Go to <strong>System</strong> &gt; <strong>System Administration</strong>.</li>
+<li>On the right, in the right pane, click <strong>Upgrade Citrix ADM</strong>. <img alt="" src="../../../img/img_5c07f68ebc07c.png" /></li>
+<li>Browse to the <strong>build-mas-12.1...tgz</strong> Upgrade Package, and click <strong>OK</strong>. The file name starts with <strong>build-mas-12.1</strong>. <img alt="" src="../../../img/img_5cc2ffa4646f6.png" /></li>
+<li>Click <strong>Yes</strong> to reboot the appliance. <img alt="" src="../../../img/img_5b1d75f756b62.png" /> <img alt="" src="../../../img/img_5cc2ffb47e6a2.png" /> <img alt="" src="../../../img/img_5c41d25fb29c0.png" /> <img alt="" src="../../../img/img_5cc300212144a.png" /></li>
+<li>After it reboots, login.</li>
+<li>If you upgraded from a version older than 12.1 build 50 to a version 12.1 build 50 or newer, you might be prompted to <strong>Configure Customer Identity</strong>. Make your choice. <img alt="" src="../../../img/img_5c0686bf530c9.png" /><ul>
+<li>You can return to the <strong>Configure Customer Identity</strong> screen by clicking the cloud icon next to your username at the top right of the page. <img alt="" src="../../../img/img_5c0686ee7b660.png" /></li>
+</ul>
+</li>
+<li>The new firmware version will be displayed by clicking your username in the top right corner. <img alt="" src="../../../img/img_5cc302f8e305b.png" /></li>
+</ol>
+<h4 id="upgrade-disaster-recovery-node">Upgrade Disaster Recovery Node</h4>
+<p>After you upgrade the HA pair in the primary datacenter, you can upgrade the DR node.</p>
+<ol>
+<li>Use WinSCP or similar to connect to the DR node using the <strong>nsrecover</strong> credentials. <img alt="" src="../../../img/img_5bb8bf07a2296.png" /></li>
+<li>On the ADM DR node, navigate to <strong>/var/mps/mps_images</strong>.</li>
+<li>Create a new Directory with the same name as the 12.1 build number. Then double-click the new directory to open it. <img alt="" src="../../../img/img_5bb8c3825e65f.png" /> <img alt="" src="../../../img/img_5cc3033a84446.png" /></li>
+<li>Upload the file named <strong>build-mas-12.1-##.##.tgz</strong> to the version-specific directory. This is the regular ADM upgrade file with a name starting with <strong>build-mas-12.1</strong>. It's not the Agent upgrade file. <img alt="" src="../../../img/img_5cc3036d8c8ae.png" /></li>
+<li>SSH (Putty) to the DR node and login as <strong>nsrecover</strong>. <img alt="" src="../../../img/img_5bb8bfeb53c2b.png" /></li>
+<li>
+<p>Enter the following. Replace the # with the version number.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cd /var/mps/mps_../../img/12.1.##.##
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>tar xvzf build-mas-12.1-##.##.tgz
+</span></code></pre></div>
+<p><img alt="" src="../../../img/img_5cc3038cc17bc.png" /></p>
+</li>
+<li>
+<p>Then enter the following. The appliance will reboot automatically.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./installmas
+</span></code></pre></div>
+<p><img alt="" src="../../../img/img_5bb8c02308e09.png" />
+8. After the reboot, the file <strong>/var/mps/log/install_state</strong>... <img alt="" src="../../../img/img_5bb8c60f06f77.png" />
+9. ...shows you the installed version. <img alt="" src="../../../img/img_5cc303fc36abe.png" /></p>
+</li>
+</ol>
+<h4 id="upgrade-adm-agents">Upgrade ADM Agents</h4>
+<p>After you upgrade the ADM HA pair in the primary datacenter, and after you upgrade the DR node, you can then upgrade the ADM Agents.</p>
+<ol>
+<li>From the <a href="https://www.citrix.com/downloads/citrix-application-management/">ADM 12.1 download page</a>, at the bottom of the page, download the <strong>ADM Agent Upgrade Package</strong>. This Agent Upgrade file is different than the regular ADM upgrade file. And it is different than the files to deploy a new Agent. Find it at the bottom of the downloads page. Note that Citrix updated the ADM Agent firmware to build 50.33 or higher to resolve a <a href="https://support.citrix.com/article/CTX247738">security vulnerability</a>. <img alt="" src="../../../img/img_5cc30415b284b.png" /></li>
+<li>Use WinSCP or similar to connect to the ADM Agent using the <strong>nsrecover</strong> credentials. <img alt="" src="../../../img/img_5bb8c31f3c531.png" /></li>
+<li>On the ADM Agent, navigate to <strong>/var/mps/mps_images</strong>.</li>
+<li>Create a new Directory with the same name as the 12.1 build number. Then double-click the new directory to open it. <img alt="" src="../../../img/img_5bb8c3825e65f.png" /> <img alt="" src="../../../img/img_5cc30456402ce.png" /></li>
+<li>Upload the file named <strong>build-masagent-12.1-##.##.tgz</strong> to the version-specific directory. This is the ADM <strong>Agent</strong> upgrade file, and not the regular ADM upgrade file. <img alt="" src="../../../img/img_5cc3047db1a87.png" /></li>
+<li>SSH (Putty) to the ADM Agent and login as <strong>nsrecover</strong>. <img alt="" src="../../../img/img_5bb8c4658f9cc.png" /></li>
+<li>
+<p>Enter the following. Replace the # with the version number.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cd /var/mps/mps_../../img/12.1.##.##
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>tar xvzf build-masagent-12.1-##.##.tgz
+</span></code></pre></div>
+<p><img alt="" src="../../../img/img_5cc3049dec616.png" /></p>
+</li>
+<li>
+<p>Then enter the following. The appliance will reboot automatically.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./installmasagent
+</span></code></pre></div>
+<p><img alt="" src="../../../img/img_5bb8c4a537fb7.png" />
+9. After the reboot, the file <strong>/var/mps/log/install_state</strong>... <img alt="" src="../../../img/img_5bb8c18ea3b00.png" />
+10. ...shows you the installed version. <img alt="" src="../../../img/img_5cc304cd741b0.png" />
+11. Repeat for any additional ADM Agents.
+12. If you login to ADM and go to <strong>Networks &gt; Agents</strong>, you should see the new Version. It will take several minutes for the version number to update. <img alt="" src="../../../img/img_5cc307773d024.png" /></p>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
