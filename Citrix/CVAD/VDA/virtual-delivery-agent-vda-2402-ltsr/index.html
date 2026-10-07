@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -609,6 +609,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -618,10 +646,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -639,8 +667,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -813,10 +841,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -834,8 +862,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1010,10 +1038,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1031,8 +1059,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -6780,7 +6808,7 @@
 <img alt="" src="../../../../img/216cbbb15c288b5345e898f8368d10f9.png" /></li>
 <li>
 <p>Enter the command:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Get-BrokerAccessPolicyRule -DesktopGroupName &#39;&lt;delivery-group-name&gt;&#39; | Set-BrokerAccessPolicyRule ‑HdxSslEnabled $true
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Get-BrokerAccessPolicyRule -DesktopGroupName '&lt;delivery-group-name&gt;' | Set-BrokerAccessPolicyRule ‑HdxSslEnabled $true
 </span></code></pre></div>
 <p>where <em><delivery-group-name></em> is the name of the Delivery Group containing the VDAs.<br />
 <img alt="" src="../../../../img/cdedfae4fd1f6cc341fe0cc24e310f54.png" /></p>
@@ -6804,7 +6832,7 @@
 <ul>
 <li>
 <p>From Russ Hargrove at <a href="https://discussions.citrix.com/topic/387565-a-note-on-vda-certificates-in-714/#entry1975584">A note on VDA certificates in 7.14</a> at Citrix Discussions: Citrix installs a new "Citrix XenApp/XenDesktop HDX Service" certificate in the Personal store which breaks the automation of the <strong>Enable-VdaSSL.ps1</strong> script. To fix the problem, modify the task scheduler powershell script to:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Enable-VdaSSL.ps1 -Enable -CertificateThumbPrint (Get-ChildItem -path cert:\LocalMachine\My | Where-Object -FilterScript {$_.Subject -eq &quot;&quot;} | Select-Object -ExpandProperty Thumbprint) -Confirm:$False
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Enable-VdaSSL.ps1 -Enable -CertificateThumbPrint (Get-ChildItem -path cert:\LocalMachine\My | Where-Object -FilterScript {$_.Subject -eq ""} | Select-Object -ExpandProperty Thumbprint) -Confirm:$False
 </span></code></pre></div>
 </li>
 </ul>
@@ -7032,7 +7060,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../launch-onedrive-with-citrix-published-applications/">
+        <link rel="prev" href="../../nosessionperformance/">
       
       
         <link rel="next" href="../delivery-controller-2203-ltsr-and-licensing/">
@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -607,6 +607,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -620,10 +648,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -641,8 +669,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1462,10 +1490,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -1483,8 +1511,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1657,10 +1685,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1678,8 +1706,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -6779,7 +6807,7 @@
 </li>
 <li>
 <p>Michael Shuster at <a href="https://www.ferroquesystems.com/2018/12/howto-enable-ssl-on-citrix-delivery-controllers-easy-method/">HowTo: Enable SSL on Citrix Delivery Controllers – Easy Method</a> says you can run the following PowerShell to get the Broker Service GUID.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Get-WmiObject -Class Win32_Product | Select-String -Pattern &quot;broker service&quot;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Get-WmiObject -Class Win32_Product | Select-String -Pattern "broker service"
 </span></code></pre></div>
 </li>
 <li>
@@ -6927,17 +6955,17 @@
 </span></code></pre></div>
 <p><strong>Specify the new Database connection strings</strong></p>
 <p>Run the following commands to set the new connection strings. Adjust the variables to match your desired connection string. For example, if you wish to add ";MultiSubnetFailover=True" to the connection strings, then set the <strong>$csSite</strong> variable to <code>"Server=$ServerName;Initial Catalog=$SiteDBName;Integrated Security=True;MultiSubnetFailover=True"</code>. Repeat this for the <strong>$csLogging</strong> and <strong>$csMonitoring</strong> variables.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>## Replace &lt;dbserver&gt; with the SQL server name, and instance if present, e.g &quot;ServerName\SQLInstanceName&quot;. If no SQL Instance name is mentioned, this commandlet will try to connect to the default SQL instance.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>## Replace &lt;dbserver&gt; with the SQL server name, and instance if present, e.g "ServerName\SQLInstanceName". If no SQL Instance name is mentioned, this commandlet will try to connect to the default SQL instance.
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>## Replace &lt;dbname&gt; with the name of your restored Database
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>## Note: AdminDBConnection should be first
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$ServerName = &quot;&lt;dbserver&gt;&quot;
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>$SiteDBName = &quot;&lt;SiteDbName&gt;&quot;
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>$LogDBName = &quot;&lt;LoggingDbName&gt;&quot;
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>$MonitorDBName = &quot;&lt;MonitorDbName&gt;&quot;
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>$csSite = &quot;Server=$ServerName;Initial Catalog=$SiteDBName;Integrated Security=True;MultiSubnetFailover=True&quot;
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>$csLogging = &quot;Server=$ServerName;Initial Catalog=$LogDBName;Integrated Security=True;MultiSubnetFailover=True&quot;
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>$csMonitoring = &quot;Server=$ServerName;Initial Catalog=$MonitorDBName;Integrated Security=True;MultiSubnetFailover=True&quot;
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$ServerName = "&lt;dbserver&gt;"
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>$SiteDBName = "&lt;SiteDbName&gt;"
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>$LogDBName = "&lt;LoggingDbName&gt;"
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>$MonitorDBName = "&lt;MonitorDbName&gt;"
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>$csSite = "Server=$ServerName;Initial Catalog=$SiteDBName;Integrated Security=True;MultiSubnetFailover=True"
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>$csLogging = "Server=$ServerName;Initial Catalog=$LogDBName;Integrated Security=True;MultiSubnetFailover=True"
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>$csMonitoring = "Server=$ServerName;Initial Catalog=$MonitorDBName;Integrated Security=True;MultiSubnetFailover=True"
 </span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
 </span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>Set-AdminDBConnection -DBConnection $csSite
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>Set-ConfigDBConnection -DBConnection $csSite
@@ -6967,13 +6995,13 @@
 <p>Run the following commands to verify connectivity to the database:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>## Copy these variables from the previous step
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>## If you haven’t closed your PowerShell window, then the variables might still be defined. In that case, just run the Test commands
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>$ServerName = &quot;&lt;dbserver&gt;&quot;
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>$SiteDBName = &quot;&lt;SiteDbName&gt;&quot;
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>$LogDBName = &quot;&lt;LoggingDbName&gt;&quot;
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>$MonitorDBName = &quot;&lt;MonitorDbName&gt;&quot;
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>$csSite = &quot;Server=$ServerName;Initial Catalog=$SiteDBName;Integrated Security=True&quot;
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>$csLogging = &quot;Server=$ServerName;Initial Catalog=$LogDBName;Integrated Security=True&quot;
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>$csMonitoring = &quot;Server=$ServerName;Initial Catalog=$MonitorDBName;Integrated Security=True&quot;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>$ServerName = "&lt;dbserver&gt;"
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>$SiteDBName = "&lt;SiteDbName&gt;"
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>$LogDBName = "&lt;LoggingDbName&gt;"
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>$MonitorDBName = "&lt;MonitorDbName&gt;"
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>$csSite = "Server=$ServerName;Initial Catalog=$SiteDBName;Integrated Security=True"
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>$csLogging = "Server=$ServerName;Initial Catalog=$LogDBName;Integrated Security=True"
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>$csMonitoring = "Server=$ServerName;Initial Catalog=$MonitorDBName;Integrated Security=True"
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
 </span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>Test-AcctDBConnection -DBConnection $csSite
 </span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>Test-AdminDBConnection -DBConnection $csSite
@@ -7536,7 +7564,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

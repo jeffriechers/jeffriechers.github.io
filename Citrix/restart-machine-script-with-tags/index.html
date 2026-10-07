@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -610,6 +610,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../CVAD/nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -619,10 +647,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -640,8 +668,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -814,10 +842,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -835,8 +863,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1009,10 +1037,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1030,8 +1058,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5042,77 +5070,77 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$tag = $args[0]
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ServerList = Get-BrokerMachine -MaxRecordCount 1500 | where {($_.Tags -contains $tag)}
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Start-Transcript -Path (Join-Path &quot;&lt;Path to log files&gt;\&quot;$tag&quot;.txt&quot;) -Force
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Write-Output &quot;Starting Reboot script for $tag&quot;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Start-Transcript -Path (Join-Path "&lt;Path to log files&gt;\"$tag".txt") -Force
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Write-Output "Starting Reboot script for $tag"
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>if ($ServerList){
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>$ServerList | ForEach-Object {
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Write-Output &quot;Putting $($_.MachineName) into maintenance mode.&quot;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Write-Output "Putting $($_.MachineName) into maintenance mode."
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a># Set the target machines to maintenance mode to drain sessions
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Set-BrokerMachine -Machinename $_.MachineName -InMaintenanceMode 1
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>}
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a># Wait 1 hour before starting to reboot any machines
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>Write-Output &quot;Waiting for 1 hour to allow users to logoff of sessions.  Users will be notified every 15 minutes until restarted.&quot;
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>Write-Output "Waiting for 1 hour to allow users to logoff of sessions.  Users will be notified every 15 minutes until restarted."
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a># User Notification
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a># 1 Hour Notification
 </span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>$ServerList | ForEach-Object {
 </span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>$sessions = Get-BrokerSession -UserName *
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title &quot;Reboot Notification&quot; -Text &quot;This machine will reboot in 60 minutes.  Please save your work and logoff.  You can then immediately log back in.&quot;
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 60 minutes.  Please save your work and logoff.  You can then immediately log back in."
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>}
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>Write-Output &quot;Sending 60 minute reboot notice&quot;
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>Write-Output "Sending 60 minute reboot notice"
 </span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>start-sleep 900
 </span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
 </span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a># 45 minute Notification
 </span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>$ServerList | ForEach-Object {
 </span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>$sessions = Get-BrokerSession -UserName *
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title &quot;Reboot Notification&quot; -Text &quot;This machine will reboot in 45 minutes.  Please save your work and logoff.  You can then immediately log back in.&quot;
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 45 minutes.  Please save your work and logoff.  You can then immediately log back in."
 </span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>}
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>Write-Output &quot;Sending 45 minute reboot notice&quot;
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>Write-Output "Sending 45 minute reboot notice"
 </span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>start-sleep 900
 </span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
 </span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a># 30 minute Notification
 </span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>$ServerList | ForEach-Object {
 </span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>$sessions = Get-BrokerSession -UserName *
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title &quot;Reboot Notification&quot; -Text &quot;This machine will reboot in 30 minutes.  Please save your work and logoff.  You can then immediately log back in.&quot;
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 30 minutes.  Please save your work and logoff.  You can then immediately log back in."
 </span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>}
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>Write-Output &quot;Sending 30 minute reboot notice&quot;
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>Write-Output "Sending 30 minute reboot notice"
 </span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>start-sleep 900
 </span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
 </span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a># 15 minute Notification
 </span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>$ServerList | ForEach-Object {
 </span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>$sessions = Get-BrokerSession -UserName *
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title &quot;Reboot Notification&quot; -Text &quot;This machine will reboot in 15 minutes.  Please save your work and logoff.  You can then immediately log back in.&quot;
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>Send-BrokerSessionMessage $sessions -MessageStyle Information -Title "Reboot Notification" -Text "This machine will reboot in 15 minutes.  Please save your work and logoff.  You can then immediately log back in."
 </span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>}
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>Write-Output &quot;Sending 15 minute reboot notice&quot;
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>Write-Output "Sending 15 minute reboot notice"
 </span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>start-sleep 900
 </span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>
 </span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>#Reboot the machine
 </span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>$ServerList | ForEach-Object {#new-brokerhostingpoweraction -Action Restart -MachineName $_.MachineName
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>Write-Output &quot;Setting Restart flag on $($_.MachineName)&quot;
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>Write-Output "Setting Restart flag on $($_.MachineName)"
 </span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>}
-</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>Write-Output &quot;Waiting for 1 hour to allow machines to cycle through reboots.&quot;
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>Write-Output "Waiting for 1 hour to allow machines to cycle through reboots."
 </span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>start-sleep 3600
 </span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>
 </span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>$ServerList | ForEach-Object {
-</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>Write-Output &quot;Taking $($_.MachineName) out of maintenance mode.&quot;
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>Write-Output "Taking $($_.MachineName) out of maintenance mode."
 </span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>#Remove maintenance mode
 </span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>Set-BrokerMachine -MachineName $_.MachineName -InMaintenanceMode 0
 </span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>
 </span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>#End Powershell Session
 </span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>}
 </span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>$today = Get-Date
-</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>Write-Output &quot;&quot;
-</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>Write-Output &quot;&quot;
-</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>Write-Output &quot;All machines have left maintenance mode.&quot;
-</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>Write-Output &quot;======================================================================&quot;
-</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>Write-Output &quot;&quot;
-</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>Write-Output &quot;Reboot schedule has completed at`t$today&quot;
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>Write-Output ""
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>Write-Output ""
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>Write-Output "All machines have left maintenance mode."
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>Write-Output "======================================================================"
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>Write-Output ""
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>Write-Output "Reboot schedule has completed at`t$today"
 </span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>return
 </span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>}
-</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>Write-Output &quot;There are no machines with that tag.&quot;
-</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>Write-Output &quot;Please doublecheck the spelling of your tag and try again.&quot;
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>Write-Output "There are no machines with that tag."
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>Write-Output "Please doublecheck the spelling of your tag and try again."
 </span></code></pre></div>
 <p><a href="../../static/ctxrestart.ps_.txt">Download</a></p>
 
@@ -5172,7 +5200,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

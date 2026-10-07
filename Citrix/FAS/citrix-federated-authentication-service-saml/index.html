@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -607,6 +607,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../CVAD/nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -616,10 +644,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -637,8 +665,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -811,10 +839,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -832,8 +860,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1006,10 +1034,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1027,8 +1055,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5927,7 +5955,7 @@
 <ul>
 <li>
 <p><strong>Authorize this Service</strong> only lets you select one Certificate Authority. If you want to load balance certificate requests against multiple Certificate Authorities, then see <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/federated-authentication-service/fas-config-manage/fas-ca-configuration.html#set-up-multiple-ca-servers-for-use-in-fas">Set up multiple CA servers for use in FAS</a> at Citrix Docs.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Set-FasCertificateDefinition -Name default_Definition -CertificateAuthorities @(&quot;ca1.corp.local\CA1.corp.local&quot;, &quot;ca2.corp.local\ca2.corp.local&quot;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Set-FasCertificateDefinition -Name default_Definition -CertificateAuthorities @("ca1.corp.local\CA1.corp.local", "ca2.corp.local\ca2.corp.local")
 </span></code></pre></div>
 </li>
 </ul>
@@ -5998,16 +6026,16 @@
 <li>Check the registry at at <strong>HKLM\Software\Policies\Citrix\Authentication\UserCredentialService\Addresses</strong> to confirm that the group policy with FAS addresses has been applied to the StoreFront servers.</li>
 <li>
 <p>On the StoreFront 3.6 or newer server, run the following elevated PowerShell command:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&amp; &quot;$Env:PROGRAMFILES\Citrix\Receiver StoreFront\Scripts\ImportModules.ps1&quot;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&amp; "$Env:PROGRAMFILES\Citrix\Receiver StoreFront\Scripts\ImportModules.ps1"
 </span></code></pre></div>
 </li>
 <li>
 <p>Run the following commands. Adjust the store name as required.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$StoreVirtualPath = &quot;/Citrix/Store&quot;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$StoreVirtualPath = "/Citrix/Store"
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$store = Get-STFStoreService -VirtualPath $StoreVirtualPath
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$auth = Get-STFAuthenticationService -StoreService $store
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Set-STFClaimsFactoryNames -AuthenticationService $auth -ClaimsFactoryName &quot;FASClaimsFactory&quot;
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Set-STFStoreLaunchOptions -StoreService $store -VdaLogonDataProvider &quot;FASLogonDataProvider&quot;
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Set-STFClaimsFactoryNames -AuthenticationService $auth -ClaimsFactoryName "FASClaimsFactory"
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Set-STFStoreLaunchOptions -StoreService $store -VdaLogonDataProvider "FASLogonDataProvider"
 </span></code></pre></div>
 </li>
 <li>
@@ -6025,11 +6053,11 @@
 </li>
 </ol>
 <p>If you ever need to disable FAS on StoreFront, run the following commands. Adjust the store name as required.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$StoreVirtualPath = &quot;/Citrix/Store&quot;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$StoreVirtualPath = "/Citrix/Store"
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$store = Get-STFStoreService -VirtualPath $StoreVirtualPath
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$auth = Get-STFAuthenticationService -StoreService $store
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Set-STFClaimsFactoryNames -AuthenticationService $auth -ClaimsFactoryName &quot;standardClaimsFactory&quot;
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Set-STFStoreLaunchOptions -StoreService $store -VdaLogonDataProvider &quot;&quot;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Set-STFClaimsFactoryNames -AuthenticationService $auth -ClaimsFactoryName "standardClaimsFactory"
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Set-STFStoreLaunchOptions -StoreService $store -VdaLogonDataProvider ""
 </span></code></pre></div>
 <h2 id="saml-configuration">SAML Configuration</h2>
 <h3 id="saml-flow">SAML Flow</h3>
@@ -6187,7 +6215,7 @@
 <img alt="" src="../../../img/img_60bf645030720.png" /></li>
 <li>
 <p>Near the bottom, configure a <strong>Relay State Rule</strong> to prevent session hijack. It should check the Relay State field to make sure it matches the URL that users using to reach the Gateway Virtual Server. Make sure you include the forward slash at the end of the URL. Sample expression below. Pattern set is also possible. See <a href="https://support.citrix.com/article/CTX316577">CTX316577</a> for details. To avoid relay state "does not match" error, make sure users enter the Gateway URL instead of using a bookmark. :idea:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>AAA.LOGIN.RELAYSTATE.EQ(&quot;https://gateway5.corp.com/&quot;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>AAA.LOGIN.RELAYSTATE.EQ("https://gateway5.corp.com/")
 </span></code></pre></div>
 <p><img alt="" src="../../../img/img_60bf67a0ec439.png" /></p>
 </li>
@@ -6296,20 +6324,20 @@
 <p>Here are some sample CLI commands for this nFactor SAML configuration.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># SAML Actions
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a># ------------
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>add authentication samlAction &quot;Azure AD&quot; -samlIdPCertName AzureADSAML -samlSigningCertName WildcardCorpCom -samlRedirectUrl &quot;https://login.microsoftonline.com/815e26a9-4a9b/saml2&quot; -samlIssuerName gateway5.corp.com -Attribute1 emailaddress -logoutURL &quot;https://login.microsoftonline.com/815e26a9/saml2&quot; -logoutBinding REDIRECT -relaystateRule &quot;aaa.LOGIN.RELAYSTATE.EQ(\&quot;https://gateway5.corp.com/\&quot;)&quot;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>add authentication samlAction "Azure AD" -samlIdPCertName AzureADSAML -samlSigningCertName WildcardCorpCom -samlRedirectUrl "https://login.microsoftonline.com/815e26a9-4a9b/saml2" -samlIssuerName gateway5.corp.com -Attribute1 emailaddress -logoutURL "https://login.microsoftonline.com/815e26a9/saml2" -logoutBinding REDIRECT -relaystateRule "aaa.LOGIN.RELAYSTATE.EQ(\"https://gateway5.corp.com/\")"
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a># SAML Authentication Policies
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a># ----------------------------
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>add authentication samlPolicy &quot;Azure AD&quot; ns_true &quot;Azure AD&quot;
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>add authentication samlPolicy "Azure AD" ns_true "Azure AD"
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a># Advanced Authentication Policies
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a># --------------------------------
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>add authentication Policy &quot;Azure AD Advanced&quot; -rule true -action &quot;Azure AD&quot;
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>add authentication Policy "Azure AD Advanced" -rule true -action "Azure AD"
 </span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
 </span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a># Authentication Virtual Servers
 </span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a># ------------------------------
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>add authentication vserver nFactor-AzureAD-SAML SSL 0.0.0.0
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>bind authentication vserver nFactor-AzureAD-SAML -policy &quot;Azure AD Advanced&quot; -priority 100 -gotoPriorityExpression NEXT
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>bind authentication vserver nFactor-AzureAD-SAML -policy "Azure AD Advanced" -priority 100 -gotoPriorityExpression NEXT
 </span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
 </span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a># Authentication Profiles
 </span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a># -----------------------
@@ -6372,7 +6400,7 @@
 <p>Here are some sample CLI commands for this nFactor SAML LDAP Group Extract configuration.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># LDAP Actions
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a># ------------
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>add authentication ldapAction LDAP-GroupExtract -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn ctxsvc@corp.local -ldapBindDnPassword ****** -ldapLoginName userPrincipalName -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>add authentication ldapAction LDAP-GroupExtract -serverIP 10.2.2.11 -serverPort 636 -ldapBase "dc=corp,dc=local" -ldapBindDn ctxsvc@corp.local -ldapBindDnPassword ****** -ldapLoginName userPrincipalName -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a># LDAP Policies
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a># -------------
@@ -6385,7 +6413,7 @@
 </span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
 </span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a># Authentication Virtual Servers
 </span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a># ------------------------------
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>bind authentication vserver nFactor-AzureAD-SAML -policy &quot;Azure AD Advanced&quot; -priority 100 -nextFactor LDAP-GroupExtract -gotoPriorityExpression NEXT
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>bind authentication vserver nFactor-AzureAD-SAML -policy "Azure AD Advanced" -priority 100 -nextFactor LDAP-GroupExtract -gotoPriorityExpression NEXT
 </span></code></pre></div>
 <h4 id="configure-storefront-for-saml-citrix-gateway">Configure StoreFront for SAML Citrix Gateway</h4>
 <ol>
@@ -6559,7 +6587,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

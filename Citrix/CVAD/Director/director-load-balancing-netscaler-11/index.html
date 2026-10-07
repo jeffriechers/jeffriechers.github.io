@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -609,6 +609,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -618,10 +646,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -639,8 +667,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -815,10 +843,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -836,8 +864,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1152,10 +1180,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1173,8 +1201,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5420,15 +5448,15 @@
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>add ssl certKey wildcom -cert WildcardCorpCom_pem -key WildcardCorpCom_pem
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>add lb vserver Director-SSL-LB SSL 10.2.2.210 443 -persistenceType SOURCEIP -timeout 245
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>add lb vserver Director-HTTP-SSLRedirect HTTP 10.2.2.210 80 -persistenceType NONE
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>add responder action Director_Redirect redirect &quot;\&quot;/Director\&quot;&quot; -responseStatusCode 302
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>add responder action http_to_ssl_redirect_responderact redirect &quot;\&quot;https://\&quot; + HTTP.REQ.HOSTNAME.HTTP_URL_SAFE + HTTP.REQ.URL.PATH_AND_QUERY.HTTP_URL_SAFE&quot; -responseStatusCode 302
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>add responder policy Director_Redirect &quot;http.REQ.URL.PATH.EQ(\&quot;/\&quot;)&quot; Director_Redirect
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>add responder action Director_Redirect redirect "\"/Director\"" -responseStatusCode 302
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>add responder action http_to_ssl_redirect_responderact redirect "\"https://\" + HTTP.REQ.HOSTNAME.HTTP_URL_SAFE + HTTP.REQ.URL.PATH_AND_QUERY.HTTP_URL_SAFE" -responseStatusCode 302
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>add responder policy Director_Redirect "http.REQ.URL.PATH.EQ(\"/\")" Director_Redirect
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>add responder policy http_to_ssl_redirect_responderpol HTTP.REQ.IS_VALID http_to_ssl_redirect_responderact
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>bind lb vserver Director-HTTP-SSLRedirect AlwaysUp
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>bind lb vserver Director-SSL-LB svcgrp-Director-SSL
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>bind lb vserver Director-SSL-LB -policyName Director_Redirect -priority 100 -gotoPriorityExpression END -type REQUEST
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>bind lb vserver Director-HTTP-SSLRedirect -policyName http_to_ssl_redirect_responderpol -priority 100 -gotoPriorityExpression END -type REQUEST
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>add lb monitor Director HTTP -respCode 200 -httpRequest &quot;GET /Director/LogOn.aspx?cc=true&quot; -LRTM DISABLED -secure YES
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>add lb monitor Director HTTP -respCode 200 -httpRequest "GET /Director/LogOn.aspx?cc=true" -LRTM DISABLED -secure YES
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>bind serviceGroup svcgrp-Director-SSL Director01 443
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>bind serviceGroup svcgrp-Director-SSL Director02 443
 </span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>bind serviceGroup svcgrp-Director-SSL -monitorName Director
@@ -5496,7 +5524,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

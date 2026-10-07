@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -605,6 +605,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -614,10 +642,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -635,8 +663,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -809,10 +837,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -830,8 +858,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1004,10 +1032,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1025,8 +1053,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5656,14 +5684,14 @@
 <p>Now they should be up and there should be a unique Auth ID for each server. Click <strong>OK</strong>. <img alt="" src="../../../img/1474bb8d93b25796e0d4ac0f68a3244b.png" /></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>add vpn vserver gateway.corp.com SSL 10.2.2.200 443 -icaOnly ON -dtls ON -tcpProfileName nstcp_default_XA_XD_profile
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>bind vpn vserver gateway.corp.com -policy &quot;Receiver Self-Service&quot; -priority 100
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>bind vpn vserver gateway.corp.com -policy "Receiver Self-Service" -priority 100
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>bind vpn vserver gateway.corp.com -policy &quot;Receiver for Web&quot; -priority 110
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>bind vpn vserver gateway.corp.com -policy "Receiver for Web" -priority 110
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>bind vpn vserver gateway.corp.com -policy Corp-Gateway -priority 100
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>bind vpn vserver gateway.corp.com -staServer &quot;http://xdc01.corp.local&quot;
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>bind vpn vserver gateway.corp.com -staServer &quot;http://xdc02.corp.local&quot;
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>bind vpn vserver gateway.corp.com -staServer "http://xdc01.corp.local"
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>bind vpn vserver gateway.corp.com -staServer "http://xdc02.corp.local"
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>bind vpn vserver gateway.corp.com -portaltheme X1
 </span></code></pre></div>
@@ -5746,7 +5774,7 @@
 <li>Enter <a href="https://gateway.corp.com">https://gateway.corp.com</a> or similar into the <strong>Redirect URL</strong> Click <strong>Save</strong>. <img alt="" src="../../../img/76dec4253b045ac1f0945c76cfeb5845.png" /></li>
 <li>
 <p>Then click <strong>Done</strong>. <img alt="" src="../../../img/e25f8077d105d2ad70f644086317386e.png" /></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>add lb vserver gateway.corp.com-HTTP-SSLRedirect HTTP 10.2.2.200 80 -redirectURL &quot;https://gateway.corp.com&quot;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>add lb vserver gateway.corp.com-HTTP-SSLRedirect HTTP 10.2.2.200 80 -redirectURL "https://gateway.corp.com"
 </span></code></pre></div>
 </li>
 <li>
@@ -5890,7 +5918,7 @@
 <li>The built-in <strong>is_vpn_url</strong> expression</li>
 <li>Any path that starts with <strong>/Citrix/</strong>.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>http.REQ.HOSTNAME.SET_TEXT_MODE(IGNORECASE).EQ(&quot;mygateway.corp.com&quot;) &amp;&amp; (is_vpn_url || http.REQ.URL.PATH.SET_TEXT_MODE(IGNORECASE).STARTSWITH(&quot;/Citrix/&quot;))
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>http.REQ.HOSTNAME.SET_TEXT_MODE(IGNORECASE).EQ("mygateway.corp.com") &amp;&amp; (is_vpn_url || http.REQ.URL.PATH.SET_TEXT_MODE(IGNORECASE).STARTSWITH("/Citrix/"))
 </span></code></pre></div>
 </li>
 <li>
@@ -5917,9 +5945,9 @@
 <p>Here's a sample rewrite policy for this header:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>enable ns feature REWRITE
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>add rewrite action rwact_storefront replace &quot;HTTP.REQ.HEADER(\&quot;X-Citrix-Via\&quot;)&quot; &quot;\&quot;mystorefront.mydomain.com\&quot;&quot;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>add rewrite action rwact_storefront replace "HTTP.REQ.HEADER(\"X-Citrix-Via\")" "\"mystorefront.mydomain.com\""
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>add rewrite policy rwpol_storefront &quot;HTTP.REQ.HEADER(\&quot;X-Citrix-Via\&quot;).NE(\&quot;mystorefront.mydomain.com\&quot;)&quot; rwact_storefront
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>add rewrite policy rwpol_storefront "HTTP.REQ.HEADER(\"X-Citrix-Via\").NE(\"mystorefront.mydomain.com\")" rwact_storefront
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>bind vpn vserver mygateway-vs -policy rwpol_storefront -priority 100 -type REQUEST
 </span></code></pre></div>
@@ -5980,7 +6008,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

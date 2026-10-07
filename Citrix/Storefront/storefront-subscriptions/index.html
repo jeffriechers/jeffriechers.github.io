@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -607,6 +607,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../CVAD/nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -616,10 +644,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -637,8 +665,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -811,10 +839,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -832,8 +860,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1006,10 +1034,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1027,8 +1055,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5252,16 +5280,16 @@
 <p>Docs.citrix.com - <a href="https://docs.citrix.com/en-us/storefront/current-release/configure-manage-stores/configure-two-stores-share-datastore.html">Configure two StoreFront stores to share a common subscription datastore</a>: It is common for administrators to configure StoreFront with two distinct stores; one for external access to resources using Netscaler Gateway and another for internal access using the corporate LAN. You can configure both “external” and “internal” stores to share a common subscription datastore by making a simple change to the store web.config file.</p>
 <p>For two stores to share a subscription datastore, you need only point one store to the subscription service end point of the other store. <strong>Note</strong>: The XenApp, XenDesktop and AppC controllers configured on each store must match exactly; otherwise, an inconsistent set of resource subscriptions on one store might occur. Sharing a datastore is supported only when the two stores reside on the same StoreFront server or server group deployment.</p>
 <p>Open the <strong>external</strong> store web.config file (C:\Inetpub\wwwroot\Citrix\ExternalStore\web.config) using Notepad and search for the <strong>clientEndpoint</strong>. For example:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;subscriptionsStoreClient enabled=&quot;true&quot;&gt;
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;clientEndpoint uri=&quot;net.pipe://localhost/Citrix/Subscriptions/1__Citrix_External&quot; authenticationMode=&quot;windows&quot; transferMode=&quot;Streamed&quot;&gt;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;clientCertificate thumbprint=&quot;0&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;subscriptionsStoreClient enabled="true"&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;clientEndpoint uri="net.pipe://localhost/Citrix/Subscriptions/1__Citrix_External" authenticationMode="windows" transferMode="Streamed"&gt;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;clientCertificate thumbprint="0" /&gt;
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&lt;/clientEndpoint&gt;
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&lt;/subscriptionsStoreClient&gt;
 </span></code></pre></div>
 <p>Change the <strong>external</strong> to match the <strong>internal</strong> store endpoint. Then <strong>Propagate Changes</strong>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;subscriptionsStoreClient enabled=&quot;true&quot;&gt;
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;clientEndpoint uri=&quot;net.pipe://localhost/Citrix/Subscriptions/1__Citrix_Internal&quot; authenticationMode=&quot;windows&quot; transferMode=&quot;Streamed&quot;&gt;
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;clientCertificate thumbprint=&quot;0&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;subscriptionsStoreClient enabled="true"&gt;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;clientEndpoint uri="net.pipe://localhost/Citrix/Subscriptions/1__Citrix_Internal" authenticationMode="windows" transferMode="Streamed"&gt;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;clientCertificate thumbprint="0" /&gt;
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;/clientEndpoint&gt;
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;/subscriptionsStoreClient&gt;
 </span></code></pre></div>
@@ -5271,12 +5299,12 @@
 <li>
 <p>If StoreFront 3.5 or newer, run the following (from Citrix CTX216295 <a href="https://support.citrix.com/article/CTX216295">How to Export and Import StoreFront Subscription Database on Storefront 3.6</a>):</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$store = Get-STFStoreService
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Export-STFStoreSubscriptions -Store $store -FilePath &quot;$env:userprofile\desktop\subscriptions.txt&quot;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Export-STFStoreSubscriptions -Store $store -FilePath "$env:userprofile\desktop\subscriptions.txt"
 </span></code></pre></div>
 <ol>
 <li>
 <p>If StoreFront 3.0.1 or older, run the following PowerShell (using 'Run As Administrator' when opening the PowerShell Console and not missing the '. ' (i.e. dot space) at the start of the first command):</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>. &#39;C:\Program Files\Citrix\Receiver StoreFront\Scripts\ImportModules.ps1&#39;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>. 'C:\Program Files\Citrix\Receiver StoreFront\Scripts\ImportModules.ps1'
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Export-DSStoreSubscriptions -StoreName MyStore -FilePath .\subscriptions.txt
 </span></code></pre></div>
 </li>
@@ -5291,7 +5319,7 @@
 <li>
 <p>If StoreFront 3.5 or newer, run the following PowerShell commands to restore your subscriptions:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$store = Get-STFStoreService
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Import-STFStoreSubscriptions -Store $store -FilePath &quot;$env:userprofile\desktop\subscriptions.txt&quot;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Import-STFStoreSubscriptions -Store $store -FilePath "$env:userprofile\desktop\subscriptions.txt"
 </span></code></pre></div>
 <ol>
 <li>
@@ -5361,7 +5389,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

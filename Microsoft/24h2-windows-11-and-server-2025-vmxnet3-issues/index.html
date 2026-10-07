@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -600,6 +600,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Citrix/CVAD/nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -609,10 +637,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -630,8 +658,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -804,10 +832,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -825,8 +853,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -999,10 +1027,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1020,8 +1048,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5030,22 +5058,22 @@
 
 <p>Many people reported performance issues with 24H2 MS Operating Systems in VMWare. Switching the network from VMXnet3 to E1000 would fix the issue, but drop the network from the 10GB to 1GB bandwidth. While testing, it seems that offloading and power management features in 24H2 caused the performance drops, and adjusting those settings in Windows fixed the issue quickly.</p>
 <p>However, manually editing the NIC settings in 24H2 is a pain, as you have to run through the Metro view to the classic view and then into the adapter settings themselves. But Microsoft has given us a benefit, PowerShell access directly to those features. Running the following PowerShell commands will optimize the VMXnet3 for you. If you are accessing via RDP or ICA your session will drop, but reconnecting to the session will get you right back to where you were.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Disable-NetAdapterChecksumOffload -Name &quot;*&quot; -IncludeHidden -IpIPV4 -TcpIPV4 -TcpIPV6 -UdpIPV4 -UdpIPV6 -NoRestart
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Disable-NetAdapterLso -Name &quot;*&quot; -IncludeHidden -IPv4 -IPv6 -NoRestart
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Disable-NetAdapterEncapsulatedPacketTaskOffload -Name &quot;*&quot; -IncludeHidden -NoRestart
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Disable-NetAdapterIPsecOffload -Name &quot;*&quot; -IncludeHidden -NoRestart
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Disable-NetAdapterRss -Name &quot;*&quot; -IncludeHidden -NoRestart
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Disable-NetAdapterRsc -Name &quot;*&quot; -IncludeHidden -IPv4 -IPv6 -NoRestart
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Disable-NetAdapterPowerManagement -Name &quot;*&quot; -NoRestart
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Disable-NetAdapterUso -Name &quot;*&quot; -IncludeHidden -IPv4 -IPv6 -NoRestart
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Set-NetAdapterAdvancedProperty -Name &quot;*&quot; -IncludeHidden -DisplayName &quot;Packet Priority &amp; VLAN&quot; -DisplayValue &quot;Packet Priority &amp; VLAN Disabled&quot; -NoRestart
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Set-NetAdapterAdvancedProperty -Name &quot;*&quot; -IncludeHidden -DisplayName &quot;Priority / VLAN tag&quot; -DisplayValue &quot;Priority &amp; VLAN Disabled&quot; -NoRestart
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Set-NetAdapterAdvancedProperty -Name &quot;*&quot; -IncludeHidden -DisplayName &quot;Interrupt Moderation&quot; -DisplayValue &quot;Disabled&quot; -NoRestart
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Set-NetAdapterAdvancedProperty -Name &quot;*&quot; -IncludeHidden -DisplayName &quot;Offload IP Options&quot; -DisplayValue &quot;Disabled&quot; -NoRestart
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Set-NetAdapterAdvancedProperty -Name &quot;*&quot; -IncludeHidden -DisplayName &quot;Offload TCP Options&quot; -DisplayValue &quot;Disabled&quot; -NoRestart
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Set-NetAdapterAdvancedProperty -Name &quot;*&quot; -IncludeHidden -DisplayName &quot;Offload tagged traffic&quot; -DisplayValue &quot;Disabled&quot; -NoRestart
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Set-NetAdapterAdvancedProperty -Name &quot;*&quot; -IncludeHidden -DisplayName &quot;Interrupt Coalescing Scheme Mode&quot; -DisplayValue &quot;Disabled&quot; -NoRestart
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>Disable-NetAdapterPowerManagement -Name &quot;*&quot; -IncludeHidden  -D0PacketCoalescing -DeviceSleepOnDisconnect -NSOffload -SelectiveSuspend -RsnRekeyOffload
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Disable-NetAdapterChecksumOffload -Name "*" -IncludeHidden -IpIPV4 -TcpIPV4 -TcpIPV6 -UdpIPV4 -UdpIPV6 -NoRestart
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Disable-NetAdapterLso -Name "*" -IncludeHidden -IPv4 -IPv6 -NoRestart
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Disable-NetAdapterEncapsulatedPacketTaskOffload -Name "*" -IncludeHidden -NoRestart
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Disable-NetAdapterIPsecOffload -Name "*" -IncludeHidden -NoRestart
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Disable-NetAdapterRss -Name "*" -IncludeHidden -NoRestart
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Disable-NetAdapterRsc -Name "*" -IncludeHidden -IPv4 -IPv6 -NoRestart
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Disable-NetAdapterPowerManagement -Name "*" -NoRestart
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Disable-NetAdapterUso -Name "*" -IncludeHidden -IPv4 -IPv6 -NoRestart
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Set-NetAdapterAdvancedProperty -Name "*" -IncludeHidden -DisplayName "Packet Priority &amp; VLAN" -DisplayValue "Packet Priority &amp; VLAN Disabled" -NoRestart
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Set-NetAdapterAdvancedProperty -Name "*" -IncludeHidden -DisplayName "Priority / VLAN tag" -DisplayValue "Priority &amp; VLAN Disabled" -NoRestart
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Set-NetAdapterAdvancedProperty -Name "*" -IncludeHidden -DisplayName "Interrupt Moderation" -DisplayValue "Disabled" -NoRestart
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Set-NetAdapterAdvancedProperty -Name "*" -IncludeHidden -DisplayName "Offload IP Options" -DisplayValue "Disabled" -NoRestart
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Set-NetAdapterAdvancedProperty -Name "*" -IncludeHidden -DisplayName "Offload TCP Options" -DisplayValue "Disabled" -NoRestart
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Set-NetAdapterAdvancedProperty -Name "*" -IncludeHidden -DisplayName "Offload tagged traffic" -DisplayValue "Disabled" -NoRestart
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Set-NetAdapterAdvancedProperty -Name "*" -IncludeHidden -DisplayName "Interrupt Coalescing Scheme Mode" -DisplayValue "Disabled" -NoRestart
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>Disable-NetAdapterPowerManagement -Name "*" -IncludeHidden  -D0PacketCoalescing -DeviceSleepOnDisconnect -NSOffload -SelectiveSuspend -RsnRekeyOffload
 </span></code></pre></div>
 
 
@@ -5104,7 +5132,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

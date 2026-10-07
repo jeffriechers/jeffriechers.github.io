@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -605,6 +605,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -614,10 +642,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -635,8 +663,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -809,10 +837,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -830,8 +858,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1004,10 +1032,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1025,8 +1053,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5869,7 +5897,7 @@
 </li>
 <li>
 <p>Add the following lines in file /etc/ntp.conf:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a># By default, exchange time with everybody, but don&#39;t allow configuration:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a># By default, exchange time with everybody, but don't allow configuration:
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>restrict -4 default kod notrap nomodify nopeer noquery
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>restrict -6 default kod notrap nomodify nopeer noquery
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
@@ -5882,7 +5910,7 @@
 <li>
 <p>Restart NTP using the following commands:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt; shell
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>root@ns# ps -aux |grep &quot;ntp&quot;
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>root@ns# ps -aux |grep "ntp"
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>root@ns# kill &lt;PID obtained from step above&gt;
 </span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>root@ns# /usr/sbin/ntpd -g -c /flash/nsconfig/ntp.conf
 </span></code></pre></div>
@@ -6060,9 +6088,9 @@
 </li>
 <li>
 <p>Implement Responder policies to prevent Shellshock attack against back-end web servers. See Citrix CTX200277 <a href="https://support.citrix.com/article/CTX200277">NetScaler Defends Against Shellshock Attack</a>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>add audit messageaction ShellShock_Log CRITICAL &quot;\&quot;The request was sent from \&quot; +CLIENT.IP.SRC + \&quot; Bash Code Injection Vulnerability\&quot;&quot; -bypassSafetyCheck YES
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>add audit messageaction ShellShock_Log CRITICAL "\"The request was sent from \" +CLIENT.IP.SRC + \" Bash Code Injection Vulnerability\"" -bypassSafetyCheck YES
 </span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>add responder policy ShellShock_policy &quot;HTTP.REQ.FULL_HEADER.REGEX_MATCH(re/\(\)\s*{/) || HTTP.Req.BODY(1000).REGEX_MATCH(re/\(\)\s*{/) || HTTP.REQ.URL.QUERY.REGEX_MATCH(re/\(\)(\s*|\++){/) || HTTP.REQ.BODY(1000).REGEX_MATCH(re#%28%29[+]*%7B#)&quot; DROP ?logAction ShellShock_Log
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>add responder policy ShellShock_policy "HTTP.REQ.FULL_HEADER.REGEX_MATCH(re/\(\)\s*{/) || HTTP.Req.BODY(1000).REGEX_MATCH(re/\(\)\s*{/) || HTTP.REQ.URL.QUERY.REGEX_MATCH(re/\(\)(\s*|\++){/) || HTTP.REQ.BODY(1000).REGEX_MATCH(re#%28%29[+]*%7B#)" DROP ?logAction ShellShock_Log
 </span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
 </span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>bind responder global ShellShock_policy 10 END -type REQ_DEFAULT
 </span></code></pre></div>
@@ -6118,7 +6146,7 @@
 <li><em><a href="https://support.citrix.com/article/CTX123795">Example of LDAP Nested Group Search Filter Syntax <img alt="" src="../../../img/1209aa55dad15c57975384b6cf2b51d5.png" /></a></em> </li>
 <li>
 <p>Scroll down and click <strong>Create</strong>. <img alt="" src="../../../img/628daf798b67a4e148bbb4eef0c99ca1.png" /></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>add authentication ldapAction Corp-Mgmt -serverIP 10.2.2.210 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn &quot;corp\\ctxsvc&quot; -ldapBindDnPassword Passw0rd -ldapLoginName samaccountname -searchFilter &quot;memberOf=CN=NetScaler Admins,CN=Users,DC=corp,DC=local&quot; -groupAttrName memberOf -subAttributeName CN -secType SSL -passwdChange ENABLED
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>add authentication ldapAction Corp-Mgmt -serverIP 10.2.2.210 -serverPort 636 -ldapBase "dc=corp,dc=local" -ldapBindDn "corp\\ctxsvc" -ldapBindDnPassword Passw0rd -ldapLoginName samaccountname -searchFilter "memberOf=CN=NetScaler Admins,CN=Users,DC=corp,DC=local" -groupAttrName memberOf -subAttributeName CN -secType SSL -passwdChange ENABLED
 </span></code></pre></div>
 </li>
 <li>
@@ -6152,8 +6180,8 @@
 <li>Select the <strong>superuser</strong> policy, and click <strong>Insert</strong>. <img alt="" src="../../../img/2b9f117ada5809a28c69dd71ab050614.png" /></li>
 <li>
 <p>Click <strong>Create</strong>. <img alt="" src="../../../img/9a44e8fde14cf95b1201386b34513f69.png" /></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>add system group &quot;NetScaler Admins&quot; -timeout 900
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>bind system group &quot;NetScaler Admins&quot; -policyName superuser 100
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>add system group "NetScaler Admins" -timeout 900
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>bind system group "NetScaler Admins" -policyName superuser 100
 </span></code></pre></div>
 </li>
 <li>
@@ -6225,7 +6253,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

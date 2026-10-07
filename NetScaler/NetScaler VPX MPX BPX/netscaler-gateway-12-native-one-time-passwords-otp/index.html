@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -605,6 +605,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../Citrix/CVAD/nosessionperformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Director and Monitor missing Network Latency, ICA RTT, and other network metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -614,10 +642,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_5" id="__nav_1_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
             
   
   
@@ -635,8 +663,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -809,10 +837,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
             
   
   
@@ -830,8 +858,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1004,10 +1032,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_7" id="__nav_1_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
             
   
   
@@ -1025,8 +1053,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5523,7 +5551,7 @@
 <li>Name the Login Schema Policy for OTP management.</li>
 <li>
 <p>In the <strong>Rule</strong> field, enter the following. This ensures that this single factor Login Schema is only used if the user enters <strong>/manageotp</strong>, and if the user is on the internal network. You don't want <strong>manageotp</strong> to be accessible externally, because it's only protected by single factor authentication, and it's too easy to add multiple devices.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http.req.cookie.value(&quot;NSC_TASS&quot;).eq(&quot;manageotp&quot;) &amp;&amp; client.IP.SRC.IN_SUBNET(10.2.0.0/16)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http.req.cookie.value("NSC_TASS").eq("manageotp") &amp;&amp; client.IP.SRC.IN_SUBNET(10.2.0.0/16)
 </span></code></pre></div>
 <ul>
 <li>Stan Demburg at <a href="https://www.irangers.com/netscaler-native-otp-limit-enrollment-one-device/">NetScaler Native OTP – Prevent Enrollment Of Additional Devices Externally</a> at iRangers has a method of preventing external access to <strong>manageotp</strong> if the user already has a device enrolled.</li>
@@ -5722,7 +5750,7 @@
 <li>On the right, select the Unified Gateway Content Switching Policy, and then click <strong>Edit</strong>.</li>
 <li>
 <p>Append the following expression under the <strong>Expression</strong> area, and then click <strong>OK</strong>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>|| HTTP.REQ.URL.CONTAINS(&quot;/manageotp&quot;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>|| HTTP.REQ.URL.CONTAINS("/manageotp")
 </span></code></pre></div>
 </li>
 </ol>
@@ -5750,17 +5778,17 @@
 </ol>
 <h3 id="cli-commands">CLI Commands</h3>
 <p>Here's a complete CLI configuration.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>add ssl certKey WildcardCorpCom -cert WildcardCorpCom.pfx -key WildcardCorpCom.pfx -inform PFX -passcrypt &quot;abc&quot;
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>add authentication ldapAction LDAP-Corp -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn ctxsvc@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -groupAttrName memberOf -subAttributeName cn -secType SSL -passwdChange ENABLED -Attribute2 userParameters
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>add authentication ldapAction LDAP_OTP_set_no_auth -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn admin@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED -OTPSecret UserParameters
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>add authentication ldapAction LDAP_OTP_verify_no_auth -serverIP 10.2.2.11 -serverPort 636 -ldapBase &quot;dc=corp,dc=local&quot; -ldapBindDn admin@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -searchFilter &quot;userParameters&gt;=#@&quot; -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED -OTPSecret UserParameters
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>add ssl certKey WildcardCorpCom -cert WildcardCorpCom.pfx -key WildcardCorpCom.pfx -inform PFX -passcrypt "abc"
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>add authentication ldapAction LDAP-Corp -serverIP 10.2.2.11 -serverPort 636 -ldapBase "dc=corp,dc=local" -ldapBindDn ctxsvc@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -groupAttrName memberOf -subAttributeName cn -secType SSL -passwdChange ENABLED -Attribute2 userParameters
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>add authentication ldapAction LDAP_OTP_set_no_auth -serverIP 10.2.2.11 -serverPort 636 -ldapBase "dc=corp,dc=local" -ldapBindDn admin@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED -OTPSecret UserParameters
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>add authentication ldapAction LDAP_OTP_verify_no_auth -serverIP 10.2.2.11 -serverPort 636 -ldapBase "dc=corp,dc=local" -ldapBindDn admin@corp.local -ldapBindDnPassword abc -encrypted -encryptmethod ENCMTHD_3 -ldapLoginName sAMAccountName -searchFilter "userParameters&gt;=#@" -groupAttrName memberOf -subAttributeName cn -secType SSL -authentication DISABLED -OTPSecret UserParameters
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>add authentication Policy Corp-Adv -rule true -action LDAP-Corp
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>add authentication Policy LDAP_Manage_OTP-pol -rule &quot;HTTP.REQ.COOKIE.VALUE(\&quot;NSC_TASS\&quot;).EQ(\&quot;manageotp\&quot;)&quot; -action LDAP_OTP_set_no_auth
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>add authentication Policy LDAP_Manage_OTP-pol -rule "HTTP.REQ.COOKIE.VALUE(\"NSC_TASS\").EQ(\"manageotp\")" -action LDAP_OTP_set_no_auth
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>add authentication Policy LDAP_Confirm_OTP-pol -rule true -action LDAP_OTP_verify_no_auth
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>add authentication loginSchema Dual_OTP-lschema -authenticationSchema &quot;/nsconfig/loginschema/LoginSchema/DualAuth.xml&quot; -passwordCredentialIndex 1
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>add authentication loginSchema Single_Manage_OTP-lschema -authenticationSchema &quot;/nsconfig/loginschema/LoginSchema/SingleAuthManageOTP.xml&quot;
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>add authentication loginSchemaPolicy Single_Manage_OTP-lschemapol -rule &quot;http.req.cookie.value(\&quot;NSC_TASS\&quot;).eq(\&quot;manageotp\&quot;) &amp;&amp; client.IP.SRC.IN_SUBNET(10.3.0.0/16)&quot; -action Single_Manage_OTP-lschema
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>add authentication loginSchema Dual_OTP-lschema -authenticationSchema "/nsconfig/loginschema/LoginSchema/DualAuth.xml" -passwordCredentialIndex 1
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>add authentication loginSchema Single_Manage_OTP-lschema -authenticationSchema "/nsconfig/loginschema/LoginSchema/SingleAuthManageOTP.xml"
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>add authentication loginSchemaPolicy Single_Manage_OTP-lschemapol -rule "http.req.cookie.value(\"NSC_TASS\").eq(\"manageotp\") &amp;&amp; client.IP.SRC.IN_SUBNET(10.3.0.0/16)" -action Single_Manage_OTP-lschema
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>add authentication loginSchemaPolicy Dual_OTP-lschemapol -rule true -action Dual_OTP-lschema
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>add authentication policylabel OTP_pollabel -loginSchema LSCHEMA_INT
@@ -5775,17 +5803,17 @@
 </span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>bind authentication vserver OTP-AAA -policy Dual_OTP-lschemapol -priority 110 -gotoPriorityExpression END
 </span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>bind authentication vserver OTP-AAA -policy Corp-Adv -priority 100 -nextFactor OTP_pollabel -gotoPriorityExpression NEXT
 </span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>add vpn trafficAction OTP-trafficprofile http -passwdExpression &quot;http.REQ.USER.ATTRIBUTE(1)&quot;
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>add vpn trafficAction OTP-trafficprofile http -passwdExpression "http.REQ.USER.ATTRIBUTE(1)"
 </span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>add vpn trafficPolicy OTP-trafficpol true OTP-trafficprofile
 </span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
 </span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>add authentication authnProfile OTP-authnprofile -authnVsName OTP-AAA
 </span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
 </span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>add vpn vserver Gateway.corp.com SSL 10.2.5.220 443 -downStateFlush DISABLED -Listenpolicy NONE -authnProfile OTP-authnprofile
 </span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>set ssl vserver Gateway.corp.com -sslProfile ns_default_ssl_profile_frontend
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>add vpn sessionAction &quot;Receiver For Web&quot; -transparentInterception OFF -defaultAuthorizationAction ALLOW -SSO ON -icaProxy ON -wihome &quot;https://storefront2.corp.com/Citrix/StoreWeb&quot; -ntDomain corp.local -clientlessVpnMode OFF -storefronturl &quot;https://storefront2.corp.com&quot;
-</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>add vpn sessionPolicy &quot;Receiver For Web&quot; &quot;HTTP.REQ.HEADER(\&quot;User-Agent\&quot;).CONTAINS(\&quot;CitrixReceiver\&quot;).NOT&quot; &quot;Receiver For Web&quot;
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>add vpn sessionAction "Receiver For Web" -transparentInterception OFF -defaultAuthorizationAction ALLOW -SSO ON -icaProxy ON -wihome "https://storefront2.corp.com/Citrix/StoreWeb" -ntDomain corp.local -clientlessVpnMode OFF -storefronturl "https://storefront2.corp.com"
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>add vpn sessionPolicy "Receiver For Web" "HTTP.REQ.HEADER(\"User-Agent\").CONTAINS(\"CitrixReceiver\").NOT" "Receiver For Web"
 </span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>bind vpn vserver Gateway.corp.com -portaltheme RfWebUI
-</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>bind vpn vserver Gateway.corp.com -policy &quot;Receiver For Web&quot; -priority 100 -gotoPriorityExpression NEXT -type REQUEST
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>bind vpn vserver Gateway.corp.com -policy "Receiver For Web" -priority 100 -gotoPriorityExpression NEXT -type REQUEST
 </span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>bind vpn vserver Gateway.corp.com -policy OTP-trafficpol -priority 100 -gotoPriorityExpression END -type REQUEST
 </span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>bind ssl vserver Gateway.corp.com -certkeyName WildcardCorpCom
 </span></code></pre></div>
@@ -5846,7 +5874,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
