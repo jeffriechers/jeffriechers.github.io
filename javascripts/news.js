@@ -183,18 +183,26 @@ function renderLayout() {
                 color:#666;
             }
 
-            @media(max-width: 1000px) {
+           @media (max-width: 1400px) {
 
-                .rss-layout {
-                    flex-direction:column;
-                }
+    .rss-content {
+        margin-right:0;
+    }
 
-                .rss-sidebar {
-                    width:100%;
-                    border-left:none;
-                    padding-left:0;
-                }
-            }
+    .rss-sidebar {
+
+        position:relative;
+
+        top:auto;
+        right:auto;
+
+        width:100%;
+
+        max-height:none;
+
+        margin-top:20px;
+    }
+}
 
         </style>
 

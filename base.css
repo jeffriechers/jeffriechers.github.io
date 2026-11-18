@@ -535,3 +535,38 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     font-weight: bold;
     text-align: left;
 }
+.rss-layout {
+    display:block;
+}
+
+.rss-content {
+
+    margin-right:320px;
+
+    min-width:0;
+}
+
+.rss-sidebar {
+
+    position:fixed;
+
+    top:120px;
+    right:25px;
+
+    width:280px;
+
+    max-height:80vh;
+    overflow-y:auto;
+
+    border:1px solid #ddd;
+    border-radius:8px;
+
+    padding:15px;
+
+    background:var(--md-default-bg-color);
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,.1);
+
+    z-index:100;
+}
