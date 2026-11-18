@@ -136,27 +136,23 @@ function renderLayout() {
 
             .rss-results {
 
-                display:grid;
+    display:flex;
 
-                grid-template-columns:
-                    repeat(
-                        auto-fill,
-                        minmax(350px,1fr)
-                    );
+    flex-direction:column;
 
-                gap:15px;
-            }
+    gap:12px;
+}
 
-            .rss-card {
+.rss-card {
 
-                border:1px solid #ddd;
+    border:1px solid #ddd;
 
-                border-radius:8px;
+    border-radius:8px;
 
-                padding:15px;
+    padding:15px 20px;
 
-                height:100%;
-            }
+    width:100%;
+}
 
             .rss-card-title {
 
