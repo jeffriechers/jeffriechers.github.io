@@ -57,31 +57,29 @@ function renderLayout() {
             'rss-news-dashboard'
         );
 
-    let categoryLinks = '';
+    let categoryButtons = '';
 
-    categoryLinks += `
-        <button class="rss-nav-button"
-                onclick="renderLatestEntries()">
-            Latest Entries
+    categoryButtons += `
+        <button class="rss-filter active"
+                onclick="setActiveButton(this); renderLatestEntries();">
+            Latest
         </button>
     `;
 
-    categoryLinks += `
-        <button class="rss-nav-button"
-                onclick="renderAllCategories()">
-            All Categories
+    categoryButtons += `
+        <button class="rss-filter"
+                onclick="setActiveButton(this); renderAllCategories();">
+            All
         </button>
     `;
 
     for (const [categoryId, categoryData]
-        of Object.entries(
-            rssData.categories
-        )) {
+        of Object.entries(rssData.categories)) {
 
-        categoryLinks += `
+        categoryButtons += `
             <button
-                class="rss-nav-button"
-                onclick="renderCategory('${categoryId}')">
+                class="rss-filter"
+                onclick="setActiveButton(this); renderCategory('${categoryId}')">
                 ${categoryData.title}
             </button>
         `;
@@ -90,154 +88,138 @@ function renderLayout() {
     dashboard.innerHTML = `
         <style>
 
-            .rss-layout {
-                display:flex;
-                gap:20px;
-            }
+            .rss-toolbar {
 
-            .rss-content {
-                flex:1;
-                min-width:0;
-            }
-
-            .rss-sidebar {
-
-                width:250px;
-
-                position:sticky;
-                top:80px;
-
-                align-self:flex-start;
-
-                border-left:1px solid #ddd;
-                padding-left:20px;
-            }
-
-            .rss-nav-button {
-
-                display:block;
-                width:100%;
-
-                text-align:left;
-
-                padding:10px;
-                margin-bottom:5px;
-
-                border:1px solid #ccc;
-                border-radius:4px;
-
-                cursor:pointer;
-
-                background:#f5f5f5;
-            }
-
-            .rss-nav-button:hover {
-                background:#e0e0e0;
-            }
-
-            .rss-card {
-
-                border:1px solid #ddd;
-                border-radius:8px;
-
-                padding:15px;
-                margin-bottom:15px;
-            }
-
-            .rss-card-title {
-
-                font-weight:bold;
-                font-size:1.1em;
-
-                margin-bottom:8px;
-            }
-
-            .rss-card-meta {
-
-                color:#777;
-                font-size:.9em;
-
-                margin-bottom:10px;
+                margin-bottom:20px;
             }
 
             .rss-search {
 
                 width:100%;
 
-                padding:10px;
+                padding:12px;
 
-                margin-bottom:20px;
-
-                border:1px solid #ccc;
                 border-radius:5px;
+
+                margin-bottom:15px;
+
+                border:1px solid var(--md-default-fg-color--lightest);
+            }
+
+            .rss-filter-bar {
+
+                display:flex;
+                flex-wrap:wrap;
+                gap:10px;
+
+                margin-bottom:25px;
+            }
+
+            .rss-filter {
+
+                border:none;
+
+                padding:8px 16px;
+
+                border-radius:20px;
+
+                cursor:pointer;
+
+                background:#e0e0e0;
+            }
+
+            .rss-filter.active {
+
+                background:#1976d2;
+                color:white;
+            }
+
+            .rss-results {
+
+                display:grid;
+
+                grid-template-columns:
+                    repeat(
+                        auto-fill,
+                        minmax(350px,1fr)
+                    );
+
+                gap:15px;
+            }
+
+            .rss-card {
+
+                border:1px solid #ddd;
+
+                border-radius:8px;
+
+                padding:15px;
+
+                height:100%;
+            }
+
+            .rss-card-title {
+
+                font-size:1.15em;
+
+                font-weight:600;
+
+                margin-bottom:10px;
+            }
+
+            .rss-card-title a {
+
+                text-decoration:none;
+            }
+
+            .rss-card-source {
+
+                color:#777;
+
+                font-size:.9em;
+
+                margin-top:10px;
             }
 
             .rss-footer {
 
                 margin-top:40px;
 
-                border-top:1px solid #ddd;
-
                 padding-top:20px;
 
-                color:#666;
+                border-top:1px solid #ddd;
             }
-
-           @media (max-width: 1400px) {
-
-    .rss-content {
-        margin-right:0;
-    }
-
-    .rss-sidebar {
-
-        position:relative;
-
-        top:auto;
-        right:auto;
-
-        width:100%;
-
-        max-height:none;
-
-        margin-top:20px;
-    }
-}
 
         </style>
 
-        <div class="rss-layout">
+        <div class="rss-toolbar">
 
-            <div class="rss-content">
+            <input
+                id="rss-search"
+                class="rss-search"
+                type="text"
+                placeholder="Search articles..."
+            >
 
-                <input
-                    id="rss-search"
-                    class="rss-search"
-                    type="text"
-                    placeholder="Search entries..."
-                >
-
-                <div id="rss-results"></div>
-
-                <div class="rss-footer"
-                     id="rss-footer">
-                </div>
-
+            <div class="rss-filter-bar">
+                ${categoryButtons}
             </div>
 
-            <div class="rss-sidebar">
+        </div>
 
-                <h3>Categories</h3>
+        <div id="rss-results"
+             class="rss-results">
+        </div>
 
-                ${categoryLinks}
-
-            </div>
-
+        <div id="rss-footer"
+             class="rss-footer">
         </div>
     `;
 
     document
-        .getElementById('rss-search')
+        .getElementById(
+            'rss-search'
+        )
         .addEventListener(
             'input',
             searchEntries
@@ -346,7 +328,20 @@ function renderCategory(
         entries
     );
 }
+function setActiveButton(btn) {
 
+    document
+        .querySelectorAll('.rss-filter')
+        .forEach(x =>
+            x.classList.remove(
+                'active'
+            )
+        );
+
+    btn.classList.add(
+        'active'
+    );
+}
 function renderEntries(
     title,
     entries
@@ -357,15 +352,11 @@ function renderEntries(
             'rss-results'
         );
 
-    let html = `
-        <h2>${title}</h2>
-        <p>${entries.length} entries</p>
-    `;
+    let html = '';
 
     entries.forEach(item => {
 
         html += `
-
             <div class="rss-card">
 
                 <div class="rss-card-title">
@@ -379,20 +370,20 @@ function renderEntries(
 
                 </div>
 
-                <div class="rss-card-meta">
+                <div>
+
+                    ${item.categoryTitle || ''}
+
+                </div>
+
+                <div class="rss-card-source">
 
                     ${item.source}
-                    |
+                    <br>
 
                     ${new Date(
                         item.published
                     ).toLocaleDateString()}
-
-                    ${item.categoryTitle
-                        ? '| ' +
-                          item.categoryTitle
-                        : ''
-                    }
 
                 </div>
 
