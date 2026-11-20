@@ -712,7 +712,7 @@ html += `
             ?
             `
             <div class="rss-card-summary">
-                ${item.summary}
+                ${cleanSummary(item.summary)}
             </div>
             `
             :
@@ -737,7 +737,21 @@ html += `
 
     results.innerHTML = html;
 }
+function cleanSummary(summary) {
 
+    if (!summary) {
+        return '';
+    }
+
+    let html = summary;
+
+    html = html.replace(
+        /<strong>Vector:<\/strong>.*?(<br\s*\/?>|\n)/is,
+        ''
+    );
+
+    return html;
+}
 function searchEntries() {
 
     const search =
