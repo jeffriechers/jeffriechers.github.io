@@ -11,5 +11,19 @@
 .md-typeset pre {
   font-size: 14px;
 }
+.md-grid {
+    max-width: 95vw !important;
+}
 
+.md-content__inner {
+    max-width: none !important;
+}
+
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+.md-content {
+    margin-right: 0 !important;
+}
 
