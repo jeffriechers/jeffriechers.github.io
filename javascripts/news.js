@@ -6,6 +6,8 @@ const JSON_URL =
     'https://raw.githubusercontent.com/jeffriechers/RSSjsonfeeds/refs/heads/main/data/news.json';
 
 let rssData = null;
+let activeCategory = null;
+let activeVendor = null;
 
 async function loadNews() {
 
@@ -49,7 +51,67 @@ async function loadNews() {
         console.error(error);
     }
 }
+function renderVendorFilters(categoryId) {
 
+    const vendorBar =
+        document.getElementById(
+            'rss-vendor-bar'
+        );
+
+    const vendors =
+        new Set();
+
+    rssData.categories[
+        categoryId
+    ].items.forEach(item => {
+
+        if (
+            item.vendor
+        ) {
+            vendors.add(
+                item.vendor
+            );
+        }
+
+    });
+
+    let html = '';
+
+    html += `
+        <button
+            class="rss-filter active"
+            onclick="
+                activeVendor=null;
+                renderCategory(
+                    '${categoryId}'
+                )
+            ">
+            All Vendors
+        </button>
+    `;
+
+    [...vendors]
+        .sort()
+        .forEach(vendor => {
+
+            html += `
+                <button
+                    class="rss-filter"
+                    onclick="
+                        activeVendor='${vendor}';
+                        renderCategory(
+                            '${categoryId}'
+                        )
+                    ">
+                    ${vendor}
+                </button>
+            `;
+
+        });
+
+    vendorBar.innerHTML =
+        html;
+}
 function renderLayout() {
 
     const dashboard =
@@ -60,81 +122,112 @@ function renderLayout() {
     let categoryButtons = '';
 
     categoryButtons += `
-        <button class="rss-filter active"
-                onclick="setActiveButton(this); renderLatestEntries();">
+        <button
+            class="rss-filter active"
+            onclick="
+                setActiveButton(this);
+                activeCategory = null;
+                activeVendor = null;
+                clearVendorBar();
+                renderLatestEntries();
+            ">
             Latest
         </button>
     `;
 
     categoryButtons += `
-        <button class="rss-filter"
-                onclick="setActiveButton(this); renderAllCategories();">
+        <button
+            class="rss-filter"
+            onclick="
+                setActiveButton(this);
+                activeCategory = null;
+                activeVendor = null;
+                clearVendorBar();
+                renderAllCategories();
+            ">
             All
         </button>
     `;
 
-    for (const [categoryId, categoryData]
-        of Object.entries(rssData.categories)) {
+    for (
+        const [
+            categoryId,
+            categoryData
+        ]
+        of Object.entries(
+            rssData.categories
+        )
+    ) {
 
         categoryButtons += `
             <button
                 class="rss-filter"
-                onclick="setActiveButton(this); renderCategory('${categoryId}')">
+                onclick="
+                    setActiveButton(this);
+                    renderCategory('${categoryId}');
+                ">
                 ${categoryData.title}
             </button>
         `;
     }
 
     dashboard.innerHTML = `
-        <style>
 
-            .rss-toolbar {
+<style>
 
-                margin-bottom:20px;
-            }
+.rss-toolbar {
 
-            .rss-search {
+    margin-bottom:20px;
+}
 
-                width:100%;
+.rss-search {
 
-                padding:12px;
+    width:100%;
+    padding:12px;
 
-                border-radius:5px;
+    border-radius:5px;
 
-                margin-bottom:15px;
+    margin-bottom:15px;
 
-                border:1px solid var(--md-default-fg-color--lightest);
-            }
+    border:1px solid var(
+        --md-default-fg-color--lightest
+    );
+}
 
-            .rss-filter-bar {
+.rss-filter-bar {
 
-                display:flex;
-                flex-wrap:wrap;
-                gap:10px;
+    display:flex;
 
-                margin-bottom:25px;
-            }
+    flex-wrap:wrap;
 
-            .rss-filter {
+    gap:10px;
 
-                border:none;
+    margin-bottom:15px;
+}
 
-                padding:8px 16px;
+.rss-filter {
 
-                border-radius:20px;
+    border:none;
 
-                cursor:pointer;
+    padding:8px 16px;
 
-                background:#e0e0e0;
-            }
+    border-radius:20px;
 
-            .rss-filter.active {
+    cursor:pointer;
 
-                background:#1976d2;
-                color:white;
-            }
+    background:#e0e0e0;
 
-            .rss-results {
+    transition:.15s;
+}
+
+.rss-filter.active {
+
+    background:#1976d2;
+
+    color:white;
+}
+
+.rss-results {
 
     display:flex;
 
@@ -154,63 +247,145 @@ function renderLayout() {
     width:100%;
 }
 
-            .rss-card-title {
+.rss-card-title {
 
-                font-size:1.15em;
+    font-size:1.15em;
 
-                font-weight:600;
+    font-weight:600;
 
-                margin-bottom:10px;
-            }
+    margin-bottom:10px;
+}
 
-            .rss-card-title a {
+.rss-card-title a {
 
-                text-decoration:none;
-            }
+    text-decoration:none;
+}
 
-            .rss-card-source {
+.rss-card-meta {
 
-                color:#777;
+    display:flex;
 
-                font-size:.9em;
+    flex-wrap:wrap;
 
-                margin-top:10px;
-            }
+    gap:6px;
 
-            .rss-footer {
+    margin-bottom:10px;
+}
 
-                margin-top:40px;
+.rss-badge {
 
-                padding-top:20px;
+    display:inline-block;
 
-                border-top:1px solid #ddd;
-            }
+    padding:4px 8px;
 
-        </style>
+    border-radius:12px;
 
-        <div class="rss-toolbar">
+    font-size:.75em;
 
-            <input
-                id="rss-search"
-                class="rss-search"
-                type="text"
-                placeholder="Search articles..."
-            >
+    font-weight:600;
 
-            <div class="rss-filter-bar">
-                ${categoryButtons}
-            </div>
+    background:#eceff1;
+}
 
-        </div>
+.rss-badge-vendor {
 
-        <div id="rss-results"
-             class="rss-results">
-        </div>
+    background:#1565c0;
 
-        <div id="rss-footer"
-             class="rss-footer">
-        </div>
-    `;
+    color:white;
+}
+
+.rss-badge-product {
+
+    background:#455a64;
+
+    color:white;
+}
+
+.rss-badge-critical {
+
+    background:#b71c1c;
+
+    color:white;
+}
+
+.rss-badge-high {
+
+    background:#ef6c00;
+
+    color:white;
+}
+
+.rss-badge-medium {
+
+    background:#f9a825;
+
+    color:black;
+}
+
+.rss-badge-low {
+
+    background:#2e7d32;
+
+    color:white;
+}
+
+.rss-card-summary {
+
+    margin-top:10px;
+
+    font-size:.95em;
+}
+
+.rss-card-source {
+
+    color:#777;
+
+    font-size:.9em;
+
+    margin-top:10px;
+}
+
+.rss-footer {
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:1px solid #ddd;
+}
+
+</style>
+
+<div class="rss-toolbar">
+
+    <input
+        id="rss-search"
+        class="rss-search"
+        type="text"
+        placeholder="Search articles..."
+    >
+
+    <div class="rss-filter-bar">
+        ${categoryButtons}
+    </div>
+
+    <div
+        id="rss-vendor-bar"
+        class="rss-filter-bar">
+    </div>
+
+</div>
+
+<div
+    id="rss-results"
+    class="rss-results">
+</div>
+
+<div
+     id="rss-footer"
+     class="rss-footer">
+</div>
+`;
 
     document
         .getElementById(
@@ -223,7 +398,18 @@ function renderLayout() {
 
     renderFooter();
 }
+function clearVendorBar() {
 
+    const vendorBar =
+        document.getElementById(
+            'rss-vendor-bar'
+        );
+
+    if (vendorBar) {
+
+        vendorBar.innerHTML = '';
+    }
+}
 function renderFooter() {
 
     const footer =
@@ -303,24 +489,115 @@ function renderAllCategories() {
     );
 }
 
-function renderCategory(
-    categoryId
-) {
+function renderCategory(categoryId) {
+
+    activeCategory = categoryId;
 
     const category =
         rssData.categories[
             categoryId
         ];
 
-    const entries =
-        category.items.map(item => ({
-            ...item,
-            categoryTitle:
-                category.title
-        }));
+    //
+    // Build vendor list
+    //
+
+    const vendors =
+        [
+            ...new Set(
+                category.items
+                    .map(
+                        item =>
+                            item.vendor
+                    )
+                    .filter(
+                        v =>
+                            v &&
+                            v.length > 0
+                    )
+            )
+        ]
+        .sort();
+
+    const vendorBar =
+        document.getElementById(
+            'rss-vendor-bar'
+        );
+
+    let vendorHtml = '';
+
+    vendorHtml += `
+        <button
+            class="rss-filter ${
+                !activeVendor
+                    ? 'active'
+                    : ''
+            }"
+            onclick="
+                activeVendor = null;
+                renderCategory('${categoryId}');
+            ">
+            All Vendors
+        </button>
+    `;
+
+    vendors.forEach(vendor => {
+
+        vendorHtml += `
+            <button
+                class="rss-filter ${
+                    activeVendor === vendor
+                        ? 'active'
+                        : ''
+                }"
+                onclick="
+                    activeVendor = '${vendor}';
+                    renderCategory('${categoryId}');
+                ">
+                ${vendor}
+            </button>
+        `;
+    });
+
+    vendorBar.innerHTML =
+        vendorHtml;
+
+    //
+    // Apply vendor filter
+    //
+
+    let entries =
+        category.items;
+
+    if (
+        activeVendor
+    ) {
+
+        entries =
+            entries.filter(
+                item =>
+                    item.vendor ===
+                    activeVendor
+            );
+    }
+
+    //
+    // Add category title
+    //
+
+    entries =
+        entries.map(
+            item => ({
+                ...item,
+                categoryTitle:
+                    category.title
+            })
+        );
 
     renderEntries(
-        category.title,
+        activeVendor
+            ? `${category.title} - ${activeVendor}`
+            : category.title,
         entries
     );
 }
