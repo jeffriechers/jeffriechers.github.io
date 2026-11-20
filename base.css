@@ -21,8 +21,8 @@ body {
 }
 
 .wm-page-content {
-  max-width: 700px;
-  position: relative;
+    max-width: 1600px !important;
+    width: 95%;
 }
 
 .wm-page-top-frame { display: none; }
@@ -128,7 +128,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: 0;
-  padding-left: 250px;
+  padding-left: 50px;
   transition: padding-left 0.3s;
   /* required for iPhone to scroll the contained iframe */
   -webkit-overflow-scrolling: touch;

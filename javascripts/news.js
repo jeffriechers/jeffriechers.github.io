@@ -334,6 +334,14 @@ function renderLayout() {
     margin-top:10px;
 
     font-size:.95em;
+
+    overflow:hidden;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:4;
+
+    -webkit-box-orient:vertical;
 }
 
 .rss-card-source {
