@@ -629,39 +629,102 @@ function renderEntries(
 
     entries.forEach(item => {
 
-        html += `
-            <div class="rss-card">
+html += `
+    <div class="rss-card">
 
-                <div class="rss-card-title">
+        <div class="rss-card-meta">
 
-                    <a href="${item.url}"
-                       target="_blank">
+            ${
+                item.vendor
+                ?
+                `<span class="rss-badge rss-badge-vendor">
+                    ${item.vendor}
+                 </span>`
+                :
+                ''
+            }
 
-                        ${item.title}
+            ${
+                item.product
+                ?
+                `<span class="rss-badge rss-badge-product">
+                    ${item.product}
+                 </span>`
+                :
+                ''
+            }
 
-                    </a>
+            ${
+                item.severity
+                ?
+                `<span class="rss-badge rss-badge-${
+                    item.severity.toLowerCase()
+                }">
+                    ${item.severity}
+                 </span>`
+                :
+                ''
+            }
 
-                </div>
+            ${
+                item.cvss
+                ?
+                `<span class="rss-badge">
+                    CVSS ${item.cvss}
+                 </span>`
+                :
+                ''
+            }
 
-                <div>
+            ${
+                item.cve
+                ?
+                `<span class="rss-badge">
+                    ${item.cve}
+                 </span>`
+                :
+                ''
+            }
 
-                    ${item.categoryTitle || ''}
+        </div>
 
-                </div>
+        <div class="rss-card-title">
 
-                <div class="rss-card-source">
+            <a href="${item.url}"
+               target="_blank">
 
-                    ${item.source}
-                    <br>
+                ${item.title}
 
-                    ${new Date(
-                        item.published
-                    ).toLocaleDateString()}
+            </a>
 
-                </div>
+        </div>
 
+        ${
+            item.summary
+            ?
+            `
+            <div class="rss-card-summary">
+                ${item.summary}
             </div>
-        `;
+            `
+            :
+            ''
+        }
+
+        <div class="rss-card-source">
+
+            ${item.source}
+
+            <br>
+
+            ${new Date(
+                item.published
+            ).toLocaleDateString()}
+
+        </div>
+
+    </div>
+`;
     });
 
     results.innerHTML = html;
